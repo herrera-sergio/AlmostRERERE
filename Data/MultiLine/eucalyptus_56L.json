@@ -1,0 +1,920 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 2",
+    "id": 48103,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private static final Pattern INSTANCE_ID = Pattern.compile( \"i-[0-9a-fA-F]{8}(?:[0-9a-fA-F]{9})?\" );  public static void verifyWorker(final String instanceId, final String remoteHost) throws Exception { if (instanceId == null || !INSTANCE_ID.matcher(instanceId).matches()) throw new Exception(\"Failed to verify imaging worker. The '\" + instanceId + \"' can't be an instance ID\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 48123,
+    "v2": "import com.eucalyptus.auth.principal.Principals;",
+    "resolution": "import com.eucalyptus.auth.euare.DelegatingUserPrincipal; import com.eucalyptus.auth.principal.PolicyVersion; import com.eucalyptus.auth.principal.PolicyVersions; import com.eucalyptus.auth.principal.Principals; import com.eucalyptus.auth.principal.UserPrincipal;",
+    "conflict": "import com.eucalyptus.auth.euare.DelegatingUserPrincipal; import com.eucalyptus.auth.principal.PolicyVersion; import com.eucalyptus.auth.principal.PolicyVersions; import com.eucalyptus.auth.principal.Principals; import com.eucalyptus.auth.principal.UserPrincipal;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 48165,
+    "v2": "final AddressingBatch batch = batchThreadLocal.get( ); if ( batch != null ) { batchThreadLocal.set( null ); batch.flushRequested = false; }",
+    "resolution": "final AddressingBatch batch = batchThreadLocal.get( ); if ( batch != null ) { batchThreadLocal.set( null ); batch.flushRequested = false; }",
+    "conflict": "batchThreadLocal.set( null );"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 48172,
+    "v2": "final JSONObject jwtBody = JSONObject.fromObject( new String( BaseEncoding.base64Url( ).decode( jwtParts[1] ), StandardCharsets.UTF_8 ) ); final String jwtSignature = jwtParts[2];",
+    "resolution": "final JSONObject jwtBody = JSONObject.fromObject( new String( BaseEncoding.base64Url( ).decode( jwtParts[1] ), StandardCharsets.UTF_8 ) );",
+    "conflict": "final JSONObject jwtBody = JSONObject.fromObject( new String( Base64.decodeBase64(jwtParts[1]) ) );"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 48186,
+    "v2": "import com.eucalyptus.tokens.policy.ExternalIdKey;",
+    "resolution": "import com.eucalyptus.tokens.policy.ExternalIdKey;import com.eucalyptus.auth.euare.persist.DatabaseAuthUtils; import com.eucalyptus.auth.euare.persist.DatabaseOpenIdProviderProxy; import com.eucalyptus.auth.euare.persist.entities.OpenIdProviderEntity; import com.eucalyptus.crypto.util.SslSetup; import com.eucalyptus.tokens.policy.ExternalIdContext;",
+    "conflict": "import com.eucalyptus.auth.euare.persist.DatabaseAuthUtils; import com.eucalyptus.auth.euare.persist.DatabaseOpenIdProviderProxy; import com.eucalyptus.auth.euare.persist.entities.OpenIdProviderEntity; import com.eucalyptus.crypto.util.SslSetup; import com.eucalyptus.tokens.policy.ExternalIdContext;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 48206,
+    "v2": "@Override public Promise<String> getDeletePromise(WorkflowOperations<StackActivity> workflowOperations, String resourceId, String stackId, String accountId, String effectiveUserId) { List<String> stepIds = Lists.transform(Lists.newArrayList(DeleteSteps.values()), StepTransform.INSTANCE); return new DeleteMultiStepPromise(workflowOperations, stepIds, this).getDeletePromise(resourceId, stackId, accountId, effectiveUserId); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 48228,
+    "v2": "",
+    "resolution": "",
+    "conflict": "// Update the instance info if (action.properties.getInstanceId() != null) { EC2Helper.refreshInstanceAttributes(action.getStackEntity(), action.properties.getInstanceId(), action.info.getEffectiveUserId(), action.getStackEntity().getUpdateVersion()); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 48230,
+    "v2": "checkKeyOwner( keyEntity ); user.getKeys( ).remove( keyEntity );",
+    "resolution": "checkKeyOwner( keyEntity ); if ( !user.getKeys( ).remove( keyEntity ) ) { throw new AuthException( AuthException.NO_SUCH_KEY ); }",
+    "conflict": "if ( !user.getKeys( ).remove( keyEntity ) ) { throw new AuthException( AuthException.NO_SUCH_KEY ); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 48234,
+    "v2": "v4_3_0;",
+    "resolution": "v4_3_0, v4_3_1, v4_3_2, v4_3_3, v4_4_0;",
+    "conflict": "v4_3_0, v4_3_1, v4_3_2, v4_3_3, v4_4_0;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 48328,
+    "v2": "",
+    "resolution": "import static com.eucalyptus.loadbalancing.LoadBalancerZone.LoadBalancerZoneCoreView.name; import static com.eucalyptus.loadbalancing.LoadBalancerZone.LoadBalancerZoneCoreView.subnetId;  import java.util.Collection; import java.util.Collections;",
+    "conflict": "import static com.eucalyptus.loadbalancing.LoadBalancerZone.LoadBalancerZoneCoreView.name; import static com.eucalyptus.loadbalancing.LoadBalancerZone.LoadBalancerZoneCoreView.subnetId;  import java.util.Collection; import java.util.Collections;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 48341,
+    "v2": "try ( final EucaS3Client eucaS3Client = EucaS3ClientFactory.getEucaS3Client( user ) ) {",
+    "resolution": "try ( final EucaS3Client eucaS3Client = EucaS3ClientFactory.getEucaS3Client( user ) ) { if (eucaS3Client.getObjectMetadata(bucketAndKey.getBucket(), bucketAndKey.getKey()).getContentLength() > Limits.REQUEST_TEMPLATE_URL_MAX_CONTENT_LENGTH_BYTES) { throw new ValidationErrorException(\"Template URL exceeds maximum byte count, \" + Limits.REQUEST_TEMPLATE_URL_MAX_CONTENT_LENGTH_BYTES); }",
+    "conflict": "EucaS3Client eucaS3Client = EucaS3ClientFactory.getEucaS3Client(user); try { if (eucaS3Client.getObjectMetadata(bucketAndKey.getBucket(), bucketAndKey.getKey()).getContentLength() > Limits.REQUEST_TEMPLATE_URL_MAX_CONTENT_LENGTH_BYTES) { throw new ValidationErrorException(\"Template URL exceeds maximum byte count, \" + Limits.REQUEST_TEMPLATE_URL_MAX_CONTENT_LENGTH_BYTES); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 48445,
+    "v2": "//TODO:GRZE:FINISH THIS.    Date date = Contexts.lookup( ).getContracts( ).get( Contract.Type.EXPIRATION ); final VmRunType run = VmRunType.builder()",
+    "resolution": "//TODO:GRZE:FINISH THIS.    Date date = Contexts.lookup( ).getContracts( ).get( Contract.Type.EXPIRATION ); final VmRunType.Builder builder = VmRunType.builder( ); VmInstanceLifecycleHelpers.get( ).prepareVmRunType( childToken, builder ); final VmRunType run = builder",
+    "conflict": "//TODO:GRZE:FINISH THIS.    Date date = Contexts.lookup( ).getContracts( ).get( Contract.Type.EXPIRATION ); final VmRunType.Builder builder = VmRunType.builder( ); VmInstanceLifecycleHelpers.get( ).prepareVmRunType( childToken, builder ); final VmRunType run = builder"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 48468,
+    "v2": "public <REQ extends WalrusRequestType,RES extends WalrusResponseType> RES sendSyncA( final REQ request) throws Exception { // request.setEffectiveUserId( userId ); request.setUser( systemAdmin );",
+    "resolution": "public <REQ extends WalrusRequestType,RES extends WalrusResponseType> RES sendSyncA( final REQ request) throws Exception { // request.setEffectiveUserId( userId ); request.setUser( systemAdmin );",
+    "conflict": "public <REQ extends WalrusRequestType,RES extends WalrusResponseType> RES sendSyncA( final REQ request) throws Exception { request.setEffectiveUserId( userId );"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 48512,
+    "v2": "import com.eucalyptus.auth.policy.key.Iso8601DateParser; import com.eucalyptus.storage.msgs.s3.Expiration; import com.eucalyptus.storage.msgs.s3.LifecycleConfiguration; import com.eucalyptus.storage.msgs.s3.LifecycleRule; import com.eucalyptus.storage.msgs.s3.Transition;",
+    "resolution": "import com.eucalyptus.auth.policy.key.Iso8601DateParser; import com.eucalyptus.storage.msgs.s3.Expiration; import com.eucalyptus.storage.msgs.s3.LifecycleConfiguration; import com.eucalyptus.storage.msgs.s3.LifecycleRule; import com.eucalyptus.storage.msgs.s3.Transition;import com.eucalyptus.auth.principal.RoleUser;",
+    "conflict": "import com.eucalyptus.auth.principal.RoleUser;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 48572,
+    "v2": "import com.eucalyptus.component.ServiceConfigurations;",
+    "resolution": "import com.eucalyptus.event.EventListener; import com.eucalyptus.event.Hertz; import com.eucalyptus.event.Listeners; import com.eucalyptus.util.CollectionUtils;import com.eucalyptus.component.ServiceConfigurations;",
+    "conflict": "import com.eucalyptus.event.EventListener; import com.eucalyptus.event.Hertz; import com.eucalyptus.event.Listeners; import com.eucalyptus.util.CollectionUtils;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 48601,
+    "v2": "import javax.persistence.Entity;",
+    "resolution": "import javax.persistence.Entity;",
+    "conflict": "import com.eucalyptus.auth.Accounts; import com.eucalyptus.auth.AuthException; import com.eucalyptus.objectstorage.msgs.CanonicalUserType; import org.hibernate.annotations.Entity;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 48603,
+    "v2": "import com.eucalyptus.cloudwatch.domain.metricdata.MetricDataQueue.AbsoluteMetricCache;",
+    "resolution": "import org.mortbay.log.Log;  import com.eucalyptus.cloudwatch.domain.metricdata.MetricDataQueue.AbsoluteMetricCache; import com.eucalyptus.cloudwatch.domain.metricdata.MetricDataQueue.AbsoluteMetricCacheKey;",
+    "conflict": "import org.mortbay.log.Log;  import com.eucalyptus.cloudwatch.domain.metricdata.MetricDataQueue.AbsoluteMetricCache; import com.eucalyptus.cloudwatch.domain.metricdata.MetricDataQueue.AbsoluteMetricCacheKey;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 48659,
+    "v2": "import com.eucalyptus.component.annotation.AwsServiceName;",
+    "resolution": "import com.eucalyptus.component.annotation.AwsServiceName;import com.eucalyptus.component.annotation.FaultLogPrefix; import com.eucalyptus.component.annotation.Partition; import com.eucalyptus.component.annotation.PolicyVendor; import com.eucalyptus.component.annotation.PublicService;",
+    "conflict": "import com.eucalyptus.component.annotation.FaultLogPrefix; import com.eucalyptus.component.annotation.Partition; import com.eucalyptus.component.annotation.PolicyVendor; import com.eucalyptus.component.annotation.PublicService;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 48668,
+    "v2": "import com.eucalyptus.component.annotation.AwsServiceName;",
+    "resolution": "import com.eucalyptus.component.annotation.AwsServiceName;import com.eucalyptus.component.annotation.FaultLogPrefix; import com.eucalyptus.component.annotation.Partition; import com.eucalyptus.component.annotation.PolicyVendor; import com.eucalyptus.component.annotation.PublicService;",
+    "conflict": "import com.eucalyptus.component.annotation.FaultLogPrefix; import com.eucalyptus.component.annotation.Partition; import com.eucalyptus.component.annotation.PolicyVendor; import com.eucalyptus.component.annotation.PublicService;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 48675,
+    "v2": "import com.eucalyptus.component.ComponentId.FaultLogPrefix; import com.eucalyptus.component.annotation.AwsServiceName;",
+    "resolution": "import com.eucalyptus.component.annotation.FaultLogPrefix; import com.eucalyptus.component.annotation.Partition; import com.eucalyptus.component.annotation.PolicyVendor; import com.eucalyptus.component.annotation.PublicService;",
+    "conflict": "import com.eucalyptus.component.annotation.FaultLogPrefix; import com.eucalyptus.component.annotation.Partition; import com.eucalyptus.component.annotation.PolicyVendor; import com.eucalyptus.component.annotation.PublicService;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 48678,
+    "v2": "import com.eucalyptus.component.Components; import com.eucalyptus.component.ComponentId.ComponentPart; import com.eucalyptus.component.ComponentId.PublicService; import com.eucalyptus.component.annotation.AwsServiceName;",
+    "resolution": "import com.eucalyptus.component.annotation.ComponentPart; import com.eucalyptus.component.annotation.AwsServiceName;",
+    "conflict": "import com.eucalyptus.component.annotation.ComponentPart;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 48692,
+    "v2": "LOG.debug( \"Denied resource access to \" + resourceType + \":\" + resourceName + \" of \" + resourceAccount + \" for \" + requestUser + \": \" + e.getMessage() ); } catch ( Exception e ) { LOG.error( \"Exception in resource access to \" + resourceType + \":\" + resourceName + \" of \" + resourceAccount + \" for \" + requestUser, e );",
+    "resolution": "LOG.debug( \"Denied resource access to \" + context.describe( resourceAccountNumber, resourceName ) + \": \" + e.getMessage() ); } catch ( Exception e ) { LOG.error( \"Exception in resource access to \" + context.describe( resourceAccountNumber, resourceName ), e );",
+    "conflict": "LOG.error( \"Denied resource access to \" + context.describe( resourceAccountNumber, resourceName ), e ); } catch ( Exception e ) { LOG.debug( \"Exception in resource access to \" + context.describe( resourceAccountNumber, resourceName ), e );"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 48693,
+    "v2": "LOG.debug( \"Denied resource access to \" + resourceType + \":\" + resourceName + \" of \" + resourceAccount + \" for \" + principalType + \":\" + principalName + \" / \" + requestUser + \": \" + e.getMessage() ); } catch ( Exception e ) { LOG.error( \"Exception in resource access for \" + principalType + \":\" + principalName + \" / \" + requestUser, e );",
+    "resolution": "LOG.debug( \"Denied resource access to \" + context.describe( resourceAccountNumber, resourceName ) + \": \" + e.getMessage() ); } catch ( Exception e ) { LOG.error( \"Exception in resource access to \" + context.describe( resourceAccountNumber, resourceName ), e );",
+    "conflict": "LOG.error( \"Denied resource access to \" + context.describe( resourceAccountNumber, resourceName ), e ); } catch ( Exception e ) { LOG.debug( \"Exception in resource access to \" + context.describe( resourceAccountNumber, resourceName ), e );"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 48702,
+    "v2": "import org.hibernate.annotations.Type;",
+    "resolution": "import org.hibernate.annotations.Type;  import com.eucalyptus.blockstorage.san.common.SANProperties; import com.eucalyptus.blockstorage.util.BlockStorageUtil;",
+    "conflict": "import org.hibernate.annotations.Entity;  import com.eucalyptus.blockstorage.san.common.SANProperties; import com.eucalyptus.blockstorage.util.BlockStorageUtil; import com.eucalyptus.blockstorage.util.StorageProperties;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 48836,
+    "v2": "if (WalrusProperties.trackUsageStatistics) { walrusStatistics.decrementBucketCount(); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 48837,
+    "v2": "if (WalrusProperties.trackUsageStatistics) { walrusStatistics.updateBytesIn(size); walrusStatistics.updateSpaceUsed(size); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 48838,
+    "v2": "if (WalrusProperties.trackUsageStatistics) { walrusStatistics.updateBytesIn(size); walrusStatistics.updateSpaceUsed(size); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 49349,
+    "v2": "",
+    "resolution": "public static ChannelHandler internalImpersonationHandler() { return internalImpersonationHandler; }",
+    "conflict": "public static ChannelHandler internalImpersonationHandler() { return internalImpersonationHandler; }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 49361,
+    "v2": "import com.eucalyptus.vmtypes.VmType; import com.eucalyptus.vmtypes.VmTypes;",
+    "resolution": "import com.eucalyptus.util.async.AsyncRequests; import com.eucalyptus.vmtypes.VmType; import com.eucalyptus.vmtypes.VmTypes;",
+    "conflict": "import com.eucalyptus.empyrean.DisableServiceType; import com.eucalyptus.util.async.AsyncRequests; import com.eucalyptus.vm.VmType; import com.eucalyptus.vm.VmTypes;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 49374,
+    "v2": "AsyncRequests.sendSync( c, new MigrateInstancesType( ) { { this.setSourceHost( request.getHost( ) ); } } );",
+    "resolution": "AsyncRequests.sendSync( c, new MigrateInstancesType( ) { { this.setSourceHost( request.getHost( ) ); } } );",
+    "conflict": "AsyncRequests.sendSync( c, request );"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 49428,
+    "v2": "import com.eucalyptus.util.async.AsyncRequests;",
+    "resolution": "import com.eucalyptus.util.async.AsyncRequests;import com.eucalyptus.tags.Filter; import com.eucalyptus.tags.FilterSupport; import com.eucalyptus.tags.Filters; import com.eucalyptus.util.EucalyptusCloudException;",
+    "conflict": "import com.eucalyptus.tags.Filter; import com.eucalyptus.tags.FilterSupport; import com.eucalyptus.tags.Filters; import com.eucalyptus.util.EucalyptusCloudException;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 49470,
+    "v2": "",
+    "resolution": "private static Logger LOG = Logger.getLogger(HttpWriter.class);",
+    "conflict": "private static Logger LOG = Logger.getLogger(HttpWriter.class);  private HttpClient httpClient; private HttpMethodBase method;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 49473,
+    "v2": "removeDuplicateHeaderValues(httpRequest);",
+    "resolution": "removeDuplicateHeaderValues(httpRequest); //Consolidate duplicates, etc. canonicalizeHeaders(httpRequest);",
+    "conflict": "//Consolidate duplicates, etc. canonicalizeHeaders(httpRequest);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 49853,
+    "v2": "import com.google.common.collect.Maps; import com.google.common.collect.Sets;",
+    "resolution": "import com.google.common.base.Predicate; import com.google.common.collect.Iterables; import com.google.common.collect.Lists; import com.google.common.collect.Maps;",
+    "conflict": "import com.google.common.base.Predicate; import com.google.common.collect.Iterables; import com.google.common.collect.Lists; import com.google.common.collect.Maps;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 49868,
+    "v2": "DB( BaseDirectory.STATE, \"db\" ){",
+    "resolution": "SYSFAULTS (BaseDirectory.LIB, \"faults\"), CUSTOMFAULTS (BaseDirectory.HOME, \"/etc/eucalyptus/faults\"),  DB( BaseDirectory.STATE, \"db\" ){",
+    "conflict": "SYSFAULTS (BaseDirectory.LIB, \"faults\"), CUSTOMFAULTS (BaseDirectory.HOME, \"/etc/eucalyptus/faults\"),  DB( BaseDirectory.VAR, \"db\" ){"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 49889,
+    "v2": "if(type == Type.AAAA) return(SetResponse.ofType(SetResponse.SUCCESSFUL));  String[] tryIp = name.toString( ).replaceAll( \"euca-\", \"\" ).replaceAll(\"\\\\.eucalyptus.*\",\"\").split(\"-\");",
+    "resolution": "if(type == Type.AAAA) return(SetResponse.ofType(SetResponse.SUCCESSFUL)); String[] tryIp = name.toString( ).replaceAll( \"euca-\", \"\" ).replaceAll(VmInstances.INSTANCE_SUBDOMAIN + \".*\",\"\").split(\"-\");",
+    "conflict": "String[] tryIp = name.toString( ).replaceAll( \"euca-\", \"\" ).replaceAll(VmInstances.INSTANCE_SUBDOMAIN + \".*\",\"\").split(\"-\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 49890,
+    "v2": "if(type == Type.AAAA) return(SetResponse.ofType(SetResponse.SUCCESSFUL));  String[] tryIp = name.toString( ).replaceAll( \"euca-\", \"\" ).replaceAll(\"\\\\.eucalyptus.*\",\"\").split(\"-\");",
+    "resolution": "if(type == Type.AAAA) return(SetResponse.ofType(SetResponse.SUCCESSFUL)); String[] tryIp = name.toString( ).replaceAll( \"euca-\", \"\" ).replaceAll(VmInstances.INSTANCE_SUBDOMAIN + \".*\", \"\").split(\"-\");",
+    "conflict": "String[] tryIp = name.toString( ).replaceAll( \"euca-\", \"\" ).replaceAll(VmInstances.INSTANCE_SUBDOMAIN + \".*\", \"\").split(\"-\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 49944,
+    "v2": "",
+    "resolution": "",
+    "conflict": "/* public String getVolumeId() { return this.volumeId; } */"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 50249,
+    "v2": "public static String        DEFAULT_EUARE_URI_SCHEME        = \"http\";  @ConfigurableField( description = \"Use DNS delegation for eucarc.\" ) public static Boolean        USE_DNS_DELEGATION        = Boolean.FALSE;",
+    "resolution": "public static String        DEFAULT_EUARE_URI_SCHEME        = \"http\";  @ConfigurableField( description = \"Use DNS delegation for eucarc.\" ) public static Boolean        USE_DNS_DELEGATION        = Boolean.FALSE;",
+    "conflict": "public static String        DEFAULT_EUARE_URI_SCHEME          = \"http\";"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 50263,
+    "v2": "//    m.put( \"ami-id\", this.getImageInfo( ).getImageId( ) ); m.put( \"product-codes\", this.bootRecord.getMachine( ).getProductCodes( ).toString( ).replaceAll( \"[\\\\Q[]\\\\E]\", \"\" ).replaceAll( \", \", \"\\n\" ) );",
+    "resolution": "m.put( \"ami-id\", this.getImageId( ) ); m.put( \"product-codes\", this.bootRecord.getMachine( ).getProductCodes( ).toString( ).replaceAll( \"[\\\\Q[]\\\\E]\", \"\" ).replaceAll( \", \", \"\\n\" ) );",
+    "conflict": "//ASAP: FIXME: GRZE: m.put( \"ami-id\", this.getImageId( ) ); //    m.put( \"product-codes\", this.getImageInfo( ).getProductCodes( ).toString( ).replaceAll( \"[\\\\Q[]\\\\E]\", \"\" ).replaceAll( \", \", \"\\n\" ) );"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 50275,
+    "v2": "if( !address.isPending( ) ) { for ( VmInstance vm : VmInstances.getInstance( ).listValues( ) ) { if ( addrInfo.getInstanceIp( ).equals( vm.getPrivateAddress( ) ) && VmState.RUNNING.equals( vm.getRuntimeState( ) ) ) {",
+    "resolution": "if ( !address.isPending( ) ) { for ( final VmInstance vm : VmInstances.listValues( ) ) { if ( addrInfo.getInstanceIp( ).equals( vm.getPrivateAddress( ) ) && VmState.RUNNING.equals( vm.getRuntimeState( ) ) ) {",
+    "conflict": "if ( !address.isPending( ) ) { for ( final VmInstance vm : VmInstances.listValues( ) ) { if ( addrInfo.getInstanceIp( ).equals( vm.getPrivateAddress( ) ) && VmState.RUNNING.equals( vm.getState( ) ) ) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 50285,
+    "v2": "@Column( name = \"vm_instance_uuid\" ) private final String                                instanceUuid; @Column( name = \"vm_cluster_name\" ) private final String                                clusterName; @Column( name = \"vm_partition_name\" )",
+    "resolution": "@Column( name = \"vm_cluster_name\" ) private final String                                clusterName; @Column( name = \"metadata_vm_partition_name\" )",
+    "conflict": "@Column( name = \"metadata_vm_partition_name\" )"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 50290,
+    "v2": "public void updateNetworkIndex( Integer newIndex ) { if ( this.getNetworkConfig( ).getNetworkIndex( ) > 0 && newIndex > 0 && ( VmState.RUNNING.equals( this.getRuntimeState( ) ) || VmState.PENDING.equals( this.getRuntimeState( ) ) ) ) {",
+    "resolution": "public void updateNetworkIndex( final Long newIndex ) { if ( ( this.getNetworkConfig( ).getNetworkIndex( ) > 0 ) && ( newIndex > 0 ) && ( VmState.RUNNING.equals( this.getRuntimeState( ) ) || VmState.PENDING.equals( this.getRuntimeState( ) ) ) ) {",
+    "conflict": "public void updateNetworkIndex( final Long newIndex ) { if ( ( this.getNetworkConfig( ).getNetworkIndex( ) > 0 ) && ( newIndex > 0 ) && ( VmState.RUNNING.equals( this.getState( ) ) || VmState.PENDING.equals( this.getState( ) ) ) ) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 50325,
+    "v2": "// TODO: GRZE!!!!! 111oneoneone11111oneoneone ListenerRegistry.getInstance( ).fireEvent( new StorageEvent( StorageEvent.EventType.EbsSnapshot, true, snap.getVolumeSize( ), snap.getOwnerUserId( ), snap.getOwnerUserName(), snap.getOwnerAccountId( ), null, snap.getVolumeCluster( ), snap.getVolumePartition( ) ) );",
+    "resolution": "ListenerRegistry.getInstance( ).fireEvent( new StorageEvent( StorageEvent.EventType.EbsSnapshot, true, snap.getVolumeSize( ), snap.getOwnerUserId( ), snap.getOwnerUserName(), snap.getOwnerAccountNumber( ), snap.getOwnerAccountName( ), snap.getVolumeCluster( ), snap.getVolumePartition( ) ) );",
+    "conflict": "ListenerRegistry.getInstance( ).fireEvent( new StorageEvent( StorageEvent.EventType.EbsSnapshot, true, snap.getVolumeSize( ), snap.getOwnerUserId( ), snap.getOwnerAccountNumber( ), snap.getVolumeCluster( ), snap.getVolumePartition( ) ) );"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 50326,
+    "v2": "//TODO: GRZE!!!! 1111oneoneone1111111oneoneone ListenerRegistry.getInstance( ).fireEvent( new StorageEvent( StorageEvent.EventType.EbsVolume, false, vol.getSize( ), vol.getOwnerUserId( ), vol.getOwnerUserName(), vol.getOwnerAccountId( ), null, vol.getScName( ), vol.getPartition( ) ) );",
+    "resolution": "ListenerRegistry.getInstance( ).fireEvent( new StorageEvent( StorageEvent.EventType.EbsVolume, false, vol.getSize( ), vol.getOwnerUserId( ), vol.getOwnerUserName( ), vol.getOwnerAccountNumber( ), vol.getOwnerAccountName( ), vol.getScName( ), vol.getPartition( ) ) );",
+    "conflict": "ListenerRegistry.getInstance( ).fireEvent( new StorageEvent( StorageEvent.EventType.EbsVolume, false, vol.getSize( ), vol.getOwnerUserId( ), vol.getOwnerAccountNumber( ), vol.getScName( ), vol.getPartition( ) ) );"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 50327,
+    "v2": "//TODO: GRZE!!!! 1111oneoneone1111111oneoneone ListenerRegistry.getInstance( ).fireEvent( new StorageEvent( StorageEvent.EventType.EbsVolume, false, v.getSize( ), v.getOwnerUserId( ), v.getOwnerUserName(), v.getOwnerAccountId( ), null, v.getScName( ), v.getPartition( ) ) );",
+    "resolution": "ListenerRegistry.getInstance( ).fireEvent( new StorageEvent( StorageEvent.EventType.EbsVolume, false, v.getSize( ), v.getOwnerUserId( ), v.getOwnerUserName( ), v.getOwnerAccountNumber( ), v.getOwnerAccountName( ), v.getScName( ), v.getPartition( ) ) );",
+    "conflict": "ListenerRegistry.getInstance( ).fireEvent( new StorageEvent( StorageEvent.EventType.EbsVolume, false, v.getSize( ), v.getOwnerUserId( ), v.getOwnerAccountNumber( ), v.getScName( ), v.getPartition( ) ) );"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 50341,
+    "v2": "bootSet = new BootableSet( doPrivileged( imageId, LookupBlockStorage.INSTANCE ) ); } catch ( AuthException ex ) { LOG.error( ex, ex ); throw new EucalyptusCloudException( ex );",
+    "resolution": "bootSet = new BootableSet( doPrivileged( imageId, LookupBlockStorage.INSTANCE ) ); } catch ( IllegalContextAccessException ex ) { throw new VerificationException( ex );",
+    "conflict": "bootSet = new BootableSet( Lookups.doPrivileged( imageId, LookupBlockStorage.INSTANCE ) );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50376,
+    "v2": "//    Logs.DEBUG = doDebug; //    Logs.TRACE = doDebug;",
+    "resolution": "Logs.DEBUG = doDebug; Logs.TRACE = doDebug; StandalonePersistence.LOG = Logger.getLogger( StandalonePersistence.class );",
+    "conflict": "Logs.DEBUG = doDebug; Logs.TRACE = doDebug; StandalonePersistence.LOG = Logger.getLogger( StandalonePersistence.class );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50385,
+    "v2": "service.getHostName( ), DEFAULT_PORT);",
+    "resolution": "service.getServiceConfiguration().getHostName(), DEFAULT_PORT); } if (remoteBrokerUrl==null) { throw new QueueRuntimeException(\"Unable to locate reporting broker over network\");",
+    "conflict": "service.getServiceConfiguration().getHostName(), DEFAULT_PORT); } if (remoteBrokerUrl==null) { throw new QueueRuntimeException(\"Unable to locate reporting broker over network\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 50391,
+    "v2": "int i = COMMON_FIELD_DESCS.size( ); sysConf.setDefaultKernel( input.getField( i++ ) ); sysConf.setDefaultRamdisk( input.getField( i++ ) );",
+    "resolution": "int i = COMMON_FIELD_DESCS.size( ); ImageConfiguration.getInstance( ).setDefaultKernelId( input.getField( i++ ) ); ImageConfiguration.getInstance( ).setDefaultRamdiskId( input.getField( i++ ) );",
+    "conflict": "int i = COMMON_CONFIG_FIELD_DESCS.size( ); ImageConfiguration.getInstance( ).setDefaultKernelId( input.getField( i++ ) ); ImageConfiguration.getInstance( ).setDefaultRamdiskId( input.getField( i++ ) );"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 50448,
+    "v2": "queueSender.send(event);",
+    "resolution": "queueSender.send(event);",
+    "conflict": "if (isLocal) { listener.fireEvent(event); } else { queueSender.send(event); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50457,
+    "v2": "",
+    "resolution": "import com.eucalyptus.auth.Accounts; import com.eucalyptus.auth.AuthException; import com.eucalyptus.auth.Permissions; import com.eucalyptus.auth.crypto.Digest; import com.eucalyptus.auth.policy.PolicySpec; import com.eucalyptus.auth.principal.Account;",
+    "conflict": "import com.eucalyptus.auth.Accounts; import com.eucalyptus.auth.AuthException; import com.eucalyptus.auth.Permissions; import com.eucalyptus.auth.crypto.Digest; import com.eucalyptus.auth.policy.PolicySpec; import com.eucalyptus.auth.principal.Account;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 50516,
+    "v2": "import com.eucalyptus.bootstrap.Component; import com.eucalyptus.records.EventType;",
+    "resolution": "import com.eucalyptus.component.ComponentIds; import com.eucalyptus.component.auth.SystemCredentialProvider; import com.eucalyptus.component.id.Eucalyptus;",
+    "conflict": "import com.eucalyptus.component.ComponentIds; import com.eucalyptus.component.auth.SystemCredentialProvider; import com.eucalyptus.component.id.Eucalyptus;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50520,
+    "v2": "import com.eucalyptus.auth.Groups; import com.eucalyptus.auth.principal.Authorization; import com.eucalyptus.auth.principal.AvailabilityZonePermission; import com.eucalyptus.auth.principal.Group; import com.eucalyptus.bootstrap.Component;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50522,
+    "v2": "import com.eucalyptus.records.EventRecord; import com.google.common.base.Function; import com.google.common.base.Predicate; import com.google.common.collect.Iterables;",
+    "resolution": "import com.google.common.base.Predicate;",
+    "conflict": "import com.google.common.base.Predicate;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50523,
+    "v2": "ServiceContext.dispatch( \"ReplyQueue\", rep ); } catch ( EucalyptusCloudException ex ) { LOG.error( ex , ex );",
+    "resolution": "ServiceContext.response( rep ); } catch ( Exception ex1 ) { LOG.error( ex1 , ex1 );",
+    "conflict": "ServiceContext.response( rep ); } catch ( Exception ex1 ) { LOG.error( ex1 , ex1 );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50530,
+    "v2": "throw new EucalyptusCloudException( \"Instance \" + request.getInstanceId( ) + \" is not in a running state.\" );",
+    "resolution": "GetConsoleOutputResponseType reply = request.getReply( ); reply.setInstanceId( request.getInstanceId( ) ); reply.setTimestamp( new Date( ) ); reply.setOutput( v.getConsoleOutputString( ) ); ServiceContext.response( reply );",
+    "conflict": "GetConsoleOutputResponseType reply = request.getReply( ); reply.setInstanceId( request.getInstanceId( ) ); reply.setTimestamp( new Date( ) ); reply.setOutput( v.getConsoleOutputString( ) ); ServiceContext.response( reply );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50546,
+    "v2": "import com.eucalyptus.context.ServiceContext;",
+    "resolution": "import com.eucalyptus.component.ServiceConfiguration; import com.eucalyptus.component.id.Eucalyptus; import com.eucalyptus.context.ServiceContextManager; import com.eucalyptus.empyrean.Empyrean;",
+    "conflict": "import com.eucalyptus.component.ServiceConfiguration; import com.eucalyptus.component.id.Eucalyptus; import com.eucalyptus.context.ServiceContextManager; import com.eucalyptus.empyrean.Empyrean;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50565,
+    "v2": "public Callback.Completion startTransition( T transitionName ) throws IllegalStateException, ExistingTransitionException { if ( !this.transitions.containsKey( transitionName ) ) {",
+    "resolution": "public CheckedListenableFuture<P> startTransition( T transitionName ) throws IllegalStateException, ExistingTransitionException { if ( this.state.isMarked( ) ) { throw new ExistingTransitionException( \"Transition request transition=\" + transitionName + \" rejected because of an ongoing transition: \" + this.currentTransition.get( ) ); } else if ( !this.transitions.containsKey( transitionName ) ) {",
+    "conflict": "public CheckedListenableFuture<P> startTransition( T transitionName ) throws IllegalStateException, ExistingTransitionException { if ( this.state.isMarked( ) ) { throw new ExistingTransitionException( \"Transition request transition=\" + transitionName + \" rejected because of an ongoing transition: \" + this.currentTransition.get( ) ); } else if ( !this.transitions.containsKey( transitionName ) ) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50566,
+    "v2": "public Callback.Completion startTransitionTo( S nextState ) throws IllegalStateException, ExistingTransitionException { if ( !this.stateTransitions.get( this.state.getReference( ) ).containsKey( nextState ) ) {",
+    "resolution": "public CheckedListenableFuture<P> startTransitionTo( S nextState ) throws IllegalStateException, ExistingTransitionException { if ( this.state.isMarked( ) ) { throw new ExistingTransitionException( \"Transition request state=\" + nextState + \" rejected because of an ongoing transition: \" + this.currentTransition.get( ) ); } else if ( !this.stateTransitions.get( this.state.getReference( ) ).containsKey( nextState ) ) {",
+    "conflict": "public CheckedListenableFuture<P> startTransitionTo( S nextState ) throws IllegalStateException, ExistingTransitionException { if ( this.state.isMarked( ) ) { throw new ExistingTransitionException( \"Transition request state=\" + nextState + \" rejected because of an ongoing transition: \" + this.currentTransition.get( ) ); } else if ( !this.stateTransitions.get( this.state.getReference( ) ).containsKey( nextState ) ) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50588,
+    "v2": "boolean failed = false; Component euca = Components.lookup( Components.delegate.eucalyptus ); for ( Component comp : Components.list( ) ) {",
+    "resolution": "Component euca = Components.lookup( Eucalyptus.class ); for ( final Component comp : Components.list( ) ) {",
+    "conflict": "Component euca = Components.lookup( Eucalyptus.class ); for ( final Component comp : Components.list( ) ) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50590,
+    "v2": "*******************************************************************************/ /* * Author: chris grzegorczyk <grze@eucalyptus.com>",
+    "resolution": "******************************************************************************* * @author: chris grzegorczyk <grze@eucalyptus.com>",
+    "conflict": "******************************************************************************* * @author: chris grzegorczyk <grze@eucalyptus.com>"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 50608,
+    "v2": "import com.eucalyptus.component.ComponentIds; import com.eucalyptus.component.auth.SystemCredentialProvider; import com.eucalyptus.component.id.Eucalyptus;",
+    "resolution": "import com.eucalyptus.bootstrap.Component; import com.eucalyptus.records.EventType;",
+    "conflict": "import com.eucalyptus.bootstrap.Component; import com.eucalyptus.records.EventType;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50611,
+    "v2": "",
+    "resolution": "import com.eucalyptus.auth.Groups; import com.eucalyptus.auth.principal.Authorization; import com.eucalyptus.auth.principal.AvailabilityZonePermission; import com.eucalyptus.auth.principal.Group; import com.eucalyptus.bootstrap.Component;",
+    "conflict": "import com.eucalyptus.auth.Groups; import com.eucalyptus.auth.principal.Authorization; import com.eucalyptus.auth.principal.AvailabilityZonePermission; import com.eucalyptus.auth.principal.Group; import com.eucalyptus.bootstrap.Component;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50613,
+    "v2": "import com.google.common.base.Predicate;",
+    "resolution": "import com.eucalyptus.records.EventRecord; import com.google.common.base.Function; import com.google.common.base.Predicate; import com.google.common.collect.Iterables;",
+    "conflict": "import com.eucalyptus.records.EventRecord; import com.google.common.base.Function; import com.google.common.base.Predicate; import com.google.common.collect.Iterables;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 50616,
+    "v2": "import java.util.NoSuchElementException;",
+    "resolution": "import com.eucalyptus.auth.principal.Authorization; import com.eucalyptus.auth.principal.AvailabilityZonePermission; import com.eucalyptus.auth.principal.Group;",
+    "conflict": "import org.apache.log4j.Logger; import com.eucalyptus.auth.principal.Authorization; import com.eucalyptus.auth.principal.AvailabilityZonePermission; import com.eucalyptus.auth.principal.Group;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50621,
+    "v2": "GetConsoleOutputResponseType reply = request.getReply( ); reply.setInstanceId( request.getInstanceId( ) ); reply.setTimestamp( new Date( ) ); reply.setOutput( v.getConsoleOutputString( ) ); ServiceContext.response( reply );",
+    "resolution": "throw new EucalyptusCloudException( \"Instance \" + request.getInstanceId( ) + \" is not in a running state.\" );",
+    "conflict": "throw new EucalyptusCloudException( \"Instance \" + request.getInstanceId( ) + \" is not in a running state.\" );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50657,
+    "v2": "******************************************************************************* * @author: chris grzegorczyk <grze@eucalyptus.com>",
+    "resolution": "*******************************************************************************/ /* * Author: chris grzegorczyk <grze@eucalyptus.com>",
+    "conflict": "*******************************************************************************/ /* * Author: chris grzegorczyk <grze@eucalyptus.com>"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50689,
+    "v2": "import com.eucalyptus.bootstrap.*;",
+    "resolution": "import com.eucalyptus.bootstrap.Bootstrap; import com.eucalyptus.bootstrap.Bootstrapper; import com.eucalyptus.bootstrap.Provides; import com.eucalyptus.bootstrap.RunDuring; import com.eucalyptus.component.id.Reporting;",
+    "conflict": "import com.eucalyptus.bootstrap.Bootstrap; import com.eucalyptus.bootstrap.Bootstrapper; import com.eucalyptus.bootstrap.Provides; import com.eucalyptus.bootstrap.RunDuring; import com.eucalyptus.component.id.Reporting;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 50708,
+    "v2": "import com.eucalyptus.auth.Permissions; import com.eucalyptus.auth.policy.PolicySpec; import com.eucalyptus.auth.principal.Account; import com.eucalyptus.auth.principal.User; import com.eucalyptus.component.ResourceOwnerLookup; import com.eucalyptus.context.ServiceContext;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 50711,
+    "v2": "String action = PolicySpec.requestToAction( request ); User requestUser = Permissions.getUserById( request.getUserId( ) ); List<Cluster> authorizedClusters = this.doPrivilegedLookup( zoneName, vmTypeName, action, requestUser ); int remaining = amount;",
+    "resolution": "String action = PolicySpec.requestToAction( request ); User requestUser = Permissions.getUserById( request.getUserId( ) ); List<Cluster> authorizedClusters = this.doPrivilegedLookup( zoneName, vmTypeName, action, requestUser ); int remaining = amount;",
+    "conflict": "List<Cluster> authorizedClusters = this.doPrivilegedLookup( zoneName, vmTypeName ); int remaining = maxAmount;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 50718,
+    "v2": "import org.mule.config.ConfigResource; import com.eucalyptus.auth.AuthException;",
+    "resolution": "import org.jboss.netty.channel.ChannelPipeline; import org.jboss.netty.channel.ChannelPipelineFactory; import org.jboss.netty.channel.Channels;",
+    "conflict": "import org.jboss.netty.channel.ChannelPipeline; import org.jboss.netty.channel.ChannelPipelineFactory; import org.jboss.netty.channel.Channels;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 50724,
+    "v2": "//UserEntity user = new UserEntity( \"admin\", true ); //user.setAdministrator( true ); // YE TODO: will there be a problem, e.g. the system admin is not ready? Contexts.lookup( ( ( MappingHttpMessage ) o ).getCorrelationId( ) ).setUser( Accounts.lookupSystemAdmin( ) );",
+    "resolution": "// YE TODO: will there be a problem, e.g. the system admin is not ready? //Contexts.lookup( ( ( MappingHttpMessage ) o ).getCorrelationId( ) ).setUser( Accounts.lookupSystemAdmin( ) ); Contexts.lookup( ( ( MappingHttpMessage ) o ).getCorrelationId( ) ).setUser( User.SYSTEM );",
+    "conflict": "Contexts.lookup( ( ( MappingHttpMessage ) o ).getCorrelationId( ) ).setUser( User.SYSTEM );"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 50727,
+    "v2": "import com.eucalyptus.auth.Accounts; import com.eucalyptus.auth.AuthException;",
+    "resolution": "import com.eucalyptus.auth.Accounts; import com.eucalyptus.auth.AuthException;",
+    "conflict": "import com.eucalyptus.auth.Groups; import com.eucalyptus.auth.NoSuchUserException;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 50745,
+    "v2": "import com.eucalyptus.component.ComponentIds; import com.eucalyptus.component.auth.SystemCredentialProvider; import com.eucalyptus.component.id.Eucalyptus;",
+    "resolution": "import com.eucalyptus.component.ComponentIds; import com.eucalyptus.component.auth.SystemCredentialProvider; import com.eucalyptus.component.id.Eucalyptus;",
+    "conflict": "import com.eucalyptus.bootstrap.Component; import com.eucalyptus.records.EventType;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 50746,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import com.eucalyptus.auth.Groups; import com.eucalyptus.auth.principal.Authorization; import com.eucalyptus.auth.principal.AvailabilityZonePermission; import com.eucalyptus.auth.principal.Group; import com.eucalyptus.bootstrap.Component;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 50747,
+    "v2": "import java.util.NoSuchElementException;",
+    "resolution": "import java.util.NoSuchElementException;import org.apache.log4j.Logger; import com.eucalyptus.auth.principal.Authorization; import com.eucalyptus.auth.principal.AvailabilityZonePermission; import com.eucalyptus.auth.principal.Group;",
+    "conflict": "import org.apache.log4j.Logger; import com.eucalyptus.auth.principal.Authorization; import com.eucalyptus.auth.principal.AvailabilityZonePermission; import com.eucalyptus.auth.principal.Group;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 50751,
+    "v2": "GetConsoleOutputResponseType reply = request.getReply( ); reply.setInstanceId( request.getInstanceId( ) ); reply.setTimestamp( new Date( ) ); reply.setOutput( v.getConsoleOutputString( ) ); ServiceContext.response( reply );",
+    "resolution": "GetConsoleOutputResponseType reply = request.getReply( ); reply.setInstanceId( request.getInstanceId( ) ); reply.setTimestamp( new Date( ) ); reply.setOutput( v.getConsoleOutputString( ) ); ServiceContext.response( reply );",
+    "conflict": "throw new EucalyptusCloudException( \"Instance \" + request.getInstanceId( ) + \" is not in a running state.\" );"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 50758,
+    "v2": "System.setProperty( \"javax.net.ssl.trustStorePassword\", ComponentIds.lookup(Eucalyptus.class).name( ) ); System.setProperty( \"javax.net.ssl.keyStorePassword\", ComponentIds.lookup(Eucalyptus.class).name( ) ); System.setProperty( \"javax.net.debug\", \"ssl\" );//set this to \"ssl\" for debugging.",
+    "resolution": "System.setProperty( \"javax.net.ssl.trustStorePassword\", ComponentIds.lookup(Eucalyptus.class).name( ) ); System.setProperty( \"javax.net.ssl.keyStorePassword\", ComponentIds.lookup(Eucalyptus.class).name( ) ); System.setProperty( \"javax.net.debug\", \"ssl\" );//set this to \"ssl\" for debugging.",
+    "conflict": "System.setProperty( \"javax.net.ssl.trustStorePassword\", Component.eucalyptus.name( ) ); System.setProperty( \"javax.net.ssl.keyStorePassword\", Component.eucalyptus.name( ) ); System.setProperty( \"javax.net.debug\", \"none\" );//set this to \"ssl\" for debugging."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50798,
+    "v2": "public interface Group extends java.security.acl.Group, Cloneable {  public String getGroupId( );  public String getName( );",
+    "resolution": "public interface Group extends HasId, BasePrincipal, Serializable {",
+    "conflict": "public interface Group extends HasId, BasePrincipal, Serializable {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50817,
+    "v2": "private static void setupTimer( ) {",
+    "resolution": "public static long getRate( ) { return RATE; }  public static void setupTimer( ) {",
+    "conflict": "public static long getRate( ) { return RATE; }  public static void setupTimer( ) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 50818,
+    "v2": "ListenerRegistry.getInstance( ).register( Hertz.class, new Dummy() ); timer.scheduleAtFixedRate( clock, 0, 10000 );//TODO: make configurable hzTimer.scheduleAtFixedRate( hertz, 0, 1000 );",
+    "resolution": "ListenerRegistry.getInstance( ).register( Hertz.class, new Dummy() ); timer.scheduleAtFixedRate( clock, 0, 10000 );//TODO: make configurable hzTimer.scheduleAtFixedRate( hertz, 0, 1000 );",
+    "conflict": "timer.scheduleAtFixedRate( clock, 0, getRate( ) );//TODO: make configurable final Timer ref = timer;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 50823,
+    "v2": "} else if ( ( user == null ) || ( ( user != null ) && user.isAdministrator( ) ) ) { //          this.dispatchRequest( ctx, request, msg ); ServiceSinkHandler.dispatchRequest( msg );",
+    "resolution": "} else if ( ( user == null ) || ( ( user != null ) && user.isSystemAdmin( ) ) ) { this.dispatchRequest( ctx, request, msg ); ServiceSinkHandler.dispatchRequest( msg );",
+    "conflict": "} else if ( ( user == null ) || ( ( user != null ) && user.isSystemAdmin( ) ) ) { this.dispatchRequest( ctx, request, msg );"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 50835,
+    "v2": "ListenerRegistry.getInstance( ).fireEvent( new Hertz() ); } catch ( EventFailedException e ) {",
+    "resolution": "ListenerRegistry.getInstance( ).fireEvent( new Hertz() ); } catch ( EventFailedException e ) {",
+    "conflict": "long sign = (long) (Math.pow(-1f,(float)(++phase%2))); ListenerRegistry.getInstance( ).fireEvent( new Hertz().setMessage( sign * System.currentTimeMillis( ) ) ); } catch ( EventVetoedException e ) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 50890,
+    "v2": "Dispatcher scDispatch = ServiceDispatcher.lookup( Components.lookup( \"storage\" ), storageControllerWeb.getHost( ) ); if ( Components.lookup( \"eucalyptus\" ).isLocal( ) ) { updateStorageConfiguration.setName( StorageProperties.SC_LOCAL_NAME ); }",
+    "resolution": "Dispatcher scDispatch = ServiceDispatcher.lookup( Components.lookup( \"storage\" ), storageControllerWeb.getHost( ) );",
+    "conflict": "Dispatcher scDispatch = ServiceDispatcher.lookup( Component.storage, storageControllerWeb.getHost( ) );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 50990,
+    "v2": "",
+    "resolution": "import com.eucalyptus.auth.Groups; import com.eucalyptus.auth.NoSuchGroupException; import com.eucalyptus.auth.principal.Authorization; import com.eucalyptus.auth.principal.AvailabilityZonePermission; import com.eucalyptus.auth.principal.Group;",
+    "conflict": "import com.eucalyptus.auth.Groups; import com.eucalyptus.auth.NoSuchGroupException; import com.eucalyptus.auth.principal.Authorization; import com.eucalyptus.auth.principal.AvailabilityZonePermission; import com.eucalyptus.auth.principal.Group;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 51009,
+    "v2": "StorageControllerConfiguration sc = Configuration.getStorageControllerConfiguration( v.getCluster( ) ); DescribeStorageSnapshotsResponseType snapshotInfo = StorageUtil.send( sc.getName( ), scRequest );",
+    "resolution": "StorageControllerConfiguration sc = Configuration.lookupSc( v.getCluster( ) ); DescribeStorageSnapshotsResponseType snapshotInfo = StorageUtil.send( sc.getName( ), scRequest );",
+    "conflict": "StorageControllerConfiguration sc = Configuration.lookupSc( v.getCluster( ) ); DescribeStorageSnapshotsResponseType snapshotInfo = StorageUtil.lookup( sc.getHostName( ) ).send( scRequest, DescribeStorageSnapshotsResponseType.class );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51027,
+    "v2": "",
+    "resolution": "String returnValue; returnValue = SystemUtil.run(new String[]{WalrusProperties.eucaHome + WalrusProperties.EUCA_ROOT_WRAPPER, \"drbdadm\", \"status\"}); if(returnValue.length() == 0) { throw new EucalyptusCloudException(\"drbdadm not found: Is drbd installed?\"); }",
+    "conflict": "String returnValue; returnValue = SystemUtil.run(new String[]{WalrusProperties.eucaHome + WalrusProperties.EUCA_ROOT_WRAPPER, \"drbdadm\", \"status\"}); if(returnValue.length() == 0) { throw new EucalyptusCloudException(\"drbdadm not found: Is drbd installed?\"); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51083,
+    "v2": "if( this.isCloudLocal( ) && services.size( ) != 1 && !db.equals( this ) ) { throw new RuntimeException( \"Cloud local component has \"+services.size()+\" registered services (Should be exactly 1): \" + this + \" \" + services.toString( ) ); } else if( this.isCloudLocal( ) && services.size( ) != 1 && db.equals( this ) ) { return this.getLocalUri( );",
+    "resolution": "if( this.isCloudLocal( ) && services.size( ) != 1 && !db.equals( this ) ) { throw new RuntimeException( \"Cloud local component has \"+services.size()+\" registered services (Should be exactly 1): \" + this + \" \" + services.toString( ) ); } else if( this.isCloudLocal( ) && services.size( ) != 1 && db.equals( this ) ) { return this.getLocalUri( );",
+    "conflict": "if( this.isCloudLocal( ) && services.size( ) != 1 ) { throw new RuntimeException( \"Cloud local component has \"+services.size()+\" registered services (Should be exactly 1): \" + this + \" \" + services.toString( ) );"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 51133,
+    "v2": "import com.eucalyptus.util.async.Callback.Success; import com.eucalyptus.util.async.Callbacks; import com.eucalyptus.util.async.UnconditionalCallback;",
+    "resolution": "import com.eucalyptus.util.async.Callbacks; import com.eucalyptus.util.async.UnconditionalCallback;",
+    "conflict": "import com.eucalyptus.util.async.Callbacks; import com.eucalyptus.util.async.UnconditionalCallback; import com.eucalyptus.util.async.Callback.Success;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51157,
+    "v2": "public boolean load( ) throws Exception { LOG.debug( \"Initializing SSL just in case: \" + SslSetup.class ); //    System.setProperty( \"euca.db.password\", Hmacs.generateSystemSignature( ) );",
+    "resolution": "public boolean load( ) throws Exception { LOG.trace( \"Initializing SSL just in case: \" + SslSetup.class );",
+    "conflict": "public boolean load( ) throws Exception { LOG.trace( \"Initializing SSL just in case: \" + SslSetup.class );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51172,
+    "v2": "******************************************************************************* * @author: chris grzegorczyk <grze@eucalyptus.com>",
+    "resolution": "*******************************************************************************/ /* * @author chris grzegorczyk <grze@eucalyptus.com>",
+    "conflict": "*******************************************************************************/ /* * @author chris grzegorczyk <grze@eucalyptus.com>"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51190,
+    "v2": "boolean ret = false; if ( token != null ) { ret = token.equals( testToken ); }",
+    "resolution": "boolean ret = token.equals( testToken );",
+    "conflict": "boolean ret = token.equals( testToken );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51213,
+    "v2": "EventRecord.here( AddressCategory.class, EventClass.ADDRESS, EventType.ADDRESS_UNASSIGNING, \"user=\"+vm.getOwnerId( ), \"address=\"+addr.getName( ), \"instanceid=\"+vm.getInstanceId( ), addr.isSystemOwned( ) ? \"SYSTEM\":\"USER\" ).info( );",
+    "resolution": "EventRecord.here( AddressCategory.class, EventClass.ADDRESS, EventType.ADDRESS_UNASSIGNING ) .withDetails( vm.getOwnerId( ), addr.getName( ), \"instanceid\", vm.getInstanceId( ) ) .withDetails( \"type\", addr.isSystemOwned( ) ? \"SYSTEM\" : \"USER\" ) .withDetails( \"cluster\", addr.getCluster( ) );",
+    "conflict": "EventRecord.here( AddressCategory.class, EventClass.ADDRESS, EventType.ADDRESS_UNASSIGNING ) .withDetails( vm.getOwnerId( ), addr.getName( ), \"instanceid\", vm.getInstanceId( ) ) .withDetails( \"type\", addr.isSystemOwned( ) ? \"SYSTEM\" : \"USER\" ) .withDetails( \"cluster\", addr.getCluster( ) );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51215,
+    "v2": "EventRecord.here( AddressCategory.class, EventClass.ADDRESS, EventType.ADDRESS_ASSIGNING, \"user=\"+vm.getOwnerId( ), \"address=\"+addr.getName( ), \"instanceid=\"+vm.getInstanceId( ), addr.isSystemOwned( ) ? \"SYSTEM\":\"USER\", addr.toString( ) ).info( );",
+    "resolution": "EventRecord.here( AddressCategory.class, EventClass.ADDRESS, EventType.ADDRESS_ASSIGNING ) .withDetails( vm.getOwnerId( ), addr.getName( ), \"instanceid\", vm.getInstanceId( ) ) .withDetails( \"type\", addr.isSystemOwned( ) ? \"SYSTEM\" : \"USER\" ) .withDetails( \"cluster\", addr.getCluster( ) );",
+    "conflict": "EventRecord.here( AddressCategory.class, EventClass.ADDRESS, EventType.ADDRESS_ASSIGNING ) .withDetails( vm.getOwnerId( ), addr.getName( ), \"instanceid\", vm.getInstanceId( ) ) .withDetails( \"type\", addr.isSystemOwned( ) ? \"SYSTEM\" : \"USER\" ) .withDetails( \"cluster\", addr.getCluster( ) );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51230,
+    "v2": "LOG.trace( msg.toString( ) );",
+    "resolution": "if ( !msg.get_return( ) ) { throw new EucalyptusClusterException( LogUtil.dumpObject( msg ) ); } this.verify( msg );",
+    "conflict": "if ( !msg.get_return( ) ) { throw new EucalyptusClusterException( LogUtil.dumpObject( msg ) ); } this.verify( msg );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51233,
+    "v2": "import com.eucalyptus.vm.SystemState.Reason; import com.eucalyptus.vm.VmState; import com.google.common.collect.Lists; import com.google.common.collect.Sets;",
+    "resolution": "import com.eucalyptus.vm.VmState;",
+    "conflict": "import com.eucalyptus.vm.VmState;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51249,
+    "v2": "builder.remove( conf ); builder.getComponent( ).removeService( conf ); //      builder.fireStop( conf );",
+    "resolution": "builder.fireStop( conf ); builder.getComponent( ).removeService( conf ); builder.remove( conf );",
+    "conflict": "builder.fireStop( conf ); builder.getComponent( ).removeService( conf ); builder.remove( conf );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51252,
+    "v2": "public static final boolean zeroFillVolumes = false;  public static int TRANSFER_CHUNK_SIZE = 8192;",
+    "resolution": "public static final int TRANSFER_CHUNK_SIZE = 8192; public static final boolean zeroFillVolumes = false;",
+    "conflict": "public static final int TRANSFER_CHUNK_SIZE = 8192; public static final boolean zeroFillVolumes = false;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51279,
+    "v2": "JarFile jar = null; try { jar = new JarFile( f );",
+    "resolution": "try { JarFile jar = new JarFile( f );",
+    "conflict": "try { JarFile jar = new JarFile( f );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51280,
+    "v2": "if ( jar != null ) { try { jar.close(); } catch ( IOException ex ) { } }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51288,
+    "v2": "public abstract Dispatcher buildChild( Component parent, Service service );",
+    "resolution": "public abstract Dispatcher buildChild( Component parent, Service service );",
+    "conflict": "public abstract Dispatcher buildChild( Component parent, Service service );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51290,
+    "v2": "public Component getParent( ) { return this.parent; }  @Override",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51321,
+    "v2": "if(System.getProperty(\"ebs.storage.manager\") != null) { ebsManager = System.getProperty(\"ebs.storage.manager\");",
+    "resolution": "if(System.getProperty(\"euca.disable.san\") == null) { if(System.getProperty(\"ebs.storage.manager\") != null) { ebsManager = System.getProperty(\"ebs.storage.manager\"); }",
+    "conflict": "if(System.getProperty(\"euca.disable.san\") == null) { if(System.getProperty(\"ebs.storage.manager\") != null) { ebsManager = System.getProperty(\"ebs.storage.manager\"); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51358,
+    "v2": "insertChunk(WalrusDataMessage.DataMessage(read)); if(httpChunk.isLast()) { insertChunk(WalrusDataMessage.EOF());",
+    "resolution": "while((putQueue != null) && (!putQueue.offer(WalrusDataMessage.DataMessage(read), 500, TimeUnit.MILLISECONDS))); if(httpChunk.isLast()) { while((putQueue != null) && (!putQueue.offer(WalrusDataMessage.EOF(), 1000, TimeUnit.MILLISECONDS)));",
+    "conflict": "while((putQueue != null) && (!putQueue.offer(WalrusDataMessage.DataMessage(read), 500, TimeUnit.MILLISECONDS))); if(httpChunk.isLast()) { while((putQueue != null) && (!putQueue.offer(WalrusDataMessage.EOF(), 1000, TimeUnit.MILLISECONDS)));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 51530,
+    "v2": "if ( address.isAssigned( ) && oldAddr != null) { address.unassign( ).getCallback( ).then( unassignBystander ).dispatch( oldAddr.getCluster( ) );",
+    "resolution": "if ( address.isAssigned( ) ) { address.unassign( ).getCallback( ).then( unassignBystander ).dispatch( oldAddr.getCluster( ) );",
+    "conflict": "if ( address.isAssigned( ) ) { if(oldAddr != null) address.unassign( ).getCallback( ).then( unassignBystander ).dispatch( oldAddr.getCluster( ) );"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 51578,
+    "v2": "if ( event instanceof LifecycleEvent ) { LifecycleEvent e = ( LifecycleEvent ) event; if ( !Component.walrus.equals( e.getPeer( ) ) && !Component.storage.equals( e.getPeer( ) ) ) {",
+    "resolution": "if ( event instanceof LifecycleEvent ) { LifecycleEvent e = ( LifecycleEvent ) event; if ( !Component.walrus.equals( e.getPeer( ) ) && !Component.storage.equals( e.getPeer( ) ) && !Component.vmwarebroker.equals( e.getPeer( ) ) ) {",
+    "conflict": "if ( event instanceof ComponentEvent ) { ComponentEvent e = ( ComponentEvent ) event; if ( !Component.walrus.equals( e.getComponent( ) ) && !Component.storage.equals( e.getComponent( ) ) && !Component.vmwarebroker.equals( e.getComponent( ) )) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51603,
+    "v2": "public static void configure() { WalrusInfo walrusInfo = WalrusInfo.getWalrusInfo(); storageManager = new FileSystemStorageManager(walrusInfo.getStorageDir());",
+    "resolution": "public static void configure() { WalrusInfo walrusInfo = WalrusInfo.getWalrusInfo(); storageManager = new FileSystemStorageManager(walrusInfo.getStorageDir());",
+    "conflict": "public static void deferredInitializer() { configure(); storageManager = new FileSystemStorageManager(WalrusInfo.getWalrusInfo().getStorageDir());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51625,
+    "v2": "",
+    "resolution": "import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; import java.io.IOException; import java.lang.reflect.Field; import java.nio.channels.FileChannel;",
+    "conflict": "import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; import java.io.IOException; import java.lang.reflect.Field; import java.nio.channels.FileChannel;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 51654,
+    "v2": "String rawFileName = StorageInfo.getStorageInfo().getVolumesDir() + \"/\" + volumeId; //create file and attach to loopback device File snapshotFile = new File(StorageInfo.getStorageInfo().getVolumesDir() + PATH_SEPARATOR + foundSnapshotInfo.getVolumeId());",
+    "resolution": "String rawFileName = DirectStorageInfo.getStorageInfo().getVolumesDir() + \"/\" + volumeId; //create file and attach to loopback device File snapshotFile = new File(DirectStorageInfo.getStorageInfo().getVolumesDir() + PATH_SEPARATOR + foundSnapshotInfo.getVolumeId());",
+    "conflict": "String rawFileName = storageRootDirectory + \"/\" + volumeId; //create file and attach to loopback device File snapshotFile = new File(storageRootDirectory + PATH_SEPARATOR + foundSnapshotInfo.getVolumeId());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 51656,
+    "v2": "File volumeFile = new File(StorageInfo.getStorageInfo().getVolumesDir() + PATH_SEPARATOR + foundVolumeInfo.getVolumeId());  String rawFileName = StorageInfo.getStorageInfo().getVolumesDir() + \"/\" + dupVolumeId;",
+    "resolution": "File volumeFile = new File(storageRootDirectory + PATH_SEPARATOR + foundVolumeInfo.getVolumeId());  String rawFileName = storageRootDirectory + \"/\" + dupVolumeId;",
+    "conflict": "File volumeFile = new File(storageRootDirectory + PATH_SEPARATOR + foundVolumeInfo.getVolumeId());  String rawFileName = storageRootDirectory + \"/\" + dupVolumeId;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51684,
+    "v2": "params.add(property.getDisplayName()); params.add(property.getValue()); params.add(property.getQualifiedName());",
+    "resolution": "params.add(property.getDisplayName()); params.add(property.getValue()); params.add(property.getQualifiedName());",
+    "conflict": "params.add(property.getKey()); params.add(property.getValue());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 51732,
+    "v2": "//DAS properties public static String DAS_PARTITION = \"/dev/sde\";",
+    "resolution": "public static String DAS_DEVICE = \"/dev/blockdev\";",
+    "conflict": "static { GroovyUtil.loadConfig(\"storageprops.groovy\"); }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 51753,
+    "v2": "storage.setDASPartition(((TextBox)g.getWidget(15, 1)).getText());",
+    "resolution": "storage.setSanHost (((TextBox)g.getWidget(15, 1)).getText()); storage.setSanUser (((TextBox)g.getWidget(16, 1)).getText()); storage.setSanPassword (((TextBox)g.getWidget(17, 1)).getText());",
+    "conflict": "storage.setSanHost (((TextBox)g.getWidget(15, 1)).getText()); storage.setSanUser (((TextBox)g.getWidget(16, 1)).getText()); storage.setSanPassword (((TextBox)g.getWidget(17, 1)).getText());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51760,
+    "v2": "for(; (line = fileReader.readLine( ))!=null; conf += !line.matches(\"\\\\s*\\\\w+\\\\s*=[\\\\s\\\\w*\\\"']*;{0,1}\")?\"\":\"\\n\"+className+\".\"+line);",
+    "resolution": "for(; (line = fileReader.readLine( ))!=null; conf += !line.matches(\"\\\\s*\\\\w+\\\\s*=[\\\\s\\\\w*\\\"']*;{0,1}\")?\"\":\"\\n\"+className+\".\"+line);",
+    "conflict": "for(; (line = fileReader.readLine( ))!=null; conf += !line.matches(\"\\\\s*\\\\w+\\\\s*=[\\\\s\\\\w*\\\"']*\")?\"\":\"\\n\"+className+\".\"+line); fileReader.close();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51771,
+    "v2": "destinationObjectInfo.setObjectName(destinationKey.replaceAll(\"/\", \"-\") + Hashes.getRandom(4)); addNew = true;",
+    "resolution": "destinationObjectInfo .setObjectName(destinationKey .replaceAll(\"/\", \"-\") + Hashes.getRandom(4));",
+    "conflict": "destinationObjectInfo .setObjectName(destinationKey .replaceAll(\"/\", \"-\") + Hashes.getRandom(4));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51798,
+    "v2": "configure();",
+    "resolution": "configure();",
+    "conflict": "initialize(); }  public static void initialize() { StorageProperties.updateName();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 51806,
+    "v2": "NeedsDeferredInitialization needsDeferredInit = (NeedsDeferredInitialization) candidate.getAnnotation(NeedsDeferredInitialization.class); if(needsDeferredInit.component().isEnabled()) DeferredInitializer.getInstance().add(candidate);",
+    "resolution": "NeedsDeferredInitialization needsDeferredInit = (NeedsDeferredInitialization) candidate.getAnnotation(NeedsDeferredInitialization.class); if(needsDeferredInit.component().isEnabled()) DeferredInitializer.getInstance().add(candidate);",
+    "conflict": "NeedsDeferredInitialization needsDeferredInit = (NeedsDeferredInitialization) candidate.getAnnotation(NeedsDeferredInitialization.class); if(needsDeferredInit.component().isEnabled()) DeferredInitializer.getInstance().add(candidate);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51857,
+    "v2": "LOG.info( EventRecord.here( Component.eucalyptus, EventType.MSG_SERVICED, reply.getClass( ).getSimpleName( ) ) ); final MappingHttpResponse response = new MappingHttpResponse( request.getProtocolVersion( ) );",
+    "resolution": "LOG.info( EventRecord.here( Component.eucalyptus, EventType.MSG_SERVICED, reply.getClass( ).getSimpleName( ) ) ); final MappingHttpResponse response = new MappingHttpResponse( request.getProtocolVersion( ) );",
+    "conflict": "LOG.info( EventRecord.create( Component.eucalyptus, reply.getUserId( ), reply.getCorrelationId( ), EventType.MSG_SERVICED, reply.getClass( ).getSimpleName( ) ) ); HttpVersion httpVersion = request.getProtocolVersion() != null ? request.getProtocolVersion() : HttpVersion.HTTP_1_1; final MappingHttpResponse response = new MappingHttpResponse(httpVersion);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51858,
+    "v2": "if(\"all\".equals(target.getName())) imgInfo.setPublic(false); } else if ( !adding ) { throw new EucalyptusCloudException( \"image attribute: cant remove nonexistant permission.\" ); }",
+    "resolution": "if(\"all\".equals(target.getName())) imgInfo.setPublic(false); } else if ( !adding ) { throw new EucalyptusCloudException( \"image attribute: cant remove nonexistant permission.\" ); }",
+    "conflict": "} else if ( !adding ) { throw new EucalyptusCloudException( \"image attribute: cant remove nonexistant permission.\" ); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51868,
+    "v2": "import edu.ucsb.eucalyptus.cloud.EucalyptusCloudException; import edu.ucsb.eucalyptus.cloud.ws.Command; import edu.ucsb.eucalyptus.cloud.ws.StreamConsumer; import edu.ucsb.eucalyptus.keys.Hashes; import edu.ucsb.eucalyptus.storage.StorageManager;",
+    "resolution": "import edu.ucsb.eucalyptus.cloud.EucalyptusCloudException; import edu.ucsb.eucalyptus.cloud.ws.Command; import edu.ucsb.eucalyptus.cloud.ws.StreamConsumer; import edu.ucsb.eucalyptus.keys.Hashes; import edu.ucsb.eucalyptus.storage.StorageManager;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51869,
+    "v2": "import edu.ucsb.eucalyptus.cloud.EucalyptusCloudException; import edu.ucsb.eucalyptus.cloud.ws.Command; import edu.ucsb.eucalyptus.cloud.ws.StreamConsumer; import edu.ucsb.eucalyptus.keys.Hashes; import edu.ucsb.eucalyptus.storage.StorageManager; import edu.ucsb.eucalyptus.transport.query.WalrusQueryDispatcher;",
+    "resolution": "import edu.ucsb.eucalyptus.cloud.EucalyptusCloudException; import edu.ucsb.eucalyptus.cloud.ws.Command; import edu.ucsb.eucalyptus.cloud.ws.StreamConsumer; import edu.ucsb.eucalyptus.keys.Hashes; import edu.ucsb.eucalyptus.storage.StorageManager; import edu.ucsb.eucalyptus.transport.query.WalrusQueryDispatcher;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51879,
+    "v2": "} else if ( msg instanceof DescribeBundleTasksType ) { return msg.getReply(); } LOG.info( EventRecord.create( this.getClass().getSimpleName(), msg.getUserId(), msg.getCorrelationId(), EventType.MSG_RECEIVED, msg.getClass().getSimpleName() )) ;",
+    "resolution": "} else if ( msg instanceof DescribeBundleTasksType ) { return msg.getReply(); } LOG.info( EventRecord.create( this.getClass().getSimpleName(), msg.getUserId(), msg.getCorrelationId(), EventType.MSG_RECEIVED, msg.getClass().getSimpleName() )) ;",
+    "conflict": "} LOG.info( EventRecord.create( this.getClass().getSimpleName(), msg.getUserId(), msg.getCorrelationId(), EventType.MSG_RECEIVED, msg.getClass().getSimpleName() ) );"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51890,
+    "v2": "if ( (! admin && ! newUser ) || userToEdit.isAdministrator().booleanValue()) { cleartextPassword1_box.setEnabled (false); }",
+    "resolution": "if ( (! admin && ! newUser ) || userToEdit.isAdministrator().booleanValue()) { cleartextPassword1_box.setEnabled (false); }",
+    "conflict": "if ( (! admin && ! newUser ) || userToEdit.isAdministrator()) { cleartextPassword1_box.setEnabled (false); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51891,
+    "v2": "if ( ( ! admin && ! newUser ) || userToEdit.isAdministrator().booleanValue()) { cleartextPassword2_box.setEnabled (false); }",
+    "resolution": "if ( ( ! admin && ! newUser ) || userToEdit.isAdministrator().booleanValue()) { cleartextPassword2_box.setEnabled (false); }",
+    "conflict": "if ( ( ! admin && ! newUser ) || userToEdit.isAdministrator()) { cleartextPassword2_box.setEnabled (false); }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 51902,
+    "v2": "final Integer maxUserPublicAddresses, final Boolean doDynamicPublicAddresses, final Integer systemReservedPublicAddresses )",
+    "resolution": "final String dnsDomain, final String nameserver, final String nameserverAddress)",
+    "conflict": "final String dnsDomain, final String nameserver, final String nameserverAddress)"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 51903,
+    "v2": "this.maxUserPublicAddresses = maxUserPublicAddresses; this.systemReservedPublicAddresses = systemReservedPublicAddresses; this.doDynamicPublicAddresses = doDynamicPublicAddresses;",
+    "resolution": "this.maxUserPublicAddresses = maxUserPublicAddresses; this.systemReservedPublicAddresses = systemReservedPublicAddresses; this.doDynamicPublicAddresses = doDynamicPublicAddresses;this.dnsDomain = dnsDomain; this.nameserver = nameserver; this.nameserverAddress = nameserverAddress;",
+    "conflict": "this.dnsDomain = dnsDomain; this.nameserver = nameserver; this.nameserverAddress = nameserverAddress;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 51907,
+    "v2": "sysConf.setMaxUserPublicAddresses( systemConfig.getMaxUserPublicAddresses() ); sysConf.setDoDynamicPublicAddresses( systemConfig.isDoDynamicPublicAddresses() ); sysConf.setSystemReservedPublicAddresses( systemConfig.getSystemReservedPublicAddresses() );",
+    "resolution": "sysConf.setMaxUserPublicAddresses( systemConfig.getMaxUserPublicAddresses() ); sysConf.setDoDynamicPublicAddresses( systemConfig.isDoDynamicPublicAddresses() ); sysConf.setSystemReservedPublicAddresses( systemConfig.getSystemReservedPublicAddresses() );sysConf.setDnsDomain(systemConfig.getDnsDomain()); sysConf.setNameserver(systemConfig.getNameserver()); sysConf.setNameserverAddress(systemConfig.getNameserverAddress());",
+    "conflict": "sysConf.setDnsDomain(systemConfig.getDnsDomain()); sysConf.setNameserver(systemConfig.getNameserver()); sysConf.setNameserverAddress(systemConfig.getNameserverAddress());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 51908,
+    "v2": "systemConfig.getMaxUserPublicAddresses(), systemConfig.isDoDynamicPublicAddresses(), systemConfig.getSystemReservedPublicAddresses()));",
+    "resolution": "systemConfig.getMaxUserPublicAddresses(), systemConfig.isDoDynamicPublicAddresses(), systemConfig.getSystemReservedPublicAddresses()), systemConfig.getDnsDomain(), systemConfig.getNameserver(), systemConfig.getNameserverAddress()));",
+    "conflict": "systemConfig.getDnsDomain(), systemConfig.getNameserver(), systemConfig.getNameserverAddress()));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51940,
+    "v2": "for ( ClusterInfoWeb cw : newClusterList ) { LOG.info( \"Adding cluster for update: \" + cw.getName() + \" - \" + cw.getHost() + \":\" + cw.getPort() ); list.add( new ClusterStateType( cw.getName(), cw.getHost(), cw.getPort() ) ); }",
+    "resolution": "for ( ClusterInfoWeb cw : newClusterList ) { LOG.info( \"Adding cluster for update: \" + cw.getName() + \" - \" + cw.getHost() + \":\" + cw.getPort() ); list.add( new ClusterStateType( cw.getName(), cw.getHost(), cw.getPort() ) ); }",
+    "conflict": "for ( ClusterInfoWeb cw : newClusterList ) list.add( new ClusterStateType( cw.getName(), cw.getHost(), cw.getPort() ) ); // TODO Sunil: add SC configuration params"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51943,
+    "v2": "startup(); sharedMode = Bukkit.getSharedMode(); if(!sharedMode) checkWalrusConnection(); //TODO: inform CLC //StorageControllerHeartbeatMessage heartbeat = new StorageControllerHeartbeatMessage(StorageProperties.SC_ID);",
+    "resolution": "startup(); sharedMode = Bukkit.getSharedMode(); if(!sharedMode) checkWalrusConnection(); //TODO: inform CLC //StorageControllerHeartbeatMessage heartbeat = new StorageControllerHeartbeatMessage(StorageProperties.SC_ID);",
+    "conflict": ""
+  }
+]
+}

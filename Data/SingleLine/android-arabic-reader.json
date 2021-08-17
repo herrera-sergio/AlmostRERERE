@@ -1,0 +1,1256 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 2",
+    "id": 41823,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 41825,
+    "v2": "",
+    "resolution": "import net.sourceforge.arabicReader.R;",
+    "conflict": "import net.sourceforge.arabicReader.R; import org.geometerplus.android.fbreader.OrientationUtil;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 41827,
+    "v2": "import org.geometerplus.zlibrary.core.network.ZLNetworkContext;",
+    "resolution": "import org.geometerplus.zlibrary.core.network.ZLNetworkContext;",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 41832,
+    "v2": "new Processor(paragraph, CursorManager.ExtensionManager, new LineBreaker(Model.getLanguage()), Model.getMarks(), Index, myElements).fill();",
+    "resolution": "new Processor(paragraph, Model.getLanguage(), CursorManager.ExtensionManager, new LineBreaker(Model.getLanguage()), Model.getMarks(), Index, myElements).fill();",
+    "conflict": "new Processor(paragraph, Model.getLanguage(), Model.getMarks(), Index, myElements).fill();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 41839,
+    "v2": "getTextStyle(), element, x, x + spaceLength, y, y, columnIndex",
+    "resolution": "getTextStyle(), element, (myRTLMode ? x-spaceLength : x), (myRTLMode ? x : x + spaceLength), y, y",
+    "conflict": "getTextStyle(), element, (myRTLMode ? x-spaceLength : x), (myRTLMode ? x : x + spaceLength), y, y"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 41840,
+    "v2": "x, x + width - 1, y - height + 1, y + descent, columnIndex",
+    "resolution": "(myRTLMode ? x-width : x), (myRTLMode ? x : x + width) - 1, y - height + 1, y + descent",
+    "conflict": "(myRTLMode ? x-width : x), (myRTLMode ? x : x + width) - 1, y - height + 1, y + descent"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 41841,
+    "v2": "x, x + width - 1, y - height + 1, y + descent, columnIndex",
+    "resolution": "(myRTLMode ? x-width : x), (myRTLMode ? (x + 1) : (x + width - 1)), y - height + 1, y + descent",
+    "conflict": "(myRTLMode ? x-width : x), (myRTLMode ? (x + 1) : (x + width - 1)), y - height + 1, y + descent"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 41844,
+    "v2": "",
+    "resolution": "import org.geometerplus.zlibrary.ui.android.R;",
+    "conflict": "import org.geometerplus.zlibrary.ui.android.R;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 41850,
+    "v2": "private void setTitleAndSubtitle(Pair<String,String> pair) {",
+    "resolution": "private void setTitleAndSubtitle(Pair<String,String> pair) {",
+    "conflict": "private setTitleAndSubtitle(Pair<String,String> pair) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 41851,
+    "v2": "private void setTitleAndSubtitle(Pair<String,String> pair) {",
+    "resolution": "private void setTitleAndSubtitle(Pair<String,String> pair) {",
+    "conflict": "private setTitleAndSubtitle(Pair<String,String> pair) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 41854,
+    "v2": "import org.geometerplus.android.fbreader.FBReader;",
+    "resolution": "import org.geometerplus.android.fbreader.FBReader;",
+    "conflict": "import org.geometerplus.android.fbreader.*;"
+  },
+  {
+    "devdecision": "None",
+    "id": 41855,
+    "v2": "import org.geometerplus.zlibrary.ui.android.R;",
+    "resolution": "import org.geometerplus.android.fbreader.network.CatalogManagerActivity;",
+    "conflict": "import org.geometerplus.android.fbreader.OrientationUtil;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 41883,
+    "v2": "import org.geometerplus.fbreader.Paths;",
+    "resolution": "import org.geometerplus.fbreader.Paths;import org.geometerplus.fbreader.fbreader.options.PageTurningOptions;",
+    "conflict": "import org.geometerplus.fbreader.fbreader.options.PageTurningOptions;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 41893,
+    "v2": "return isTOCAvailable(reader);",
+    "resolution": "return isTOCAvailable(Reader);",
+    "conflict": "return isTOCAvailable(Reader);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 41906,
+    "v2": "return ((ZLAndroidApplication)getApplication()).library();",
+    "resolution": "return FBReaderUtil.getZLibrary(this);",
+    "conflict": "return FBReaderUtil.getZLibrary(this);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 41913,
+    "v2": "public class BookInfoActivity extends Activity implements IBookCollection.Listener<Book> {",
+    "resolution": "public class BookInfoActivity extends Activity implements MenuItem.OnMenuItemClickListener, IBookCollection.Listener<Book> {",
+    "conflict": "public class BookInfoActivity extends Activity implements MenuItem.OnMenuItemClickListener, IBookCollection.Listener {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 41942,
+    "v2": "setProgressBarIndeterminateVisibility(!myCollection.status().IsComplete);",
+    "resolution": "showProgress(!myCollection.status().IsComplete);",
+    "conflict": "showProgress(!myCollection.status().IsCompleted);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 41943,
+    "v2": "setProgressBarIndeterminateVisibility(!status.IsComplete);",
+    "resolution": "showProgress(!status.IsComplete);",
+    "conflict": "showProgress(!status.IsCompleted);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 41945,
+    "v2": "* Copyright (C) 2007-2015 FBReader.ORG Limited <contact@fbreader.org>",
+    "resolution": "* Copyright (C) 2007-2015 FBReader.ORG Limited <contact@fbreader.org>",
+    "conflict": "* Copyright (C) 2009-2014 Geometer Plus <contact@geometerplus.com>"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 41958,
+    "v2": "addMenuItem(menu, OptionsItemId.ExternalView, \"bookshelfView\", -1);",
+    "resolution": "addMenuItem(menu, OptionsItemId.ExternalView, \"bookshelfView\", -1, false);",
+    "conflict": "addMenuItem(menu, OptionsItemId.ExternalView, \"materialView\", -1, false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 41965,
+    "v2": "//book.setData(items.get(index));",
+    "resolution": "book.setData(items.get(index));",
+    "conflict": "book.setData(items.get(index));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 41977,
+    "v2": "\"downloadingBook\",",
+    "resolution": "\"downloadingBook\", item.Title.toString(),",
+    "conflict": "\"downloadingBook\", item.Title.toString(),"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 41978,
+    "v2": "UIUtil.showErrorMessage(BaseActivity, \"downloadFailed\");",
+    "resolution": "UIUtil.showErrorMessage(BaseActivity, \"downloadFailed\");",
+    "conflict": "// TODO: show error message?"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 41992,
+    "v2": "popup.showAtLocation(BaseActivity.getCurrentFocus(), Gravity.CENTER, 0, 0);",
+    "resolution": "popup.showAtLocation(BaseActivity.getCurrentFocus(), Gravity.CENTER, 0, 0);",
+    "conflict": "System.err.println(\"Hello, BOOK: \" + region.getLeft() + \", \" + region.getTop() + \", \" + region.getRight() + \", \" + region.getBottom());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42004,
+    "v2": "final ZLTextRegion bookRegion = findRegion(x, y, 0, ZLTextRegion.BookFilter);",
+    "resolution": "final ZLTextRegion bookRegion = findRegion(x, y, 0, ZLTextRegion.BookFilter);",
+    "conflict": "final ZLTextRegion bookRegion = findRegion(x, y, MAX_SELECTION_DISTANCE, ZLTextRegion.BookFilter);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42007,
+    "v2": "final ZLTextView View;",
+    "resolution": "final ZLTextView View;",
+    "conflict": "public final ZLTextView View;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42028,
+    "v2": "final NotificationCompat.Builder builder = new NotificationCompat.Builder(FBReader.this)",
+    "resolution": "final NotificationCompat.Builder builder = new NotificationCompat.Builder(FBReader.this)",
+    "conflict": "final NotificationCompat.Builder builder = new NotificationCompat.Builder(this)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42075,
+    "v2": "CoverSynchronized",
+    "resolution": "CoverSynchronized",
+    "conflict": "CoverSynchronized,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42084,
+    "v2": "public static List<NBAction> getContextMenuActions(Activity activity, NetworkBookTree tree, IBookCollection collection, BookDownloaderServiceConnection connection) {",
+    "resolution": "public static List<NBAction> getContextMenuActions(Activity activity, NetworkBookTree tree, IBookCollection collection, BookDownloaderServiceConnection connection) {",
+    "conflict": "public static List<NBAction> getContextMenuActions(Activity activity, NetworkBookTree tree, BookDownloaderServiceConnection connection) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42086,
+    "v2": "actions.add(new NBAction(activity, collection, id, \"buy\", priceString));",
+    "resolution": "actions.add(new NBAction(activity, collection, id, \"buy\", priceString, true));",
+    "conflict": "actions.add(new NBAction(activity, id, \"buy\", priceString, true));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42120,
+    "v2": "if (MiscUtil.isEmptyString(url)) {",
+    "resolution": "if (MiscUtil.isEmptyString(url)) {",
+    "conflict": "if (url == null || url.length() == 0)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42122,
+    "v2": "}",
+    "resolution": "}",
+    "conflict": "}"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42124,
+    "v2": "((NetworkCatalogTree)tree).startItemsLoader(null, false);",
+    "resolution": "((NetworkCatalogTree)tree).startItemsLoader(null, false);",
+    "conflict": "((NetworkCatalogTree)tree).startItemsLoader(null, false, false);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42125,
+    "v2": "startItemsLoader(null, false);",
+    "resolution": "startItemsLoader(null, false);",
+    "conflict": "startItemsLoader(null, false, false);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42126,
+    "v2": "startItemsLoader(null, false);",
+    "resolution": "startItemsLoader(null, false);",
+    "conflict": "startItemsLoader(null, false, false);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42129,
+    "v2": "startItemsLoader(null, true);",
+    "resolution": "startItemsLoader(null, true);",
+    "conflict": "startItemsLoader(null, false, true);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42139,
+    "v2": "List<String> initialValue,",
+    "resolution": "List<String> initialValue,",
+    "conflict": "ArrayList<String> initialValue,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42140,
+    "v2": "intent.putExtra(FolderListDialogActivity.Key.FOLDER_LIST, new ArrayList<String>(initialValue));",
+    "resolution": "intent.putExtra(FolderListDialogActivity.Key.FOLDER_LIST, new ArrayList<String>(initialValue));",
+    "conflict": "intent.putExtra(FolderListDialogActivity.Key.FOLDER_LIST, initialValue);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42146,
+    "v2": "protected final ZLResource myResource;",
+    "resolution": "protected final ZLResource myResource;",
+    "conflict": "private final ZLResource myResource;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42154,
+    "v2": "private final boolean myChooseWritableDirectoriesOnly;",
+    "resolution": "protected final boolean myChooseWritableDirectoriesOnly;",
+    "conflict": "protected final boolean myChooseWritableDirectoriesOnly;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42156,
+    "v2": "import android.content.Intent;",
+    "resolution": "import android.content.Intent;",
+    "conflict": "import java.util.ArrayList;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42161,
+    "v2": "if (MiscUtil.isEmptyString(url)) {",
+    "resolution": "if (MiscUtil.isEmptyString(url)) {",
+    "conflict": "if (url == null || url.length() == 0)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42162,
+    "v2": "new ZLIntegerRangeOption(\"Scrolling\", \"AnimationSpeed\", 1, 10, 7);",
+    "resolution": "new ZLIntegerRangeOption(\"Scrolling\", \"AnimationSpeed\", 1, 10, 8);",
+    "conflict": "new ZLIntegerRangeOption(\"Scrolling\", \"AnimationSpeed\", 1, 10, 8);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 42180,
+    "v2": "import org.geometerplus.zlibrary.core.resources.ZLResource;",
+    "resolution": "import org.geometerplus.zlibrary.core.resources.ZLResource;import org.geometerplus.zlibrary.core.util.ZLArabicUtils;",
+    "conflict": "import org.geometerplus.zlibrary.core.util.ZLArabicUtils;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 42193,
+    "v2": "import org.geometerplus.zlibrary.core.resources.ZLResource;",
+    "resolution": "import org.geometerplus.zlibrary.core.resources.ZLResource;import org.geometerplus.zlibrary.core.util.ZLArabicUtils;",
+    "conflict": "import org.geometerplus.zlibrary.core.util.ZLArabicUtils;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 42200,
+    "v2": "import org.geometerplus.android.fbreader.api.MenuNode;",
+    "resolution": "import org.geometerplus.android.util.DeviceType;import org.geometerplus.android.fbreader.api.MenuNode;",
+    "conflict": "import org.geometerplus.android.util.DeviceType;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42203,
+    "v2": "",
+    "resolution": "import org.geometerplus.android.util.DeviceType;",
+    "conflict": "import org.geometerplus.android.util.DeviceType;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 42226,
+    "v2": "myFBReaderApp.ViewOptions.ColorProfileName.saveSpecialValue();",
+    "resolution": "myFBReaderApp.ViewOptions.ColorProfileName.saveSpecialValue();zlibrary.ShowActionBarOption.saveSpecialValue();",
+    "conflict": "zlibrary.ShowActionBarOption.saveSpecialValue();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42241,
+    "v2": "addMenuItem(menu, ActionCode.SHOW_NAVIGATION); addMenuItem(menu, ActionCode.INSTALL_PLUGINS);",
+    "resolution": "addMenuItem(menu, ActionCode.INSTALL_PLUGINS);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 42249,
+    "v2": "import org.geometerplus.zlibrary.core.util.ZLLogUtil;",
+    "resolution": "import org.geometerplus.zlibrary.core.util.ZLLogUtil;import org.geometerplus.zlibrary.core.view.ZLViewWidget;",
+    "conflict": "import org.geometerplus.zlibrary.core.view.ZLViewWidget;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 42291,
+    "v2": "public final ZLTextStyleCollection TextStyleCollection = new ZLTextStyleCollection(\"Base\");",
+    "resolution": "public final ZLBooleanOption YotaDrawOnBackScreenOption = new ZLBooleanOption(\"LookNFeel\", \"YotaDrawOnBack\", false);public final ZLTextStyleCollection TextStyleCollection = new ZLTextStyleCollection(\"Base\");",
+    "conflict": "public final ZLBooleanOption YotaDrawOnBackScreenOption = new ZLBooleanOption(\"LookNFeel\", \"YotaDrawOnBack\", false);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42293,
+    "v2": "import org.geometerplus.zlibrary.core.resources.ZLResource; import org.geometerplus.zlibrary.core.view.ZLViewWidget;",
+    "resolution": "import org.geometerplus.zlibrary.core.resources.ZLResource; import org.geometerplus.zlibrary.core.view.ZLViewWidget;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42322,
+    "v2": "public float toFloat() {",
+    "resolution": "public float toFloat() {",
+    "conflict": "public float getFraction() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42428,
+    "v2": "reset(Paths.BookPathOption().getValue(), true);",
+    "resolution": "reset(Paths.BookPathOption().getValue(), true);",
+    "conflict": "reset(Util.splitDirectories(Paths.BooksDirectoryOption().getValue()), true);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42431,
+    "v2": "addMenuItem(menu, ActionCode.SHOW_NAVIGATION); addMenuItem(menu, ActionCode.OPEN_WEB_HELP);",
+    "resolution": "addMenuItem(menu, ActionCode.OPEN_WEB_HELP);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42434,
+    "v2": "int MANAGE_CATALOGS = 34;",
+    "resolution": "int MANAGE_CATALOGS = 34;",
+    "conflict": "int SHOW_CATALOGS_FILTER = 34;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42448,
+    "v2": "super(activity, ActionCode.LANGUAGE_FILTER, \"languages\", R.drawable.ic_menu_filter);",
+    "resolution": "super(activity, ActionCode.LANGUAGE_FILTER, \"languages\", true);",
+    "conflict": "super(activity, ActionCode.LANGUAGE_FILTER, \"languages\", true);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42451,
+    "v2": "import org.geometerplus.zlibrary.core.resources.ZLResource; import org.geometerplus.zlibrary.core.util.ZLAdUtil;",
+    "resolution": "import org.geometerplus.zlibrary.core.util.ZLAdUtil;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42455,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42461,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "None",
+    "id": 42464,
+    "v2": "import org.geometerplus.zlibrary.ui.android.R;",
+    "resolution": "import org.geometerplus.fbreader.network.NetworkLibrary;",
+    "conflict": "import org.geometerplus.android.util.UIUtil;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42467,
+    "v2": "",
+    "resolution": "import org.geometerplus.zlibrary.ui.android.image.ZLAndroidImageManager;",
+    "conflict": "import org.geometerplus.zlibrary.ui.android.R; import org.geometerplus.zlibrary.ui.android.image.ZLAndroidImageManager;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42468,
+    "v2": "x -= info.RightIndent;",
+    "resolution": "x -= info.RightIndent;",
+    "conflict": "x -= info.LeftIndent;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42469,
+    "v2": "x =  info.Width - getTextStyle().getRightIndent();",
+    "resolution": "x =  info.Width - getTextStyle().getRightIndent();",
+    "conflict": "x =  info.Width - getTextStyle().getLeftIndent();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42471,
+    "v2": "",
+    "resolution": "import net.sourceforge.arabicReader.R;",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42474,
+    "v2": "",
+    "resolution": "import net.sourceforge.arabicReader.R;",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42476,
+    "v2": "public class BookInfoActivity extends Activity implements IBookCollection.Listener {",
+    "resolution": "public class BookInfoActivity extends Activity implements MenuItem.OnMenuItemClickListener, IBookCollection.Listener {",
+    "conflict": "public class BookInfoActivity extends Activity implements MenuItem.OnMenuItemClickListener {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42477,
+    "v2": "",
+    "resolution": "",
+    "conflict": "setResult(FBReader.RESULT_DO_NOTHING, intent);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42488,
+    "v2": "return getTextAreaWidth();",
+    "resolution": "return (getContextWidth() - getLeftMargin() - getRightMargin() - getIntercolumnSpace()) / 2;",
+    "conflict": "return (getContextWidth() - getLeftMargin() - getRightMargin() - getIntercolumnSpace()) / 2;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42489,
+    "v2": "right = x + getTextAreaWidth() - 1;",
+    "resolution": "right = x + getTextColumnWidth() - 1;",
+    "conflict": "right = x + getTextColumnWidth() - 1;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42490,
+    "v2": "final int maxWidth = getTextAreaWidth();",
+    "resolution": "final int maxWidth = getTextColumnWidth();",
+    "conflict": "final int maxWidth = getTextColumnWidth();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42492,
+    "v2": "",
+    "resolution": "page.Column0Height = 0; int columnCounter = 0;",
+    "conflict": "page.Column0Height = 0; int columnCounter = 0;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 42494,
+    "v2": "import android.annotation.TargetApi;",
+    "resolution": "import android.annotation.TargetApi;import android.animation.*;",
+    "conflict": "import android.animation.*;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42503,
+    "v2": "myWindow = new PopupWindow(activity, root, PopupWindow.Location.BottomFlat);",
+    "resolution": "myWindow = new PopupWindow(activity, root, PopupWindow.Location.BottomFlat);",
+    "conflict": "myWindow = new PopupWindow(activity, root, PopupWindow.Type.BottomFlat);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42504,
+    "v2": "public static enum Location {",
+    "resolution": "public static enum Location {",
+    "conflict": "public static enum Type {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42505,
+    "v2": "public PopupWindow(Activity activity, RelativeLayout root, Location location) {",
+    "resolution": "public PopupWindow(Activity activity, RelativeLayout root, Location location) {",
+    "conflict": "public PopupWindow(Activity activity, RelativeLayout root, Type type) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42507,
+    "v2": "myWindow = new PopupWindow(activity, root, PopupWindow.Location.Floating);",
+    "resolution": "myWindow = new PopupWindow(activity, root, PopupWindow.Location.Floating);",
+    "conflict": "myWindow = new PopupWindow(activity, root, PopupWindow.Type.Floating);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42508,
+    "v2": "myWindow = new PopupWindow(activity, root, PopupWindow.Location.Bottom);",
+    "resolution": "myWindow = new PopupWindow(activity, root, PopupWindow.Location.Bottom);",
+    "conflict": "myWindow = new PopupWindow(activity, root, PopupWindow.Type.Bottom);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42559,
+    "v2": "myDatabase = new SQLiteBooksDatabase(LibraryService.this);",
+    "resolution": "myDatabase = SQLiteBooksDatabase.Instance(LibraryService.this);",
+    "conflict": "myDatabase = SQLiteBooksDatabase.Instance(LibraryService.this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42566,
+    "v2": "myCollection = new BookCollection(new SQLiteBooksDatabase(LibraryService.this, \"LIBRARY_SERVICE\"));",
+    "resolution": "myCollection = new BookCollection(SQLiteBooksDatabase.Instance(LibraryService.this));",
+    "conflict": "myCollection = new BookCollection(SQLiteBooksDatabase.Instance(LibraryService.this));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42575,
+    "v2": "myCollection = null;//new BookCollection(SQLiteBooksDatabase.Instance(LibraryService.this));",
+    "resolution": "myCollection = new BookCollection(SQLiteBooksDatabase.Instance(LibraryService.this));",
+    "conflict": "myCollection = new BookCollection(SQLiteBooksDatabase.Instance(LibraryService.this));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42577,
+    "v2": "",
+    "resolution": "",
+    "conflict": "removeFromTree(LibraryTree.ROOT_FOUND, book); addBookToLibrary(book);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42583,
+    "v2": "b.save();",
+    "resolution": "Collection.saveBookmark(b);",
+    "conflict": "Collection.saveBookmark(b);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42585,
+    "v2": "import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow;",
+    "resolution": "import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow;",
+    "conflict": "import org.geometerplus.android.fbreader.libraryService.*;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42588,
+    "v2": "myRootTree = new RootTree(collection);",
+    "resolution": "myRootTree = new RootTree(collection);",
+    "conflict": "myRootTree = new RootTree(collection);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42589,
+    "v2": "book = Library.Instance().Collection.getRecentBook(0);",
+    "resolution": "book = Collection.getRecentBook(0);",
+    "conflict": "book = Collection.getRecentBook(0);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42590,
+    "v2": "final Book previousBook = Library.Instance().Collection.getRecentBook(1);",
+    "resolution": "final Book previousBook = Collection.getRecentBook(1);",
+    "conflict": "final Book previousBook = Collection.getRecentBook(1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42591,
+    "v2": "openBook(Library.Instance().Collection.getRecentBook(1), null, null);",
+    "resolution": "openBook(Collection.getRecentBook(1), null, null);",
+    "conflict": "openBook(Collection.getRecentBook(1), null, null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42593,
+    "v2": "final List<Bookmark> bookmarks = Library.Instance().Collection.invisibleBookmarks(Model.Book);",
+    "resolution": "final List<Bookmark> bookmarks = Collection.invisibleBookmarks(Model.Book);",
+    "conflict": "final List<Bookmark> bookmarks = Collection.invisibleBookmarks(Model.Book);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42594,
+    "v2": "for (Bookmark bookmark : Library.Instance().Collection.invisibleBookmarks(Model.Book)) {",
+    "resolution": "for (Bookmark bookmark : Collection.invisibleBookmarks(Model.Book)) {",
+    "conflict": "for (Bookmark bookmark : Collection.invisibleBookmarks(Model.Book)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42595,
+    "v2": "for (Bookmark bm : Library.Instance().Collection.invisibleBookmarks(Model.Book)) {",
+    "resolution": "for (Bookmark bm : Collection.invisibleBookmarks(Model.Book)) {",
+    "conflict": "for (Bookmark bm : Collection.invisibleBookmarks(Model.Book)) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42597,
+    "v2": "protected void executeAsTransaction(Runnable actions) {",
+    "resolution": "protected void executeAsTransaction(Runnable actions) {",
+    "conflict": "protected void executeAsATransaction(Runnable actions) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42598,
+    "v2": "protected abstract void executeAsTransaction(Runnable actions);",
+    "resolution": "protected abstract void executeAsTransaction(Runnable actions);",
+    "conflict": "protected abstract void executeAsATransaction(Runnable actions);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42599,
+    "v2": "book = Book.getByFile(BookCollection.getHelpFile());",
+    "resolution": "book = Collection.getBookByFile(BookCollection.getHelpFile());",
+    "conflict": "book = Collection.getBookByFile(BookCollection.getHelpFile());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42604,
+    "v2": "",
+    "resolution": "static final String START_SEARCH_ACTION = \"action.fbreader.library.start-search\";",
+    "conflict": "static final String START_SEARCH_ACTION = \"action.fbreader.library.start-search\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42614,
+    "v2": "tree.removeBook(book);",
+    "resolution": "tree.removeBook(book);",
+    "conflict": "tree.removeBook(book, false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42627,
+    "v2": "static volatile boolean ourToBeKilled = false;",
+    "resolution": "static final String START_SEARCH_ACTION = \"action.fbreader.library.start-search\";",
+    "conflict": "static final String START_SEARCH_ACTION = \"action.fbreader.library.start-search\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42639,
+    "v2": "super(collection, book, false);",
+    "resolution": "super(collection, book);",
+    "conflict": "super(collection, book);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42640,
+    "v2": "BookTree(IBookCollection collection, Book book, boolean showAuthors) {",
+    "resolution": "BookTree(IBookCollection collection, Book book) {",
+    "conflict": "BookTree(IBookCollection collection, Book book) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42641,
+    "v2": "super(root, ROOT_FAVORITES);",
+    "resolution": "super(root, ROOT_FAVORITES);",
+    "conflict": "super(root, Library.ROOT_FAVORITES);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42642,
+    "v2": "super(root, ROOT_FILE_TREE);",
+    "resolution": "super(root, ROOT_FILE_TREE);",
+    "conflict": "super(root, Library.ROOT_FILE_TREE);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42643,
+    "v2": "private final Map<ZLFile,Book> myBooks = Collections.synchronizedMap(new HashMap<ZLFile,Book>());",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42656,
+    "v2": "super(root, ROOT_RECENT);",
+    "resolution": "super(root, ROOT_RECENT);",
+    "conflict": "super(root, Library.ROOT_RECENT);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42657,
+    "v2": "new BookTree(this, book, true);",
+    "resolution": "new BookWithAuthorsTree(this, book);",
+    "conflict": "new BookWithAuthorsTree(this, book);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42658,
+    "v2": "BookTree getBookInSeriesSubTree(Book book) {",
+    "resolution": "boolean createBookInSeriesSubTree(Book book) {",
+    "conflict": "boolean createBookInSeriesSubTree(Book book) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42671,
+    "v2": "static volatile boolean ourToBeKilled = false;",
+    "resolution": "static final String START_SEARCH_ACTION = \"action.fbreader.library.start-search\";",
+    "conflict": "static final String START_SEARCH_ACTION = \"action.fbreader.library.start-search\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42698,
+    "v2": "SerializerUtil.deserializeBook(getIntent().getStringExtra(FBReader.BOOK_KEY));",
+    "resolution": "SerializerUtil.deserializeBook(getIntent().getStringExtra(FBReader.BOOK_KEY));",
+    "conflict": "SerializerUtil.deserializeBook(getIntent().getStringExtra(SELECTED_BOOK_KEY));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42703,
+    "v2": "Library.Instance().addBookToRecentList(book);",
+    "resolution": "Collection.addBookToRecentList(book);",
+    "conflict": "Collection.addBookToRecentList(book);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42706,
+    "v2": "if (requestCode == BOOK_INFO_REQUEST && intent != null) {",
+    "resolution": "if (requestCode == BOOK_INFO_REQUEST) {",
+    "conflict": "if (requestCode == BOOK_INFO_REQUEST) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42710,
+    "v2": "",
+    "resolution": "private final BookCollectionShadow myCollection = new BookCollectionShadow();",
+    "conflict": "private final BookCollectionShadow myCollection = new BookCollectionShadow();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42716,
+    "v2": "public /*protected*/ FileInfo createFileInfo(long id, String name, FileInfo parent) {",
+    "resolution": "protected FileInfo createFileInfo(long id, String name, FileInfo parent) {",
+    "conflict": "protected FileInfo createFileInfo(long id, String name, FileInfo parent) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42727,
+    "v2": "//myCollection.startBuild();",
+    "resolution": "myCollection.startBuild();",
+    "conflict": "myCollection.startBuild();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42732,
+    "v2": "import org.geometerplus.fbreader.book.Book;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42734,
+    "v2": "public void setSeriesInfoWithNoCheck(String name, String index) {",
+    "resolution": "void setSeriesInfoWithNoCheck(String name, String index) {",
+    "conflict": "void setSeriesInfoWithNoCheck(String name, String index) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42738,
+    "v2": "private final BooksDatabase myDatabase;",
+    "resolution": "private final HashMap<Long,Book> myBooks = new HashMap<Long,Book>();",
+    "conflict": "private final HashMap<Long,Book> myBooks = new HashMap<Long,Book>();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42741,
+    "v2": "private volatile Book myBook;",
+    "resolution": "private volatile Book myBook;",
+    "conflict": "private Book myBook;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42742,
+    "v2": "myBook = createBookForFile(ZLFile.createFileByPath(intent.getStringExtra(BOOK_PATH_KEY)));",
+    "resolution": "myBook = SerializerUtil.deserializeBook(intent.getStringExtra(BOOK_KEY));",
+    "conflict": "myBook = SerializerUtil.deserializeBook(intent.getStringExtra(BOOK_KEY));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42743,
+    "v2": "Book book = Book.getByFile(file);",
+    "resolution": "Book book = myFBReaderApp.Collection.getBookByFile(file);",
+    "conflict": "Book book = myFBReaderApp.Collection.getBookByFile(file);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42744,
+    "v2": "book = Book.getByFile(child);",
+    "resolution": "book = myFBReaderApp.Collection.getBookByFile(child);",
+    "conflict": "book = myFBReaderApp.Collection.getBookByFile(child);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42762,
+    "v2": "public static final String BOOK_PATH_KEY = \"BookPath\";",
+    "resolution": "public static final String BOOK_KEY = \"fbreader.book\";",
+    "conflict": "public static final String BOOK_KEY = \"fbreader.book\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42766,
+    "v2": "myFBReaderApp.openFile(fileFromIntent(intent), null);",
+    "resolution": "openBook(intent, null, true);",
+    "conflict": "openBook(intent, null, true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42771,
+    "v2": "myFBReaderApp.reloadBook();",
+    "resolution": "myFBReaderApp.reloadBook(book);",
+    "conflict": "myFBReaderApp.reloadBook(book);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42772,
+    "v2": ".putExtra(FBReader.BOOK_PATH_KEY, myFile.getPath())",
+    "resolution": ".putExtra(FBReader.BOOK_KEY, SerializerUtil.serialize(myBook))",
+    "conflict": ".putExtra(FBReader.BOOK_KEY, SerializerUtil.serialize(myBook))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42773,
+    "v2": ".putExtra(FBReader.BOOK_PATH_KEY, book.File.getPath())",
+    "resolution": ".putExtra(FBReader.BOOK_KEY, SerializerUtil.serialize(book))",
+    "conflict": ".putExtra(FBReader.BOOK_KEY, SerializerUtil.serialize(book))"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42774,
+    "v2": "import android.app.Activity;",
+    "resolution": "import android.app.*;",
+    "conflict": "import android.app.ActionBar;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42811,
+    "v2": "public abstract class LibraryUtil {",
+    "resolution": "public abstract class BookUtil {",
+    "conflict": "public abstract class BookUtil {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42812,
+    "v2": "public final class Library extends AbstractLibrary {",
+    "resolution": "public final class Library {",
+    "conflict": "public final class Library {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42821,
+    "v2": "import org.geometerplus.fbreader.book.SeriesInfo;",
+    "resolution": "import org.geometerplus.fbreader.book.Book;",
+    "conflict": "import org.geometerplus.fbreader.book.Book;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42822,
+    "v2": "import org.geometerplus.fbreader.book.Author;",
+    "resolution": "import org.geometerplus.fbreader.book.*;",
+    "conflict": "import org.geometerplus.fbreader.book.*;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42828,
+    "v2": "OrientationUtil.startActivityForResult(BaseActivity, intent, FBReader.REQUEST_PREFERENCES);",
+    "resolution": "OrientationUtil.startActivityForResult(BaseActivity, intent, ArabicReader.REQUEST_PREFERENCES);",
+    "conflict": "BaseActivity.startActivityForResult(intent, ArabicReader.REQUEST_PREFERENCES);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42832,
+    "v2": "OrientationUtil.startActivityForResult(BaseActivity, intent, FBReader.REQUEST_PREFERENCES);",
+    "resolution": "OrientationUtil.startActivityForResult(BaseActivity, intent, ArabicReader.REQUEST_PREFERENCES);",
+    "conflict": "BaseActivity.startActivityForResult(intent, ArabicReader.REQUEST_PREFERENCES);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42833,
+    "v2": "import org.geometerplus.android.fbreader.*;",
+    "resolution": "import org.geometerplus.android.fbreader.*;",
+    "conflict": "import org.geometerplus.android.fbreader.ArabicReader;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42859,
+    "v2": "",
+    "resolution": "import net.sourceforge.arabicReader.R;",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42860,
+    "v2": "",
+    "resolution": "import net.sourceforge.arabicReader.R;",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42861,
+    "v2": "",
+    "resolution": "import net.sourceforge.arabicReader.R;",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42862,
+    "v2": "",
+    "resolution": "import net.sourceforge.arabicReader.R;",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42863,
+    "v2": "",
+    "resolution": "import net.sourceforge.arabicReader.R;",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42892,
+    "v2": "addMenuItem(menu, ActionCode.SEARCH, R.drawable.ic_menu_search); addMenuItem(menu, ActionCode.SHARE_BOOK, R.drawable.ic_menu_search);",
+    "resolution": "addMenuItem(menu, ActionCode.SEARCH, R.drawable.ic_menu_search); addMenuItem(menu, ActionCode.SWITCH_TO_NIGHT_PROFILE, R.drawable.ic_menu_night); addMenuItem(menu, ActionCode.SWITCH_TO_DAY_PROFILE, R.drawable.ic_menu_day); addMenuItem(menu, ActionCode.SHARE_BOOK, R.drawable.ic_menu_search);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42895,
+    "v2": "objects[index++] = ApiObject.envelope(s);",
+    "resolution": "objects[index++] = ApiObject.envelope(s);",
+    "conflict": "objects[index++] = ApiObject.envelope(s);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42905,
+    "v2": "import org.geometerplus.android.fbreader.FBReader;",
+    "resolution": "import org.geometerplus.android.fbreader.ArabicReader;",
+    "conflict": "import org.geometerplus.android.fbreader.ArabicReader;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42908,
+    "v2": "((EditBookInfoActivity)getContext()).setResult(FBReader.RESULT_RELOAD_BOOK);",
+    "resolution": "((EditBookInfoActivity)getContext()).setResult(ArabicReader.RESULT_RELOAD_BOOK);",
+    "conflict": "((EditBookInfoActivity)getContext()).setResult(ArabicReader.RESULT_RELOAD_BOOK);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42909,
+    "v2": "openBookInternal(book, bookmark, false);",
+    "resolution": "openBookInternal(book, bookmark, false);",
+    "conflict": "openBookInternal(book, bookmark);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42910,
+    "v2": "synchronized void openBookInternal(Book book, Bookmark bookmark, boolean force) {",
+    "resolution": "synchronized void openBookInternal(Book book, Bookmark bookmark, boolean force) {",
+    "conflict": "synchronized void openBookInternal(Book book, Bookmark bookmark) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42917,
+    "v2": "return \" Series:\" + super.getSortKey();",
+    "resolution": "return \" Series:\" + super.getSortKey();",
+    "conflict": "return \"SSK:\" + super.getSortKey();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42924,
+    "v2": "public abstract class ZLTextStyleEntry {",
+    "resolution": "public abstract class ZLTextStyleEntry {",
+    "conflict": "public final class ZLTextStyleEntry {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42926,
+    "v2": "public final int getLength(int featureId, ZLTextMetrics metrics) {",
+    "resolution": "public final int getLength(int featureId, ZLTextMetrics metrics) {",
+    "conflict": "public int getLength(int featureId, ZLTextMetrics metrics) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42927,
+    "v2": "final void setAlignmentType(byte alignmentType) {",
+    "resolution": "final void setAlignmentType(byte alignmentType) {",
+    "conflict": "void setAlignmentType(byte alignmentType) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42928,
+    "v2": "final void setFontFamily(String fontFamily) {",
+    "resolution": "final void setFontFamily(String fontFamily) {",
+    "conflict": "void setFontFamily(String fontFamily) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42930,
+    "v2": "final void setFontModifier(byte modifier, boolean on) {",
+    "resolution": "final void setFontModifier(byte modifier, boolean on) {",
+    "conflict": "void setFontModifier(byte modifier, boolean on) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42931,
+    "v2": "public final ZLBoolean3 getFontModifier(byte modifier) {",
+    "resolution": "public final ZLBoolean3 getFontModifier(byte modifier) {",
+    "conflict": "public ZLBoolean3 getFontModifier(byte modifier) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42937,
+    "v2": "import org.geometerplus.zlibrary.ui.android.R;",
+    "resolution": "import com.ahlalhdeeth.arabicReader.R;",
+    "conflict": "import com.ahlalhdeeth.arabicReader.R;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42940,
+    "v2": "tf = Typeface.createFromFile(files[style]);",
+    "resolution": "tf = Typeface.createFromFile(files[style]);",
+    "conflict": "tf = createFontFromFile(files[style]);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42941,
+    "v2": "typefaces[i] : Typeface.createFromFile(files[i]);",
+    "resolution": "typefaces[i] : Typeface.createFromFile(files[i]);",
+    "conflict": "typefaces[i] : createFontFromFile(files[i]);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 43028,
+    "v2": "import org.geometerplus.zlibrary.ui.android.error.ErrorKeys;",
+    "resolution": "import org.geometerplus.zlibrary.ui.android.error.ErrorKeys;import org.geometerplus.zlibrary.ui.android.library.ZLAndroidActivity;",
+    "conflict": "import org.geometerplus.zlibrary.ui.android.library.ZLAndroidActivity;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 43063,
+    "v2": "",
+    "resolution": "private int myResult = FBReader.RESULT_DO_NOTHING;",
+    "conflict": "private ZLImage myImage; private int myResult = FBReader.RESULT_DO_NOTHING;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 43068,
+    "v2": "myWindow = new PopupWindow(activity, root, PopupWindow.Location.Bottom, true);",
+    "resolution": "myWindow = new PopupWindow(activity, root, PopupWindow.Type.BottomFlat);",
+    "conflict": "myWindow = new PopupWindow(activity, root, type);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43070,
+    "v2": "public void createControlPanel(FBReader activity, RelativeLayout root) {",
+    "resolution": "public void createControlPanel(FBReader activity, RelativeLayout root) {",
+    "conflict": "public void createControlPanel(FBReader activity, RelativeLayout root, PopupWindow.Type type) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 43071,
+    "v2": "myWindow = new PopupWindow(activity, root, PopupWindow.Location.Floating, false);",
+    "resolution": "myWindow = new PopupWindow(activity, root, PopupWindow.Type.Floating);",
+    "conflict": "myWindow = new PopupWindow(activity, root, type);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43072,
+    "v2": "public void createControlPanel(FBReader activity, RelativeLayout root) {",
+    "resolution": "public void createControlPanel(FBReader activity, RelativeLayout root) {",
+    "conflict": "public void createControlPanel(FBReader activity, RelativeLayout root, PopupWindow.Type type) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 43073,
+    "v2": "myWindow = new PopupWindow(activity, root, PopupWindow.Location.Bottom, false);",
+    "resolution": "myWindow = new PopupWindow(activity, root, PopupWindow.Type.Bottom);",
+    "conflict": "myWindow = new PopupWindow(activity, root, type);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43079,
+    "v2": "getLibrary().setActivity(this);",
+    "resolution": "zlibrary.setActivity(this);",
+    "conflict": "zlibrary.setActivity(this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43080,
+    "v2": "private MenuItem addMenuItem(Menu menu, int index, String resourceKey, int iconId) {",
+    "resolution": "private MenuItem addMenuItem(Menu menu, int index, String resourceKey) {",
+    "conflict": "private MenuItem addMenuItem(Menu menu, int index, String resourceKey) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43089,
+    "v2": "synchronized void openBookInternal(Book book, Bookmark bookmark) {",
+    "resolution": "synchronized void openBookInternal(Book book, Bookmark bookmark) {",
+    "conflict": "private void openBookInternal(Book book, Bookmark bookmark) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43104,
+    "v2": "final TOCTree tocElement = getReader().getCurrentTOCElement();",
+    "resolution": "final TOCTree tocElement = myFBReader.getCurrentTOCElement();",
+    "conflict": "final TOCTree tocElement = myFBReader.getCurrentTOCElement();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43131,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import org.geometerplus.android.util.UIUtil;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43132,
+    "v2": "private WifiManager.MulticastLock myLock;",
+    "resolution": "private WifiManager.MulticastLock myLock;",
+    "conflict": "private MulticastLock myLock;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 43141,
+    "v2": "public Credentials createCredentials(String scheme, AuthScope scope, boolean quitely) {",
+    "resolution": "public Credentials createCredentials(String scheme, AuthScope scope, boolean quietly) {",
+    "conflict": "public Credentials createCredentials(String scheme, AuthScope scope, boolean quietMode) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43143,
+    "v2": "return myCredentialsCreator.createCredentials(myRequest.getURI().getScheme(), authscope, myQuitely);",
+    "resolution": "return myCredentialsCreator.createCredentials(myRequest.getURI().getScheme(), authscope, myQuitely);",
+    "conflict": "return myCredentialsCreator.createCredentials(myRequest.getURI().getScheme(), authscope, myQuiet);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43154,
+    "v2": "private volatile CredentialsCreator myCredentialsCreator;",
+    "resolution": "private volatile CredentialsCreator myCredentialsCreator;",
+    "conflict": "private CredentialsCreator myCredentialsCreator;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43156,
+    "v2": "root.setSystemUiVisibility(RelativeLayout.STATUS_BAR_HIDDEN);",
+    "resolution": "root.setSystemUiVisibility(RelativeLayout.SYSTEM_UI_FLAG_LOW_PROFILE);",
+    "conflict": "root.setSystemUiVisibility(RelativeLayout.SYSTEM_UI_FLAG_LOW_PROFILE);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43200,
+    "v2": "new LibraryTreeAdapter(this);",
+    "resolution": "new LibraryTreeAdapter(this);",
+    "conflict": "new LibraryListAdapter(this);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43219,
+    "v2": "NetworkView.Instance().fireModelChanged();",
+    "resolution": "NetworkView.Instance().fireModelChanged();",
+    "conflict": "NetworkView.Instance().fireModelChangedAsync();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43220,
+    "v2": "NetworkView.Instance().fireModelChanged();",
+    "resolution": "NetworkView.Instance().fireModelChanged();",
+    "conflict": "NetworkView.Instance().fireModelChangedAsync();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43221,
+    "v2": "NetworkView.Instance().fireModelChanged();",
+    "resolution": "NetworkView.Instance().fireModelChanged();",
+    "conflict": "NetworkView.Instance().fireModelChangedAsync();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43229,
+    "v2": "if (item.getVisibility() != ZLBoolean3.B3_TRUE) {",
+    "resolution": "if (item.getVisibility() != ZLBoolean3.B3_TRUE) {",
+    "conflict": "if (tree.Item.getVisibility() != ZLBoolean3.B3_TRUE) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43252,
+    "v2": "LibraryBaseActivity.LibraryInstance.synchronize();",
+    "resolution": "LibraryBaseActivity.LibraryInstance.synchronize();",
+    "conflict": "LibraryTopLevelActivity.LibraryInstance.synchronize();"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 43267,
+    "v2": "import android.app.SearchManager;",
+    "resolution": "import android.app.SearchManager;import android.app.Activity;",
+    "conflict": "import android.app.Activity;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 43271,
+    "v2": "",
+    "resolution": "import org.geometerplus.zlibrary.core.filesystem.ZLFile;",
+    "conflict": "import org.geometerplus.zlibrary.core.filesystem.ZLFile; import org.geometerplus.zlibrary.text.model.ZLTextModel;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43276,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import org.geometerplus.android.util.UIUtil;"
+  }
+]
+}

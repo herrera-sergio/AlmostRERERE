@@ -1,0 +1,157 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 8834,
+    "v2": "* @since Twitter4J 4.x.x",
+    "resolution": "* @since Twitter4J 4.0.7",
+    "conflict": "* @since Twitter4J 4.0.7"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8836,
+    "v2": "private String attachmentUrl = null;",
+    "resolution": "private String attachmentUrl = null;    private boolean autoPopulateReplyMetadata;",
+    "conflict": "private boolean autoPopulateReplyMetadata;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8838,
+    "v2": "return getTarget().getDmTextCharacterLimit();",
+    "resolution": "return getTarget().getDmTextCharacterLimit();",
+    "conflict": "return getTarget().getCharactersReservedPerMedia();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8840,
+    "v2": "import org.junit.Ignore;",
+    "resolution": "import org.junit.jupiter.api.Test;",
+    "conflict": "import org.junit.jupiter.api.Test;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8842,
+    "v2": "private long tweetVolume = -1L;",
+    "resolution": "private int tweetVolume = -1;",
+    "conflict": "private int tweetVolume = -1;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8843,
+    "v2": "this.tweetVolume = ParseUtil.getLong(\"tweet_volume\", json);",
+    "resolution": "this.tweetVolume = ParseUtil.getInt(\"tweet_volume\", json);",
+    "conflict": "this.tweetVolume = ParseUtil.getInt(\"tweet_volume\", json);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8844,
+    "v2": "public long getTweetVolume() {",
+    "resolution": "public int getTweetVolume() {",
+    "conflict": "public int getTweetVolume() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8845,
+    "v2": "result = 31 * result + (int) (tweetVolume ^ (tweetVolume >>> 32));",
+    "resolution": "result = 31 * result + tweetVolume;",
+    "conflict": "result = 31 * result + tweetVolume;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8846,
+    "v2": "\", tweetVolume='\" + tweetVolume + '\\'' +",
+    "resolution": "\", tweet_volume=\" + tweetVolume +",
+    "conflict": "\", tweet_volume=\" + tweetVolume +"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8848,
+    "v2": "private long tweetVolume = -1L;",
+    "resolution": "private int tweetVolume = -1;",
+    "conflict": "private int tweetVolume = -1;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8849,
+    "v2": "this.tweetVolume = ParseUtil.getLong(\"tweet_volume\", json);",
+    "resolution": "this.tweetVolume = ParseUtil.getInt(\"tweet_volume\", json);",
+    "conflict": "this.tweetVolume = ParseUtil.getInt(\"tweet_volume\", json);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8850,
+    "v2": "public long getTweetVolume() {",
+    "resolution": "public int getTweetVolume() {",
+    "conflict": "public int getTweetVolume() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8851,
+    "v2": "result = 31 * result + (int) (tweetVolume ^ (tweetVolume >>> 32));",
+    "resolution": "result = 31 * result + tweetVolume;",
+    "conflict": "result = 31 * result + tweetVolume;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8852,
+    "v2": "\", tweetVolume='\" + tweetVolume + '\\'' +",
+    "resolution": "\", tweet_volume=\" + tweetVolume +",
+    "conflict": "\", tweet_volume=\" + tweetVolume +"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8897,
+    "v2": "",
+    "resolution": "private boolean isPossiblySensitive;",
+    "conflict": "private boolean wasRetweetedByMe;     private boolean isPossiblySensitive;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8901,
+    "v2": "public MediaEntityJSONImpl(HTMLEntityString.IndexMapper indexMapper, JSONObject json) throws TwitterException {",
+    "resolution": "public MediaEntityJSONImpl(HTMLEntityString.IndexMapper indexMapper, JSONObject json) throws TwitterException {",
+    "conflict": "MediaEntityJSONImpl(JSONObject json) throws TwitterException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8910,
+    "v2": "return factory.createUserList(res.asJSONArray(), res);",
+    "resolution": "return factory.createUserListFromJSONArray(res);",
+    "conflict": "return factory.createUserListFromJSONArray(res);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8911,
+    "v2": "+ \"&cursor=\" + cursor, null));",
+    "resolution": "+ \"&cursor=\" + cursor));",
+    "conflict": "+ \"&cursor=\" + cursor));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8914,
+    "v2": "+ conf.isIncludeEntitiesEnabled() + \"&user_id=\" + userId), conf);",
+    "resolution": "+ conf.isIncludeEntitiesEnabled() + \"&user_id=\" + userId), conf);",
+    "conflict": "+ conf.isIncludeEntitiesEnabled() + \"&userId=\" + userId), conf);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8917,
+    "v2": "public class UserStreamAdapter extends StatusAdapter implements UserStreamListener{",
+    "resolution": "public class UserStreamAdapter extends StatusAdapter implements UserStreamListener{",
+    "conflict": "public class UserStreamAdapter extends StatusAdapter {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8931,
+    "v2": "import java.io.UnsupportedEncodingException; import java.net.URLEncoder;",
+    "resolution": "import java.io.UnsupportedEncodingException;import java.net.URLEncoder;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8958,
+    "v2": "if (0 == timeToSleep) {",
+    "resolution": "if (NO_WAIT == timeToSleep) {",
+    "conflict": "if (NO_WAIT == timeToSleep) {"
+  }
+]
+}

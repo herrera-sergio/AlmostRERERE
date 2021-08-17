@@ -1,0 +1,1907 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 77765,
+    "v2": "return Decimal128.fromIEEE754BIDEncoding(data[1], data[0]);",
+    "resolution": "return Decimal128.fromIEEE754BIDEncoding(data[1]/*high*/, data[0]/*low*/);",
+    "conflict": "return Decimal128.fromIEEE754BIDEncoding(data[1]/*high*/, data[0]/*low*/);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77780,
+    "v2": "",
+    "resolution": "assertEquals(UUID.fromString(\"027ba5ca-aa12-4afa-9219-e20cc3018590\"), obj.getColumnUUID());        assertEquals(Mixed.valueOf(\"hello world\"), obj.getColumnMixed());",
+    "conflict": "assertEquals(UUID.fromString(\"027ba5ca-aa12-4afa-9219-e20cc3018590\"), obj.getColumnUUID());         assertEquals(Mixed.valueOf(\"hello world\"), obj.getColumnMixed());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77783,
+    "v2": "",
+    "resolution": "UUID uuid = UUID.randomUUID();        Mixed mixed = Mixed.valueOf(\"Hello world\");",
+    "conflict": "UUID uuid = UUID.randomUUID();         Mixed mixed = Mixed.valueOf(\"Hello world\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77784,
+    "v2": "",
+    "resolution": "json.put(\"columnUUID\", uuid);        json.put(\"columnMixed\", mixed);",
+    "conflict": "json.put(\"columnUUID\", uuid);         json.put(\"columnMixed\", mixed);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77785,
+    "v2": "",
+    "resolution": "assertEquals(uuid, obj.getColumnUUID());        assertEquals(mixed, obj.getColumnMixed());",
+    "conflict": "assertEquals(uuid, obj.getColumnUUID());         assertEquals(mixed, obj.getColumnMixed());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77786,
+    "v2": "",
+    "resolution": "assertEquals(DefaultValueOfField.FIELD_UUID_DEFAULT_VALUE, managedObj.getFieldUUID());        assertEquals(DefaultValueOfField.FIELD_MIXED_DEFAULT_VALUE, managedObj.getFieldMixed());",
+    "conflict": "assertEquals(DefaultValueOfField.FIELD_UUID_DEFAULT_VALUE, managedObj.getFieldUUID());         assertEquals(DefaultValueOfField.FIELD_MIXED_DEFAULT_VALUE, managedObj.getFieldMixed());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77787,
+    "v2": "",
+    "resolution": "assertArrayEquals(DefaultValueOfField.FIELD_UUID_LIST_DEFAULT_VALUE.toArray(), managedObj.getFieldUUIDList().toArray());        assertArrayEquals(DefaultValueOfField.FIELD_MIXED_LIST_DEFAULT_VALUE.toArray(), managedObj.getFieldMixedList().toArray());",
+    "conflict": "assertArrayEquals(DefaultValueOfField.FIELD_UUID_LIST_DEFAULT_VALUE.toArray(), managedObj.getFieldUUIDList().toArray());         assertArrayEquals(DefaultValueOfField.FIELD_MIXED_LIST_DEFAULT_VALUE.toArray(), managedObj.getFieldMixedList().toArray());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77788,
+    "v2": "",
+    "resolution": "final UUID fieldUUIDValue = UUID.randomUUID();        final Mixed fieldMixedValue = Mixed.valueOf((float) 20);",
+    "conflict": "final UUID fieldUUIDValue = UUID.randomUUID();         final Mixed fieldMixedValue = Mixed.valueOf((float) 20);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77789,
+    "v2": "",
+    "resolution": "json.put(DefaultValueOfField.FIELD_UUID, fieldUUIDValue);        json.put(DefaultValueOfField.FIELD_MIXED, fieldMixedValue);",
+    "conflict": "json.put(DefaultValueOfField.FIELD_UUID, fieldUUIDValue);         json.put(DefaultValueOfField.FIELD_MIXED, fieldMixedValue);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77790,
+    "v2": "",
+    "resolution": "assertEquals(fieldUUIDValue, managedObj.getFieldUUID());        assertEquals(fieldMixedValue, managedObj.getFieldMixed());",
+    "conflict": "assertEquals(fieldUUIDValue, managedObj.getFieldUUID());         assertEquals(fieldMixedValue, managedObj.getFieldMixed());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77791,
+    "v2": "",
+    "resolution": "UUID uuid = UUID.randomUUID();        Mixed mixed = Mixed.valueOf(\"Hello world\");",
+    "conflict": "UUID uuid = UUID.randomUUID();         Mixed mixed = Mixed.valueOf(\"Hello world\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77792,
+    "v2": "",
+    "resolution": "obj.setColumnUUID(uuid);        obj.setColumnMixed(mixed);",
+    "conflict": "obj.setColumnUUID(uuid);         obj.setColumnMixed(mixed);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77793,
+    "v2": "",
+    "resolution": "assertEquals(uuid, obj.getColumnUUID());        assertEquals(mixed, obj.getColumnMixed());",
+    "conflict": "assertEquals(uuid, obj.getColumnUUID());         assertEquals(mixed, obj.getColumnMixed());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77794,
+    "v2": "",
+    "resolution": "UUID uuid = UUID.randomUUID();        Mixed mixed = Mixed.valueOf(\"Hello world\");",
+    "conflict": "UUID uuid = UUID.randomUUID();         Mixed mixed = Mixed.valueOf(\"Hello world\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77795,
+    "v2": "",
+    "resolution": "obj.setColumnUUID(uuid);        obj.setColumnMixed(mixed);",
+    "conflict": "obj.setColumnUUID(uuid);         obj.setColumnMixed(mixed);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77796,
+    "v2": "",
+    "resolution": "assertEquals(uuid, obj.getColumnUUID());        assertEquals(mixed, obj.getColumnMixed());",
+    "conflict": "assertEquals(uuid, obj.getColumnUUID());         assertEquals(mixed, obj.getColumnMixed());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77800,
+    "v2": "",
+    "resolution": "testOptionalPrimitiveListWithNullValue(PrimitiveListTypes.FIELD_UUID_LIST);        testOptionalPrimitiveListWithNullValue(PrimitiveListTypes.FIELD_MIXED_LIST);",
+    "conflict": "testOptionalPrimitiveListWithNullValue(PrimitiveListTypes.FIELD_UUID_LIST);         testOptionalPrimitiveListWithNullValue(PrimitiveListTypes.FIELD_MIXED_LIST);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77801,
+    "v2": "",
+    "resolution": "public static final String FIELD_UUID = \"fieldUUID\";    public static final String FIELD_MIXED = \"fieldMixed\";",
+    "conflict": "public static final String FIELD_UUID = \"fieldUUID\";     public static final String FIELD_MIXED = \"fieldMixed\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77802,
+    "v2": "",
+    "resolution": "public static final UUID FIELD_UUID_DEFAULT_VALUE = UUID.randomUUID();    public static final Mixed FIELD_MIXED_DEFAULT_VALUE = Mixed.valueOf((float) 10);",
+    "conflict": "public static final UUID FIELD_UUID_DEFAULT_VALUE = UUID.randomUUID();     public static final Mixed FIELD_MIXED_DEFAULT_VALUE = Mixed.valueOf((float) 10);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77803,
+    "v2": "",
+    "resolution": "public static final RealmList<UUID> FIELD_UUID_LIST_DEFAULT_VALUE;    public static final RealmList<Mixed> FIELD_MIXED_LIST_DEFAULT_VALUE;",
+    "conflict": "public static final RealmList<UUID> FIELD_UUID_LIST_DEFAULT_VALUE;     public static final RealmList<Mixed> FIELD_MIXED_LIST_DEFAULT_VALUE;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77804,
+    "v2": "",
+    "resolution": "FIELD_UUID_LIST_DEFAULT_VALUE = new RealmList<>(UUID.randomUUID());        FIELD_MIXED_LIST_DEFAULT_VALUE = new RealmList<>(Mixed.valueOf((float) 10));",
+    "conflict": "FIELD_UUID_LIST_DEFAULT_VALUE = new RealmList<>(UUID.randomUUID());         FIELD_MIXED_LIST_DEFAULT_VALUE = new RealmList<>(Mixed.valueOf((float) 10));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77805,
+    "v2": "",
+    "resolution": "private UUID fieldUUID = FIELD_UUID_DEFAULT_VALUE;    private Mixed fieldMixed = FIELD_MIXED_DEFAULT_VALUE;",
+    "conflict": "private UUID fieldUUID = FIELD_UUID_DEFAULT_VALUE;     private Mixed fieldMixed = FIELD_MIXED_DEFAULT_VALUE;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77806,
+    "v2": "",
+    "resolution": "private RealmList<UUID> fieldUUIDList = FIELD_UUID_LIST_DEFAULT_VALUE;    private RealmList<Mixed> fieldMixedList = FIELD_MIXED_LIST_DEFAULT_VALUE;",
+    "conflict": "private RealmList<UUID> fieldUUIDList = FIELD_UUID_LIST_DEFAULT_VALUE;     private RealmList<Mixed> fieldMixedList = FIELD_MIXED_LIST_DEFAULT_VALUE;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77812,
+    "v2": "",
+    "resolution": "private UUID columnUUID;    private Mixed columnMixed;",
+    "conflict": "private UUID columnUUID;     private Mixed columnMixed;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77813,
+    "v2": "",
+    "resolution": "private RealmList<UUID> columnUUIDList;    private RealmList<Mixed> columnMixedList;",
+    "conflict": "private RealmList<UUID> columnUUIDList;     private RealmList<Mixed> columnMixedList;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77817,
+    "v2": "mixedNativeFunctions.callRawPredicate(this, \"(\" + escapeFieldName(fieldName) + \" >= $0 AND \" + escapeFieldName(fieldName) + \" <= $1)\", value1, value2);",
+    "resolution": "mixedNativeFunctions.callRawPredicate(this, escapeFieldName(fieldName)  + \" >= $0 AND \" + escapeFieldName(fieldName)  + \" <= $1\", value1, value2);",
+    "conflict": "mixedNativeFunctions.callRawPredicate(this, fieldName + \" >= $0 AND \" + fieldName + \" <= $1\", value1, value2);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77832,
+    "v2": "indexAndFound = nativeRemoveString(nativePtr, (String) value);",
+    "resolution": "indexAndFound = nativeRemoveLong(nativePtr, value);",
+    "conflict": "indexAndFound = nativeRemoveLong(nativePtr, value);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77853,
+    "v2": "manager = new ManagedSetManager<>((SetValueOperator<T>) new SetValueOperator<>(baseRealm, osSet, String.class));",
+    "resolution": "operator = (SetValueOperator<T>) new StringOperator(baseRealm, osSet, String.class);",
+    "conflict": "operator = (SetValueOperator<T>) new StringOperator(baseRealm, osSet, String.class);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77854,
+    "v2": "return managedSetManager.isFrozen();",
+    "resolution": "return setValueOperator.isFrozen();",
+    "conflict": "return setValueOperator.isFrozen();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77855,
+    "v2": "return managedSetManager.isEmpty();",
+    "resolution": "return setValueOperator.isEmpty();",
+    "conflict": "return setValueOperator.isEmpty();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77858,
+    "v2": "return managedSetManager.containsAll(c);",
+    "resolution": "return setValueOperator.containsAll(c);",
+    "conflict": "return setValueOperator.containsAll(c);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77859,
+    "v2": "return managedSetManager.addAll(c);",
+    "resolution": "return setValueOperator.addAll(c);",
+    "conflict": "return setValueOperator.addAll(c);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77860,
+    "v2": "return managedSetManager.retainAll(c);",
+    "resolution": "return setValueOperator.retainAll(c);",
+    "conflict": "return setValueOperator.retainAll(c);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77861,
+    "v2": "return managedSetManager.removeAll(c);",
+    "resolution": "return setValueOperator.removeAll(c);",
+    "conflict": "return setValueOperator.removeAll(c);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77862,
+    "v2": "return managedSetManager.freeze();",
+    "resolution": "return setValueOperator.freeze();",
+    "conflict": "return setValueOperator.freeze();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77863,
+    "v2": "return managedSetManager.getOsSet();",
+    "resolution": "return setValueOperator.getOsSet();",
+    "conflict": "return setValueOperator.getOsSet();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77879,
+    "v2": "public boolean retainAll(@NotNull Collection<?> c) {",
+    "resolution": "public boolean retainAll(Collection<?> c) {",
+    "conflict": "public boolean retainAll(Collection<?> c) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77884,
+    "v2": "manager = new ManagedSetManager<>((SetValueOperator<T>) new SetValueOperator<String>(baseRealm, osSet));",
+    "resolution": "manager = new ManagedSetManager<>((SetValueOperator<T>) new SetValueOperator<>(baseRealm, osSet, String.class));",
+    "conflict": "manager = new ManagedSetManager<>((SetValueOperator<T>) new SetValueOperator<>(baseRealm, osSet, String.class));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77891,
+    "v2": "return setValueOperator.reatainAll(c);",
+    "resolution": "return setValueOperator.retainAll(c);",
+    "conflict": "return setValueOperator.retainAll(c);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77893,
+    "v2": "public boolean reatainAll(Collection<?> c) {",
+    "resolution": "public boolean retainAll(Collection<?> c) {",
+    "conflict": "public boolean retainAll(Collection<?> c) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77899,
+    "v2": "import io.realm.internal.Table; import io.realm.internal.Util;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77909,
+    "v2": "* with other raw or type safe predicates, it accepts Realm primitives or Realm objects as arguments.",
+    "resolution": "* with other raw or type safe predicates, it accepts Realm values as arguments.",
+    "conflict": "* with other raw or type safe predicates, it accepts Realm values as arguments."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77914,
+    "v2": "public TableQuery greaterThanOrEqual(long[] columnKeys, long[] tablePtrs, UUID value) {         nativeGreaterEqualUUID(nativePtr, columnKeys, tablePtrs, value.toString());",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77919,
+    "v2": "super(30);",
+    "resolution": "super(32);",
+    "conflict": "super(29);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77920,
+    "v2": "final List<String> excludeFields = new ArrayList<String>(19);",
+    "resolution": "final List<String> excludeFields = new ArrayList<String>(20);",
+    "conflict": "final List<String> excludeFields = new ArrayList<String>(17);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77923,
+    "v2": "super(28);",
+    "resolution": "super(30);",
+    "conflict": "super(27);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77924,
+    "v2": "final List<String> excludeFields = new ArrayList<String>(18);",
+    "resolution": "final List<String> excludeFields = new ArrayList<String>(19);",
+    "conflict": "final List<String> excludeFields = new ArrayList<String>(16);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 77985,
+    "v2": "",
+    "resolution": "",
+    "conflict": "} else if (valueClass == Byte[].class) {             mapValueOperator = new BoxedBinaryValueOperator<>(baseRealm, osMap, classContainer);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 77986,
+    "v2": "",
+    "resolution": "",
+    "conflict": "} else if (valueClass.equals(Byte[].class.getCanonicalName())) {             mapValueOperator = new BoxedBinaryValueOperator<>(baseRealm, osMap, classContainer);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78022,
+    "v2": "public T get(Object key) {",
+    "resolution": "public V get(Object key) {",
+    "conflict": "public V get(Object key) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78026,
+    "v2": "class BoxedByteArrayValueOperator extends BoxableValueOperator<Byte[]> {",
+    "resolution": "class BoxedByteArrayValueOperator<K> extends BoxableValueOperator<K, Byte[]> {",
+    "conflict": "class BoxedByteArrayValueOperator<K> extends BoxableValueOperator<K, Byte[]> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78027,
+    "v2": "class IntegerValueOperator extends BoxableValueOperator<Integer> {",
+    "resolution": "class IntegerValueOperator<K> extends BoxableValueOperator<K, Integer> {",
+    "conflict": "class IntegerValueOperator<K> extends BoxableValueOperator<K, Integer> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78028,
+    "v2": "class ShortValueOperator extends BoxableValueOperator<Short> {",
+    "resolution": "class ShortValueOperator<K> extends BoxableValueOperator<K, Short> {",
+    "conflict": "class ShortValueOperator<K> extends BoxableValueOperator<K, Short> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78029,
+    "v2": "class ByteValueOperator extends BoxableValueOperator<Byte> {",
+    "resolution": "class ByteValueOperator<K> extends BoxableValueOperator<K, Byte> {",
+    "conflict": "class ByteValueOperator<K> extends BoxableValueOperator<K, Byte> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78030,
+    "v2": "public T get(Object key) {",
+    "resolution": "public V get(Object key) {",
+    "conflict": "public V get(Object key) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78031,
+    "v2": "public T put(Object key, @Nullable T value) {",
+    "resolution": "public V put(Object key, @Nullable V value) {",
+    "conflict": "public V put(Object key, @Nullable V value) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78034,
+    "v2": "",
+    "resolution": "import io.realm.internal.core.NativeMixed; import io.realm.internal.util.Pair;",
+    "conflict": "import io.realm.internal.core.NativeMixed; import io.realm.internal.util.Pair;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78037,
+    "v2": "import io.realm.internal.android.TypeUtils;",
+    "resolution": "import io.realm.internal.android.TypeUtils;import io.realm.internal.Table;",
+    "conflict": "import io.realm.internal.Table;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78041,
+    "v2": "",
+    "resolution": "long columnUUIDListColKey;",
+    "conflict": "long columnUUIDListColKey;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78043,
+    "v2": "",
+    "resolution": "builder.addUUIDList(columnInfo.columnUUIDListColKey, unmanagedSource.realmGet$columnUUIDList());",
+    "conflict": "builder.addUUIDList(columnInfo.columnUUIDListColKey, unmanagedSource.realmGet$columnUUIDList());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78047,
+    "v2": "",
+    "resolution": "builder.addUUIDList(columnInfo.columnUUIDListColKey, realmObjectSource.realmGet$columnUUIDList());",
+    "conflict": "builder.addUUIDList(columnInfo.columnUUIDListColKey, realmObjectSource.realmGet$columnUUIDList());"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78050,
+    "v2": "public static final int NOT_FOUND = -1;",
+    "resolution": "private static final long nativeFinalizerPtr = nativeGetFinalizerPtr();    public static final int NOT_FOUND = -1;",
+    "conflict": "private static final long nativeFinalizerPtr = nativeGetFinalizerPtr();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78086,
+    "v2": "if (mixedPtr == OsMap.NOT_FOUND) {",
+    "resolution": "if (mixedPtr == OsMap.NOT_FOUND) {",
+    "conflict": "if (mixedPtr == -1) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78092,
+    "v2": "if (rowModelKey == OsMap.NOT_FOUND) {",
+    "resolution": "if (rowModelKey == OsMap.NOT_FOUND) {",
+    "conflict": "if (rowModelKey == -1) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78114,
+    "v2": "private static native Object nativeGetValue(long nativePtr, int index);",
+    "resolution": "private static native Object nativeGetValue(long nativePtr, int index);",
+    "conflict": "//    private static native Object nativeGetValue(long nativePtr, int index);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78119,
+    "v2": "return (this.value == null) ? 0 : this.value.hashCode();",
+    "resolution": "return (this.value == null) ? 0 : this.value.hashCode();",
+    "conflict": "return this.value == null ? 0 : this.value.hashCode();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78127,
+    "v2": "return this.value == null ? 0 : this.value.hashCode();",
+    "resolution": "return this.value == null ? 0 : this.value.hashCode();",
+    "conflict": "return (this.value == null) ? 0 : this.value.hashCode();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78129,
+    "v2": "return this.value == null ? 0 : this.value.hashCode();",
+    "resolution": "return (this.value == null) ? 0 : this.value.hashCode();",
+    "conflict": "return (this.value == null) ? 0 : this.value.hashCode();"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78132,
+    "v2": "import io.realm.internal.Row;",
+    "resolution": "import io.realm.internal.Row;import io.realm.internal.Table;",
+    "conflict": "import io.realm.internal.Table;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78135,
+    "v2": "class RealmModelValueOperator<T extends RealmModel> extends MapValueOperator<T> {",
+    "resolution": "class RealmModelValueOperator<K, V> extends MapValueOperator<K, V> {",
+    "conflict": "class RealmModelValueOperator<K, V> extends MapValueOperator<K, V> {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78149,
+    "v2": "public abstract V put(Object key, @Nullable V value);",
+    "resolution": "public abstract V put(Object key, @Nullable V value);",
+    "conflict": "public abstract V put(Object key, V value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78167,
+    "v2": "return new Mixed(MixedOperator.fromNativeMixed(proxyState.getRealm$realm(), nativeMixed));",
+    "resolution": "return new Mixed(MixedOperator.fromNativeMixed(proxyState.getRealm$realm(), nativeMixed));",
+    "conflict": "return new Mixed(MixedOperator.fromNativeMixed(proxyState, nativeMixed));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78214,
+    "v2": "return new Mixed(MixedOperator.fromNativeMixed(proxyState, nativeMixed));",
+    "resolution": "return new Mixed(MixedOperator.fromNativeMixed(proxyState.getRealm$realm(), nativeMixed));",
+    "conflict": "return new Mixed(MixedOperator.fromNativeMixed(proxyState.getRealm$realm(), nativeMixed));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78216,
+    "v2": "return new Mixed(MixedOperator.fromNativeMixed(proxyState, nativeMixed));",
+    "resolution": "return new Mixed(MixedOperator.fromNativeMixed(proxyState.getRealm$realm(), nativeMixed));",
+    "conflict": "return new Mixed(MixedOperator.fromNativeMixed(proxyState.getRealm$realm(), nativeMixed));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78217,
+    "v2": "m.put(Mixed.class, new FieldMetaData(RealmFieldType.MIXED, null, true));",
+    "resolution": "m.put(Mixed.class, new FieldMetaData(RealmFieldType.MIXED, RealmFieldType.MIXED_LIST, true));",
+    "conflict": "m.put(Mixed.class, new FieldMetaData(RealmFieldType.MIXED, RealmFieldType.MIXED_LIST, true));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78274,
+    "v2": "public static native void nativeMixedSetLink(long nativeRowPtr, long columnKey, long targetTableRef, long targetObjectKey);",
+    "resolution": "public static native void nativeMixedSetLink(long nativeRowPtr, long columnKey, long targetTableRef, long targetObjectKey);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78277,
+    "v2": "import static io.realm.RealmFieldTypeConstants.CORE_TYPE_VALUE_TYPED_LINK;",
+    "resolution": "import static io.realm.RealmFieldTypeConstants.DICTIONARY_OFFSET;",
+    "conflict": "import static io.realm.RealmFieldTypeConstants.DICTIONARY_OFFSET;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78281,
+    "v2": "case UUID:",
+    "resolution": "case UUID:            case MIXED:",
+    "conflict": "case MIXED:"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78282,
+    "v2": "case UUID_LIST:",
+    "resolution": "case UUID_LIST:",
+    "conflict": "case MIXED_LIST:"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78286,
+    "v2": "m.put(UUID.class, new FieldMetaData(RealmFieldType.UUID, RealmFieldType.UUID_LIST, true));",
+    "resolution": "m.put(UUID.class, new FieldMetaData(RealmFieldType.UUID, RealmFieldType.UUID_LIST, true));",
+    "conflict": "m.put(Mixed.class, new FieldMetaData(RealmFieldType.MIXED, RealmFieldType.MIXED_LIST, true));"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78287,
+    "v2": "case UUID:",
+    "resolution": "case UUID:            case MIXED:",
+    "conflict": "case MIXED:"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78288,
+    "v2": "case UUID_LIST:",
+    "resolution": "case UUID_LIST:",
+    "conflict": "case MIXED_LIST:"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78306,
+    "v2": "int MAX_CORE_TYPE_VALUE = CORE_TYPE_VALUE_UUID;",
+    "resolution": "int MAX_CORE_TYPE_VALUE = CORE_TYPE_VALUE_UUID;",
+    "conflict": "int MAX_CORE_TYPE_VALUE = CORE_TYPE_VALUE_TYPED_LINK;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78312,
+    "v2": "public static native void nativeMixedSetUUID(long nativeRowPtr, long columnKey, String data);",
+    "resolution": "public static native void nativeMixedSetUUID(long nativeRowPtr, long columnKey, String data);    public static native void nativeMixedSetLink(long nativeRowPtr, long columnKey, long targetTableRef, long targetObjectKey);",
+    "conflict": "public static native void nativeMixedSetLink(long nativeRowPtr, long columnKey, long targetTableRef, long targetObjectKey);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78332,
+    "v2": "super(27);",
+    "resolution": "super(27);",
+    "conflict": "super(26);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78333,
+    "v2": "OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(\"AllTypes\", false, 27, 1);",
+    "resolution": "OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(\"AllTypes\", false, 27, 1);",
+    "conflict": "OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(\"AllTypes\", false, 26, 1);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78334,
+    "v2": "case UUID:",
+    "resolution": "case MIXED:            case UUID:",
+    "conflict": "case MIXED:"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78335,
+    "v2": "case UUID_LIST:",
+    "resolution": "case MIXED_LIST:            case UUID_LIST:",
+    "conflict": "case MIXED_LIST:"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78336,
+    "v2": "import static io.realm.RealmFieldTypeConstants.CORE_TYPE_VALUE_UUID;",
+    "resolution": "import static io.realm.RealmFieldTypeConstants.CORE_TYPE_VALUE_MIXED;import static io.realm.RealmFieldTypeConstants.CORE_TYPE_VALUE_UUID;",
+    "conflict": "import static io.realm.RealmFieldTypeConstants.CORE_TYPE_VALUE_MIXED;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78337,
+    "v2": "int CORE_TYPE_VALUE_UUID = 17;",
+    "resolution": "int CORE_TYPE_VALUE_MIXED = 6;    int CORE_TYPE_VALUE_UUID = 17;",
+    "conflict": "int CORE_TYPE_VALUE_MIXED = 6;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78338,
+    "v2": "UUID(CORE_TYPE_VALUE_UUID),",
+    "resolution": "MIXED(CORE_TYPE_VALUE_MIXED),    UUID(CORE_TYPE_VALUE_UUID),",
+    "conflict": "MIXED(CORE_TYPE_VALUE_MIXED),"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78339,
+    "v2": "UUID_LIST(CORE_TYPE_VALUE_UUID + LIST_OFFSET);",
+    "resolution": "UUID_LIST(CORE_TYPE_VALUE_UUID + LIST_OFFSET),",
+    "conflict": "MIXED_LIST(CORE_TYPE_VALUE_MIXED + LIST_OFFSET);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78341,
+    "v2": "public void setUUID(long columnKey, UUID value) {",
+    "resolution": "public void setUUID(long columnKey, UUID value) {",
+    "conflict": "public void setMixed(long columnKey, Mixed value) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78342,
+    "v2": "public static final int TYPE_UUID = 12;",
+    "resolution": "public static final int TYPE_MIXED = 9;    public static final int TYPE_UUID = 12;",
+    "conflict": "public static final int TYPE_MIXED = 9;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78345,
+    "v2": "void setUUID(long columnKey, UUID value);",
+    "resolution": "void setMixed(long columnKey, Mixed value);    void setUUID(long columnKey, UUID value);",
+    "conflict": "void setMixed(long columnKey, Mixed value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78347,
+    "v2": "private static native void nativeAddUUIDListItem(long listPtr, String data);",
+    "resolution": "private static native void nativeAddUUIDListItem(long listPtr, String data);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78422,
+    "v2": "",
+    "resolution": "\"      \\\"columnDecimal128\\\":\\\"1.23456789E-1\\\",\\n\" +\n                \"      \\\"columnObjectId\\\":\\\"789abcdef0123456789abcde\\\",\\n\" +",
+    "conflict": "\"      \\\"columnDecimal128\\\":\\\"1.23456789E-1\\\",\\n\" +                 \"      \\\"columnObjectId\\\":\\\"789abcdef0123456789abcde\\\",\\n\" +"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78433,
+    "v2": "\"        \\\"_key\\\":100,\" +",
+    "resolution": "\"        \\\"_key\\\":100,\" +                \"        \\\"_key\\\": 100,\\n\" +",
+    "conflict": "\"        \\\"_key\\\": 100,\\n\" +"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78499,
+    "v2": "QueryDescriptor distinctDescriptor = QueryDescriptor.getTestInstance(table, new long[] {2});",
+    "resolution": "QueryDescriptor distinctDescriptor = QueryDescriptor.getTestInstance(table, new long[] {colKey2});",
+    "conflict": "SortDescriptor distinctDescriptor = SortDescriptor.getTestInstance(table, new long[] {colKey2});"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78501,
+    "v2": "QueryDescriptor sortDescriptor = QueryDescriptor.getInstanceForDistinct(null, table, new String[] {",
+    "resolution": "QueryDescriptor sortDescriptor = QueryDescriptor.getInstanceForDistinct(null, table, new String[] {",
+    "conflict": "SortDescriptor sortDescriptor = SortDescriptor.getInstanceForDistinct(null, table, new String[]{"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78520,
+    "v2": "this.nativePtr = nativeCreate(config.getPath(), fifoFallbackDir,false, true);",
+    "resolution": "this.nativePtr = nativeCreate(config.getPath(), fifoFallbackDir,false, true);",
+    "conflict": "this.nativePtr = nativeCreate(config.getPath(),true);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78521,
+    "v2": "private static native long nativeCreate(String path, String fifoFallbackDir, boolean enableCache, boolean enableFormatUpdate);",
+    "resolution": "private static native long nativeCreate(String path, String fifoFallbackDir, boolean enableCache, boolean enableFormatUpdate);",
+    "conflict": "private static native long nativeCreate(String path, boolean enableFormatUpdate);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78523,
+    "v2": "return new QueryDescriptor(table, columnIndices, sortOrders);",
+    "resolution": "return new QueryDescriptor(table, columnKeys, sortOrders);",
+    "conflict": "return new SortDescriptor(table, columnKeys, sortOrders);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78524,
+    "v2": "private QueryDescriptor(Table table, long[][] columnIndices, @Nullable Sort[] sortOrders) {",
+    "resolution": "private QueryDescriptor(Table table, long[][] columnKeys, @Nullable Sort[] sortOrders) {",
+    "conflict": "private SortDescriptor(Table table, long[][] columnKeys, @Nullable Sort[] sortOrders) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78547,
+    "v2": "import io.realm.processor.nameconverter.NameConverter;",
+    "resolution": "import io.realm.processor.nameconverter.NameConverter;import io.realm.annotations.StrongRelationship;",
+    "conflict": "import io.realm.annotations.StrongRelationship;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78578,
+    "v2": "// List of all fields maintained by Realm (RealmResults)     private final Set<ClassMetaData> classesToValidate = new LinkedHashSet<ClassMetaData>();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78584,
+    "v2": ": new OsCollectionChangeSet(nativeChangeSetPtr, !isLoaded());",
+    "resolution": ": new OsCollectionChangeSet(nativeChangeSetPtr, !isLoaded());",
+    "conflict": ": new OsCollectionChangeSet(nativeChangeSetPtr, !loaded);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78632,
+    "v2": "public RealmProxyClassGenerator(ProcessingEnvironment processingEnvironment, TypeMirrors typeMirrors, ClassMetaData metadata) {",
+    "resolution": "public RealmProxyClassGenerator(ProcessingEnvironment processingEnvironment, TypeMirrors typeMirrors, ClassMetaData metadata, ClassCollection classes) {",
+    "conflict": "public RealmProxyClassGenerator(ProcessingEnvironment processingEnvironment, ClassMetaData metadata, ClassCollection classes) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78641,
+    "v2": "if (Table.getClassNameForTable(mediator.getTableName(modelClass)).equals(simpleClassName)) {",
+    "resolution": "if (Table.getClassNameForTable(mediator.getTableName(modelClass)).equals(simpleClassName)) {",
+    "conflict": "if (mediator.getTableName(modelClass).endsWith(simpleClassName)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78653,
+    "v2": "// See https://github.com/realm/realm-sync/blob/master/doc/protocol.md",
+    "resolution": "// See Client::Error in https://github.com/realm/realm-sync/blob/master/src/realm/sync/client.hpp",
+    "conflict": "// See Client::Error in https://github.com/realm/realm-sync/blob/master/src/realm/sync/client.hpp"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78663,
+    "v2": "import java.util.List;",
+    "resolution": "import java.util.Calendar;import java.util.List;",
+    "conflict": "import java.util.Calendar;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78680,
+    "v2": "this.nativePtr = nativeCreateProperty(name, convertFromRealmFieldType(type, isRequired), isPrimary, isIndexed);",
+    "resolution": "this.nativePtr = nativeCreatePersistedProperty(name, convertFromRealmFieldType(type, isRequired), isPrimary, isIndexed);",
+    "conflict": "this.nativePtr = nativeCreatePersistedProperty(name, type.getNativeValue(), isPrimary, isIndexed, !isRequired);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78689,
+    "v2": "if (!SyncManager.getUserStore().isActive(user.getIdentity())) {",
+    "resolution": "if (!SyncManager.getUserStore().isActive(user.getIdentity())) {",
+    "conflict": "if (user.isLoggedOut()) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78735,
+    "v2": "Log.d(\"####\", \"test running on thread: \" + Thread.currentThread());",
+    "resolution": "Log.d(\"####\", \"test running on thread: \" + Thread.currentThread());",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78737,
+    "v2": "awaitOrFail(latch, 300);",
+    "resolution": "awaitOrFail(latch, STANDARD_WAIT_SECS);",
+    "conflict": "awaitOrFail(latch, STANDARD_WAIT_SECS);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78783,
+    "v2": "import java.util.concurrent.atomic.AtomicInteger;",
+    "resolution": "import java.util.concurrent.atomic.AtomicInteger;import java.util.concurrent.atomic.AtomicReference;",
+    "conflict": "import java.util.concurrent.atomic.AtomicReference;"
+  },
+  {
+    "devdecision": "None",
+    "id": 78804,
+    "v2": "import io.realm.log.LogLevel;",
+    "resolution": "import io.realm.log.RealmLogger;",
+    "conflict": "import io.realm.log.RealmLogger;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78810,
+    "v2": "// Tests that an async transaction that throws an exception propagate it properly to the user.",
+    "resolution": "// Tests that an async transaction that throws when call cancelTransaction manually.",
+    "conflict": "// Test that an async transaction that throws when call cancelTransaction manually."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78819,
+    "v2": "// 2. Advances the callee Realm, invalidating the version in the handover object.",
+    "resolution": "// 2. Advances the caller Realm, invalidating the version in the handover object.",
+    "conflict": "// 2. Advance the caller Realm, invalidating the version in the handover object"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78824,
+    "v2": "// Step 1: Triggers global Realm change listener.",
+    "resolution": "// Step 1: Creates object",
+    "conflict": "// Step 1: Create object"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78825,
+    "v2": "// Step 4: Responds to relevant change.",
+    "resolution": "// Step 3: Responds to relevant change.",
+    "conflict": "// Step 3: Respond to relevant change"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78827,
+    "v2": "// Step 1: Triggers global Realm change listener.",
+    "resolution": "// Step 1: Creates object.",
+    "conflict": "// Step 1: Create object"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78831,
+    "v2": "// Step 1: Triggers global Realm change listener.",
+    "resolution": "// Step 1: Creates object.",
+    "conflict": "// Step 1: Create object"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78833,
+    "v2": "// Step 1: Triggers global Realm change listener.",
+    "resolution": "// Step 1: Creates object.",
+    "conflict": "// Step 1: Create object"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78866,
+    "v2": "import io.realm.internal.ColumnInfo;",
+    "resolution": "import io.realm.internal.ColumnInfo;import io.realm.internal.CheckedRow;",
+    "conflict": "import io.realm.internal.CheckedRow;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78869,
+    "v2": "context = new Context();         context.addReference(this);",
+    "resolution": "context = new Context();        context.addReference(this);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78873,
+    "v2": "awaitOrFail(latch, 60);",
+    "resolution": "awaitOrFail(latch, 60);",
+    "conflict": "awaitOrFail(latch, 15);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78882,
+    "v2": "writer.emitStatement(\"this.proxyState = new ProxyState<%1$s>(%1$s.class, this)\", qualifiedClassName);",
+    "resolution": "writer.emitStatement(\"this.proxyState = new ProxyState<%1$s>(this)\", qualifiedClassName);",
+    "conflict": "writer.emitStatement(\"this.proxyState = new ProxyState(this)\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78883,
+    "v2": "this.proxyState = new ProxyState<some.test.AllTypes>(some.test.AllTypes.class, this);",
+    "resolution": "this.proxyState = new ProxyState<some.test.AllTypes>(this);",
+    "conflict": "this.proxyState = new ProxyState(this);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78884,
+    "v2": "this.proxyState = new ProxyState<some.test.Booleans>(some.test.Booleans.class, this);",
+    "resolution": "this.proxyState = new ProxyState<some.test.Booleans>(this);",
+    "conflict": "this.proxyState = new ProxyState(this);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78885,
+    "v2": "this.proxyState = new ProxyState<some.test.NullTypes>(some.test.NullTypes.class, this);",
+    "resolution": "this.proxyState = new ProxyState<some.test.NullTypes>(this);",
+    "conflict": "this.proxyState = new ProxyState(this);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78886,
+    "v2": "this.proxyState = new ProxyState<some.test.Simple>(some.test.Simple.class, this);",
+    "resolution": "this.proxyState = new ProxyState<some.test.Simple>(this);",
+    "conflict": "this.proxyState = new ProxyState(this);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78895,
+    "v2": "",
+    "resolution": "",
+    "conflict": "boolean autoChangeNotifications = true;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78953,
+    "v2": "import io.realm.RealmFieldType;",
+    "resolution": "import io.realm.RealmFieldType;import io.realm.RealmSchema;",
+    "conflict": "import io.realm.RealmSchema;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78955,
+    "v2": "private static native void nativeSetVersion(long nativeSharedRealmPtr, long version);",
+    "resolution": "private static native void nativeSetVersion(long nativeSharedRealmPtr, long version);    private static native long nativeGetSnapshotVersion(long nativeSharedRealmPtr);",
+    "conflict": "private static native long nativeGetSnapshotVersion(long nativeSharedRealmPtr);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78976,
+    "v2": "sharedRealm = SharedRealm.getInstance(realmConfiguration);",
+    "resolution": "sharedRealm = SharedRealm.getInstance(realmConfiguration);",
+    "conflict": "sharedGroup = new SharedGroup(realmConfiguration);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78978,
+    "v2": "sharedRealm = SharedRealm.getInstance(realmConfiguration);",
+    "resolution": "sharedRealm = SharedRealm.getInstance(realmConfiguration);",
+    "conflict": "sharedGroup = new SharedGroup(realmConfiguration);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78979,
+    "v2": "sharedRealm = SharedRealm.getInstance(realmConfiguration);",
+    "resolution": "sharedRealm = SharedRealm.getInstance(realmConfiguration);",
+    "conflict": "sharedGroup = new SharedGroup(realmConfiguration);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78980,
+    "v2": "sharedRealm = SharedRealm.getInstance(realmConfiguration);",
+    "resolution": "sharedRealm = SharedRealm.getInstance(realmConfiguration);",
+    "conflict": "sharedGroup = new SharedGroup(realmConfiguration);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78990,
+    "v2": "",
+    "resolution": "* @throws io.realm.exceptions.RealmPrimaryKeyConstraintException if two objects with the same primary key is     * inserted or if a primary key value already exists in the Realm.",
+    "conflict": "* @throws io.realm.exceptions.RealmPrimaryKeyConstraintException if two objects with the same primary key is      * inserted or if a primary key value already exists in the Realm."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79033,
+    "v2": "import java.io.File; import java.io.FileNotFoundException;",
+    "resolution": "import java.io.File; import java.io.FileNotFoundException;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79045,
+    "v2": "",
+    "resolution": "import io.realm.internal.InvalidRow;",
+    "conflict": "import io.realm.internal.InvalidRow; import io.realm.internal.DeletedRealmListException;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79053,
+    "v2": "public void testSetUnmanagedPrimaryKeyObjectToManagedList() {",
+    "resolution": "public void  set_nonManagedPrimaryKeyObjectToManagedList() {",
+    "conflict": "public void  set_nonManagedPrimaryKeyObjectToManagedList() {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79055,
+    "v2": "import io.realm.internal.DeletedRealmListException;",
+    "resolution": "import io.realm.internal.DeletedRealmListException;import io.realm.internal.InvalidRow;",
+    "conflict": "import io.realm.internal.InvalidRow;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79091,
+    "v2": "* If chaining a RealmObject observable use {@code obj.<MyRealmObjectClass>asObservable()} to pass on",
+    "resolution": "* If chaining a RealmObject observable use {@code obj.<MyRealmObjectClass>asObservable()} to pass on",
+    "conflict": "* If chaining a RealmObject observable use {@code obj.<MyRealmObjectClass>asObservable()} to parse on"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79095,
+    "v2": "private native String nativeRowToString(long nativeTablePtr, long rowIndex);",
+    "resolution": "private native String nativeRowToString(long nativeTablePtr, long rowIndex);    private native long nativeHandoverTable(long senderSharedGroupPtr, long receiverSharedGroupPtr, long tableNativePtr);",
+    "conflict": "private native long nativeHandoverTable(long senderSharedGroupPtr, long receiverSharedGroupPtr, long tableNativePtr);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79110,
+    "v2": "import io.realm.entities.Owner;",
+    "resolution": "import io.realm.entities.Owner;import io.realm.exceptions.RealmException;",
+    "conflict": "import io.realm.exceptions.RealmException;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79140,
+    "v2": "final CountDownLatch bgClosedLatch = new CountDownLatch(1);",
+    "resolution": "final CountDownLatch bgClosedLatch = new CountDownLatch(1);",
+    "conflict": "final CountDownLatch closingLatch = new CountDownLatch(1);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79141,
+    "v2": "bgClosedLatch.countDown();",
+    "resolution": "bgClosedLatch.countDown();",
+    "conflict": "closingLatch.countDown();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79144,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native String nativeValidateQuery(long nativeQueryPtr);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79158,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native void nativeBetween(long nativeQueryPtr, long columnIndex[], long value1, long value2);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79165,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native void nativeBetween(long nativeQueryPtr, long columnIndex[], float value1, float value2);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79172,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native void nativeBetween(long nativeQueryPtr, long columnIndex[], double value1, double value2);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79177,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native void nativeGreaterEqualDateTime(long nativeQueryPtr, long columnIndex[], long value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79179,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native void nativeLessEqualDateTime(long nativeQueryPtr, long columnIndex[], long value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79185,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native void nativeContains(long nativeQueryPtr, long columnIndices[], String value, boolean caseSensitive);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79188,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native long nativeSumInt(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79189,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native Long nativeMaximumInt(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79190,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native Long nativeMinimumInt(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79191,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native double nativeAverageInt(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79192,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native double nativeSumFloat(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79193,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native Float nativeMaximumFloat(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79194,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native Float nativeMinimumFloat(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79195,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native double nativeAverageFloat(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79196,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native double nativeSumDouble(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79197,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native Double nativeMaximumDouble(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79200,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native Long nativeMaximumDate(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79203,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native long nativeRemove(long nativeQueryPtr, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79227,
+    "v2": "if (fieldType != null && fieldType != table.getColumnType(columnIndices[names.length - 1])) {",
+    "resolution": "if (fieldType != null && fieldType != table.getColumnType(columnIndices[names.length - 1])) {",
+    "conflict": "if (fieldType != table.getColumnType(columnIndices[names.length - 1])) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79247,
+    "v2": "protected native Long nativeMaximumInt(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "resolution": "private native Long nativeMaximumInt(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "conflict": "private native long nativeMaximumInt(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79248,
+    "v2": "protected native Long nativeMinimumInt(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "resolution": "private native Long nativeMinimumInt(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "conflict": "private native long nativeMinimumInt(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79249,
+    "v2": "protected native Float nativeMaximumFloat(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "resolution": "private native Float nativeMaximumFloat(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "conflict": "private native float nativeMaximumFloat(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79250,
+    "v2": "protected native Float nativeMinimumFloat(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "resolution": "private native Float nativeMinimumFloat(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "conflict": "private native float nativeMinimumFloat(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79251,
+    "v2": "protected native Double nativeMaximumDouble(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "resolution": "private native Double nativeMaximumDouble(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "conflict": "private native double nativeMaximumDouble(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79252,
+    "v2": "protected native Double nativeMinimumDouble(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "resolution": "private native Double nativeMinimumDouble(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "conflict": "private native double nativeMinimumDouble(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79253,
+    "v2": "protected native Long nativeMaximumDate(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "resolution": "private native Long nativeMaximumDate(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "conflict": "private native long nativeMaximumDate(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79254,
+    "v2": "protected native Long nativeMinimumDate(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "resolution": "private native Long nativeMinimumDate(long nativeQueryPtr, long columnIndex, long start, long end, long limit);",
+    "conflict": "private native long nativeMinimumDate(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79255,
+    "v2": "private native void nativeIsNotNull(long nativePtr, long columnIndices[]);",
+    "resolution": "private native void nativeIsNotNull(long nativePtr, long columnIndices[]);",
+    "conflict": "private native void nativeIsNull(long nativePtr, long columnIndex);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79257,
+    "v2": "import java.util.concurrent.TimeUnit; import java.util.concurrent.atomic.AtomicInteger;",
+    "resolution": "import java.util.concurrent.TimeUnit;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79262,
+    "v2": "",
+    "resolution": "import java.util.concurrent.Future;",
+    "conflict": "import java.util.concurrent.Future; import java.util.concurrent.atomic.AtomicInteger;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79294,
+    "v2": "import java.util.HashSet;",
+    "resolution": "import java.util.HashSet;import java.util.IdentityHashMap;",
+    "conflict": "import java.util.IdentityHashMap;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79302,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native void nativePromoteToWrite(long nativePtr, long nativeReplicationPtr);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79303,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native void nativeRollbackAndContinueAsRead(long nativePtr, long nativeReplicationPtr);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79308,
+    "v2": "private void sendNotifications() {",
+    "resolution": "private void sendNotifications() {",
+    "conflict": "void sendNotifications() {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79341,
+    "v2": "import java.nio.charset.Charset;",
+    "resolution": "import java.nio.charset.Charset;import java.util.Random;",
+    "conflict": "import java.util.Random;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79352,
+    "v2": "writer.emitStatement(\"throw new RealmMigrationNeededException(transaction.getPath(), \\\"Field count does not match\\\")\");",
+    "resolution": "writer.emitStatement(\"throw new RealmMigrationNeededException(transaction.getPath(), \\\"Field count does not match\\\")\");",
+    "conflict": "writer.emitStatement(\"throw new IllegalStateException(\\\"Column count does not match\\\")\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79359,
+    "v2": "import java.util.HashSet; import java.util.Iterator;",
+    "resolution": "import java.util.HashMap; import java.util.Iterator;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79365,
+    "v2": "*      * @throws java.lang.IllegalStateException if trying to compact a Realm that is already open.",
+    "resolution": "*     * @throws java.lang.IllegalStateException if trying to compact a Realm that is already open.",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79366,
+    "v2": "*      * @throws java.lang.IllegalStateException if trying to compact a Realm that is already open.",
+    "resolution": "*     * @throws java.lang.IllegalStateException if trying to compact a Realm that is already open.",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79373,
+    "v2": "\"Realm \" + canonicalPath + \" is being finalized without being closed, \" +",
+    "resolution": "\"Realm \" + canonicalPath + \" is being finalized without being closed, \" +",
+    "conflict": "\"Realm \" + path + \" is being finalized without being closed, \" +"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79399,
+    "v2": "realmJson.createOrUpdateUsingJsonObject(clazz, this, json.getJSONObject(i), false);",
+    "resolution": "proxyMediator.createOrUpdateUsingJsonObject(clazz, this, json.getJSONObject(i), false);",
+    "conflict": "proxyMediator.populateUsingJsonObject(obj, json.getJSONObject(i));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79403,
+    "v2": "return realmJson.createOrUpdateUsingJsonObject(clazz, this, json, false);",
+    "resolution": "return proxyMediator.createOrUpdateUsingJsonObject(clazz, this, json, false);",
+    "conflict": "proxyMediator.populateUsingJsonObject(obj, json);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79436,
+    "v2": "writer.emitStatement(\"LinkView links = row.getLinkList(%s)\", staticFieldIndexVarName(field));",
+    "resolution": "writer.emitStatement(\"LinkView links = row.getLinkList(%s)\", staticFieldIndexVarName(field));",
+    "conflict": "writer.emitStatement(\"LinkView links = row.getLinkList(realm.getColumnIndices().get(\\\"%s\\\").get(\\\"%s\\\"))\", className, fieldName);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79437,
+    "v2": "return (java.lang.String) row.getString(INDEX_COLUMNSTRING);",
+    "resolution": "return (java.lang.String) row.getString(INDEX_COLUMNSTRING);",
+    "conflict": "return (java.lang.String) row.getString(realm.getColumnIndices().get(\"AllTypes\").get(\"columnString\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79438,
+    "v2": "row.setString(INDEX_COLUMNSTRING, (String) value);",
+    "resolution": "row.setString(INDEX_COLUMNSTRING, (String) value);",
+    "conflict": "row.setString(realm.getColumnIndices().get(\"AllTypes\").get(\"columnString\"), (String) value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79439,
+    "v2": "return (long) row.getLong(INDEX_COLUMNLONG);",
+    "resolution": "return (long) row.getLong(INDEX_COLUMNLONG);",
+    "conflict": "return (long) row.getLong(realm.getColumnIndices().get(\"AllTypes\").get(\"columnLong\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79440,
+    "v2": "row.setLong(INDEX_COLUMNLONG, (long) value);",
+    "resolution": "row.setLong(INDEX_COLUMNLONG, (long) value);",
+    "conflict": "row.setLong(realm.getColumnIndices().get(\"AllTypes\").get(\"columnLong\"), (long) value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79441,
+    "v2": "return (float) row.getFloat(INDEX_COLUMNFLOAT);",
+    "resolution": "return (float) row.getFloat(INDEX_COLUMNFLOAT);",
+    "conflict": "return (float) row.getFloat(realm.getColumnIndices().get(\"AllTypes\").get(\"columnFloat\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79442,
+    "v2": "row.setFloat(INDEX_COLUMNFLOAT, (float) value);",
+    "resolution": "row.setFloat(INDEX_COLUMNFLOAT, (float) value);",
+    "conflict": "row.setFloat(realm.getColumnIndices().get(\"AllTypes\").get(\"columnFloat\"), (float) value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79443,
+    "v2": "return (double) row.getDouble(INDEX_COLUMNDOUBLE);",
+    "resolution": "return (double) row.getDouble(INDEX_COLUMNDOUBLE);",
+    "conflict": "return (double) row.getDouble(realm.getColumnIndices().get(\"AllTypes\").get(\"columnDouble\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79444,
+    "v2": "row.setDouble(INDEX_COLUMNDOUBLE, (double) value);",
+    "resolution": "row.setDouble(INDEX_COLUMNDOUBLE, (double) value);",
+    "conflict": "row.setDouble(realm.getColumnIndices().get(\"AllTypes\").get(\"columnDouble\"), (double) value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79445,
+    "v2": "return (boolean) row.getBoolean(INDEX_COLUMNBOOLEAN);",
+    "resolution": "return (boolean) row.getBoolean(INDEX_COLUMNBOOLEAN);",
+    "conflict": "return (boolean) row.getBoolean(realm.getColumnIndices().get(\"AllTypes\").get(\"columnBoolean\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79446,
+    "v2": "row.setBoolean(INDEX_COLUMNBOOLEAN, (boolean) value);",
+    "resolution": "row.setBoolean(INDEX_COLUMNBOOLEAN, (boolean) value);",
+    "conflict": "row.setBoolean(realm.getColumnIndices().get(\"AllTypes\").get(\"columnBoolean\"), (boolean) value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79447,
+    "v2": "return (java.util.Date) row.getDate(INDEX_COLUMNDATE);",
+    "resolution": "return (java.util.Date) row.getDate(INDEX_COLUMNDATE);",
+    "conflict": "return (java.util.Date) row.getDate(realm.getColumnIndices().get(\"AllTypes\").get(\"columnDate\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79448,
+    "v2": "row.setDate(INDEX_COLUMNDATE, (Date) value);",
+    "resolution": "row.setDate(INDEX_COLUMNDATE, (Date) value);",
+    "conflict": "row.setDate(realm.getColumnIndices().get(\"AllTypes\").get(\"columnDate\"), (Date) value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79449,
+    "v2": "return (byte[]) row.getBinaryByteArray(INDEX_COLUMNBINARY);",
+    "resolution": "return (byte[]) row.getBinaryByteArray(INDEX_COLUMNBINARY);",
+    "conflict": "return (byte[]) row.getBinaryByteArray(realm.getColumnIndices().get(\"AllTypes\").get(\"columnBinary\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79450,
+    "v2": "row.setBinaryByteArray(INDEX_COLUMNBINARY, (byte[]) value);",
+    "resolution": "row.setBinaryByteArray(INDEX_COLUMNBINARY, (byte[]) value);",
+    "conflict": "row.setBinaryByteArray(realm.getColumnIndices().get(\"AllTypes\").get(\"columnBinary\"), (byte[]) value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79453,
+    "v2": "return new RealmList<AllTypes>(AllTypes.class, row.getLinkList(INDEX_COLUMNREALMLIST), realm);",
+    "resolution": "return new RealmList<AllTypes>(AllTypes.class, row.getLinkList(INDEX_COLUMNREALMLIST), realm);",
+    "conflict": "return new RealmList<AllTypes>(AllTypes.class, row.getLinkList(realm.getColumnIndices().get(\"AllTypes\").get(\"columnRealmList\")), realm);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79454,
+    "v2": "LinkView links = row.getLinkList(INDEX_COLUMNREALMLIST);",
+    "resolution": "LinkView links = row.getLinkList(INDEX_COLUMNREALMLIST);",
+    "conflict": "LinkView links = row.getLinkList(realm.getColumnIndices().get(\"AllTypes\").get(\"columnRealmList\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79455,
+    "v2": "return (boolean) row.getBoolean(INDEX_DONE);",
+    "resolution": "return (boolean) row.getBoolean(INDEX_DONE);",
+    "conflict": "return (boolean) row.getBoolean(realm.getColumnIndices().get(\"Booleans\").get(\"done\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79456,
+    "v2": "row.setBoolean(INDEX_DONE, (boolean) value);",
+    "resolution": "row.setBoolean(INDEX_DONE, (boolean) value);",
+    "conflict": "row.setBoolean(realm.getColumnIndices().get(\"Booleans\").get(\"done\"), (boolean) value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79457,
+    "v2": "return (boolean) row.getBoolean(INDEX_ISREADY);",
+    "resolution": "return (boolean) row.getBoolean(INDEX_ISREADY);",
+    "conflict": "return (boolean) row.getBoolean(realm.getColumnIndices().get(\"Booleans\").get(\"isReady\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79458,
+    "v2": "row.setBoolean(INDEX_ISREADY, (boolean) value);",
+    "resolution": "row.setBoolean(INDEX_ISREADY, (boolean) value);",
+    "conflict": "row.setBoolean(realm.getColumnIndices().get(\"Booleans\").get(\"isReady\"), (boolean) value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79459,
+    "v2": "return (boolean) row.getBoolean(INDEX_MCOMPLETED);",
+    "resolution": "return (boolean) row.getBoolean(INDEX_MCOMPLETED);",
+    "conflict": "return (boolean) row.getBoolean(realm.getColumnIndices().get(\"Booleans\").get(\"mCompleted\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79460,
+    "v2": "row.setBoolean(INDEX_MCOMPLETED, (boolean) value);",
+    "resolution": "row.setBoolean(INDEX_MCOMPLETED, (boolean) value);",
+    "conflict": "row.setBoolean(realm.getColumnIndices().get(\"Booleans\").get(\"mCompleted\"), (boolean) value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79461,
+    "v2": "return (java.lang.String) row.getString(INDEX_NAME);",
+    "resolution": "return (java.lang.String) row.getString(INDEX_NAME);",
+    "conflict": "return (java.lang.String) row.getString(realm.getColumnIndices().get(\"Simple\").get(\"name\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79462,
+    "v2": "row.setString(INDEX_NAME, (String) value);",
+    "resolution": "row.setString(INDEX_NAME, (String) value);",
+    "conflict": "row.setString(realm.getColumnIndices().get(\"Simple\").get(\"name\"), (String) value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79463,
+    "v2": "return (int) row.getLong(INDEX_AGE);",
+    "resolution": "return (int) row.getLong(INDEX_AGE);",
+    "conflict": "return (int) row.getLong(realm.getColumnIndices().get(\"Simple\").get(\"age\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79464,
+    "v2": "row.setLong(INDEX_AGE, (long) value);",
+    "resolution": "row.setLong(INDEX_AGE, (long) value);",
+    "conflict": "row.setLong(realm.getColumnIndices().get(\"Simple\").get(\"age\"), (long) value);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79465,
+    "v2": "static final ColumnIndices columnIndices = new ColumnIndices();",
+    "resolution": "private final ColumnIndices columnIndices = new ColumnIndices();",
+    "conflict": "private final Map<String, Map<String, Long>> columnIndices = new HashMap<String, Map<String, Long>>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79467,
+    "v2": "this.columns = Realm.columnIndices.getClassFields(clazz);",
+    "resolution": "this.columns = Realm.getColumnIndices().getClassFields(clazz);",
+    "conflict": "this.columns = realm.getColumnIndices().get(clazz.getSimpleName());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79468,
+    "v2": "this.columns = Realm.columnIndices.getClassFields(clazz);",
+    "resolution": "this.columns = Realm.getColumnIndices().getClassFields(clazz);",
+    "conflict": "this.columns = realm.getColumnIndices().get(clazz.getSimpleName());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79469,
+    "v2": "this.columns = Realm.columnIndices.getClassFields(clazz);",
+    "resolution": "this.columns = Realm.getColumnIndices().getClassFields(clazz);",
+    "conflict": "this.columns = realm.getColumnIndices().get(clazz.getSimpleName());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79481,
+    "v2": "Long columnIndex = columnIndices.get(getClassSimpleName(clazz)).get(fieldName);",
+    "resolution": "Long columnIndex = columnIndices.get(clazz.getSimpleName()).get(fieldName);",
+    "conflict": "Long columnIndex = columnIndices.get(clazz.getSimpleName()).get(fieldName);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79482,
+    "v2": "throw new IllegalArgumentException(\"RealmObject has no @PrimaryKey defined: \" + getClassSimpleName(objectClass));",
+    "resolution": "throw new IllegalArgumentException(\"RealmObject has no @PrimaryKey defined: \" + objectClass.getSimpleName().toString());",
+    "conflict": "throw new IllegalArgumentException(\"RealmObject has no @PrimaryKey defined: \" + objectClass.getSimpleName().toString());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79491,
+    "v2": "writer.emitStatement(\"return copy(realm, object, update)\");",
+    "resolution": "writer.emitStatement(\"return copy(realm, object, update, cache)\");",
+    "conflict": "writer.emitStatement(\"return copy(realm, object, false, cache)\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79535,
+    "v2": "private void emitHashcodeMethod(JavaWriter writer) throws IOException {",
+    "resolution": "private void emitHashcodeMethod(JavaWriter writer) throws IOException {",
+    "conflict": "private void emitHashCodeMethod(JavaWriter writer) throws IOException {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79537,
+    "v2": "parent.checkImmutable();",
+    "resolution": "getTable().assertIntValueIsLegal(columnIndex, value);        parent.checkImmutable();",
+    "conflict": "getTable().assertIntValueIsLegal(columnIndex, value);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79552,
+    "v2": "import io.realm.annotations.Index;",
+    "resolution": "import io.realm.annotations.Index;import io.realm.exceptions.RealmException;",
+    "conflict": "import io.realm.exceptions.RealmException;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79569,
+    "v2": "Elements elementUtils = processingEnvironment.getElementUtils();",
+    "resolution": "elementUtils = processingEnvironment.getElementUtils();",
+    "conflict": "elementUtils = processingEnvironment.getElementUtils();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79572,
+    "v2": "assertEquals(8, row.getColumnCount());",
+    "resolution": "assertEquals(8, row.getColumnCount());",
+    "conflict": "assertEquals(\"RealmObject.realmGetRow seems to return wrong row type: \", 9, row.getColumnCount());"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79573,
+    "v2": "import android.annotation.SuppressLint;",
+    "resolution": "import android.annotation.SuppressLint;import android.annotation.TargetApi;",
+    "conflict": "import android.annotation.TargetApi;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79588,
+    "v2": "File file = new File(getContext().getFilesDir(), fileName);",
+    "resolution": "File file = new File(getContext().getFilesDir(), fileName);",
+    "conflict": "File file = new File(getContext().getFilesDir() + \"/\" + fileName);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79589,
+    "v2": "import java.io.File;",
+    "resolution": "import java.nio.channels.FileChannel;",
+    "conflict": "import java.nio.channels.FileChannel;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79596,
+    "v2": "",
+    "resolution": "import android.os.Looper;",
+    "conflict": "import android.content.Context; import android.os.Looper;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79604,
+    "v2": "import io.realm.entities.AnnotationNameConventions;",
+    "resolution": "import io.realm.entities.AnnotationNameConventions;import io.realm.entities.CyclicType;",
+    "conflict": "import io.realm.entities.CyclicType;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79622,
+    "v2": "new RealmProxyClassGenerator(processingEnv, className, packageName, fields, getters, setters, indexedFields);",
+    "resolution": "new RealmProxyClassGenerator(processingEnv, className, packageName, fields, getters, setters, indexedFields, primaryKey);",
+    "conflict": "new RealmProxyClassGenerator(processingEnv, className, packageName, fields, indexedFields, primaryKey);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79649,
+    "v2": "protected final static int TEST_DATA_SIZE = 516;",
+    "resolution": "protected final static int TEST_DATA_SIZE = 2516;",
+    "conflict": "protected final static int TEST_DATA_SIZE = 2516;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79701,
+    "v2": "import java.io.FileWriter; import java.io.IOException;",
+    "resolution": "import java.io.IOException;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "None",
+    "id": 79703,
+    "v2": "import com.squareup.javawriter.JavaWriter;",
+    "resolution": "import javax.lang.model.element.Modifier;",
+    "conflict": "import io.realm.internal.ColumnType;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79706,
+    "v2": "return new Table(context, this.parent, nativeTablePointer, immutable);",
+    "resolution": "return new Table(context, this.parent, nativeTablePointer);",
+    "conflict": "return new Table(context, this, nativeTablePointer);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79718,
+    "v2": "}",
+    "resolution": "}",
+    "conflict": "}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79719,
+    "v2": "public void insertBoolean(long columnIndex, long rowIndex, boolean value) {",
+    "resolution": "public void insertBoolean(long columnIndex, long rowIndex, boolean value) {",
+    "conflict": "public void insertBoolean(long columnIndex, long rowIndex, boolean value) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79720,
+    "v2": "*/",
+    "resolution": "*/",
+    "conflict": "*/"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79721,
+    "v2": "public void insertSubtable(long columnIndex, long rowIndex, Object[][] values) {",
+    "resolution": "public void insertSubtable(long columnIndex, long rowIndex, Object[][] values) {",
+    "conflict": "public void insertSubTable(long columnIndex, long rowIndex, Object[][] values) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79732,
+    "v2": "(new File(\"mydatabase.tightdb\")).delete();",
+    "resolution": "(new File(\"mydatabase.tightdb\")).delete();",
+    "conflict": "(new File(\"mydatabase.tightdb\")).delete();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79763,
+    "v2": "t2.addColumn(ColumnType.INTEGER , \"col0\");",
+    "resolution": "t2.addColumn(ColumnType.INTEGER, \"col0\");",
+    "conflict": "t2.addColumn(ColumnType.INTEGER, \"col0\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79769,
+    "v2": "new File(FILENAME).delete();",
+    "resolution": "//  new File(FILENAME).delete();",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79774,
+    "v2": "try { addresses.addColumn(ColumnType.ColumnTypeString, \"I am 64 chracters...............................................\"); fail(\"Only 63 chracters supported\"); } catch (IllegalArgumentException e) { }",
+    "resolution": "try { addresses.addColumn(ColumnType.STRING, \"I am 64 chracters...............................................\"); fail(\"Only 63 chracters supported\"); } catch (IllegalArgumentException e) { }",
+    "conflict": "try { addresses.addColumn(ColumnType.STRING, \"I am 64 chracters...............................................\"); fail(\"Only 63 chracters supported\"); } catch (IllegalArgumentException e) { }"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79778,
+    "v2": "@Override",
+    "resolution": "@Override    /*",
+    "conflict": "/*"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79785,
+    "v2": "// Requires that the first column is a string column with index",
+    "resolution": "/*  // Requires that the first column is a string column with unique values. Also index required?",
+    "conflict": "/*  // Requires that the first column is a string column with unique values. Also index required?"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79787,
+    "v2": "@Override",
+    "resolution": "@Override",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79788,
+    "v2": "@Override",
+    "resolution": "@Override    /*",
+    "conflict": "/*"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79790,
+    "v2": "@Override",
+    "resolution": "@Override    /*",
+    "conflict": "/*"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79802,
+    "v2": "try {  table.insert(1, \"NewValue\"); fail(\"Exception expected when inserting in read transaction\"); } catch (IllegalStateException e) { }",
+    "resolution": "try {  table.addAt(1, \"NewValue\"); fail(\"Exception expected when inserting in read transaction\"); } catch (IllegalStateException e) { }",
+    "conflict": "try {  table.addAt(1, \"NewValue\"); fail(\"Exception excpeted when inserting in read transaction\"); } catch (IllegalStateException e) { }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79845,
+    "v2": "try { table.insert(0, 0, false);            assert(false);} catch (IllegalStateException e) {}",
+    "resolution": "try { table.addAt(0, 0, false);             assert(false);} catch (IllegalStateException e) {}",
+    "conflict": "try { table.addAt(0, 0, false);             assert(false);} catch (IllegalStateException e) {}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79848,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79859,
+    "v2": "import com.tightdb.Group;",
+    "resolution": "import com.tightdb.Group;import com.tightdb.ColumnType;",
+    "conflict": "import com.tightdb.ColumnType;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79865,
+    "v2": "long memBefore = Util.getUsedMemory(); memBefore = Util.getUsedMemory();",
+    "resolution": "long memBefore = ExampleHelper.getUsedMemory(); memBefore = ExampleHelper.getUsedMemory();",
+    "conflict": "long memBefore = ExampleHelper.getUsedMemory(); memBefore = ExampleHelper.getUsedMemory();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79867,
+    "v2": "return Util.getUsedMemory();",
+    "resolution": "return Util.getNativeMemUsage();",
+    "conflict": "return Util.getNativeMemUsage();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79869,
+    "v2": "// Tables get detached",
+    "resolution": "// Tables get detached",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79874,
+    "v2": "tbl.addColumn(ColumnType.ColumnTypeInt, \"number\");",
+    "resolution": "tbl.addColumn(ColumnType.INTEGER, \"number\");",
+    "conflict": "tbl.addColumn(ColumnType.INTEGER, \"number\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79875,
+    "v2": "tbl.addColumn(ColumnType.ColumnTypeInt, \"number\");",
+    "resolution": "tbl.addColumn(ColumnType.INTEGER, \"number\");",
+    "conflict": "tbl.addColumn(ColumnType.INTEGER, \"number\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79885,
+    "v2": "table.addColumn(ColumnType.ColumnTypeBool, \"boolean\");",
+    "resolution": "table.addColumn(ColumnType.BOOLEAN, \"boolean\");",
+    "conflict": "table.addColumn(ColumnType.BOOLEAN, \"boolean\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79915,
+    "v2": "tbl.addColumn(ColumnType.ColumnTypeInt, \"number\");",
+    "resolution": "tbl.addColumn(ColumnType.LONG, \"number\");",
+    "conflict": "tbl.addColumn(ColumnType.LONG, \"number\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79916,
+    "v2": "tbl.addColumn(ColumnType.ColumnTypeInt, \"number\");",
+    "resolution": "tbl.addColumn(ColumnType.LONG, \"number\");",
+    "conflict": "tbl.addColumn(ColumnType.LONG, \"number\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79917,
+    "v2": "tbl2.addColumn(ColumnType.ColumnTypeInt, \"number\");",
+    "resolution": "tbl2.addColumn(ColumnType.LONG, \"number\");",
+    "conflict": "tbl2.addColumn(ColumnType.LONG, \"number\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79946,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import com.tightdb.typed.AbstractTableOrView; import com.tightdb.typed.TightDB;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79971,
+    "v2": "@Test(enabled = false)",
+    "resolution": "@Test(enabled=false)",
+    "conflict": "@Test(enabled=false)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79972,
+    "v2": "@Test(enabled = false)",
+    "resolution": "@Test(enabled=false)",
+    "conflict": "@Test(enabled=false)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79983,
+    "v2": "public void insertBinaryByteBuffer(long columnIndex, long rowIndex, ByteBuffer data) {",
+    "resolution": "public void insertBinaryByteBuffer(long columnIndex, long rowIndex, ByteBuffer data){",
+    "conflict": "public void insertBinaryByteBuffer(long columnIndex, long rowIndex, ByteBuffer data){"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79985,
+    "v2": "public ByteBuffer getBinaryByteBuffer(long columnIndex, long rowIndex) {",
+    "resolution": "public ByteBuffer getBinaryByteBuffer(long columnIndex, long rowIndex){",
+    "conflict": "public ByteBuffer getBinaryByteBuffer(long columnIndex, long rowIndex){"
+  }
+]
+}

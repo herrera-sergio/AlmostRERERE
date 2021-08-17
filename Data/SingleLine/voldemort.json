@@ -1,0 +1,1179 @@
+{"conflicts":[
+  {
+    "devdecision": "Manual",
+    "id": 8106,
+    "v2": "|| options.has(\"async\") || options.has(\"native-backup\") || options.has(\"rollback\") || options.has(\"reserve-memory\"))) {",
+    "resolution": "|| options.has(\"async\") || options.has(\"native-backup\") || options.has(\"rollback\")",
+    "conflict": "|| options.has(\"async\") || options.has(\"native-backup\") || options.has(\"rollback\") || options.has(\"verify-metadata-version\"))) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8108,
+    "v2": "+ \"repair-job, native-backup, rollback, reserve-memory) must be specified\");",
+    "resolution": "+ \"repair-job, native-backup, rollback, reserve-memory, verify-metadata-version) must be specified\");",
+    "conflict": "+ \"repair-job, native-backup, verify-metadata-version) must be specified\");"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8114,
+    "v2": "import voldemort.store.socket.clientrequest.ClientRequestExecutorPool;",
+    "resolution": "import voldemort.store.system.SystemStoreConstants;import voldemort.store.socket.clientrequest.ClientRequestExecutorPool;",
+    "conflict": "import voldemort.store.system.SystemStoreConstants;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8122,
+    "v2": "import java.util.concurrent.Callable; import java.util.concurrent.TimeUnit;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8131,
+    "v2": "+ \"      <type>java-serialization</type>\"",
+    "resolution": "+ \"      <type>string</type>\"",
+    "conflict": "+ \"      <type>string</type>\""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8138,
+    "v2": "socketFactory.close();",
+    "resolution": "socketFactory.close();",
+    "conflict": "((ZenStoreClient<String, String>) client1).close();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8143,
+    "v2": "",
+    "resolution": "",
+    "conflict": "((ZenStoreClient<String, String>) client1).close();             ((ZenStoreClient<String, String>) client2).close();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8147,
+    "v2": "",
+    "resolution": "/* 12 hr refresh internval */    private volatile long clientRegistryRefreshInterval = 3600 * 1000 * 12;",
+    "conflict": "/* 12 hr refresh internval */     private volatile long clientRegistryRefreshInterval = 3600 * 1000 * 12;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8179,
+    "v2": "GET_METADATA, UPDATE_METADATA, UPDATE_PARTITION_ENTRIES, FETCH_PARTITION_ENTRIES, DELETE_PARTITION_ENTRIES, INITIATE_FETCH_AND_UPDATE, ASYNC_OPERATION_STATUS, INITIATE_REBALANCE_NODE, ASYNC_OPERATION_STOP, ASYNC_OPERATION_LIST, TRUNCATE_ENTRIES, ADD_STORE, DELETE_STORE, FETCH_STORE, SWAP_STORE, ROLLBACK_STORE, GET_RO_MAX_VERSION_DIR, GET_RO_CURRENT_VERSION_DIR, FETCH_PARTITION_FILES, UPDATE_SLOP_ENTRIES, FAILED_FETCH_STORE, GET_RO_STORAGE_FORMAT, REBALANCE_STATE_CHANGE, REPAIR_JOB, NATIVE_BACKUP,",
+    "resolution": "GET_METADATA, UPDATE_METADATA, UPDATE_PARTITION_ENTRIES, FETCH_PARTITION_ENTRIES, DELETE_PARTITION_ENTRIES, INITIATE_FETCH_AND_UPDATE, ASYNC_OPERATION_STATUS, INITIATE_REBALANCE_NODE, ASYNC_OPERATION_STOP, ASYNC_OPERATION_LIST, TRUNCATE_ENTRIES, ADD_STORE, DELETE_STORE, FETCH_STORE, SWAP_STORE, ROLLBACK_STORE, GET_RO_MAX_VERSION_DIR, GET_RO_CURRENT_VERSION_DIR, FETCH_PARTITION_FILES, UPDATE_SLOP_ENTRIES, FAILED_FETCH_STORE, GET_RO_STORAGE_FORMAT, REBALANCE_STATE_CHANGE, REPAIR_JOB, INITIATE_REBALANCE_NODE_ON_DONOR, DELETE_STORE_REBALANCE_STATE, NATIVE_BACKUP,",
+    "conflict": "GET_METADATA, UPDATE_METADATA, UPDATE_PARTITION_ENTRIES, FETCH_PARTITION_ENTRIES, DELETE_PARTITION_ENTRIES, INITIATE_FETCH_AND_UPDATE, ASYNC_OPERATION_STATUS, INITIATE_REBALANCE_NODE, ASYNC_OPERATION_STOP, ASYNC_OPERATION_LIST, TRUNCATE_ENTRIES, ADD_STORE, DELETE_STORE, FETCH_STORE, SWAP_STORE, ROLLBACK_STORE, GET_RO_MAX_VERSION_DIR, GET_RO_CURRENT_VERSION_DIR, FETCH_PARTITION_FILES, UPDATE_SLOP_ENTRIES, FAILED_FETCH_STORE, GET_RO_STORAGE_FORMAT, REBALANCE_STATE_CHANGE, REPAIR_JOB, INITIATE_REBALANCE_NODE_ON_DONOR, DELETE_STORE_REBALANCE_STATE,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8218,
+    "v2": "GET_METADATA, UPDATE_METADATA, UPDATE_PARTITION_ENTRIES, FETCH_PARTITION_ENTRIES, DELETE_PARTITION_ENTRIES, INITIATE_FETCH_AND_UPDATE, ASYNC_OPERATION_STATUS, INITIATE_REBALANCE_NODE, ASYNC_OPERATION_STOP, ASYNC_OPERATION_LIST, TRUNCATE_ENTRIES, ADD_STORE, DELETE_STORE, FETCH_STORE, SWAP_STORE, ROLLBACK_STORE, GET_RO_MAX_VERSION_DIR, GET_RO_CURRENT_VERSION_DIR, FETCH_PARTITION_FILES, UPDATE_SLOP_ENTRIES, FAILED_FETCH_STORE, GET_RO_STORAGE_FORMAT, REBALANCE_STATE_CHANGE, REPAIR_JOB,",
+    "resolution": "GET_METADATA, UPDATE_METADATA, UPDATE_PARTITION_ENTRIES, FETCH_PARTITION_ENTRIES, DELETE_PARTITION_ENTRIES, INITIATE_FETCH_AND_UPDATE, ASYNC_OPERATION_STATUS, INITIATE_REBALANCE_NODE, ASYNC_OPERATION_STOP, ASYNC_OPERATION_LIST, TRUNCATE_ENTRIES, ADD_STORE, DELETE_STORE, FETCH_STORE, SWAP_STORE, ROLLBACK_STORE, GET_RO_MAX_VERSION_DIR, GET_RO_CURRENT_VERSION_DIR, FETCH_PARTITION_FILES, UPDATE_SLOP_ENTRIES, FAILED_FETCH_STORE, GET_RO_STORAGE_FORMAT, REBALANCE_STATE_CHANGE, REPAIR_JOB, INITIATE_REBALANCE_NODE_ON_DONOR, DELETE_STORE_REBALANCE_STATE,",
+    "conflict": "GET_METADATA, UPDATE_METADATA, UPDATE_PARTITION_ENTRIES, FETCH_PARTITION_ENTRIES, DELETE_PARTITION_ENTRIES, INITIATE_FETCH_AND_UPDATE, ASYNC_OPERATION_STATUS, INITIATE_REBALANCE_NODE, ASYNC_OPERATION_STOP, ASYNC_OPERATION_LIST, TRUNCATE_ENTRIES, ADD_STORE, DELETE_STORE, FETCH_STORE, SWAP_STORE, ROLLBACK_STORE, GET_RO_MAX_VERSION_DIR, GET_RO_CURRENT_VERSION_DIR, FETCH_PARTITION_FILES, UPDATE_SLOP_ENTRIES, FAILED_FETCH_STORE, GET_RO_STORAGE_FORMAT, REBALANCE_STATE_CHANGE, INITIATE_REBALANCE_NODE_ON_DONOR, DELETE_STORE_REBALANCE_STATE,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8231,
+    "v2": "getDescriptor().getMessageTypes().get(41);",
+    "resolution": "getDescriptor().getMessageTypes().get(42);",
+    "conflict": "getDescriptor().getMessageTypes().get(40);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8232,
+    "v2": "getDescriptor().getMessageTypes().get(42);",
+    "resolution": "getDescriptor().getMessageTypes().get(43);",
+    "conflict": "getDescriptor().getMessageTypes().get(41);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8233,
+    "v2": "getDescriptor().getMessageTypes().get(43);",
+    "resolution": "getDescriptor().getMessageTypes().get(44);",
+    "conflict": "getDescriptor().getMessageTypes().get(42);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8234,
+    "v2": "getDescriptor().getMessageTypes().get(44);",
+    "resolution": "getDescriptor().getMessageTypes().get(45);",
+    "conflict": "getDescriptor().getMessageTypes().get(43);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8235,
+    "v2": "getDescriptor().getMessageTypes().get(45);",
+    "resolution": "getDescriptor().getMessageTypes().get(46);",
+    "conflict": "getDescriptor().getMessageTypes().get(44);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8236,
+    "v2": "getDescriptor().getMessageTypes().get(46);",
+    "resolution": "getDescriptor().getMessageTypes().get(47);",
+    "conflict": "getDescriptor().getMessageTypes().get(45);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8237,
+    "v2": "getDescriptor().getMessageTypes().get(47);",
+    "resolution": "getDescriptor().getMessageTypes().get(48);",
+    "conflict": "getDescriptor().getMessageTypes().get(46);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8238,
+    "v2": "getDescriptor().getMessageTypes().get(48);",
+    "resolution": "getDescriptor().getMessageTypes().get(49);",
+    "conflict": "getDescriptor().getMessageTypes().get(47);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8239,
+    "v2": "getDescriptor().getMessageTypes().get(49);",
+    "resolution": "getDescriptor().getMessageTypes().get(50);",
+    "conflict": "getDescriptor().getMessageTypes().get(48);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8240,
+    "v2": "getDescriptor().getMessageTypes().get(50);",
+    "resolution": "getDescriptor().getMessageTypes().get(51);",
+    "conflict": "getDescriptor().getMessageTypes().get(49);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8243,
+    "v2": "",
+    "resolution": "import java.util.TreeMap;import java.util.Map.Entry;",
+    "conflict": "import java.util.TreeMap; import java.util.Map.Entry;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8270,
+    "v2": "",
+    "resolution": "import com.google.common.collect.Lists;",
+    "conflict": "import com.google.common.collect.Lists;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8272,
+    "v2": "private long lastSwapped;",
+    "resolution": "private long lastSwapped;    private int deleteBackupMs = 0;",
+    "conflict": "private int deleteBackupMs = 0;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8301,
+    "v2": "store.submitPutRequest(v.getKey(), v.getVersioned(), null, timeoutMs);",
+    "resolution": "store.submitPutRequest(v.getKey(), v.getVersioned(), null, null, timeoutMs);",
+    "conflict": "store.submitPutRequest(v.getKey(), v.getVersioned(), null, null);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8302,
+    "v2": "store.submitGetAllRequest(keys, callback, timeoutMs);",
+    "resolution": "store.submitGetAllRequest(keys, transforms, callback, timeoutMs);",
+    "conflict": "store.submitGetAllRequest(keys, transforms, callback);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8304,
+    "v2": "store.submitPutRequest(key, versionedCopy, callback, timeoutMs);",
+    "resolution": "store.submitPutRequest(key, versionedCopy, transforms, callback, timeoutMs);",
+    "conflict": "store.submitPutRequest(key, versionedCopy, transforms, callback);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8305,
+    "v2": "public void submitGetRequest(ByteArray key, NonblockingStoreCallback callback, long timeoutMs) {",
+    "resolution": "public void submitGetRequest(ByteArray key,byte[] transforms,NonblockingStoreCallback callback,long timeoutMs) {",
+    "conflict": "public void submitGetRequest(ByteArray key, byte[] transforms, NonblockingStoreCallback callback) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8310,
+    "v2": "import voldemort.store.slop.HintedHandoffStrategyType; import voldemort.store.views.View;",
+    "resolution": "import voldemort.store.slop.HintedHandoffStrategyType;import voldemort.store.views.ViewStorageConfiguration;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8313,
+    "v2": ".get(slop.getKey())",
+    "resolution": ".get(slop.getKey(), null)",
+    "conflict": ".get(slop.makeKey(), null)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8321,
+    "v2": "proxyGetAndLocalPut(key, stealInfo.getDonorId());",
+    "resolution": "proxyGetAndLocalPut(key, stealInfo.getDonorId(), transforms);",
+    "conflict": "proxyGetAndLocalPut(key, stealInfo.getDonorId(), transforms);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8330,
+    "v2": "populateData(updatedCluster, Arrays.asList(0, 1, 2), rebalanceClient.getAdminClient());",
+    "resolution": "populateData(updatedCluster, Arrays.asList(0, 1, 2), rebalanceClient.getAdminClient());",
+    "conflict": "populateData(updatedCluster, Arrays.asList(0, 1, 2));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8331,
+    "v2": "populateData(updatedCluster, Arrays.asList(0, 1), rebalanceClient.getAdminClient());",
+    "resolution": "populateData(updatedCluster, Arrays.asList(0, 1), rebalanceClient.getAdminClient());",
+    "conflict": "populateData(updatedCluster, Arrays.asList(0, 1));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8336,
+    "v2": "List<Versioned<byte[]>> value = storeRW.get(keyBytes);",
+    "resolution": "List<Versioned<byte[]>> value = storeRW.get(keyBytes, null);",
+    "conflict": "List<Versioned<byte[]>> value = store.get(keyBytes, null);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8337,
+    "v2": "List<Versioned<byte[]>> values = storeRW.get(keyBytes);",
+    "resolution": "List<Versioned<byte[]>> values = storeRW.get(keyBytes, null);",
+    "conflict": "List<Versioned<byte[]>> values = store.get(keyBytes, null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8341,
+    "v2": "Map<ByteArray, List<Versioned<byte[]>>> results = store.getAll(keysInPartitions);",
+    "resolution": "Map<ByteArray, List<Versioned<byte[]>>> results = store.getAll(keysInPartitions, null);",
+    "conflict": "Map<ByteArray, List<Versioned<byte[]>>> results = store.getAll(keysInPartitions, null);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8366,
+    "v2": "proxyGetAllAndLocalPut(redirectingKeys, rebalancePartitionsInfos);",
+    "resolution": "proxyGetAllAndLocalPut(redirectingKeys, rebalancePartitionsInfos);",
+    "conflict": "proxyGetAllAndLocalPut(redirectingKeys, transforms);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8371,
+    "v2": "parser.accepts(\"interval\", \"print requests on this interval, -1 to disable\")",
+    "resolution": "parser.accepts(\"interval\", \"print requests on this interval, -1 to disable\")",
+    "conflict": "parser.accepts(\"interval\", \"print requests on this interval, -1 disables\")"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8377,
+    "v2": "* Copyright 2008-2010 LinkedIn, Inc",
+    "resolution": "* Copyright 2008-2010 LinkedIn, Inc",
+    "conflict": "* Copyright 2008-2009 LinkedIn, Inc"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8382,
+    "v2": "",
+    "resolution": "return null;",
+    "conflict": "return null;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8390,
+    "v2": "failureDetector.recordException(donorNode, System.currentTimeMillis() - start, e);",
+    "resolution": "failureDetector.recordException(donorNode, System.currentTimeMillis() - start, e);",
+    "conflict": "failureDetector.recordException(donorNode, e);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8391,
+    "v2": "failureDetector.recordException(donorNode, System.currentTimeMillis() - start, e);",
+    "resolution": "failureDetector.recordException(donorNode, System.currentTimeMillis() - start, e);",
+    "conflict": "failureDetector.recordException(donorNode, e);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8396,
+    "v2": "GET_METADATA, UPDATE_METADATA, UPDATE_PARTITION_ENTRIES, FETCH_PARTITION_ENTRIES, DELETE_PARTITION_ENTRIES, INITIATE_FETCH_AND_UPDATE, ASYNC_OPERATION_STATUS, TRUNCATE_ENTRIES,",
+    "resolution": "GET_METADATA, UPDATE_METADATA, UPDATE_PARTITION_ENTRIES, FETCH_PARTITION_ENTRIES, DELETE_PARTITION_ENTRIES, INITIATE_FETCH_AND_UPDATE, ASYNC_OPERATION_STATUS, INITIATE_REBALANCE_NODE, ASYNC_OPERATION_STOP, ASYNC_OPERATION_LIST, TRUNCATE_ENTRIES,",
+    "conflict": "GET_METADATA, UPDATE_METADATA, UPDATE_PARTITION_ENTRIES, FETCH_PARTITION_ENTRIES, DELETE_PARTITION_ENTRIES, INITIATE_FETCH_AND_UPDATE, ASYNC_OPERATION_STATUS, INITIATE_REBALANCE_NODE, ASYNC_OPERATION_STOP, ASYNC_OPERATION_LIST,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8400,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.VoldemortFilter parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8401,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.VoldemortFilter parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8402,
+    "v2": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.VoldemortFilter prototype) {",
+    "resolution": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest prototype) {",
+    "conflict": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest prototype) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8405,
+    "v2": "result = new voldemort.client.protocol.pb.VAdminProto.VoldemortFilter();",
+    "resolution": "result = new voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest();",
+    "conflict": "result = new voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8407,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.VoldemortFilter build() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest build() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest build() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8408,
+    "v2": "private voldemort.client.protocol.pb.VAdminProto.VoldemortFilter buildParsed()",
+    "resolution": "private voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest buildParsed()",
+    "conflict": "private voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest buildParsed()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8409,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.VoldemortFilter buildPartial() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest buildPartial() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest buildPartial() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8416,
+    "v2": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_FetchPartitionEntriesRequest_descriptor;",
+    "resolution": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_DeletePartitionEntriesResponse_descriptor;",
+    "conflict": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_DeletePartitionEntriesResponse_descriptor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8420,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8421,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8425,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8426,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8427,
+    "v2": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesRequest prototype) {",
+    "resolution": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse prototype) {",
+    "conflict": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse prototype) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8430,
+    "v2": "result = new voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesRequest();",
+    "resolution": "result = new voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse();",
+    "conflict": "result = new voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8432,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesRequest build() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse build() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse build() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8433,
+    "v2": "private voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesRequest buildParsed()",
+    "resolution": "private voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse buildParsed()",
+    "conflict": "private voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse buildParsed()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8434,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesRequest buildPartial() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse buildPartial() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse buildPartial() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8441,
+    "v2": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_FetchPartitionEntriesResponse_descriptor;",
+    "resolution": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_InitiateFetchAndUpdateRequest_descriptor;",
+    "conflict": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_InitiateFetchAndUpdateRequest_descriptor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8445,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8446,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8450,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8451,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8452,
+    "v2": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesResponse prototype) {",
+    "resolution": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest prototype) {",
+    "conflict": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest prototype) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8455,
+    "v2": "result = new voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesResponse();",
+    "resolution": "result = new voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest();",
+    "conflict": "result = new voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8457,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesResponse build() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest build() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest build() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8458,
+    "v2": "private voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesResponse buildParsed()",
+    "resolution": "private voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest buildParsed()",
+    "conflict": "private voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest buildParsed()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8459,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesResponse buildPartial() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest buildPartial() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest buildPartial() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8466,
+    "v2": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_DeletePartitionEntriesRequest_descriptor;",
+    "resolution": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationStatusRequest_descriptor;",
+    "conflict": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationStatusRequest_descriptor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8469,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8470,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8474,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8475,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8476,
+    "v2": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest prototype) {",
+    "resolution": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest prototype) {",
+    "conflict": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest prototype) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8479,
+    "v2": "result = new voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest();",
+    "resolution": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest();",
+    "conflict": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8481,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest build() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest build() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest build() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8482,
+    "v2": "private voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest buildParsed()",
+    "resolution": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest buildParsed()",
+    "conflict": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest buildParsed()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8483,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest buildPartial() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest buildPartial() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest buildPartial() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8490,
+    "v2": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_DeletePartitionEntriesResponse_descriptor;",
+    "resolution": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationStopRequest_descriptor;",
+    "conflict": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationStopRequest_descriptor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8494,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8495,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8499,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8500,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8501,
+    "v2": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse prototype) {",
+    "resolution": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest prototype) {",
+    "conflict": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest prototype) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8504,
+    "v2": "result = new voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse();",
+    "resolution": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest();",
+    "conflict": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8506,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse build() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest build() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest build() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8507,
+    "v2": "private voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse buildParsed()",
+    "resolution": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest buildParsed()",
+    "conflict": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest buildParsed()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8508,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse buildPartial() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest buildPartial() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest buildPartial() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8509,
+    "v2": "voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse returnMe = result;",
+    "resolution": "voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest returnMe = result;",
+    "conflict": "voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest returnMe = result;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8515,
+    "v2": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_InitiateFetchAndUpdateRequest_descriptor;",
+    "resolution": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationStopResponse_descriptor;",
+    "conflict": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationStopResponse_descriptor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8519,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8520,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8524,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8525,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8526,
+    "v2": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest prototype) {",
+    "resolution": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse prototype) {",
+    "conflict": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse prototype) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8529,
+    "v2": "result = new voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest();",
+    "resolution": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse();",
+    "conflict": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8531,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest build() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse build() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse build() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8532,
+    "v2": "private voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest buildParsed()",
+    "resolution": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse buildParsed()",
+    "conflict": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse buildParsed()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8533,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest buildPartial() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse buildPartial() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse buildPartial() {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8540,
+    "v2": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationStatusRequest_descriptor;",
+    "resolution": "public static void internalForceInit() {}",
+    "conflict": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationListRequest_descriptor;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8541,
+    "v2": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationStatusRequest_fieldAccessorTable;",
+    "resolution": "public static void internalForceInit() {}",
+    "conflict": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationListRequest_fieldAccessorTable;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8545,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8546,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8550,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8551,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8552,
+    "v2": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest prototype) {",
+    "resolution": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest prototype) {",
+    "conflict": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest prototype) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8555,
+    "v2": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest();",
+    "resolution": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest();",
+    "conflict": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8557,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest build() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest build() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest build() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8558,
+    "v2": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest buildParsed()",
+    "resolution": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest buildParsed()",
+    "conflict": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest buildParsed()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8559,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest buildPartial() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest buildPartial() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest buildPartial() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8560,
+    "v2": "voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest returnMe = result;",
+    "resolution": "voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest returnMe = result;",
+    "conflict": "voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest returnMe = result;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8566,
+    "v2": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationStatusResponse_descriptor;",
+    "resolution": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationListResponse_descriptor;",
+    "conflict": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_AsyncOperationListResponse_descriptor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8571,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8572,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8576,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8577,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8578,
+    "v2": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse prototype) {",
+    "resolution": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse prototype) {",
+    "conflict": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse prototype) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8581,
+    "v2": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse();",
+    "resolution": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse();",
+    "conflict": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8583,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse build() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse build() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse build() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8584,
+    "v2": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse buildParsed()",
+    "resolution": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse buildParsed()",
+    "conflict": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse buildParsed()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8585,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse buildPartial() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse buildPartial() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse buildPartial() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8592,
+    "v2": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_TruncateEntriesRequest_descriptor;",
+    "resolution": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_InitiateRebalanceNodeRequest_descriptor;",
+    "conflict": "return voldemort.client.protocol.pb.VAdminProto.internal_static_voldemort_InitiateRebalanceNodeRequest_descriptor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8596,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8597,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8601,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8602,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesRequest parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest parseFrom("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8603,
+    "v2": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.TruncateEntriesRequest prototype) {",
+    "resolution": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest prototype) {",
+    "conflict": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest prototype) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8606,
+    "v2": "result = new voldemort.client.protocol.pb.VAdminProto.TruncateEntriesRequest();",
+    "resolution": "result = new voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest();",
+    "conflict": "result = new voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8608,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.TruncateEntriesRequest build() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest build() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest build() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8609,
+    "v2": "private voldemort.client.protocol.pb.VAdminProto.TruncateEntriesRequest buildParsed()",
+    "resolution": "private voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest buildParsed()",
+    "conflict": "private voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest buildParsed()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8610,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.TruncateEntriesRequest buildPartial() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest buildPartial() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest buildPartial() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8620,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8621,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8625,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8626,
+    "v2": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse parseFrom(",
+    "resolution": "public static voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse parseFrom(",
+    "conflict": "public static voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse parseFrom("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8627,
+    "v2": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse prototype) {",
+    "resolution": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse prototype) {",
+    "conflict": "public static Builder newBuilder(voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse prototype) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8630,
+    "v2": "result = new voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse();",
+    "resolution": "result = new voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse();",
+    "conflict": "result = new voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8632,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse build() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse build() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse build() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8633,
+    "v2": "private voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse buildParsed()",
+    "resolution": "private voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse buildParsed()",
+    "conflict": "private voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse buildParsed()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8634,
+    "v2": "public voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse buildPartial() {",
+    "resolution": "public voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse buildPartial() {",
+    "conflict": "public voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse buildPartial() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8635,
+    "v2": "voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse returnMe = result;",
+    "resolution": "voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse returnMe = result;",
+    "conflict": "voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse returnMe = result;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8648,
+    "v2": "\" \\002(\\005\\022\\037\\005error\\030\\002 \\001(\\0132\\020.voldemort.Error\\\"\\177\" +",
+    "resolution": "\" \\001(\\005\\022\\037\\005error\\030\\002 \\001(\\0132\\020.voldemort.Error\\\"\\177\" +",
+    "conflict": "\" \\001(\\005\\022\\037\\005error\\030\\002 \\001(\\0132\\020.voldemort.Error\\\"\\177\" +"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8658,
+    "v2": "\"(\\0132\\020.voldemort.Error\\\"\\200\\002\\020VoldemortReques\" +",
+    "resolution": "\"(\\0132\\020.voldemort.Error\\\"\\232\\002\\020VoldemortReques\" +",
+    "conflict": "\"(\\0132\\020.voldemort.Error\\\"\\232\\002\\020VoldemortReques\" +"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8660,
+    "v2": "new java.lang.String[] { \"Type\", \"ShouldRoute\", \"Store\", \"Get\", \"GetAll\", \"Put\", \"Delete\", },",
+    "resolution": "new java.lang.String[] { \"Type\", \"ShouldRoute\", \"Store\", \"Get\", \"GetAll\", \"Put\", \"Delete\", \"RequestRouteType\", },",
+    "conflict": "new java.lang.String[] { \"Type\", \"ShouldRoute\", \"Store\", \"Get\", \"GetAll\", \"Put\", \"Delete\", \"RequestRouteType\", },"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8666,
+    "v2": "failureDetector.recordException(node, e);",
+    "resolution": "failureDetector.recordException(node, e);",
+    "conflict": "markUnavailable(node, e);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8667,
+    "v2": "failureDetector.recordException(node, e);",
+    "resolution": "failureDetector.recordException(node, e);",
+    "conflict": "markUnavailable(node, e);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8668,
+    "v2": "failureDetector.recordException(node, e);",
+    "resolution": "failureDetector.recordException(node, e);",
+    "conflict": "markUnavailable(node, e);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8710,
+    "v2": "",
+    "resolution": "private boolean enableGossip;    private boolean enableRebalanceService;",
+    "conflict": "private boolean enableGossip;     private boolean enableRebalanceService;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8720,
+    "v2": "logger.info(\"Starting voldemort socket server (\" + serverName + \") on port \" + port);",
+    "resolution": "logger.info(\"Starting voldemort socket server (\" + serverName + \") on port \" + port);",
+    "conflict": "logger.info(\"Starting  \" + serverName + \" on port \" + port);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8721,
+    "v2": "",
+    "resolution": "import voldemort.store.socket.RedirectingSocketStore;",
+    "conflict": "import voldemort.store.slop.Slop; import voldemort.store.socket.RedirectingSocketStore;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8728,
+    "v2": "ROLLBACK_FROM_BACKUP;",
+    "resolution": "VIEW_TARGET,ROLLBACK_FROM_BACKUP;",
+    "conflict": "VIEW_TARGET;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8729,
+    "v2": "import voldemort.store.configuration.ConfigurationStorageEngine;",
+    "resolution": "import voldemort.store.configuration.ConfigurationStorageEngine;",
+    "conflict": "import voldemort.store.textfile.TextFileStorageEngine;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8736,
+    "v2": "private final int maxBootstrapRetries;",
+    "resolution": "private final int maxBootstrapRetries;    protected final FailureDetector failureDetector;",
+    "conflict": "protected final FailureDetector failureDetector;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8737,
+    "v2": "private volatile int maxBootstrapRetries = 1;",
+    "resolution": "private volatile int maxBootstrapRetries = 1;    private String failureDetector = BannagePeriodFailureDetector.class.getName();",
+    "conflict": "private String failureDetector = BannagePeriodFailureDetector.class.getName();"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8738,
+    "v2": "public static final String MAX_BOOTSTRAP_RETRIES = \"max_bootstrap_retries\";",
+    "resolution": "public static final String MAX_BOOTSTRAP_RETRIES = \"max_bootstrap_retries\";    public static final String NODE_AVAILABILITY_DETECTOR_PROPERTY = \"node_availability_detector\";",
+    "conflict": "public static final String NODE_AVAILABILITY_DETECTOR_PROPERTY = \"node_availability_detector\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8744,
+    "v2": "return new Node(id, \"localhost\", 8080, 6666, 6667, list, new NodeStatus(time));",
+    "resolution": "return new Node(id, \"localhost\", 8080, 6666, 6667, list);",
+    "conflict": "return new Node(id, \"localhost\", 8080, 6666, list);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8746,
+    "v2": "if(delay < MAX_DELAY)",
+    "resolution": "if(delay < MAX_DELAY)",
+    "conflict": "if(delay < maxDelay)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8752,
+    "v2": "public abstract AsyncOperationStatus getAsyncRequestStatus(int nodeId, int requestId);",
+    "resolution": "public abstract AsyncOperationStatus getAsyncRequestStatus(int nodeId, int requestId);",
+    "conflict": "public abstract Pair<String, Boolean> getAsyncRequestStatus(int nodeId, String requestId);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8767,
+    "v2": "private volatile int maxBootstrapRetries = 1;",
+    "resolution": "private volatile int maxBootstrapRetries = 1;",
+    "conflict": "private volatile int maxBootstrapRetries = 3;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8773,
+    "v2": "public static final byte GET_VERSION_OP_CODE = 10;",
+    "resolution": "public static final byte GET_METADATA_OP_CODE = 10;public static final byte GET_VERSION_OP_CODE = 11;",
+    "conflict": "public static final byte GET_METADATA_OP_CODE = 10;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8779,
+    "v2": "private final Serializer<Version> versionSerializer;",
+    "resolution": "private final Serializer<Version> versionSerializer;    private final boolean cursorPreload;",
+    "conflict": "private final boolean cursorPreload;"
+  },
+  {
+    "devdecision": "None",
+    "id": 8780,
+    "v2": "logger.debug(\"Bdb store\" + getName() + \" stats:\" + stats + \"\");",
+    "resolution": "String stats = getStats(false).toString();",
+    "conflict": "logger.info(\"Bdb store\" + getName() + \" stats:\" + stats + \"\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8805,
+    "v2": "import java.nio.ByteBuffer;",
+    "resolution": "import java.nio.ByteBuffer;",
+    "conflict": "import java.util.ArrayList;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8807,
+    "v2": "this.type = createValidType(type);",
+    "resolution": "this.type = createValidType(type);",
+    "conflict": "this.type = validate(type);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8808,
+    "v2": "private Object createValidType(Object type) {",
+    "resolution": "private Object createValidType(Object type) {",
+    "conflict": "private Object validate(Object type) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8810,
+    "v2": "newM.put(key, createValidType(m.get(key)));",
+    "resolution": "newM.put(key, createValidType(m.get(key)));",
+    "conflict": "newM.put(key, validate(m.get(key)));"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8824,
+    "v2": "import voldemort.client.protocol.RequestFormatType;",
+    "resolution": "import voldemort.server.AbstractSocketService;import voldemort.client.protocol.RequestFormatType;",
+    "conflict": "import voldemort.server.AbstractSocketService;"
+  }
+]
+}

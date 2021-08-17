@@ -1,0 +1,598 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 53842,
+    "v2": "log.debug(\"Invalidating synchronization root cache for user: \" + userName); cache.invalidate(userName);",
+    "resolution": "log.debug(\"Invalidating synchronization root cache for user: \" + userName); cache.remove(userName.intern());",
+    "conflict": "log.debug(\"Invalidating synchronization root cache for user: \" + userName); cache.remove(userName.intern());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53870,
+    "v2": "import java.util.ArrayList; import java.util.Arrays; import java.util.Calendar; import java.util.HashMap;",
+    "resolution": "import java.util.ArrayList; import java.util.Arrays; import java.util.Calendar; import java.util.HashMap;",
+    "conflict": "import java.util.Arrays;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53885,
+    "v2": "String m2 = f.substring(0, f.indexOf(customM2Repo) + customM2Repo.length()); xpi = new File(m2 + \"/\" + FIREBUG_M2 + \"/\" + FIREBUG_XPI);",
+    "resolution": "String m2 = f.substring(0, f.indexOf(customM2Repo) + customM2Repo.length()); xpi = new File(m2 + \"/\" + FIREBUG_M2 + \"/\" + FIREBUG_XPI);",
+    "conflict": "String m2 = f.substring(0, f.indexOf(customM2Repo) + customM2Repo.length()); xpi = new File(m2 + FIREBUG_M2 + \"/\" + FIREBUG_XPI);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53887,
+    "v2": "",
+    "resolution": "import javax.xml.bind.JAXBContext; import javax.xml.bind.JAXBException; import javax.xml.bind.Marshaller; import javax.xml.bind.Unmarshaller;",
+    "conflict": "import javax.xml.bind.JAXBContext; import javax.xml.bind.JAXBException; import javax.xml.bind.Marshaller; import javax.xml.bind.Unmarshaller;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53899,
+    "v2": "private DateMatcher(boolean withYears, boolean withMonth, boolean withDay, Calendar dateSuggestion) {",
+    "resolution": "private DateMatcher(boolean withYears, boolean withMonth, boolean withDay, Calendar dateSuggestion) {",
+    "conflict": "private DateMatcher(boolean withYears, boolean withMonth, boolean witDay, Calendar dateSuggestion) { super();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53947,
+    "v2": "import java.net.MalformedURLException; import java.net.URL; import java.net.URLStreamHandler; import java.net.URLStreamHandlerFactory; import java.util.Collections;",
+    "resolution": "import java.util.Collections;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53955,
+    "v2": "* Certificate management actions exposed as a Seam component. Used for launching certificate generation, * storage and retrieving operations from low level services. Allows verifying * if a user certificate is already present.",
+    "resolution": "* Certificate management actions exposed as a Seam component. Used for * launching certificate generation, storage and retrieving operations from low * level services. Allows verifying if a user certificate is already present.",
+    "conflict": "* Certificate management actions exposed as a Seam component. Used for * launching certificate generation, storage and retrieving operations from low * level services. Allows verifying if a user certificate is already present."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54013,
+    "v2": "*     Nuxeo - initial API and implementation",
+    "resolution": "*     Thierry Delprat *     Julien Carsique * * $Id$",
+    "conflict": "*     Thierry Delprat *     Julien Carsique * * $Id$"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54353,
+    "v2": "import org.nuxeo.runtime.model.RegistrationInfo; import org.osgi.framework.FrameworkEvent;",
+    "resolution": "import org.osgi.framework.BundleContext; import org.osgi.framework.FrameworkEvent; import org.osgi.framework.FrameworkListener;",
+    "conflict": "import org.osgi.framework.BundleContext; import org.osgi.framework.FrameworkEvent; import org.osgi.framework.FrameworkListener;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54354,
+    "v2": "persistenceProvider = persistenceProviderFactory.newProvider(\"nxaudit-logs\"); persistenceProvider.openPersistenceUnit(); return persistenceProvider;",
+    "resolution": "persistenceProvider = persistenceProviderFactory.newProvider(\"nxaudit-logs\"); persistenceProvider.openPersistenceUnit();",
+    "conflict": "persistenceProvider = persistenceProviderFactory.newProvider(\"nxaudit-logs\"); persistenceProvider.openPersistenceUnit();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 54381,
+    "v2": "whereBuilder = new WhereBuilder(database, session, dialect, hierTable, hierId, dataHierTable, dataHierId, docKind == DocKind.PROXY, true);",
+    "resolution": "whereBuilder = new WhereBuilder(database, model, pathResolver, dialect, hierTable, hierId, dataHierTable, dataHierId, docKind == DocKind.PROXY, true);",
+    "conflict": "whereBuilder = new WhereBuilder(database, model, pathResolver, dialect, hierTable, hierId, dataHierTable, dataHierId, docKind == DocKind.PROXY, aliasColumns);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54382,
+    "v2": "public IterableQueryResult queryAndFetch(String query, String queryType, QueryFilter queryFilter, Object... params) throws StorageException;",
+    "resolution": "public IterableQueryResult queryAndFetch(String query, String queryType, QueryFilter queryFilter, Object... params) throws StorageException;",
+    "conflict": "IterableQueryResult queryAndFetch(String query, String queryType, QueryFilter queryFilter, Session session, Object... params) throws StorageException;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 54383,
+    "v2": "if (server != null) { NetServer.stopServer(server); server = null; }",
+    "resolution": "if (server != null) { NetServer.stopServer(server); server = null; }model = null;",
+    "conflict": "model = null;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54393,
+    "v2": "GadgetBean gadgetBean = GadgetFactory.getGadgetBean(g, perms, locale, serverBase); internationalizeGadgetTitle(gadgetBean, userLanguage); gadgets.add(gadgetBean);",
+    "resolution": "GadgetBean gadgetBean = GadgetFactory.getGadgetBean(g, locale, serverBase); internationalizeGadgetTitle(gadgetBean, userLanguage); gadgets.add(gadgetBean);",
+    "conflict": "gadgets.add(GadgetFactory.getGadgetBean(g, locale, serverBase));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54395,
+    "v2": "",
+    "resolution": "public void setLastModified(long value) { if (lastModified < value) { lastModified = value; } }",
+    "conflict": "public void setLastModified(long value) { if (lastModified < value) { lastModified = value; } }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54456,
+    "v2": "public void addAll(Collection<? extends Space> c, CoreSession session) throws SpaceException { if (isReadOnly(session)) throw new SpaceException(\"This SpaceProvider is read only\");",
+    "resolution": "public void addAll(Collection<? extends Space> c, CoreSession session) throws SpaceException { if(isReadOnly(session)) throw new SpaceException(\"This SpaceProvider is read only\");",
+    "conflict": "public void addAll(Collection<? extends Space> c, CoreSession session) throws SpaceException { if(isReadOnly(session)) throw new SpaceException(\"This SpaceProvider is read only\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54461,
+    "v2": "if (desc.matches(univers.getName())) result.add(desc.getProvider());",
+    "resolution": "if(desc.matches(univers.getName())) { result.add(desc.getProvider()); }",
+    "conflict": "if(desc.matches(univers.getName())) { result.add(desc.getProvider()); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54487,
+    "v2": "import org.apache.shindig.gadgets.rewrite.ProxyingLinkRewriterFactory; import org.apache.shindig.gadgets.servlet.MakeRequestHandler; import org.nuxeo.opensocial.shindig.gadgets.rewrite.NXProxyingLinkRewriterFactory;",
+    "resolution": "import java.util.HashMap; import java.util.Map;",
+    "conflict": "import java.util.HashMap; import java.util.Map;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54497,
+    "v2": "",
+    "resolution": "",
+    "conflict": "@After public void tearDown() throws Exception { closeSession(session); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54505,
+    "v2": "ProxySelector.setDefault(new SimpleProxySelector());",
+    "resolution": "ProxySelector.setDefault(new SimpleProxySelector());",
+    "conflict": "bind(ProxySelector.class).to(SimpleProxySelector.class); bind(HttpFetcher.class).to(ProxySelectorHttpFetcher.class).in( Scopes.SINGLETON); // bind(GadgetOAuthTokenStore.class).to(NXGadgetOAuthHack.class);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54507,
+    "v2": "import org.apache.shindig.gadgets.http.RequestPipeline; import org.apache.shindig.gadgets.rewrite.RequestRewriterRegistry; import org.apache.shindig.gadgets.servlet.MakeRequestHandler;",
+    "resolution": "import org.apache.shindig.gadgets.http.RequestPipeline; import org.apache.shindig.gadgets.rewrite.RequestRewriterRegistry; import org.apache.shindig.gadgets.servlet.MakeRequestHandler;",
+    "conflict": "import org.apache.shindig.gadgets.oauth.OAuthArguments; import org.apache.shindig.gadgets.rewrite.ContentRewriterRegistry;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54518,
+    "v2": "",
+    "resolution": "import org.nuxeo.ecm.core.api.NuxeoGroup; import org.nuxeo.ecm.core.api.security.ACE; import org.nuxeo.ecm.core.api.security.ACL; import org.nuxeo.ecm.core.api.security.ACP; import org.nuxeo.ecm.core.api.security.SecurityConstants; import org.nuxeo.ecm.platform.usermanager.UserManager;",
+    "conflict": "import org.nuxeo.ecm.core.api.NuxeoGroup; import org.nuxeo.ecm.core.api.security.ACE; import org.nuxeo.ecm.core.api.security.ACL; import org.nuxeo.ecm.core.api.security.ACP; import org.nuxeo.ecm.core.api.security.SecurityConstants; import org.nuxeo.ecm.platform.usermanager.UserManager;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54556,
+    "v2": "* * @param String listName The name of the working list of selected *            documents. If null, the default list will be used.",
+    "resolution": "* * @param String listName The name of the working list of selected *            documents. If null, the default list will be used.",
+    "conflict": "* * @param String listName The name of the working list of selected documents. *            If null, the default list will be used."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54577,
+    "v2": "}  public PortalColumn getMaximizedCol() { return maximizedCol; }",
+    "resolution": "this.remove(colToDelete, true); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54603,
+    "v2": "root.put(SITE_DESCRIPTION, SiteUtils.getString(doc, WEBCONTAINER_BASELINE, null));",
+    "resolution": "root.put(SITE_DESCRIPTION, SiteUtils.getString(doc, WEBCONTAINER_BASELINE, null)); root.put(EMAIL, \"mailto:\"+doc.getPropertyValue( WEBCONTAINER_EMAIL).toString());",
+    "conflict": "root.put(SITE_DESCRIPTION, SiteUtils.getString(doc, WEBCONTAINER_BASELINE, null)); root.put(EMAIL, \"mailto:\"+doc.getPropertyValue( WEBCONTAINER_EMAIL).toString());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54613,
+    "v2": "@Scope(ScopeType.EVENT) public class FileManageActionsBean extends InputController implements FileManageActions {",
+    "resolution": "@Scope(ScopeType.EVENT) public class FileManageActionsBean extends InputController implements FileManageActions {",
+    "conflict": "@Scope(ScopeType.PAGE) public class FileManageActionsBean extends InputController implements FileManageActionsLocal {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54637,
+    "v2": "MimetypeRegistry mimetypeService = Framework.getService(MimetypeRegistry.class);",
+    "resolution": "MimetypeRegistry mimetypeService = Framework.getService(MimetypeRegistry.class);",
+    "conflict": "//get pending comments?? //root.put(\"commentMessage\", \"Message wainting for approval...\"); MimetypeRegistry mimetypeService = null; mimetypeService = Framework.getService(MimetypeRegistry.class);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54641,
+    "v2": "CommentManager commentManager = WebCommentUtils.getCommentManager(); webComment = commentManager.createLocatedComment( dobj.getDocument(), webComment, getParentWorkspacePath( session, dobj.getDocument()));",
+    "resolution": "webComment = commentManager.createLocatedComment( dobj.getDocument(), webComment, getParentWorkspacePath(session, dobj.getDocument()));",
+    "conflict": "webComment = commentManager.createLocatedComment( dobj.getDocument(), webComment, getParentWorkspacePath(session, dobj.getDocument()));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54654,
+    "v2": "public static final String PERMISSION_WRITE = \"Write\";  public static final String PERMISSION_MANAGE_EVERYTHING = \"Everything\";",
+    "resolution": "public static final String PERMISSION_WRITE = \"Write\"; public static final String PERMISSION_MANAGE_EVERYTHING = \"Everything\";",
+    "conflict": "public static final String PERMISSION_WRITE = \"WriteOnWebcontainer\";  public static final String PERMISSION_MANAGE_EVERYTHING = \"EverythingOnWebcontainer\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54684,
+    "v2": "queryString += \"/element(*, \" + NodeConstants.ECM_NT_DOCUMENT_PROXY.rawname + \")[@\" + attribute.rawname + \" = '\" + uuid + \"']\";",
+    "resolution": "queryString += \"/element(*, \" + NodeConstants.ECM_NT_DOCUMENT_PROXY.rawname + \")[@\" + attribute.rawname + \" = '\" + uuid + \"']\";",
+    "conflict": "queryString += \"/element(*, \" + NodeConstants.ECM_NT_DOCUMENT_PROXY.rawname + \")[@\" + attribute.rawname + \" = '\" + value + \"']\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54700,
+    "v2": "public VersionIncEditOptions getVersionIncEditOptions(DocumentModel docModel) throws VersioningException, ClientException, DocumentException {",
+    "resolution": "public VersionIncEditOptions getVersionIncEditOptions(DocumentModel docModel) throws VersioningException, ClientException, DocumentException {",
+    "conflict": "public VersionIncEditOptions getVersionIncEditOptions( @NotNull DocumentModel docModel) throws VersioningException, ClientException, DocumentException {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54714,
+    "v2": "if (emf == null) { return; }",
+    "resolution": "if (emf == null) { return; }",
+    "conflict": "if (emf == null) return;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54716,
+    "v2": "public void onMessage(Message message) {",
+    "resolution": "public void onMessage(Message message) {",
+    "conflict": "private static long createLogEntry(DocumentMessage doc) throws AuditException { NXAuditEvents service = NXAudit.getNXAuditEventsService(); LogEntry logEntry = service.computeLogEntry(doc); if (logEntry == null) return -1L; Logs logService;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 54763,
+    "v2": "POSTGRESQL }",
+    "resolution": "MYSQL, // POSTGRESQL }",
+    "conflict": "MYSQL, // POSTGRESQL; };"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54775,
+    "v2": "buf.append(info.get(COMMENT_ATTRIBUTE)); buf.append(\", category: \"); buf.append(info.get(CATEGORY_ATTRIBUTE));",
+    "resolution": "buf.append(getComment()); buf.append(\", category: \"); buf.append(getCategory());",
+    "conflict": "buf.append(getComment()); buf.append(\", category: \"); buf.append(getCategory());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54786,
+    "v2": "return true;",
+    "resolution": "return true;",
+    "conflict": "TrinidadUploadedFileStreamSource src = new TrinidadUploadedFileStreamSource( file); return new StreamingBlob(src, mimeType, null, getCleanFilename(file.getFilename()), null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54797,
+    "v2": "* @author Florent Bonnet * @author Florent Guillaume",
+    "resolution": "* Plugin holding filter and sort configuration information for a document tree. * * @author Florent BONNET * @author Anahide Tchertchian",
+    "conflict": "* Plugin holding filter and sort configuration information for a document tree. * * @author Florent BONNET * @author Anahide Tchertchian"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54833,
+    "v2": "moduleName = path.substring(0, p); } Module module = getModule(moduleName);",
+    "resolution": "moduleName = path.substring(0, p); } Module module = moduleReg.getModuleByRoot(moduleName);",
+    "conflict": "moduleName = path.substring(0, p); } Module module = moduleReg.getModuleByRoot(moduleName);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54836,
+    "v2": "",
+    "resolution": "/** * Return the active service on this object if any in the current request * @return the service instance or null */ ServiceResource getActiveService();",
+    "conflict": "/** * Return the active service on this object if any in the current request * @return the service instance or null */ ServiceResource getActiveService();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54837,
+    "v2": "String[] getTargetTypes();",
+    "resolution": "String getTargetType();",
+    "conflict": "String getTargetType();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54838,
+    "v2": "",
+    "resolution": "protected void initialize(Object ...  args) throws WebException { // do nothing }",
+    "conflict": "protected void initialize(Object ...  args) throws WebException { // do nothing }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54839,
+    "v2": "",
+    "resolution": "public ServiceResource getActiveService() { return next != null && next.isService() ? (ServiceResource)next : null; }",
+    "conflict": "public ServiceResource getActiveService() { return next != null && next.isService() ? (ServiceResource)next : null; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54840,
+    "v2": "",
+    "resolution": "public Template getTemplate(String fileName) { return new Template(this, getModule().getFile(fileName)); }",
+    "conflict": "public Template getTemplate(String fileName) { return new Template(this, getModule().getFile(fileName)); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54846,
+    "v2": "if (types != null && types.length > 0) { this.targetTypes = types;",
+    "resolution": "if (targetType == null || targetType.equals(\"*\")) { this.targetType = ResourceType.ROOT_TYPE_NAME; } else { this.targetType = targetType;",
+    "conflict": "if (targetType == null || targetType.equals(\"*\")) { this.targetType = ResourceType.ROOT_TYPE_NAME; } else { this.targetType = targetType;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54848,
+    "v2": "public String[] getTargetTypes() { return targetTypes;",
+    "resolution": "public String getTargetType() { return targetType;",
+    "conflict": "public String getTargetType() { return targetType;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55082,
+    "v2": "@NamedQueries({ @NamedQuery(name = \"listLogEntriesFor\", query = \"from LogEntryImpl log where log.docUUID=:docUUID ORDER BY log.eventDate DESC\"),",
+    "resolution": "@NamedQueries( { @NamedQuery(name = \"listLogEntriesFor\", query = \"from LogEntryImpl log where log.docUUID=:docUUID ORDER BY log.eventDate DESC\"),",
+    "conflict": "@NamedQueries( { @NamedQuery(name = \"listLogEntriesFor\", query = \"from LogEntryImpl log where log.docUUID=:docUUID ORDER BY log.eventDate DESC\"),"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55150,
+    "v2": "* Returns the number of indexing tasks waiting for a slot in the ThreadPool executor. *",
+    "resolution": "* Returns the number of indexing tasks waiting for a slot in the ThreadPool executor. *",
+    "conflict": "* return the number of indexing tasks waiting for a slot in the ThreadPool * executor *"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55155,
+    "v2": "&& (Boolean) dm.getContextData(EventMessage.BLOCK_SYNC_INDEXING)) { log.debug(\"sync indexing is blocked for doc \" + dm.getRef().toString());",
+    "resolution": "&& (Boolean) dm.getContextData(EventMessage.BLOCK_SYNC_INDEXING)) { log.debug(\"sync indexing is blocked for doc \" + dm.getRef().toString());",
+    "conflict": "&& (Boolean) dm.getContextData(EventMessage.BLOCK_SYNC_INDEXING) == true) { log.debug(\"sync indexing is blocked for doc \" + dm.getRef().toString());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55156,
+    "v2": "log.info(\"Setting indexing thread pool size: \" + Integer.toString(numberOfIndexingThreads)); threadPoolSizeMax = numberOfIndexingThreads;",
+    "resolution": "log.info(\"Setting indexing thread pool size: \" + Integer.toString(numberOfIndexingThreads)); threadPoolSizeMax = numberOfIndexingThreads;",
+    "conflict": "log.info(\"Setting indexing thread pool size: \" + Integer.toString(numberOfIndexingThreads)); this.threadPoolSizeMax = numberOfIndexingThreads;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55161,
+    "v2": "// Init search service. getSearchService();  final int currentBatchSize = searchService.getIndexingDocBatchSize();",
+    "resolution": "final int current_batch_size = searchService.getIndexingDocBatchSize();",
+    "conflict": "final int current_batch_size = searchService.getIndexingDocBatchSize();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55193,
+    "v2": "",
+    "resolution": "",
+    "conflict": "\"\\001\\001\\000\\002\\001\\001\\000\\002\\001\\001\\000\\002\\001\" + \"\\001\\000\\002\\001\\001\\000\\002\\001\\001\\000\\002\\001\\001\" + \"\\000\\002\\001\\001\\000\\002\\001\\001\\000\\006\\023\\222\\026\" + \"\\212\\001\\001\\000\\006\\023\\215\\026\\212\\001\\001\\000\\002\" + \"\\001\\001\\000\\004\\026\\217\\001\\001\\000\\002\\001\\001\\000\" + \"\\002\\001\\001\\000\\002\\001\\001\\000\\002\\001\\001\\000\\002\" +"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55269,
+    "v2": "// Shouldn't have to rollback the transaction since Query is not // executed // tx.rollback();",
+    "resolution": "// Shouldn't have to rollback the transaction since Query is not // executed // tx.rollback();",
+    "conflict": "// Shouldn't have to rollback the transaction since Query is not // executed // tx.rollback();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55275,
+    "v2": "",
+    "resolution": "public String getDownloadUrl() { return url; }",
+    "conflict": "public String getDownloadUrl() { return url; }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55363,
+    "v2": "if (getUrl() == null) { // theme with missing definitions are not writable return false; } String protocol = getUrl().getProtocol();",
+    "resolution": "if (getUrl() == null) { // themes with missing definition are not writable return false; } final String protocol = getUrl().getProtocol();",
+    "conflict": "final String protocol = getUrl().getProtocol();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55380,
+    "v2": "log.error(e); } catch (DocumentException e) { log.error(e);",
+    "resolution": "log.error(e); } catch (DocumentException e) { log.error(e);",
+    "conflict": "// TODO Auto-generated catch block e.printStackTrace();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55398,
+    "v2": "public static void readPrimitiveProperty(Node parent, Property property) throws PathNotFoundException, RepositoryException, PropertyException { javax.jcr.Property p = parent.getProperty(property.getName());",
+    "resolution": "public static void readPrimitiveProperty(Node parent, Property property) throws Exception { javax.jcr.Property p = parent.getProperty(getNodeName(property));",
+    "conflict": "public static void readPrimitiveProperty(Node parent, Property property) throws Exception { javax.jcr.Property p = parent.getProperty(getNodeName(property));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55425,
+    "v2": "/** * * @param parentType * @return */ List<Notification> getNotificationsForSubscriptions(String parentType);",
+    "resolution": "/** * * @param parentType * @return */ List<Notification> getNotificationsForSubscriptions(String parentType);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55459,
+    "v2": "import org.nuxeo.ecm.core.api.PagedDocumentsProvider; import org.nuxeo.ecm.platform.ui.web.model.SelectDataModel; import org.nuxeo.ecm.platform.ui.web.model.SelectDataModelListener;",
+    "resolution": "import org.nuxeo.ecm.core.api.PagedDocumentsProvider; import org.nuxeo.ecm.platform.ui.web.model.SelectDataModel; import org.nuxeo.ecm.platform.ui.web.model.SelectDataModelListener;",
+    "conflict": "import org.nuxeo.ecm.platform.ui.web.model.SelectDataModel; import org.nuxeo.ecm.platform.ui.web.model.SelectDataModelListener; import org.nuxeo.ecm.core.api.PagedDocumentsProvider;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55481,
+    "v2": "",
+    "resolution": "}  @Override protected CoreSession getCoreSession() { return remote;",
+    "conflict": "}  @Override protected CoreSession getCoreSession() { return remote;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55690,
+    "v2": "@Observer(value = {EventNames.DOCUMENT_CHILDREN_CHANGED}, create = false, inject = false) public void invalidateChildrenProvider() {",
+    "resolution": "@Observer(value={ EventNames.DOCUMENT_CHILDREN_CHANGED, EventNames.LOCATION_SELECTION_CHANGED }, create=false,inject=false) public void invalidateChildrenProvider() {",
+    "conflict": "@Observer(value={ EventNames.DOCUMENT_CHILDREN_CHANGED, EventNames.LOCATION_SELECTION_CHANGED }, create=false,inject=false) public void invalidateChildrenProvider() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55710,
+    "v2": "* source and not directly the content bytes. Ex: * <code><pre> * File file = new File(\"/tmp/index.html\");",
+    "resolution": "* source and not directly the content bytes. Ex: * <code><pre> * File file = new File(\"/tmp/index.html\");",
+    "conflict": "* source and not directly the content bytes. Ex: <code><pre> * File file = new File(&quot;/tmp/index.html&quot;);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55739,
+    "v2": "InitialContext jndi = new InitialContext(); topicConnectionFactory = (TopicConnectionFactory) jndi.lookup(isXa ? XA_TOPIC_CONNECTION_FACTORY : TOPIC_CONNECTION_FACTORY);",
+    "resolution": "Context jndi = new InitialContext(); topicConnectionFactory = (TopicConnectionFactory) jndi.lookup(XA_TOPIC_CONNECTION_FACTORY);",
+    "conflict": "Context jndi = new InitialContext(); topicConnectionFactory = (TopicConnectionFactory) jndi.lookup(XA_TOPIC_CONNECTION_FACTORY);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55757,
+    "v2": "FacesContext facesContextInstance = FacesContext.getCurrentInstance(); if (facesContextInstance == null) return null; String viewId = facesContextInstance.getViewRoot().getViewId(); return viewId.substring(1, viewId.indexOf(\".xhtml\"));",
+    "resolution": "return null;",
+    "conflict": "return null;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 55769,
+    "v2": "deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"application-config.xml\");",
+    "resolution": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"application-config.xml\");",
+    "conflict": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"application-config.xml\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 55772,
+    "v2": "deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"element-config.xml\");",
+    "resolution": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"element-config.xml\");",
+    "conflict": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"element-config.xml\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 55773,
+    "v2": "deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"engine-config.xml\");",
+    "resolution": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"engine-config.xml\");",
+    "conflict": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"engine-config.xml\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 55774,
+    "v2": "deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"model-config.xml\");",
+    "resolution": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"model-config.xml\");",
+    "conflict": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"model-config.xml\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 55775,
+    "v2": "deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"negotiation-config.xml\");",
+    "resolution": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"negotiation-config.xml\");",
+    "conflict": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"negotiation-config.xml\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 55776,
+    "v2": "deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"preset-config.xml\");",
+    "resolution": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"preset-config.xml\");",
+    "conflict": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"preset-config.xml\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 55783,
+    "v2": "deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"fragment-config.xml\");",
+    "resolution": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"fragment-config.xml\");",
+    "conflict": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"fragment-config.xml\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 55786,
+    "v2": "deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"fragment-config.xml\");",
+    "resolution": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"fragment-config.xml\");",
+    "conflict": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"fragment-config.xml\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 55787,
+    "v2": "deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"fragment-config.xml\");",
+    "resolution": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.core.tests\", \"fragment-config.xml\");",
+    "conflict": "deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"fragment-config.xml\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55794,
+    "v2": "deployContrib(\"org.nuxeo.theme.jsf.tests\", \"nxthemes-core-service.xml\"); deployContrib(\"org.nuxeo.theme.jsf.tests\", \"nxthemes-core-contrib.xml\"); deployContrib(\"org.nuxeo.theme.jsf.tests\", \"nxthemes-jsf-contrib.xml\");",
+    "resolution": "deployContrib(\"nuxeo-theme-core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"nuxeo-theme-core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"nuxeo-theme-jsf\", \"OSGI-INF/nxthemes-jsf-contrib.xml\");",
+    "conflict": "deployContrib(\"nuxeo-theme-core\", \"OSGI-INF/nxthemes-core-service.xml\"); deployContrib(\"nuxeo-theme-core\", \"OSGI-INF/nxthemes-core-contrib.xml\"); deployContrib(\"nuxeo-theme-jsf\", \"OSGI-INF/nxthemes-jsf-contrib.xml\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55799,
+    "v2": "public void testFeature() throws Exception { deployContrib(\"org.nuxeo.ecm.core.schema.tests\", \"CoreTestExtensions.xml\");",
+    "resolution": "public void testFeature() throws Exception { deployContrib(\"org.nuxeo.ecm.core.schema.tests\", \"CoreTestExtensions.xml\");",
+    "conflict": "public void testFeature() { deployContrib(\"CoreTestExtensions.xml\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55813,
+    "v2": "String msg = \"Duplicate component name: '\" + name + \"'\"; log.error(msg); Framework.getRuntime().getWarnings().add(msg);",
+    "resolution": "String msg = \"Duplicate component name: '\" + name + \"'\"; log.error(msg); Framework.getRuntime().getWarnings().add(msg);",
+    "conflict": "log.warn(\"Component was already registered: \" + name); // TODO avoid throwing an exception here - for now runtime components are registered twice // When this will be fixed we can thrown an error here"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 55815,
+    "v2": "import java.util.List; import java.io.Serializable;",
+    "resolution": "import static org.jboss.seam.ScopeType.EVENT;  import java.io.Serializable; import java.util.Collection;",
+    "conflict": "import static org.jboss.seam.ScopeType.EVENT;  import java.util.Collection;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55826,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import javax.annotation.security.PermitAll; import javax.ejb.PostActivate; import javax.ejb.PrePassivate; import javax.ejb.Remove; import javax.ejb.Stateful;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55828,
+    "v2": "if ((optimize_try >= OPTIMIZER_SAVE_INTERVAL) && (getCompass().getSearchEngineOptimizer().needOptimization())) { optimize_try=0;",
+    "resolution": "if ((optimize_try >= OPTIMIZER_SAVE_INTERVAL) && (getCompass().getSearchEngineOptimizer().needOptimization())) { optimize_try = 0;",
+    "conflict": "if ((optimize_try >= OPTIMIZER_SAVE_INTERVAL) && (getCompass().getSearchEngineOptimizer().needOptimization())) { optimize_try = 0;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55995,
+    "v2": "/* * Rux NXP-1879: Multiple types can be suitable for publishing. So use array * instead single element. Also better naming.",
+    "resolution": "/* * Rux NXP-1879: Multiple types can be suitable for publishing. So use array * instead single element. Also better naming.",
+    "conflict": "/* Rux NXP-1879: Multiple types can be suitable for publishing. So use array instead * single element. Also better naming."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56032,
+    "v2": "* @param doc the document model to convert * @return a feed item, ready to be syndicate by ROME * @throws ClientException",
+    "resolution": "* @param doc DocumentModel to convert * @return a FeedItem, ready to be syndicate by ROME * @throws ParseException",
+    "conflict": "* @param doc DocumentModel to convert * @return a FeedItem, ready to be syndicate by ROME * @throws ParseException"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 56034,
+    "v2": "import java.io.UnsupportedEncodingException; import java.net.URLEncoder;",
+    "resolution": "import java.io.IOException; import java.io.Serializable; import java.text.ParseException;",
+    "conflict": "import java.io.IOException; import java.io.Serializable; import java.text.ParseException;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 56036,
+    "v2": "public static final String ATOM_TYPE = \"atom_0.3\";",
+    "resolution": "private static final String ATOM_TYPE = \"atom_0.3\"; private static final long serialVersionUID = -1632103314861118955L; @In(create = true, required = false) private CoreSession documentManager;",
+    "conflict": "private static final long serialVersionUID = -1632103314861118955L;  @In(create = true, required = false) private CoreSession documentManager;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56038,
+    "v2": "private Boolean switchUser(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException {",
+    "resolution": "private boolean switchUser(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {",
+    "conflict": "private boolean switchUser(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56042,
+    "v2": "public void setRepositoryLocation(RepositoryLocation serverLocation) { this.currentServerLocation=serverLocation;",
+    "resolution": "public void setRepositoryLocation(RepositoryLocation serverLocation) { this.currentServerLocation = serverLocation;",
+    "conflict": "public void setRepositoryLocation(RepositoryLocation serverLocation) { this.currentServerLocation = serverLocation;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56050,
+    "v2": "* @param docList the list of document models * @return the list of feed items",
+    "resolution": "* @param docList the list of document models * @return the list of feed items",
+    "conflict": "* @param docList * @return * @throws ParseException"
+  }
+]
+}

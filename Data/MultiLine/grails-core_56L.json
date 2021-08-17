@@ -1,0 +1,220 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 80102,
+    "v2": "urlDefiningMode = oldUrlDefiningMode;",
+    "resolution": "hasParent = !parentResources.isEmpty(); if (!hasParent) { urlDefiningMode = false; }",
+    "conflict": "hasParent = !parentResources.isEmpty(); if (!hasParent) { urlDefiningMode = false; }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 80137,
+    "v2": "import grails.web.mime.MimeType; import org.apache.commons.logging.Log; import org.apache.commons.logging.LogFactory; import grails.core.GrailsDomainClassProperty;",
+    "resolution": "import grails.web.mime.MimeType; import org.grails.datastore.mapping.model.config.GormProperties;",
+    "conflict": "import org.grails.datastore.mapping.model.config.GormProperties;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80161,
+    "v2": "gcl.parseClass(\"@grails.persistence.Entity\\nclass Super { Long id;Long version;}\\n\" + \"@grails.persistence.Entity\\nclass Sub extends Super { }\\n\" + \"@grails.persistence.Entity\\nclass Sub2 extends Sub { }\");",
+    "resolution": "gcl.parseClass(\"@grails.persistence.Entity\\nclass Super { Long id;Long version;}\\n\" + \"@grails.persistence.Entity\\nclass Sub extends Super { }\\n\" + \"@grails.persistence.Entity\\nclass Sub2 extends Sub { }\");",
+    "conflict": "gcl.parseClass(\"@grails.persistence.Entity class Super { Long id;Long version;}\\n\" + \"class Sub extends Super { }\\n\" + \"class Sub2 extends Sub { }\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 80486,
+    "v2": "import org.codehaus.groovy.grails.commons.GrailsApplication; import org.codehaus.groovy.grails.io.support.GrailsResourceUtils; import org.codehaus.groovy.grails.plugins.support.aware.GrailsApplicationAware; import org.springframework.beans.factory.InitializingBean;",
+    "resolution": "import org.grails.io.support.GrailsResourceUtils; import org.springframework.beans.factory.InitializingBean;",
+    "conflict": "import org.grails.io.support.GrailsResourceUtils;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 80585,
+    "v2": "import java.io.Reader;",
+    "resolution": "import java.io.Reader;import grails.databinding.DataBinder; import grails.databinding.DataBindingSource; import grails.databinding.SimpleMapDataBindingSource;",
+    "conflict": "import grails.databinding.DataBinder; import grails.databinding.DataBindingSource; import grails.databinding.SimpleMapDataBindingSource;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 80661,
+    "v2": "} else { webRequest.removeAttribute(GrailsApplicationAttributes.GRAILS_CONTROLLER_CLASS_AVAILABLE, WebRequest.SCOPE_REQUEST);",
+    "resolution": "} else { webRequest.removeAttribute(GrailsApplicationAttributes.GRAILS_CONTROLLER_CLASS_AVAILABLE, WebRequest.SCOPE_REQUEST);if(((GrailsControllerClass)controller).getNamespace() != null) { webRequest.setAttribute(GrailsApplicationAttributes.CONTROLLER_NAMESPACE_ATTRIBUTE, ((GrailsControllerClass)controller).getNamespace(), WebRequest.SCOPE_REQUEST); }",
+    "conflict": "if(((GrailsControllerClass)controller).getNamespace() != null) { webRequest.setAttribute(GrailsApplicationAttributes.CONTROLLER_NAMESPACE_ATTRIBUTE, ((GrailsControllerClass)controller).getNamespace(), WebRequest.SCOPE_REQUEST); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80724,
+    "v2": "",
+    "resolution": "",
+    "conflict": "@Override public String getValue() { return super.toString(); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80728,
+    "v2": "Class staticImplementation = getStaticImplementation(); if (staticImplementation != null) { performStaticImplementationInjection(classNode, genericsPlaceholders, staticImplementation); }",
+    "resolution": "Class staticImplementation = getStaticImplementation(); if (staticImplementation != null) { performStaticImplementationInjection(classNode, genericsPlaceholders, staticImplementation); }",
+    "conflict": "String apiInstanceProperty = INSTANCE_PREFIX + instanceImplementation.getSimpleName(); Expression apiInstance = new VariableExpression(apiInstanceProperty, implementationNode);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80733,
+    "v2": "applyDefaultMethodTarget(getExceptionHandlerMethodCall, controllerClassNode);",
+    "resolution": "applyDefaultMethodTarget(getExceptionHandlerMethodCall, controllerClassNode);",
+    "conflict": "final MethodNode getExceptionHandlerMethodForMethod = classNode.getMethod(\"getExceptionHandlerMethodFor\", new Parameter[]{ new Parameter(ClassHelper.make(Class.class), \"arg\")}); if(getExceptionHandlerMethodForMethod != null) { getExceptionHandlerMethodCall.setMethodTarget(getExceptionHandlerMethodForMethod); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80754,
+    "v2": "public static String getControllerFeatureURI(UrlConverter urlConverter, String controller, String action) { return SLASH + urlConverter.toUrlElement(controller) + SLASH + urlConverter.toUrlElement(action);",
+    "resolution": "public static String getControllerFeatureURI(UrlConverter urlConverter, String controller, String action) { return SLASH + urlConverter.toUrlElement(controller) + SLASH + urlConverter.toUrlElement(action);",
+    "conflict": "private static String getControllerFeatureURI(UrlConverter urlConverter, String controller, String action) { return WebUtils.SLASH + urlConverter.toUrlElement(controller) + WebUtils.SLASH + urlConverter.toUrlElement(action);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80810,
+    "v2": "@Override public String toString() { return getDescription(); }",
+    "resolution": "@Override public String toString() { return getDescription(); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80830,
+    "v2": "",
+    "resolution": "@Override public void performInjectionOnAnnotatedClass(SourceUnit source, ClassNode classNode) { performInjection(source, classNode); }",
+    "conflict": "@Override public void performInjectionOnAnnotatedClass(SourceUnit source, ClassNode classNode) { performInjection(source, classNode); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80983,
+    "v2": "if(property != null) { return Boolean.valueOf(property); } return true;",
+    "resolution": "return property == null ? true : Boolean.valueOf(property);",
+    "conflict": "return property == null ? true : Boolean.valueOf(property);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81039,
+    "v2": "return !isSvnFile && !file.isHidden() && !file.getName().startsWith(\".\") && (fileExtensions.contains(\"*\") || fileExtensions.contains(StringUtils.getFilenameExtension(name)));",
+    "resolution": "return !isSvnFile && !file.isHidden() && !file.getName().startsWith(\".\") && (fileExtensions.contains(\"*\") || fileExtensions.contains(StringUtils.getFilenameExtension(name)));",
+    "conflict": "return !isSvnFile && !file.isHidden() && !file.getName().startsWith(\".\") && (fileExtensions.contains(\"*\") || fileExtensions.contains(StringUtils.getFilenameExtension(name)));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81057,
+    "v2": "if (Modifier.isAbstract(persistentClass.getModifiers())) { return; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81066,
+    "v2": "* @return True if the constraint can be applied against the specified type */ public boolean supports(Class type) {",
+    "resolution": "* @return true if the constraint can be applied against the specified type */ public boolean supports(@SuppressWarnings(\"rawtypes\") Class type) {",
+    "conflict": "* @return true if the constraint can be applied against the specified type */ public boolean supports(@SuppressWarnings(\"rawtypes\") Class type) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81094,
+    "v2": "private static final long serialVersionUID = 1;",
+    "resolution": "private static final long serialVersionUID = 1;",
+    "conflict": "private static final long serialVersionUID = 1;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81096,
+    "v2": "private static final long serialVersionUID = 1;",
+    "resolution": "private static final long serialVersionUID = 1;",
+    "conflict": "private static final long serialVersionUID = 1;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81112,
+    "v2": "Object parseRequest = getParseRequest(Collections.EMPTY_MAP,bindingVariables); if(parseRequest instanceof Boolean) { urlMapping.setParseRequest((Boolean)parseRequest);",
+    "resolution": "Object parse = getParseRequest(Collections.EMPTY_MAP, bindingVariables); if (parse instanceof Boolean) { urlMapping.setParseRequest((Boolean)parse);",
+    "conflict": "Object parse = getParseRequest(Collections.EMPTY_MAP, bindingVariables); if (parse instanceof Boolean) { urlMapping.setParseRequest((Boolean)parse);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81207,
+    "v2": "protected void renderPageWithEngine(@SuppressWarnings(\"unused\") GroovyPagesTemplateEngine engine, @SuppressWarnings(\"unused\") HttpServletRequest request, HttpServletResponse response, GroovyPageScriptSource scriptSource) throws Exception {",
+    "resolution": "protected void renderPageWithEngine(GroovyPagesTemplateEngine engine, HttpServletRequest request, HttpServletResponse response, GroovyPageScriptSource scriptSource) throws Exception { request.setAttribute(GrailsLayoutDecoratorMapper.RENDERING_VIEW, Boolean.TRUE);",
+    "conflict": "protected void renderPageWithEngine(GroovyPagesTemplateEngine engine, HttpServletRequest request, HttpServletResponse response, GroovyPageScriptSource scriptSource) throws Exception { request.setAttribute(GrailsLayoutDecoratorMapper.RENDERING_VIEW, Boolean.TRUE);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81208,
+    "v2": "if (scriptSource instanceof GroovyPageResourceScriptSource) { GroovyPageResourceScriptSource resourceSource = (GroovyPageResourceScriptSource) scriptSource;",
+    "resolution": "if (scriptSource instanceof ResourceScriptSource) { ResourceScriptSource resourceSource = (ResourceScriptSource) scriptSource;",
+    "conflict": "if (scriptSource instanceof ResourceScriptSource) { ResourceScriptSource resourceSource = (ResourceScriptSource) scriptSource;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81216,
+    "v2": "public class GroovyPageAttributes extends TypeConvertingMap  implements Cloneable { boolean gspTagSyntaxCall=true;",
+    "resolution": "public class GroovyPageAttributes extends TypeConvertingMap { boolean gspTagSyntaxCall=true;",
+    "conflict": "public class GroovyPageAttributes extends TypeConvertingMap { boolean gspTagSyntaxCall=true;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81227,
+    "v2": "if(writer instanceof GrailsWrappedWriter ) { return ((GrailsWrappedWriter)writer).unwrap(); } else { return writer;",
+    "resolution": "if (writer instanceof GrailsWrappedWriter ) { return ((GrailsWrappedWriter)writer).unwrap();",
+    "conflict": "if (writer instanceof GrailsWrappedWriter ) { return ((GrailsWrappedWriter)writer).unwrap();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 81279,
+    "v2": "try { Thread.sleep(2500); // wait for a bit, to reduce chance of any concurrent issues with the timing of the reload reflecting in the JVM } catch (InterruptedException e) { // ignore }",
+    "resolution": "try { Thread.sleep(2500); // wait for a bit, to reduce chance of any concurrent issues with the timing of the reload reflecting in the JVM } catch (InterruptedException e) { // ignore }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 81370,
+    "v2": "if (scriptSource instanceof ResourceScriptSource) { ResourceScriptSource resourceSource = (ResourceScriptSource) scriptSource;",
+    "resolution": "if (scriptSource instanceof ResourceScriptSource) { ResourceScriptSource resourceSource = (ResourceScriptSource) scriptSource;",
+    "conflict": "if (scriptSource instanceof GroovyPageResourceScriptSource) { GroovyPageResourceScriptSource resourceSource = (GroovyPageResourceScriptSource) scriptSource;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81371,
+    "v2": "protected GroovyPageCompiledScriptSource createGroovyPageCompiledScriptSource(final String uri, Class<?> viewClass) { GroovyPageCompiledScriptSource scriptSource = new GroovyPageCompiledScriptSource(uri, viewClass);",
+    "resolution": "protected GroovyPageCompiledScriptSource createGroovyPageCompiledScriptSource(final String uri, String fullPath, Class<?> viewClass) { GroovyPageCompiledScriptSource scriptSource = new GroovyPageCompiledScriptSource(uri, fullPath,viewClass);",
+    "conflict": "protected GroovyPageCompiledScriptSource createGroovyPageCompiledScriptSource(final String uri, String fullPath, Class<?> viewClass) { GroovyPageCompiledScriptSource scriptSource = new GroovyPageCompiledScriptSource(uri, fullPath,viewClass);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81380,
+    "v2": "public static final String OLD_NON_INTERACTIVE_ARGUMENT = \"non-interactive\"; public static final String NON_INTERACTIVE_ARGUMENT = \"nonInteractive\"; public static final String NOANSI_ARGUMENT = \"plainOutput\"; public static final String FORCE_ARGUMENT = \"force\";",
+    "resolution": "public static final String NON_INTERACTIVE_ARGUMENT = \"non-interactive\";",
+    "conflict": "public static final String NON_INTERACTIVE_ARGUMENT = \"non-interactive\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81399,
+    "v2": "URL url = null;",
+    "resolution": "URL url = null;",
+    "conflict": "URL url = null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81403,
+    "v2": "",
+    "resolution": "assertEquals(\"mycompany.Test\",  GrailsResourceUtils.getClassName(\"file:///test/grails/app/src/groovy/mycompany/Test.java\")); assertEquals(\"mycompany.Test\",  GrailsResourceUtils.getClassName(\"file:///test/grails/app/src/java/mycompany/Test.java\"));",
+    "conflict": "assertEquals(\"mycompany.Test\",  GrailsResourceUtils.getClassName(\"file:///test/grails/app/src/groovy/mycompany/Test.java\")); assertEquals(\"mycompany.Test\",  GrailsResourceUtils.getClassName(\"file:///test/grails/app/src/java/mycompany/Test.java\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81409,
+    "v2": "",
+    "resolution": "public void testGetArtifactDirectory() { assertEquals(\"controllers\", GrailsResourceUtils.getArtefactDirectory(TEST_CONTROLLER_URL)); assertEquals(\"domain\", GrailsResourceUtils.getArtefactDirectory(TEST_PACKAGE_URL)); }",
+    "conflict": "public void testGetArtifactDirectory() { assertEquals(\"controllers\", GrailsResourceUtils.getArtefactDirectory(TEST_CONTROLLER_URL)); assertEquals(\"domain\", GrailsResourceUtils.getArtefactDirectory(TEST_PACKAGE_URL)); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 81488,
+    "v2": "gant.loadScript(potentialScripts.get(number - 1));  // Invoke the default target. return gant.processTargets().intValue();",
+    "resolution": "gant.loadScript(potentialScripts.get(number - 1));  // Invoke the default target. return executeWithGantInstance(gant, doNothingClosure);",
+    "conflict": "gant.loadScript((File) potentialScripts.get(number - 1)); return executeWithGantInstance(gant, doNothingClosure);"
+  }
+]
+}

@@ -1,0 +1,731 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 58226,
+    "v2": "import org.apache.deltaspike.jpa.api.transaction.Transactional;",
+    "resolution": "import org.zanata.rest.dto.DTOUtil; import org.apache.deltaspike.jpa.api.transaction.Transactional; import org.zanata.rest.dto.User; import org.zanata.rest.editor.dto.Permission; import org.zanata.rest.editor.service.UserService;",
+    "conflict": "import org.zanata.rest.dto.DTOUtil; import org.zanata.rest.dto.User; import org.zanata.rest.editor.dto.Permission; import org.zanata.rest.editor.service.UserService;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58232,
+    "v2": "// TODO use org.atteo ClassIndexProcessor.indexSubclasses() (see JaxRSClassIndexProcessor) private static List<Introspectable> introspectables = ImmutableList .<Introspectable> builder() .add(RateLimitManager.getInstance()) .build();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58265,
+    "v2": "@In private ProjectDAO projectDAO;  @In",
+    "resolution": "@Inject private ProjectDAO projectDAO;",
+    "conflict": "@Inject"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58302,
+    "v2": "@In(\"jsfMessages\")",
+    "resolution": "@Inject private UrlUtil urlUtil;  @Inject",
+    "conflict": "@Inject private UrlUtil urlUtil;  @Inject"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58330,
+    "v2": "private static int LINK_ACTIVE_DAYS = 1;  @In",
+    "resolution": "private static int LINK_ACTIVE_DAYS = 1;",
+    "conflict": "@Inject"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58331,
+    "v2": "//TODO [CDI] change to urlUtil @In private Redirect redirect;  @In(\"jsfMessages\")",
+    "resolution": "@Inject //TODO [CDI] change to urlUtil private Redirect redirect;",
+    "conflict": "@Inject"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58348,
+    "v2": "import org.jboss.seam.ScopeType; import org.jboss.seam.annotations.In; import org.jboss.seam.annotations.Name; import org.jboss.seam.annotations.Scope;",
+    "resolution": "import javax.inject.Inject; import javax.inject.Named;",
+    "conflict": "import javax.inject.Inject; import javax.inject.Named;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58350,
+    "v2": "@In",
+    "resolution": "@Inject",
+    "conflict": "@Inject private FacesMessages facesMessages;  @Inject"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58370,
+    "v2": "@Name(\"glossaryFileServiceImpl\") @Scope(STATELESS) @Slf4j",
+    "resolution": "@Named(\"glossaryFileServiceImpl\") @RequestScoped",
+    "conflict": "@Named(\"glossaryFileServiceImpl\") @RequestScoped"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58390,
+    "v2": "@Getter private static final int defaultAnonymousSessionTimeoutMinutes = 30;  @In",
+    "resolution": "@Getter private static final int defaultAnonymousSessionTimeoutMinutes = 30;",
+    "conflict": "@Inject"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58392,
+    "v2": "@Observer(LogoutEvent.EVENT_NAME) public void exitWorkspace(@Observes LogoutEvent payload) { exitWorkspace(payload.getUsername());",
+    "resolution": "public void exitWorkspace(@Observes LogoutEvent payload, @DeltaSpike HttpSession session) { exitWorkspace(payload.getUsername(), session.getId());",
+    "conflict": "public void exitWorkspace(@Observes Logout payload, @DeltaSpike HttpSession session) { exitWorkspace(payload.getUsername(), session.getId());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58394,
+    "v2": "sourceVersionSlug, targetProjectSlug, targetVersionSlug, !keepExistingTranslation);",
+    "resolution": "sourceVersionSlug, targetProjectSlug, targetVersionSlug, !keepExistingTranslation); FacesNavigationUtil.handlePageNavigation(null, \"merge-translation\");",
+    "conflict": "sourceVersionSlug, targetProjectSlug, targetVersionSlug, !keepExistingTranslation); FacesNavigationUtil.handlePageNavigation(null, \"merge-translation\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58395,
+    "v2": "import static org.zanata.transaction.TransactionUtil.runInTransaction;  @Name(\"copyTransServiceImpl\") @Scope(ScopeType.STATELESS)",
+    "resolution": "import static org.zanata.transaction.TransactionUtil.runInTransaction;  @Named(\"copyTransServiceImpl\") @javax.enterprise.context.Dependent",
+    "conflict": "@Named(\"copyTransServiceImpl\") @javax.enterprise.context.Dependent"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58397,
+    "v2": "@Name(\"copyTransWorkFactory\") @Scope(ScopeType.STATELESS) @Slf4j",
+    "resolution": "@Named(\"copyTransWorkFactory\") @javax.enterprise.context.Dependent @Slf4j",
+    "conflict": "@Named(\"copyTransWorkFactory\") @javax.enterprise.context.Dependent"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58408,
+    "v2": "import org.jboss.seam.ScopeType; import org.jboss.seam.annotations.In; import org.jboss.seam.annotations.Name; import org.jboss.seam.annotations.Scope;",
+    "resolution": "import javax.inject.Inject; import javax.inject.Named;",
+    "conflict": "import javax.inject.Inject; import javax.inject.Named;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58412,
+    "v2": "import org.jboss.seam.annotations.In; import org.jboss.seam.annotations.Name; import org.jboss.seam.annotations.Scope;",
+    "resolution": "import javax.inject.Inject; import javax.inject.Named;",
+    "conflict": "import javax.inject.Inject; import javax.inject.Named;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58417,
+    "v2": "@Name(\"authenticationManager\") @Scope(ScopeType.STATELESS) @AutoCreate",
+    "resolution": "@Named(\"authenticationManager\") @javax.enterprise.context.Dependent",
+    "conflict": "@Named(\"authenticationManager\") @javax.enterprise.context.Dependent"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58449,
+    "v2": "import org.jboss.resteasy.client.ClientRequest; import org.jboss.resteasy.client.core.BaseClientResponse; import org.junit.Ignore;",
+    "resolution": "import org.junit.Ignore;",
+    "conflict": "import lombok.extern.slf4j.Slf4j;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58490,
+    "v2": "public static final String DEFAULT_HELP_URL = \"http://zanata.org/help\";  public static final String DEFAULT_TERM_OF_USE_URL = \"http://zanata.org/term\";",
+    "resolution": "public static final String DEFAULT_HELP_URL = \"http://zanata.org/help\";  public static final String DEFAULT_TERM_OF_USE_URL = \"http://zanata.org/term\";@In(\"jsfMessages\") private FacesMessages facesMessages;",
+    "conflict": "@In(\"jsfMessages\") private FacesMessages facesMessages;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58501,
+    "v2": "if (person != null && !person.getAccount().equals(getAccount())) { FacesMessages.instance().addToControl(\"email\", \"This email address is already taken\");",
+    "resolution": "if (person != null && !person.getAccount().equals(getAccount())) { facesMessages.addToControl(\"email\", \"This email address is already taken\");",
+    "conflict": "if (person != null && !person.getAccount().equals(account)) { facesMessages.addToControl(\"email\", \"This email address is already taken\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58507,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import org.jboss.seam.annotations.security.Restrict; import org.jboss.seam.security.management.JpaIdentityStore; import org.zanata.dao.LocaleDAO; import org.zanata.events.LanguageDisabled; import org.zanata.events.LanguageEnabled; import org.zanata.model.HAccount;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58514,
+    "v2": "List<WebElement> messages = waitForElementExists(elementBy) .findElements(By.tagName(\"li\")); return messages.size() > 0 ? messages.get(0).getText() : \"\";",
+    "resolution": "WebElement message = waitForElementExists(elementBy); return message.getText();",
+    "conflict": "WebElement message = waitForElementExists( By.cssSelector(\"#messages li\")); return message.getText();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58521,
+    "v2": "ServerConfigurationService.persistApplicationConfig( property.getKey(), value, property.get(), applicationConfigurationDAO);",
+    "resolution": "serverConfigurationResource.persistApplicationConfig( property.getKey(), value, property.get(), applicationConfigurationDAO);",
+    "conflict": "serverConfigurationResource.persistApplicationConfig( property.getKey(), registerUrlValue, property.get(), applicationConfigurationDAO);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58556,
+    "v2": "import com.google.common.base.Strings;",
+    "resolution": "import com.google.common.base.Function; import com.google.common.base.Splitter; import com.google.common.base.Strings; import com.google.common.collect.Lists;",
+    "conflict": "import com.google.common.base.Function; import com.google.common.base.Splitter; import com.google.common.base.Strings; import com.google.common.collect.Lists;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58606,
+    "v2": "public CreateProjectPage clickCreateYourOwn() { getDriver().findElement(By.linkText(\"create your own\")).click(); return new CreateProjectPage(getDriver()); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58608,
+    "v2": "import org.openqa.selenium.*;",
+    "resolution": "import org.openqa.selenium.By; import org.openqa.selenium.JavascriptExecutor; import org.openqa.selenium.Keys; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement;",
+    "conflict": "import org.openqa.selenium.By; import org.openqa.selenium.JavascriptExecutor; import org.openqa.selenium.Keys; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58696,
+    "v2": "void updateTransUnitDetails(TransUnit transUnit);  void showReference(TextFlowTarget reference);  void hideReference();",
+    "resolution": "void updateTransUnitDetails(TransUnit transUnit);  void showReference(TextFlowTarget reference);  void hideReference();",
+    "conflict": "void updateTransUnitDetails(TransUnit transUnit);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58725,
+    "v2": "void updateTransUnitDetails(TransUnit transUnit);",
+    "resolution": "void updateTransUnitDetails(TransUnit transUnit);  void showReference(TextFlowTarget reference);  void hideReference();",
+    "conflict": "void updateTransUnitDetails(TransUnit transUnit);  void showReference(TextFlowTarget reference);  void hideReference();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58751,
+    "v2": "import com.google.common.collect.ImmutableList;  import lombok.NoArgsConstructor; import lombok.Setter; import lombok.ToString;",
+    "resolution": "import com.google.common.collect.ImmutableList;  import lombok.NoArgsConstructor; import lombok.Setter; import lombok.ToString;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58757,
+    "v2": "import org.hibernate.validator.NotEmpty; import org.hibernate.validator.NotNull; import org.slf4j.Logger; import org.slf4j.LoggerFactory;",
+    "resolution": "import org.hibernate.validator.constraints.NotEmpty; import org.slf4j.Logger; import org.slf4j.LoggerFactory;",
+    "conflict": "import org.hibernate.validator.constraints.NotEmpty;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58770,
+    "v2": "import org.zanata.common.TranslationStats; import org.zanata.webtrans.client.events.AttentionModeActivationEvent; import org.zanata.webtrans.client.events.AttentionModeActivationEventHandler;",
+    "resolution": "import org.zanata.common.CommonContainerTranslationStatistics; import org.zanata.webtrans.client.events.AttentionModeActivationEvent; import org.zanata.webtrans.client.events.AttentionModeActivationEventHandler;",
+    "conflict": "import org.zanata.common.CommonContainerTranslationStatistics; import org.zanata.webtrans.client.events.AliasKeyChangedEvent; import org.zanata.webtrans.client.events.AliasKeyChangedEventHandler;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58778,
+    "v2": "TranslationStats newSelectedStats = new TranslationStats(new TransUnitCount(1, 2, 3), new TransUnitWords(4, 5, 6));",
+    "resolution": "CommonContainerTranslationStatistics newSelectedStats = new CommonContainerTranslationStatistics(); newSelectedStats.addStats(new TranslationStatistics(new TransUnitCount(1, 2, 3, 0), LocaleId.EN_US.toString())); newSelectedStats.addStats(new TranslationStatistics(new TransUnitWords(4, 5, 6, 0), LocaleId.EN_US.toString()));",
+    "conflict": "CommonContainerTranslationStatistics newSelectedStats = new CommonContainerTranslationStatistics(); newSelectedStats.addStats(new TranslationStatistics(new TransUnitCount(1, 2, 3, 0, 0), LocaleId.EN_US.toString())); newSelectedStats.addStats(new TranslationStatistics(new TransUnitWords(4, 5, 6, 0, 0), LocaleId.EN_US.toString()));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58834,
+    "v2": "Long getDocLastTranslatedTextFlowTarget(Long documentId, LocaleId localeId);  /**",
+    "resolution": "Long getDocLastTranslatedTextFlowTarget(Long documentId, LocaleId localeId);  /**",
+    "conflict": "HTextFlowTarget getDocLastModifiedTextFlowTarget(Long documentId, LocaleId localeId);  /**"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58841,
+    "v2": "Long result1 = tsCache.getDocLastTranslatedTextFlowTarget(documentId, testLocaleId); Long result2 = tsCache.getDocLastTranslatedTextFlowTarget(documentId, testLocaleId);",
+    "resolution": "Long result1 = tsCache.getDocLastTranslatedTextFlowTarget(documentId, testLocaleId); Long result2 = tsCache.getDocLastTranslatedTextFlowTarget(documentId, testLocaleId);",
+    "conflict": "HTextFlowTarget result1 = tsCache.getDocLastModifiedTextFlowTarget(documentId, testLocaleId); HTextFlowTarget result2 = tsCache.getDocLastModifiedTextFlowTarget(documentId, testLocaleId);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58842,
+    "v2": "@DefaultMessage(\"Upload document to merge/override translation\") String uploadButtonTitle();  @DefaultMessage(\"Download document with extension {0}\") String downloadFileTitle(String key);",
+    "resolution": "@DefaultMessage(\"Upload document to merge/override translation\") String uploadButtonTitle();  @DefaultMessage(\"Download document with extension {0}\") String downloadFileTitle(String key);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58843,
+    "v2": "@DefaultMessage(\"Start time: {0}\") String lastValidationRunTooltip(String startTime);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58882,
+    "v2": "import org.hibernate.search.annotations.Index; import org.hibernate.search.annotations.Indexed; import org.hibernate.validator.Length; import org.hibernate.validator.NotEmpty;",
+    "resolution": "import org.hibernate.validator.constraints.NotEmpty; import org.hibernate.search.annotations.Indexed;",
+    "conflict": "import org.hibernate.validator.constraints.NotEmpty;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58887,
+    "v2": "",
+    "resolution": "@DefaultMessage(\"Load\") String load();  @DefaultMessage(\"Restore Defaults\") String restoreDefaults();",
+    "conflict": "@DefaultMessage(\"Load\") String load();  @DefaultMessage(\"Restore Defaults\") String restoreDefaults();"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58925,
+    "v2": "import lombok.extern.slf4j.Slf4j;  import org.apache.commons.lang.StringUtils;",
+    "resolution": "import lombok.extern.slf4j.Slf4j;  import org.apache.commons.lang.StringUtils;import org.apache.lucene.analysis.Analyzer; import org.apache.lucene.analysis.standard.StandardAnalyzer;",
+    "conflict": "import org.apache.lucene.analysis.Analyzer; import org.apache.lucene.analysis.standard.StandardAnalyzer;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58928,
+    "v2": "ArrayList<TransMemoryResultItem> tmResults = getTransMemoryHandler.searchTransMemory(hLocale, new TransMemoryQuery(hTextFlow.getContents(), SearchType.FUZZY_PLURAL), idsWithTranslations); TransMemoryResultItem tmResult = findTMAboveThreshold(tmResults, predicate, hTextFlow, action.getThresholdPercent()); TransUnitUpdateRequest request = createRequest(action, hLocale, requestMap, hTextFlow, tmResult, hTextFlowTarget);",
+    "resolution": "ArrayList<TransMemoryResultItem> tmResults = getTransMemoryHandler.searchTransMemory(hLocale, sourceLocale, new TransMemoryQuery(hTextFlow.getContents(), SearchType.FUZZY_PLURAL)); TransMemoryResultItem tmResult = findTMAboveThreshold(tmResults, predicate, hTextFlow, action.getThresholdPercent()); TransUnitUpdateRequest request = createRequest(action, hLocale, requestMap, hTextFlow, tmResult, hTextFlowTarget);",
+    "conflict": "ArrayList<TransMemoryResultItem> tmResults = getTransMemoryHandler.searchTransMemory(hLocale, sourceLocale, new TransMemoryQuery(hTextFlow.getContents(), SearchType.FUZZY_PLURAL)); TransMemoryResultItem tmResult = findTMAboveThreshold(tmResults, predicate); TransUnitUpdateRequest request = createRequest(action, hLocale, requestMap, hTextFlow, tmResult);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58954,
+    "v2": "",
+    "resolution": "import org.zanata.webtrans.client.service.NavigationController;",
+    "conflict": "import org.zanata.webtrans.client.rpc.CachingDispatchAsync; import org.zanata.webtrans.client.service.NavigationController; import org.zanata.webtrans.shared.auth.EditorClientId; import org.zanata.webtrans.shared.model.Person; import org.zanata.webtrans.shared.model.PersonId; import org.zanata.webtrans.shared.model.PersonSessionDetails;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58967,
+    "v2": "// &amp;, &quot; private final static String charRefRegex = \"&[:a-z_A-Z][a-z_A-Z0-9.-]*;\"; private final static RegExp charRefExp = RegExp.compile(charRefRegex);",
+    "resolution": "// &amp;, &quot; private final static String charRefRegex = \"&[:a-z_A-Z][a-z_A-Z0-9.-]*;\"; private final static RegExp charRefExp = RegExp.compile(charRefRegex);",
+    "conflict": "private final static String entityRegex = \"&#?[a-z_A-Z0-9.-]+;\"; private final static RegExp entityExp = RegExp.compile(entityRegex);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58988,
+    "v2": "",
+    "resolution": "mockLayoutPresenter.bind(); expectLastCall().once(); mockLayoutPresenter.setLayoutListener(mockTranslationPresenter); expectLastCall().once(); mockDashboardPresenter.bind(); expectLastCall().once();",
+    "conflict": "mockLayoutPresenter.bind(); expectLastCall().once(); mockLayoutPresenter.setLayoutListener(mockTranslationPresenter); expectLastCall().once(); mockDashboardPresenter.bind(); expectLastCall().once();"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58998,
+    "v2": "reset(mockNotificationPresenter);  reset(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchButton, mockKeyShortcutButton);",
+    "resolution": "reset(mockNotificationPresenter);  reset(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchButton, mockKeyShortcutButton);reset(mockNotificationPresenter, mockLayoutPresenter); reset(mockSearchLink);",
+    "conflict": "reset(mockNotificationPresenter, mockLayoutPresenter); reset(mockSearchLink);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59000,
+    "v2": "replay(mockNotificationPresenter);  replay(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchButton, mockKeyShortcutButton);",
+    "resolution": "replay(mockNotificationPresenter);  replay(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchButton, mockKeyShortcutButton);replay(mockNotificationPresenter, mockLayoutPresenter); replay(mockSearchLink);",
+    "conflict": "replay(mockNotificationPresenter, mockLayoutPresenter); replay(mockSearchLink);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59001,
+    "v2": "verify(mockNotificationPresenter);  verify(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchButton, mockKeyShortcutButton);",
+    "resolution": "verify(mockNotificationPresenter);  verify(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchButton, mockKeyShortcutButton);verify(mockNotificationPresenter, mockLayoutPresenter); verify(mockSearchLink);",
+    "conflict": "verify(mockNotificationPresenter, mockLayoutPresenter); verify(mockSearchLink);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59003,
+    "v2": "keyShortcutPresenter.register(new KeyShortcut( new Keys(Keys.ALT_KEY, 'L'),",
+    "resolution": "display.initMenuList(identity.getPerson().getName(), helpMenuCommand, leaveWorkspaceMenuCommand, signOutMenuCommand, layoutMenuMenuCommand);  keyShortcutPresenter.register(new KeyShortcut( new Keys(Keys.ALT_KEY, 'L'),",
+    "conflict": "display.initMenuList(identity.getPerson().getName(), helpMenuCommand, leaveWorkspaceMenuCommand, signOutMenuCommand, layoutMenuMenuCommand);  keyShortcutPresenter.registerKeyShortcut(new KeyShortcut( KeyShortcut.ALT_KEY, 'L',"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59011,
+    "v2": "notificationPresenter.setNotificationListener(this);",
+    "resolution": "layoutSelectorPresenter.bind();  layoutSelectorPresenter.setLayoutListener(translationPresenter); notificationPresenter.setNotificationListener(this);",
+    "conflict": "layoutSelectorPresenter.bind();  layoutSelectorPresenter.setLayoutListener(translationPresenter); notificationPresenter.setErrorLabelListener(this);"
+  },
+  {
+    "devdecision": "None",
+    "id": 59019,
+    "v2": "import com.google.gwt.user.client.ui.HasHorizontalAlignment; import com.google.gwt.user.client.ui.HasVerticalAlignment; import com.google.gwt.user.client.ui.HorizontalPanel; import com.google.gwt.user.client.ui.Image;",
+    "resolution": "import com.google.gwt.user.client.ui.InlineLabel; import com.google.gwt.user.client.ui.LayoutPanel;",
+    "conflict": "import com.google.gwt.user.client.ui.HasVisibility;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59030,
+    "v2": "mockTranslationPresenter.revealDisplay(); expectLastCall().once();",
+    "resolution": "mockTranslationPresenter.revealDisplay(); expectLastCall().once();",
+    "conflict": "mockDisplay.setLayoutMenuVisible(true); expectLastCall().once();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59035,
+    "v2": "reset(mockNotificationPresenter);  reset(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchLink);",
+    "resolution": "reset(mockNotificationPresenter);  reset(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchLink);",
+    "conflict": "reset(mockDismiss, mockDismissVisibility, mockNotificationPresenter); reset(mockSearchLink);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59037,
+    "v2": "replay(mockNotificationPresenter);  replay(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchLink);",
+    "resolution": "replay(mockNotificationPresenter);  replay(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchLink);",
+    "conflict": "replay(mockDismiss, mockDismissVisibility, mockNotificationPresenter); replay(mockSearchLink);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59038,
+    "v2": "verify(mockNotificationPresenter);  verify(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchLink);",
+    "resolution": "verify(mockNotificationPresenter);  verify(mockHelpMenuItem, mockLeaveWorkspaceMenuItem, mockSignoutMenuItem, mockSearchLink);",
+    "conflict": "verify(mockDismiss, mockDismissVisibility, mockNotificationPresenter); verify(mockSearchLink);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59045,
+    "v2": "CopyTransManager copyTransManager;  @In FlashScopeBean flash;",
+    "resolution": "CopyTransManager copyTransManager;  @In FlashScopeBean flash;private VersionGroupService versionGroupServiceImpl;",
+    "conflict": "private VersionGroupService versionGroupServiceImpl;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59046,
+    "v2": "",
+    "resolution": "",
+    "conflict": "public void performCopyTrans() { copyTransServiceImpl.copyTransForIteration(getProjectIteration()); FacesMessages.instance().add(messages.get(\"jsf.iteration.CopyTrans.success\")); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59056,
+    "v2": "//XML Entity validator",
+    "resolution": "//XML Entity validator",
+    "conflict": "//XML Entity validator"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59059,
+    "v2": "public ListDataProvider<DocumentNode> getDataProvider() { return dataProvider; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59076,
+    "v2": "import com.google.common.base.Objects;  import lombok.NoArgsConstructor; import lombok.Setter; import lombok.ToString;",
+    "resolution": "import com.google.common.base.Objects;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59107,
+    "v2": "//FIXME re-enable this //      this.setContents(textFlow.getContents());",
+    "resolution": "// This cannot be done at this point due to an issue with hibernate in which a listener cannot access // loading collections //this.setContents(textFlow.getContents());",
+    "conflict": "// This cannot be done at this point due to an issue with hibernate in which a listener cannot access // loading collections //this.setContents(textFlow.getContents());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59108,
+    "v2": "//FIXME re-enable this //      this.setContents(target.getContents());",
+    "resolution": "// This cannot be done at this point due to an issue with hibernate in which a listener cannot access // loading collections //this.setContents(target.getContents());",
+    "conflict": "// This cannot be done at this point due to an issue with hibernate in which a listener cannot access // loading collections //this.setContents(target.getContents());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59111,
+    "v2": "@Test(groups = {\"unit-tests\"})",
+    "resolution": "@Test(groups = {\"unit-tests\"})",
+    "conflict": "import java.lang.reflect.InvocationTargetException; import java.util.Map; import java.util.Random;  @Test(groups = { \"unit-tests\" })"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59126,
+    "v2": "private String content0, content1, content2, content3, content4, content5;  @Transient private List<String> immutableContents;",
+    "resolution": "private List<String> contents;",
+    "conflict": "private List<String> contents;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59127,
+    "v2": "/** * As of release 1.6, replaced by {@link #getContents()} * @return */ @Override",
+    "resolution": "/** * As of release 1.6, replaced by {@link #getContents()} * @return */ @Override",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59161,
+    "v2": "for (HPerson maintainer : proj.getMaintainers()) { if (maintainer.getId().equals( this.getId() ))",
+    "resolution": "for (HProject project : getMaintainerProjects()) { if (project.getId().equals( proj.getId() ))",
+    "conflict": "for (HProject project : getMaintainerProjects()) { if (project.getId().equals( proj.getId() ))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59165,
+    "v2": "// TODO Plural Support // for(int i=0;i<target.getContents.size();i<nPlurals;i++){ // // } targets.add(target.getContent());",
+    "resolution": "// TODO Plural Support // for(int i=0;i<target.getContents.size();i<nPlurals;i++){ // // } targets.add(target.getContent());",
+    "conflict": "targets = new ArrayList<String>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59203,
+    "v2": "PropWriter.write(targetDoc, getPullOptions().getTransDir(), docName, localeMapping.getJavaLocale());",
+    "resolution": "if (getPullOptions().getCreateSkeletons()) PropWriter.write(doc, targetDoc, getPullOptions().getTransDir(), docName, localeMapping.getJavaLocale()); else PropWriter.write(null, targetDoc, getPullOptions().getTransDir(), docName, localeMapping.getJavaLocale());",
+    "conflict": "if (opts.getCreateSkeletons()) PropWriter.write(doc, targetDoc, opts.getTransDir(), docName, localeMapping.getJavaLocale(), charset); else PropWriter.write(null, targetDoc, opts.getTransDir(), docName, localeMapping.getJavaLocale(), charset);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59212,
+    "v2": "if (!hTextFlow.getDocument().getProjectIteration().getProject().getStatus().equals(EntityStatus.ACTIVE) || !hTextFlow.getDocument().getProjectIteration().getStatus().equals(EntityStatus.ACTIVE)) { throw new ActionException(\"Project/Project version is read only\"); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59220,
+    "v2": "import org.zanata.webtrans.client.events.ButtonDisplayChangeEvent; import org.zanata.webtrans.client.events.FilterViewEvent; import org.zanata.webtrans.client.events.FilterViewEventHandler; import org.zanata.webtrans.client.events.UserConfigChangeEvent; import org.zanata.webtrans.client.resources.EditorConfigConstants; import org.zanata.webtrans.client.rpc.CachingDispatchAsync;",
+    "resolution": "import org.zanata.webtrans.client.events.ButtonDisplayChangeEvent; import org.zanata.webtrans.client.events.FilterViewEvent; import org.zanata.webtrans.client.events.FilterViewEventHandler; import org.zanata.webtrans.client.events.UserConfigChangeEvent; import org.zanata.webtrans.client.resources.EditorConfigConstants;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59221,
+    "v2": "this.dispatcher = dispatcher;  configMap.put(EditorConfigConstants.BUTTON_ENTER, false); configMap.put(EditorConfigConstants.BUTTON_ESC, false); configMap.put(EditorConfigConstants.BUTTON_FUZZY, true); configMap.put(EditorConfigConstants.BUTTON_UNTRANSLATED, true);",
+    "resolution": "configMap.put(EditorConfigConstants.BUTTON_ENTER, false); configMap.put(EditorConfigConstants.BUTTON_ESC, false); configMap.put(EditorConfigConstants.BUTTON_FUZZY, true); configMap.put(EditorConfigConstants.BUTTON_UNTRANSLATED, true);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59245,
+    "v2": "// hide until validation results are available validationMessagePanel.setVisible(false); fireValidationEvent(eventBus);",
+    "resolution": "// hide until validation results are available validationMessagePanel.setVisible(false); fireValidationEvent(eventBus);",
+    "conflict": "eventBus.fireEvent(new UpdateValidationErrorEvent(cellValue.getId(), true));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59273,
+    "v2": "phraseButton.setText(messages.tmPhraseButtonLabel()); clearButton.setText(messages.tmClearButtonLabel()); searchButton.setText(messages.tmSearchButtonLabel());",
+    "resolution": "phraseButton.setText(messages.phraseButtonLabel()); clearButton.setText(messages.clearButtonLabel()); searchButton.setText(messages.searchButtonLabel());",
+    "conflict": "phraseButton.setText(messages.phraseButtonLabel()); clearButton.setText(messages.clearButtonLabel()); searchButton.setText(messages.searchButtonLabel());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59290,
+    "v2": "public TableEditorView(NavigationMessages messages, EventBus eventBus, final Resources resources) { this(messages, new RedirectingTableModel<TransUnit>(), eventBus);",
+    "resolution": "public TableEditorView(NavigationMessages messages, EventBus eventBus, Identity identity, final Resources resources) { this(messages, new RedirectingTableModel<TransUnit>(), eventBus, identity);",
+    "conflict": "public TableEditorView(NavigationMessages messages, EventBus eventBus, Identity identity, final Resources resources) { this(messages, new RedirectingTableModel<TransUnit>(), eventBus, identity);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59295,
+    "v2": "import org.slf4j.Logger; import org.slf4j.LoggerFactory;",
+    "resolution": "import org.apache.commons.io.IOUtils; import org.slf4j.Logger; import org.slf4j.LoggerFactory; import org.testng.annotations.BeforeMethod;",
+    "conflict": "import org.apache.commons.io.IOUtils; import org.slf4j.Logger; import org.slf4j.LoggerFactory; import org.testng.annotations.BeforeMethod;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59296,
+    "v2": "private static final Logger log = LoggerFactory.getLogger(PropReaderTest.class);",
+    "resolution": "private static final Logger log = LoggerFactory.getLogger(PropReaderTest.class); private static final String TEST_OUTPUT_DIR_STRING = \"target/test-output\"; private static final File TEST_OUTPUT_DIR = new File(TEST_OUTPUT_DIR_STRING); PropReader propReader;",
+    "conflict": "private static final Logger log = LoggerFactory.getLogger(PropReaderTests.class); private static final String TEST_OUTPUT_DIR_STRING = \"target/test-output\"; private static final File TEST_OUTPUT_DIR = new File(TEST_OUTPUT_DIR_STRING); PropReader propReader;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59310,
+    "v2": "if (getOpts().isDryRun()) { log.info(\"DRY RUN: no permanent changes will be made\"); } }",
+    "resolution": "if (getOpts().isDryRun()) { log.info(\"DRY RUN: no permanent changes will be made\"); } }",
+    "conflict": "File sourceDir = getOpts().getSrcDir();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59315,
+    "v2": "pushSrcDocToServer(docUri, srcDoc, extensions);",
+    "resolution": "pushSrcDocToServer(docUri, srcDoc, extensions);",
+    "conflict": "final StringSet extensions = strat.getExtensions(); log.info(\"pushing source document [name={}] to server\", srcDoc.getName()); boolean copyTrans = getOpts().getCopyTrans(); ClientResponse<String> putResponse = translationResources.putResource(docUri, srcDoc, extensions, copyTrans); ClientUtility.checkResult(putResponse, uri);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59318,
+    "v2": "log.info(\"pushing target document [name={} client-locale={}] to server [locale={}]\", new Object[] { srcDoc.getName(), locale.getLocalLocale(), locale.getLocale() }); ClientResponse<String> putTransResponse = translationResources.putTranslations(docUri, new LocaleId(locale.getLocale()), targetDoc, extensions, getOpts().getMergeType()); ClientUtility.checkResult(putTransResponse, uri); String entity = putTransResponse.getEntity(String.class); if (entity != null && !entity.isEmpty())",
+    "resolution": "log.info(\"pushing target document [name={} client-locale={}] to server [locale={}]\", new Object[] { srcDoc.getName(), locale.getLocalLocale(), locale.getLocale() }); ClientResponse<String> putTransResponse = translationResources.putTranslations(docUri, new LocaleId(locale.getLocale()), targetDoc, extensions, getOpts().getMergeType()); ClientUtility.checkResult(putTransResponse, uri); String entity = putTransResponse.getEntity(String.class); if (entity != null && !entity.isEmpty())",
+    "conflict": "if (getOpts().isDebugSet())"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59321,
+    "v2": "// FIXME broken test @Test(enabled = false)",
+    "resolution": "// FIXME broken test @Test(enabled = false)",
+    "conflict": "@Test"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59326,
+    "v2": "import org.zanata.webtrans.client.ui.DiffMatchPatchLabel;",
+    "resolution": "import org.zanata.webtrans.client.presenter.TransMemoryDetailsPresenter; import org.zanata.webtrans.client.presenter.TransMemoryPresenter; import org.zanata.webtrans.client.resources.Resources; import org.zanata.webtrans.client.resources.UiMessages;import org.zanata.webtrans.client.ui.DiffMatchPatchLabel;",
+    "conflict": "import org.zanata.webtrans.client.presenter.TransMemoryDetailsPresenter; import org.zanata.webtrans.client.presenter.TransMemoryPresenter; import org.zanata.webtrans.client.resources.Resources; import org.zanata.webtrans.client.resources.UiMessages;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59334,
+    "v2": "PropWriter.write(docIn, new File(\"target/test-output\"), ISO_8859_1);  // FIXME check output files against input",
+    "resolution": "PropWriter.write(docIn, TEST_OUTPUT_DIR, ISO_8859_1);  assertInputAndOutputDocContentSame(docName);",
+    "conflict": "PropWriter.write(docIn, TEST_OUTPUT_DIR, ISO_8859_1);  assertInputAndOutputDocContentSame(docName);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59378,
+    "v2": "!transFilterView.isFocused() && !transMemoryPresenter.getDisplay().isFocused() && !translationEditorPresenter.getDisplay().isPagerFocused())",
+    "resolution": "!translationEditorPresenter.isTransFilterFocused() && !transMemoryPresenter.getDisplay().isFocused() && !glossaryPresenter.getDisplay().isFocused() && !translationEditorPresenter.getDisplay().isPagerFocused())",
+    "conflict": "!translationEditorPresenter.isTransFilterFocused() && !transMemoryPresenter.getDisplay().isFocused() && !glossaryPresenter.getDisplay().isFocused())"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59398,
+    "v2": "",
+    "resolution": "public boolean isTransFilterFocused() { return transFilterPresenter.getDisplay().isFocused(); }",
+    "conflict": "public boolean isTransFilterFocused() { return transFilterPresenter.getDisplay().isFocused(); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59401,
+    "v2": "!transFilterView.isFocused() && !transMemoryPresenter.getDisplay().isFocused())",
+    "resolution": "!translationEditorPresenter.isTransFilterFocused() && !transMemoryPresenter.getDisplay().isFocused() && !glossaryPresenter.getDisplay().isFocused())",
+    "conflict": "!translationEditorPresenter.isTransFilterFocused() && !transMemoryPresenter.getDisplay().isFocused() && !glossaryPresenter.getDisplay().isFocused())"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59411,
+    "v2": "translationEditorPresenter.bind(transFilterView);",
+    "resolution": "glossaryPresenter.bind(); display.setGlossaryView(glossaryPresenter.getDisplay().asWidget());  translationEditorPresenter.bind();",
+    "conflict": "glossaryPresenter.bind(); display.setGlossaryView(glossaryPresenter.getDisplay().asWidget());  translationEditorPresenter.bind();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59460,
+    "v2": "public void saveAndMoveRow(NavigationType nav) { savePendingChange(true); gotoRow(nav); }",
+    "resolution": "public void saveAndMoveRow(NavigationType nav) { savePendingChange(true); gotoRow(nav); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59472,
+    "v2": "display.getTransUnitCountBar().setStats(projectStats); Log.info(\"Time to calculate project stats: \" + String.valueOf(System.currentTimeMillis() - start) + \"ms\");",
+    "resolution": "// re-use these stats for the project stats eventBus.fireEvent(new ProjectStatsRetrievedEvent(projectStats)); Log.info(\"Time to calculate project stats: \" + String.valueOf(System.currentTimeMillis() - start));",
+    "conflict": "// re-use these stats for the project stats eventBus.fireEvent(new ProjectStatsRetrievedEvent(projectStats)); Log.info(\"Time to calculate project stats: \" + String.valueOf(System.currentTimeMillis() - start));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59498,
+    "v2": "display.getTransUnitCountBar().setStats(projectStats); Log.info(\"Time to calculate project stats: \" + String.valueOf(System.currentTimeMillis() - start));",
+    "resolution": "// re-use these stats for the project stats eventBus.fireEvent(new ProjectStatsRetrievedEvent(projectStats)); Log.info(\"Time to calculate project stats: \" + String.valueOf(System.currentTimeMillis() - start));",
+    "conflict": "// re-use these stats for the project stats eventBus.fireEvent(new ProjectStatsRetrievedEvent(listStatus));"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59500,
+    "v2": "import org.zanata.webtrans.client.events.TransUnitUpdatedEventHandler;",
+    "resolution": "import org.zanata.webtrans.client.events.TransUnitUpdatedEventHandler;import org.zanata.webtrans.client.presenter.DocumentListPresenter; import org.zanata.webtrans.client.resources.Resources; import org.zanata.webtrans.client.resources.UiMessages; import org.zanata.webtrans.client.resources.WebTransMessages;",
+    "conflict": "import org.zanata.webtrans.client.presenter.DocumentListPresenter; import org.zanata.webtrans.client.resources.Resources; import org.zanata.webtrans.client.resources.UiMessages; import org.zanata.webtrans.client.resources.WebTransMessages;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59503,
+    "v2": "",
+    "resolution": "",
+    "conflict": "else if (action instanceof GetProjectStatusCount) { final GetProjectStatusCount _action = (GetProjectStatusCount) action; AsyncCallback<GetProjectStatusCountResult> _callback = (AsyncCallback<GetProjectStatusCountResult>) callback; Scheduler.get().scheduleDeferred(new DummyGetProjectStatusCountCommand(_action, _callback)); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59554,
+    "v2": "",
+    "resolution": "@In private ApplicationConfiguration applicationConfiguration;",
+    "conflict": "@In(required = false) DBUnitImporter dbunitImporter;  @In private ApplicationConfiguration applicationConfiguration;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59556,
+    "v2": "",
+    "resolution": "public void setShowOperationButtons(boolean showButtons) { operationsPanel.setVisible(showButtons); }",
+    "conflict": "public void setShowOperationButtons(boolean showButtons) { operationsPanel.setVisible(showButtons); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59565,
+    "v2": "if (rowValue.getStatus() == ContentState.NeedReview) { String content = sourcePanel.getLabel().getElement().getInnerHTML(); String highlight = \"<font>\" + content; sourcePanel.getLabel().getElement().setInnerHTML(highlight); }",
+    "resolution": "if (rowValue.getStatus() == ContentState.NeedReview) { String content = sourcePanel.getLabel().getElement().getInnerHTML(); String highlight = \"<font>\" + content; sourcePanel.getLabel().getElement().setInnerHTML(highlight); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59569,
+    "v2": "String loc = locMap.getJavaLocale(); if (StringUtils.endsWithIgnoreCase(name, \"_\" + loc + extension)) {",
+    "resolution": "String loc = locMap.getJavaLocale().toLowerCase(); if (StringUtils.endsWithIgnoreCase(name, \"_\" + loc + extension)) {",
+    "conflict": "String loc = locMap.getJavaLocale().toLowerCase(); if (name.endsWith(\"_\" + loc + \".properties\")) { //$NON-NLS-1$ //$NON-NLS-2$ // log(\"skipping translated property file for now: \"+name);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59578,
+    "v2": "import net.openl10n.flies.webtrans.shared.rpc.GetTransUnit; import net.openl10n.flies.webtrans.shared.rpc.GetTransUnitResult; import net.openl10n.flies.webtrans.shared.rpc.GetTransUnitList; import net.openl10n.flies.webtrans.shared.rpc.GetTransUnitListResult;",
+    "resolution": "import net.openl10n.flies.webtrans.shared.rpc.GetTransUnit; import net.openl10n.flies.webtrans.shared.rpc.GetTransUnitResult; import net.openl10n.flies.webtrans.shared.rpc.GetTransUnitList; import net.openl10n.flies.webtrans.shared.rpc.GetTransUnitListResult;",
+    "conflict": "import net.openl10n.flies.webtrans.shared.rpc.GetTransUnits;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59579,
+    "v2": "void setFindMessage(String findMessage);",
+    "resolution": "void setFindMessage(String findMessage); void startProcessing(); void stopProcessing();",
+    "conflict": "void startProcessing();  void stopProcessing();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59641,
+    "v2": "TextFlow tf = new TextFlow(htf.getResId(), doc.getLocale().getLocaleId()); resourceUtils.transfer(htf, tf);",
+    "resolution": "TextFlow tf = new TextFlow(htf.getResId(), doc.getLocale().getLocaleId()); resourceUtils.transferToTextFlow(htf, tf); resourceUtils.transferToTextFlowExtensions(htf, tf.getExtensions(), extensions);",
+    "conflict": "TextFlow tf = new TextFlow(htf.getResId(), doc.getLocale()); resourceUtils.transferToTextFlow(htf, tf); resourceUtils.transferToTextFlowExtensions(htf, tf.getExtensions(), extensions);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59642,
+    "v2": "HLocale hLocale = localeServiceImpl.getSupportedLanguageByLocale(entity.getLang()); changed |= resourceUtils.transfer(entity, document, hLocale);  // handle extensions changed |= resourceUtils.transfer(entity.getExtensions(true), document, extensions);",
+    "resolution": "HLocale hLocale = localeServiceImpl.getSupportedLanguageByLocale(entity.getLang()); changed |= resourceUtils.transferFromResource(entity, document, extensions, hLocale);",
+    "conflict": "changed |= resourceUtils.transferFromResource(entity, document, extensions);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59643,
+    "v2": "HLocale hLocale = localeServiceImpl.getSupportedLanguageByLocale(entity.getLang()); boolean changed = resourceUtils.transfer(entity, document, hLocale);  // handle extensions changed |= resourceUtils.transfer(entity.getExtensions(true), document, extensions);",
+    "resolution": "HLocale hLocale = localeServiceImpl.getSupportedLanguageByLocale(entity.getLang()); boolean changed = resourceUtils.transferFromResourceMetadata(entity, document, extensions, hLocale);",
+    "conflict": "boolean changed = resourceUtils.transferFromResourceMetadata(entity, document, extensions);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59671,
+    "v2": "import org.fedorahosted.flies.model.HAccount; import org.fedorahosted.flies.model.HTribe;",
+    "resolution": "import org.fedorahosted.flies.model.HAccount; import org.fedorahosted.flies.model.HTribe; import org.fedorahosted.flies.security.FliesIdentity;",
+    "conflict": "import org.fedorahosted.flies.core.model.HAccount; import org.fedorahosted.flies.core.model.HTribe; import org.fedorahosted.flies.security.FliesIdentity;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59673,
+    "v2": "import org.fedorahosted.flies.model.po.HPotEntryData; import org.fedorahosted.flies.model.po.PoUtility;",
+    "resolution": "import org.fedorahosted.flies.hibernate.search.TranslatedFilterFactory; import org.fedorahosted.flies.model.po.HPotEntryData; import org.fedorahosted.flies.model.po.PoUtility;",
+    "conflict": "import org.fedorahosted.flies.hibernate.search.TranslatedFilterFactory; import org.fedorahosted.flies.repository.model.po.HPotEntryData; import org.fedorahosted.flies.repository.model.po.PoUtility;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59697,
+    "v2": "",
+    "resolution": "import org.fedorahosted.flies.webtrans.editor.WebTransEditorFooter; import org.fedorahosted.flies.webtrans.editor.WebTransEditorHeader; import org.fedorahosted.flies.webtrans.editor.WebTransEditorPresenter; import org.fedorahosted.flies.webtrans.editor.WebTransEditorView;",
+    "conflict": "import org.fedorahosted.flies.webtrans.editor.WebTransEditorFooter; import org.fedorahosted.flies.webtrans.editor.WebTransEditorHeader; import org.fedorahosted.flies.webtrans.editor.WebTransEditorPresenter; import org.fedorahosted.flies.webtrans.editor.WebTransEditorView; import org.fedorahosted.flies.webtrans.editor.WebTransScrollTable;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59710,
+    "v2": "center.setScrollMode(Scroll.AUTOX); sourceWidget = getEditorWidget(true); center.add(sourceWidget);",
+    "resolution": "center.setScrollMode(Scroll.AUTOY); east = new ContentPanel(); east.setHeaderVisible(false);  sourceWidget = getEditorWidget(true); center.add(sourceWidget);",
+    "conflict": "center.setScrollMode(Scroll.AUTOY);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59726,
+    "v2": "import javax.persistence.EntityManager;  import org.dbunit.operation.DatabaseOperation; import org.fedorahosted.flies.core.model.Account; import org.jboss.seam.mock.DBUnitSeamTest; import org.jboss.seam.mock.ResourceRequestEnvironment;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59727,
+    "v2": "import static org.jboss.seam.mock.ResourceRequestEnvironment.ResourceRequest; import static org.jboss.seam.mock.ResourceRequestEnvironment.Method;  public class ProjectResourceTest extends DBUnitSeamTest {",
+    "resolution": "public class ProjectResourceTest extends SeamTest {",
+    "conflict": "public class ProjectResourceTest extends SeamTest {"
+  }
+]
+}

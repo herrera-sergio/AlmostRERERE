@@ -1,0 +1,374 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 10553,
+    "v2": "public Response exchangeFromToken(UriInfo uriInfo, ClientModel authorizedClient, UserSessionModel tokenUserSession, UserModel tokenSubject, AccessToken token, MultivaluedMap<String, String> params) {",
+    "resolution": "public Response exchangeFromToken(UriInfo uriInfo, ClientModel authorizedClient, UserSessionModel tokenUserSession, UserModel tokenSubject, MultivaluedMap<String, String> params) {",
+    "conflict": "public Response exchangeFromToken(UriInfo uriInfo, ClientModel authorizedClient, UserSessionModel tokenUserSession, UserModel tokenSubject, MultivaluedMap<String, String> params) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 10554,
+    "v2": "return exchangeNotLinkedNoStore(uriInfo, authorizedClient, tokenUserSession, tokenSubject, token);",
+    "resolution": "return exchangeNotLinkedNoStore(uriInfo, authorizedClient, tokenUserSession, tokenSubject);",
+    "conflict": "return exchangeNotLinkedNoStore(uriInfo, authorizedClient, tokenUserSession, tokenSubject);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 10555,
+    "v2": "return exchangeTokenExpired(uriInfo, authorizedClient, tokenUserSession, tokenSubject, token);",
+    "resolution": "return exchangeTokenExpired(uriInfo, authorizedClient, tokenUserSession, tokenSubject);",
+    "conflict": "return exchangeTokenExpired(uriInfo, authorizedClient, tokenUserSession, tokenSubject);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 10556,
+    "v2": "return exchangeClientToClient(authResult.getUser(), authResult.getSession());",
+    "resolution": "return exchangeClientToClient(tokenUser, tokenSession);",
+    "conflict": "return exchangeClientToClient(tokenUser, tokenSession);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 10557,
+    "v2": "Response response = ((ExchangeTokenToIdentityProviderToken)provider).exchangeFromToken(uriInfo, client, authResult.getSession(), authResult.getUser(), authResult.getToken(), formParams);",
+    "resolution": "Response response = ((ExchangeTokenToIdentityProviderToken)provider).exchangeFromToken(uriInfo, client, targetUserSession, targetUser, formParams);",
+    "conflict": "Response response = ((ExchangeTokenToIdentityProviderToken)provider).exchangeFromToken(uriInfo, client, targetUserSession, targetUser, formParams);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 10558,
+    "v2": "public Response exchangeFromToken(UriInfo uriInfo, ClientModel authorizedClient, UserSessionModel tokenUserSession, UserModel tokenSubject, org.keycloak.representations.AccessToken token, MultivaluedMap<String, String> params) {",
+    "resolution": "public Response exchangeFromToken(UriInfo uriInfo, ClientModel authorizedClient, UserSessionModel tokenUserSession, UserModel tokenSubject, MultivaluedMap<String, String> params) {",
+    "conflict": "public Response exchangeFromToken(UriInfo uriInfo, ClientModel authorizedClient, UserSessionModel tokenUserSession, UserModel tokenSubject, MultivaluedMap<String, String> params) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 10559,
+    "v2": "return exchangeNotLinkedNoStore(uriInfo, authorizedClient, tokenUserSession, tokenSubject, token);",
+    "resolution": "return exchangeNotLinkedNoStore(uriInfo, authorizedClient, tokenUserSession, tokenSubject);",
+    "conflict": "return exchangeNotLinkedNoStore(uriInfo, authorizedClient, tokenUserSession, tokenSubject);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10781,
+    "v2": "throw new ModelException(\"Password hashing provider not found\");",
+    "resolution": "throw new ModelException(\"Password hashing provider not found\");",
+    "conflict": "throw new PasswordPolicyConfigException(\"Password hashing provider not found\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10785,
+    "v2": "processor.getClientSession().setExecutionStatus(model.getId(), ClientSessionModel.ExecutionStatus.ATTEMPTED);",
+    "resolution": "processor.getClientSession().setExecutionStatus(model.getId(), ClientSessionModel.ExecutionStatus.ATTEMPTED);",
+    "conflict": "processor.getAuthenticationSession().setExecutionStatus(model.getId(), AuthenticationSessionModel.ExecutionStatus.ATTEMPTED);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10791,
+    "v2": "grantPermission(authorizationProvider, permissions, permission, resourceServerId);",
+    "resolution": "grantPermission(authorizationProvider, permissions, permission, resourceServerId);",
+    "conflict": "grantPermission(authorizationProvider, permissions, permission, resourceServer, metadata);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10792,
+    "v2": "grantPermission(authorizationProvider, permissions, permission, resourceServerId);",
+    "resolution": "grantPermission(authorizationProvider, permissions, permission, resourceServerId);",
+    "conflict": "grantPermission(authorizationProvider, permissions, permission, resourceServer, metadata);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10852,
+    "v2": "return \"jZJJT8MwEIXvSPyHyPfUTrokWE2lQoWoxBLRwoELMs6UWnLs4HFY%2Fj1OoALEIiQfLPt55r1vPEVR64bPW781l%2FDQAvroudYGeX9RkNYZbgUq5EbUgNxLvpqfnfJ0wHjjrLfSavL25G%2BxQATnlTUkmu%2B2R9ZgW4NbgXtUEq4uTwuy9b5BTqm2UuitRc%2FzyWhIoW60fQGgJFoEk8qIrsCP8nGQixCIOhC6RlpBbenOK%2B1ykejYOgl96oJshEYg0XJRkOXidlTlMJaQxlnKJvEoS%2B9ikR9kcVrlw4wdMMnYOIixDIHUI3w8R2xhadAL4wuSsmQcs2HMJus05WEl2SAYuyFR%2BW7kUJlKmfu%2Fod29iZCfrNdlXF6s1iS6Bod99CAgs%2F29aZeI9%2B3dp9n9dxqzjuBXgCxPPnhP6af6u3YNPw8ll4vSaiVfornW9uko4PaBh3ct9IBr4X83kQyS%2FkRV8aaX8tZgA1JtFFSEdo3o9785ewU%3D\\n\";",
+    "resolution": "return \"jZJJT8MwEIXvSPyHyPfUTrokWE2lQoWoxBLRwoELMs6UWnLs4HFY%2Fj1OoALEIiQfLPt55r1vPEVR64bPW781l%2FDQAvroudYGeX9RkNYZbgUq5EbUgNxLvpqfnfJ0wHjjrLfSavL25G%2BxQATnlTUkmu%2B2R9ZgW4NbgXtUEq4uTwuy9b5BTqm2UuitRc%2FzyWhIoW60fQGgJFoEk8qIrsCP8nGQixCIOhC6RlpBbenOK%2B1ykejYOgl96oJshEYg0XJRkOXidlTlMJaQxlnKJvEoS%2B9ikR9kcVrlw4wdMMnYOIixDIHUI3w8R2xhadAL4wuSsmQcs2HMJus05WEl2SAYuyFR%2BW7kUJlKmfu%2Fod29iZCfrNdlXF6s1iS6Bod99CAgs%2F29aZeI9%2B3dp9n9dxqzjuBXgCxPPnhP6af6u3YNPw8ll4vSaiVfornW9uko4PaBh3ct9IBr4X83kQyS%2FkRV8aaX8tZgA1JtFFSEdo3o9785ewU%3D\\n\";",
+    "conflict": "return \"jZJJT8MwEIXvSPyHyPfUTrokWE2lQoWoxBLRwoELMs6UWnLs4HFY%2Fj1OoALEIiQfLPt55r1vPEVR64bPW781l%2FDQAvroudYGeX9RkNYZbgUq5EbUgNxLvpqfnfJ0wHjjrLfSavL25G%2BxQATnlTUkmu%2B2R9ZgW4NbgXtUEq4uTwuy9b5BTqm2UuitRc%2FzyWhIoW60fQGgJFoEk8qIrsCP8nGQixCIOhC6RlpBbenOK%2B1ykejYOgl96oJshEYg0XJRkOXidlTlMJaQxlnKJvEoS%2B9ikR9kcVrlw4wdMMnYOIixDIHUI3w8R2xhadAL4wuSsmQcs2HMJus05WEl2SAYuyFR%2BW7kUJlKmfu%2Fod29iZCfrNdlXF6s1iS6Bod99CAgs%2F29aZeI9%2B3dp9n9dxqzjuBXgCxPPnhP6af6u3YNPw8ll4vSaiVfornW9uko4PaBh3ct9IBr4X83kQyS%2FkRV8aaX8tZgA1JtFFSEdo3o9785ewU%3D\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10853,
+    "v2": "return System.getProperty(\"auth.server.base.url\");",
+    "resolution": "return System.getProperty(\"auth.server.base.url\");",
+    "conflict": "return System.getProperty(\"auth.server.base.url\", \"http://localhost:8180\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10861,
+    "v2": "if (result != null && !result.isEmpty() && !result.trim().startsWith(\"{\")) {",
+    "resolution": "if (result != null && !result.isEmpty() && !result.trim().startsWith(\"{\")) {",
+    "conflict": "if (result != null && !result.isEmpty() && result.trim().startsWith(\"EXCEPTION:\")) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10862,
+    "v2": "if (result != null && !result.isEmpty() && !result.trim().startsWith(\"{\")) {",
+    "resolution": "if (result != null && !result.isEmpty() && !result.trim().startsWith(\"{\")) {",
+    "conflict": "if (result != null && !result.isEmpty() && result.trim().startsWith(\"EXCEPTION:\")) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10869,
+    "v2": "import static org.keycloak.testsuite.util.SamlClient.idpInitiatedLogin; import static org.keycloak.testsuite.util.SamlClient.login;",
+    "resolution": "import static org.keycloak.testsuite.util.SamlClient.idpInitiatedLogin; import static org.keycloak.testsuite.util.SamlClient.login;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10878,
+    "v2": "return MASTER;",
+    "resolution": "return MASTER;",
+    "conflict": "return \"test\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10919,
+    "v2": "import org.keycloak.credential.hash.Pbkdf2PasswordHashProviderFactory;",
+    "resolution": "import org.keycloak.credential.hash.Pbkdf2PasswordHashProviderFactory;",
+    "conflict": "import org.keycloak.credential.hash.Pbkdf2Sha256PasswordHashProviderFactory;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10920,
+    "v2": "assertEquals(Pbkdf2PasswordHashProviderFactory.ID, credentials.getAlgorithm());",
+    "resolution": "assertEquals(Pbkdf2PasswordHashProviderFactory.ID, credentials.getAlgorithm());",
+    "conflict": "assertEquals(Pbkdf2Sha256PasswordHashProviderFactory.ID, credentials.getAlgorithm());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11166,
+    "v2": "throw new ModelException(\"Password hashing provider not found\");",
+    "resolution": "throw new ModelException(\"Password hashing provider not found\");",
+    "conflict": "throw new PasswordPolicyConfigException(\"Password hashing provider not found\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11170,
+    "v2": "processor.getClientSession().setExecutionStatus(model.getId(), ClientSessionModel.ExecutionStatus.ATTEMPTED);",
+    "resolution": "processor.getClientSession().setExecutionStatus(model.getId(), ClientSessionModel.ExecutionStatus.ATTEMPTED);",
+    "conflict": "processor.getAuthenticationSession().setExecutionStatus(model.getId(), AuthenticationSessionModel.ExecutionStatus.ATTEMPTED);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11176,
+    "v2": "grantPermission(authorizationProvider, permissions, permission, resourceServerId);",
+    "resolution": "grantPermission(authorizationProvider, permissions, permission, resourceServerId);",
+    "conflict": "grantPermission(authorizationProvider, permissions, permission, resourceServer, metadata);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11177,
+    "v2": "grantPermission(authorizationProvider, permissions, permission, resourceServerId);",
+    "resolution": "grantPermission(authorizationProvider, permissions, permission, resourceServerId);",
+    "conflict": "grantPermission(authorizationProvider, permissions, permission, resourceServer, metadata);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11237,
+    "v2": "return \"jZJJT8MwEIXvSPyHyPfUTrokWE2lQoWoxBLRwoELMs6UWnLs4HFY%2Fj1OoALEIiQfLPt55r1vPEVR64bPW781l%2FDQAvroudYGeX9RkNYZbgUq5EbUgNxLvpqfnfJ0wHjjrLfSavL25G%2BxQATnlTUkmu%2B2R9ZgW4NbgXtUEq4uTwuy9b5BTqm2UuitRc%2FzyWhIoW60fQGgJFoEk8qIrsCP8nGQixCIOhC6RlpBbenOK%2B1ykejYOgl96oJshEYg0XJRkOXidlTlMJaQxlnKJvEoS%2B9ikR9kcVrlw4wdMMnYOIixDIHUI3w8R2xhadAL4wuSsmQcs2HMJus05WEl2SAYuyFR%2BW7kUJlKmfu%2Fod29iZCfrNdlXF6s1iS6Bod99CAgs%2F29aZeI9%2B3dp9n9dxqzjuBXgCxPPnhP6af6u3YNPw8ll4vSaiVfornW9uko4PaBh3ct9IBr4X83kQyS%2FkRV8aaX8tZgA1JtFFSEdo3o9785ewU%3D\\n\";",
+    "resolution": "return \"jZJJT8MwEIXvSPyHyPfUTrokWE2lQoWoxBLRwoELMs6UWnLs4HFY%2Fj1OoALEIiQfLPt55r1vPEVR64bPW781l%2FDQAvroudYGeX9RkNYZbgUq5EbUgNxLvpqfnfJ0wHjjrLfSavL25G%2BxQATnlTUkmu%2B2R9ZgW4NbgXtUEq4uTwuy9b5BTqm2UuitRc%2FzyWhIoW60fQGgJFoEk8qIrsCP8nGQixCIOhC6RlpBbenOK%2B1ykejYOgl96oJshEYg0XJRkOXidlTlMJaQxlnKJvEoS%2B9ikR9kcVrlw4wdMMnYOIixDIHUI3w8R2xhadAL4wuSsmQcs2HMJus05WEl2SAYuyFR%2BW7kUJlKmfu%2Fod29iZCfrNdlXF6s1iS6Bod99CAgs%2F29aZeI9%2B3dp9n9dxqzjuBXgCxPPnhP6af6u3YNPw8ll4vSaiVfornW9uko4PaBh3ct9IBr4X83kQyS%2FkRV8aaX8tZgA1JtFFSEdo3o9785ewU%3D\\n\";",
+    "conflict": "return \"jZJJT8MwEIXvSPyHyPfUTrokWE2lQoWoxBLRwoELMs6UWnLs4HFY%2Fj1OoALEIiQfLPt55r1vPEVR64bPW781l%2FDQAvroudYGeX9RkNYZbgUq5EbUgNxLvpqfnfJ0wHjjrLfSavL25G%2BxQATnlTUkmu%2B2R9ZgW4NbgXtUEq4uTwuy9b5BTqm2UuitRc%2FzyWhIoW60fQGgJFoEk8qIrsCP8nGQixCIOhC6RlpBbenOK%2B1ykejYOgl96oJshEYg0XJRkOXidlTlMJaQxlnKJvEoS%2B9ikR9kcVrlw4wdMMnYOIixDIHUI3w8R2xhadAL4wuSsmQcs2HMJus05WEl2SAYuyFR%2BW7kUJlKmfu%2Fod29iZCfrNdlXF6s1iS6Bod99CAgs%2F29aZeI9%2B3dp9n9dxqzjuBXgCxPPnhP6af6u3YNPw8ll4vSaiVfornW9uko4PaBh3ct9IBr4X83kQyS%2FkRV8aaX8tZgA1JtFFSEdo3o9785ewU%3D\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11238,
+    "v2": "return System.getProperty(\"auth.server.base.url\");",
+    "resolution": "return System.getProperty(\"auth.server.base.url\");",
+    "conflict": "return System.getProperty(\"auth.server.base.url\", \"http://localhost:8180\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11246,
+    "v2": "if (result != null && !result.isEmpty() && !result.trim().startsWith(\"{\")) {",
+    "resolution": "if (result != null && !result.isEmpty() && !result.trim().startsWith(\"{\")) {",
+    "conflict": "if (result != null && !result.isEmpty() && result.trim().startsWith(\"EXCEPTION:\")) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11247,
+    "v2": "if (result != null && !result.isEmpty() && !result.trim().startsWith(\"{\")) {",
+    "resolution": "if (result != null && !result.isEmpty() && !result.trim().startsWith(\"{\")) {",
+    "conflict": "if (result != null && !result.isEmpty() && result.trim().startsWith(\"EXCEPTION:\")) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11254,
+    "v2": "import static org.keycloak.testsuite.util.SamlClient.idpInitiatedLogin; import static org.keycloak.testsuite.util.SamlClient.login;",
+    "resolution": "import static org.keycloak.testsuite.util.SamlClient.idpInitiatedLogin; import static org.keycloak.testsuite.util.SamlClient.login;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11263,
+    "v2": "return MASTER;",
+    "resolution": "return MASTER;",
+    "conflict": "return \"test\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11304,
+    "v2": "import org.keycloak.credential.hash.Pbkdf2PasswordHashProviderFactory;",
+    "resolution": "import org.keycloak.credential.hash.Pbkdf2PasswordHashProviderFactory;",
+    "conflict": "import org.keycloak.credential.hash.Pbkdf2Sha256PasswordHashProviderFactory;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11305,
+    "v2": "assertEquals(Pbkdf2PasswordHashProviderFactory.ID, credentials.getAlgorithm());",
+    "resolution": "assertEquals(Pbkdf2PasswordHashProviderFactory.ID, credentials.getAlgorithm());",
+    "conflict": "assertEquals(Pbkdf2Sha256PasswordHashProviderFactory.ID, credentials.getAlgorithm());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11337,
+    "v2": "import org.keycloak.models.ClientInitialAccessModel; import org.keycloak.models.cache.infinispan.events.InvalidationEvent;",
+    "resolution": "import org.keycloak.models.ClientInitialAccessModel; import org.keycloak.models.cache.infinispan.events.InvalidationEvent;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11345,
+    "v2": "import org.keycloak.protocol.oidc.OIDCLoginProtocol; import org.keycloak.protocol.oidc.TokenManager;",
+    "resolution": "import org.keycloak.protocol.oidc.OIDCLoginProtocol; import org.keycloak.protocol.oidc.TokenManager;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11372,
+    "v2": "import org.keycloak.authorization.util.Permissions;",
+    "resolution": "import org.keycloak.authorization.util.Permissions;",
+    "conflict": "import org.keycloak.authorization.policy.evaluation.DecisionResult;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11373,
+    "v2": "import org.keycloak.authentication.actiontoken.execactions.ExecuteActionsActionToken;",
+    "resolution": "import org.keycloak.authentication.actiontoken.execactions.ExecuteActionsActionToken;import org.keycloak.authorization.admin.permissions.MgmtPermissions;",
+    "conflict": "import org.keycloak.authorization.admin.permissions.MgmtPermissions;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11377,
+    "v2": "cacheManager.getCache(InfinispanConnectionProvider.AUTHORIZATION_CACHE_NAME, true);             cacheManager.getCache(InfinispanConnectionProvider.AUTHENTICATION_SESSIONS_CACHE_NAME, true);",
+    "resolution": "cacheManager.getCache(InfinispanConnectionProvider.AUTHORIZATION_CACHE_NAME, true);            cacheManager.getCache(InfinispanConnectionProvider.AUTHENTICATION_SESSIONS_CACHE_NAME, true);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11382,
+    "v2": "import org.keycloak.admin.client.resource.RealmResource;",
+    "resolution": "import org.keycloak.admin.client.resource.RealmResource;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11387,
+    "v2": "ComponentRepresentation rep = ModelToRepresentation.toRepresentation(session, component, false);",
+    "resolution": "ComponentRepresentation rep = ModelToRepresentation.toRepresentation(session, component, false);",
+    "conflict": "ComponentRepresentation rep = getRepresentation(component);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11392,
+    "v2": "import org.keycloak.models.utils.KeycloakModelUtils; import org.keycloak.services.resources.AccountService;",
+    "resolution": "import org.keycloak.models.utils.KeycloakModelUtils; import org.keycloak.services.resources.AccountService;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11393,
+    "v2": "import org.keycloak.models.KeycloakSession;",
+    "resolution": "import org.keycloak.models.KeycloakSession;import org.keycloak.models.IdentityProviderModel;",
+    "conflict": "import org.keycloak.models.IdentityProviderModel;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11394,
+    "v2": "import org.keycloak.models.KeycloakSession;",
+    "resolution": "import org.keycloak.models.KeycloakSession;import org.keycloak.models.IdentityProviderModel;",
+    "conflict": "import org.keycloak.models.IdentityProviderModel;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11395,
+    "v2": "import org.keycloak.models.KeycloakSession;",
+    "resolution": "import org.keycloak.models.KeycloakSession;import org.keycloak.models.IdentityProviderModel;",
+    "conflict": "import org.keycloak.models.IdentityProviderModel;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11396,
+    "v2": "import org.keycloak.models.KeycloakSession;",
+    "resolution": "import org.keycloak.models.KeycloakSession;import org.keycloak.models.IdentityProviderModel;",
+    "conflict": "import org.keycloak.models.IdentityProviderModel;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11398,
+    "v2": "import org.keycloak.models.KeycloakSession;",
+    "resolution": "import org.keycloak.models.KeycloakSession;import org.keycloak.models.IdentityProviderModel;",
+    "conflict": "import org.keycloak.models.IdentityProviderModel;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11399,
+    "v2": "import org.keycloak.models.KeycloakSession;",
+    "resolution": "import org.keycloak.models.KeycloakSession;import org.keycloak.models.IdentityProviderModel;",
+    "conflict": "import org.keycloak.models.IdentityProviderModel;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11405,
+    "v2": "import org.jboss.arquillian.graphene.page.Page; import org.keycloak.testsuite.util.IdentityProviderBuilder;",
+    "resolution": "import org.jboss.arquillian.graphene.page.Page; import org.keycloak.testsuite.util.IdentityProviderBuilder;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11406,
+    "v2": "import org.keycloak.models.KeycloakSession;",
+    "resolution": "import org.keycloak.models.IdentityProviderModel;import org.keycloak.models.KeycloakSession;",
+    "conflict": "import org.keycloak.models.IdentityProviderModel;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 11422,
+    "v2": "props.load(getClass().getResourceAsStream(model.getConfig().getFirst(\"property.file\")));",
+    "resolution": "props.load(getClass().getResourceAsStream(model.getConfig().getFirst(\"propertyFile\")));",
+    "conflict": "props.load(getClass().getResourceAsStream(model.getConfig().getFirst(\"propertyFile\")));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11427,
+    "v2": "import java.io.IOException; import java.net.URI;",
+    "resolution": "import java.io.IOException; import java.net.URI;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11443,
+    "v2": "import org.keycloak.models.IdentityProviderModel;",
+    "resolution": "import org.keycloak.models.IdentityProviderModel;import org.keycloak.models.GroupModel;",
+    "conflict": "import org.keycloak.models.GroupModel;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 11455,
+    "v2": "public String LAST_VERSION = \"1.6.1\";",
+    "resolution": "public String LAST_VERSION = \"1.7.0\";",
+    "conflict": "public String LAST_VERSION = \"1.7.0\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11505,
+    "v2": "import org.keycloak.models.utils.FormMessage;",
+    "resolution": "import org.keycloak.models.UserSessionModel;",
+    "conflict": "import org.keycloak.models.UserSessionModel;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11531,
+    "v2": "",
+    "resolution": "UserManager userManager = new UserManager();",
+    "conflict": "UserManager userManager = new UserManager();"
+  }
+]
+}

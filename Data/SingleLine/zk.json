@@ -1,0 +1,4588 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 59739,
+    "v2": "public static final String UID = \"9.5.0.2\";",
+    "resolution": "public static final String UID = \"9.5.1\";",
+    "conflict": "public static final String UID = \"9.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59743,
+    "v2": "public static final String UID = \"9.5.0.2\";",
+    "resolution": "public static final String UID = \"9.5.1\";",
+    "conflict": "public static final String UID = \"9.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59748,
+    "v2": "public static final String UID = \"9.5.0.2\";",
+    "resolution": "public static final String UID = \"9.5.1\";",
+    "conflict": "public static final String UID = \"9.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59756,
+    "v2": "public static final String UID = \"9.5.0.2\";",
+    "resolution": "public static final String UID = \"9.5.1\";",
+    "conflict": "public static final String UID = \"9.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59757,
+    "v2": "public static final String RELEASE = \"9.5.0.2\";",
+    "resolution": "public static final String RELEASE = \"9.5.1-FL\";",
+    "conflict": "public static final String RELEASE = \"9.5.1-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59763,
+    "v2": "public static final String UID = \"9.5.0.2\";",
+    "resolution": "public static final String UID = \"9.5.1\";",
+    "conflict": "public static final String UID = \"9.5.1\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59764,
+    "v2": "* @see #resolveParameter(Object, Class, Supplier)",
+    "resolution": "* @see #resolveParameter(Object, Class, Supplier)",
+    "conflict": "* @see #resolveParameter(Object, Class, Supplier<String>)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59769,
+    "v2": "public static final String UID = \"9.5.0.2\";",
+    "resolution": "public static final String UID = \"9.5.1\";",
+    "conflict": "public static final String UID = \"9.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59774,
+    "v2": "public static final String UID = \"9.5.0.2\";",
+    "resolution": "public static final String UID = \"9.5.1\";",
+    "conflict": "public static final String UID = \"9.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59790,
+    "v2": "public static final String UID = \"9.5.0.2\";",
+    "resolution": "public static final String UID = \"9.5.1\";",
+    "conflict": "public static final String UID = \"9.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59794,
+    "v2": "public static final String UID = \"9.5.0.2\";",
+    "resolution": "public static final String UID = \"9.5.1\";",
+    "conflict": "public static final String UID = \"9.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59800,
+    "v2": "public static final String UID = \"9.5.0.2\";",
+    "resolution": "public static final String UID = \"9.5.1\";",
+    "conflict": "public static final String UID = \"9.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59808,
+    "v2": "public static final String UID = \"9.1.0\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59812,
+    "v2": "public static final String UID = \"9.1.0\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59817,
+    "v2": "public static final String UID = \"9.1.0\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59824,
+    "v2": "public static final String UID = \"9.1.0\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59825,
+    "v2": "public static final String RELEASE = \"9.1.0\";",
+    "resolution": "public static final String RELEASE = \"9.2.0-FL\";",
+    "conflict": "public static final String RELEASE = \"9.2.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59831,
+    "v2": "public static final String UID = \"9.1.0\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59836,
+    "v2": "public static final String UID = \"9.1.0\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59841,
+    "v2": "public static final String UID = \"9.1.0\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59857,
+    "v2": "public static final String UID = \"9.1.0\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59861,
+    "v2": "public static final String UID = \"9.1.0\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59868,
+    "v2": "public static final String UID = \"9.1.0\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59879,
+    "v2": "public static final String UID = \"9.0.0.1\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59883,
+    "v2": "public static final String UID = \"9.0.0.1\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59888,
+    "v2": "public static final String UID = \"9.0.0.1\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59897,
+    "v2": "public static final String UID = \"9.0.0.1\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59898,
+    "v2": "public static final String RELEASE = \"9.0.0.1\";",
+    "resolution": "public static final String RELEASE = \"9.2.0-FL\";",
+    "conflict": "public static final String RELEASE = \"9.2.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59904,
+    "v2": "public static final String UID = \"9.0.0.1\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59909,
+    "v2": "public static final String UID = \"9.0.0.1\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59914,
+    "v2": "public static final String UID = \"9.0.0.1\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59932,
+    "v2": "public static final String UID = \"9.0.0.1\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59936,
+    "v2": "public static final String UID = \"9.0.0.1\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59942,
+    "v2": "public static final String UID = \"9.0.0.1\";",
+    "resolution": "public static final String UID = \"9.2.0\";",
+    "conflict": "public static final String UID = \"9.2.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59950,
+    "v2": "public static final String UID = \"9.0.1.2\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59954,
+    "v2": "public static final String UID = \"9.0.1.2\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59959,
+    "v2": "public static final String UID = \"9.0.1.2\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59966,
+    "v2": "public static final String UID = \"9.0.1.2\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59967,
+    "v2": "public static final String RELEASE = \"9.0.1.2\";",
+    "resolution": "public static final String RELEASE = \"9.1.0-FL\";",
+    "conflict": "public static final String RELEASE = \"9.1.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59973,
+    "v2": "public static final String UID = \"9.0.1.2\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59978,
+    "v2": "public static final String UID = \"9.0.1.2\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59983,
+    "v2": "public static final String UID = \"9.0.1.2\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59999,
+    "v2": "public static final String UID = \"9.0.1.2\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60003,
+    "v2": "public static final String UID = \"9.0.1.2\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60010,
+    "v2": "public static final String UID = \"9.0.1.2\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60018,
+    "v2": "public static final String UID = \"9.0.1.1\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60022,
+    "v2": "public static final String UID = \"9.0.1.1\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60027,
+    "v2": "public static final String UID = \"9.0.1.1\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60034,
+    "v2": "public static final String UID = \"9.0.1.1\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60035,
+    "v2": "public static final String RELEASE = \"9.0.1.1\";",
+    "resolution": "public static final String RELEASE = \"9.1.0-FL\";",
+    "conflict": "public static final String RELEASE = \"9.1.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60041,
+    "v2": "public static final String UID = \"9.0.1.1\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60046,
+    "v2": "public static final String UID = \"9.0.1.1\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60051,
+    "v2": "public static final String UID = \"9.0.1.1\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60068,
+    "v2": "public static final String UID = \"9.0.1.1\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60072,
+    "v2": "public static final String UID = \"9.0.1.1\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60079,
+    "v2": "public static final String UID = \"9.0.1.1\";",
+    "resolution": "public static final String UID = \"9.1.0\";",
+    "conflict": "public static final String UID = \"9.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60087,
+    "v2": "public static final String UID = \"8.6.4\";",
+    "resolution": "public static final String UID = \"9.0.1\";",
+    "conflict": "public static final String UID = \"9.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60091,
+    "v2": "public static final String UID = \"8.6.4\";",
+    "resolution": "public static final String UID = \"9.0.1\";",
+    "conflict": "public static final String UID = \"9.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60096,
+    "v2": "public static final String UID = \"8.6.4\";",
+    "resolution": "public static final String UID = \"9.0.1\";",
+    "conflict": "public static final String UID = \"9.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60102,
+    "v2": "public static final String UID = \"8.6.4\";",
+    "resolution": "public static final String UID = \"9.0.1\";",
+    "conflict": "public static final String UID = \"9.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60103,
+    "v2": "public static final String RELEASE = \"8.6.4\";",
+    "resolution": "public static final String RELEASE = \"9.0.1-FL\";",
+    "conflict": "public static final String RELEASE = \"9.0.1-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60109,
+    "v2": "public static final String UID = \"8.6.4\";",
+    "resolution": "public static final String UID = \"9.0.1\";",
+    "conflict": "public static final String UID = \"9.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60114,
+    "v2": "public static final String UID = \"8.6.4\";",
+    "resolution": "public static final String UID = \"9.0.1\";",
+    "conflict": "public static final String UID = \"9.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60131,
+    "v2": "public static final String UID = \"8.6.4\";",
+    "resolution": "public static final String UID = \"9.0.1\";",
+    "conflict": "public static final String UID = \"9.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60136,
+    "v2": "public static final String UID = \"8.6.4\";",
+    "resolution": "public static final String UID = \"9.0.1\";",
+    "conflict": "public static final String UID = \"9.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60145,
+    "v2": "public static final String UID = \"8.6.3\";",
+    "resolution": "public static final String UID = \"9.0.0\";",
+    "conflict": "public static final String UID = \"9.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60149,
+    "v2": "public static final String UID = \"8.6.3\";",
+    "resolution": "public static final String UID = \"9.0.0\";",
+    "conflict": "public static final String UID = \"9.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60154,
+    "v2": "public static final String UID = \"8.6.3\";",
+    "resolution": "public static final String UID = \"9.0.0\";",
+    "conflict": "public static final String UID = \"9.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60161,
+    "v2": "public static final String UID = \"8.6.3\";",
+    "resolution": "public static final String UID = \"9.0.0\";",
+    "conflict": "public static final String UID = \"9.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60162,
+    "v2": "public static final String RELEASE = \"8.6.3\";",
+    "resolution": "public static final String RELEASE = \"9.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"9.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60168,
+    "v2": "public static final String UID = \"8.6.3\";",
+    "resolution": "public static final String UID = \"9.0.0\";",
+    "conflict": "public static final String UID = \"9.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60173,
+    "v2": "public static final String UID = \"8.6.3\";",
+    "resolution": "public static final String UID = \"9.0.0\";",
+    "conflict": "public static final String UID = \"9.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60192,
+    "v2": "public static final String UID = \"8.6.3\";",
+    "resolution": "public static final String UID = \"9.0.0\";",
+    "conflict": "public static final String UID = \"9.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60197,
+    "v2": "public static final String UID = \"8.6.3\";",
+    "resolution": "public static final String UID = \"9.0.0\";",
+    "conflict": "public static final String UID = \"9.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60204,
+    "v2": "public static final String RELEASE = \"8.6.2\";",
+    "resolution": "public static final String RELEASE = \"9.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"9.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60218,
+    "v2": "public static final String UID = \"8.6.0.1\";",
+    "resolution": "public static final String UID = \"8.6.1\";",
+    "conflict": "public static final String UID = \"8.6.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60222,
+    "v2": "public static final String UID = \"8.6.0.1\";",
+    "resolution": "public static final String UID = \"8.6.1\";",
+    "conflict": "public static final String UID = \"8.6.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60227,
+    "v2": "public static final String UID = \"8.6.0.1\";",
+    "resolution": "public static final String UID = \"8.6.1\";",
+    "conflict": "public static final String UID = \"8.6.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60233,
+    "v2": "public static final String UID = \"8.6.0.1\";",
+    "resolution": "public static final String UID = \"8.6.1\";",
+    "conflict": "public static final String UID = \"8.6.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60234,
+    "v2": "public static final String RELEASE = \"8.6.0.1\";",
+    "resolution": "public static final String RELEASE = \"8.6.1-FL\";",
+    "conflict": "public static final String RELEASE = \"8.6.1-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60240,
+    "v2": "public static final String UID = \"8.6.0.1\";",
+    "resolution": "public static final String UID = \"8.6.1\";",
+    "conflict": "public static final String UID = \"8.6.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60245,
+    "v2": "public static final String UID = \"8.6.0.1\";",
+    "resolution": "public static final String UID = \"8.6.1\";",
+    "conflict": "public static final String UID = \"8.6.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60261,
+    "v2": "public static final String UID = \"8.6.0.1\";",
+    "resolution": "public static final String UID = \"8.6.1\";",
+    "conflict": "public static final String UID = \"8.6.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60266,
+    "v2": "public static final String UID = \"8.6.0.1\";",
+    "resolution": "public static final String UID = \"8.6.1\";",
+    "conflict": "public static final String UID = \"8.6.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60275,
+    "v2": "public static final String UID = \"8.5.2.1\";",
+    "resolution": "public static final String UID = \"8.6.0\";",
+    "conflict": "public static final String UID = \"8.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60279,
+    "v2": "public static final String UID = \"8.5.2.1\";",
+    "resolution": "public static final String UID = \"8.6.0\";",
+    "conflict": "public static final String UID = \"8.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60284,
+    "v2": "public static final String UID = \"8.5.2.1\";",
+    "resolution": "public static final String UID = \"8.6.0\";",
+    "conflict": "public static final String UID = \"8.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60290,
+    "v2": "public static final String UID = \"8.5.2.1\";",
+    "resolution": "public static final String UID = \"8.6.0\";",
+    "conflict": "public static final String UID = \"8.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60291,
+    "v2": "public static final String RELEASE = \"8.5.2.1\";",
+    "resolution": "public static final String RELEASE = \"8.6.0-FL\";",
+    "conflict": "public static final String RELEASE = \"8.6.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60297,
+    "v2": "public static final String UID = \"8.5.2.1\";",
+    "resolution": "public static final String UID = \"8.6.0\";",
+    "conflict": "public static final String UID = \"8.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60302,
+    "v2": "public static final String UID = \"8.5.2.1\";",
+    "resolution": "public static final String UID = \"8.6.0\";",
+    "conflict": "public static final String UID = \"8.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60315,
+    "v2": "public static final String UID = \"8.5.2.1\";",
+    "resolution": "public static final String UID = \"8.6.0\";",
+    "conflict": "public static final String UID = \"8.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60320,
+    "v2": "public static final String UID = \"8.5.2.1\";",
+    "resolution": "public static final String UID = \"8.6.0\";",
+    "conflict": "public static final String UID = \"8.6.0\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 60327,
+    "v2": "public static final String RELEASE = \"8.6.0-FL\";",
+    "resolution": "public static final String RELEASE = \"8.6.0-FL\";",
+    "conflict": "public static final String RELEASE = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60343,
+    "v2": "public static final String UID = \"8.5.1.2\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60347,
+    "v2": "public static final String UID = \"8.5.1.2\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60352,
+    "v2": "public static final String UID = \"8.5.1.2\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60358,
+    "v2": "public static final String UID = \"8.5.1.2\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60359,
+    "v2": "public static final String RELEASE = \"8.5.1.2\";",
+    "resolution": "public static final String RELEASE = \"8.5.2-FL\";",
+    "conflict": "public static final String RELEASE = \"8.5.2-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60365,
+    "v2": "public static final String UID = \"8.5.1.2\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60371,
+    "v2": "public static final String UID = \"8.5.1.2\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60385,
+    "v2": "public static final String UID = \"8.5.1.2\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60390,
+    "v2": "public static final String UID = \"8.5.1.2\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60398,
+    "v2": "public static final String UID = \"8.5.1.1\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60402,
+    "v2": "public static final String UID = \"8.5.1.1\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60407,
+    "v2": "public static final String UID = \"8.5.1.1\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60413,
+    "v2": "public static final String UID = \"8.5.1.1\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60414,
+    "v2": "public static final String RELEASE = \"8.5.1.1\";",
+    "resolution": "public static final String RELEASE = \"8.5.2-FL\";",
+    "conflict": "public static final String RELEASE = \"8.5.2-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60420,
+    "v2": "public static final String UID = \"8.5.1.1\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60425,
+    "v2": "public static final String UID = \"8.5.1.1\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60438,
+    "v2": "public static final String UID = \"8.5.1.1\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60443,
+    "v2": "public static final String UID = \"8.5.1.1\";",
+    "resolution": "public static final String UID = \"8.5.2\";",
+    "conflict": "public static final String UID = \"8.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60451,
+    "v2": "public static final String UID = \"8.0.6\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60455,
+    "v2": "public static final String UID = \"8.0.6\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60460,
+    "v2": "public static final String UID = \"8.0.6\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60466,
+    "v2": "public static final String UID = \"8.0.6\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60467,
+    "v2": "public static final String RELEASE = \"8.0.6-FL\";",
+    "resolution": "public static final String RELEASE = \"8.5.0-FL\";",
+    "conflict": "public static final String RELEASE = \"8.5.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60473,
+    "v2": "public static final String UID = \"8.0.6\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60478,
+    "v2": "public static final String UID = \"8.0.6\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60491,
+    "v2": "public static final String UID = \"8.0.6\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60496,
+    "v2": "public static final String UID = \"8.0.6\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60504,
+    "v2": "public static final String UID = \"8.0.5\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60508,
+    "v2": "public static final String UID = \"8.0.5\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60513,
+    "v2": "public static final String UID = \"8.0.5\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60519,
+    "v2": "public static final String UID = \"8.0.5\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60520,
+    "v2": "public static final String RELEASE = \"8.0.5-FL\";",
+    "resolution": "public static final String RELEASE = \"8.5.0-FL\";",
+    "conflict": "public static final String RELEASE = \"8.5.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60526,
+    "v2": "public static final String UID = \"8.0.5\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60532,
+    "v2": "public static final String UID = \"8.0.5\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60546,
+    "v2": "public static final String UID = \"8.0.5\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60551,
+    "v2": "public static final String UID = \"8.0.5\";",
+    "resolution": "public static final String UID = \"8.5.0\";",
+    "conflict": "public static final String UID = \"8.5.0\";"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 60557,
+    "v2": "import java.lang.reflect.Method;",
+    "resolution": "import java.util.HashMap;import java.lang.reflect.Method;",
+    "conflict": "import java.util.HashMap;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60559,
+    "v2": "",
+    "resolution": "import org.zkoss.zel.StaticFieldELResolver; import org.zkoss.zel.impl.stream.StreamELResolverImpl;",
+    "conflict": "import org.zkoss.zel.StaticFieldELResolver; import org.zkoss.zel.impl.stream.StreamELResolverImpl;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60562,
+    "v2": "if(comp.getPage()==null){",
+    "resolution": "if (comp.getPage() == null && !(comp instanceof ShadowElement)) {",
+    "conflict": "if (comp.getPage() == null && !(comp instanceof ShadowElement)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60563,
+    "v2": "if(getExtension().isLifeCycleHandling(comp)){",
+    "resolution": "if (getExtension().isLifeCycleHandling(comp)) {",
+    "conflict": "if (getExtension().isLifeCycleHandling(comp)) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 60565,
+    "v2": "import org.zkoss.bind.sys.ReferenceBinding;",
+    "resolution": "import org.zkoss.bind.sys.ReferenceBinding;import org.zkoss.bind.sys.BinderCtrl;",
+    "conflict": "import org.zkoss.bind.sys.BinderCtrl;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 60568,
+    "v2": "if (comp.hasAttribute(BinderImpl.VAR))",
+    "resolution": "if (comp.hasAttribute(BinderImpl.VAR) || bid != null)",
+    "conflict": "if (comp.getAttribute(BinderImpl.VAR) != null || bid != null)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60580,
+    "v2": "public static final String UID = \"7.0.8\";",
+    "resolution": "public static final String UID = \"8.0.1\";",
+    "conflict": "public static final String UID = \"8.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60584,
+    "v2": "public static final String UID = \"7.0.8\";",
+    "resolution": "public static final String UID = \"8.0.1\";",
+    "conflict": "public static final String UID = \"8.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60589,
+    "v2": "public static final String UID = \"7.0.8\";",
+    "resolution": "public static final String UID = \"8.0.1\";",
+    "conflict": "public static final String UID = \"8.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60596,
+    "v2": "public static final String UID = \"7.0.8\";",
+    "resolution": "public static final String UID = \"8.0.1\";",
+    "conflict": "public static final String UID = \"8.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60597,
+    "v2": "public static final String RELEASE = \"7.0.8-FL\";",
+    "resolution": "public static final String RELEASE = \"8.0.1-FL\";",
+    "conflict": "public static final String RELEASE = \"8.0.1-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60603,
+    "v2": "public static final String UID = \"7.0.8\";",
+    "resolution": "public static final String UID = \"8.0.1\";",
+    "conflict": "public static final String UID = \"8.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60609,
+    "v2": "public static final String UID = \"7.0.8\";",
+    "resolution": "public static final String UID = \"8.0.1\";",
+    "conflict": "public static final String UID = \"8.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60622,
+    "v2": "public static final String UID = \"7.0.8\";",
+    "resolution": "public static final String UID = \"8.0.1\";",
+    "conflict": "public static final String UID = \"8.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60627,
+    "v2": "public static final String UID = \"7.0.8\";",
+    "resolution": "public static final String UID = \"8.0.1\";",
+    "conflict": "public static final String UID = \"8.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60647,
+    "v2": "",
+    "resolution": "import org.zkoss.zk.au.AuRequest; import org.zkoss.zk.au.AuService;",
+    "conflict": "import org.zkoss.zk.au.AuRequest; import org.zkoss.zk.au.AuService;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60662,
+    "v2": "public static final String UID = \"7.0.7\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60666,
+    "v2": "public static final String UID = \"7.0.7\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60671,
+    "v2": "public static final String UID = \"7.0.7\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60677,
+    "v2": "public static final String UID = \"7.0.7\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60678,
+    "v2": "public static final String RELEASE = \"7.0.7-FL\";",
+    "resolution": "public static final String RELEASE = \"8.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"8.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60684,
+    "v2": "public static final String UID = \"7.0.7\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60690,
+    "v2": "public static final String UID = \"7.0.7\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60703,
+    "v2": "public static final String UID = \"7.0.7\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60708,
+    "v2": "public static final String UID = \"7.0.7\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60716,
+    "v2": "public static final String UID = \"6.5.8.1\";",
+    "resolution": "public static final String UID = \"6.5.9\";",
+    "conflict": "public static final String UID = \"6.5.9\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60720,
+    "v2": "public static final String UID = \"6.5.8.1\";",
+    "resolution": "public static final String UID = \"6.5.9\";",
+    "conflict": "public static final String UID = \"6.5.9\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60725,
+    "v2": "public static final String UID = \"6.5.8.1\";",
+    "resolution": "public static final String UID = \"6.5.9\";",
+    "conflict": "public static final String UID = \"6.5.9\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60731,
+    "v2": "public static final String UID = \"6.5.8.1\";",
+    "resolution": "public static final String UID = \"6.5.9\";",
+    "conflict": "public static final String UID = \"6.5.9\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60732,
+    "v2": "public static final String RELEASE = \"6.5.8.1\";",
+    "resolution": "public static final String RELEASE = \"6.5.9-FL\";",
+    "conflict": "public static final String RELEASE = \"6.5.9-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60738,
+    "v2": "public static final String UID = \"6.5.8.1\";",
+    "resolution": "public static final String UID = \"6.5.9\";",
+    "conflict": "public static final String UID = \"6.5.9\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60744,
+    "v2": "public static final String UID = \"6.5.8.1\";",
+    "resolution": "public static final String UID = \"6.5.9\";",
+    "conflict": "public static final String UID = \"6.5.9\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60757,
+    "v2": "public static final String UID = \"6.5.8.1\";",
+    "resolution": "public static final String UID = \"6.5.9\";",
+    "conflict": "public static final String UID = \"6.5.9\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60762,
+    "v2": "public static final String UID = \"6.5.8.1\";",
+    "resolution": "public static final String UID = \"6.5.9\";",
+    "conflict": "public static final String UID = \"6.5.9\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60792,
+    "v2": "public static final String UID = \"7.0.5.1\";",
+    "resolution": "public static final String UID = \"7.0.6\";",
+    "conflict": "public static final String UID = \"7.0.6\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60796,
+    "v2": "public static final String UID = \"7.0.5.1\";",
+    "resolution": "public static final String UID = \"7.0.6\";",
+    "conflict": "public static final String UID = \"7.0.6\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60801,
+    "v2": "public static final String UID = \"7.0.5.1\";",
+    "resolution": "public static final String UID = \"7.0.6\";",
+    "conflict": "public static final String UID = \"7.0.6\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60807,
+    "v2": "public static final String UID = \"7.0.5.1\";",
+    "resolution": "public static final String UID = \"7.0.6\";",
+    "conflict": "public static final String UID = \"7.0.6\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60808,
+    "v2": "public static final String RELEASE = \"7.0.5.1\";",
+    "resolution": "public static final String RELEASE = \"7.0.6-FL\";",
+    "conflict": "public static final String RELEASE = \"7.0.6-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60814,
+    "v2": "public static final String UID = \"7.0.5.1\";",
+    "resolution": "public static final String UID = \"7.0.6\";",
+    "conflict": "public static final String UID = \"7.0.6\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60820,
+    "v2": "public static final String UID = \"7.0.5.1\";",
+    "resolution": "public static final String UID = \"7.0.6\";",
+    "conflict": "public static final String UID = \"7.0.6\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60833,
+    "v2": "public static final String UID = \"7.0.5.1\";",
+    "resolution": "public static final String UID = \"7.0.6\";",
+    "conflict": "public static final String UID = \"7.0.6\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60838,
+    "v2": "public static final String UID = \"7.0.5.1\";",
+    "resolution": "public static final String UID = \"7.0.6\";",
+    "conflict": "public static final String UID = \"7.0.6\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60846,
+    "v2": "public static final String UID = \"7.0.6\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60850,
+    "v2": "public static final String UID = \"7.0.6\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60855,
+    "v2": "public static final String UID = \"7.0.6\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60861,
+    "v2": "public static final String UID = \"7.0.6\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60862,
+    "v2": "public static final String RELEASE = \"7.0.6-FL\";",
+    "resolution": "public static final String RELEASE = \"8.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"8.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60868,
+    "v2": "public static final String UID = \"7.0.6\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60874,
+    "v2": "public static final String UID = \"7.0.6\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60887,
+    "v2": "public static final String UID = \"7.0.6\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60892,
+    "v2": "public static final String UID = \"7.0.6\";",
+    "resolution": "public static final String UID = \"8.0.0\";",
+    "conflict": "public static final String UID = \"8.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 60899,
+    "v2": "public static final String RELEASE = \"7.0.5\";",
+    "resolution": "public static final String RELEASE = \"8.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"8.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61008,
+    "v2": "public static final String UID = \"6.5.8\";",
+    "resolution": "public static final String UID = \"7.0.3\";",
+    "conflict": "public static final String UID = \"7.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61012,
+    "v2": "public static final String UID = \"6.5.8\";",
+    "resolution": "public static final String UID = \"7.0.3\";",
+    "conflict": "public static final String UID = \"7.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61017,
+    "v2": "public static final String UID = \"6.5.8\";",
+    "resolution": "public static final String UID = \"7.0.3\";",
+    "conflict": "public static final String UID = \"7.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61023,
+    "v2": "public static final String UID = \"6.5.8\";",
+    "resolution": "public static final String UID = \"7.0.3\";",
+    "conflict": "public static final String UID = \"7.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61024,
+    "v2": "public static final String RELEASE = \"6.5.8-FL\";",
+    "resolution": "public static final String RELEASE = \"7.0.3-FL\";",
+    "conflict": "public static final String RELEASE = \"7.0.3-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61030,
+    "v2": "public static final String UID = \"6.5.8\";",
+    "resolution": "public static final String UID = \"7.0.3\";",
+    "conflict": "public static final String UID = \"7.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61036,
+    "v2": "public static final String UID = \"6.5.8\";",
+    "resolution": "public static final String UID = \"7.0.3\";",
+    "conflict": "public static final String UID = \"7.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61050,
+    "v2": "public static final String UID = \"6.5.8\";",
+    "resolution": "public static final String UID = \"7.0.3\";",
+    "conflict": "public static final String UID = \"7.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61055,
+    "v2": "public static final String UID = \"6.5.8\";",
+    "resolution": "public static final String UID = \"7.0.3\";",
+    "conflict": "public static final String UID = \"7.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61085,
+    "v2": "public static final String UID = \"6.5.7\";",
+    "resolution": "public static final String UID = \"7.0.2\";",
+    "conflict": "public static final String UID = \"7.0.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61089,
+    "v2": "public static final String UID = \"6.5.7\";",
+    "resolution": "public static final String UID = \"7.0.2\";",
+    "conflict": "public static final String UID = \"7.0.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61094,
+    "v2": "public static final String UID = \"6.5.7\";",
+    "resolution": "public static final String UID = \"7.0.2\";",
+    "conflict": "public static final String UID = \"7.0.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61100,
+    "v2": "public static final String UID = \"6.5.7\";",
+    "resolution": "public static final String UID = \"7.0.2\";",
+    "conflict": "public static final String UID = \"7.0.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61101,
+    "v2": "public static final String RELEASE = \"6.5.7-FL\";",
+    "resolution": "public static final String RELEASE = \"7.0.2-FL\";",
+    "conflict": "public static final String RELEASE = \"7.0.2-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61107,
+    "v2": "public static final String UID = \"6.5.7\";",
+    "resolution": "public static final String UID = \"7.0.2\";",
+    "conflict": "public static final String UID = \"7.0.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61113,
+    "v2": "public static final String UID = \"6.5.7\";",
+    "resolution": "public static final String UID = \"7.0.2\";",
+    "conflict": "public static final String UID = \"7.0.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61126,
+    "v2": "public static final String UID = \"6.5.7\";",
+    "resolution": "public static final String UID = \"7.0.2\";",
+    "conflict": "public static final String UID = \"7.0.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61131,
+    "v2": "public static final String UID = \"6.5.7\";",
+    "resolution": "public static final String UID = \"7.0.2\";",
+    "conflict": "public static final String UID = \"7.0.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61202,
+    "v2": "public static final String UID = \"6.5.6\";",
+    "resolution": "public static final String UID = \"7.0.1\";",
+    "conflict": "public static final String UID = \"7.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61206,
+    "v2": "public static final String UID = \"6.5.6\";",
+    "resolution": "public static final String UID = \"7.0.1\";",
+    "conflict": "public static final String UID = \"7.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61211,
+    "v2": "public static final String UID = \"6.5.6\";",
+    "resolution": "public static final String UID = \"7.0.1\";",
+    "conflict": "public static final String UID = \"7.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61217,
+    "v2": "public static final String UID = \"6.5.6\";",
+    "resolution": "public static final String UID = \"7.0.1\";",
+    "conflict": "public static final String UID = \"7.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61218,
+    "v2": "public static final String RELEASE = \"6.5.6-FL\";",
+    "resolution": "public static final String RELEASE = \"7.0.1-FL\";",
+    "conflict": "public static final String RELEASE = \"7.0.1-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61224,
+    "v2": "public static final String UID = \"6.5.6\";",
+    "resolution": "public static final String UID = \"7.0.1\";",
+    "conflict": "public static final String UID = \"7.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61230,
+    "v2": "public static final String UID = \"6.5.6\";",
+    "resolution": "public static final String UID = \"7.0.1\";",
+    "conflict": "public static final String UID = \"7.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61244,
+    "v2": "public static final String UID = \"6.5.6\";",
+    "resolution": "public static final String UID = \"7.0.1\";",
+    "conflict": "public static final String UID = \"7.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61249,
+    "v2": "public static final String UID = \"6.5.6\";",
+    "resolution": "public static final String UID = \"7.0.1\";",
+    "conflict": "public static final String UID = \"7.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61254,
+    "v2": "//'prop:priority' -> object[]{'prop',priority}",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 61275,
+    "v2": "* <p>Default: div (since 7.0.1)",
+    "resolution": "* <p>Default: div (since 7.0.1)",
+    "conflict": "* <p>Default: div"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 61276,
+    "v2": "* <p>Default: div (since 7.0.1)",
+    "resolution": "* <p>Default: div (since 7.0.1)",
+    "conflict": "* <p>Default: div"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 61309,
+    "v2": "import org.zkoss.zk.ui.WebApps;",
+    "resolution": "import org.zkoss.zk.ui.WebApps;import org.zkoss.zk.ui.WebApp;",
+    "conflict": "import org.zkoss.zk.ui.WebApp;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 61417,
+    "v2": "* <p>The other case to invoke this method is if you'd like to redirect",
+    "resolution": "* <p>The other case to invoke this method is if you'd like to redirect",
+    "conflict": "* <p>The other case to invoke this method is if you'd liked to redirect"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61426,
+    "v2": "public static final String UID = \"6.5.5\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61430,
+    "v2": "public static final String UID = \"6.5.5\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61435,
+    "v2": "public static final String UID = \"6.5.5\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61445,
+    "v2": "public static final String UID = \"6.5.5\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61446,
+    "v2": "public static final String RELEASE = \"6.5.5-FL\";",
+    "resolution": "public static final String RELEASE = \"7.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"7.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61454,
+    "v2": "public static final String UID = \"6.5.5\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61460,
+    "v2": "public static final String UID = \"6.5.5\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61473,
+    "v2": "public static final String UID = \"6.5.5\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61478,
+    "v2": "public static final String UID = \"6.5.5\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61542,
+    "v2": "public static final String UID = \"6.5.4\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61546,
+    "v2": "public static final String UID = \"6.5.4\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61551,
+    "v2": "public static final String UID = \"6.5.4\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61558,
+    "v2": "public static final String UID = \"6.5.4\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61559,
+    "v2": "public static final String RELEASE = \"6.5.4-FL\";",
+    "resolution": "public static final String RELEASE = \"7.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"7.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61565,
+    "v2": "public static final String UID = \"6.5.4\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61571,
+    "v2": "public static final String UID = \"6.5.4\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61590,
+    "v2": "public static final String UID = \"6.5.4\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61595,
+    "v2": "public static final String UID = \"6.5.4\";",
+    "resolution": "public static final String UID = \"7.0.0\";",
+    "conflict": "public static final String UID = \"7.0.0\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 61672,
+    "v2": "public boolean deregister(Theme theme);",
+    "resolution": "public boolean deregister(Theme theme);",
+    "conflict": "public boolean deregister(String themeName);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 61674,
+    "v2": "private static boolean _customThemeRegistry = false;  private static boolean _customThemeResolver = false;",
+    "resolution": "private static boolean _customThemeRegistry = false;  private static boolean _customThemeResolver = false;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61733,
+    "v2": "public static final String UID = \"6.0.5\";",
+    "resolution": "public static final String UID = \"6.5.2\";",
+    "conflict": "public static final String UID = \"6.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61737,
+    "v2": "public static final String UID = \"6.0.5\";",
+    "resolution": "public static final String UID = \"6.5.2\";",
+    "conflict": "public static final String UID = \"6.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61742,
+    "v2": "public static final String UID = \"6.0.5\";",
+    "resolution": "public static final String UID = \"6.5.2\";",
+    "conflict": "public static final String UID = \"6.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61750,
+    "v2": "public static final String UID = \"6.0.5\";",
+    "resolution": "public static final String UID = \"6.5.2\";",
+    "conflict": "public static final String UID = \"6.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61751,
+    "v2": "public static final String RELEASE = \"6.0.5-FL\";",
+    "resolution": "public static final String RELEASE = \"6.5.2-FL\";",
+    "conflict": "public static final String RELEASE = \"6.5.2-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61757,
+    "v2": "public static final String UID = \"6.0.5\";",
+    "resolution": "public static final String UID = \"6.5.2\";",
+    "conflict": "public static final String UID = \"6.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61765,
+    "v2": "public static final String UID = \"6.0.5\";",
+    "resolution": "public static final String UID = \"6.5.2\";",
+    "conflict": "public static final String UID = \"6.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61782,
+    "v2": "public static final String UID = \"6.0.5\";",
+    "resolution": "public static final String UID = \"6.5.2\";",
+    "conflict": "public static final String UID = \"6.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61787,
+    "v2": "public static final String UID = \"6.0.5\";",
+    "resolution": "public static final String UID = \"6.5.2\";",
+    "conflict": "public static final String UID = \"6.5.2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61852,
+    "v2": "public static final String UID = \"6.0.4\";",
+    "resolution": "public static final String UID = \"6.5.1\";",
+    "conflict": "public static final String UID = \"6.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61856,
+    "v2": "public static final String UID = \"6.0.4\";",
+    "resolution": "public static final String UID = \"6.5.1\";",
+    "conflict": "public static final String UID = \"6.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61861,
+    "v2": "public static final String UID = \"6.0.4\";",
+    "resolution": "public static final String UID = \"6.5.1\";",
+    "conflict": "public static final String UID = \"6.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61867,
+    "v2": "public static final String UID = \"6.0.4\";",
+    "resolution": "public static final String UID = \"6.5.1\";",
+    "conflict": "public static final String UID = \"6.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61868,
+    "v2": "public static final String RELEASE = \"6.0.4-FL\";",
+    "resolution": "public static final String RELEASE = \"6.5.1-FL\";",
+    "conflict": "public static final String RELEASE = \"6.5.1-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61874,
+    "v2": "public static final String UID = \"6.0.4\";",
+    "resolution": "public static final String UID = \"6.5.1\";",
+    "conflict": "public static final String UID = \"6.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61880,
+    "v2": "public static final String UID = \"6.0.4\";",
+    "resolution": "public static final String UID = \"6.5.1\";",
+    "conflict": "public static final String UID = \"6.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61894,
+    "v2": "public static final String UID = \"6.0.4\";",
+    "resolution": "public static final String UID = \"6.5.1\";",
+    "conflict": "public static final String UID = \"6.5.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61899,
+    "v2": "public static final String UID = \"6.0.4\";",
+    "resolution": "public static final String UID = \"6.5.1\";",
+    "conflict": "public static final String UID = \"6.5.1\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 61934,
+    "v2": "* @since 6.0.3",
+    "resolution": "* @since 6.0.3",
+    "conflict": "* @since 6.5.1"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 61935,
+    "v2": "* @since 6.0.3",
+    "resolution": "* @since 6.0.3",
+    "conflict": "* @since 6.5.1"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 61936,
+    "v2": "* @since 6.0.3",
+    "resolution": "* @since 6.0.3",
+    "conflict": "* @since 6.5.1"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61955,
+    "v2": "public static final String UID = \"6.0.2.1\";",
+    "resolution": "public static final String UID = \"6.0.3\";",
+    "conflict": "public static final String UID = \"6.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61959,
+    "v2": "public static final String UID = \"6.0.2.1\";",
+    "resolution": "public static final String UID = \"6.0.3\";",
+    "conflict": "public static final String UID = \"6.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61964,
+    "v2": "public static final String UID = \"6.0.2.1\";",
+    "resolution": "public static final String UID = \"6.0.3\";",
+    "conflict": "public static final String UID = \"6.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61970,
+    "v2": "public static final String UID = \"6.0.2.1\";",
+    "resolution": "public static final String UID = \"6.0.3\";",
+    "conflict": "public static final String UID = \"6.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61971,
+    "v2": "public static final String RELEASE = \"6.0.2.1\";",
+    "resolution": "public static final String RELEASE = \"6.0.3-FL\";",
+    "conflict": "public static final String RELEASE = \"6.0.3-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61977,
+    "v2": "public static final String UID = \"6.0.2.1\";",
+    "resolution": "public static final String UID = \"6.0.3\";",
+    "conflict": "public static final String UID = \"6.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61983,
+    "v2": "public static final String UID = \"6.0.2.1\";",
+    "resolution": "public static final String UID = \"6.0.3\";",
+    "conflict": "public static final String UID = \"6.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61997,
+    "v2": "public static final String UID = \"6.0.2.1\";",
+    "resolution": "public static final String UID = \"6.0.3\";",
+    "conflict": "public static final String UID = \"6.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62002,
+    "v2": "public static final String UID = \"6.0.2.1\";",
+    "resolution": "public static final String UID = \"6.0.3\";",
+    "conflict": "public static final String UID = \"6.0.3\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62024,
+    "v2": "public static final String UID = \"6.0.3\";",
+    "resolution": "public static final String UID = \"6.5.0\";",
+    "conflict": "public static final String UID = \"6.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62028,
+    "v2": "public static final String UID = \"6.0.3\";",
+    "resolution": "public static final String UID = \"6.5.0\";",
+    "conflict": "public static final String UID = \"6.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62033,
+    "v2": "public static final String UID = \"6.0.3\";",
+    "resolution": "public static final String UID = \"6.5.0\";",
+    "conflict": "public static final String UID = \"6.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62039,
+    "v2": "public static final String UID = \"6.0.3\";",
+    "resolution": "public static final String UID = \"6.5.0\";",
+    "conflict": "public static final String UID = \"6.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62040,
+    "v2": "public static final String RELEASE = \"6.0.3-FL\";",
+    "resolution": "public static final String RELEASE = \"6.5.0-FL\";",
+    "conflict": "public static final String RELEASE = \"6.5.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62046,
+    "v2": "public static final String UID = \"6.0.3\";",
+    "resolution": "public static final String UID = \"6.5.0\";",
+    "conflict": "public static final String UID = \"6.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62052,
+    "v2": "public static final String UID = \"6.0.3\";",
+    "resolution": "public static final String UID = \"6.5.0\";",
+    "conflict": "public static final String UID = \"6.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62065,
+    "v2": "public static final String UID = \"6.0.3\";",
+    "resolution": "public static final String UID = \"6.5.0\";",
+    "conflict": "public static final String UID = \"6.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62070,
+    "v2": "public static final String UID = \"6.0.3\";",
+    "resolution": "public static final String UID = \"6.5.0\";",
+    "conflict": "public static final String UID = \"6.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62081,
+    "v2": "public static final String RELEASE = \"6.0.2\";",
+    "resolution": "public static final String RELEASE = \"6.1.0-FL\";",
+    "conflict": "public static final String RELEASE = \"6.1.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62098,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62103,
+    "v2": "&& !(parent instanceof Tab) && !(parent instanceof LayoutRegion))",
+    "resolution": "&& !(parent instanceof Tab) && !(parent instanceof LayoutRegion))",
+    "conflict": "&& !(parent instanceof Tab))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62104,
+    "v2": "/** Returns the caption of this tab.",
+    "resolution": "/** Returns the caption of this tab.",
+    "conflict": "/** Returns the caption of this window."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62143,
+    "v2": "public static final String UID = \"5.0.12\";",
+    "resolution": "public static final String UID = \"6.0.1\";",
+    "conflict": "public static final String UID = \"6.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62148,
+    "v2": "public static final String UID = \"5.0.12\";",
+    "resolution": "public static final String UID = \"6.0.1\";",
+    "conflict": "public static final String UID = \"6.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62154,
+    "v2": "public static final String UID = \"5.0.12\";",
+    "resolution": "public static final String UID = \"6.0.1\";",
+    "conflict": "public static final String UID = \"6.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62155,
+    "v2": "public static final String RELEASE = \"5.0.12-FL\";",
+    "resolution": "public static final String RELEASE = \"6.0.1-FL\";",
+    "conflict": "public static final String RELEASE = \"6.0.1-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62160,
+    "v2": "public static final String UID = \"5.0.12\";",
+    "resolution": "public static final String UID = \"6.0.1\";",
+    "conflict": "public static final String UID = \"6.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62173,
+    "v2": "public static final String UID = \"5.0.12\";",
+    "resolution": "public static final String UID = \"6.0.1\";",
+    "conflict": "public static final String UID = \"6.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62178,
+    "v2": "public static final String UID = \"5.0.12\";",
+    "resolution": "public static final String UID = \"6.0.1\";",
+    "conflict": "public static final String UID = \"6.0.1\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62186,
+    "v2": "public static final String RELEASE = \"5.0.11\";",
+    "resolution": "public static final String RELEASE = \"6.0.1-FL\";",
+    "conflict": "public static final String RELEASE = \"6.0.1-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62198,
+    "v2": "final Map data = request.getData();",
+    "resolution": "final Map<String, Object> data = request.getData();",
+    "conflict": "final Map<String, Object> data = request.getData();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62201,
+    "v2": "final Map data = request.getData();",
+    "resolution": "final Map<String, Object> data = request.getData();",
+    "conflict": "final Map<String, Object> data = request.getData();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62203,
+    "v2": "private CacheMap _meds;",
+    "resolution": "private CacheMap<String, Media> _meds;",
+    "conflict": "private transient CacheMap<String, Media> _meds;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62205,
+    "v2": "_comps = new HashMap(64);",
+    "resolution": "_comps = new HashMap<String, Component>(64);",
+    "conflict": "_comps = new HashMap<String, Component>(64);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62206,
+    "v2": "/*package*/ Map newInitMap() {",
+    "resolution": "/*package*/ Map<String, Object> newInitMap() {",
+    "conflict": "/*package*/ Map<String, Object> newInitMap() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62207,
+    "v2": "public Map getAttributes() {",
+    "resolution": "public Map<String, Object> getAttributes() {",
+    "conflict": "public Map<String, Object> getAttributes() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62220,
+    "v2": "import org.zkoss.lang.D; import org.zkoss.lang.Library;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62245,
+    "v2": "private int _anchorTop = 0 ; //since ZK 5.0.11 , 6.0.0 anchor position",
+    "resolution": "private int _anchorTop = 0 ; //since 5.0.11/6.0.0 anchor position",
+    "conflict": "private int _anchorTop = 0 ; //since 5.0.11/6.0.0 anchor position"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62247,
+    "v2": "_anchorLeft = 0 ;",
+    "resolution": "_anchorLeft = 0 ;",
+    "conflict": "_anchorLeft = 0 ;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62249,
+    "v2": "final Map data = request.getData();",
+    "resolution": "final Map<String, Object> data = request.getData();",
+    "conflict": "final Map<String, Object> data = request.getData();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62261,
+    "v2": "ResourceCache _cache;",
+    "resolution": "ResourceCache<String, V> _cache;",
+    "conflict": "ResourceCache<String, V> _cache;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62262,
+    "v2": "boolean zkpkg = false;",
+    "resolution": "String pkg = null;",
+    "conflict": "String pkg = null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62264,
+    "v2": "private class WpdLoader extends ExtendletLoader {",
+    "resolution": "private class WpdLoader extends ExtendletLoader<Object> {",
+    "conflict": "private class WpdLoader extends ExtendletLoader<Object> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62265,
+    "v2": "",
+    "resolution": "/** The package name*/ private final String name;",
+    "conflict": "/** The package name*/ private final String name;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62274,
+    "v2": "public static final String UID = \"5.0.11\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62280,
+    "v2": "public static final String UID = \"5.0.11\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62286,
+    "v2": "public static final String UID = \"5.0.11\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62287,
+    "v2": "public static final String RELEASE = \"5.0.11-FL\";",
+    "resolution": "public static final String RELEASE = \"6.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"6.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62292,
+    "v2": "public static final String UID = \"5.0.11\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62305,
+    "v2": "public static final String UID = \"5.0.11\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62310,
+    "v2": "public static final String UID = \"5.0.11\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 62333,
+    "v2": "import org.zkoss.zk.ui.sys.ExecutionCtrl;",
+    "resolution": "import org.zkoss.zk.ui.sys.ExecutionCtrl;import org.zkoss.zk.ui.util.ConventionWires;",
+    "conflict": "import org.zkoss.zk.ui.util.ConventionWires;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62337,
+    "v2": "return !hierarchyDisabled();",
+    "resolution": "return !hierarchyDisabled();",
+    "conflict": "return true;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62338,
+    "v2": "import org.zkoss.lang.D; import org.zkoss.lang.Library;",
+    "resolution": "import org.zkoss.lang.Library;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62345,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62353,
+    "v2": "protected class TreeNodeChildrenList extends AbstractList implements java.io.Serializable {",
+    "resolution": "protected class TreeNodeChildrenList extends AbstractList<TreeNode<E>> implements java.io.Serializable {",
+    "conflict": "protected class TreeNodeChildrenList extends AbstractList<TreeNode<E>> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62378,
+    "v2": "public static final String UID = \"5.0.10\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62383,
+    "v2": "public static final String UID = \"5.0.10\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62389,
+    "v2": "public static final String UID = \"5.0.10\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62390,
+    "v2": "public static final String RELEASE = \"5.0.10-FL\";",
+    "resolution": "public static final String RELEASE = \"6.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"6.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62396,
+    "v2": "public static final String UID = \"5.0.10\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62410,
+    "v2": "public static final String UID = \"5.0.10\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62417,
+    "v2": "public static final String UID = \"5.0.10\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62429,
+    "v2": "public static final String RELEASE = \"5.0.9\";",
+    "resolution": "public static final String RELEASE = \"6.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"6.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62445,
+    "v2": "if (_pgRemoved == null) _pgRemoved = new LinkedHashSet();",
+    "resolution": "if (_pgRemoved == null) _pgRemoved = new LinkedHashSet<Page>();",
+    "conflict": "if (_pgRemoved == null) _pgRemoved = new LinkedHashSet<Page>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62447,
+    "v2": "public void endModal(String evtnm, int button) throws Exception {",
+    "resolution": "public void endModal(String evtnm, Button button) throws Exception {",
+    "conflict": "public void endModal(Button button) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62450,
+    "v2": "infs = config.getClientErrorReloads(getDeviceType(), \"server-push\");",
+    "resolution": "infs = config.getClientErrorReloads(deviceType, \"server-push\");",
+    "conflict": "infs = config.getClientErrorReloads(deviceType, \"server-push\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62463,
+    "v2": "public static final String UID = \"5.0.9\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62468,
+    "v2": "public static final String UID = \"5.0.9\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62475,
+    "v2": "public static final String UID = \"5.0.9\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62476,
+    "v2": "public static final String RELEASE = \"5.0.9-FL\";",
+    "resolution": "public static final String RELEASE = \"6.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"6.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62486,
+    "v2": "public static final String UID = \"5.0.9\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62488,
+    "v2": "protected transient List _variableResolvers = new ArrayList();",
+    "resolution": "protected transient List<VariableResolver> _variableResolvers = new ArrayList<VariableResolver>();",
+    "conflict": "protected List<VariableResolver> _variableResolvers = new ArrayList<VariableResolver>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62506,
+    "v2": "public static final String UID = \"5.0.9\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62511,
+    "v2": "public static final String UID = \"5.0.9\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62523,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"5.0.8\";",
+    "conflict": "public static final String UID = \"3.6.5\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62529,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"5.0.8\";",
+    "conflict": "public static final String UID = \"3.6.5\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62534,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"5.0.8\";",
+    "conflict": "public static final String UID = \"3.6.5\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62535,
+    "v2": "public static final String RELEASE = \"5.0.8\";",
+    "resolution": "public static final String RELEASE = \"5.0.8\";",
+    "conflict": "public static final String RELEASE = \"3.6.5-FL\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62538,
+    "v2": "checkParentChild(this, newChild); ///create _chdinf",
+    "resolution": "checkParentChild(this, newChild); ///create _chdinf",
+    "conflict": "checkParentChild(this, newChild);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62541,
+    "v2": "/*package*/ void removeRoot(Component comp) {",
+    "resolution": "/*package*/ void removeRoot(Component comp) {",
+    "conflict": "public void removeRoot(Component comp) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62543,
+    "v2": "/*package*/ void moveRoot(Component comp, Component refRoot) {",
+    "resolution": "/*package*/ void moveRoot(Component comp, Component refRoot) {",
+    "conflict": "public void moveRoot(Component comp, Component refRoot) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62545,
+    "v2": "compose(); //autocreate",
+    "resolution": "compose(); //autocreate",
+    "conflict": "afterCompose(); //autocreate"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62547,
+    "v2": "private String _prefix, _postfix;",
+    "resolution": "private String _prefix, _postfix;",
+    "conflict": "private String _prefix;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62555,
+    "v2": "} catch (Throwable ex) { ex.printStackTrace(); //not using log since it might be cleaned up",
+    "resolution": "} catch (Throwable ex) { ex.printStackTrace(); //not using log since it might be cleaned up",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62556,
+    "v2": "import java.util.Set; import java.util.HashSet;",
+    "resolution": "import java.util.Set; import java.util.HashSet;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62557,
+    "v2": "private static final long serialVersionUID = 20101123L;",
+    "resolution": "private static final long serialVersionUID = 20101123L;",
+    "conflict": "private static final long serialVersionUID = 20100623L;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62563,
+    "v2": "doneReqIds = rque.clearPerfRequestIds();",
+    "resolution": "doneReqIds = rque.clearPerfRequestIds();",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62572,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"5.0.8\";",
+    "conflict": "public static final String UID = \"3.6.5\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62576,
+    "v2": "* @since 5.0.4",
+    "resolution": "* @since 5.0.4",
+    "conflict": "* @since 3.6.5"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62577,
+    "v2": "* @since 5.0.4",
+    "resolution": "* @since 5.0.4",
+    "conflict": "* @since 3.6.5"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62578,
+    "v2": "import org.zkoss.zul.ListModel;",
+    "resolution": "import org.zkoss.zul.ListModel;",
+    "conflict": "import org.zkoss.zul.GroupsListModel;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62585,
+    "v2": "fixMode(); //becomes defer mode if auto",
+    "resolution": "fixMode();  //becomes defer mode if auto",
+    "conflict": "fixMode();  //becomes defer mode if auto"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62595,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"5.0.8\";",
+    "conflict": "public static final String UID = \"3.6.5\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62600,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"5.0.8\";",
+    "conflict": "public static final String UID = \"3.6.5\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62604,
+    "v2": "final Map attrs = new LinkedHashMap();",
+    "resolution": "final Map<String, String> attrs = new LinkedHashMap<String, String>();",
+    "conflict": "final Map<String, String> attrs = new HashMap<String, String>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62605,
+    "v2": "final Map vars = new LinkedHashMap();",
+    "resolution": "final Map<String, String> vars = new LinkedHashMap<String, String>();",
+    "conflict": "final Map<String, String> vars = new HashMap<String, String>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62606,
+    "v2": "final Map attrs = new LinkedHashMap();",
+    "resolution": "final Map<String, Object> attrs = new LinkedHashMap<String, Object>();",
+    "conflict": "final Map<String, String> attrs = new HashMap<String, String>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62607,
+    "v2": "private class BeforeCreateWireListener implements SerializableEventListener, Express {",
+    "resolution": "private class BeforeCreateWireListener implements SerializableEventListener {",
+    "conflict": "private class BeforeCreateWireListener implements SerializableEventListener {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62640,
+    "v2": "",
+    "resolution": "import org.zkoss.xel.ExpressionFactory;",
+    "conflict": "import org.zkoss.xel.ExpressionFactory;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62642,
+    "v2": "log.error(this+\" client error: \" + data.get(\"message\"));",
+    "resolution": "log.error(this+\" client error: \" + data.get(\"message\"));",
+    "conflict": "log.error(\"Client Error: \" + data.get(\"\"));"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 62643,
+    "v2": "import org.zkoss.lang.Strings;",
+    "resolution": "import org.zkoss.lang.Strings;import static org.zkoss.lang.Generics.cast;",
+    "conflict": "import static org.zkoss.lang.Generics.cast;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62648,
+    "v2": "public class Grid extends MeshElement implements org.zkoss.zul.api.Grid {",
+    "resolution": "public class Grid extends MeshElement {",
+    "conflict": "public class Grid extends MeshElement implements Paginated {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62654,
+    "v2": "public class Tree extends MeshElement implements org.zkoss.zul.api.Tree {",
+    "resolution": "public class Tree extends MeshElement {",
+    "conflict": "public class Tree extends MeshElement implements Paginated {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62656,
+    "v2": "abstract public class MeshElement extends XulElement implements Paginated, org.zkoss.zul.impl.api.MeshElement {",
+    "resolution": "abstract public class MeshElement extends XulElement implements Paginated {",
+    "conflict": "public class MeshElement extends XulElement {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62668,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62670,
+    "v2": "protected class ChildArray extends NotableLinkedList {",
+    "resolution": "protected class ChildArray extends NotableLinkedList<Item> {",
+    "conflict": "protected class ChildArray extends NotableLinkedList<Item> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62671,
+    "v2": "private void checkAdd(Object newVal, Object other, boolean replace) {",
+    "resolution": "private void checkAdd(Item newItem, Item other, boolean replace) {",
+    "conflict": "private void checkAdd(Item newItem, Item other, boolean replace) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62673,
+    "v2": "protected Map _addNamespaces = null;",
+    "resolution": "protected Map<String, Namespace> _addNamespaces = null;",
+    "conflict": "protected Map<String, Namespace> _addNamespaces = null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62674,
+    "v2": "_addNamespaces = new LinkedHashMap(4);",
+    "resolution": "_addNamespaces = new LinkedHashMap<String, Namespace>(4);",
+    "conflict": "_addNamespaces = new LinkedHashMap<String, Namespace>(4);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62675,
+    "v2": "/** @deprecated As of release 5.0.8, it always returns false.",
+    "resolution": "public final List<Attribute> getAttributeItems() {",
+    "conflict": "/** @deprecated As of release 6.0.0, it always returns false."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62676,
+    "v2": "/** @deprecated As of release 5.0.8, it always returns false.",
+    "resolution": "/** @deprecated As of release 6.0.0, it does nothing.",
+    "conflict": "/** @deprecated As of release 6.0.0, it does nothing."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62677,
+    "v2": "elem._addNamespaces = new LinkedHashMap(_addNamespaces);",
+    "resolution": "elem._addNamespaces = new LinkedHashMap<String, Namespace>(_addNamespaces);",
+    "conflict": "elem._addNamespaces = new LinkedHashMap<String, Namespace>(_addNamespaces);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62685,
+    "v2": "public final List getChildren() {",
+    "resolution": "public final List<Item> getChildren() {",
+    "conflict": "public final List<Item> getChildren() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62687,
+    "v2": "protected class ChildArray extends NotableLinkedList {",
+    "resolution": "protected class ChildArray extends NotableLinkedList<Item> {",
+    "conflict": "protected class ChildArray extends NotableLinkedList<Item> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62688,
+    "v2": "private void checkAdd(Object newVal, Object other, boolean replace) {",
+    "resolution": "private void checkAdd(Item newVal, Item other, boolean replace) {",
+    "conflict": "private void checkAdd(Item newVal, Item other, boolean replace) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62689,
+    "v2": "protected void onRemove(Object item) {",
+    "resolution": "protected void onRemove(Item item) {",
+    "conflict": "protected void onRemove(Item item) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62690,
+    "v2": "private Map _usrdta;",
+    "resolution": "private Map<String, Object> _usrdta;",
+    "conflict": "private Map<String, Object> _usrdta;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62691,
+    "v2": "* @deprecated As of release 5.0.8, it always returns false.",
+    "resolution": "* @deprecated As of release 6.0.0, it always returns false.",
+    "conflict": "* @deprecated As of release 6.0.0, it always returns false."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62692,
+    "v2": "* @deprecated As of release 5.0.8, it does nothing.",
+    "resolution": "* @deprecated As of release 6.0.0, it does nothing.",
+    "conflict": "* @deprecated As of release 6.0.0, it does nothing."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62693,
+    "v2": "* @deprecated As of release 5.0.8, it always returns false.",
+    "resolution": "* @deprecated As of release 6.0.0, it always returns false.",
+    "conflict": "* @deprecated As of release 6.0.0, it always returns false."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62694,
+    "v2": "* @deprecated As of release 5.0.8, it does nothing.",
+    "resolution": "* @deprecated As of release 6.0.0, it does nothing.",
+    "conflict": "* @deprecated As of release 6.0.0, it does nothing."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62695,
+    "v2": "* @deprecated As of release 5.0.8, it does nothing.",
+    "resolution": "* @deprecated As of release 6.0.0, it does nothing.",
+    "conflict": "* @deprecated As of release 6.0.0, it does nothing."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62696,
+    "v2": "* @deprecated As of release 5.0.8, replaced with {@link #clone()}.",
+    "resolution": "* @deprecated As of release 6.0.0, replaced with {@link #clone()}.",
+    "conflict": "* @deprecated As of release 6.0.0, replaced with {@link #clone()}."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62699,
+    "v2": "InheritableThreadLocal _thdLocale = new InheritableThreadLocal();",
+    "resolution": "InheritableThreadLocal<DateFormatInfo> _thdLocale = new InheritableThreadLocal<DateFormatInfo>();",
+    "conflict": "InheritableThreadLocal<DateFormatInfo> _thdLocale = new InheritableThreadLocal<DateFormatInfo>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62700,
+    "v2": "DateFormatInfo old = (DateFormatInfo)_thdLocale.get();",
+    "resolution": "DateFormatInfo old = _thdLocale.get();",
+    "conflict": "DateFormatInfo old = _thdLocale.get();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62701,
+    "v2": "return (DateFormatInfo)_thdLocale.get();",
+    "resolution": "return _thdLocale.get();",
+    "conflict": "return _thdLocale.get();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62707,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62716,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62717,
+    "v2": "public static final String RELEASE = \"5.0.8-FL\";",
+    "resolution": "public static final String RELEASE = \"6.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"6.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62719,
+    "v2": "public AuAppendChild(Component comp, Collection contents) {",
+    "resolution": "public AuAppendChild(Component comp, Collection<String> contents) {",
+    "conflict": "public AuAppendChild(Component comp, Collection<String> contents) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62724,
+    "v2": "Set gened = null;",
+    "resolution": "Set<String> gened = null;",
+    "conflict": "Set<String> gened = null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62725,
+    "v2": "gened = new HashSet();",
+    "resolution": "gened = new HashSet<String>();",
+    "conflict": "gened = new HashSet<String>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62727,
+    "v2": "private transient CacheMap _meds;",
+    "resolution": "private transient CacheMap<String, Media> _meds;",
+    "conflict": "private transient CacheMap<String, Media> _meds;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62735,
+    "v2": "_langs = new LinkedList();",
+    "resolution": "_langs = new LinkedList<Object[]>();",
+    "conflict": "_langs = new LinkedList<Object[]>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62745,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62748,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62749,
+    "v2": "Map templatemap = new HashMap(7);",
+    "resolution": "Map<Object, Object> templatemap = new HashMap<Object, Object>(8);",
+    "conflict": "Map<Object, Object> templatemap = new HashMap<Object, Object>(8);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62751,
+    "v2": "Map templatemap = new HashMap(7);",
+    "resolution": "Map<Object, Object> templatemap = new HashMap<Object, Object>(8);",
+    "conflict": "Map<Object, Object> templatemap = new HashMap<Object, Object>(8);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62753,
+    "v2": "Map templatemap = new HashMap(7);",
+    "resolution": "Map<Object, Object> templatemap = new HashMap<Object, Object>(8);",
+    "conflict": "Map<Object, Object> templatemap = new HashMap<Object, Object>(8);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62782,
+    "v2": "public void setOpen(Object obj, boolean open) {",
+    "resolution": "public void setOpen(E obj, boolean open) {",
+    "conflict": "public void setOpen(E obj, boolean open) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62783,
+    "v2": "public boolean isOpen(Object obj) {",
+    "resolution": "public boolean isOpen(E obj) {",
+    "conflict": "public boolean isOpen(E obj) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62784,
+    "v2": "final Comparator cmpr = ascending ? _sortAsc: _sortDsc;",
+    "resolution": "final Comparator<?> cmpr = ascending ? _sortAsc: _sortDsc;",
+    "conflict": "final Comparator<?> cmpr = ascending ? _sortAsc: _sortDsc;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62786,
+    "v2": "if (Objects.equals(it.next(),",
+    "resolution": "if (Objects.equals(it.next(),",
+    "conflict": "if (it.next().equals("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62789,
+    "v2": "",
+    "resolution": "@SuppressWarnings(\"unchecked\")",
+    "conflict": "@SuppressWarnings(\"unchecked\")"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62791,
+    "v2": "implements org.zkoss.zul.api.Menuitem, org.zkoss.zk.ui.ext.Disable {",
+    "resolution": "implements org.zkoss.zk.ui.ext.Disable {",
+    "conflict": "implements org.zkoss.zk.ui.ext.Disable {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62794,
+    "v2": "public class Timebox extends FormatInputElement implements org.zkoss.zul.api.Timebox {",
+    "resolution": "public class Timebox extends FormatInputElement {",
+    "conflict": "public class Timebox extends FormatInputElement {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62795,
+    "v2": "private transient TreeModel _model;",
+    "resolution": "private transient TreeModel<Object> _model;",
+    "conflict": "private transient TreeModel<Object> _model;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62805,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62806,
+    "v2": "implements Constrainted, Readonly, Disable, org.zkoss.zul.impl.api.InputElement {",
+    "resolution": "implements Constrainted, Readonly, Disable {",
+    "conflict": "implements Constrainted, Readonly, Disable {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62811,
+    "v2": "public static final String UID = \"5.0.8\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62813,
+    "v2": "private Map _labels = Collections.EMPTY_MAP;",
+    "resolution": "private Map<Locale, Map<String, ExValue>> _labels = Collections.emptyMap();",
+    "conflict": "private Map<Locale, Map<String, ExValue>> _labels = Collections.emptyMap();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62827,
+    "v2": "public static final String UID = \"5.0.7\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62837,
+    "v2": "public static final String UID = \"5.0.7\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62843,
+    "v2": "public static final String UID = \"5.0.7\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62844,
+    "v2": "public static final String RELEASE = \"5.0.7-FL\";",
+    "resolution": "public static final String RELEASE = \"6.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"6.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62855,
+    "v2": "public static final String UID = \"5.0.7\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62862,
+    "v2": "public static final String UID = \"5.0.7\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62867,
+    "v2": "public static final String UID = \"5.0.7\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62891,
+    "v2": "public class DefaultTreeModel extends AbstractTreeModel",
+    "resolution": "public class DefaultTreeModel<E> extends AbstractTreeModel<TreeNode<E>>",
+    "conflict": "public class DefaultTreeModel<E> extends AbstractTreeModel<TreeNode<E>>"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62894,
+    "v2": "public DefaultTreeNode(Object data) {",
+    "resolution": "public DefaultTreeNode(E data) {",
+    "conflict": "public DefaultTreeNode(E data) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62895,
+    "v2": "public DefaultTreeNode(Object data, boolean nullAsMax) {",
+    "resolution": "public DefaultTreeNode(E data, boolean nullAsMax) {",
+    "conflict": "public DefaultTreeNode(E data, boolean nullAsMax) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62899,
+    "v2": "public class Grid extends MeshElement implements Paginated, org.zkoss.zul.api.Grid {",
+    "resolution": "public class Grid extends MeshElement implements Paginated {",
+    "conflict": "public class Grid extends MeshElement implements Paginated {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62902,
+    "v2": "public class Tree extends MeshElement implements Paginated, org.zkoss.zul.api.Tree {",
+    "resolution": "public class Tree extends MeshElement implements Paginated {",
+    "conflict": "public class Tree extends MeshElement implements Paginated {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62903,
+    "v2": "getChildByNode0(TreeModel model, Treechildren tc, Object parent, Object node) {",
+    "resolution": "getChildByNode0(TreeModel<Object> model, Treechildren tc, Object parent, Object node) {",
+    "conflict": "getChildByNode0(TreeModel<Object> model, Treechildren tc, Object parent, Object node) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62908,
+    "v2": "public Comparator getSortAscending() {",
+    "resolution": "public Comparator<?> getSortAscending() {",
+    "conflict": "public Comparator<?> getSortAscending() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62909,
+    "v2": "public void setSortAscending(Comparator sorter) {",
+    "resolution": "public void setSortAscending(Comparator<?> sorter) {",
+    "conflict": "public void setSortAscending(Comparator<?> sorter) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62910,
+    "v2": "public Comparator getSortDescending() {",
+    "resolution": "public Comparator<?> getSortDescending() {",
+    "conflict": "public Comparator<?> getSortDescending() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62911,
+    "v2": "public void setSortDescending(Comparator sorter) {",
+    "resolution": "public void setSortDescending(Comparator<?> sorter) {",
+    "conflict": "public void setSortDescending(Comparator<?> sorter) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62912,
+    "v2": "private Comparator toComparator(String clsnm)",
+    "resolution": "private Comparator<?> toComparator(String clsnm)",
+    "conflict": "private Comparator<?> toComparator(String clsnm)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62913,
+    "v2": "return (Comparator)cls.newInstance();",
+    "resolution": "return (Comparator<?>)cls.newInstance();",
+    "conflict": "return (Comparator<?>)cls.newInstance();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62916,
+    "v2": "return (String)_attrs.get(Attributes.INCLUDE_CONTEXT_PATH);",
+    "resolution": "return _attrs.get(Attributes.INCLUDE_CONTEXT_PATH);",
+    "conflict": "return _hreq != null ? _hreq.getContextPath(): _attrs.get(Attributes.INCLUDE_CONTEXT_PATH);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62925,
+    "v2": "_pgInvalid = new LinkedHashSet(8);",
+    "resolution": "_pgInvalid = new LinkedHashSet<Page>(4);",
+    "conflict": "_pgInvalid = new LinkedHashSet<Page>(4);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62938,
+    "v2": "public class Panel extends XulElement implements org.zkoss.zul.api.Panel, Framable {",
+    "resolution": "public class Panel extends XulElement implements Framable {",
+    "conflict": "public class Panel extends XulElement implements Framable {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62942,
+    "v2": "return _hreq != null ? _hreq.getContextPath(): (String)_attrs.get(Attributes.INCLUDE_CONTEXT_PATH);",
+    "resolution": "return _hreq != null ? _hreq.getContextPath(): _attrs.get(Attributes.INCLUDE_CONTEXT_PATH);",
+    "conflict": "return _attrs.get(Attributes.INCLUDE_CONTEXT_PATH);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62943,
+    "v2": "return _hreq != null ? _hreq.getPathInfo(): (String)_attrs.get(Attributes.INCLUDE_PATH_INFO);",
+    "resolution": "return _hreq != null ? _hreq.getPathInfo(): _attrs.get(Attributes.INCLUDE_PATH_INFO);",
+    "conflict": "return _attrs.get(Attributes.INCLUDE_PATH_INFO);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62944,
+    "v2": "return _hreq != null ? _hreq.getQueryString(): (String)_attrs.get(Attributes.INCLUDE_QUERY_STRING);",
+    "resolution": "return _hreq != null ? _hreq.getQueryString(): _attrs.get(Attributes.INCLUDE_QUERY_STRING);",
+    "conflict": "return _attrs.get(Attributes.INCLUDE_QUERY_STRING);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62945,
+    "v2": "return _hreq != null ? _hreq.getRequestURI(): (String)_attrs.get(Attributes.INCLUDE_REQUEST_URI);",
+    "resolution": "return _hreq != null ? _hreq.getRequestURI(): _attrs.get(Attributes.INCLUDE_REQUEST_URI);",
+    "conflict": "return _attrs.get(Attributes.INCLUDE_REQUEST_URI);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62946,
+    "v2": "return _hreq != null ? _hreq.getServletPath(): (String)_attrs.get(Attributes.INCLUDE_SERVLET_PATH);",
+    "resolution": "return _hreq != null ? _hreq.getServletPath(): _attrs.get(Attributes.INCLUDE_SERVLET_PATH);",
+    "conflict": "return _attrs.get(Attributes.INCLUDE_SERVLET_PATH);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62966,
+    "v2": "gdata = new LinkedList();",
+    "resolution": "gdata = new LinkedList<D>();",
+    "conflict": "gdata = new ArrayList<D>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62986,
+    "v2": "for (Iterator it = CollectionsX.comodifiableIterator(_execInits); it.hasNext();) {",
+    "resolution": "for (Iterator<ExecutionInit> it = CollectionsX.comodifiableIterator(_execInits); it.hasNext();) {",
+    "conflict": "for (ExecutionInit listener: _execInits) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63000,
+    "v2": "private final List _listenerInfos = new LinkedList();",
+    "resolution": "private final List<ListenerInfo> _listenerInfos = new LinkedList<ListenerInfo>();",
+    "conflict": "private final List<ListenerInfo> _listeners = new LinkedList<ListenerInfo>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63001,
+    "v2": "for (Iterator it = _listenerInfos.iterator();;) {",
+    "resolution": "for (Iterator<ListenerInfo> it = _listenerInfos.iterator();;) {",
+    "conflict": "for (Iterator<ListenerInfo> it = _listeners.iterator();;) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63015,
+    "v2": "Class cls, String macroURI, boolean inline) {",
+    "resolution": "Class<? extends Component> cls, String macroURI, boolean inline) {",
+    "conflict": "Class<? extends Component> cls, String macroURI, String compose, boolean inline) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63022,
+    "v2": "public static final String UID = \"5.0.6\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63026,
+    "v2": "public static final String UID = \"5.0.6\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63031,
+    "v2": "public static final String UID = \"5.0.6\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63032,
+    "v2": "public static final String RELEASE = \"5.0.6-FL\";",
+    "resolution": "public static final String RELEASE = \"6.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"6.0.0-FL\";"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 63033,
+    "v2": "import org.zkoss.zk.ui.ext.BeforeCompose;",
+    "resolution": "import org.zkoss.zk.ui.ext.BeforeCompose;import org.zkoss.zk.ui.sys.ServerPush;",
+    "conflict": "import org.zkoss.zk.ui.sys.ServerPush;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63035,
+    "v2": "Class cls, String macroURI, String compose, boolean inline) {",
+    "resolution": "Class<? extends Component> cls, String macroURI, String compose, boolean inline) {",
+    "conflict": "Class<? extends Component> cls, String macroURI, boolean inline) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63044,
+    "v2": "public static final String UID = \"5.0.6\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63048,
+    "v2": "public static final String UID = \"5.0.6\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63052,
+    "v2": "public static final String UID = \"5.0.6\";",
+    "resolution": "public static final String UID = \"6.0.0\";",
+    "conflict": "public static final String UID = \"6.0.0\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63056,
+    "v2": "private static final long serialVersionUID = 20101025L;",
+    "resolution": "private static final long serialVersionUID = 20101025L;",
+    "conflict": "private static final long serialVersionUID = 20100320L;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63058,
+    "v2": "List responses = getResponses(exec, uv, errs);",
+    "resolution": "List<AuResponse> responses = getResponses(exec, uv, errs);",
+    "conflict": "List<AuResponse> responses = uv.getResponses();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63082,
+    "v2": "final Object old = _ldefByName.put(name, this);",
+    "resolution": "final LanguageDefinition old = _ldefByName.put(name, this);",
+    "conflict": "final LanguageDefinition old = _ldefByName.put(name, this);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63085,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import org.zkoss.html.HTMLs;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63092,
+    "v2": "public static final String UID = \"5.0.5\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63096,
+    "v2": "public static final String UID = \"5.0.5\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63101,
+    "v2": "public static final String UID = \"5.0.5\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63102,
+    "v2": "public static final String RELEASE = \"5.0.5-FL\";",
+    "resolution": "public static final String RELEASE = \"5.5.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.5.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63111,
+    "v2": "public static final String UID = \"5.0.5\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63115,
+    "v2": "public static final String UID = \"5.0.5\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63119,
+    "v2": "public static final String UID = \"5.0.5\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63122,
+    "v2": "public static final String RELEASE = \"5.0.4\";",
+    "resolution": "public static final String RELEASE = \"5.5.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.5.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63146,
+    "v2": "throw new UiException(\"Monitor can be assigned only once\");",
+    "resolution": "throw new UiException(onlyOnce(Monitor.class));",
+    "conflict": "throw new UiException(onlyOnce(Monitor.class));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63147,
+    "v2": "throw new UiException(\"PerformanceMeter can be assigned only once\");",
+    "resolution": "throw new UiException(onlyOnce(PerformanceMeter.class));",
+    "conflict": "throw new UiException(onlyOnce(PerformanceMeter.class));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63148,
+    "v2": "throw new UiException(\"DesktopRecycle can be assigned only once\");",
+    "resolution": "throw new UiException(onlyOnce(DesktopRecycle.class));",
+    "conflict": "throw new UiException(onlyOnce(PerformanceMeter.class));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63156,
+    "v2": "public static final String UID = \"5.0.4\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63160,
+    "v2": "public static final String UID = \"5.0.4\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63165,
+    "v2": "public static final String UID = \"5.0.4\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63166,
+    "v2": "public static final String RELEASE = \"5.0.4-FL\";",
+    "resolution": "public static final String RELEASE = \"5.5.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.5.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63174,
+    "v2": "public static final String UID = \"5.0.4\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63178,
+    "v2": "public static final String UID = \"5.0.4\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63182,
+    "v2": "public static final String UID = \"5.0.4\";",
+    "resolution": "public static final String UID = \"5.5.0\";",
+    "conflict": "public static final String UID = \"5.5.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63188,
+    "v2": "public static final String RELEASE = \"5.0.3\";",
+    "resolution": "public static final String RELEASE = \"5.5.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.5.0-FL\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63196,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import org.zkoss.html.HTMLs;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63205,
+    "v2": "public static final String UID = \"5.0.3\";",
+    "resolution": "public static final String UID = \"5.1.0\";",
+    "conflict": "public static final String UID = \"5.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63209,
+    "v2": "public static final String UID = \"5.0.3\";",
+    "resolution": "public static final String UID = \"5.1.0\";",
+    "conflict": "public static final String UID = \"5.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63273,
+    "v2": "public static final String UID = \"5.0.3\";",
+    "resolution": "public static final String UID = \"5.1.0\";",
+    "conflict": "public static final String UID = \"5.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63274,
+    "v2": "public static final String RELEASE = \"5.0.3-FL\";",
+    "resolution": "public static final String RELEASE = \"5.1.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.1.0-FL\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63275,
+    "v2": "private static final long serialVersionUID = 20100430L;",
+    "resolution": "private static final long serialVersionUID = 20100430L;",
+    "conflict": "private static final long serialVersionUID = 20100402L;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63284,
+    "v2": "public static final String UID = \"5.0.3\";",
+    "resolution": "public static final String UID = \"5.1.0\";",
+    "conflict": "public static final String UID = \"5.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63288,
+    "v2": "public static final String UID = \"5.0.3\";",
+    "resolution": "public static final String UID = \"5.1.0\";",
+    "conflict": "public static final String UID = \"5.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63292,
+    "v2": "public static final String UID = \"5.0.3\";",
+    "resolution": "public static final String UID = \"5.1.0\";",
+    "conflict": "public static final String UID = \"5.1.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63299,
+    "v2": "public static final String RELEASE = \"3.6.4\";",
+    "resolution": "public static final String RELEASE = \"5.0.1-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.1-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63302,
+    "v2": "//20090314, Henri Chen: No way to suppport \"event\" with an event proxy becuase org.zkoss.zk.Event is not an interface",
+    "resolution": "//20090314, Henri Chen: No way to suppport \"event\" with an event proxy because org.zkoss.zk.Event is not an interface",
+    "conflict": "//20090314, Henri Chen: No way to suppport \"event\" with an event proxy because org.zkoss.zk.Event is not an interface"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63315,
+    "v2": "private final Execution getExecution() {",
+    "resolution": "private Execution getExecution() {",
+    "conflict": "private Execution getExecution() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63316,
+    "v2": "* @since 3.6.4",
+    "resolution": "* @since 5.0.1",
+    "conflict": "* @since 5.0.1"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63326,
+    "v2": "",
+    "resolution": "//throw UiException.Aide.wrap(ex);",
+    "conflict": "//throw UiException.Aide.wrap(ex);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63346,
+    "v2": "import org.zkoss.zk.scripting.Namespace;",
+    "resolution": "import org.zkoss.util.logging.Log;",
+    "conflict": "import org.zkoss.util.logging.Log;"
+  },
+  {
+    "devdecision": "None",
+    "id": 63348,
+    "v2": "Div _selected;",
+    "resolution": "Button _selected;",
+    "conflict": "Button _selected;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63349,
+    "v2": "_selected = (Div)self.getFellow(items[i].getCateId());",
+    "resolution": "_selected = (Button)self.getFellow(items[i].getCateId());",
+    "conflict": "_selected = (Button)self.getFellow(items[i].getCateId());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63356,
+    "v2": "transient Div _selected;",
+    "resolution": "transient Button _selected;",
+    "conflict": "transient Button _selected;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63364,
+    "v2": "public static final String UID = \"3.6.4\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63368,
+    "v2": "public static final String UID = \"3.6.4\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63373,
+    "v2": "public static final String UID = \"3.6.4\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63374,
+    "v2": "public static final String RELEASE = \"3.6.4-FL\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-RC\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-RC\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63383,
+    "v2": "public static final String UID = \"3.6.4\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63387,
+    "v2": "public static final String UID = \"3.6.4\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63391,
+    "v2": "public static final String UID = \"3.6.4\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63395,
+    "v2": "public static final String RELEASE = \"3.6.3\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-RC\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-RC\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63419,
+    "v2": "/** Sets the date format.",
+    "resolution": "/** Sets the date format.",
+    "conflict": "/** Sets the date format."
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63456,
+    "v2": "",
+    "resolution": "import org.zkoss.lang.Library;",
+    "conflict": "import org.zkoss.lang.D; import org.zkoss.lang.Library;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63468,
+    "v2": "return attrs();",
+    "resolution": "return getAttributes();",
+    "conflict": "return _attrs.getAttributes();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63475,
+    "v2": "",
+    "resolution": "",
+    "conflict": "init();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63505,
+    "v2": "private String _applied; //uuid of the applied component (for serialization back)",
+    "resolution": "protected String _applied; //uuid of the applied component (for serialization back)",
+    "conflict": "protected String _applied; //uuid of the applied component (for serialization back)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63507,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63518,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63525,
+    "v2": "p.sessDidActivate(page, pageLevelIdSpace); //recursive",
+    "resolution": "p.sessionDidActivate(page); //recursive",
+    "conflict": "p.sessionDidActivate(page); //recursive"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63535,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63536,
+    "v2": "if (size > 1 && prev[2] > index) prev[2] = -1; // reset listgroupfoot",
+    "resolution": "if (size > 1 && prev[2] > index) prev[2] = -1; // reset listgroupfoot",
+    "conflict": "if (size > 1 && prev[2] > index) prev[2] = -1; // reset listgroupfoot"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63537,
+    "v2": "if (g[2] != -1 && g[2] > index) g[2]++;",
+    "resolution": "if (g[2] != -1 && (g[2] >= index || newItem instanceof Listgroupfoot)) g[2]++;",
+    "conflict": "if (g[2] != -1 && (g[2] >= index || newItem instanceof Listgroupfoot)) g[2]++;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63539,
+    "v2": "if (g[2] != -1 && g[2] > index) g[2]++;",
+    "resolution": "if (g[2] != -1 && (g[2] >= index || newItem instanceof Groupfoot)) g[2]++;",
+    "conflict": "if (g[2] != -1 && (g[2] >= index || newItem instanceof Groupfoot)) g[2]++;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63660,
+    "v2": "public static final String UID = \"3.6.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63664,
+    "v2": "public static final String UID = \"3.6.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63669,
+    "v2": "public static final String UID = \"3.6.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63670,
+    "v2": "public static final String RELEASE = \"3.6.3-FL\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63680,
+    "v2": "public static final String UID = \"3.6.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63685,
+    "v2": "public static final String UID = \"3.6.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63689,
+    "v2": "public static final String UID = \"3.6.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63694,
+    "v2": "public static final String UID = \"3.6.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63697,
+    "v2": "public static final String RELEASE = \"3.6.2\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-FL\";"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 63705,
+    "v2": "import org.zkoss.zk.ui.util.PageActivationListener;",
+    "resolution": "import org.zkoss.zk.ui.ext.Includer;import org.zkoss.zk.ui.util.PageActivationListener;",
+    "conflict": "import org.zkoss.zk.ui.ext.Includer;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63707,
+    "v2": "Jun 3, 2009 5:03:50 PM , Created by jumperchen",
+    "resolution": "Jun 3, 2009 5:03:50 PM , Created by jumperchen",
+    "conflict": "2009/6/3 pm 5:07:59 , Created by jumperchen"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63713,
+    "v2": "",
+    "resolution": "import org.zkoss.zk.ui.event.Events;",
+    "conflict": "import org.zkoss.zk.ui.event.Events; import org.zkoss.zk.scripting.Namespace;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63744,
+    "v2": "",
+    "resolution": "import org.zkoss.zk.ui.ext.Includer;",
+    "conflict": "import org.zkoss.zk.ui.ext.DynamicPropertied; import org.zkoss.zk.ui.ext.Includer;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63761,
+    "v2": "smartUpdate(\"z.flex\", _vflex);",
+    "resolution": "smartUpdate(\"vflex\", _vflex);",
+    "conflict": "smartUpdate(\"vflex\", _vflex);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63762,
+    "v2": "invalidate();",
+    "resolution": "smartUpdate(\"fixedLayout\", fixedLayout);",
+    "conflict": "smartUpdate(\"fixedLayout\", fixedLayout);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63764,
+    "v2": "invalidate();",
+    "resolution": "smartUpdate(\"pagingPosition\", pagingPosition);",
+    "conflict": "smartUpdate(\"pagingPosition\", pagingPosition);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63766,
+    "v2": "smartUpdate(\"z.model\", \"true\");",
+    "resolution": "smartUpdate(\"model\", true);",
+    "conflict": "smartUpdate(\"model\", true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63767,
+    "v2": "smartUpdate(\"z.model\", null);",
+    "resolution": "smartUpdate(\"model\", false);",
+    "conflict": "smartUpdate(\"model\", false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63770,
+    "v2": "smartUpdate(\"z.innerWidth\", innerWidth);",
+    "resolution": "smartUpdate(\"innerWidth\", innerWidth);",
+    "conflict": "smartUpdate(\"innerWidth\", innerWidth);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63773,
+    "v2": "smartUpdate(\"z.scOddRow\", scls);",
+    "resolution": "smartUpdate(\"oddRowSclass\", scls);",
+    "conflict": "smartUpdate(\"oddRowSclass\", scls);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63783,
+    "v2": "public static final String UID = \"3.6.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63787,
+    "v2": "public static final String UID = \"3.6.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63792,
+    "v2": "public static final String UID = \"3.6.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63793,
+    "v2": "public static final String RELEASE = \"3.6.2-FL\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63803,
+    "v2": "public static final String UID = \"3.6.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63809,
+    "v2": "public static final String UID = \"3.6.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63813,
+    "v2": "public static final String UID = \"3.6.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63818,
+    "v2": "public static final String UID = \"3.6.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63822,
+    "v2": "public static final String UID = \"3.6.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63826,
+    "v2": "public static final String UID = \"3.6.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63830,
+    "v2": "public static final String RELEASE = \"3.6.1\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-FL\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63836,
+    "v2": "addAttribute(parent, null, attnm, attval, cond, el.getLocator());",
+    "resolution": "addAttribute(parent, attr.getNamespace(), attnm, attval, cond, el.getLocator());",
+    "conflict": "addAttribute(parent, attr.getNamespace(), attnm, attval, cond);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63844,
+    "v2": "private String _bgcolor;",
+    "resolution": "private String _quality = \"hight\";",
+    "conflict": "private String _quality = \"hight\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63847,
+    "v2": "public interface Applet extends org.zkoss.zul.impl.api.XulElement {",
+    "resolution": "public interface Applet extends org.zkoss.zk.ui.api.HtmlBasedComponent {",
+    "conflict": "public interface Applet extends org.zkoss.zk.ui.api.HtmlBasedComponent {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63849,
+    "v2": "smartUpdateDeferred(\"z.hvig\", new EncodedHoverURL());",
+    "resolution": "smartUpdate(\"hover\", new EncodedHoverURL());",
+    "conflict": "smartUpdate(\"hover\", new EncodedHoverURL());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63850,
+    "v2": "smartUpdateDeferred(\"z.hvig\", new EncodedHoverURL());",
+    "resolution": "smartUpdate(\"hover\", new EncodedHoverURL());",
+    "conflict": "smartUpdate(\"hover\", new EncodedHoverURL());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63852,
+    "v2": "public String getValue() {",
+    "resolution": "public Object getValue() {",
+    "conflict": "public Object getValue() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63878,
+    "v2": "public static final String UID = \"3.6.1\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63882,
+    "v2": "public static final String UID = \"3.6.1\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63887,
+    "v2": "public static final String UID = \"3.6.1\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63888,
+    "v2": "public static final String RELEASE = \"3.6.1-FL\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63899,
+    "v2": "public static final String UID = \"3.6.1\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63905,
+    "v2": "public static final String UID = \"3.6.1\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63909,
+    "v2": "public static final String UID = \"3.6.1\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63914,
+    "v2": "public static final String UID = \"3.6.1\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63919,
+    "v2": "public static final String UID = \"3.6.1\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63923,
+    "v2": "public static final String UID = \"3.6.1\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63930,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63934,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63942,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63943,
+    "v2": "public static final String RELEASE = \"3.6.0\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63962,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63975,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63980,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63985,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63999,
+    "v2": "",
+    "resolution": "private String _sortAscNm = \"none\"; private String _sortDscNm = \"none\";",
+    "conflict": "private String _sortAscNm = \"none\"; private String _sortDscNm = \"none\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64011,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64016,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64019,
+    "v2": "* Since 3.5.3: if quote is (char)1, then both ' and \" are accepted.</br>",
+    "resolution": "* Since 3.6.0: if quote is (char)1, then both ' and \" are accepted.</br>",
+    "conflict": "* Since 3.6.0: if quote is (char)1, then both ' and \" are accepted.</br>"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64086,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64091,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64096,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64097,
+    "v2": "public static final String RELEASE = \"3.5.3-FL\";",
+    "resolution": "public static final String RELEASE = \"3.6.0-FL\";",
+    "conflict": "public static final String RELEASE = \"3.6.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64135,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64151,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64161,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64166,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64172,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64176,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 64180,
+    "v2": "//click-filter-delay //  disable-behind-modal",
+    "resolution": "//click-filter-delay //  keep-across-visits",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64184,
+    "v2": "} else if (!Strings.isBlank(type) && type.startsWith(\"auto\")) {",
+    "resolution": "} else if (type.startsWith(\"auto\")) {",
+    "conflict": "} else if (type.startsWith(\"auto\")) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64224,
+    "v2": "_zclass;",
+    "resolution": "_zclass;",
+    "conflict": "_zclass;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64229,
+    "v2": "return _zclass == null ? \"z-window-\" + getMode() : _zclass;",
+    "resolution": "return _zclass == null ? \"z-window-\" + getMode() : _zclass;",
+    "conflict": "return _zclass != null ? _zclass: \"z-window-\" + getMode();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64237,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64241,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64246,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64247,
+    "v2": "public static final String RELEASE = \"3.5.3-FL\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64249,
+    "v2": "_ctx.setAttribute(ATTR_LAYOUT_SERVLET, this);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64260,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64266,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64270,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64275,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64281,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64285,
+    "v2": "public static final String UID = \"3.5.3\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64288,
+    "v2": "public static final String RELEASE = \"3.5.2\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64292,
+    "v2": "public static final String RELEASE = \"3.5.2\";",
+    "resolution": "public static final String RELEASE = \"3.6.0-FL\";",
+    "conflict": "public static final String RELEASE = \"3.6.0-FL\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64299,
+    "v2": "String img = isDefault ? \"/img/Centigrade-Widget-Icons/ButtonGray.png\" : \"/img/Centigrade-Widget-Icons/ButtonBlue.png\";",
+    "resolution": "String img = isDefault ? \"/img/Centigrade-Widget-Icons/ButtonGray.png\" : \"/img/Centigrade-Widget-Icons/ButtonBlue.png\";",
+    "conflict": "String img = isDefault ? \"/img/ButtonGray.png\" : \"/img/ButtonBlue.png\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64300,
+    "v2": "icon.setSrc(\"/img/Centigrade-Widget-Icons/EnvelopeOpen-16x16.png\");",
+    "resolution": "icon.setSrc(\"/img/Centigrade-Widget-Icons/EnvelopeOpen-16x16.png\");",
+    "conflict": "icon.setSrc(\"/img/EnvelopeOpen-16x16.png\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64328,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64332,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64337,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64338,
+    "v2": "public static final String RELEASE = \"3.6.0-FL\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64349,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64355,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64359,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64364,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64370,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64374,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64382,
+    "v2": "public org.zkoss.zul.api.Listitem getSelectedItemApi() {",
+    "resolution": "public org.zkoss.zul.api.Listitem getSelectedItemApi() {",
+    "conflict": "public org.zkoss.zul.api.Listitem getSelectedItemApi() {"
+  },
+  {
+    "devdecision": "None",
+    "id": 64395,
+    "v2": "import org.zkoss.zk.ui.ext.render.ChildChangedAware;",
+    "resolution": "",
+    "conflict": "import org.zkoss.zk.au.out.AuInvoke;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64399,
+    "v2": "* @since 3.5.2",
+    "resolution": "* @since 3.5.2",
+    "conflict": "* @since 5.0.0"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64402,
+    "v2": "if (extra != null) (sw != null ? (Writer)sw: response.getWriter()).write(extra);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64419,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64423,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64428,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64429,
+    "v2": "public static final String RELEASE = \"3.5.2-FL\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64440,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64446,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64450,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64455,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64461,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64465,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64471,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64475,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64480,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64481,
+    "v2": "public static final String RELEASE = \"3.5.2-FL\";",
+    "resolution": "public static final String RELEASE = \"3.6.0-FL\";",
+    "conflict": "public static final String RELEASE = \"3.6.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64490,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64496,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64500,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64505,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64510,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64514,
+    "v2": "public static final String UID = \"3.5.2\";",
+    "resolution": "public static final String UID = \"3.6.0\";",
+    "conflict": "public static final String UID = \"3.6.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64520,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64524,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64529,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64530,
+    "v2": "public static final String RELEASE = \"3.6.0-FL\";",
+    "resolution": "public static final String RELEASE = \"5.0.0-FL\";",
+    "conflict": "public static final String RELEASE = \"5.0.0-FL\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64539,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64545,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64549,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64554,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64560,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64564,
+    "v2": "public static final String UID = \"3.6.0\";",
+    "resolution": "public static final String UID = \"5.0.0\";",
+    "conflict": "public static final String UID = \"5.0.0\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64591,
+    "v2": "public static final String RELEASE = \"3.0.4\";",
+    "resolution": "public static final String RELEASE = \"3.0.4\";",
+    "conflict": "public static final String RELEASE = \"3.0.4-FL\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64598,
+    "v2": "public static final String UID = \"3.0.3\";",
+    "resolution": "public static final String UID = \"3.0.3\";",
+    "conflict": "public static final String UID = \"3.0.1\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64602,
+    "v2": "public static final String UID = \"3.0.3\";",
+    "resolution": "public static final String UID = \"3.0.3\";",
+    "conflict": "public static final String UID = \"3.0.1\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64613,
+    "v2": "public static final String UID = \"3.0.3\";",
+    "resolution": "public static final String UID = \"3.0.3\";",
+    "conflict": "public static final String UID = \"3.0.1\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64614,
+    "v2": "public static final String RELEASE = \"3.0.3\";",
+    "resolution": "public static final String RELEASE = \"3.0.3\";",
+    "conflict": "public static final String RELEASE = \"3.0.1-FL\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64616,
+    "v2": "protected AbstractNS(NameSpace parent, BshClassManager classManager,",
+    "resolution": "protected AbstractNS(NameSpace parent, BshClassManager classManager,",
+    "conflict": "protected GlobalNS(NameSpace parent, BshClassManager classManager,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64626,
+    "v2": "public static final String UID = \"3.0.3\";",
+    "resolution": "public static final String UID = \"3.0.3\";",
+    "conflict": "public static final String UID = \"3.0.1\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64632,
+    "v2": "public static final String UID = \"3.0.3\";",
+    "resolution": "public static final String UID = \"3.0.3\";",
+    "conflict": "public static final String UID = \"3.0.1\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64636,
+    "v2": "public static final String UID = \"3.0.3\";",
+    "resolution": "public static final String UID = \"3.0.3\";",
+    "conflict": "public static final String UID = \"3.0.1\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64641,
+    "v2": "public static final String UID = \"3.0.3\";",
+    "resolution": "public static final String UID = \"3.0.3\";",
+    "conflict": "public static final String UID = \"3.0.1\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64647,
+    "v2": "private String _type = PIE; //chart type (pie, ring, bar, line, xy, etc)",
+    "resolution": "private String _type = PIE; //chart type (pie, ring, bar, line, xy, etc)",
+    "conflict": "private String _type = \"pie\"; //chart type (pie, ring, bar, line, xy, etc)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64648,
+    "v2": "public static final String UID = \"3.0.3\";",
+    "resolution": "public static final String UID = \"3.0.3\";",
+    "conflict": "public static final String UID = \"3.0.1\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64652,
+    "v2": "public static final String UID = \"3.0.3\";",
+    "resolution": "public static final String UID = \"3.0.3\";",
+    "conflict": "public static final String UID = \"3.0.1\";"
+  }
+]
+}

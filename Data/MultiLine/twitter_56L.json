@@ -1,0 +1,87 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 8835,
+    "v2": "if (!json.isNull(\"quoted_status_permalink\")) { quotedStatusPermalink = new QuotedStatusPermalinkJSONImpl(json.getJSONObject(\"quoted_status_permalink\"));",
+    "resolution": "if (!json.isNull(\"display_text_range\")) { JSONArray indicesArray = json.getJSONArray(\"display_text_range\"); displayTextRangeStart = indicesArray.getInt(0); displayTextRangeEnd = indicesArray.getInt(1);",
+    "conflict": "if (!json.isNull(\"display_text_range\")) { JSONArray indicesArray = json.getJSONArray(\"display_text_range\"); displayTextRangeStart = indicesArray.getInt(0); displayTextRangeEnd = indicesArray.getInt(1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8847,
+    "v2": "long getTweetVolume();",
+    "resolution": "/** * The tweet volume for the last 24 hours if availabe, -1 otherwise. */ int getTweetVolume();",
+    "conflict": "/** * The tweet volume for the last 24 hours if availabe, -1 otherwise. */ int getTweetVolume();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8853,
+    "v2": "long getTweetVolume();",
+    "resolution": "/** * The tweet volume for the last 24 hours if available, -1 otherwise. */ int getTweetVolume();",
+    "conflict": "/** * The tweet volume for the last 24 hours if available, -1 otherwise. */ int getTweetVolume();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8858,
+    "v2": "HttpParameter[] parameters = null; if (conf.isIncludeEmailEnabled()) { parameters = new HttpParameter[] { new HttpParameter(\"include_email\", true) }; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8892,
+    "v2": "ensureAuthorizationEnabled(); return factory.createStatusList(get(conf.getRestBaseURL() + \"favorites/list.json\" , mergeParameters(new HttpParameter[]{new HttpParameter(\"user_id\", userId)} , paging.asPostParameterArray())));",
+    "resolution": "return factory.createStatusList(get(conf.getRestBaseURL() + \"favorites/list.json\" , mergeParameters(new HttpParameter[]{new HttpParameter(\"user_id\", userId)} , paging.asPostParameterArray())));",
+    "conflict": "return factory.createStatusList(get(conf.getRestBaseURL() + \"favorites/list.json?user_id=\" + userId, paging.asPostParameterArray()));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8893,
+    "v2": "ensureAuthorizationEnabled(); return factory.createStatusList(get(conf.getRestBaseURL() + \"favorites/list.json\" , mergeParameters(new HttpParameter[]{new HttpParameter(\"screen_name\", screenName)} , paging.asPostParameterArray())));",
+    "resolution": "return factory.createStatusList(get(conf.getRestBaseURL() + \"favorites/list.json\" , mergeParameters(new HttpParameter[]{new HttpParameter(\"screen_name\", screenName)} , paging.asPostParameterArray())));",
+    "conflict": "return factory.createStatusList(get(conf.getRestBaseURL() + \"favorites/list.json?screen_name=\" + screenName, paging.asPostParameterArray()));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8898,
+    "v2": "\", myRetweetedStatus=\" + myRetweetedStatus + \", contributors=\" + (contributorsIDs == null ? null : Arrays.asList(contributorsIDs)) + \", annotations=\" + annotations +",
+    "resolution": "\", isPossiblySensitive=\" + isPossiblySensitive + \", contributorsIDs=\" + contributorsIDs + \", retweetedStatus=\" + retweetedStatus +",
+    "conflict": "\", wasRetweetedByMe=\" + wasRetweetedByMe + \", isPossiblySensitive=\" + isPossiblySensitive + \", contributorsIDs=\" + contributorsIDs +"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8902,
+    "v2": "import static twitter4j.internal.util.z_T4JInternalParseUtil.getBoolean; import static twitter4j.internal.util.z_T4JInternalParseUtil.getDate; import static twitter4j.internal.util.z_T4JInternalParseUtil.getUnescapedEntityString; import static twitter4j.internal.util.z_T4JInternalParseUtil.getLong; import static twitter4j.internal.util.z_T4JInternalParseUtil.getUnescapedString;",
+    "resolution": "import static twitter4j.internal.util.z_T4JInternalParseUtil.getBoolean; import static twitter4j.internal.util.z_T4JInternalParseUtil.getDate; import static twitter4j.internal.util.z_T4JInternalParseUtil.getUnescapedEntityString; import static twitter4j.internal.util.z_T4JInternalParseUtil.getLong; import static twitter4j.internal.util.z_T4JInternalParseUtil.getUnescapedString;",
+    "conflict": "import static twitter4j.internal.util.z_T4JInternalParseUtil.*;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8909,
+    "v2": "try { return factory.createUserList(res.asJSONObject().getJSONArray(\"users\"), res); } catch (JSONException jsone) { throw new TwitterException(jsone); }",
+    "resolution": "return factory.createUserListFromJSONArray_Users(res);",
+    "conflict": "return factory.createUserListFromJSONArray_Users(res);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8933,
+    "v2": "}; params = appendHttpParameters(params, additionalParams);",
+    "resolution": "return upload(new HttpParameter[]{ new HttpParameter(\"media\", image) });",
+    "conflict": "new HttpParameter(\"media\", image) }; return upload(params); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8939,
+    "v2": "} else if (!json.isNull(\"delete\")) {",
+    "resolution": "} else if (!json.isNull (\"direct_message\")) { userStreamListener.onDirectMessage (new DirectMessageJSONImpl (json.getJSONObject (\"direct_message\"))); } else if (!json.isNull(\"delete\")) {",
+    "conflict": "} else if (!json.isNull (\"direct_message\")) { userStreamListener.onDirectMessage (new DirectMessageJSONImpl (json.getJSONObject (\"direct_message\"))); } else if (!json.isNull(\"delete\")) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8965,
+    "v2": "",
+    "resolution": "/** * * @return user id * @since Twitter4J 2.0.4 */",
+    "conflict": "/** * * @return user id * @since Twitter4J 2.0.4 */"
+  }
+]
+}

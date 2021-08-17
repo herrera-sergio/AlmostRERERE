@@ -1,0 +1,507 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 2",
+    "id": 10761,
+    "v2": "import java.util.Set; import java.util.concurrent.ConcurrentHashMap; import java.util.concurrent.CopyOnWriteArraySet;",
+    "resolution": "import java.util.Set; import java.util.concurrent.ConcurrentHashMap; import java.util.concurrent.CopyOnWriteArraySet;",
+    "conflict": "import java.util.concurrent.ConcurrentHashMap;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10763,
+    "v2": "public Set<String> getClientSessions() { return clientSessions; }",
+    "resolution": "public Set<String> getClientSessions() { return clientSessions; }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10778,
+    "v2": "",
+    "resolution": "",
+    "conflict": "if (iterations == -1) { iterations = defaultIterations; }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10787,
+    "v2": "import javax.ws.rs.container.AsyncResponse; import javax.ws.rs.container.Suspended;",
+    "resolution": "import javax.ws.rs.container.AsyncResponse; import javax.ws.rs.container.Suspended;",
+    "conflict": "import javax.ws.rs.QueryParam;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10790,
+    "v2": "public static List<Permission> permits(List<Result> evaluation, AuthorizationProvider authorizationProvider, String resourceServerId) { Map<String, Permission> permissions = new HashMap<>();",
+    "resolution": "public static List<Permission> permits(List<Result> evaluation, AuthorizationProvider authorizationProvider, String resourceServerId) { Map<String, Permission> permissions = new HashMap<>();",
+    "conflict": "public static List<Permission> permits(List<Result> evaluation, AuthorizationRequestMetadata metadata, AuthorizationProvider authorizationProvider, ResourceServer resourceServer) { Map<String, Permission> permissions = new LinkedHashMap<>();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10832,
+    "v2": "@Consumes(MediaType.TEXT_PLAIN) @Produces(MediaType.TEXT_PLAIN)",
+    "resolution": "@Consumes(MediaType.TEXT_PLAIN) @Produces(MediaType.TEXT_PLAIN)",
+    "conflict": "@Consumes(MediaType.TEXT_PLAIN_UTF_8) @Produces(MediaType.TEXT_PLAIN_UTF_8)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 10856,
+    "v2": "Element filterMapping = webXmlDoc.createElement(\"filter-mapping\");",
+    "resolution": "filter.appendChild(filterClass); appendChildInDocument(webXmlDoc, \"web-app\", filter);  Element filterMapping = webXmlDoc.createElement(\"filter-mapping\");",
+    "conflict": "filter.appendChild(filterName); filter.appendChild(filterClass);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10860,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import javax.net.ssl.HostnameVerifier; import javax.net.ssl.SSLSession;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 10863,
+    "v2": "",
+    "resolution": "}  @Before public void beforeAuthTest() {",
+    "conflict": "}  @Before public void beforeAuthTest() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11146,
+    "v2": "import java.util.Set; import java.util.concurrent.ConcurrentHashMap; import java.util.concurrent.CopyOnWriteArraySet;",
+    "resolution": "import java.util.Set; import java.util.concurrent.ConcurrentHashMap; import java.util.concurrent.CopyOnWriteArraySet;",
+    "conflict": "import java.util.concurrent.ConcurrentHashMap;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11148,
+    "v2": "public Set<String> getClientSessions() { return clientSessions; }",
+    "resolution": "public Set<String> getClientSessions() { return clientSessions; }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11163,
+    "v2": "",
+    "resolution": "",
+    "conflict": "if (iterations == -1) { iterations = defaultIterations; }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11172,
+    "v2": "import javax.ws.rs.container.AsyncResponse; import javax.ws.rs.container.Suspended;",
+    "resolution": "import javax.ws.rs.container.AsyncResponse; import javax.ws.rs.container.Suspended;",
+    "conflict": "import javax.ws.rs.QueryParam;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11175,
+    "v2": "public static List<Permission> permits(List<Result> evaluation, AuthorizationProvider authorizationProvider, String resourceServerId) { Map<String, Permission> permissions = new HashMap<>();",
+    "resolution": "public static List<Permission> permits(List<Result> evaluation, AuthorizationProvider authorizationProvider, String resourceServerId) { Map<String, Permission> permissions = new HashMap<>();",
+    "conflict": "public static List<Permission> permits(List<Result> evaluation, AuthorizationRequestMetadata metadata, AuthorizationProvider authorizationProvider, ResourceServer resourceServer) { Map<String, Permission> permissions = new LinkedHashMap<>();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11217,
+    "v2": "@Consumes(MediaType.TEXT_PLAIN) @Produces(MediaType.TEXT_PLAIN)",
+    "resolution": "@Consumes(MediaType.TEXT_PLAIN) @Produces(MediaType.TEXT_PLAIN)",
+    "conflict": "@Consumes(MediaType.TEXT_PLAIN_UTF_8) @Produces(MediaType.TEXT_PLAIN_UTF_8)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11241,
+    "v2": "Element filterMapping = webXmlDoc.createElement(\"filter-mapping\");",
+    "resolution": "filter.appendChild(filterClass); appendChildInDocument(webXmlDoc, \"web-app\", filter);  Element filterMapping = webXmlDoc.createElement(\"filter-mapping\");",
+    "conflict": "filter.appendChild(filterName); filter.appendChild(filterClass);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11245,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import javax.net.ssl.HostnameVerifier; import javax.net.ssl.SSLSession;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11248,
+    "v2": "",
+    "resolution": "",
+    "conflict": "}  @Before public void beforeAuthTest() {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11335,
+    "v2": "import org.keycloak.services.ErrorResponse; import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;",
+    "resolution": "import org.keycloak.services.ErrorResponse; import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;import java.util.Objects;",
+    "conflict": "import java.util.Objects;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11341,
+    "v2": "import org.keycloak.services.resources.admin.AdminEventBuilder; import org.keycloak.services.resources.admin.RealmAuth;",
+    "resolution": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator; import org.keycloak.services.resources.admin.AdminEventBuilder;",
+    "conflict": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11342,
+    "v2": "public AuthorizationService(KeycloakSession session, ClientModel client, RealmAuth auth, AdminEventBuilder adminEvent) {",
+    "resolution": "public AuthorizationService(KeycloakSession session, ClientModel client, AdminPermissionEvaluator auth, AdminEventBuilder adminEvent) { this.session = session;",
+    "conflict": "public AuthorizationService(KeycloakSession session, ClientModel client, AdminPermissionEvaluator auth) { this.session = session;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11343,
+    "v2": "import org.keycloak.services.resources.admin.AdminEventBuilder; import org.keycloak.services.resources.admin.RealmAuth;",
+    "resolution": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator; import org.keycloak.services.resources.admin.AdminEventBuilder;",
+    "conflict": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11344,
+    "v2": "public PermissionService(ResourceServer resourceServer, AuthorizationProvider authorization, RealmAuth auth, AdminEventBuilder adminEvent) { super(resourceServer, authorization, auth, adminEvent);",
+    "resolution": "public PermissionService(ResourceServer resourceServer, AuthorizationProvider authorization, AdminPermissionEvaluator auth, AdminEventBuilder adminEvent) { super(resourceServer, authorization, auth, adminEvent);",
+    "conflict": "public PermissionService(ResourceServer resourceServer, AuthorizationProvider authorization, AdminPermissionEvaluator auth) { super(resourceServer, authorization, auth);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11346,
+    "v2": "import org.keycloak.services.resources.admin.AdminEventBuilder; import org.keycloak.services.resources.admin.RealmAuth;",
+    "resolution": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator; import org.keycloak.services.resources.admin.AdminEventBuilder;",
+    "conflict": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11348,
+    "v2": "public Response update(@Context UriInfo uriInfo,  String payload) { this.auth.requireManage();",
+    "resolution": "public Response update(@Context UriInfo uriInfo,String payload) { this.auth.realm().requireManageAuthorization();",
+    "conflict": "public Response update(String payload) { this.auth.realm().requireManageAuthorization();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11349,
+    "v2": "public Response delete(@Context UriInfo uriInfo) { this.auth.requireManage();",
+    "resolution": "public Response delete(@Context UriInfo uriInfo) { this.auth.realm().requireManageAuthorization();",
+    "conflict": "public Response delete() { this.auth.realm().requireManageAuthorization();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11350,
+    "v2": "import org.keycloak.services.resources.admin.AdminEventBuilder; import org.keycloak.services.resources.admin.RealmAuth;",
+    "resolution": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator; import org.keycloak.services.resources.admin.AdminEventBuilder;",
+    "conflict": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11352,
+    "v2": "public Response create(@Context UriInfo uriInfo,  String payload) { this.auth.requireManage();",
+    "resolution": "public Response create(@Context UriInfo uriInfo, String payload) { this.auth.realm().requireManageAuthorization();",
+    "conflict": "public Response create(String payload) { this.auth.realm().requireManageAuthorization();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11353,
+    "v2": "import org.keycloak.services.resources.admin.AdminEventBuilder; import org.keycloak.services.resources.admin.RealmAuth;",
+    "resolution": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator; import org.keycloak.services.resources.admin.AdminEventBuilder;",
+    "conflict": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11354,
+    "v2": "public PolicyTypeResourceService(Policy policy, ResourceServer resourceServer, AuthorizationProvider authorization, RealmAuth auth, AdminEventBuilder adminEvent) { super(policy, resourceServer, authorization, auth, adminEvent);",
+    "resolution": "public PolicyTypeResourceService(Policy policy, ResourceServer resourceServer, AuthorizationProvider authorization, AdminPermissionEvaluator auth, AdminEventBuilder adminEvent) { super(policy, resourceServer, authorization, auth, adminEvent);",
+    "conflict": "public PolicyTypeResourceService(Policy policy, ResourceServer resourceServer, AuthorizationProvider authorization, AdminPermissionEvaluator auth) { super(policy, resourceServer, authorization, auth);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11355,
+    "v2": "import org.keycloak.services.resources.admin.AdminEventBuilder; import org.keycloak.services.resources.admin.RealmAuth;",
+    "resolution": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator; import org.keycloak.services.resources.admin.AdminEventBuilder;",
+    "conflict": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11356,
+    "v2": "PolicyTypeService(String type, ResourceServer resourceServer, AuthorizationProvider authorization, RealmAuth auth, AdminEventBuilder adminEvent) { super(resourceServer, authorization, auth, adminEvent);",
+    "resolution": "PolicyTypeService(String type, ResourceServer resourceServer, AuthorizationProvider authorization, AdminPermissionEvaluator auth, AdminEventBuilder adminEvent) { super(resourceServer, authorization, auth, adminEvent);",
+    "conflict": "PolicyTypeService(String type, ResourceServer resourceServer, AuthorizationProvider authorization, AdminPermissionEvaluator auth) { super(resourceServer, authorization, auth);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11357,
+    "v2": "import org.keycloak.services.resources.admin.AdminEventBuilder; import org.keycloak.services.resources.admin.RealmAuth;",
+    "resolution": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator; import org.keycloak.services.resources.admin.AdminEventBuilder;",
+    "conflict": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11358,
+    "v2": "private final RealmAuth auth; private final AdminEventBuilder adminEvent;",
+    "resolution": "private final AdminPermissionEvaluator auth; private final AdminEventBuilder adminEvent;",
+    "conflict": "private final AdminPermissionEvaluator auth;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11360,
+    "v2": "public void create(boolean newClient) { this.auth.requireManage();",
+    "resolution": "public void create(boolean newClient) { this.auth.realm().requireManageAuthorization();",
+    "conflict": "public void create() { this.auth.realm().requireManageAuthorization();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 11361,
+    "v2": "public Response update(@Context UriInfo uriInfo, ResourceServerRepresentation server) { this.auth.requireManage();",
+    "resolution": "public Response update(ResourceServerRepresentation server) { this.auth.realm().requireManageAuthorization();",
+    "conflict": "public Response update(ResourceServerRepresentation server) { this.auth.realm().requireManageAuthorization();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11362,
+    "v2": "this.auth.requireView(); PermissionService resource = new PermissionService(this.resourceServer, this.authorization, this.auth, adminEvent);",
+    "resolution": "this.auth.realm().requireViewAuthorization(); PermissionService resource = new PermissionService(this.resourceServer, this.authorization, this.auth, adminEvent);",
+    "conflict": "this.auth.realm().requireViewAuthorization(); PermissionService resource = new PermissionService(this.resourceServer, this.authorization, this.auth);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11363,
+    "v2": "import org.keycloak.services.resources.admin.AdminEventBuilder; import org.keycloak.services.resources.admin.RealmAuth;",
+    "resolution": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator; import org.keycloak.services.resources.admin.AdminEventBuilder;",
+    "conflict": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11365,
+    "v2": "import org.keycloak.services.resources.admin.AdminEventBuilder; import org.keycloak.services.resources.admin.RealmAuth;",
+    "resolution": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator; import org.keycloak.services.resources.admin.AdminEventBuilder;",
+    "conflict": "import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11367,
+    "v2": "public Response create(@Context UriInfo uriInfo,  ScopeRepresentation scope) { this.auth.requireManage();",
+    "resolution": "public Response create(@Context UriInfo uriInfo,  ScopeRepresentation scope) { this.auth.realm().requireManageAuthorization();",
+    "conflict": "public Response create(ScopeRepresentation scope) { this.auth.realm().requireManageAuthorization();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11368,
+    "v2": "public Response update(@Context UriInfo uriInfo, @PathParam(\"id\") String id, ScopeRepresentation scope) { this.auth.requireManage();",
+    "resolution": "public Response update(@Context UriInfo uriInfo, @PathParam(\"id\") String id, ScopeRepresentation scope) { this.auth.realm().requireManageAuthorization();",
+    "conflict": "public Response update(@PathParam(\"id\") String id, ScopeRepresentation scope) { this.auth.realm().requireManageAuthorization();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11369,
+    "v2": "public Response delete(@Context UriInfo uriInfo, @PathParam(\"id\") String id) { this.auth.requireManage();",
+    "resolution": "public Response delete(@Context UriInfo uriInfo, @PathParam(\"id\") String id) { this.auth.realm().requireManageAuthorization();",
+    "conflict": "public Response delete(@PathParam(\"id\") String id) { this.auth.realm().requireManageAuthorization();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11376,
+    "v2": "return Keycloak.getInstance(authServerContextRoot + \"/auth\", MASTER, ADMIN, ADMIN, Constants.ADMIN_CLI_CLIENT_ID, null, ssl, jacksonProvider);",
+    "resolution": "return Keycloak.getInstance(authServerContextRoot + \"/auth\", realmName, username, password, clientId, clientSecret, ssl, jacksonProvider);",
+    "conflict": "return Keycloak.getInstance(AuthServerTestEnricher.getAuthServerContextRoot() + \"/auth\", realmName, username, password, clientId, clientSecret, ssl, jacksonProvider);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11388,
+    "v2": "return ModelToRepresentation.toRepresentation(session, model, false);",
+    "resolution": "return ModelToRepresentation.toRepresentation(session, model, false);",
+    "conflict": "return getRepresentation(model);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11397,
+    "v2": "import com.fasterxml.jackson.databind.JsonNode; import org.keycloak.models.KeycloakSession;",
+    "resolution": "import java.net.URLEncoder;import com.fasterxml.jackson.databind.JsonNode; import org.keycloak.models.KeycloakSession;",
+    "conflict": "import java.net.URLEncoder;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11401,
+    "v2": "import org.keycloak.testsuite.util.IdentityProviderBuilder;",
+    "resolution": "import org.keycloak.testsuite.util.OAuthClient; import org.keycloak.testsuite.util.RealmBuilder; import org.keycloak.testsuite.util.UserBuilder;import org.keycloak.testsuite.util.IdentityProviderBuilder;",
+    "conflict": "import org.keycloak.testsuite.util.OAuthClient; import org.keycloak.testsuite.util.RealmBuilder; import org.keycloak.testsuite.util.UserBuilder;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11425,
+    "v2": "import org.keycloak.representations.idm.ClientRepresentation; import org.keycloak.representations.idm.CredentialRepresentation;",
+    "resolution": "import org.keycloak.representations.idm.ClientRepresentation; import org.keycloak.representations.idm.CredentialRepresentation;import org.keycloak.representations.RefreshToken; import org.keycloak.representations.idm.ClientRepresentation;",
+    "conflict": "import org.keycloak.representations.RefreshToken; import org.keycloak.representations.idm.ClientRepresentation;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11426,
+    "v2": "import org.keycloak.representations.idm.ClientRepresentation; import org.keycloak.representations.idm.CredentialRepresentation;",
+    "resolution": "import org.keycloak.representations.idm.ClientRepresentation; import org.keycloak.representations.idm.CredentialRepresentation;",
+    "conflict": "import org.keycloak.representations.RefreshToken; import org.keycloak.representations.idm.ClientRepresentation;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11433,
+    "v2": "import static org.keycloak.testsuite.util.WaitUtils.waitUntilElement; import org.openqa.selenium.By;",
+    "resolution": "import static org.keycloak.testsuite.util.WaitUtils.waitUntilElement; import org.openqa.selenium.By;",
+    "conflict": "import static org.keycloak.testsuite.util.WaitUtils.waitAjaxForElement;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 11434,
+    "v2": "import static org.keycloak.testsuite.util.WaitUtils.pause; import static org.keycloak.testsuite.util.WaitUtils.waitUntilElement;",
+    "resolution": "import static org.keycloak.testsuite.util.WaitUtils.*;",
+    "conflict": "import static org.keycloak.testsuite.util.WaitUtils.*;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11435,
+    "v2": "waitUntilElement(root).is().present(); actions.moveToElement(root.findElements(By.tagName(\"span\")).get(0))",
+    "resolution": "waitUntilElement(root).is().present(); actions.moveToElement(root.findElements(By.tagName(\"span\")).get(0))waitAjaxForElement(root); actions.moveToElement(root.findElement(By.tagName(\"label\")))",
+    "conflict": "waitAjaxForElement(root); actions.moveToElement(root.findElement(By.tagName(\"label\")))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11441,
+    "v2": "import org.keycloak.common.util.Base64Url; import org.keycloak.models.AuthenticationExecutionModel; import org.keycloak.models.AuthenticationFlowModel;",
+    "resolution": "import org.keycloak.common.util.Base64Url; import org.keycloak.models.AuthenticationExecutionModel; import org.keycloak.models.AuthenticationFlowModel;",
+    "conflict": "import org.jboss.resteasy.spi.NotFoundException;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11456,
+    "v2": "builder.signWith(realm.getPrivateKey(), realm.getPublicKey(), realm.getCertificate()) .signatureAlgorithm(provider.getSignatureAlgorithm())",
+    "resolution": "binding.signWith(realm.getPrivateKey(), realm.getPublicKey(), realm.getCertificate()) .signatureAlgorithm(provider.getSignatureAlgorithm())",
+    "conflict": "binding.signWith(realm.getPrivateKey(), realm.getPublicKey(), realm.getCertificate())"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11459,
+    "v2": "logoutBuilder.signWith(realm.getPrivateKey(), realm.getPublicKey(), realm.getCertificate()) .signatureAlgorithm(getSignatureAlgorithm())",
+    "resolution": "binding.signWith(realm.getPrivateKey(), realm.getPublicKey(), realm.getCertificate()) .signatureAlgorithm(getSignatureAlgorithm())",
+    "conflict": "binding.signWith(realm.getPrivateKey(), realm.getPublicKey(), realm.getCertificate())"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11460,
+    "v2": "public PostBindingBuilder(Document document) throws ProcessingException {",
+    "resolution": "public BasePostBindingBuilder(BaseSAML2BindingBuilder builder, Document document) throws ProcessingException { this.builder = builder;",
+    "conflict": "public BasePostBindingBuilder(BaseSAML2BindingBuilder builder, Document document) throws ProcessingException { this.builder = builder; if (builder.encrypt) builder.encryptDocument(document);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11462,
+    "v2": "public RedirectBindingBuilder(Document document) throws ProcessingException {",
+    "resolution": "public BaseRedirectBindingBuilder(BaseSAML2BindingBuilder builder, Document document) throws ProcessingException { this.builder = builder; this.document = document; if (builder.encrypt) builder.encryptDocument(document);",
+    "conflict": "public BaseRedirectBindingBuilder(BaseSAML2BindingBuilder builder, Document document) throws ProcessingException { this.builder = builder; if (builder.encrypt) builder.encryptDocument(document);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11474,
+    "v2": "import static org.junit.Assert.assertNotNull;",
+    "resolution": "import java.util.ArrayList;import static org.junit.Assert.assertNotNull;",
+    "conflict": "import java.util.ArrayList;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11480,
+    "v2": "events.expectLogin().session((String) null).error(\"invalid_user_credentials\") .removeDetail(Details.CONSENT) .assertEvent();",
+    "resolution": "events.expectLogin().session((String) null).error(\"invalid_user_credentials\") .removeDetail(Details.CONSENT) .assertEvent();",
+    "conflict": "events.expectLogin().session((String) null).user(userId).error(\"invalid_user_credentials\").assertEvent();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11484,
+    "v2": "if (action.equals(UserModel.RequiredAction.VERIFY_EMAIL.name()) && Validation.isBlank(user.getEmail())) {",
+    "resolution": "if (action.equals(UserModel.RequiredAction.VERIFY_EMAIL.name()) && Validation.isBlank(user.getEmail())) {",
+    "conflict": "if (action.equals(UserModel.RequiredAction.VERIFY_EMAIL.name()) && Validation.isEmpty(user.getEmail())) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11493,
+    "v2": "adminEvent.operation(OperationType.ACTION).resourcePath(uriInfo.getPath(), false).success(); return new ResourceAdminManager(session).pushRealmRevocationPolicy(uriInfo.getRequestUri(), realm);",
+    "resolution": "adminEvent.operation(OperationType.ACTION).resourcePath(uriInfo).success(); return new ResourceAdminManager(session).pushRealmRevocationPolicy(uriInfo.getRequestUri(), realm);",
+    "conflict": "adminEvent.operation(OperationType.ACTION).resourcePath(uriInfo.getPath()).success(); return new ResourceAdminManager(session).pushRealmRevocationPolicy(uriInfo.getRequestUri(), realm);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11494,
+    "v2": "adminEvent.operation(OperationType.ACTION).resourcePath(uriInfo.getPath(), false).success(); return new ResourceAdminManager(session).logoutAll(uriInfo.getRequestUri(), realm);",
+    "resolution": "session.sessions().removeUserSessions(realm); adminEvent.operation(OperationType.ACTION).resourcePath(uriInfo).success();",
+    "conflict": "adminEvent.operation(OperationType.ACTION).resourcePath(uriInfo.getPath()).success(); return new ResourceAdminManager(session).logoutAll(uriInfo.getRequestUri(), realm);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11500,
+    "v2": "import static org.keycloak.models.utils.Pbkdf2PasswordEncoder.getSalt;  import com.mongodb.DBObject; import com.mongodb.QueryBuilder;",
+    "resolution": "import static org.keycloak.models.utils.Pbkdf2PasswordEncoder.getSalt;  import com.mongodb.DBObject; import com.mongodb.QueryBuilder;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 11501,
+    "v2": "import org.keycloak.services.managers.AuthenticationManager; import org.keycloak.services.messages.Messages; import org.keycloak.services.ErrorPage;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11502,
+    "v2": "import org.keycloak.services.ErrorResponse;",
+    "resolution": "import org.keycloak.services.ErrorResponse;",
+    "conflict": "import org.keycloak.representations.idm.ProtocolMapperRepresentation; import org.keycloak.services.resources.flows.Flows;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11503,
+    "v2": "property.setHelpText(\"Role you want added to the token.  To specify a client role the syntax is clientId.clientRole, i.e. myapp.myrole\"); property.setType(ConfigProperty.STRING_TYPE);",
+    "resolution": "property.setHelpText(\"Role you want added to the token.  Click 'Select Role' button to browse roles, or just type it in the textbox.  To specify an application role the syntax is appname.approle, i.e. myapp.myrole\"); property.setType(ProviderConfigProperty.ROLE_TYPE);",
+    "conflict": "property.setHelpText(\"Role you want added to the token.  To specify an application role the syntax is appname.approle, i.e. myapp.myrole\"); property.setType(ProviderConfigProperty.STRING_TYPE);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11504,
+    "v2": "property.setHelpText(\"Role name you want changed.  To reference an client role the syntax is clientId.clientRole, i.e. myapp.myrole\"); property.setType(ConfigProperty.STRING_TYPE);",
+    "resolution": "property.setHelpText(\"Role name you want changed.  Click 'Select Role' button to browse roles, or just type it in the textbox.  To reference an application role the syntax is appname.approle, i.e. myapp.myrole\"); property.setType(ProviderConfigProperty.STRING_TYPE);",
+    "conflict": "property.setHelpText(\"Role name you want changed.  To reference an application role the syntax is appname.approle, i.e. myapp.myrole\"); property.setType(ProviderConfigProperty.STRING_TYPE);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11507,
+    "v2": "// TODO KEYCLOAK-1053 (ask user to enter email address) should be implemented instead of plain exception as // better solution for this case",
+    "resolution": "// TODO KEYCLOAK-1053 (ask user to enter email address) should be implemented instead of plain exception as // better solution for this case",
+    "conflict": "// TODO KEYCLOAK-1053 (ask user to enter email address) should be implemented instead of plain exception as better solution for this case"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11511,
+    "v2": "List<ClientIdentityProviderMappingEntity> stored = new ArrayList<ClientIdentityProviderMappingEntity>();",
+    "resolution": "return getMongoEntity().getBaseUrl();",
+    "conflict": "List<ClientIdentityProviderMappingEntity> stored = getMongoEntityAsClient().getIdentityProviders(); stored.clear();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11519,
+    "v2": "import org.keycloak.models.ApplicationModel; import org.keycloak.models.ClientModel;",
+    "resolution": "import org.keycloak.models.ClientModel; import org.keycloak.models.KeycloakSession;",
+    "conflict": "import org.keycloak.models.KeycloakSession;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11520,
+    "v2": "// Should be RealmManager moved to model/api instead of referencing methods this way?",
+    "resolution": "// Should be RealmManager moved to model/api instead of referencing methods this way?",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 11530,
+    "v2": "import java.io.IOException; import java.util.Map;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11532,
+    "v2": "public List<RoleRepresentation> getRoles() { return new Transaction<List<RoleRepresentation>>() {",
+    "resolution": "public List<RoleRepresentation> getRoles() { return new Transaction<List<RoleRepresentation>>() {",
+    "conflict": "public List<RoleRepresentation> queryRoles() { return new Transaction() {"
+  }
+]
+}

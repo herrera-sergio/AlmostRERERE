@@ -1,0 +1,52 @@
+{"conflicts":[
+  {
+    "devdecision": "Concatenation",
+    "id": 8047,
+    "v2": "import gov.nasa.arc.mct.components.FeedInfoProvider; import gov.nasa.arc.mct.components.FeedInfoProvider.FeedInfo;",
+    "resolution": "import gov.nasa.arc.mct.components.FeedInfoProvider; import gov.nasa.arc.mct.components.FeedInfoProvider.FeedInfo;import gov.nasa.arc.mct.components.FeedFilterProvider;",
+    "conflict": "import gov.nasa.arc.mct.components.FeedFilterProvider;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8048,
+    "v2": "import gov.nasa.arc.mct.components.FeedInfoProvider; import gov.nasa.arc.mct.components.FeedInfoProvider.FeedInfo;",
+    "resolution": "import gov.nasa.arc.mct.components.FeedInfoProvider; import gov.nasa.arc.mct.components.FeedInfoProvider.FeedInfo;import gov.nasa.arc.mct.components.FeedFilterProvider; import gov.nasa.arc.mct.components.FeedFilterProvider.FeedFilter;",
+    "conflict": "import gov.nasa.arc.mct.components.FeedFilterProvider; import gov.nasa.arc.mct.components.FeedFilterProvider.FeedFilter;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8055,
+    "v2": "LimitLineComponent.class, new LimitLineCreateWizardUI() );",
+    "resolution": "LimitLineComponent.class);",
+    "conflict": "LimitLineComponent.class);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8066,
+    "v2": "if(plot.nonTimeAxisMaxSubsequentSetting == NonTimeAxisSubsequentBoundsSetting.SEMI_FIXED && !plot.getNonTimeAxis().isPinned()) {",
+    "resolution": "if(plot.getNonTimeAxisSubsequentMaxSetting() == NonTimeAxisSubsequentBoundsSetting.SEMI_FIXED && !plot.getNonTimeAxis().isPinned()) {",
+    "conflict": "if(plot.getNonTimeAxisSubsequentMaxSetting() == NonTimeAxisSubsequentBoundsSetting.SEMI_FIXED) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8068,
+    "v2": "if(plot.nonTimeAxisMinSubsequentSetting == NonTimeAxisSubsequentBoundsSetting.SEMI_FIXED && !plot.getNonTimeAxis().isPinned()) {",
+    "resolution": "if(plot.getNonTimeAxisSubsequentMinSetting() == NonTimeAxisSubsequentBoundsSetting.SEMI_FIXED && !plot.getNonTimeAxis().isPinned()) {",
+    "conflict": "if(plot.getNonTimeAxisSubsequentMinSetting() == NonTimeAxisSubsequentBoundsSetting.SEMI_FIXED) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8073,
+    "v2": "Assert.assertFalse(plot.isCompresionEnabled()); now.add(Calendar.MINUTE, 1);",
+    "resolution": "Assert.assertFalse(plot.isCompressionEnabled()); now.add(Calendar.MINUTE, 1);",
+    "conflict": "Assert.assertFalse(plot.isCompressionEnabled());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8098,
+    "v2": "thePlot.setRegressionPointAssignments(plotPersistanceHandler.loadRegressionSettingsFromPersistence()); thePlot.setColorAssignments(plotPersistanceHandler.loadColorSettingsFromPersistence());",
+    "resolution": "thePlot.setLineSettings(plotPersistanceHandler.loadLineSettingsFromPersistence()); thePlot.setRegressionPointAssignments(plotPersistanceHandler.loadRegressionSettingsFromPersistence());",
+    "conflict": "thePlot.setLineSettings(plotPersistanceHandler.loadLineSettingsFromPersistence());"
+  }
+]
+}

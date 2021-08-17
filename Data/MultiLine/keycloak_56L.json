@@ -1,0 +1,136 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 2",
+    "id": 10786,
+    "v2": "import java.util.List; import java.util.Map;",
+    "resolution": "import java.util.List; import java.util.Map;",
+    "conflict": "import java.util.LinkedHashMap; import java.util.List; import java.util.Map; import java.util.Objects;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 10796,
+    "v2": "hash.encode(cred.getValue(), policy.getHashIterations(), password); getCredentialStore().updateCredential(realm, user, password);",
+    "resolution": "hash.encode(cred.getValue(), policy.getHashIterations(), password); getCredentialStore().updateCredential(realm, user, password);",
+    "conflict": "CredentialModel newPassword = password.shallowClone(); hash.encode(cred.getValue(), policy.getHashIterations(), newPassword); getCredentialStore().updateCredential(realm, user, newPassword);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11171,
+    "v2": "import java.util.List; import java.util.Map;",
+    "resolution": "import java.util.List; import java.util.Map;",
+    "conflict": "import java.util.LinkedHashMap; import java.util.List; import java.util.Map; import java.util.Objects;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11181,
+    "v2": "hash.encode(cred.getValue(), policy.getHashIterations(), password); getCredentialStore().updateCredential(realm, user, password);",
+    "resolution": "hash.encode(cred.getValue(), policy.getHashIterations(), password); getCredentialStore().updateCredential(realm, user, password);",
+    "conflict": "CredentialModel newPassword = password.shallowClone(); hash.encode(cred.getValue(), policy.getHashIterations(), newPassword); getCredentialStore().updateCredential(realm, user, newPassword);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11334,
+    "v2": "UserResource.updateUserFromRep(user, rep, emptySet, realm, session, false);",
+    "resolution": "UserResource.updateUserFromRep(user, rep, emptySet, realm, session, false); RepresentationToModel.createCredentials(rep, session, realm, user);",
+    "conflict": "updateUserFromRep(user, rep, emptySet, realm, session, false); RepresentationToModel.createCredentials(rep, session, realm, user);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11336,
+    "v2": "public List<GroupRepresentation> getGroups() { auth.groups().requireList();",
+    "resolution": "public List<GroupRepresentation> getGroups(@QueryParam(\"search\") String search, @QueryParam(\"first\") Integer firstResult, @QueryParam(\"max\") Integer maxResults) {",
+    "conflict": "public List<GroupRepresentation> getGroupsByName(@QueryParam(\"search\") String search, @QueryParam(\"first\") Integer firstResult, @QueryParam(\"max\") Integer maxResults) { auth.requireView();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11340,
+    "v2": "entities.add(COMPONENT_IDS, componentId);",
+    "resolution": "entities.add(COMPONENT_IDS, componentId);",
+    "conflict": "if (componentIds == null) { componentIds = new LinkedList<>(); } if (componentId == null) return; componentIds.add(componentId);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11359,
+    "v2": "@Context private UriInfo uriInfo;  public ResourceServerService(AuthorizationProvider authorization, ResourceServer resourceServer, ClientModel client, RealmAuth auth, AdminEventBuilder adminEvent) {",
+    "resolution": "@Context private UriInfo uriInfo; public ResourceServerService(AuthorizationProvider authorization, ResourceServer resourceServer, ClientModel client, AdminPermissionEvaluator auth, AdminEventBuilder adminEvent) {",
+    "conflict": "public ResourceServerService(AuthorizationProvider authorization, ResourceServer resourceServer, ClientModel client, AdminPermissionEvaluator auth) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 11390,
+    "v2": "import org.keycloak.jose.jwk.JSONWebKeySet; import org.keycloak.jose.jwk.JWK; import org.keycloak.jose.jwk.JWKBuilder; import org.keycloak.jose.jws.JWSInputException; import org.keycloak.representations.VersionRepresentation;",
+    "resolution": "import org.keycloak.jose.jwk.JSONWebKeySet; import org.keycloak.jose.jwk.JWK; import org.keycloak.jose.jwk.JWKBuilder; import org.keycloak.jose.jws.JWSInputException; import org.keycloak.representations.VersionRepresentation;import org.keycloak.common.util.StreamUtil;",
+    "conflict": "import org.keycloak.common.util.StreamUtil;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 11402,
+    "v2": "import java.io.IOException; import java.io.InputStream; import java.util.ArrayList; import java.util.HashMap; import java.util.List; import java.util.Map;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11407,
+    "v2": "",
+    "resolution": "",
+    "conflict": "/** * Must have the form of major.minor.micro as the version is parsed and numbers are compared */ String LATEST_VERSION = \"2.3.0\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 11423,
+    "v2": "",
+    "resolution": "public List<ProviderConfigProperty> getConfigProperties() { return OPTIONS; }  @Override",
+    "conflict": "public List<ProviderConfigProperty> getConfigProperties() { return OPTIONS; }  @Override"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 11438,
+    "v2": "assertAlertSuccess(); createClientRolePage.form().setCompositeRoles(roleRep);",
+    "resolution": "assertAlertSuccess(); createClientRolePage.form().setCompositeRoles(roleRep);",
+    "conflict": "assertFlashMessageSuccess(); System.out.println(\"TODO ClientRolesTest.addNewClientRole\"); //        createClientRolePage.form().setCompositeRoles(roleRep);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11458,
+    "v2": "authnRequestBuilder.signWith(keypair); authnRequestBuilder.signatureAlgorithm(getSignatureAlgorithm()); authnRequestBuilder.signDocument();",
+    "resolution": "binding.signWith(keypair); binding.signatureAlgorithm(getSignatureAlgorithm()); binding.signDocument();",
+    "conflict": "binding.signWith(keypair); binding.signDocument();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11461,
+    "v2": "//Per SAML spec 6.2 Encrypting assertions must happen after the assertions are signed if (encrypt) encryptDocument(document); if (sign) { signDocument(document);",
+    "resolution": "if (builder.encrypt) builder.encryptDocument(document); if (builder.sign) { builder.signDocument(document);",
+    "conflict": "if (builder.sign) { builder.signDocument(document);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11465,
+    "v2": "public String getServiceAccountUrl() { return getResourceOwnerPasswordCredentialGrantUrl();",
+    "resolution": "public String getResourceOwnerPasswordCredentialGrantUrl(String realm) { UriBuilder b = OIDCLoginProtocolService.tokenUrl(UriBuilder.fromUri(baseUrl)); return b.build(realm).toString();",
+    "conflict": "public String getResourceOwnerPasswordCredentialGrantUrl(String realmName) { UriBuilder b = OIDCLoginProtocolService.tokenUrl(UriBuilder.fromUri(baseUrl)); return b.build(realmName).toString();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11477,
+    "v2": "public UserModel addUser(RealmModel realm, String id, String username, boolean addDefaultRoles) { UserModel user = getDelegate().addUser(realm, id, username, addDefaultRoles); managedUsers.put(user.getId(), user); return user;",
+    "resolution": "public UserModel addUser(RealmModel realm, String id, String username, boolean addDefaultRoles, boolean addDefaultRequiredActions) { UserModel user = getDelegate().addUser(realm, id, username, addDefaultRoles, addDefaultRoles); managedUsers.put(user.getId(), user); return user;",
+    "conflict": "public UserModel addUser(RealmModel realm, String id, String username, boolean addDefaultRoles, boolean addDefaultRequiredActions) { return getDelegate().addUser(realm, id, username, addDefaultRoles, addDefaultRequiredActions);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 11498,
+    "v2": "import static org.keycloak.models.utils.Pbkdf2PasswordEncoder.getSalt;  import org.keycloak.models.UserConsentModel;",
+    "resolution": "import static org.keycloak.models.utils.Pbkdf2PasswordEncoder.getSalt; import org.keycloak.models.ModelDuplicateException; import org.keycloak.models.UserConsentModel;",
+    "conflict": "import org.keycloak.models.GrantedConsentModel; import org.keycloak.models.ModelDuplicateException;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 11509,
+    "v2": "",
+    "resolution": "//@Test public void ideTesting() throws Exception { Thread.sleep(100000000);",
+    "conflict": "//@Test @Ignore public void runit() throws Exception { Thread.sleep(10000000); }"
+  }
+]
+}

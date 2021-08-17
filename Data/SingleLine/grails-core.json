@@ -1,0 +1,1410 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 79995,
+    "v2": "assertEquals(\"4.0.12.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"5.0.0-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"5.0.0-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80006,
+    "v2": "assertEquals(\"4.0.10.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"5.0.0-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"5.0.0-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80028,
+    "v2": "assertEquals(\"4.0.8.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"5.0.0-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"5.0.0-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80057,
+    "v2": "return getBeanNamesForType(type);",
+    "resolution": "return new String[0];",
+    "conflict": "return new String[0];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80098,
+    "v2": "Comparator<GrailsClass> comparator = new IsGrailsPluginComparator();",
+    "resolution": "IsGrailsPluginComparator comparator = new IsGrailsPluginComparator();",
+    "conflict": "IsGrailsPluginComparator comparator = new IsGrailsPluginComparator();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80099,
+    "v2": "Arrays.sort(mappings, comparator);",
+    "resolution": "mappings = Arrays.stream(mappings).sorted(comparator).toArray(GrailsClass[]::new);",
+    "conflict": "mappings = Arrays.stream(mappings).sorted(comparator).toArray(GrailsClass[]::new);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80164,
+    "v2": "params.putAll(UrlMappingUtils.findAllParamsNotInUrlMappingKeywords(requestInfo.getParameters());",
+    "resolution": "params.putAll(UrlMappingUtils.findAllParamsNotInUrlMappingKeywords(requestInfo.getParameters()));",
+    "conflict": "params.putAll(UrlMappingUtils.findAllParamsNotInUrlMappingKeywords(requestInfo.getParameters()));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80189,
+    "v2": "assertEquals(\"3.2.8.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80195,
+    "v2": "assertEquals(\"3.2.7.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 80199,
+    "v2": "assertEquals(\"3.1.16.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.5.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.5.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80202,
+    "v2": "assertEquals(\"3.2.5.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80208,
+    "v2": "assertEquals(\"3.1.15.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80210,
+    "v2": "assertEquals(\"3.2.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80212,
+    "v2": "assertEquals(\"3.1.14.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80214,
+    "v2": "assertEquals(\"3.2.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80228,
+    "v2": "assertEquals(\"3.1.13.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80235,
+    "v2": "assertEquals(\"3.1.12.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80245,
+    "v2": "assertEquals(\"3.1.11.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80250,
+    "v2": "assertEquals(\"3.1.10.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80254,
+    "v2": "assertEquals(\"3.1.9.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80258,
+    "v2": "assertEquals(\"3.1.8.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80260,
+    "v2": "assertEquals(\"3.0.18.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.8.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.8.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80263,
+    "v2": "assertEquals(\"3.0.17.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.6.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.6.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80265,
+    "v2": "assertEquals(\"3.1.6.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80271,
+    "v2": "assertEquals(\"3.1.5.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80273,
+    "v2": "assertEquals(\"3.0.16.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80277,
+    "v2": "assertEquals(\"3.1.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80286,
+    "v2": "assertEquals(\"3.0.15.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80298,
+    "v2": "assertEquals(\"3.0.14.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80300,
+    "v2": "assertEquals(\"3.0.13.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80302,
+    "v2": "assertEquals(\"3.0.13.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80308,
+    "v2": "assertEquals(\"3.0.12.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80318,
+    "v2": "assertEquals(\"3.0.11.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80328,
+    "v2": "assertEquals(\"3.0.10.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80336,
+    "v2": "assertEquals(\"3.0.9.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80338,
+    "v2": "assertEquals(\"3.0.8.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80342,
+    "v2": "assertEquals(\"3.0.7.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80344,
+    "v2": "assertEquals(\"3.0.6.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80346,
+    "v2": "assertEquals(\"3.0.5\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80349,
+    "v2": "assertEquals(\"3.0.5.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80365,
+    "v2": "assertEquals(\"3.0.4.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80367,
+    "v2": "assertEquals(\"3.0.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80369,
+    "v2": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.0.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.0.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80371,
+    "v2": "assertEquals(\"3.0.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80387,
+    "v2": "assertEquals(\"2.4.6.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.5.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.5.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80390,
+    "v2": "assertEquals(\"2.4.5\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.5.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.5.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80450,
+    "v2": "assertEquals(\"2.5.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80456,
+    "v2": "assertEquals(\"2.4.5.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80479,
+    "v2": "assertEquals(\"2.3.12.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.4.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.4.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80500,
+    "v2": "assertEquals(\"2.4.4.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80524,
+    "v2": "assertEquals(\"2.4.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 80532,
+    "v2": "assertEquals(\"2.3.11\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.2\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80561,
+    "v2": "assertEquals(\"2.4.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80565,
+    "v2": "assertEquals(\"2.3.11.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80568,
+    "v2": "assertEquals(\"2.4.1\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 80571,
+    "v2": "import org.codehaus.groovy.runtime.DefaultGroovyMethods;",
+    "resolution": "import org.codehaus.groovy.runtime.DefaultGroovyMethods;import org.grails.databinding.DataBinder;",
+    "conflict": "import org.grails.databinding.DataBinder;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80594,
+    "v2": "assertEquals(\"2.3.10.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80597,
+    "v2": "assertEquals(\"2.4.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"3.0.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80602,
+    "v2": "private boolean isInteractive = System.getProperty(GrailsConsole.ENABLE_INTERACTIVE) != null ? Boolean.getBoolean(GrailsConsole.ENABLE_INTERACTIVE) : true;",
+    "resolution": "private boolean isInteractive = System.getProperty(GrailsConsole.ENABLE_INTERACTIVE) != null ? Boolean.getBoolean(GrailsConsole.ENABLE_INTERACTIVE) : true;",
+    "conflict": "private boolean isInteractive = console.isInteractiveEnabled();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80610,
+    "v2": "assertEquals(\"2.3.9\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.RC1\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.RC1\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80621,
+    "v2": "assertEquals(\"2.3.9.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80629,
+    "v2": "assertEquals(\"2.3.8\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80637,
+    "v2": "assertEquals(\"2.2.5\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.8\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.8\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80658,
+    "v2": "assertEquals(\"2.3.8.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.M1\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.M1\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80671,
+    "v2": "assertEquals(\"2.3.7\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.M1\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.M1\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80678,
+    "v2": "assertEquals(\"2.3.7.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80684,
+    "v2": "assertEquals(\"2.3.6\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80696,
+    "v2": "assertEquals(\"2.3.6.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80702,
+    "v2": "assertEquals(\"2.3.5.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80705,
+    "v2": "assertEquals(\"2.3.4\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80709,
+    "v2": "assertEquals(\"2.3.4.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 80713,
+    "v2": "assertEquals(\"2.3.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80716,
+    "v2": "protected final String groovyVersion = \"2.1.9\";",
+    "resolution": "protected final String groovyVersion = \"2.2.0-rc-1\";",
+    "conflict": "protected final String groovyVersion = \"2.2.0-rc-1\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80729,
+    "v2": "GrailsASTUtils.copyAnnotations(methodNode, method);",
+    "resolution": "GrailsASTUtils.copyAnnotations(methodNode, method);",
+    "conflict": "copyAnnotations(methodNode, method);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80730,
+    "v2": "protected void annotateActionMethodAndWrapWithExceptionHandling(ClassNode controllerClassNode, final Parameter[] parameters, final MethodNode methodNode) {",
+    "resolution": "protected void annotateActionMethodAndWrapWithExceptionHandling(ClassNode controllerClassNode, final Parameter[] parameters, final MethodNode methodNode) {",
+    "conflict": "protected void annotateActionMethodAndWrapWithExceptionHandling(final ClassNode classNode, final Parameter[] parameters, final MethodNode methodNode) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80731,
+    "v2": "wrapMethodBodyWithExceptionHandling(controllerClassNode, methodNode);",
+    "resolution": "wrapMethodBodyWithExceptionHandling(controllerClassNode, methodNode);",
+    "conflict": "wrapMethodBodyWithExceptionHandling(classNode, methodNode);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80732,
+    "v2": "protected void wrapMethodBodyWithExceptionHandling(final ClassNode controllerClassNode, final MethodNode methodNode) {",
+    "resolution": "protected void wrapMethodBodyWithExceptionHandling(final ClassNode controllerClassNode, final MethodNode methodNode) {",
+    "conflict": "protected void wrapMethodBodyWithExceptionHandling(final ClassNode classNode, final MethodNode methodNode) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80737,
+    "v2": "assertEquals(\"2.3.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80740,
+    "v2": "assertEquals(\"2.3.1\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.4.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80745,
+    "v2": "if(controller == null && info.getViewName()==null && info.getURI()==null) continue;",
+    "resolution": "if(controller == null && info.getViewName()==null && info.getURI()==null) continue;",
+    "conflict": "if(controller == null) continue;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80746,
+    "v2": "Object featureId = WebUtils.getFeatureId(urlConverter, urlMappingInfo);",
+    "resolution": "Object featureId = WebUtils.getFeatureId(urlConverter, urlMappingInfo);",
+    "conflict": "Object featureId = WebUtils.getControllerFeatureId(urlConverter,urlMappingInfo);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80752,
+    "v2": "public static ControllerArtefactHandler.ControllerCacheKey getFeatureId(UrlConverter urlConverter, UrlMappingInfo info) {",
+    "resolution": "public static ControllerArtefactHandler.ControllerCacheKey getFeatureId(UrlConverter urlConverter, UrlMappingInfo info) {",
+    "conflict": "public static ControllerArtefactHandler.ControllerCacheKey getControllerFeatureId(UrlConverter urlConverter, UrlMappingInfo info) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80753,
+    "v2": "final String featureUri = getControllerFeatureURI(urlConverter, controllerName, action);",
+    "resolution": "final String featureUri = getControllerFeatureURI(urlConverter,controllerName, action);",
+    "conflict": "final String featureUri = getControllerFeatureURI(urlConverter,controllerName, action);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 80759,
+    "v2": "import grails.util.GrailsWebUtil; import grails.web.UrlConverter;",
+    "resolution": "import grails.web.UrlConverter;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 80763,
+    "v2": "import grails.util.GrailsWebUtil; import grails.web.UrlConverter;",
+    "resolution": "import grails.util.GrailsWebUtil; import grails.web.UrlConverter;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80766,
+    "v2": "import grails.web.UrlConverter; import groovy.lang.Binding;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80768,
+    "v2": "protected final String groovyVersion = \"2.1.8\";",
+    "resolution": "protected final String groovyVersion = \"2.2.0-beta-2\";",
+    "conflict": "protected final String groovyVersion = \"2.2.0-beta-2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80771,
+    "v2": "protected final String groovyVersion = \"2.1.8-SNAPSHOT\";",
+    "resolution": "protected final String groovyVersion = \"2.2.0-beta-2\";",
+    "conflict": "protected final String groovyVersion = \"2.2.0-beta-2\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80777,
+    "v2": "assertEquals(\"2.2.5.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80781,
+    "v2": "assertEquals(\"2.2.4\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.RC1\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.RC1\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80786,
+    "v2": "assertEquals(\"2.2.4.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80788,
+    "v2": "import grails.util.GrailsWebUtil;",
+    "resolution": "import grails.util.Environment;",
+    "conflict": "import grails.util.Environment;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80794,
+    "v2": "assertEquals(\"2.1.6\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.3\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.3\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80803,
+    "v2": "assertEquals(\"2.1.6.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.3\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.3\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80813,
+    "v2": "assertEquals(\"2.2.3\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 80822,
+    "v2": "import org.springframework.core.env.MutablePropertySources; import org.springframework.core.env.PropertiesPropertySource;",
+    "resolution": "import org.springframework.core.env.PropertiesPropertySource;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80837,
+    "v2": "assertEquals(\"2.2.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80845,
+    "v2": "assertEquals(\"2.2.2\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80850,
+    "v2": "assertEquals(\"2.1.5\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.2\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.2\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80871,
+    "v2": "spaceLeft = appendCharBufferChunk(true, true);",
+    "resolution": "spaceLeft = appendCharBufferChunk(encodingState, true, true);",
+    "conflict": "spaceLeft = appendCharBufferChunk(encodingState, true, true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80872,
+    "v2": "private int appendCharBufferChunk(boolean flushInConnected, boolean allocate) throws IOException {",
+    "resolution": "private int appendCharBufferChunk(EncodingState encodingState, boolean flushInConnected, boolean allocate) throws IOException {",
+    "conflict": "private int appendCharBufferChunk(EncodingState encodingState, boolean flushInConnected, boolean allocate) throws IOException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80873,
+    "v2": "allocBuffer.reuseBuffer();",
+    "resolution": "allocBuffer.reuseBuffer(encodingState);",
+    "conflict": "allocBuffer.reuseBuffer(encodingState);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80874,
+    "v2": "spaceLeft = allocBuffer.spaceLeft();",
+    "resolution": "spaceLeft = allocBuffer.spaceLeft(encodingState);",
+    "conflict": "spaceLeft = allocBuffer.spaceLeft(encodingState);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80876,
+    "v2": "appendCharBufferChunk(true, true);",
+    "resolution": "appendCharBufferChunk(encodingState,true,true);",
+    "conflict": "appendCharBufferChunk(encodingState,true,true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80877,
+    "v2": "appendCharBufferChunk(true, false);",
+    "resolution": "appendCharBufferChunk(encodingState,true,false);",
+    "conflict": "appendCharBufferChunk(encodingState,true,false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80878,
+    "v2": "appendCharBufferChunk(true, false);",
+    "resolution": "appendCharBufferChunk(null,true,false);",
+    "conflict": "appendCharBufferChunk(null,true,false);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80881,
+    "v2": "if (classNode.equals(value.getDeclaringClass())) {",
+    "resolution": "if (classNode.equals(value.getDeclaringClass())) {",
+    "conflict": "if (value.getDeclaringClass() == classNode) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80893,
+    "v2": "assertEquals(\"2.1.5.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80902,
+    "v2": "assertEquals(\"2.2.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80906,
+    "v2": "assertEquals(\"2.2.1\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80909,
+    "v2": "assertEquals(\"2.1.4\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.1\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.1\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80911,
+    "v2": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"1.8.8\")",
+    "resolution": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"2.0.7\")",
+    "conflict": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"2.0.7\")"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80917,
+    "v2": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"1.8.9\")",
+    "resolution": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"2.0.7\")",
+    "conflict": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"2.0.7\")"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80935,
+    "v2": "assertEquals(\"2.1.4.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80948,
+    "v2": "// don't mess with locations that are URLs (in other words, locations that have schemes) if(HAS_SCHEME_PATTERN.matcher(location).matches()) return location;",
+    "resolution": "// don't mess with locations that are URLs (in other words, locations that have schemes) if(HAS_SCHEME_PATTERN.matcher(location).matches()) return location;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 80949,
+    "v2": "if(!propertyNamesToIncludeInWhiteList.contains(associationName) && !unbindablePropertyNames.contains(associationName)) {",
+    "resolution": "if(!propertyNamesToIncludeInWhiteList.contains(associationName) && !unbindablePropertyNames.contains(associationName)) {",
+    "conflict": "if (!propertyNamesToIncludeInWhiteList.contains(associationName)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80980,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80982,
+    "v2": "return readPropOrTrue(ENABLE_TERMINAL);",
+    "resolution": "return readPropOrTrue(ENABLE_TERMINAL);",
+    "conflict": "return readPropOrTrue(ENABLE_TERMINAL);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80986,
+    "v2": "private String readLine(String prompt) {",
+    "resolution": "private String readLine(String prompt, boolean secure) {",
+    "conflict": "private String readLine(String prompt, boolean secure) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80990,
+    "v2": "Class.forName(\"com.springsource.loaded.TypeRegistry\");",
+    "resolution": "Class.forName(\"org.springsource.loaded.TypeRegistry\");",
+    "conflict": "Class.forName(\"org.springsource.loaded.TypeRegistry\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80996,
+    "v2": "if (\"refresh-dependencies\".equals(cmd)) {",
+    "resolution": "if (REFRESH_DEPENDENCIES_ARGUMENT.equals(cmd)) {",
+    "conflict": "if (REFRESH_DEPENDENCIES_ARGUMENT.equals(cmd)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80997,
+    "v2": "if(Environment.KEY.equals(name)) {",
+    "resolution": "if (Environment.KEY.equals(name)) {",
+    "conflict": "if (Environment.KEY.equals(name)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 80999,
+    "v2": "if(!cleaning) {",
+    "resolution": "if (!cleaning) {",
+    "conflict": "if (!cleaning) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81000,
+    "v2": "} else if(instanceToUpdate != null) {",
+    "resolution": "} else if (instanceToUpdate != null) {",
+    "conflict": "} else if (instanceToUpdate != null) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81001,
+    "v2": "if(alteredMetaClass == NO_CUSTOM_METACLASS) {",
+    "resolution": "if (alteredMetaClass == NO_CUSTOM_METACLASS) {",
+    "conflict": "if (alteredMetaClass == NO_CUSTOM_METACLASS) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81008,
+    "v2": "doParseDependencies(definition, null, NO_EXCLUDE_RULES);",
+    "resolution": "doParseDependencies(definition, null, null, NO_EXCLUDE_RULES);",
+    "conflict": "doParseDependencies(definition, null, null, NO_EXCLUDE_RULES);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81010,
+    "v2": "private void doParseDependencies(Closure<?> definition, String pluginName, ExcludeRule[] excludeRules) {",
+    "resolution": "private void doParseDependencies(Closure<?> definition, String pluginName, String scope, ExcludeRule[] excludeRules) {",
+    "conflict": "private void doParseDependencies(Closure<?> definition, String pluginName, String scope, ExcludeRule[] excludeRules) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81012,
+    "v2": "String group = plugin.getKey().contains(\":\") ? plugin.getKey().split(\":\")[0] : \"org.grails.plugins\";",
+    "resolution": "String group = plugin.getKey().contains(\":\") ? plugin.getKey().split(\":\")[0] : \"org.grails.plugins\";",
+    "conflict": "String group = plugin.getKey().contains(\":\") ? plugin.getKey().split(\":\")[0] : \"org.grails.plugins\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81013,
+    "v2": "",
+    "resolution": "private final String springVersion = \"3.1.2.RELEASE\";",
+    "conflict": "private final String springVersion = \"3.1.2.RELEASE\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81016,
+    "v2": "String tomcatVersion = \"7.0.25\";",
+    "resolution": "String tomcatVersion = \"7.0.30\";",
+    "conflict": "String tomcatVersion = \"7.0.30\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81017,
+    "v2": "String datastoreMappingVersion = \"1.0.9.RELEASE\";",
+    "resolution": "String datastoreMappingVersion = \"1.1.2.RELEASE\";",
+    "conflict": "String datastoreMappingVersion = \"1.1.2.RELEASE\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81033,
+    "v2": "defaultActionName = methodNames.iterator().next();",
+    "resolution": "defaultActionName = methodNames.iterator().next();",
+    "conflict": "defaultActionName = methodNames.iterator().next();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81034,
+    "v2": "return prop.toLowerCase();",
+    "resolution": "return String.valueOf(Character.toLowerCase(prop.charAt(0)));",
+    "conflict": "return String.valueOf(Character.toLowerCase(prop.charAt(0)));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81043,
+    "v2": "public static final String SPRING_LOADED_PLUGIN_CLASS = \"com.springsource.loaded.Plugins\";",
+    "resolution": "public static final String SPRING_LOADED_PLUGIN_CLASS = \"org.springsource.loaded.Plugins\";",
+    "conflict": "public static final String SPRING_LOADED_PLUGIN_CLASS = \"org.springsource.loaded.Plugins\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81046,
+    "v2": "public static void removeConstraint(String name, Class constraintClass) {",
+    "resolution": "public static void removeConstraint(String name, Class<?> constraintClass) {",
+    "conflict": "public static void removeConstraint(String name, Class<?> constraintClass) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81052,
+    "v2": "public class SessionFactoryProxy extends GroovyObjectSupport implements SessionFactory, SessionFactoryImplementor, ApplicationContextAware, InitializingBean, InfrastructureProxy  {",
+    "resolution": "public class SessionFactoryProxy extends GroovyObjectSupport implements SessionFactoryImplementor, ApplicationContextAware, InitializingBean, InfrastructureProxy  {",
+    "conflict": "public class SessionFactoryProxy extends GroovyObjectSupport implements SessionFactoryImplementor, ApplicationContextAware, InitializingBean, InfrastructureProxy  {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81053,
+    "v2": "import org.codehaus.groovy.grails.validation.*;",
+    "resolution": "import org.codehaus.groovy.grails.validation.ConstrainedProperty;",
+    "conflict": "import org.codehaus.groovy.grails.validation.ConstrainedProperty;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81055,
+    "v2": "if(subMapping != null) {",
+    "resolution": "if (subMapping != null) {",
+    "conflict": "if (subMapping != null) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81056,
+    "v2": "if(appliedConstraint instanceof UniqueConstraint) {",
+    "resolution": "if (appliedConstraint instanceof UniqueConstraint) {",
+    "conflict": "if (appliedConstraint instanceof UniqueConstraint) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81063,
+    "v2": "final org.hibernate.criterion.Criterion hibernateCriterion = new HibernateCriterionAdapter(datastoreCriterion, alias).toHibernateCriterion(this);",
+    "resolution": "final org.hibernate.criterion.Criterion hibernateCriterion = new HibernateCriterionAdapter(getEntity(),datastoreCriterion, alias).toHibernateCriterion(this);",
+    "conflict": "final org.hibernate.criterion.Criterion hibernateCriterion = new HibernateCriterionAdapter(getEntity(),datastoreCriterion, alias).toHibernateCriterion(this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81064,
+    "v2": "",
+    "resolution": "applyFetchStrategies();",
+    "conflict": "applyFetchStrategies();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81077,
+    "v2": "for (Parameter p : _method.getParameters()) {",
+    "resolution": "for (Parameter p : methodNode.getParameters()) {",
+    "conflict": "for (Parameter p : methodNode.getParameters()) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81095,
+    "v2": "}",
+    "resolution": "}",
+    "conflict": "}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81097,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81104,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81113,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81151,
+    "v2": "assertEquals(\"2.0.5.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.1.3\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.1.3\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81152,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81153,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81154,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81155,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81197,
+    "v2": "",
+    "resolution": "private static final long serialVersionUID = 1;",
+    "conflict": "private static final long serialVersionUID = 1;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81199,
+    "v2": "if(this.pluginManager == null) {",
+    "resolution": "if (pluginManager == null) {",
+    "conflict": "if (pluginManager == null) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81201,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81202,
+    "v2": "quoteStr=MULTILINE_GROOVY_STRING_SINGLEQUOTES;",
+    "resolution": "quoteStr=MULTILINE_GROOVY_STRING_SINGLEQUOTES;",
+    "conflict": "quoteStr=MULTILINE_GROOVY_STRING_SINGLEQUOTES;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81209,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81210,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81211,
+    "v2": "* @return True if it can be rendered publicly",
+    "resolution": "* @return true if it can be rendered publicly",
+    "conflict": "* @return true if it can be rendered publicly"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81213,
+    "v2": "* @return True if it can be rendered publicly",
+    "resolution": "* @return true if it can be rendered publicly",
+    "conflict": "* @return true if it can be rendered publicly"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81214,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81215,
+    "v2": "request.setAttribute(GrailsPageFilter.GSP_SITEMESH_PAGE, new GSPSitemeshPage());",
+    "resolution": "request.setAttribute(GrailsPageFilter.GSP_SITEMESH_PAGE, new GSPSitemeshPage(true));",
+    "conflict": "request.setAttribute(GrailsPageFilter.GSP_SITEMESH_PAGE, new GSPSitemeshPage(true));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81225,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81226,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81236,
+    "v2": "assertEquals(\"2.2.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81239,
+    "v2": "assertEquals(\"2.1.3\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81250,
+    "v2": "assertEquals(\"2.2.0.RC4\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81253,
+    "v2": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81256,
+    "v2": "assertEquals(\"2.1.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81259,
+    "v2": "assertEquals(\"2.2.0.RC3\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 81269,
+    "v2": "if (pluginManager == null || pluginManager.isShutdown())  return;",
+    "resolution": "if (pluginManager == null || pluginManager.isShutdown())  return;",
+    "conflict": "if (pluginManager == null)  return;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81273,
+    "v2": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81275,
+    "v2": "String datastoreMappingVersion = \"1.1.1.BUILD-SNAPSHOT\";",
+    "resolution": "String datastoreMappingVersion = \"1.1.1.RELEASE\";",
+    "conflict": "String datastoreMappingVersion = \"1.1.1.RELEASE\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81278,
+    "v2": "assertEquals(\"2.2.0.RC2\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81282,
+    "v2": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.3.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81293,
+    "v2": "assertEquals(\"2.1.2.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.0.RC1\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.0.RC1\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81302,
+    "v2": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"1.8.8\")",
+    "resolution": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"2.0.2\")",
+    "conflict": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"2.0.2\")"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81303,
+    "v2": "assertEquals(\"2.1.1\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81310,
+    "v2": "import java.util.*;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81311,
+    "v2": "public class GrailsMockHttpServletResponse extends AbstractGrailsMockHttpServletResponse{",
+    "resolution": "public class GrailsMockHttpServletResponse extends AbstractGrailsMockHttpServletResponse {",
+    "conflict": "public class GrailsMockHttpServletResponse extends AbstractGrailsMockHttpServletResponse {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 81314,
+    "v2": "private final String springVersion = \"3.1.2.RELEASE\";",
+    "resolution": "private final String springVersion = \"3.1.2.RELEASE\";",
+    "conflict": "private final String springVersion = \"3.1.1.RELEASE\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81321,
+    "v2": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"1.8.7\")",
+    "resolution": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"2.0.1\")",
+    "conflict": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"2.0.1\")"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81323,
+    "v2": "assertEquals(\"2.1.1.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81331,
+    "v2": "assertEquals(\"2.1.0\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81348,
+    "v2": "assertEquals(\"2.1.0.RC3\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81351,
+    "v2": "assertEquals(\"2.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81355,
+    "v2": "assertEquals(\"2.1.0.RC2\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81360,
+    "v2": "assertEquals(\"2.1.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81363,
+    "v2": "assertEquals(\"2.1.0.RC1\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"2.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 81369,
+    "v2": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"2.0.0-beta-2-SNAPSHOT\")",
+    "resolution": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"2.0.0-beta-3-SNAPSHOT\")",
+    "conflict": "ModuleRevisionId.newInstance(\"org.codehaus.groovy\", \"groovy-all\", \"1.8.6\")"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81373,
+    "v2": "ReflectionUtils.invokeMethod(generateViewMethod, scaffoldingTemplateGenerator, domainClass, templateName, sw);",
+    "resolution": "ReflectionUtils.invokeMethod(generateViewMethod, scaffoldingTemplateGenerator, domainClass, scaffoldedtemplateName, sw);",
+    "conflict": "ReflectionUtils.invokeMethod(generateViewMethod, scaffoldingTemplateGenerator, domainClass, scaffoldedtemplateName, sw);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81375,
+    "v2": "return getNamedDecorator(request, name, false);",
+    "resolution": "return getNamedDecorator(request, name, !enableNonGspViews);",
+    "conflict": "return getNamedDecorator(request, name, !enableNonGspViews);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81381,
+    "v2": "",
+    "resolution": "public static final String NOANSI_ARGUMENT = \"plain-output\";",
+    "conflict": "public static final String NOANSI_ARGUMENT = \"plain-output\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 81389,
+    "v2": "out.println(\"createTagBody('body\" + tm.tagIndex + \"', {\");",
+    "resolution": "out.println(\"createTagBody(\" + tm.tagIndex + \", {\");",
+    "conflict": "out.println(\"createTagBody(\" + tm.tagIndex + \", { bodyit\" + tm.tagIndex +\" -> \");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 81451,
+    "v2": "return injectors;",
+    "resolution": "return injectors;",
+    "conflict": "return isArtefactFound;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 81462,
+    "v2": "private int maxWeightedCacheCapacity = DEFAULT_MAX_WEIGHTED_CAPACITY;",
+    "resolution": "private int maxWeightedCacheCapacity = DEFAULT_MAX_WEIGHTED_CAPACITY;",
+    "conflict": "private int maxWeightedCacheCapacity;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 81466,
+    "v2": "import java.util.Map;",
+    "resolution": "import java.util.Map;",
+    "conflict": "import java.util.Properties;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81482,
+    "v2": "assertEquals(\"1.3.2\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"1.3.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"1.3.3.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81492,
+    "v2": "assertEquals(\"1.2.0\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"1.2.1.SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"1.2.1.SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 81494,
+    "v2": "assertEquals(\"1.2.0.BUILD-SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "resolution": "assertEquals(\"1.2.1.SNAPSHOT\", GrailsUtil.getGrailsVersion());",
+    "conflict": "assertEquals(\"1.2.1.SNAPSHOT\", GrailsUtil.getGrailsVersion());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 81495,
+    "v2": "",
+    "resolution": "import groovy.lang.Closure;",
+    "conflict": "import groovy.lang.GString; import groovy.lang.Closure;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 81496,
+    "v2": "",
+    "resolution": "import groovy.lang.Closure;",
+    "conflict": "import groovy.lang.Closure; import groovy.lang.GString;"
+  }
+]
+}

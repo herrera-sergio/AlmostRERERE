@@ -1,0 +1,45 @@
+{"conflicts":[
+  {
+    "devdecision": "Manual",
+    "id": 73659,
+    "v2": "export async function actAsync( callback: Function, numTimesToFlush: number = 1 ): Promise<void> {",
+    "resolution": "export async function actAsync(cb: () => *): Promise<void> { const TestUtils = require('react-dom/test-utils');",
+    "conflict": "export async function actSuspense(cb: () => *): Promise<void> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 73660,
+    "v2": "callback();  // Resolve pending suspense promises jest.runOnlyPendingTimers();",
+    "resolution": "await cb();",
+    "conflict": "await cb();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 73672,
+    "v2": "// NOTICE Keep in sync with shouldFilterFiber() and other get*ForFiber methods function getDisplayNameForFiber(fiber: Fiber): string | null { const { elementType, type, tag } = fiber;",
+    "resolution": "// NOTICE Keep in sync with shouldFilterFiber() and other get*ForFiber methods function getDisplayNameForFiber(fiber: Fiber): string | null { const { elementType, type, tag } = fiber;",
+    "conflict": "function getDataForFiber(fiber: Fiber): FiberData { const { elementType, type, key, tag } = fiber;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 73674,
+    "v2": "const nativeNodes = findNativeByFiberID(id); if (nativeNodes !== null) { console.log('Nodes:', nativeNodes);",
+    "resolution": "const nativeNodes = getNativeFromInternal(id); if (nativeNodes !== null) { console.log('Nodes:', nativeNodes);",
+    "conflict": "const nativeNode = getNativeFromInternal(id); if (nativeNode !== null) { console.log('Node:', nativeNode);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 73703,
+    "v2": "case TREE_OPERATION_REORDER_CHILDREN: id = ((operations[i + 1]: any): number);",
+    "resolution": "} case TREE_OPERATION_REORDER_CHILDREN: { const id = ((operations[i + 1]: any): number);",
+    "conflict": "} case TREE_OPERATION_RESET_CHILDREN: { const id = ((operations[i + 1]: any): number);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 73706,
+    "v2": "function getTargetInstForClickEvent(topLevelType, targetInst) { if (topLevelType === TOP_CLICK) { return getInstIfValueChanged(targetInst); } }",
+    "resolution": "",
+    "conflict": ""
+  }
+]
+}

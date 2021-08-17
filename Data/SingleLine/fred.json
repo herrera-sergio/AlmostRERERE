@@ -1,0 +1,2313 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 51976,
+    "v2": "import freenet.support.compress.InvalidCompressionCodecException;",
+    "resolution": "import freenet.support.compress.CompressionRatioException;",
+    "conflict": "import freenet.support.compress.CompressionRatioException;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52167,
+    "v2": "private static final int buildNumber = 1480;",
+    "resolution": "private static final int buildNumber = 1480;",
+    "conflict": "private static final int buildNumber = 1478;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52173,
+    "v2": "req.sendPendingMessages(handler.outputHandler, identifier, true, onlyData);",
+    "resolution": "req.sendPendingMessages(handler.outputHandler, identifier, true, onlyData);",
+    "conflict": "req.sendPendingMessages(handler.outputHandler, null, true, true, onlyData);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52174,
+    "v2": "req.sendPendingMessages(handler.outputHandler, identifier, true, onlyData);",
+    "resolution": "req.sendPendingMessages(handler.outputHandler, identifier, true, onlyData);",
+    "conflict": "req.sendPendingMessages(handler.outputHandler, null, true, true, onlyData);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52179,
+    "v2": "import freenet.client.async.ContainerInserter; import freenet.client.async.ManifestPutter;",
+    "resolution": "import freenet.client.async.ContainerInserter;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52189,
+    "v2": "import freenet.clients.fcp.ClientPut; import freenet.clients.http.QueueToadlet;",
+    "resolution": "import freenet.clients.fcp.ClientPut;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52192,
+    "v2": "",
+    "resolution": "import freenet.node.fcp.FCPPluginClient;",
+    "conflict": "import freenet.node.fcp.FCPConnectionHandler; import freenet.node.fcp.FCPPluginClient;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52194,
+    "v2": "FCPPluginReply reply = new FCPPluginReply(pluginname, clientSideIdentifier, params, bucket);",
+    "resolution": "FCPPluginServerMessage reply = new FCPPluginServerMessage(pluginname, clientSideIdentifier, params, bucket);",
+    "conflict": "FCPPluginServerMessage reply = new FCPPluginServerMessage(pluginname, identifier, params, bucket);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52197,
+    "v2": "list.wait((int)Math.min(500L, maxWait-thisTime));",
+    "resolution": "list.wait(Math.min(500L, maxWait - thisTime));",
+    "conflict": "list.wait(Math.min(500L, maxWait - thisTime));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52199,
+    "v2": "ctx, realTimeFlag, m, false, sourceLength, token, getCHKOnly, true, true /* we don't use it */, null, container, context, persistent, true, extraInserts, cryptoAlgorithm, forceCryptoKey);",
+    "resolution": "ctx, realTimeFlag, m, false, sourceLength, token, true, true /* we don't use it */, null, context, persistent, true, extraInserts, cryptoAlgorithm, forceCryptoKey);",
+    "conflict": "ctx, realTimeFlag, m, false, sourceLength, token, true, true /* we don't use it */, null, context, persistent, false, extraInserts, cryptoAlgorithm, forceCryptoKey);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52202,
+    "v2": "import freenet.crypt.MasterSecret;",
+    "resolution": "import freenet.crypt.MasterSecret;import freenet.clients.fcp.PersistentRequestRoot;",
+    "conflict": "import freenet.clients.fcp.PersistentRequestRoot;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52219,
+    "v2": "public long size() throws IOException {",
+    "resolution": "public long size() {",
+    "conflict": "public long size() {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52232,
+    "v2": "if(MessageDigest.isEqual(nonceInitiator, buf))",
+    "resolution": "if(MessageDigest.isEqual(nonceInitiator, (negType > 8 ?  SHA256.digest(buf) : buf)))",
+    "conflict": "if(Arrays.equals((negType > 8 ?  SHA256.digest(buf) : buf), nonceInitiator))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52234,
+    "v2": "public final String defaultKeyAlgorithm;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52264,
+    "v2": "throw new AssertionError();",
+    "resolution": "throw new AssertionError();",
+    "conflict": "throw new AssertionFailedError();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52267,
+    "v2": "Logger.minor(this, \"Announcement from \"+origin+\" added node \"+pn+(pn instanceof SeedClientPeerNode ? \" (seed server added the peer directly)\" : \"\"));",
+    "resolution": "Logger.minor(this, \"Announcement from \"+origin+\" added node \"+pn+(pn instanceof SeedClientPeerNode ? \" (seed server added the peer directly)\" : \"\"));",
+    "conflict": "Logger.error(this, \"Announcement from \"+origin+\" added node \"+pn+\" - THIS SHOULD NOT HAPPEN!\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52273,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import java.util.LinkedList; import java.util.List;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52283,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import java.util.Deque; import java.util.List;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52289,
+    "v2": "Integer x = possibles.remove(context.random.nextInt(possibles.size()));",
+    "resolution": "Integer x = ListUtils.removeRandomBySwapLastSimple(context.random, possibles);",
+    "conflict": "Integer x = ListUtils.removeRandomBySwapLastSimple(context.random, possibles);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52291,
+    "v2": "import java.util.LinkedList; import java.util.List;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52302,
+    "v2": "import java.util.Deque; import java.util.List;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52308,
+    "v2": "public ClientPutDir(FCPClient client, FreenetURI uri, String identifier, int verbosity, short priorityClass, short persistenceType, String clientToken, boolean getCHKOnly, boolean dontCompress, int maxRetries, File dir, String defaultName, boolean allowUnreadableFiles, boolean includeHiddenFiles, boolean global, boolean earlyEncode, boolean canWriteClientCache, boolean forkOnCacheable, int extraInsertsSingleBlock, int extraInsertsSplitfileHeaderBlock, boolean realTimeFlag, byte[] overrideSplitfileCryptoKey, FCPServer server, ObjectContainer container) throws FileNotFoundException, IdentifierCollisionException, MalformedURLException {",
+    "resolution": "public ClientPutDir(FCPClient client, FreenetURI uri, String identifier, int verbosity, short priorityClass, short persistenceType, String clientToken, boolean getCHKOnly, boolean dontCompress, int maxRetries, File dir, String defaultName, boolean allowUnreadableFiles, boolean includeHiddenFiles, boolean global, boolean earlyEncode, boolean canWriteClientCache, boolean forkOnCacheable, int extraInsertsSingleBlock, int extraInsertsSplitfileHeaderBlock, boolean realTimeFlag, byte[] overrideSplitfileCryptoKey, FCPServer server, ObjectContainer container) throws FileNotFoundException, IdentifierCollisionException, MalformedURLException, TooManyFilesInsertException {",
+    "conflict": "public ClientPutDir(FCPClient client, FreenetURI uri, String identifier, int verbosity, short priorityClass, short persistenceType, String clientToken, boolean getCHKOnly, boolean dontCompress, int maxRetries, File dir, String defaultName, boolean allowUnreadableFiles, boolean includeHiddenFiles, boolean global, boolean earlyEncode, boolean canWriteClientCache, boolean forkOnCacheable, int extraInsertsSingleBlock, int extraInsertsSplitfileHeaderBlock, boolean realTimeFlag, byte[] overrideSplitfileCryptoKey, FCPServer server, ObjectContainer container) throws FileNotFoundException, IdentifierCollisionException, MalformedURLException, TooManyFilesInsertException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52309,
+    "v2": "allowUnreadableFiles = Fields.stringToBool(fs.get(\"AllowUnreadableFiles\"), false);",
+    "resolution": "allowUnreadableFiles = fs.getBoolean(\"AllowUnreadableFiles\", false);",
+    "conflict": "allowUnreadableFiles = fs.getBoolean(\"AllowUnreadableFiles\", false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52316,
+    "v2": "import java.util.Vector; import java.util.Arrays;",
+    "resolution": "import java.util.Arrays;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52317,
+    "v2": "import freenet.support.Fields;",
+    "resolution": "import freenet.support.Fields;import freenet.pluginmanager.PluginAddress;",
+    "conflict": "import freenet.pluginmanager.PluginAddress;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52328,
+    "v2": "public synchronized void reportOutgoingBytes(int length) {",
+    "resolution": "public synchronized void reportOutgoingBytes(int length) {",
+    "conflict": "synchronized void reportOutgoingBytes(int length) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52341,
+    "v2": "byte[] locallyExpectedExponentials =  assembleDHParams(hisExponential, pn.peerCryptoGroup);",
+    "resolution": "byte[] locallyExpectedExponentials = assembleDHParams(hisExponential, peerTransport.pn.peerCryptoGroup);",
+    "conflict": "byte[] locallyExpectedExponentials = assembleDHParams(_hisExponential, peerTransport.pn.peerCryptoGroup);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52354,
+    "v2": "if(pn.handleReceivedPacket(buf, offset, length, now, peer)) {",
+    "resolution": "if(pn.handleReceivedPacket(buf, offset, length, now, peerAddress, mangler.getTransport())) {",
+    "conflict": "if(pn.handleReceivedPacket(buf, offset, length, now, peerAddress, mangler.getTransport())) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52359,
+    "v2": "import freenet.support.io.InetAddressComparator;",
+    "resolution": "import freenet.support.Logger.LogLevel;\nimport freenet.transports.PluginAddressComparator;",
+    "conflict": "import freenet.support.Logger.LogLevel;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52363,
+    "v2": "if(tryProcessAuthAnonReply(buf, offset, length, pn, peer, now)) {",
+    "resolution": "if(tryProcessAuthAnonReply(buf, offset, length, peerTransportPn, address, now)) {",
+    "conflict": "if(tryProcessAuthAnonReply(buf, offset, length, peerTransportPn, address, now)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52368,
+    "v2": "8 + // packet tracker ID",
+    "resolution": "8 +\t\t  // packet tracker ID",
+    "conflict": "8 +\t\t  // packet tracker ID"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52370,
+    "v2": "byte[] locallyGeneratedText = new byte[NONCE_SIZE * 2 + DiffieHellman.modulusLengthInBytes() * 2 + crypto.myIdentity.length + dataLen + pn.jfkMyRef.length];",
+    "resolution": "byte[] locallyGeneratedText = new byte[NONCE_SIZE * 2 + DiffieHellman.modulusLengthInBytes() * 2 + crypto.myIdentity.length + dataLen + peerTransport.jfkMyRef.length];",
+    "conflict": "byte[] locallyGeneratedText = new byte[NONCE_SIZE * 2 + DiffieHellman.modulusLengthInBytes() * 2 + crypto.myIdentity.length + dataLen + peerTransport.jfkMyRef.length];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52375,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52382,
+    "v2": "import freenet.io.AddressTracker.Status; import freenet.io.comm.FreenetInetAddress;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52393,
+    "v2": "if(mangler == null) throw new NullPointerException(); \t\tthis.outgoingMangler = mangler;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52398,
+    "v2": "disconnected(true, true); // always dump trackers, maybe dump messages",
+    "resolution": "disconnectPeer(true, true); // always dump trackers, maybe dump messages",
+    "conflict": "disconnectPeer(purge, true); // always dump trackers, maybe dump messages"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52408,
+    "v2": "// Something odd happened, possibly a disconnect, maybe looking up the DNS names will help? \t\tlastAttemptedHandshakeIPUpdateTime = System.currentTimeMillis();",
+    "resolution": "// Something odd happened, possibly a disconnect, maybe looking up the DNS names will help?\ncountFailedRevocationTransfers++;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52409,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52411,
+    "v2": "byte[] ivNonce, byte[] hmacKey, NewPacketFormatKeyContext context, long trackerID) {",
+    "resolution": "byte[] ivNonce, byte[] hmacKey, NewPacketFormatKeyContext context, long trackerID, TransportPlugin transportPlugin) {",
+    "conflict": "byte[] ivNonce, byte[] hmacKey, NewPacketFormatKeyContext context, long trackerID, TransportPlugin transportPlugin) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52419,
+    "v2": "final SessionKey senderKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1);",
+    "resolution": "final SessionKey senderKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null);",
+    "conflict": "final SessionKey senderKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52422,
+    "v2": "final SessionKey senderKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1);",
+    "resolution": "final SessionKey senderKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null);",
+    "conflict": "final SessionKey senderKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52436,
+    "v2": "public void addCustomWaiter(FProxyFetchWaiter waiter){",
+    "resolution": "public synchronized void addCustomWaiter(FProxyFetchWaiter waiter){",
+    "conflict": "public synchronized void addCustomWaiter(FProxyFetchWaiter waiter){"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52437,
+    "v2": "/** Unique ID for the fetch */ \tprivate final long identifier;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52441,
+    "v2": "// & 0xFF for unsigned byte.",
+    "resolution": "// & 0xFF for unsigned byte. Can be up to 255, no negatives.",
+    "conflict": "// & 0xFF for unsigned byte. Can be up to 255, no negatives."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52443,
+    "v2": "dos.writeDouble(((Double) object).doubleValue());",
+    "resolution": "dos.writeDouble((Double) object);",
+    "conflict": "dos.writeDouble((Double) object);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52447,
+    "v2": "if(newLoadManagement && p.outputLoadTracker(realTime).getLastIncomingLoadStats() == null) {",
+    "resolution": "if(newLoadManagement && p.outputLoadTracker(realTime, isSSK).getLastIncomingLoadStats() == null) {",
+    "conflict": "if(newLoadManagement && p.outputLoadTracker(realTime, isSSK).getLastIncomingLoadStats() == null) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52448,
+    "v2": "} else if (uri.getQuery() != null && uri.getQuery().startsWith(\"_CHECKED_HTTP_=\")) {",
+    "resolution": "} else if (uri.getQuery() != null && uri.getQuery().startsWith(\"_CHECKED_HTTP_=\")) {",
+    "conflict": "} else if (uri.getQuery() != null && uri.getQuery().contains(\"_CHECKED_HTTP_=\")) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52452,
+    "v2": "// during which the originator thinks we have unlocked but we haven't,",
+    "resolution": "// during which the originator thinks we have unlocked but we haven't,",
+    "conflict": "// during which downstream thinks we have unlocked but we haven't,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52461,
+    "v2": "throw new BinaryBlobAlreadyClosedException(\"Already finalized.\");",
+    "resolution": "throw new BinaryBlobAlreadyClosedException(\"Already finalized (getting final data).\");",
+    "conflict": "throw new BinaryBlobAlreadyClosedException(\"Already finalized (getting final data).\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52462,
+    "v2": "throw new BinaryBlobAlreadyClosedException(\"Already finalized.\");",
+    "resolution": "throw new BinaryBlobAlreadyClosedException(\"Already finalized (closing blob).\");",
+    "conflict": "throw new BinaryBlobAlreadyClosedException(\"Already finalized (closing blob).\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52463,
+    "v2": "if (_finalized) throw new BinaryBlobAlreadyClosedException(\"Already finalized.\");",
+    "resolution": "if (_finalized) throw new BinaryBlobAlreadyClosedException(\"Already finalized (closing blob - 2).\");",
+    "conflict": "if (_finalized) throw new BinaryBlobAlreadyClosedException(\"Already finalized (closing blob - 2).\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52464,
+    "v2": "throw new BinaryBlobAlreadyClosedException(\"Already closed getting final data\");",
+    "resolution": "throw new BinaryBlobAlreadyClosedException(\"Already closed (getting final data snapshot)\");",
+    "conflict": "throw new BinaryBlobAlreadyClosedException(\"Already closed (getting final data snapshot)\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52472,
+    "v2": "return false;",
+    "resolution": "return false;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52473,
+    "v2": "return true;",
+    "resolution": "return true;",
+    "conflict": "return false;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52482,
+    "v2": "import freenet.node.DarknetPeerNode.FRIEND_TRUST;",
+    "resolution": "import freenet.node.DarknetPeerNode.FRIEND_TRUST;import freenet.node.DarknetPeerNode.FRIEND_VISIBILITY;",
+    "conflict": "import freenet.node.DarknetPeerNode.FRIEND_VISIBILITY;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52484,
+    "v2": "_cal.set( 2011, Calendar.MAY, 31, 0, 0, 0 );",
+    "resolution": "_cal.set( 2011, Calendar.MAY, 27, 0, 0, 0 );",
+    "conflict": "_cal.set( 2011, Calendar.MAY, 27, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52487,
+    "v2": "addOfficialPlugin(\"WebOfTrust\", false, 7, true, new FreenetURI(\"CHK@QmPBikznbYkzv9ASslt3CwkC4PEc5OSwUtMg21KBUoM,LQ2EOKdg3z9Q0uc49m7XL-CVX4S4VojSpy~k7exsNMU,AAIC--8/WebOfTrust.jar\"), false, false, false);",
+    "resolution": "addOfficialPlugin(\"WebOfTrust\", false, 7, true, new FreenetURI(\"CHK@QmPBikznbYkzv9ASslt3CwkC4PEc5OSwUtMg21KBUoM,LQ2EOKdg3z9Q0uc49m7XL-CVX4S4VojSpy~k7exsNMU,AAIC--8/WebOfTrust.jar\"), false, false, false);",
+    "conflict": "addOfficialPlugin(\"WebOfTrust\", false, 6, true, new FreenetURI(\"CHK@nnE9Wq02H7WKxksE0bL9vULdNFctQIetQGnGk7Kzwmc,P6Lo5K~qyg0929CaMRTaRMHTIiB4FW7mbNM51by3QPE,AAIC--8/WebOfTrust.jar\"), false, false, false);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52488,
+    "v2": "import freenet.node.DarknetPeerNode.FRIEND_VISIBILITY;",
+    "resolution": "import freenet.node.DarknetPeerNode.FRIEND_VISIBILITY;import freenet.node.DarknetPeerNode.FRIEND_TRUST;",
+    "conflict": "import freenet.node.DarknetPeerNode.FRIEND_TRUST;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52490,
+    "v2": "_cal.set( 2011, Calendar.MAY, 18, 0, 0, 0 );",
+    "resolution": "_cal.set( 2011, Calendar.MAY, 10, 0, 0, 0 );",
+    "conflict": "_cal.set( 2011, Calendar.MAY, 10, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52493,
+    "v2": "public final static int RECOMMENDED_EXT_BUILD_NUMBER = 29;",
+    "resolution": "public final static int RECOMMENDED_EXT_BUILD_NUMBER = 29;",
+    "conflict": "public final static int RECOMMENDED_EXT_BUILD_NUMBER = 28;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52496,
+    "v2": "_cal.set( 2011, Calendar.MAY, 11, 0, 0, 0 );",
+    "resolution": "_cal.set( 2011, Calendar.MAY, 1, 0, 0, 0 );",
+    "conflict": "_cal.set( 2011, Calendar.MAY, 1, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52499,
+    "v2": "Logger.warning(this, \"Terminating send after failure on \"+this);",
+    "resolution": "Logger.error(this, \"Terminating send after failure on \"+this);",
+    "conflict": "Logger.error(this, \"Terminating send after failure on \"+this);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52506,
+    "v2": "* Sending asynchronously saves threads and allows unqueueing of messages, preventing \t * a build up of queued messages, as well as allowing us to get rid of sendThrottledMessage().",
+    "resolution": "* Sending asynchronously saves threads and allows unqueueing of messages, preventing\n\t * a build up of queued messages, as well as allowing us to get rid of sendThrottledMessage().",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52508,
+    "v2": "if(!isOldFNP) {",
+    "resolution": "if(!isOldFNP) {",
+    "conflict": "if(!_destination.isOldFNP()) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52510,
+    "v2": "if((!isOldFNP) && (!failed))",
+    "resolution": "if((!isOldFNP) && (!failed))",
+    "conflict": "if(!isOldFNP)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52511,
+    "v2": "Message msg = DMT.createFNPBulkPacketSend(uid, blockNo, buf, realTime);",
+    "resolution": "Message msg = DMT.createFNPBulkPacketSend(uid, blockNo, buf, realTime);",
+    "conflict": "Message msg = DMT.createFNPBulkPacketSend(uid, blockNo, buf);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52527,
+    "v2": "pingTime = averagePingTime();",
+    "resolution": "if(isInMandatoryBackoff(now, realTime)) return true;\npingTime = averagePingTime();",
+    "conflict": "return isInMandatoryBackoff(now, realTime);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52528,
+    "v2": "protected synchronized int getPeerNodeStatus(long now, long routingBackedOffUntilRT, long localRoutingBackedOffUntilBulk, boolean overPingTime) {",
+    "resolution": "protected synchronized int getPeerNodeStatus(long now, long routingBackedOffUntilRT, long localRoutingBackedOffUntilBulk, boolean overPingTime, boolean noLoadStats) {",
+    "conflict": "protected synchronized int getPeerNodeStatus(long now, long routingBackedOffUntilRT, long localRoutingBackedOffUntilBulk, boolean noLoadStats) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52532,
+    "v2": "if(logMINOR) Logger.minor(this, \"No longer routing \"+tag+\" to \"+this); \t\t\toutputLoadTracker(tag.realTimeFlag).maybeNotifySlotWaiter();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52568,
+    "v2": "import freenet.node.SyncSendWaitedTooLongException;",
+    "resolution": "import freenet.node.SyncSendWaitedTooLongException;import freenet.node.DarknetPeerNode.FRIEND_VISIBILITY;",
+    "conflict": "import freenet.node.DarknetPeerNode.FRIEND_VISIBILITY;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52571,
+    "v2": "Logger.warning(this, \"Disconnecting \"+this+\" because of fatal timeout\");",
+    "resolution": "Logger.error(this, \"Disconnecting \"+this+\" because of fatal timeout\");",
+    "conflict": "Logger.error(this, \"Disconnecting \"+this+\" because of fatal timeout\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52573,
+    "v2": "_cal.set( 2011, Calendar.MAY, 3, 0, 0, 0 );",
+    "resolution": "_cal.set( 2011, Calendar.APRIL, 23, 0, 0, 0 );",
+    "conflict": "_cal.set( 2011, Calendar.APRIL, 23, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52574,
+    "v2": "NodeStarter.globalTestInit(testName, false, LogLevel.ERROR, \"freenet.node.Location:normal,freenet.node.simulator.RealNodeRoutingTest:normal,freenet.node.NodeDispatcher:NORMAL,freenet.node.FailureTable:MINOR,freenet.node.Node:MINOR,freenet.node.Request:MINOR,freenet.io.comm.MessageCore:MINOR,freenet.node.PeerNode:MINOR,freenet.node.DarknetPeerNode:MINOR,freenet.io.xfer.PacketThrottle:MINOR,freenet.node.PeerManager:MINOR,freenet.client.async:MINOR\", true);",
+    "resolution": "NodeStarter.globalTestInit(testName, false, LogLevel.ERROR, \"freenet.node.Location:normal,freenet.node.simulator.RealNodeRoutingTest:normal,freenet.node.NodeDispatcher:NORMAL,freenet.node.FailureTable:MINOR,freenet.node.Node:MINOR,freenet.node.Request:MINOR,freenet.io.comm.MessageCore:MINOR,freenet.node.PeerNode:MINOR,freenet.node.DarknetPeerNode:MINOR,freenet.io.xfer.OldPacketThrottle:MINOR,freenet.node.PeerManager:MINOR,freenet.client.async:MINOR\", true);",
+    "conflict": "NodeStarter.globalTestInit(testName, false, LogLevel.ERROR, \"freenet.node.Location:normal,freenet.node.simulator.RealNodeRoutingTest:normal,freenet.node.NodeDispatcher:NORMAL,freenet.node.FailureTable:MINOR,freenet.node.Node:MINOR,freenet.node.Request:MINOR,freenet.io.comm.MessageCore:MINOR,freenet.node.PeerNode:MINOR,freenet.node.DarknetPeerNode:MINOR,freenet.io.xfer.OldPacketThrottle:MINOR,freenet.node.PeerManager:MINOR\", true);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52580,
+    "v2": "private static boolean logDEBUG =Logger.shouldLog(Logger.DEBUG,HexUtil.class);",
+    "resolution": "private static boolean logDEBUG =Logger.shouldLog(Logger.DEBUG,HexUtil.class);",
+    "conflict": "private static boolean logDEBUG =Logger.logger.instanceShouldLog(LogLevel.DEBUG,HexUtil.class);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52582,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52584,
+    "v2": "NodeStarter.globalTestInit(testName, false, LogLevel.ERROR, \"freenet.node.Location:normal,freenet.node.simulator.RealNodeRoutingTest:normal,freenet.node.NodeDispatcher:NORMAL,freenet.node.FailureTable:MINOR,freenet.node.Node:MINOR,freenet.node.Request:MINOR,freenet.io.comm.MessageCore:MINOR,freenet.node.PeerNode:MINOR,freenet.node.DarknetPeerNode:MINOR,freenet.io.xfer.PacketThrottle:MINOR,freenet.node.PeerManager:MINOR,freenet.client.async:MINOR\", true);",
+    "resolution": "NodeStarter.globalTestInit(testName, false, LogLevel.ERROR, \"freenet.node.Location:normal,freenet.node.simulator.RealNodeRoutingTest:normal,freenet.node.NodeDispatcher:NORMAL,freenet.node.FailureTable:MINOR,freenet.node.Node:MINOR,freenet.node.Request:MINOR,freenet.io.comm.MessageCore:MINOR,freenet.node.PeerNode:MINOR,freenet.node.DarknetPeerNode:MINOR,freenet.io.xfer.OldPacketThrottle:MINOR,freenet.node.PeerManager:MINOR,freenet.client.async:MINOR\", true);",
+    "conflict": "NodeStarter.globalTestInit(testName, false, LogLevel.ERROR, \"freenet.node.Location:normal,freenet.node.simulator.RealNodeRoutingTest:normal,freenet.node.NodeDispatcher:NORMAL,freenet.node.FailureTable:MINOR,freenet.node.Node:MINOR,freenet.node.Request:MINOR,freenet.io.comm.MessageCore:MINOR,freenet.node.PeerNode:MINOR,freenet.node.DarknetPeerNode:MINOR,freenet.io.xfer.OldPacketThrottle:MINOR,freenet.node.PeerManager:MINOR\", true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52585,
+    "v2": "private static final int buildNumber = 1365;",
+    "resolution": "private static final int buildNumber = 43;",
+    "conflict": "private static final int buildNumber = 43;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52589,
+    "v2": "_cal.set( 2011, Calendar.APRIL, 11, 0, 0, 0 );",
+    "resolution": "_cal.set( 2011, Calendar.APRIL, 2, 0, 0, 0 );",
+    "conflict": "_cal.set( 2011, Calendar.APRIL, 2, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52591,
+    "v2": "config.register(\"maxCachedLines\", \"10k\", 7, true, false, \"LogConfigHandler.maxCachedLines\",",
+    "resolution": "config.register(\"maxCachedLines\", \"500k\", 7, true, false, \"LogConfigHandler.maxCachedLines\",",
+    "conflict": "config.register(\"maxCachedLines\", \"500k\", 7, true, false, \"LogConfigHandler.maxCachedLines\","
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52594,
+    "v2": "private static final int buildNumber = 1363;",
+    "resolution": "private static final int buildNumber = 35;",
+    "conflict": "private static final int buildNumber = 35;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52596,
+    "v2": "private static final int buildNumber = 1360;",
+    "resolution": "private static final int buildNumber = 33;",
+    "conflict": "private static final int buildNumber = 33;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52597,
+    "v2": "if(logDEBUG) Logger.debug(this, \"Cannot send because \"+packets.countSentPackets()+\" in flight of limit \"+maxPackets);",
+    "resolution": "if(logDEBUG) Logger.debug(this, \"Cannot send because \"+packets.countSentPackets()+\" in flight of limit \"+maxPackets+\" on \"+this);",
+    "conflict": "if(logDEBUG) Logger.debug(this, \"Cannot send because \"+packets.countSentPackets()+\" in flight of limit \"+maxPackets+\" on \"+this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52601,
+    "v2": "_cal.set( 2011, Calendar.MARCH, 21, 0, 0, 0 );",
+    "resolution": "_cal.set( 2011, Calendar.MARCH, 18, 0, 0, 0 );",
+    "conflict": "_cal.set( 2011, Calendar.MARCH, 18, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52609,
+    "v2": "public boolean canSend(SessionKey sessionKey) {",
+    "resolution": "public boolean canSend(SessionKey tracker) {",
+    "conflict": "public boolean canSend(SessionKey tracker) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52610,
+    "v2": "if(sessionKey != null) {",
+    "resolution": "if(tracker != null && pn != null) {",
+    "conflict": "if(tracker != null && pn != null) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52611,
+    "v2": "NewPacketFormatKeyContext packets = sessionKey.packetContext;",
+    "resolution": "NewPacketFormatKeyContext packets = tracker.packetContext;",
+    "conflict": "NewPacketFormatKeyContext packets = tracker.packetContext;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52614,
+    "v2": "_cal.set( 2011, Calendar.MARCH, 22, 0, 0, 0 );",
+    "resolution": "_cal.set( 2011, Calendar.MARCH, 18, 0, 0, 0 );",
+    "conflict": "_cal.set( 2011, Calendar.MARCH, 17, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52617,
+    "v2": "_cal.set( 2011, Calendar.MARCH, 22, 0, 0, 0 );",
+    "resolution": "_cal.set( 2011, Calendar.MARCH, 22, 0, 0, 0 );",
+    "conflict": "_cal.set( 2011, Calendar.MARCH, 11, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52623,
+    "v2": "_cal.set( 2011, Calendar.MARCH, 11, 0, 0, 0 );",
+    "resolution": "_cal.set( 2011, Calendar.MARCH, 5, 0, 0, 0 );",
+    "conflict": "_cal.set( 2011, Calendar.MARCH, 5, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52624,
+    "v2": "sfs.put(\"Testnet\", node.isTestnetEnabled());",
+    "resolution": "sfs.put(\"Testnet\", node.isTestnetEnabled());",
+    "conflict": "sfs.putSingle(\"Testnet\", Boolean.toString(node == null ? false : node.isTestnetEnabled()));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52627,
+    "v2": "if(count >= maxTooOldPeers)",
+    "resolution": "if(count >= maxTooOldPeers)",
+    "conflict": "if(count > maxTooOldPeers)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52639,
+    "v2": "fromOfferedKey = (routeAttempts == 0);",
+    "resolution": "fromOfferedKey = (routeAttempts == 0);",
+    "conflict": "fromOfferedKey = (routeAttempts > 0);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52640,
+    "v2": "fromOfferedKey = (routeAttempts == 0);",
+    "resolution": "fromOfferedKey = (routeAttempts == 0);",
+    "conflict": "fromOfferedKey = (routeAttempts > 0);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52649,
+    "v2": "OpennetManager.waitForOpennetNoderef(true, source, uid, this, new NoderefCallback() {",
+    "resolution": "OpennetManager.waitForOpennetNoderef(true, source, uid, this, new NoderefCallback() {",
+    "conflict": "om.waitForOpennetNoderef(true, source, uid, this, new NoderefCallback() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52653,
+    "v2": "OpennetManager.waitForOpennetNoderef(true, source, uid, this, new NoderefCallback() {",
+    "resolution": "OpennetManager.waitForOpennetNoderef(true, source, uid, this, new NoderefCallback() {",
+    "conflict": "om.waitForOpennetNoderef(true, source, uid, this, new NoderefCallback() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52658,
+    "v2": "",
+    "resolution": "",
+    "conflict": "double bwlimitDelayTime = realTimeFlag ? throttledPacketSendAverageRT.currentValue() : throttledPacketSendAverageBulk.currentValue();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52661,
+    "v2": "",
+    "resolution": "// Not an error since it can be caused downstream.\n    \t\tLogger.warning(this, \"RequestSender timed out waiting for noderef from \"+next+\" for \"+this);",
+    "conflict": "// Not an error since it can be caused downstream.     \t\tLogger.warning(this, \"RequestSender timed out waiting for noderef from \"+next+\" for \"+this);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52663,
+    "v2": "OpennetManager.waitForOpennetNoderef(true, source, uid, this, new NoderefCallback() {",
+    "resolution": "OpennetManager.waitForOpennetNoderef(true, source, uid, this, new NoderefCallback() {",
+    "conflict": "om.waitForOpennetNoderef(true, source, uid, this, new NoderefCallback() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52668,
+    "v2": "node.nodeStats.successfulBlockReceive(realTimeFlag, false);",
+    "resolution": "node.nodeStats.successfulBlockReceive(realTimeFlag, false);",
+    "conflict": "node.nodeStats.successfulBlockReceive(realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52669,
+    "v2": "node.nodeStats.failedBlockReceive(false, false, false, realTimeFlag, false);",
+    "resolution": "node.nodeStats.failedBlockReceive(false, false, false, realTimeFlag, false);",
+    "conflict": "node.nodeStats.failedBlockReceive(false, false, false, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52675,
+    "v2": "if(isLocal) \t\t\tblockTransferPSuccessLocal.report(0.0);",
+    "resolution": "if(isLocal)\n\t\t\tblockTransferPSuccessLocal.report(0.0);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52680,
+    "v2": "origTag.removeRoutingTo(waitingFor);",
+    "resolution": "waitingFor.noLongerRoutingTo(origTag, false);",
+    "conflict": "next.noLongerRoutingTo(origTag, false);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52681,
+    "v2": "node.nodeStats.successfulBlockReceive(realTimeFlag, source == null);",
+    "resolution": "node.nodeStats.successfulBlockReceive(realTimeFlag, source == null);",
+    "conflict": "node.nodeStats.successfulBlockReceive(realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52682,
+    "v2": "node.nodeStats.failedBlockReceive(false, false, false, realTimeFlag, source == null);",
+    "resolution": "node.nodeStats.failedBlockReceive(false, false, false, realTimeFlag, source == null);",
+    "conflict": "node.nodeStats.failedBlockReceive(false, false, false, realTimeFlag);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52683,
+    "v2": "private DO waitForAccepted(PeerNode next) {",
+    "resolution": "private DO waitForAccepted(RequestLikelyAcceptedState expectedAcceptState, PeerNode next) {",
+    "conflict": "private DO waitForAccepted(RequestLikelyAcceptedState expectedAcceptState) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52685,
+    "v2": "node.nodeStats.successfulBlockReceive(realTimeFlag, source == null);",
+    "resolution": "node.nodeStats.successfulBlockReceive(realTimeFlag, source == null);",
+    "conflict": "node.nodeStats.successfulBlockReceive(realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52686,
+    "v2": "node.nodeStats.failedBlockReceive(true, timeout, reason == RetrievalException.GONE_TO_TURTLE_MODE, realTimeFlag, source == null);",
+    "resolution": "node.nodeStats.failedBlockReceive(true, timeout, reason == RetrievalException.GONE_TO_TURTLE_MODE, realTimeFlag, source == null);",
+    "conflict": "node.nodeStats.failedBlockReceive(true, timeout, reason == RetrievalException.GONE_TO_TURTLE_MODE, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52688,
+    "v2": "if(forkedRequestTag != null) next.noLongerRoutingTo(forkedRequestTag, false);",
+    "resolution": "if(forkedRequestTag != null) next.noLongerRoutingTo(forkedRequestTag, false);",
+    "conflict": "if(forkedRequestTag != null) next.noLongerRoutingTo(forkedRequestTag, true);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52690,
+    "v2": "if(itemsNonUrgent != null && !itemsNonUrgent.isEmpty()) {",
+    "resolution": "if(itemsNonUrgent != null && !itemsNonUrgent.isEmpty()) {",
+    "conflict": "if(itemsNonUrgent != null && !itemsNonUrgent.isEmpty() && timeoutSinceLastSend) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52691,
+    "v2": "public static byte[] waitForOpennetNoderef(boolean isReply, PeerNode source, long uid, ByteCounter ctr, Node node) {",
+    "resolution": "public static byte[] waitForOpennetNoderef(boolean isReply, PeerNode source, long uid, ByteCounter ctr, Node node) throws WaitedTooLongForOpennetNoderefException {",
+    "conflict": "public static byte[] waitForOpennetNoderef(boolean isReply, PeerNode source, long uid, ByteCounter ctr, Node node) throws WaitedTooLongForOpennetNoderefException {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52697,
+    "v2": "private static final int newLastGoodBuild = 1326;",
+    "resolution": "private static final int newLastGoodBuild = 1325;",
+    "conflict": "private static final int newLastGoodBuild = 1325;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52704,
+    "v2": "Logger.error(this, \"Timed out after waiting \"+fetchTimeout+\" on \"+uid+\" from \"+waitingFor+\" (\"+gotMessages+\" messages; last=\"+lastMessage+\") for \"+uid);",
+    "resolution": "Logger.error(this, \"Timed out after waiting \"+fetchTimeout+\" on \"+uid+\" from \"+waitingFor+\" (\"+gotMessages+\" messages; last=\"+lastMessage+\") for \"+uid);",
+    "conflict": "Logger.normal(this, \"request fatal-timeout (null) after accept (\"+gotMessages+\" messages; last=\"+lastMessage+\") on \"+RequestSender.this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52705,
+    "v2": "",
+    "resolution": "else\n\t\t\t\t\t\tLogger.error(this, \"Filter \"+f+\" is in filter list twice!\");",
+    "conflict": "else \t\t\t\t\t\tLogger.error(this, \"Filter \"+f+\" is in filter list twice!\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52709,
+    "v2": "private static final int buildNumber = 1325;",
+    "resolution": "private static final int buildNumber = 1325;",
+    "conflict": "private static final int buildNumber = 1324;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52718,
+    "v2": "private int addNonUrgentMessages(int size, int minSize, int maxSize, long now, ArrayList<MessageItem> messages, int maxMessages) {",
+    "resolution": "private int addNonUrgentMessages(int size, int minSize, int maxSize, long now, ArrayList<MessageItem> messages, MutableBoolean addPeerLoadStatsRT, MutableBoolean addPeerLoadStatsBulk, int maxMessages) {",
+    "conflict": "private int addNonUrgentMessages(int size, int minSize, int maxSize, long now, ArrayList<MessageItem> messages, MutableBoolean addPeerLoadStatsRT, MutableBoolean addPeerLoadStatsBulk) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52719,
+    "v2": "private int addUrgentMessages(int size, int minSize, int maxSize, long now, ArrayList<MessageItem> messages, int maxMessages) {",
+    "resolution": "private int addUrgentMessages(int size, int minSize, int maxSize, long now, ArrayList<MessageItem> messages, MutableBoolean addPeerLoadStatsRT, MutableBoolean addPeerLoadStatsBulk, int maxMessages) {",
+    "conflict": "private int addUrgentMessages(int size, int minSize, int maxSize, long now, ArrayList<MessageItem> messages, MutableBoolean addPeerLoadStatsRT, MutableBoolean addPeerLoadStatsBulk) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52724,
+    "v2": "import freenet.io.comm.UdpSocketHandler;",
+    "resolution": "import freenet.io.comm.UdpSocketHandler;import freenet.support.DoublyLinkedList;",
+    "conflict": "import freenet.support.DoublyLinkedList;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52726,
+    "v2": "Logger.normal(this, \"request fatal-timeout (null) after accept (\"+gotMessages+\" messages; last=\"+lastMessage+\") on \"+RequestSender.this);",
+    "resolution": "Logger.normal(this, \"request fatal-timeout (null) after accept (\"+gotMessages+\" messages; last=\"+lastMessage+\") on \"+RequestSender.this);",
+    "conflict": "Logger.error(this, \"Timed out after waiting \"+fetchTimeout+\" on \"+uid+\" from \"+waitingFor+\" (\"+gotMessages+\" messages; last=\"+lastMessage+\") for \"+uid);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52728,
+    "v2": "logMINOR = Logger.shouldLog(LogLevel.MINOR, IncomingPacketFilterImpl.class);",
+    "resolution": "logMINOR = Logger.shouldLog(LogLevel.MINOR, IncomingPacketFilterImpl.class);",
+    "conflict": "logMINOR = Logger.shouldLog(LogLevel.MINOR, this);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52729,
+    "v2": "if(tryProcessAuthAnonReply(buf, offset, length, pn, peer, now)) {",
+    "resolution": "if(tryProcessAuthAnonReply(buf, offset, length, pn, peer, now)) {",
+    "conflict": "if(tryProcessAuthAnonReply(buf, offset, length, opn, peer, now)) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52734,
+    "v2": "static class SentPacket {",
+    "resolution": "static class SentPacket {",
+    "conflict": "private static class SentPacket {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52736,
+    "v2": "Logger.normal(this, \"request fatal-timeout (null) after accept (\"+gotMessages+\" messages; last=\"+lastMessage+\") on \"+RequestSender.this);",
+    "resolution": "Logger.error(this, \"Timed out after waiting \"+fetchTimeout+\" on \"+uid+\" from \"+waitingFor+\" (\"+gotMessages+\" messages; last=\"+lastMessage+\") for \"+uid);",
+    "conflict": "Logger.error(this, \"Timed out after waiting \"+fetchTimeout+\" on \"+uid+\" from \"+waitingFor+\" (\"+gotMessages+\" messages; last=\"+lastMessage+\") for \"+uid);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52737,
+    "v2": "import freenet.io.comm.UdpSocketHandler;",
+    "resolution": "import freenet.io.comm.UdpSocketHandler;import freenet.support.DoublyLinkedList;",
+    "conflict": "import freenet.support.DoublyLinkedList;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52738,
+    "v2": "import java.util.List;",
+    "resolution": "import java.util.List;import java.util.LinkedList;",
+    "conflict": "import java.util.LinkedList;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52741,
+    "v2": "if(logMINOR) Logger.minor(this, \"Decrypting with \"+HexUtil.bytesToHex(tracker.incommingKey));",
+    "resolution": "if(logDEBUG) Logger.debug(this, \"Decrypting with \"+HexUtil.bytesToHex(tracker.incommingKey));",
+    "conflict": "if(logDEBUG) Logger.debug(this, \"Decrypting with \"+HexUtil.bytesToHex(tracker.sessionKey));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52748,
+    "v2": "br = new BlockReceiver(node.usm, source, uid, prb, this, node.getTicker(), false, realTimeFlag);",
+    "resolution": "br = new BlockReceiver(node.usm, source, uid, prb, this, node.getTicker(), false, realTimeFlag, null);",
+    "conflict": "br = new BlockReceiver(node.usm, source, uid, prb, this, node.getTicker(), false, realTimeFlag, null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52749,
+    "v2": "br = new BlockReceiver(node.usm, source, uid, prb, this, node.getTicker(), false, realTimeFlag);",
+    "resolution": "br = new BlockReceiver(node.usm, source, uid, prb, this, node.getTicker(), false, realTimeFlag, myTimeoutHandler);",
+    "conflict": "br = new BlockReceiver(node.usm, source, uid, prb, this, node.getTicker(), false, realTimeFlag, myTimeoutHandler);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52756,
+    "v2": "unlockUID(tag.uid, tag.isSSK(), tag.isInsert(), canFail, tag.isOfferReply(), tag.wasLocal(), tag.realTimeFlag, tag, noRecord);",
+    "resolution": "unlockUID(tag.uid, tag.isSSK(), tag.isInsert(), canFail, tag.isOfferReply(), tag.wasLocal(), tag.realTimeFlag, tag, noRecord);",
+    "conflict": "unlockUID(tag.uid, tag.isSSK(), tag.isInsert(), canFail, tag.isOfferReply(), tag.isLocal(), tag.realTimeFlag, tag, noRecord);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52761,
+    "v2": "BlockReceiver br = new BlockReceiver(node.usm, pn, uid, prb, this, node.getTicker(), true, realTimeFlag);",
+    "resolution": "BlockReceiver br = new BlockReceiver(node.usm, pn, uid, prb, this, node.getTicker(), true, realTimeFlag, myTimeoutHandler);",
+    "conflict": "BlockReceiver br = new BlockReceiver(node.usm, pn, uid, prb, this, node.getTicker(), true, realTimeFlag, myTimeoutHandler);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52763,
+    "v2": "final BlockReceiver br = new BlockReceiver(node.usm, next, uid, prb, this, node.getTicker(), true, realTimeFlag);",
+    "resolution": "final BlockReceiver br = new BlockReceiver(node.usm, next, uid, prb, this, node.getTicker(), true, realTimeFlag, myTimeoutHandler);",
+    "conflict": "final BlockReceiver br = new BlockReceiver(node.usm, next, uid, prb, this, node.getTicker(), true, realTimeFlag, myTimeoutHandler);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52764,
+    "v2": "long deadline = now + (realTimeFlag ? 300 * 1000 : 1260 * 1000);",
+    "resolution": "long deadline = now + (realTimeFlag ? 300 * 1000 : 1260 * 1000);",
+    "conflict": "long deadline = now + (realTimeFlag ? 1200 * 1000 : 300 * 1000);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52765,
+    "v2": "",
+    "resolution": "",
+    "conflict": "origTag.removeRoutingTo(next);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52770,
+    "v2": "if(logMINOR) \t\t\tLogger.minor(this, \"Created \"+this);",
+    "resolution": "if(logMINOR)\n\t\t\tLogger.minor(this, \"Created \"+this);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52773,
+    "v2": "Logger.normal(this, \"Cannot unlock yet in unlockHandler, still sending requests\");",
+    "resolution": "Logger.normal(this, \"Cannot unlock yet in unlockHandler, still sending requests\");",
+    "conflict": "Logger.error(this, \"Cannot unlock yet in unlockHandler, still sending requests\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52775,
+    "v2": "if(logMINOR) Logger.minor(this, \"finish(\"+code+ \") on \"+this);",
+    "resolution": "if(logMINOR) Logger.minor(this, \"finish(\"+code+ \") on \"+this);",
+    "conflict": "if(logMINOR) Logger.minor(this, \"finish(\"+code+\") on \"+uid);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52777,
+    "v2": "if(logMINOR) Logger.minor(this, \"finish(\"+code+ \") on \"+this);",
+    "resolution": "if(logMINOR) Logger.minor(this, \"finish(\"+code+ \") on \"+this);",
+    "conflict": "if(logMINOR) Logger.minor(this, \"finish(\"+code+\") on \"+uid);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52789,
+    "v2": "forkedRequestTag = new InsertTag(false, InsertTag.START.REMOTE, source);",
+    "resolution": "forkedRequestTag = new InsertTag(false, InsertTag.START.REMOTE, source, realTimeFlag);",
+    "conflict": "forkedRequestTag = new InsertTag(false, InsertTag.START.REMOTE, source, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52790,
+    "v2": "thisTag.removeRoutingTo(next);",
+    "resolution": "next.noLongerRoutingTo(thisTag, false);",
+    "conflict": "next.noLongerRoutingTo(thisTag, false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52794,
+    "v2": "boolean fromStore, boolean canWriteClientCache, boolean canWriteDatastore, boolean forkOnCacheable, boolean preferInsert, boolean ignoreLowBackoff) {",
+    "resolution": "boolean fromStore, boolean canWriteClientCache, boolean canWriteDatastore, boolean forkOnCacheable, boolean preferInsert, boolean ignoreLowBackoff, boolean realTimeFlag) {",
+    "conflict": "boolean fromStore, boolean canWriteClientCache, boolean canWriteDatastore, boolean forkOnCacheable, boolean preferInsert, boolean ignoreLowBackoff, boolean realTimeFlag) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52795,
+    "v2": "is = new SSKInsertSender(block, uid, tag, htl, source, this, fromStore, canWriteClientCache, forkOnCacheable, preferInsert, ignoreLowBackoff);",
+    "resolution": "is = new SSKInsertSender(block, uid, tag, htl, source, this, fromStore, canWriteClientCache, forkOnCacheable, preferInsert, ignoreLowBackoff, realTimeFlag);",
+    "conflict": "is = new SSKInsertSender(block, uid, tag, htl, source, this, fromStore, canWriteClientCache, forkOnCacheable, preferInsert, ignoreLowBackoff, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52805,
+    "v2": "node.maxHTL(), uid, tag, null, headers, prb, false, canWriteClientCache, forkOnCacheable, preferInsert, ignoreLowBackoff);",
+    "resolution": "node.maxHTL(), uid, tag, null, headers, prb, false, canWriteClientCache, forkOnCacheable, preferInsert, ignoreLowBackoff, realTimeFlag);",
+    "conflict": "node.maxHTL(), uid, tag, null, headers, prb, false, canWriteClientCache, forkOnCacheable, preferInsert, ignoreLowBackoff, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52807,
+    "v2": "node.maxHTL(), uid, tag, null, false, canWriteClientCache, false, forkOnCacheable, preferInsert, ignoreLowBackoff);",
+    "resolution": "node.maxHTL(), uid, tag, null, false, canWriteClientCache, false, forkOnCacheable, preferInsert, ignoreLowBackoff, realTimeFlag);",
+    "conflict": "node.maxHTL(), uid, tag, null, false, canWriteClientCache, false, forkOnCacheable, preferInsert, ignoreLowBackoff, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52825,
+    "v2": "RunningRequestsSnapshot(Node node, PeerNode source, boolean requestsToNode, boolean ignoreLocalVsRemote, int transfersPerInsert) {",
+    "resolution": "RunningRequestsSnapshot(Node node, PeerNode source, boolean requestsToNode, boolean realTimeFlag, boolean ignoreLocalVsRemote, int transfersPerInsert) {",
+    "conflict": "RunningRequestsSnapshot(Node node, PeerNode source, boolean requestsToNode, boolean realTimeFlag, boolean ignoreLocalVsRemote, int transfersPerInsert) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52829,
+    "v2": "+\" total=\"+totalRequests+(source == null ? \"\" : (\" for \"+source));",
+    "resolution": "+\" realtime=\"+realTimeFlag+\" total=\"+totalRequests+(source == null ? \"\" : (\" for \"+source));",
+    "conflict": "+\" realtime=\"+realTimeFlag+\" total=\"+totalRequests+(source == null ? \"\" : (\" for \"+source));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52832,
+    "v2": "public RejectReason shouldRejectRequest(boolean canAcceptAnyway, boolean isInsert, boolean isSSK, boolean isLocal, boolean isOfferReply, PeerNode source, boolean hasInStore, boolean preferInsert) {",
+    "resolution": "public RejectReason shouldRejectRequest(boolean canAcceptAnyway, boolean isInsert, boolean isSSK, boolean isLocal, boolean isOfferReply, PeerNode source, boolean hasInStore, boolean preferInsert, boolean realTimeFlag) {",
+    "conflict": "public RejectReason shouldRejectRequest(boolean canAcceptAnyway, boolean isInsert, boolean isSSK, boolean isLocal, boolean isOfferReply, PeerNode source, boolean hasInStore, boolean preferInsert, boolean realTimeFlag) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52833,
+    "v2": "RunningRequestsSnapshot requestsSnapshot = new RunningRequestsSnapshot(node, ignoreLocalVsRemoteBandwidthLiability, transfersPerInsert);",
+    "resolution": "RunningRequestsSnapshot requestsSnapshot = new RunningRequestsSnapshot(node, realTimeFlag, ignoreLocalVsRemoteBandwidthLiability, transfersPerInsert);",
+    "conflict": "RunningRequestsSnapshot requestsSnapshot = new RunningRequestsSnapshot(node, realTimeFlag, ignoreLocalVsRemoteBandwidthLiability, transfersPerInsert);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52834,
+    "v2": "long limit = BANDWIDTH_LIABILITY_LIMIT_SECONDS;",
+    "resolution": "long limit = realTimeFlag ? BANDWIDTH_LIABILITY_LIMIT_SECONDS_REALTIME : BANDWIDTH_LIABILITY_LIMIT_SECONDS_BULK;",
+    "conflict": "long limit = realTimeFlag ? BANDWIDTH_LIABILITY_LIMIT_SECONDS_REALTIME : BANDWIDTH_LIABILITY_LIMIT_SECONDS_BULK;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52835,
+    "v2": "source, isLocal, isSSK, isInsert, isOfferReply, hasInStore, transfersPerInsert);",
+    "resolution": "source, isLocal, isSSK, isInsert, isOfferReply, realTimeFlag, hasInStore, transfersPerInsert);",
+    "conflict": "source, isLocal, isSSK, isInsert, isOfferReply, realTimeFlag, hasInStore, transfersPerInsert);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52836,
+    "v2": "source, isLocal, isSSK, isInsert, isOfferReply, hasInStore, transfersPerInsert);",
+    "resolution": "source, isLocal, isSSK, isInsert, isOfferReply, realTimeFlag, hasInStore, transfersPerInsert);",
+    "conflict": "source, isLocal, isSSK, isInsert, isOfferReply, realTimeFlag, hasInStore, transfersPerInsert);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52837,
+    "v2": "Logger.warning(this, \"Non-overhead fraction is \"+nonOverheadFraction+\" - assuming this is self-inflicted and using default\");",
+    "resolution": "Logger.warning(this, \"Non-overhead fraction is \"+nonOverheadFraction+\" - assuming this is self-inflicted and using default\");",
+    "conflict": "Logger.error(this, \"Non-overhead fraction is \"+nonOverheadFraction+\" - assuming this is self-inflicted and using default\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52838,
+    "v2": "PeerNode source, boolean isLocal, boolean isSSK, boolean isInsert, boolean isOfferReply, boolean hasInStore, int transfersPerInsert) {",
+    "resolution": "PeerNode source, boolean isLocal, boolean isSSK, boolean isInsert, boolean isOfferReply, boolean realTimeFlag, boolean hasInStore, int transfersPerInsert) {",
+    "conflict": "PeerNode source, boolean isLocal, boolean isSSK, boolean isInsert, boolean isOfferReply, boolean realTimeFlag, boolean hasInStore, int transfersPerInsert) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52839,
+    "v2": "double thisAllocation = getPeerLimit(source, bandwidthAvailableOutputLowerLimit, input, false, transfersPerInsert);",
+    "resolution": "double thisAllocation = getPeerLimit(source, bandwidthAvailableOutputLowerLimit, input, realTimeFlag, false, transfersPerInsert);",
+    "conflict": "double thisAllocation = getPeerLimit(source, bandwidthAvailableOutputLowerLimit, input, realTimeFlag, false, transfersPerInsert);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52840,
+    "v2": "double peerUsedBytes = getPeerBandwidthLiability(source, isSSK, isInsert, isOfferReply, byteCountersSent, ignoreLocalVsRemoteBandwidthLiability, hasInStore, transfersPerInsert, input);",
+    "resolution": "double peerUsedBytes = getPeerBandwidthLiability(source, isSSK, isInsert, isOfferReply, byteCountersSent, realTimeFlag, ignoreLocalVsRemoteBandwidthLiability, hasInStore, transfersPerInsert, input);",
+    "conflict": "double peerUsedBytes = getPeerBandwidthLiability(source, isSSK, isInsert, isOfferReply, byteCountersSent, realTimeFlag, ignoreLocalVsRemoteBandwidthLiability, hasInStore, transfersPerInsert, input);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52841,
+    "v2": "",
+    "resolution": "// Fair sharing between types should be implemented on the sender.\n\t\t\t// Implementing it here will interfere with fair sharing between peers' predictability: It can cause failures even when a peer is within its guaranteed allocation, and these failures can be caused by outside, unpredictable factors (i.e. actions of other peers).",
+    "conflict": "// Fair sharing between types should be implemented on the sender. \t\t\t// Implementing it here will interfere with fair sharing between peers' predictability: It can cause failures even when a peer is within its guaranteed allocation, and these failures can be caused by outside, unpredictable factors (i.e. actions of other peers)."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52854,
+    "v2": "node.unlockUID(uid, key instanceof NodeSSK, false, false, false, false, tag);",
+    "resolution": "node.unlockUID(uid, key instanceof NodeSSK, false, false, false, false, realTimeFlag, tag);",
+    "conflict": "node.unlockUID(uid, key instanceof NodeSSK, false, false, false, false, realTimeFlag, tag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52855,
+    "v2": "node.unlockUID(uid, key instanceof NodeSSK, false, false, false, false, tag);",
+    "resolution": "node.unlockUID(uid, key instanceof NodeSSK, false, false, false, false, realTimeFlag, tag);",
+    "conflict": "node.unlockUID(uid, key instanceof NodeSSK, false, false, false, false, realTimeFlag, tag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52863,
+    "v2": "",
+    "resolution": "boolean DO_AIMD = true;",
+    "conflict": "boolean DO_AIMD = true;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52865,
+    "v2": "sender = node.makeInsertSender(block, htl, uid, tag, source, false, false, canWriteDatastore, forkOnCacheable, preferInsert, ignoreLowBackoff);",
+    "resolution": "sender = node.makeInsertSender(block, htl, uid, tag, source, false, false, canWriteDatastore, forkOnCacheable, preferInsert, ignoreLowBackoff, realTimeFlag);",
+    "conflict": "sender = node.makeInsertSender(block, htl, uid, tag, source, false, false, canWriteDatastore, forkOnCacheable, preferInsert, ignoreLowBackoff, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52866,
+    "v2": "SSKInsertSender(SSKBlock block, long uid, InsertTag tag, short htl, PeerNode source, Node node, boolean fromStore, boolean canWriteClientCache, boolean forkOnCacheable, boolean preferInsert, boolean ignoreLowBackoff) {",
+    "resolution": "SSKInsertSender(SSKBlock block, long uid, InsertTag tag, short htl, PeerNode source, Node node, boolean fromStore, boolean canWriteClientCache, boolean forkOnCacheable, boolean preferInsert, boolean ignoreLowBackoff, boolean realTimeFlag) {",
+    "conflict": "SSKInsertSender(SSKBlock block, long uid, InsertTag tag, short htl, PeerNode source, Node node, boolean fromStore, boolean canWriteClientCache, boolean forkOnCacheable, boolean preferInsert, boolean ignoreLowBackoff, boolean realTimeFlag) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52867,
+    "v2": "forkedRequestTag = new InsertTag(true, InsertTag.START.REMOTE, source);",
+    "resolution": "forkedRequestTag = new InsertTag(true, InsertTag.START.REMOTE, source, realTimeFlag);",
+    "conflict": "forkedRequestTag = new InsertTag(true, InsertTag.START.REMOTE, source, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52869,
+    "v2": "thisTag.removeRoutingTo(next);",
+    "resolution": "next.noLongerRoutingTo(thisTag, false);",
+    "conflict": "next.noLongerRoutingTo(thisTag, false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52871,
+    "v2": "thisTag.removeRoutingTo(next);",
+    "resolution": "next.noLongerRoutingTo(thisTag, false);",
+    "conflict": "next.noLongerRoutingTo(thisTag, false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52872,
+    "v2": "thisTag.removeRoutingTo(next);",
+    "resolution": "next.noLongerRoutingTo(thisTag, false);",
+    "conflict": "next.noLongerRoutingTo(thisTag, false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52878,
+    "v2": "double thisAllocation = getPeerLimit(source, bandwidthAvailableOutputLowerLimit, input, false);",
+    "resolution": "double thisAllocation = getPeerLimit(source, bandwidthAvailableOutputLowerLimit, input, false, transfersPerInsert);",
+    "conflict": "double thisAllocation = getPeerLimit(source, bandwidthAvailableOutputLowerLimit, input, false, transfersPerInsert);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52879,
+    "v2": "private double getPeerLimit(PeerNode source, double bandwidthAvailableOutputLowerLimit, boolean input, boolean dontTellPeer) {",
+    "resolution": "private double getPeerLimit(PeerNode source, double bandwidthAvailableOutputLowerLimit, boolean input, boolean dontTellPeer, int transfersPerInsert) {",
+    "conflict": "private double getPeerLimit(PeerNode source, double bandwidthAvailableOutputLowerLimit, boolean input, boolean dontTellPeer, int transfersPerInsert) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52882,
+    "v2": "",
+    "resolution": "peerTableHeaderRow.addChild(\"th\", \"Peer\\u00a0Capacity\\u00a0Bulk\");\n\t\t\t\t\tpeerTableHeaderRow.addChild(\"th\", \"Peer\\u00a0Capacity\\u00a0Realtime\");",
+    "conflict": "peerTableHeaderRow.addChild(\"th\", \"Peer\\u00a0Capacity\\u00a0Bulk\"); \t\t\t\t\tpeerTableHeaderRow.addChild(\"th\", \"Peer\\u00a0Capacity\\u00a0Realtime\");"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52897,
+    "v2": "import freenet.io.xfer.BlockReceiver.BlockReceiverCompletion;",
+    "resolution": "import freenet.io.xfer.BlockReceiver.BlockReceiverCompletion;import freenet.io.xfer.BlockReceiver.BlockReceiverTimeoutHandler;",
+    "conflict": "import freenet.io.xfer.BlockReceiver.BlockReceiverTimeoutHandler;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52916,
+    "v2": "import freenet.support.DoublyLinkedListImpl;",
+    "resolution": "import freenet.support.DoublyLinkedListImpl;import freenet.io.comm.Message;",
+    "conflict": "import freenet.io.comm.Message;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52931,
+    "v2": "",
+    "resolution": "MutableBoolean addPeerLoadStatsRT = new MutableBoolean();\n\t\tMutableBoolean addPeerLoadStatsBulk = new MutableBoolean();",
+    "conflict": "MutableBoolean addPeerLoadStatsRT = new MutableBoolean(); \t\tMutableBoolean addPeerLoadStatsBulk = new MutableBoolean();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52939,
+    "v2": "",
+    "resolution": "incomingLoadStatsRealTime = peerNode.getIncomingLoadStats(true);\n\t\tincomingLoadStatsBulk = peerNode.getIncomingLoadStats(false);",
+    "conflict": "incomingLoadStatsRealTime = peerNode.getIncomingLoadStats(true); \t\tincomingLoadStatsBulk = peerNode.getIncomingLoadStats(false);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52946,
+    "v2": "import freenet.io.xfer.BlockReceiver.BlockReceiverCompletion;",
+    "resolution": "import freenet.io.xfer.BlockReceiver.BlockReceiverCompletion;import freenet.io.xfer.BlockReceiver.BlockReceiverTimeoutHandler;",
+    "conflict": "import freenet.io.xfer.BlockReceiver.BlockReceiverTimeoutHandler;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52954,
+    "v2": "if (ret == null && timeout >= System.currentTimeMillis()) {",
+    "resolution": "if (ret == null && timeout >= System.currentTimeMillis()) {",
+    "conflict": "if (ret == null && timeout > System.currentTimeMillis()) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52955,
+    "v2": "private boolean gotAllSent;",
+    "resolution": "private boolean gotAllSent;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52958,
+    "v2": "if(logMINOR) \t\t\tLogger.minor(this, \"Transfer failed: \"+reason+\" : \"+description);",
+    "resolution": "if(logMINOR)\n\t\t\tLogger.minor(this, \"Transfer failed: \"+reason+\" : \"+description);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52964,
+    "v2": "if(logMINOR) Logger.minor(this, \"Already aborted \"+this+\" : reason=\"+_abortReason+\" description=\"+_abortDescription);",
+    "resolution": "if(logMINOR) Logger.minor(this, \"Already aborted \"+this+\" : reason=\"+_abortReason+\" description=\"+_abortDescription);",
+    "conflict": "if(logMINOR) Logger.minor(this, \"Already aborted\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52965,
+    "v2": "if(logMINOR) Logger.minor(this, \"Already aborted\");",
+    "resolution": "if(logMINOR) Logger.minor(this, \"Already aborted \"+this+\" : reason=\"+_abortReason+\" description=\"+_abortDescription);",
+    "conflict": "if(logMINOR) Logger.minor(this, \"Already aborted \"+this+\" : reason=\"+_abortReason+\" description=\"+_abortDescription);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52969,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52971,
+    "v2": "import freenet.io.comm.SlowAsyncMessageFilterCallback;",
+    "resolution": "import freenet.io.comm.SlowAsyncMessageFilterCallback;import freenet.node.MessageItem;",
+    "conflict": "import freenet.node.MessageItem;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52982,
+    "v2": "",
+    "resolution": "long now = System.currentTimeMillis();\n\t\t\tboolean cancel = false;",
+    "conflict": "long now = System.currentTimeMillis(); \t\t\tboolean cancel = false;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52987,
+    "v2": "public Object makeRequestSender(Key key, short htl, long uid, RequestTag tag, PeerNode source, boolean localOnly, boolean ignoreStore, boolean offersOnly, boolean canReadClientCache, boolean canWriteClientCache) {",
+    "resolution": "public Object makeRequestSender(Key key, short htl, long uid, RequestTag tag, PeerNode source, boolean localOnly, boolean ignoreStore, boolean offersOnly, boolean canReadClientCache, boolean canWriteClientCache, boolean realTimeFlag) {",
+    "conflict": "public Object makeRequestSender(Key key, short htl, long uid, RequestTag tag, PeerNode source, boolean localOnly, boolean ignoreStore, boolean offersOnly, boolean canReadClientCache, boolean canWriteClientCache, boolean realTimeFlag) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52988,
+    "v2": "sender = new RequestSender(key, null, htl, uid, tag, this, source, offersOnly, canWriteClientCache, canWriteDatastore);",
+    "resolution": "sender = new RequestSender(key, null, htl, uid, tag, this, source, offersOnly, canWriteClientCache, canWriteDatastore, realTimeFlag);",
+    "conflict": "sender = new RequestSender(key, null, htl, uid, tag, this, source, offersOnly, canWriteClientCache, canWriteDatastore, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52989,
+    "v2": "node.unlockUID(uid, isSSK, false, true, false, true, tag);",
+    "resolution": "node.unlockUID(uid, isSSK, false, true, false, true, realTimeFlag, tag);",
+    "conflict": "node.unlockUID(uid, isSSK, false, true, false, true, realTimeFlag, tag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52990,
+    "v2": "Object o = node.makeRequestSender(key, htl, uid, tag, null, false, false, offersOnly, canReadClientCache, canWriteClientCache);",
+    "resolution": "Object o = node.makeRequestSender(key, htl, uid, tag, null, false, false, offersOnly, canReadClientCache, canWriteClientCache, realTimeFlag);",
+    "conflict": "Object o = node.makeRequestSender(key, htl, uid, tag, null, false, false, offersOnly, canReadClientCache, canWriteClientCache, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52991,
+    "v2": "Object o = node.makeRequestSender(key.getNodeCHK(), node.maxHTL(), uid, tag, null, localOnly, ignoreStore, false, true, canWriteClientCache);",
+    "resolution": "Object o = node.makeRequestSender(key.getNodeCHK(), node.maxHTL(), uid, tag, null, localOnly, ignoreStore, false, true, canWriteClientCache, realTimeFlag);",
+    "conflict": "Object o = node.makeRequestSender(key.getNodeCHK(), node.maxHTL(), uid, tag, null, localOnly, ignoreStore, false, true, canWriteClientCache, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52993,
+    "v2": "Object o = node.makeRequestSender(key.getNodeKey(true), node.maxHTL(), uid, tag, null, localOnly, ignoreStore, false, true, canWriteClientCache);",
+    "resolution": "Object o = node.makeRequestSender(key.getNodeKey(true), node.maxHTL(), uid, tag, null, localOnly, ignoreStore, false, true, canWriteClientCache, realTimeFlag);",
+    "conflict": "Object o = node.makeRequestSender(key.getNodeKey(true), node.maxHTL(), uid, tag, null, localOnly, ignoreStore, false, true, canWriteClientCache, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52998,
+    "v2": "o = node.makeRequestSender(key, htl, uid, tag, source, false, true, false, false, false);",
+    "resolution": "o = node.makeRequestSender(key, htl, uid, tag, source, false, true, false, false, false, realTimeFlag);",
+    "conflict": "o = node.makeRequestSender(key, htl, uid, tag, source, false, true, false, false, false, realTimeFlag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52999,
+    "v2": "node.unlockUID(uid, key instanceof NodeSSK, false, false, false, false, tag);",
+    "resolution": "node.unlockUID(uid, key instanceof NodeSSK, false, false, false, false, realTimeFlag, tag);",
+    "conflict": "node.unlockUID(uid, key instanceof NodeSSK, false, false, false, false, realTimeFlag, tag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53000,
+    "v2": "PeerNode source, boolean offersOnly, boolean canWriteClientCache, boolean canWriteDatastore) {",
+    "resolution": "PeerNode source, boolean offersOnly, boolean canWriteClientCache, boolean canWriteDatastore, boolean realTimeFlag) {",
+    "conflict": "PeerNode source, boolean offersOnly, boolean canWriteClientCache, boolean canWriteDatastore, boolean realTimeFlag) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53018,
+    "v2": "nodeStats = new NodeStats(this, sortOrder, new SubConfig(\"node.load\", config), obwLimit, ibwLimit);",
+    "resolution": "nodeStats = new NodeStats(this, sortOrder, new SubConfig(\"node.load\", config), obwLimit, ibwLimit, lastVersion);",
+    "conflict": "nodeStats = new NodeStats(this, sortOrder, new SubConfig(\"node.load\", config), obwLimit, ibwLimit, nodeDir, lastVersion);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53021,
+    "v2": "overheadFraction = (time * overheadFraction +",
+    "resolution": "nonOverheadFraction = (time * nonOverheadFraction +",
+    "conflict": "nonOverheadFraction = (time * nonOverheadFraction +"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53023,
+    "v2": "if(ignoreLastDataBlock && i == dataBuckets.length-1) {",
+    "resolution": "if(ignoreLastDataBlock && i == dataBuckets.length-1) {",
+    "conflict": "if(ignoreLastDataBlock && i == dataKeys.length-1) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53024,
+    "v2": "} else if(ignoreLastDataBlock && fetchedDataBlocks == dataBuckets.length && dataSource.equals(\"FEC ENCODE\")) {",
+    "resolution": "} else if(ignoreLastDataBlock && fetchedDataBlocks == dataBuckets.length && dataSource.equals(\"FEC ENCODE\")) {",
+    "conflict": "} else if(ignoreLastDataBlock && fetchedDataBlocks == dataKeys.length && dataSource.equals(\"FEC ENCODE\")) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53025,
+    "v2": "addDownloadOptions(ctx, optionList, key, mimeType, filterException != null, filterException != null, core);",
+    "resolution": "addDownloadOptions(ctx, optionList, key, mimeType, filterException != null, filterException != null, core);",
+    "conflict": "addDownloadOptions(ctx, optionList, key, mimeType, true, filterException != null, core);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53031,
+    "v2": "import freenet.support.io.FileUtil;",
+    "resolution": "import freenet.support.io.FileUtil;import freenet.support.io.Closer;",
+    "conflict": "import freenet.support.io.Closer;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53035,
+    "v2": "OutputStream cur;",
+    "resolution": "OutputStream cur;",
+    "conflict": "OutputStream cur = seg.makeBucketStream(bucketNo, SegmentedBucketChainBucket.this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53043,
+    "v2": "Logger.minor(this, \"Segment \"+i+\" decoded length \"+sz+\" total length now \"+finalLength+\" for \"+s.dataBuckets.length+\" blocks which should be \"+(s.dataBuckets.length * NodeCHK.BLOCK_SIZE)+\" for \"+this);",
+    "resolution": "Logger.minor(this, \"Segment \"+i+\" decoded length \"+sz+\" total length now \"+length+\" for \"+s.dataBuckets.length+\" blocks which should be \"+(s.dataBuckets.length * NodeCHK.BLOCK_SIZE));",
+    "conflict": "Logger.minor(this, \"Segment \"+i+\" decoded length \"+sz+\" total length now \"+length+\" for \"+s.dataBuckets.length+\" blocks which should be \"+(s.dataBuckets.length * NodeCHK.BLOCK_SIZE));"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53045,
+    "v2": "import freenet.support.io.NullBucket;",
+    "resolution": "import freenet.support.io.NullBucket;import freenet.support.io.FileUtil;",
+    "conflict": "import freenet.support.io.FileUtil;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53050,
+    "v2": "import freenet.client.InsertContext.CompatibilityMode;",
+    "resolution": "import freenet.client.InsertContext.CompatibilityMode;import freenet.support.compress.Compressor;",
+    "conflict": "import freenet.support.compress.Compressor;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53052,
+    "v2": "import freenet.crypt.HashResult;",
+    "resolution": "import freenet.crypt.HashResult;import freenet.support.compress.Compressor;",
+    "conflict": "import freenet.support.compress.Compressor;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53053,
+    "v2": "import freenet.support.Logger.LogLevel;",
+    "resolution": "import freenet.support.Logger.LogLevel;import freenet.support.OOMHandler;",
+    "conflict": "import freenet.support.OOMHandler;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53054,
+    "v2": "import freenet.support.OOMHandler; import freenet.support.Logger.LogLevel;",
+    "resolution": "import freenet.support.OOMHandler;\nimport freenet.support.Logger.LogLevel;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53055,
+    "v2": "import freenet.support.Logger.LogLevel;",
+    "resolution": "import freenet.support.Logger.LogLevel;import freenet.support.compress.Compressor;",
+    "conflict": "import freenet.support.compress.Compressor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53061,
+    "v2": "",
+    "resolution": "import freenet.client.ArchiveManager.ARCHIVE_TYPE;\nimport freenet.crypt.HashResult;",
+    "conflict": "import freenet.client.ArchiveManager.ARCHIVE_TYPE; import freenet.crypt.HashResult;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53063,
+    "v2": "import freenet.client.ArchiveManager.ARCHIVE_TYPE;",
+    "resolution": "import freenet.client.ArchiveManager.ARCHIVE_TYPE;import freenet.crypt.HashResult;",
+    "conflict": "import freenet.crypt.HashResult;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53065,
+    "v2": "static final short FLAGS_TOP_SIZE = 256;",
+    "resolution": "static final short FLAGS_TOP_SIZE = 256;\nstatic final short FLAGS_HASHES = 512;",
+    "conflict": "static final short FLAGS_HASHES = 256;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53071,
+    "v2": "Metadata meta = makeMetadata(archiveType, dataPutter.getURI(container, context), container);",
+    "resolution": "Metadata meta = makeMetadata(archiveType, dataPutter.getURI(container, context), hashes, container);",
+    "conflict": "Metadata meta = makeMetadata(archiveType, dataPutter.getURI(container, context), hashes);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53072,
+    "v2": "Metadata meta = makeMetadata(archiveType, dataPutter.getURI(container, context), container);",
+    "resolution": "Metadata meta = makeMetadata(archiveType, dataPutter.getURI(container, context), hashes, container);",
+    "conflict": "Metadata meta = makeMetadata(archiveType, dataPutter.getURI(container, context), hashes);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53074,
+    "v2": "public SplitFileInserter(BaseClientPutter put, PutCompletionCallback cb, Bucket data, COMPRESSOR_TYPE bestCodec, long decompressedLength, ClientMetadata clientMetadata, InsertContext ctx, boolean getCHKOnly, boolean isMetadata, Object token, ARCHIVE_TYPE archiveType, boolean freeData, boolean persistent, ObjectContainer container, ClientContext context, long origTopSize, long origTopCompressedSize) throws InsertException {",
+    "resolution": "public SplitFileInserter(BaseClientPutter put, PutCompletionCallback cb, Bucket data, COMPRESSOR_TYPE bestCodec, long decompressedLength, ClientMetadata clientMetadata, InsertContext ctx, boolean getCHKOnly, boolean isMetadata, Object token, ARCHIVE_TYPE archiveType, boolean freeData, boolean persistent, ObjectContainer container, ClientContext context, HashResult[] hashes, long origTopSize, long origTopCompressedSize) throws InsertException {",
+    "conflict": "public SplitFileInserter(BaseClientPutter put, PutCompletionCallback cb, Bucket data, COMPRESSOR_TYPE bestCodec, long decompressedLength, ClientMetadata clientMetadata, InsertContext ctx, boolean getCHKOnly, boolean isMetadata, Object token, ARCHIVE_TYPE archiveType, boolean freeData, boolean persistent, ObjectContainer container, ClientContext context, HashResult[] hashes) throws InsertException {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53076,
+    "v2": "this.deductBlocksFromSegments = 0;",
+    "resolution": "this.deductBlocksFromSegments = 0;\t\tthis.hashes = null;",
+    "conflict": "this.hashes = null;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53078,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private boolean forceDisconnectCalled = false;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53080,
+    "v2": "if(segmentCount > 1 && ((blocksPerSegment != 128 /* old limit */) || (checkBlocksPerSegment != HighLevelSimpleClientImpl.SPLITFILE_CHECK_BLOCKS_PER_SEGMENT))) {",
+    "resolution": "if(segmentCount > 1 && ((blocksPerSegment != 128 /* old limit */) || (checkBlocksPerSegment != HighLevelSimpleClientImpl.SPLITFILE_CHECK_BLOCKS_PER_SEGMENT))) {",
+    "conflict": "if(segmentCount > 1 && ((blocksPerSegment != HighLevelSimpleClientImpl.SPLITFILE_BLOCKS_PER_SEGMENT) || (checkBlocksPerSegment != HighLevelSimpleClientImpl.SPLITFILE_CHECK_BLOCKS_PER_SEGMENT))) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53082,
+    "v2": "final boolean detectCharset;",
+    "resolution": "final boolean onlyDetectingCharset;",
+    "conflict": "final boolean onlyDetectingCharset;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53083,
+    "v2": "HTMLParseContext(Reader r, Writer w, String charset, FilterCallback cb, boolean detectCharset) {",
+    "resolution": "HTMLParseContext(Reader r, Writer w, String charset, FilterCallback cb, boolean onlyDetectingCharset) {",
+    "conflict": "HTMLParseContext(Reader r, Writer w, String charset, FilterCallback cb, boolean onlyDetectingCharset) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53084,
+    "v2": "this.detectCharset = detectCharset;",
+    "resolution": "this.onlyDetectingCharset = onlyDetectingCharset;",
+    "conflict": "this.onlyDetectingCharset = onlyDetectingCharset;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53086,
+    "v2": "if(pc.detectCharset) return;",
+    "resolution": "if(pc.onlyDetectingCharset) return;",
+    "conflict": "if(pc.onlyDetectingCharset) return;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53089,
+    "v2": "if(pc.detectCharset) return;",
+    "resolution": "if(pc.onlyDetectingCharset) return;",
+    "conflict": "if(pc.onlyDetectingCharset) return;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53090,
+    "v2": "if(hpc.detectCharset) return null;",
+    "resolution": "if(hpc.onlyDetectingCharset) return null;",
+    "conflict": "if(hpc.onlyDetectingCharset) return null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53091,
+    "v2": "import freenet.node.SemiOrderedShutdownHook; import freenet.support.HTMLNode;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53097,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import freenet.node.SemiOrderedShutdownHook; import freenet.support.HTMLNode;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53100,
+    "v2": "if(fctx != null && !progress.fetchContextEquivalent(fctx)) continue;",
+    "resolution": "if(fctx != null && !progress.fetchContextEquivalent(fctx)) continue;\t\t\t\t\t\tif(logMINOR) Logger.minor(this, \"Found \"+progress);",
+    "conflict": "if(logMINOR) Logger.minor(this, \"Found \"+progress);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53101,
+    "v2": "import freenet.node.SemiOrderedShutdownHook; import freenet.support.HTMLNode;",
+    "resolution": "import freenet.node.SemiOrderedShutdownHook;\nimport freenet.support.HTMLNode;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53104,
+    "v2": "if(logMINOR) Logger.minor(this, \"Found \"+progress);",
+    "resolution": "if(logMINOR) Logger.minor(this, \"Found \"+progress);\t\t\t\t\t\tif(fctx != null && !progress.fetchContextEquivalent(fctx)) continue;",
+    "conflict": "if(fctx != null && !progress.fetchContextEquivalent(fctx)) continue;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53107,
+    "v2": "import freenet.node.OpennetManager.ConnectionType;",
+    "resolution": "import freenet.node.OpennetManager.ConnectionType;import freenet.node.PeerManager.PeerStatusChangeListener;",
+    "conflict": "import freenet.node.PeerManager.PeerStatusChangeListener;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53111,
+    "v2": "public FreenetURI insertManifest(FreenetURI insertURI, HashMap bucketsByName, String defaultName) throws InsertException;",
+    "resolution": "public FreenetURI insertManifest(FreenetURI insertURI, HashMap<String, Object> bucketsByName, String defaultName) throws InsertException;",
+    "conflict": "public FreenetURI insertManifest(FreenetURI insertURI, HashMap<String, Object> bucketsByName, String defaultName) throws InsertException;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53137,
+    "v2": "Bucket outputData = handler.readFilter.readFilter(data, bf, charset, otherParams, filterCallback);",
+    "resolution": "Bucket outputData = handler.readFilter.readFilter(data, bf, charset, otherParams, filterCallback);",
+    "conflict": "Bucket outputData = handler.readFilter.readFilter(data, bf, charset, otherParams, new GenericReadFilterCallback(baseURI, cb,trc));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53149,
+    "v2": "",
+    "resolution": "",
+    "conflict": "/* The following code was generated by JFlex 1.4.1 on 25/09/09 00:59 */"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53151,
+    "v2": "public static FilterOutput filter(Bucket data, BucketFactory bf, String typeName, URI baseURI, FoundURICallback cb, String maybeCharset) throws UnsafeContentTypeException, IOException {",
+    "resolution": "public static FilterOutput filter(Bucket data, BucketFactory bf, String typeName, URI baseURI, FoundURICallback cb, TagReplacerCallback trc, String maybeCharset) throws UnsafeContentTypeException, IOException {",
+    "conflict": "public static FilterOutput filter(Bucket data, BucketFactory bf, String typeName, URI baseURI, FoundURICallback cb,TagReplacerCallback trc) throws UnsafeContentTypeException, IOException {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53152,
+    "v2": "new URI(\"http://127.0.0.1:8888/\"), null, null);",
+    "resolution": "new URI(\"http://127.0.0.1:8888/\"), null, null, null);",
+    "conflict": "new URI(\"http://127.0.0.1:8888/\"), null,null);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53154,
+    "v2": "FilterOutput output = ContentFilter.filter(data, new ArrayBucketFactory(), \"text/html\", new URI(\"http://127.0.0.1:8888/\"), null, null);",
+    "resolution": "FilterOutput output = ContentFilter.filter(data, new ArrayBucketFactory(), \"text/html\", new URI(\"http://127.0.0.1:8888/\"), null, null, null);",
+    "conflict": "FilterOutput output = ContentFilter.filter(data, new ArrayBucketFactory(), \"text/html\", new URI(\"http://127.0.0.1:8888/\"), null,null);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53155,
+    "v2": "return ContentFilter.filter(new ArrayBucket(dataToFilter), bf, typeName, baseURI, null, null).data.toString();",
+    "resolution": "return ContentFilter.filter(new ArrayBucket(dataToFilter), bf, typeName, baseURI, null, null, null).data.toString();",
+    "conflict": "return ContentFilter.filter(new ArrayBucket(dataToFilter), bf, typeName, baseURI, null,null).data.toString();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53158,
+    "v2": "//\t\tassertEquals(CSS_STRING_NEWLINESC,HTMLFilter(CSS_STRING_NEWLINES));",
+    "resolution": "assertEquals(CSS_STRING_NEWLINESC,HTMLFilter(CSS_STRING_NEWLINES));",
+    "conflict": "assertEquals(CSS_STRING_NEWLINESC,HTMLFilter(CSS_STRING_NEWLINES));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53193,
+    "v2": "contentNode.addChild(alerts.createAlerts(false));",
+    "resolution": "contentNode.addChild(new LongAlertElement(ctx,false));",
+    "conflict": "contentNode.addChild(new LongAlertElement(ctx));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53194,
+    "v2": "contentNode.addChild(core.alerts.createSummary());",
+    "resolution": "contentNode.addChild(new ShortAlertElement(ctx, true, advancedModeOutputEnabled, l10n(\"alertsSummary\")));",
+    "conflict": "contentNode.addChild(new ShortAlertElement(ctx, true, advancedModeOutputEnabled, l10n(\"alertsSummary\")));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53202,
+    "v2": "StatisticsToadlet.drawPeerStatsBox(peerStatsInfobox, mode >= PageMaker.MODE_ADVANCED, numberOfConnected, numberOfRoutingBackedOff, numberOfTooNew, numberOfTooOld, numberOfDisconnected, numberOfNeverConnected, numberOfDisabled, numberOfBursting, numberOfListening, numberOfListenOnly, 0, 0, numberOfRoutingDisabled, numberOfClockProblem, numberOfConnError, numberOfDisconnecting, node);",
+    "resolution": "StatisticsToadlet.drawPeerStatsBox(peerStatsInfobox, mode >= PageMaker.MODE_ADVANCED, peers, ctx);",
+    "conflict": "StatisticsToadlet.drawPeerStatsBox(peerStatsInfobox, mode >= PageMaker.MODE_ADVANCED, peers, ctx);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53207,
+    "v2": "drawOverviewBox(overviewInfobox, nodeUptimeSeconds, node.clientCore.bandwidthStatsPutter.getLatestUptimeData().totalUptime, now, swaps, noSwaps);",
+    "resolution": "drawOverviewBox(overviewInfobox, nodeUptimeSeconds, node.clientCore.bandwidthStatsPutter.getLatestUptimeData().totalUptime, now, swaps, noSwaps,ctx);",
+    "conflict": "drawOverviewBox(overviewInfobox, nodeUptimeSeconds, now, swaps, noSwaps,ctx);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53212,
+    "v2": "contentNode.addChild(core.alerts.createAlertsShort(l10n(\"alertsSummary\"), advancedModeOutputEnabled, true));",
+    "resolution": "contentNode.addChild(new ShortAlertElement(ctx, true, advancedModeOutputEnabled, l10n(\"alertsSummary\")));",
+    "conflict": "contentNode.addChild(new ShortAlertElement(ctx, true, advancedModeOutputEnabled, l10n(\"alertsSummary\")));"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53213,
+    "v2": "import java.util.Stack;",
+    "resolution": "import java.util.Stack;import java.util.Map.Entry;",
+    "conflict": "import java.util.Map.Entry;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53237,
+    "v2": "",
+    "resolution": "this.isSSK = isSSK;\n\t\tlogMINOR = Logger.shouldLog(Logger.MINOR, this);",
+    "conflict": "this.isSSK = isSSK; \t\tlogMINOR = Logger.shouldLog(Logger.MINOR, this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53241,
+    "v2": "gotAllMetadata();",
+    "resolution": "gotAllMetadata(container, context);",
+    "conflict": "gotAllMetadata(container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53244,
+    "v2": "",
+    "resolution": "* @param container\n\t * @param context",
+    "conflict": "* @param container \t * @param context"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53272,
+    "v2": "startTime = System.currentTimeMillis();",
+    "resolution": "startTime = System.currentTimeMillis();    \tif(key.getRoutingKey() == null) throw new NullPointerException();",
+    "conflict": "if(key.getRoutingKey() == null) throw new NullPointerException();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53276,
+    "v2": "",
+    "resolution": "import com.db4o.ObjectContainer;",
+    "conflict": "import com.db4o.ObjectContainer;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53277,
+    "v2": "cancelled.cancel();",
+    "resolution": "cancelled.cancel(null, core.clientContext);",
+    "conflict": "cancelled.cancel(null, core.clientContext);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53280,
+    "v2": "System.err.println(\" checkBloom=\" + checkBloom + \", flags=\" + flags+\" bloom size = \"+bloomFilterSize+\" keys = \"+maxKeys);",
+    "resolution": "System.err.println(\" checkBloom=\" + checkBloom + \", flags=\" + flags+\" bloom size = \"+bloomFilterSize+\" keys = \"+maxKeys);",
+    "conflict": "System.err.println(\" checkBloom=\" + checkBloom + \", flags=\" + flags+\" bloom size = \"+bloomFilterSize+\" size = \"+maxKeys);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53285,
+    "v2": "CHKBlock.DATA_LENGTH, ctr, false, false, false, data, true);",
+    "resolution": "CHKBlock.DATA_LENGTH, ctr, false, false, false, data, null, context, false, true);",
+    "conflict": "CHKBlock.DATA_LENGTH, ctr, false, false, false, data, null, context, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53292,
+    "v2": "boolean addToParent, boolean encodeCHK, boolean freeData) throws InsertException {",
+    "resolution": "boolean addToParent, boolean encodeCHK, ObjectContainer container, ClientContext context, boolean freeData) throws InsertException {",
+    "conflict": "boolean addToParent, boolean encodeCHK, ObjectContainer container, ClientContext context) throws InsertException {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53293,
+    "v2": "getCHKOnly, addToParent, this.token, freeData);",
+    "resolution": "getCHKOnly, addToParent, this.token, container, context, freeData);",
+    "conflict": "getCHKOnly, addToParent, this.token, container, context);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53294,
+    "v2": "getCHKOnly, addToParent, false, this.token, freeData);",
+    "resolution": "getCHKOnly, addToParent, false, this.token, container, context, persistent, freeData);",
+    "conflict": "getCHKOnly, addToParent, false, this.token, container, context, persistent);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53300,
+    "v2": "ctx, this, isMetadata, sourceLength, token, getCHKOnly, false, true /* we don't use it */, tokenObject, freeData);",
+    "resolution": "ctx, this, isMetadata, sourceLength, token, getCHKOnly, false, true /* we don't use it */, tokenObject, container, context, parent.persistent(), freeData);",
+    "conflict": "ctx, this, isMetadata, sourceLength, token, getCHKOnly, false, true /* we don't use it */, tokenObject, container, context, parent.persistent());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53302,
+    "v2": "boolean getCHKOnly, boolean addToParent, Object tokenObject, boolean freeData) throws MalformedURLException {",
+    "resolution": "boolean getCHKOnly, boolean addToParent, Object tokenObject, ObjectContainer container, ClientContext context, boolean freeData) throws MalformedURLException {",
+    "conflict": "boolean getCHKOnly, boolean addToParent, Object tokenObject, ObjectContainer container, ClientContext context) throws MalformedURLException {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53304,
+    "v2": "// Do not free data. Caller is responsible for that.",
+    "resolution": "// Do not free data. Caller is responsible for that.",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53305,
+    "v2": "private static final int buildNumber = 1184;",
+    "resolution": "private static final int buildNumber = 1184;",
+    "conflict": "private static final int buildNumber = 1182;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53314,
+    "v2": "data = block.decode(ctx.bucketFactory, 1025 /* it's an SSK */, true);",
+    "resolution": "data = block.decode(context.getBucketFactory(parent.persistent()), 1025 /* it's an SSK */, true);",
+    "conflict": "data = block.decode(context.getBucketFactory(parent.persistent()), 1025 /* it's an SSK */, true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53321,
+    "v2": "if(logMINOR) Logger.minor(this, \"Running \"+req+\" prio \"+req.getPriorityClass()+\" retries \"+req.getRetryCount());",
+    "resolution": "if(logMINOR) Logger.minor(this, \"Running \"+req+\" priority \"+req.getPriority());",
+    "conflict": "if(logMINOR) Logger.minor(this, \"Running \"+req+\" priority \"+req.getPriority());"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53323,
+    "v2": "logMINOR = Logger.shouldLog(Logger.MINOR, this);",
+    "resolution": "logMINOR = Logger.shouldLog(Logger.MINOR, this);\t\tloadFEC();",
+    "conflict": "loadFEC();"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53324,
+    "v2": "logMINOR = Logger.shouldLog(Logger.MINOR, this);",
+    "resolution": "logMINOR = Logger.shouldLog(Logger.MINOR, this);\t\tloadFEC();",
+    "conflict": "loadFEC();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53329,
+    "v2": "segments[i] = new SplitFileFetcherSegment(splitfileType, dataBlocks, checkBlocks, this, archiveContext,  \t\t\t\t\t\tfetchContext, maxTempLength, recursionLevel+1, i == segments.length-1);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53330,
+    "v2": "public SplitFileFetcherSegment(short splitfileType, ClientCHK[] splitfileDataKeys, ClientCHK[] splitfileCheckKeys, SplitFileFetcher fetcher, ArchiveContext archiveContext, FetchContext fetchContext, long maxTempLength, int recursionLevel, boolean ignoreLastDataBlock) throws MetadataParseException, FetchException {",
+    "resolution": "public SplitFileFetcherSegment(short splitfileType, ClientCHK[] splitfileDataKeys, ClientCHK[] splitfileCheckKeys, SplitFileFetcher fetcher, ArchiveContext archiveContext, FetchContext fetchContext, long maxTempLength, int recursionLevel, ClientRequester requester, int segNum, boolean ignoreLastDataBlock) throws MetadataParseException, FetchException {",
+    "conflict": "public SplitFileFetcherSegment(short splitfileType, ClientCHK[] splitfileDataKeys, ClientCHK[] splitfileCheckKeys, SplitFileFetcher fetcher, ArchiveContext archiveContext, FetchContext fetchContext, long maxTempLength, int recursionLevel, ClientRequester requester, int segNum) throws MetadataParseException, FetchException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53360,
+    "v2": "",
+    "resolution": "import com.db4o.ObjectContainer;",
+    "conflict": "import com.db4o.ObjectContainer;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53362,
+    "v2": "public void extractToCache(FreenetURI key, ARCHIVE_TYPE archiveType, COMPRESSOR_TYPE ctype, Bucket data, ArchiveContext archiveContext, ArchiveStoreContext ctx, String element, ArchiveExtractCallback callback) throws ArchiveFailureException, ArchiveRestartException {",
+    "resolution": "public void extractToCache(FreenetURI key, ARCHIVE_TYPE archiveType, COMPRESSOR_TYPE ctype, Bucket data, ArchiveContext archiveContext, ArchiveStoreContext ctx, String element, ArchiveExtractCallback callback, ObjectContainer container, ClientContext context) throws ArchiveFailureException, ArchiveRestartException {",
+    "conflict": "public void extractToCache(FreenetURI key, ARCHIVE_TYPE archiveType, COMPRESSOR_TYPE ctype, Bucket data, ArchiveContext archiveContext, ArchiveStoreContext ctx, String element, ArchiveExtractCallback callback, ObjectContainer container, ClientContext context) throws ArchiveFailureException, ArchiveRestartException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53364,
+    "v2": "private void handleTARArchive(ArchiveStoreContext ctx, FreenetURI key, InputStream data, String element, ArchiveExtractCallback callback, MutableBoolean gotElement, boolean throwAtExit) throws ArchiveFailureException, ArchiveRestartException {",
+    "resolution": "private void handleTARArchive(ArchiveStoreContext ctx, FreenetURI key, InputStream data, String element, ArchiveExtractCallback callback, MutableBoolean gotElement, boolean throwAtExit, ObjectContainer container, ClientContext context) throws ArchiveFailureException, ArchiveRestartException {",
+    "conflict": "private void handleTARArchive(ArchiveStoreContext ctx, FreenetURI key, InputStream data, String element, ArchiveExtractCallback callback, MutableBoolean gotElement, boolean throwAtExit, ObjectContainer container, ClientContext context) throws ArchiveFailureException, ArchiveRestartException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53365,
+    "v2": "addStoreElement(ctx, key, name, output, gotElement, element, callback);",
+    "resolution": "addStoreElement(ctx, key, name, output, gotElement, element, callback, container, context);",
+    "conflict": "addStoreElement(ctx, key, name, output, gotElement, element, callback, container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53366,
+    "v2": "generateMetadata(ctx, key, names, gotElement, element, callback);",
+    "resolution": "generateMetadata(ctx, key, names, gotElement, element, callback, container, context);",
+    "conflict": "generateMetadata(ctx, key, names, gotElement, element, callback, container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53367,
+    "v2": "callback.notInArchive();",
+    "resolution": "callback.notInArchive(container, context);",
+    "conflict": "callback.notInArchive(container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53368,
+    "v2": "private void handleZIPArchive(ArchiveStoreContext ctx, FreenetURI key, InputStream data, String element, ArchiveExtractCallback callback, MutableBoolean gotElement, boolean throwAtExit) throws ArchiveFailureException, ArchiveRestartException {",
+    "resolution": "private void handleZIPArchive(ArchiveStoreContext ctx, FreenetURI key, InputStream data, String element, ArchiveExtractCallback callback, MutableBoolean gotElement, boolean throwAtExit, ObjectContainer container, ClientContext context) throws ArchiveFailureException, ArchiveRestartException {",
+    "conflict": "private void handleZIPArchive(ArchiveStoreContext ctx, FreenetURI key, InputStream data, String element, ArchiveExtractCallback callback, MutableBoolean gotElement, boolean throwAtExit, ObjectContainer container, ClientContext context) throws ArchiveFailureException, ArchiveRestartException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53370,
+    "v2": "import freenet.support.Logger; import freenet.support.api.Bucket;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53381,
+    "v2": "public void onTransition(ClientPutState oldState, ClientPutState newState) {",
+    "resolution": "public void onTransition(ClientPutState oldState, ClientPutState newState, ObjectContainer container) {",
+    "conflict": "public void onTransition(ClientPutState oldState, ClientPutState newState, ObjectContainer container) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53382,
+    "v2": "",
+    "resolution": "if(persistent())\n\t\t\t\t\tcontainer.store(this);",
+    "conflict": "if(persistent()) \t\t\t\t\tcontainer.store(this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53383,
+    "v2": "public void addBlock() {",
+    "resolution": "public void addBlock(ObjectContainer container) {",
+    "conflict": "public void addBlock(ObjectContainer container) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53385,
+    "v2": "if (wasFinalized)",
+    "resolution": "if (wasFinalized) {",
+    "conflict": "if (wasFinalized) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53387,
+    "v2": "",
+    "resolution": "import com.db4o.ObjectContainer;",
+    "conflict": "import com.db4o.ObjectContainer;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53389,
+    "v2": "onMetadata(m, null);",
+    "resolution": "onMetadata(m, null, container, context);",
+    "conflict": "onMetadata(m, null, container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53390,
+    "v2": "Bucket outputBucket = ctx.bf.makeBucket(baseMetadata.dataLength());",
+    "resolution": "Bucket outputBucket = context.getBucketFactory(persistent()).makeBucket(baseMetadata.dataLength());",
+    "conflict": "Bucket outputBucket = context.getBucketFactory(persistent()).makeBucket(baseMetadata.dataLength());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53391,
+    "v2": "private boolean resolve(MetadataUnresolvedException e) throws InsertException, IOException {",
+    "resolution": "private boolean resolve(MetadataUnresolvedException e, ObjectContainer container, ClientContext context) throws InsertException, IOException {",
+    "conflict": "private boolean resolve(MetadataUnresolvedException e, ObjectContainer container, ClientContext context) throws InsertException, IOException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53393,
+    "v2": "ah = (ArchiveStoreContext) ctx.archiveManager.makeHandler(thisKey, metadata.getArchiveType(), metadata.getCompressionCodec(), false,",
+    "resolution": "ah = context.archiveManager.makeHandler(thisKey, metadata.getArchiveType(), metadata.getCompressionCodec(),",
+    "conflict": "ah = context.archiveManager.makeHandler(thisKey, metadata.getArchiveType(), metadata.getCompressionCodec(),"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53395,
+    "v2": "onFailure(new FetchException(FetchException.INVALID_METADATA, e), sched);",
+    "resolution": "onFailure(new FetchException(FetchException.INVALID_METADATA, e), false, container, context);",
+    "conflict": "onFailure(new FetchException(FetchException.INVALID_METADATA, e), false, container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53396,
+    "v2": "import freenet.support.compress.CompressionOutputSizeException;",
+    "resolution": "import freenet.support.compress.Compressor;",
+    "conflict": "import freenet.support.compress.Compressor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53401,
+    "v2": "else  // redirect",
+    "resolution": "else // redirect",
+    "conflict": "else // redirect"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53402,
+    "v2": "newSFI = new SplitFileInserter(parent, this, forceMetadata ? null : block.clientMetadata, ctx, getCHKOnly, meta, token, archiveType, sfiFS);",
+    "resolution": "newSFI = new SplitFileInserter(parent, this, forceMetadata ? null : block.clientMetadata, ctx, getCHKOnly, meta, token, archiveType, sfiFS, container, context);",
+    "conflict": "newSFI = new SplitFileInserter(parent, this, forceMetadata ? null : block.clientMetadata, ctx, getCHKOnly, meta, token, archiveType, sfiFS, container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53403,
+    "v2": "new SplitFileInserter(parent, this, null, ctx, getCHKOnly, true, token, archiveType, metaFS);",
+    "resolution": "new SplitFileInserter(parent, this, null, ctx, getCHKOnly, true, token, archiveType, metaFS, container, context);",
+    "conflict": "new SplitFileInserter(parent, this, null, ctx, getCHKOnly, true, token, archiveType, metaFS, container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53405,
+    "v2": "public SplitFileInserter(BaseClientPutter put, PutCompletionCallback cb, Bucket data, COMPRESSOR_TYPE bestCodec, long decompressedLength, ClientMetadata clientMetadata, InsertContext ctx, boolean getCHKOnly, boolean isMetadata, Object token, ARCHIVE_TYPE archiveType, boolean freeData) throws InsertException {",
+    "resolution": "public SplitFileInserter(BaseClientPutter put, PutCompletionCallback cb, Bucket data, COMPRESSOR_TYPE bestCodec, long decompressedLength, ClientMetadata clientMetadata, InsertContext ctx, boolean getCHKOnly, boolean isMetadata, Object token, ARCHIVE_TYPE archiveType, boolean freeData, boolean persistent, ObjectContainer container, ClientContext context) throws InsertException {",
+    "conflict": "public SplitFileInserter(BaseClientPutter put, PutCompletionCallback cb, Bucket data, COMPRESSOR_TYPE bestCodec, long decompressedLength, ClientMetadata clientMetadata, InsertContext ctx, boolean getCHKOnly, boolean isMetadata, Object token, ARCHIVE_TYPE archiveType, boolean freeData, boolean persistent, ObjectContainer container, ClientContext context) throws InsertException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53406,
+    "v2": "public SplitFileInserter(BaseClientPutter parent, PutCompletionCallback cb, ClientMetadata clientMetadata, InsertContext ctx, boolean getCHKOnly, boolean metadata, Object token, ARCHIVE_TYPE archiveType, SimpleFieldSet fs) throws ResumeException {",
+    "resolution": "public SplitFileInserter(BaseClientPutter parent, PutCompletionCallback cb, ClientMetadata clientMetadata, InsertContext ctx, boolean getCHKOnly, boolean metadata, Object token, ARCHIVE_TYPE archiveType, SimpleFieldSet fs, ObjectContainer container, ClientContext context) throws ResumeException {",
+    "conflict": "public SplitFileInserter(BaseClientPutter parent, PutCompletionCallback cb, ClientMetadata clientMetadata, InsertContext ctx, boolean getCHKOnly, boolean metadata, Object token, ARCHIVE_TYPE archiveType, SimpleFieldSet fs, ObjectContainer container, ClientContext context) throws ResumeException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53407,
+    "v2": "MultiValueTable<String, String> responseHeaders = new MultiValueTable<String, String>();",
+    "resolution": "MultiValueTable responseHeaders = new MultiValueTable<String, String>();",
+    "conflict": "MultiValueTable responseHeaders = new MultiValueTable<String, String>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53408,
+    "v2": "MultiValueTable<String, String> headers = new MultiValueTable<String, String>();",
+    "resolution": "MultiValueTable headers = new MultiValueTable<String, String>();",
+    "conflict": "MultiValueTable headers = new MultiValueTable<String, String>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53410,
+    "v2": "result = (firstRequest.getFetchedBlocks() / firstRequest.getMinBlocks() - secondRequest.getFetchedBlocks() / secondRequest.getMinBlocks()) < 0 ? -1 : 1;",
+    "resolution": "result = (firstRequest.getFetchedBlocks(container) / firstRequest.getMinBlocks(container) - secondRequest.getFetchedBlocks(container) / secondRequest.getMinBlocks(container)) < 0 ? -1 : 1;",
+    "conflict": "result = (firstRequest.getFetchedBlocks(container) / firstRequest.getMinBlocks(container) - secondRequest.getFetchedBlocks(container) / secondRequest.getMinBlocks(container)) < 0 ? -1 : 1;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53413,
+    "v2": "public void onFoundEdition(long edition, USK key) {",
+    "resolution": "public void onFoundEdition(long edition, USK key, ObjectContainer container, ClientContext context, boolean wasMetadata, short codec, byte[] data) {",
+    "conflict": "public void onFoundEdition(long edition, USK key, ObjectContainer container, ClientContext context, boolean wasMetadata, short codec, byte[] data) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53417,
+    "v2": "for(int i = 0; i < clientSlowSerialExecutor.length; i++) \t\t\tclientSlowSerialExecutor[i].start(node.executor, \"Heavy client jobs runner (\" + i + \")\");",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53420,
+    "v2": "private static final int buildNumber = 1171;",
+    "resolution": "private static final int buildNumber = 1171;",
+    "conflict": "private static final int buildNumber = 1170;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53422,
+    "v2": "",
+    "resolution": "import com.db4o.ObjectContainer;",
+    "conflict": "import com.db4o.ObjectContainer;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53424,
+    "v2": "_cal.set( 2008, Calendar.OCTOBER, 29, 0, 0, 0 );",
+    "resolution": "_cal.set( 2008, Calendar.OCTOBER, 29, 0, 0, 0 );",
+    "conflict": "_cal.set( 2008, Calendar.OCTOBER, 31, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53426,
+    "v2": "public final static int RECOMMENDED_EXT_BUILD_NUMBER = 23;",
+    "resolution": "public final static int RECOMMENDED_EXT_BUILD_NUMBER = 24;",
+    "conflict": "public final static int RECOMMENDED_EXT_BUILD_NUMBER = 24;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53427,
+    "v2": "private static final int buildNumber = 1166;",
+    "resolution": "private static final int buildNumber = 1168;",
+    "conflict": "private static final int buildNumber = 1168;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53430,
+    "v2": "private static final int buildNumber = 1166;",
+    "resolution": "private static final int buildNumber = 1166;",
+    "conflict": "private static final int buildNumber = 1167;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53431,
+    "v2": "",
+    "resolution": "if(persistent())\n\t\t\tcontainer.set(this);",
+    "conflict": "if(persistent()) \t\t\tcontainer.set(this);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53434,
+    "v2": "",
+    "resolution": "final boolean persistent;",
+    "conflict": "boolean dataFetchable; \t\tfinal boolean persistent;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53573,
+    "v2": "StringBuilder failedIdentifiers = new StringBuilder();",
+    "resolution": "boolean success = fcp.removeAllGlobalRequestsBlocking();",
+    "conflict": "boolean success = fcp.removeAllGlobalRequestsBlocking();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53578,
+    "v2": "_cal.set( 2008, Calendar.SEPTEMBER, 13, 0, 0, 0 );",
+    "resolution": "_cal.set( 2008, Calendar.SEPTEMBER, 13, 0, 0, 0 );",
+    "conflict": "_cal.set( 2008, Calendar.AUGUST, 20, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53580,
+    "v2": "private final HashSet<ClientRequest> runningPersistentRequests;",
+    "resolution": "private final List runningPersistentRequests;",
+    "conflict": "private final List runningPersistentRequests;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53582,
+    "v2": "import java.util.ArrayList; import java.util.Iterator;",
+    "resolution": "import java.util.ArrayList;\nimport java.util.Iterator;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53586,
+    "v2": "this.rand = rand; \t\tcontents = new HashSet<RandomGrabArrayItem>();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53590,
+    "v2": "private Vector<Object> streams;",
+    "resolution": "private transient Vector<Object> streams;",
+    "conflict": "private transient Vector streams;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53594,
+    "v2": "aesRef = new SoftReference<Rijndael>(aes);",
+    "resolution": "aesRef = new WeakReference<Rijndael>(aes);",
+    "conflict": "aesRef = new WeakReference(aes);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53602,
+    "v2": "_cal.set( 2008, Calendar.SEPTEMBER, 5, 0, 0, 0 );",
+    "resolution": "_cal.set( 2008, Calendar.AUGUST, 20, 0, 0, 0 );",
+    "conflict": "_cal.set( 2008, Calendar.AUGUST, 20, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53633,
+    "v2": "",
+    "resolution": "public long getBloomFalsePositive();",
+    "conflict": "public long getBloomFalsePositive();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53635,
+    "v2": "public void handleGet(URI uri, HTTPRequest request, ToadletContext ctx) throws ToadletContextClosedException, IOException, RedirectException {",
+    "resolution": "public void handleGet(URI uri, HTTPRequest request, ToadletContext ctx) throws ToadletContextClosedException, IOException, RedirectException {",
+    "conflict": "public void handleGet(URI uri, HTTPRequest request, ToadletContext ctx) throws ToadletContextClosedException, IOException, RedirectException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53636,
+    "v2": "return new String[] { \"bdb-index\", \"ram\" };",
+    "resolution": "return new String[] { \"bdb-index\", \"salt-hash\", \"ram\" };",
+    "conflict": "return new String[] { \"bdb-index\", \"salt-hash\", \"ram\" };"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53637,
+    "v2": "nodeConfig.register(\"maxRAMBucketSize\", \"32KiB\", sortOrder++, true, false, \"NodeClientCore.maxRAMBucketSize\", \"NodeClientCore.maxRAMBucketSizeLong\", new LongCallback() {",
+    "resolution": "nodeConfig.register(\"maxRAMBucketSize\", \"32KiB\", sortOrder++, true, false, \"NodeClientCore.maxRAMBucketSize\", \"NodeClientCore.maxRAMBucketSizeLong\", new LongCallback() {",
+    "conflict": "nodeConfig.register(\"maxRAMBucketSize\", \"128KiB\", sortOrder++, true, false, \"NodeClientCore.maxRAMBucketSize\", \"NodeClientCore.maxRAMBucketSizeLong\", new LongCallback() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53639,
+    "v2": "",
+    "resolution": "import freenet.client.async.ClientContext;\nimport freenet.crypt.RandomSource;",
+    "conflict": "import freenet.client.async.ClientContext; import freenet.crypt.RandomSource;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53640,
+    "v2": "addStoreElement(ctx, key, name, output, gotElement, element, callback);",
+    "resolution": "addStoreElement(ctx, key, name, temp, gotElement, element, callback, container, context);",
+    "conflict": "addStoreElement(ctx, key, name, temp, gotElement, element, callback, container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53642,
+    "v2": "private int resolve(MetadataUnresolvedException e, int x, Bucket bucket, ArchiveStoreContext ctx, FreenetURI key, MutableBoolean gotElement, String element2, ArchiveExtractCallback callback) throws IOException, ArchiveFailureException {",
+    "resolution": "private int resolve(MetadataUnresolvedException e, int x, TempStoreElement element, ArchiveStoreContext ctx, FreenetURI key, MutableBoolean gotElement, String element2, ArchiveExtractCallback callback, ObjectContainer container, ClientContext context) throws IOException, ArchiveFailureException {",
+    "conflict": "private int resolve(MetadataUnresolvedException e, int x, TempStoreElement element, ArchiveStoreContext ctx, FreenetURI key, MutableBoolean gotElement, String element2, ArchiveExtractCallback callback, ObjectContainer container, ClientContext context) throws IOException, ArchiveFailureException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53644,
+    "v2": "private ArchiveStoreItem addStoreElement(ArchiveStoreContext ctx, FreenetURI key, String name, Bucket temp, MutableBoolean gotElement, String callbackName, ArchiveExtractCallback callback) throws ArchiveFailureException {",
+    "resolution": "private ArchiveStoreItem addStoreElement(ArchiveStoreContext ctx, FreenetURI key, String name, TempStoreElement temp, MutableBoolean gotElement, String callbackName, ArchiveExtractCallback callback, ObjectContainer container, ClientContext context) throws ArchiveFailureException {",
+    "conflict": "private ArchiveStoreItem addStoreElement(ArchiveStoreContext ctx, FreenetURI key, String name, TempStoreElement temp, MutableBoolean gotElement, String callbackName, ArchiveExtractCallback callback, ObjectContainer container, ClientContext context) throws ArchiveFailureException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53646,
+    "v2": "public ClientGetter fetch(FreenetURI uri, long maxSize, Object context, ClientCallback callback, FetchContext fctx) throws FetchException;",
+    "resolution": "public void fetch(FreenetURI uri, long maxSize, RequestClient context, ClientCallback callback, FetchContext fctx) throws FetchException;",
+    "conflict": "public void fetch(FreenetURI uri, long maxSize, RequestClient context, ClientCallback callback, FetchContext fctx) throws FetchException;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53652,
+    "v2": "Bucket zipBucket = ctx.bf.makeBucket(baseMetadata.dataLength());",
+    "resolution": "Bucket zipBucket = context.getBucketFactory(persistent()).makeBucket(-1);",
+    "conflict": "Bucket zipBucket = context.getBucketFactory(persistent()).makeBucket(-1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53653,
+    "v2": "if(retry(sched, ctx.executor)) {",
+    "resolution": "if(retry(container, context)) {",
+    "conflict": "if(retry(container, context)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53656,
+    "v2": "if(canRetry && retry(sched, ctx.executor)) return;",
+    "resolution": "if(canRetry && retry(container, context)) return;",
+    "conflict": "if(canRetry && retry(container, context)) return;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53661,
+    "v2": "",
+    "resolution": "import freenet.support.io.NativeThread;\nimport java.util.StringTokenizer;",
+    "conflict": "import freenet.support.io.NativeThread; import java.util.StringTokenizer;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53668,
+    "v2": "public static final int EXIT_EXCEPTION_TO_DEBUG = 1023;",
+    "resolution": "public static final int EXIT_OUT_OF_MEMORY_PROTECTING_DATABASE = 29;",
+    "conflict": "public static final int EXIT_OUT_OF_MEMORY_PROTECTING_DATABASE = 29;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53672,
+    "v2": "import java.util.Iterator; import java.util.LinkedList;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53673,
+    "v2": "import freenet.support.io.FileUtil;",
+    "resolution": "import freenet.support.io.NativeThread;",
+    "conflict": "import freenet.support.io.NativeThread;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53687,
+    "v2": "import java.util.StringTokenizer;",
+    "resolution": "import freenet.support.io.NativeThread;",
+    "conflict": "import freenet.support.io.NativeThread;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53694,
+    "v2": "clientCore = new NodeClientCore(this, config, nodeConfig, nodeDir, getDarknetPortNumber(), sortOrder, oldConfig, fproxyConfig, toadlets);",
+    "resolution": "clientCore = new NodeClientCore(this, config, nodeConfig, nodeDir, getDarknetPortNumber(), sortOrder, oldThrottleFS == null ? null : oldThrottleFS.subset(\"RequestStarters\"), oldConfig, fproxyConfig, toadlets, db);",
+    "conflict": "clientCore = new NodeClientCore(this, config, nodeConfig, nodeDir, getDarknetPortNumber(), sortOrder, oldThrottleFS == null ? null : oldThrottleFS.subset(\"RequestStarters\"), oldConfig, fproxyConfig, toadlets, db);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53713,
+    "v2": "public void onFoundEdition(long l, USK key){",
+    "resolution": "public void onFoundEdition(long l, USK key, ObjectContainer container, ClientContext context, boolean wasMetadata, short codec, byte[] data) {",
+    "conflict": "public void onFoundEdition(long l, USK key, ObjectContainer container, ClientContext context, boolean wasMetadata, short codec, byte[] data) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53714,
+    "v2": "Logger.minor(this, \"Updating availableVersion from \" + availableVersion + \" to \" + found + \" and queueing an update\");",
+    "resolution": "Logger.minor(this, \"Updating availableVersion from \"+availableVersion+\" to \"+found+\" and queueing an update\");",
+    "conflict": "Logger.minor(this, \"Updating availableVersion from \"+availableVersion+\" to \"+found+\" and queueing an update\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53718,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53719,
+    "v2": "import java.io.FileFilter; import java.util.Random;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53720,
+    "v2": "public PersistentTempBucketFactory(File dir, final String prefix, RandomSource strongPRNG, Random weakPRNG) throws IOException {",
+    "resolution": "public PersistentTempBucketFactory(File dir, String prefix, RandomSource strongPRNG, Random weakPRNG, long nodeDBHandle) throws IOException {",
+    "conflict": "public PersistentTempBucketFactory(File dir, String prefix, RandomSource strongPRNG, Random weakPRNG, long nodeDBHandle) throws IOException {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53774,
+    "v2": "_cal.set( 2007, Calendar.SEPTEMBER, 28, 0, 0, 0 );",
+    "resolution": "_cal.set( 2007, Calendar.SEPTEMBER, 28, 0, 0, 0 );",
+    "conflict": "_cal.set( 2007, Calendar.AUGUST, 14, 0, 0, 0 );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53781,
+    "v2": "/* The following code was generated by JFlex 1.4.1 on 13-aug-07 8:18:51  */",
+    "resolution": "/* The following code was generated by JFlex 1.4.1 on 10/05/07 18:37 */",
+    "conflict": "/* The following code was generated by JFlex 1.4.1 on 10/05/07 18:37 */"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53782,
+    "v2": "* on 13-aug-07 8:18:51  from the specification file",
+    "resolution": "* on 10/05/07 18:37 from the specification file",
+    "conflict": "* on 10/05/07 18:37 from the specification file"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53787,
+    "v2": "public static final int buildNumber = 374;",
+    "resolution": "public static final int buildNumber = 374;",
+    "conflict": "public static final int buildNumber = 363;"
+  }
+]
+}

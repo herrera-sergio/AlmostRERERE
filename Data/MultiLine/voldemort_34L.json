@@ -1,0 +1,640 @@
+{"conflicts":[
+  {
+    "devdecision": "Concatenation",
+    "id": 8104,
+    "v2": "import java.io.Writer; import java.util.ArrayList; import java.util.Date;",
+    "resolution": "import java.util.HashMap;import java.io.Writer; import java.util.ArrayList; import java.util.Date;",
+    "conflict": "import java.util.HashMap;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8113,
+    "v2": "config.isJmxEnabled(), jmxId);",
+    "resolution": "config.isJmxEnabled(), jmxId);",
+    "conflict": "config.isJmxEnabled());"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8118,
+    "v2": "public static final String CLIENT_REGISTRY_REFRESH_INTERVAL = \"client_registry_refresh_interval\"; public static final String ASYNC_JOB_THREAD_POOL_SIZE = \"async_job_thread_pool_size\";",
+    "resolution": "public static final String CLIENT_REGISTRY_REFRESH_INTERVAL = \"client_registry_refresh_interval\"; public static final String ASYNC_JOB_THREAD_POOL_SIZE = \"async_job_thread_pool_size\";private static final String USE_DEFAULT_CLIENT = \"use_default_client\";",
+    "conflict": "private static final String USE_DEFAULT_CLIENT = \"use_default_client\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8139,
+    "v2": "socketFactory.close();",
+    "resolution": "socketFactory.close();",
+    "conflict": "((ZenStoreClient<String, String>) client1).close(); ((ZenStoreClient<String, String>) client2).close();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8140,
+    "v2": "socketFactory.close();",
+    "resolution": "socketFactory.close();",
+    "conflict": "((ZenStoreClient<String, String>) client1).close(); ((ZenStoreClient<String, String>) client2).close();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8141,
+    "v2": "socketFactory1.close(); socketFactory2.close();",
+    "resolution": "socketFactory1.close(); socketFactory2.close();",
+    "conflict": "((ZenStoreClient<String, String>) client1).close(); ((ZenStoreClient<String, String>) client2).close();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8142,
+    "v2": "socketFactory1.close(); socketFactory2.close();",
+    "resolution": "socketFactory1.close(); socketFactory2.close();",
+    "conflict": "((ZenStoreClient<String, String>) client1).close(); ((ZenStoreClient<String, String>) client2).close();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8144,
+    "v2": "socketFactory1.close(); socketFactory2.close();",
+    "resolution": "socketFactory1.close(); socketFactory2.close();",
+    "conflict": "((ZenStoreClient<String, String>) client1).close(); ((ZenStoreClient<String, String>) client2).close();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8145,
+    "v2": "config.getRoutingTimeout(TimeUnit.MILLISECONDS));",
+    "resolution": "config.getTimeoutConfig());",
+    "conflict": "config.getTimeoutConfig());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8150,
+    "v2": "System.currentTimeMillis());",
+    "resolution": "System.currentTimeMillis(), ManifestFileReader.getReleaseVersion());",
+    "conflict": "System.currentTimeMillis(), ManifestFileReader.getReleaseVersion());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8151,
+    "v2": "logger.info(\"Voldemort client created: clientContext=\" + clientContext + \" clientSequence=\" + clientSequence + \" clientId=\" + clientId.toString());",
+    "resolution": "logger.info(\"Voldemort client created: \" + clientId.toString() + \"\" + clientInfo);",
+    "conflict": "logger.info(\"Voldemort client created: \" + clientId.toString() + \"\" + clientInfo);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8177,
+    "v2": "NATIVE_BACKUP(24, 26),",
+    "resolution": "INITIATE_REBALANCE_NODE_ON_DONOR(24, 26), DELETE_STORE_REBALANCE_STATE(25, 27), NATIVE_BACKUP(26, 28),",
+    "conflict": "INITIATE_REBALANCE_NODE_ON_DONOR(24, 26), DELETE_STORE_REBALANCE_STATE(25, 27),"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8178,
+    "v2": "case 26: return NATIVE_BACKUP;",
+    "resolution": "case 26: return INITIATE_REBALANCE_NODE_ON_DONOR; case 27: return DELETE_STORE_REBALANCE_STATE; case 28: return NATIVE_BACKUP;",
+    "conflict": "case 26: return INITIATE_REBALANCE_NODE_ON_DONOR; case 27: return DELETE_STORE_REBALANCE_STATE;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8182,
+    "v2": "nativeBackup_ = voldemort.client.protocol.pb.VAdminProto.NativeBackupRequest.getDefaultInstance();",
+    "resolution": "nativeBackup_ = voldemort.client.protocol.pb.VAdminProto.NativeBackupRequest.getDefaultInstance();initiateRebalanceNodeOnDonor_ = voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeOnDonorRequest.getDefaultInstance(); deleteStoreRebalanceState_ = voldemort.client.protocol.pb.VAdminProto.DeleteStoreRebalanceStateRequest.getDefaultInstance();",
+    "conflict": "initiateRebalanceNodeOnDonor_ = voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeOnDonorRequest.getDefaultInstance(); deleteStoreRebalanceState_ = voldemort.client.protocol.pb.VAdminProto.DeleteStoreRebalanceStateRequest.getDefaultInstance();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8216,
+    "v2": "REPAIR_JOB(23, 25),",
+    "resolution": "REPAIR_JOB(23, 25), INITIATE_REBALANCE_NODE_ON_DONOR(24, 26), DELETE_STORE_REBALANCE_STATE(25, 27),",
+    "conflict": "INITIATE_REBALANCE_NODE_ON_DONOR(23, 25), DELETE_STORE_REBALANCE_STATE(24, 26),"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8217,
+    "v2": "case 25: return REPAIR_JOB;",
+    "resolution": "case 25: return REPAIR_JOB; case 26: return INITIATE_REBALANCE_NODE_ON_DONOR; case 27: return DELETE_STORE_REBALANCE_STATE;",
+    "conflict": "case 25: return INITIATE_REBALANCE_NODE_ON_DONOR; case 26: return DELETE_STORE_REBALANCE_STATE;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8220,
+    "v2": "repairJob_ = voldemort.client.protocol.pb.VAdminProto.RepairJobRequest.getDefaultInstance();",
+    "resolution": "initiateRebalanceNodeOnDonor_ = voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeOnDonorRequest.getDefaultInstance(); deleteStoreRebalanceState_ = voldemort.client.protocol.pb.VAdminProto.DeleteStoreRebalanceStateRequest.getDefaultInstance();repairJob_ = voldemort.client.protocol.pb.VAdminProto.RepairJobRequest.getDefaultInstance();",
+    "conflict": "initiateRebalanceNodeOnDonor_ = voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeOnDonorRequest.getDefaultInstance(); deleteStoreRebalanceState_ = voldemort.client.protocol.pb.VAdminProto.DeleteStoreRebalanceStateRequest.getDefaultInstance();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8248,
+    "v2": "config.setDeleteAfterRebalancingEnabled(false);",
+    "resolution": "config.setDeleteAfterRebalancingEnabled(false);",
+    "conflict": "config.setDeleteAfterRebalancingEnabled(true); config.setStealerBasedRebalancing(!useDonorBased()); config.setPrimaryPartitionBatchSize(10);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8252,
+    "v2": "config.setDeleteAfterRebalancingEnabled(false);",
+    "resolution": "config.setDeleteAfterRebalancingEnabled(false);",
+    "conflict": "config.setDeleteAfterRebalancingEnabled(true); config.setStealerBasedRebalancing(!useDonorBased());"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8275,
+    "v2": "import voldemort.serialization.ByteArraySerializer;",
+    "resolution": "import voldemort.serialization.IdentitySerializer; import voldemort.serialization.SerializationException;import voldemort.serialization.ByteArraySerializer;",
+    "conflict": "import voldemort.serialization.IdentitySerializer; import voldemort.serialization.SerializationException;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8277,
+    "v2": "StorageEngine<ByteArray, Slop> slopStore = storeRepo.getSlopStore(); EventThrottler throttler = new EventThrottler(maxWriteBytesPerSec);",
+    "resolution": "StorageEngine<ByteArray, Slop, byte[]> slopStore = storeRepo.getSlopStore(); EventThrottler throttler = new EventThrottler(maxWriteBytesPerSec);",
+    "conflict": "StorageEngine<ByteArray, Slop, byte[]> slopStore = storeRepo.getSlopStore();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8283,
+    "v2": "Boolean enableHintedHandoff, String hintedHandoffStrategyType, Integer hintPrefListSize) {",
+    "resolution": "String factory, Boolean enableHintedHandoff, String hintedHandoffStrategyType, Integer hintPrefListSize) {",
+    "conflict": "String factory) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8284,
+    "v2": "this.enableHintedHandoff = enableHintedHandoff; this.hintedHandoffStrategyType = hintedHandoffStrategyType; this.hintPrefListSize = hintPrefListSize;",
+    "resolution": "this.enableHintedHandoff = enableHintedHandoff; this.hintedHandoffStrategyType = hintedHandoffStrategyType; this.hintPrefListSize = hintPrefListSize;this.serializerFactory = factory;",
+    "conflict": "this.serializerFactory = factory;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8286,
+    "v2": "isHintedHandoffEnabled(), hasHintedHandoffStrategyType() ? getHintedHandoffStrategyType() : null, hasHintPreflistSize() ? getHintPrefListSize() : null);",
+    "resolution": "getSerializerFactory(), isHintedHandoffEnabled(), hasHintedHandoffStrategyType() ? getHintedHandoffStrategyType() : null, hasHintPreflistSize() ? getHintPrefListSize() : null);",
+    "conflict": "getSerializerFactory());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8287,
+    "v2": "+ \", enable-hinted-handoff = \" + isHintedHandoffEnabled() + \", hinted-handoff-strategy = \" + getHintedHandoffStrategyType() + \", hint-preflist-size = \" + getHintPrefListSize() + \")\";",
+    "resolution": "+ \", serializer factory = \" + getSerializerFactory() + \")\" + \", enable-hinted-handoff = \" + isHintedHandoffEnabled() + \", hinted-handoff-strategy = \" + getHintedHandoffStrategyType() + \", hint-preflist-size = \" + getHintPrefListSize() + \")\";",
+    "conflict": "+ \", serializer factory = \" + getSerializerFactory() + \")\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8289,
+    "v2": "this.isHintedHandoffEnabled(), this.getHintedHandoffStrategy(), this.getHintPrefListSize());",
+    "resolution": "this.getSerializerFactory(), this.isHintedHandoffEnabled(), this.getHintedHandoffStrategy(), this.getHintPrefListSize());",
+    "conflict": "this.getSerializerFactory());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8291,
+    "v2": "NonblockingStoreCallback callback, long timeoutMs);",
+    "resolution": "NonblockingStoreCallback callback, long timeoutMs);",
+    "conflict": "byte[] transforms, NonblockingStoreCallback callback);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8292,
+    "v2": "final NonblockingStoreCallback callback, long timeoutMs) {",
+    "resolution": "final Map<ByteArray, byte[]> transforms, final NonblockingStoreCallback callback, long timeoutMs) {",
+    "conflict": "final Map<ByteArray, byte[]> transforms, final NonblockingStoreCallback callback) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8294,
+    "v2": "NonblockingStoreCallback callback, long timeoutMs) {",
+    "resolution": "NonblockingStoreCallback callback, long timeoutMs) {",
+    "conflict": "final byte[] transforms, NonblockingStoreCallback callback) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8296,
+    "v2": "repairReads ? Event.RESPONSES_RECEIVED : Event.COMPLETED,",
+    "resolution": "allowReadRepair ? Event.RESPONSES_RECEIVED : Event.COMPLETED,",
+    "conflict": "allowReadRepair ? Event.RESPONSES_RECEIVED : Event.COMPLETED,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8297,
+    "v2": "repairReads ? Event.RESPONSES_RECEIVED : Event.COMPLETED,",
+    "resolution": "allowReadRepair ? Event.RESPONSES_RECEIVED : Event.COMPLETED,",
+    "conflict": "allowReadRepair ? Event.RESPONSES_RECEIVED : Event.COMPLETED,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8298,
+    "v2": "repairReads ? Event.RESPONSES_RECEIVED : Event.COMPLETED,",
+    "resolution": "allowReadRepair ? Event.RESPONSES_RECEIVED : Event.COMPLETED,",
+    "conflict": "allowReadRepair ? Event.RESPONSES_RECEIVED : Event.COMPLETED,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8299,
+    "v2": "isHintedHandoffEnabled() ? Event.RESPONSES_RECEIVED : Event.COMPLETED,",
+    "resolution": "isHintedHandoffEnabled() ? Event.RESPONSES_RECEIVED : Event.COMPLETED,",
+    "conflict": "Event.COMPLETED,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8303,
+    "v2": "private final HintedHandoff hintedHandoff;  public boolean enableHintedHandoff;",
+    "resolution": "private final HintedHandoff hintedHandoff;  public boolean enableHintedHandoff;private byte[] transforms;",
+    "conflict": "private byte[] transforms;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8308,
+    "v2": "NonblockingStoreCallback callback, long timeoutMs) {",
+    "resolution": "NonblockingStoreCallback callback, long timeoutMs) {",
+    "conflict": "byte[] transforms, NonblockingStoreCallback callback) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8322,
+    "v2": "if(!getName().equals(MetadataStore.METADATA_STORE_NAME) && StoreState.REBALANCING.equals(metadata.getStoreState(getName()))) {",
+    "resolution": "if(!getName().equals(MetadataStore.METADATA_STORE_NAME) && StoreState.REBALANCING.equals(metadata.getStoreState(getName()))) {",
+    "conflict": "if(VoldemortState.REBALANCING_MASTER_SERVER.equals(metadata.getServerState()) && !getName().equals(MetadataStore.METADATA_STORE_NAME)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8338,
+    "v2": "Map<Integer, Store<String, String>> nodeStores = Maps.newHashMap();",
+    "resolution": "Serializer<String> transSerializer = (Serializer<String>) new StringSerializer(); Map<Integer, Store<String, String, String>> nodeStores = Maps.newHashMap();",
+    "conflict": "Serializer<String> transSerializer = (Serializer<String>) new StringSerializer(); Map<Integer, Store<String, String, String>> nodeStores = Maps.newHashMap();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8340,
+    "v2": "Store<ByteArray, byte[]> store = server1.getStoreRepository() .getStorageEngine(testStoreName);",
+    "resolution": "Store<ByteArray, byte[], byte[]> store = server1.getStoreRepository() .getStorageEngine(testStoreName);",
+    "conflict": "Store<ByteArray, byte[], byte[]> store = server1.getStoreRepository() .getStorageEngine(testStoreName);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8352,
+    "v2": "parser.accepts(\"save-nulls\", \"save keys which had null to a file\") .withRequiredArg() .ofType(String.class);",
+    "resolution": "parser.accepts(\"save-nulls\", \"save keys which had null to a file\") .withRequiredArg() .ofType(String.class);parser.accepts(\"pipeline-routed-store\", \"Use the Pipeline RoutedStore\");",
+    "conflict": "parser.accepts(\"pipeline-routed-store\", \"Use the Pipeline RoutedStore\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8375,
+    "v2": "private final SocketStoreFactory storeFactory; private RoutedStore routedStore;",
+    "resolution": "private final RoutableStore routableStore; private final SocketStoreFactory storeFactory;",
+    "conflict": "private final SocketPool socketPool; private RoutableStore routableStore;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8381,
+    "v2": "import com.google.protobuf.Message; import voldemort.xml.StoreDefinitionsMapper;",
+    "resolution": "import voldemort.xml.StoreDefinitionsMapper;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8394,
+    "v2": "TRUNCATE_ENTRIES(7, 7),",
+    "resolution": "INITIATE_REBALANCE_NODE(7, 7), ASYNC_OPERATION_STOP(8, 8), ASYNC_OPERATION_LIST(9, 9), TRUNCATE_ENTRIES(10, 10),",
+    "conflict": "INITIATE_REBALANCE_NODE(7, 7), ASYNC_OPERATION_STOP(8, 8), ASYNC_OPERATION_LIST(9, 9),"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8395,
+    "v2": "case 7: return TRUNCATE_ENTRIES;",
+    "resolution": "case 7: return INITIATE_REBALANCE_NODE; case 8: return ASYNC_OPERATION_STOP; case 9: return ASYNC_OPERATION_LIST; case 10: return TRUNCATE_ENTRIES;",
+    "conflict": "case 7: return INITIATE_REBALANCE_NODE; case 8: return ASYNC_OPERATION_STOP; case 9: return ASYNC_OPERATION_LIST;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8411,
+    "v2": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.VoldemortFilter) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.VoldemortFilter)other);",
+    "resolution": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest)other);",
+    "conflict": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest)other);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8436,
+    "v2": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesRequest)other);",
+    "resolution": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse)other);",
+    "conflict": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse)other);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8461,
+    "v2": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.FetchPartitionEntriesResponse)other);",
+    "resolution": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest)other);",
+    "conflict": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest)other);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8485,
+    "v2": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesRequest)other);",
+    "resolution": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest)other);",
+    "conflict": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest)other);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8510,
+    "v2": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.DeletePartitionEntriesResponse)other);",
+    "resolution": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest)other);",
+    "conflict": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopRequest)other);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8535,
+    "v2": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.InitiateFetchAndUpdateRequest)other);",
+    "resolution": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse)other);",
+    "conflict": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationStopResponse)other);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8543,
+    "v2": "",
+    "resolution": "if (hasShowComplete()) { output.writeBool(2, getShowComplete()); }",
+    "conflict": "if (hasShowComplete()) { output.writeBool(2, getShowComplete()); }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8544,
+    "v2": "",
+    "resolution": "if (hasShowComplete()) { size += com.google.protobuf.CodedOutputStream .computeBoolSize(2, getShowComplete()); }",
+    "conflict": "if (hasShowComplete()) { size += com.google.protobuf.CodedOutputStream .computeBoolSize(2, getShowComplete()); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8561,
+    "v2": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusRequest)other);",
+    "resolution": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest)other);",
+    "conflict": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationListRequest)other);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8563,
+    "v2": "",
+    "resolution": "case 16: { setShowComplete(input.readBool()); break; }",
+    "conflict": "case 16: { setShowComplete(input.readBool()); break; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8568,
+    "v2": "if (!hasRequestId) return false; if (!hasDescription) return false; if (!hasStatus) return false; if (!hasComplete) return false;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8587,
+    "v2": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse)other);",
+    "resolution": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse)other);",
+    "conflict": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationListResponse)other);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8612,
+    "v2": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.TruncateEntriesRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.TruncateEntriesRequest)other);",
+    "resolution": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest)other);",
+    "conflict": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.InitiateRebalanceNodeRequest)other);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8636,
+    "v2": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse)other);",
+    "resolution": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.TruncateEntriesResponse)other);",
+    "conflict": "if (other instanceof voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse) { return mergeFrom((voldemort.client.protocol.pb.VAdminProto.AsyncOperationStatusResponse)other);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8653,
+    "v2": "",
+    "resolution": "if (hasRequestRouteType()) { output.writeInt32(8, getRequestRouteType()); }",
+    "conflict": "if (hasRequestRouteType()) { output.writeInt32(8, getRequestRouteType()); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8654,
+    "v2": "",
+    "resolution": "if (hasRequestRouteType()) { size += com.google.protobuf.CodedOutputStream .computeInt32Size(8, getRequestRouteType()); }",
+    "conflict": "if (hasRequestRouteType()) { size += com.google.protobuf.CodedOutputStream .computeInt32Size(8, getRequestRouteType()); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8655,
+    "v2": "",
+    "resolution": "if (other.hasRequestRouteType()) { setRequestRouteType(other.getRequestRouteType()); }",
+    "conflict": "if (other.hasRequestRouteType()) { setRequestRouteType(other.getRequestRouteType()); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8656,
+    "v2": "",
+    "resolution": "case 64: { setRequestRouteType(input.readInt32()); break; }",
+    "conflict": "case 64: { setRequestRouteType(input.readInt32()); break; }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8665,
+    "v2": "private final FailureDetector failureDetector; private final RoutingStrategy routingStrategy;",
+    "resolution": "private final FailureDetector failureDetector; private RoutingStrategy routingStrategy;",
+    "conflict": "private RoutingStrategy routingStrategy;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8671,
+    "v2": "markUnavailable(node, e); } catch(VoldemortApplicationException e) { throw e;",
+    "resolution": "failureDetector.recordException(node, e); } catch(VoldemortApplicationException e) { throw e;",
+    "conflict": "failureDetector.recordException(node, e);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8672,
+    "v2": "markUnavailable(node, e); } catch(VoldemortApplicationException e) { throw e;",
+    "resolution": "failureDetector.recordException(node, e); } catch(VoldemortApplicationException e) { throw e;",
+    "conflict": "failureDetector.recordException(node, e);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8673,
+    "v2": "markUnavailable(node, e); } catch(VoldemortApplicationException e) { throw e;",
+    "resolution": "failureDetector.recordException(node, e); } catch(VoldemortApplicationException e) { throw e;",
+    "conflict": "failureDetector.recordException(node, e);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8680,
+    "v2": "@JmxOperation abstract public void stop();",
+    "resolution": "@JmxOperation abstract public void stop();",
+    "conflict": "// TODO : fix me // abstract public void stop() throws Exception;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8681,
+    "v2": "RebalanceController rebalanceClient = new RebalanceController(getBootstrapUrl(Arrays.asList(originalCluster.getNodeById(0).getHost())),",
+    "resolution": "RebalanceController rebalanceClient = new RebalanceController(getBootstrapUrl(Arrays.asList(originalCluster.getNodeById(0).getHost())),",
+    "conflict": "RebalanceClient rebalanceClient = new RebalanceClient(getBootstrapUrl(Arrays.asList(originalCluster.getNodeById(0) .getHost())),"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8682,
+    "v2": "storeList, false);",
+    "resolution": "storeList, rebalanceConfig.isDeleteAfterRebalancingEnabled());",
+    "conflict": "storeList);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8687,
+    "v2": "StoreUtils.assertValidMetadata(key, metadata.getRoutingStrategy(getName()), node);",
+    "resolution": "StoreUtils.assertValidMetadata(key, metadata.getRoutingStrategy(getName()), node);",
+    "conflict": "StoreUtils.assertValidMetadata(key, metadata.getRoutingStrategy(getName()), metadata.getCluster().getNodeById(nodeId));"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8696,
+    "v2": "import voldemort.client.protocol.pb.ProtoUtils; import voldemort.client.protocol.pb.VAdminProto; import voldemort.client.protocol.pb.VProto;",
+    "resolution": "import voldemort.client.rebalance.RebalanceStealInfo;import voldemort.client.protocol.pb.ProtoUtils; import voldemort.client.protocol.pb.VAdminProto; import voldemort.client.protocol.pb.VProto;",
+    "conflict": "import voldemort.client.rebalance.RebalanceStealInfo;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8698,
+    "v2": "// back off once we're // waiting this long",
+    "resolution": "// Parameters for exponential back off",
+    "conflict": "// back off once delay // reaches this"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8723,
+    "v2": "config.setEnableNetworkClassLoader(true);",
+    "resolution": "config.setEnableNetworkClassLoader(true);",
+    "conflict": "// TODO: network class loader is disabled. // config.setEnableNetworkClassLoader(true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8724,
+    "v2": "private static final long INITIAL_DELAY = 250; private static final long MAX_DELAY = 1000 * 60;",
+    "resolution": "private static final long INITIAL_DELAY = 250; // Initial delay private static final long MAX_DELAY = 1000 * 60; // Stop doing exponential back off once we're waiting this long",
+    "conflict": "private static final long INITIAL_DELAY = 250; // Initial delay private static final long MAX_DELAY = 1000 * 60; // Stop doing exponential back off once we're waiting this long"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8725,
+    "v2": "// network class loader disable by default. this.enableNetworkClassLoader = props.getBoolean(\"enable.network.classloader\", false);",
+    "resolution": "// network class loader disable by default. this.enableNetworkClassLoader = props.getBoolean(\"enable.network.classloader\", false);this.failureDetector = props.getString(\"failure.detector\", BannagePeriodFailureDetector.class.getName());",
+    "conflict": "this.failureDetector = props.getString(\"failure.detector\", BannagePeriodFailureDetector.class.getName());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8742,
+    "v2": "this.routingStrategy = new RoutingStrategyFactory().updateRoutingStrategy(storeDef, cluster);",
+    "resolution": "this.failureDetector = failureDetector; this.routingStrategy = new RoutingStrategyFactory().updateRoutingStrategy(storeDef, cluster);",
+    "conflict": "this.failureDetector = failureDetector; this.routingStrategy = new RoutingStrategyFactory(this.cluster).getRoutingStrategy(storeDef);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8747,
+    "v2": "throw new VoldemortException(\"Failed to finish task requestId:\" + requestId + \" in maxWait\" + maxWait + \" \" + timeUnit.toString());",
+    "resolution": "throw new VoldemortException(\"Failed to finish task requestId:\" + requestId + \" in maxWait\" + maxWait + \" \" + timeUnit.toString());",
+    "conflict": "throw new VoldemortException(\"Task requestId:\" + requestId + \" failed to complete in \" + maxWait + \" \" + timeUnit.toString()) ;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8756,
+    "v2": "public VAdminProto.AsyncOperationStatusResponse handleFetchAndUpdate(VAdminProto.InitiateFetchAndUpdateRequest request) {",
+    "resolution": "public VAdminProto.AsyncOperationStatusResponse handleFetchAndUpdate(VAdminProto.InitiateFetchAndUpdateRequest request) {",
+    "conflict": "public VAdminProto.InitiateFetchAndUpdateResponse handleFetchAndUpdate(VAdminProto.InitiateFetchAndUpdateRequest request) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8758,
+    "v2": "if ((i % 1000) == 0) { updateStatus(i + \" entries processed\");",
+    "resolution": "if((i % 1000) == 0) { updateStatus(i + \" entries processed\");",
+    "conflict": "if((i % 1000) == 0) { setStatus(i + \" entries processed\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8759,
+    "v2": "response.setRequestId(requestId); } catch (VoldemortException e) {",
+    "resolution": "response.setRequestId(requestId); } catch (VoldemortException e) {",
+    "conflict": "} catch(VoldemortException e) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8764,
+    "v2": "} catch(IOException e) {",
+    "resolution": "} catch (IOException e) {",
+    "conflict": "} catch (IOException e) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8768,
+    "v2": "if(maxBootstrapRetries < 1) throw new IllegalArgumentException(\"maxBootstrapRetries should be >= 1\");",
+    "resolution": "if(maxBootstrapRetries < 1) throw new IllegalArgumentException(\"maxBootstrapRetries should be >= 1\");",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8777,
+    "v2": "import javax.management.MBeanOperationInfo;",
+    "resolution": "import javax.management.MBeanOperationInfo;import javax.management.MBeanServer; import javax.management.ObjectName;",
+    "conflict": "import javax.management.MBeanServer; import javax.management.ObjectName;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8783,
+    "v2": "SocketServer server = new SocketServer(7666, 50, 50, 1000, new RequestHandlerFactory(null, null, null));",
+    "resolution": "SocketServer server = new SocketServer(7666, 50, 50, 1000, new SocketRequestHandlerFactory(null), \"test\");",
+    "conflict": "SocketServer server = new SocketServer(7666, 50, 50, 1000, new SocketRequestHandlerFactory(null), \"test\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8785,
+    "v2": "node.getSocketPort(), RequestFormatType.ADMIN_PROTOCOL_BUFFERS);",
+    "resolution": "node.getAdminPort(), RequestFormatType.ADMIN_PROTOCOL_BUFFERS);",
+    "conflict": "node.getAdminPort(), RequestFormatType.ADMIN_PROTOCOL_BUFFERS);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8788,
+    "v2": "public List<Versioned<byte[]>> doRedirectGet(int proxyDestNodeId, String storeName,",
+    "resolution": "public List<Versioned<byte[]>> doRedirectGet(int proxyDestNodeId, String storeName,",
+    "conflict": "public List<Versioned<byte[]>> doRedirectGet(int proxyDestNodeId, String storeName,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8790,
+    "v2": "public void doUpdatePartitionEntries(int nodeId, String storeName,",
+    "resolution": "public void doUpdatePartitionEntries(int nodeId, String storeName,",
+    "conflict": "public void doUpdatePartitionEntries(int nodeId, String storeName,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8795,
+    "v2": "if (response.hasError()) {",
+    "resolution": "if (response.hasError()) {",
+    "conflict": "if(response.hasError()) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8796,
+    "v2": "public int doDeletePartitionEntries(int nodeId, String storeName,",
+    "resolution": "public int doDeletePartitionEntries(int nodeId, String storeName,",
+    "conflict": "public int doDeletePartitionEntries(int nodeId, String storeName,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8802,
+    "v2": "setBdbCleanerMinFileUtilization(props.getInt(\"bdb.cleaner.minFileUtilization\", 5)); setBdbCleanerMinUtilization(props.getInt(\"bdb.cleaner.minUtilization\", 50));",
+    "resolution": "this.bdbCleanerMinFileUtilization = props.getInt(\"bdb.cleaner.minFileUtilization\", 5);",
+    "conflict": "this.bdbCleanerMinFileUtilization = props.getInt(\"bdb.cleaner.min.file.utilization\", 5);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8811,
+    "v2": "",
+    "resolution": "import javax.management.MBeanServer; import javax.management.ObjectName;",
+    "conflict": "import javax.management.MBeanServer; import javax.management.ObjectName;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8819,
+    "v2": "import voldemort.annotations.jmx.JmxOperation; import voldemort.server.protocol.RequestHandlerFactory;",
+    "resolution": "import voldemort.annotations.jmx.JmxOperation; import voldemort.server.StatusManager; import voldemort.server.protocol.RequestHandlerFactory;",
+    "conflict": "import voldemort.server.StatusManager; import voldemort.server.protocol.RequestHandler;"
+  }
+]
+}

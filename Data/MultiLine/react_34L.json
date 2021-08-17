@@ -1,0 +1,108 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 2",
+    "id": 73593,
+    "v2": "import { alphaSortEntries, getMetaValueLabel } from '../utils'; import { meta } from '../../../hydration';",
+    "resolution": "import { alphaSortEntries, getMetaValueLabel } from '../utils'; import { meta } from '../../../hydration';",
+    "conflict": "import {getMetaValueLabel} from '../utils'; import {meta} from '../../../hydration';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 73601,
+    "v2": "isPathWhitelistedCheck ? 1 : level + 1 )",
+    "resolution": "isPathWhitelistedCheck ? 1 : level + 1, ),",
+    "conflict": "arrayPathCheck ? 1 : level + 1, ),"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 73604,
+    "v2": "import React, { Fragment } from 'react'; import UnserializableProps from './UnserializableProps';",
+    "resolution": "import React, { Fragment } from 'react'; import UnserializableProps from './UnserializableProps';",
+    "conflict": "import React, {Fragment} from 'react';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 73654,
+    "v2": "import type { ComponentFilter, ElementType } from './types';",
+    "resolution": "import type { ComponentFilter, ElementType } from './types';",
+    "conflict": "import type { ElementType } from 'src/types'; import type { ComponentFilter } from './types';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 73661,
+    "v2": "jest.runOnlyPendingTimers(); Scheduler.flushAll();",
+    "resolution": "jest.runAllTimers();",
+    "conflict": "jest.runAllTimers();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 73663,
+    "v2": "nodes = ((renderer.findNativeNodesForFiberID( id ): any): ?Array<HTMLElement>);",
+    "resolution": "nodes = ((renderer.findNativeNodesForFiberID( id ): any): ?Array<HTMLElement>);",
+    "conflict": "nodes = ((renderer.getNativeFromInternal(id): any): ?Array<HTMLElement>);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 73667,
+    "v2": "getFiberIDForNative, findNativeNodesForFiberID,",
+    "resolution": "getFiberIDForNative, findNativeNodesForFiberID,",
+    "conflict": "getInternalIDFromNative, getNativeFromInternal,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 73677,
+    "v2": "setInProps: (id: number, path: Array<string | number>, value: any) => void, setInState: (id: number, path: Array<string | number>, value: any) => void, setTrackedPath: (path: Array<PathFrame> | null) => void,",
+    "resolution": "setInProps: (id: number, path: Array<string | number>, value: any) => void, setInState: (id: number, path: Array<string | number>, value: any) => void, setTrackedPath: (path: Array<PathFrame> | null) => void,",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 73694,
+    "v2": "| ACTION_SET_SEARCH_TEXT;",
+    "resolution": "| ACTION_SET_SEARCH_TEXT | ACTION_UPDATE_INSPECTED_ELEMENT_ID;",
+    "conflict": "| ACTION_SET_SEARCH_TEXT | ACTION_UPDATE_INSPECTED_ELEMENT_ID;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 73695,
+    "v2": "",
+    "resolution": "// Inspection element panel inspectedElementID: number | null,",
+    "conflict": "// Inspection element panel inspectedElementID: number | null,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 73701,
+    "v2": "case TREE_OPERATION_REORDER_CHILDREN: id = ((operations[i + 1]: any): number);",
+    "resolution": "case TREE_OPERATION_REORDER_CHILDREN: { const id = ((operations[i + 1]: any): number);",
+    "conflict": "case TREE_OPERATION_RESET_CHILDREN: { const id = ((operations[i + 1]: any): number);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 73702,
+    "v2": "element = ((this._idToElement.get(id): any): Element);",
+    "resolution": "const element = ((this._idToElement.get(id): any): Element);",
+    "conflict": "const element = ((this._idToElement.get(id): any): Element);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 73705,
+    "v2": "<span ref={component} className={styles.Component}> <DisplayName displayName={displayName} id={id} />",
+    "resolution": "<span className={styles.Component} ref={ref}> <DisplayName displayName={displayName} id={((id: any): number)} />",
+    "conflict": "<span className={styles.Component}> <DisplayName displayName={displayName} id={((id: any): number)} />"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 73729,
+    "v2": "var selectedPromises = promiseIndexes.map(function(index) { return _promises[index];",
+    "resolution": "var selectedPromises = promiseIndexes.map(function(index) { return _promises[index];",
+    "conflict": "var selectedPromises = promiseIndexes.map(function(idx) { return _promises[idx];"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 73737,
+    "v2": "form: ReactDOMForm, textarea: ReactDOMTextarea",
+    "resolution": "form: ReactDOMForm, // TODO: Inject `ReactDOMInput`. textarea: ReactDOMTextarea",
+    "conflict": "form: ReactDOMForm // TODO: Inject `ReactDOMInput`."
+  }
+]
+}

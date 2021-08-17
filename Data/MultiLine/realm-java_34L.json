@@ -1,0 +1,1627 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 77766,
+    "v2": "<T extends RealmModel> RealmModelOperator(BaseRealm realm, NativeMixed nativeMixed, Class<T> clazz) { super(nativeMixed);",
+    "resolution": "<T extends RealmModel> RealmModelOperator(BaseRealm realm, NativeMixed nativeMixed, Class<T> clazz) { super(MixedType.OBJECT, nativeMixed);",
+    "conflict": "<T extends RealmModel> RealmModelOperator(BaseRealm realm, NativeMixed nativeMixed) { super(MixedType.OBJECT, nativeMixed);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 77767,
+    "v2": "// Checks that fieldName has the correct type is done in C++. this.query.isNull(realm.getSchema().getKeyPathMapping(), fieldName);",
+    "resolution": "// Checks that fieldName has the correct type is done in C++. this.query.isNull(realm.getSchema().getKeyPathMapping(), fieldName);",
+    "conflict": "this.query.isNull(fieldName);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 77774,
+    "v2": "public TableQuery between(@Nullable OsKeyPathMapping mapping, String fieldName, Mixed value1, Mixed value2) { mixedNativeFunctions.callRawPredicate(this, mapping, \"(\" + escapeFieldName(fieldName) + \" >= $0 AND \" + escapeFieldName(fieldName) + \" <= $1)\", value1, value2);",
+    "resolution": "public TableQuery between(@Nullable OsKeyPathMapping mapping, String fieldName, Mixed value1, Mixed value2) { mixedNativeFunctions.callRawPredicate(this, mapping, \"(\" + escapeFieldName(fieldName) + \" >= $0 AND \" + escapeFieldName(fieldName) + \" <= $1)\", value1, value2);",
+    "conflict": "public TableQuery between(String fieldName, Mixed value1, Mixed value2) { mixedNativeFunctions.callRawPredicate(this, escapeFieldName(fieldName)  + \" >= $0 AND \" + escapeFieldName(fieldName)  + \" <= $1\", value1, value2);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77781,
+    "v2": "",
+    "resolution": "// 14 UUID assertNull(nullTypes1.getFieldUUIDNull()); assertEquals(UUID.fromString(\"027ba5ca-aa12-4afa-9219-e20cc3018599\"), nullTypes1.getFieldUUIDNotNull());",
+    "conflict": "// 14 UUID assertNull(nullTypes1.getFieldUUIDNull()); assertEquals(UUID.fromString(\"027ba5ca-aa12-4afa-9219-e20cc3018599\"), nullTypes1.getFieldUUIDNotNull());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77782,
+    "v2": "",
+    "resolution": "// 14 UUID assertTrue(nullTypes2.getFieldUUIDNull() != null); assertEquals(UUID.fromString(\"027ba5ca-aa12-4afa-9219-e20cc3018599\"), nullTypes2.getFieldUUIDNotNull());",
+    "conflict": "// 14 UUID assertTrue(nullTypes2.getFieldUUIDNull() != null); assertEquals(UUID.fromString(\"027ba5ca-aa12-4afa-9219-e20cc3018599\"), nullTypes2.getFieldUUIDNotNull());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77828,
+    "v2": "",
+    "resolution": "if (o != null && o.getClass() != valueClass) { return false; }",
+    "conflict": "if (o != null && o.getClass() != valueClass) { return false; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77835,
+    "v2": "",
+    "resolution": "// ---------------------------------------------------- // Private stuff // ----------------------------------------------------",
+    "conflict": "// ---------------------------------------------------- // Private stuff // ----------------------------------------------------"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77868,
+    "v2": "public <E> boolean addAll(Collection<? extends E> collection, Class<?> valueClass) { return collectionFunnel(collection, valueClass, ExternalCollectionOperation.ADD_ALL); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77880,
+    "v2": "boolean found = osSet.contains(e); osSet.add(e); return !found;",
+    "resolution": "return osSet.add(e);",
+    "conflict": "return osSet.add(e);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77883,
+    "v2": "",
+    "resolution": "OsSet getOsSet() { return setStrategy.getOsSet(); }",
+    "conflict": "OsSet getOsSet() { return setStrategy.getOsSet(); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77898,
+    "v2": "import java.util.Collections; import java.util.HashMap; import java.util.HashSet;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77910,
+    "v2": "* @param arguments Realm primitives or objects for the predicate. * @throws java.lang.IllegalArgumentException if there is an syntax or type error.",
+    "resolution": "* @param arguments Realm values for the predicate. * @throws java.lang.IllegalArgumentException if there is an syntax error.",
+    "conflict": "* @param arguments Realm values for the predicate. * @throws java.lang.IllegalArgumentException if there is an syntax error."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77913,
+    "v2": "public TableQuery greaterThanOrEqual(long[] columnKeys, long[] tablePtrs, ObjectId value) { nativeGreaterEqualObjectId(nativePtr, columnKeys, tablePtrs, value.toString());",
+    "resolution": "public TableQuery isNotNull(String fieldName) { rawPredicateWithPointers(fieldName + \" != NULL\");",
+    "conflict": "public TableQuery isNotNull(String fieldName) { rawPredicateWithPointers(fieldName + \" != NULL\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77917,
+    "v2": "io.realm.some_test_AllTypesRealmProxy.insert(realm, (some.test.AllTypes) object, cache); } else if (clazz.equals(some.test.Simple.class)) { io.realm.some_test_SimpleRealmProxy.insert(realm, (some.test.Simple) object, cache);",
+    "resolution": "return io.realm.some_test_AllTypesRealmProxy.insert(realm, (some.test.AllTypes) object, cache); } else if (clazz.equals(some.test.Simple.class)) { return io.realm.some_test_SimpleRealmProxy.insert(realm, (some.test.Simple) object, cache);",
+    "conflict": "return io.realm.some_test_AllTypesRealmProxy.insert(realm, (some.test.AllTypes) object, cache);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77918,
+    "v2": "io.realm.some_test_AllTypesRealmProxy.insertOrUpdate(realm, (some.test.AllTypes) obj, cache); } else if (clazz.equals(some.test.Simple.class)) { io.realm.some_test_SimpleRealmProxy.insertOrUpdate(realm, (some.test.Simple) obj, cache);",
+    "resolution": "return io.realm.some_test_AllTypesRealmProxy.insertOrUpdate(realm, (some.test.AllTypes) obj, cache); } else if (clazz.equals(some.test.Simple.class)) { return io.realm.some_test_SimpleRealmProxy.insertOrUpdate(realm, (some.test.Simple) obj, cache);",
+    "conflict": "return io.realm.some_test_AllTypesRealmProxy.insertOrUpdate(realm, (some.test.AllTypes) obj, cache);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77927,
+    "v2": "ASSERT.about(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel))",
+    "resolution": "assertAbout(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel))",
+    "conflict": "assertAbout(javaSource()) .that(allTypesModel)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77928,
+    "v2": "ASSERT.about(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel))",
+    "resolution": "assertAbout(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel))",
+    "conflict": "assertAbout(javaSource()) .that(allTypesModel)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 77929,
+    "v2": "ASSERT.about(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel, JavaFileObjects.forResource(\"some/test/AppModuleCustomClasses.java\")))",
+    "resolution": "assertAbout(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel, JavaFileObjects.forResource(\"some/test/AppModuleCustomClasses.java\")))",
+    "conflict": "assertAbout(javaSources()) .that(Arrays.asList(allTypesModel, JavaFileObjects.forResource(\"some/test/AppModuleCustomClasses.java\")))"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 77930,
+    "v2": "ASSERT.about(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel, JavaFileObjects.forResource(\"some/test/AppModuleAllClasses.java\")))",
+    "resolution": "assertAbout(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel, JavaFileObjects.forResource(\"some/test/AppModuleAllClasses.java\")))",
+    "conflict": "assertAbout(javaSources()) .that(Arrays.asList(allTypesModel, JavaFileObjects.forResource(\"some/test/AppModuleAllClasses.java\")))"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 77931,
+    "v2": "ASSERT.about(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel, JavaFileObjects.forResource(\"some/test/LibraryModuleAllClasses.java\")))",
+    "resolution": "assertAbout(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel, JavaFileObjects.forResource(\"some/test/LibraryModuleAllClasses.java\")))",
+    "conflict": "assertAbout(javaSources()) .that(Arrays.asList(allTypesModel, JavaFileObjects.forResource(\"some/test/LibraryModuleAllClasses.java\")))"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 77932,
+    "v2": "ASSERT.about(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel, JavaFileObjects.forResource(\"some/test/LibraryModuleCustomClasses.java\")))",
+    "resolution": "assertAbout(javaSources()) .that(Arrays.asList(allTypesModel, simpleModel, JavaFileObjects.forResource(\"some/test/LibraryModuleCustomClasses.java\")))",
+    "conflict": "assertAbout(javaSources()) .that(Arrays.asList(allTypesModel, JavaFileObjects.forResource(\"some/test/LibraryModuleCustomClasses.java\")))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 77949,
+    "v2": "// Deep copy of columnObjectWithoutPk unmanagedCopy.realmSet$columnObjectWithoutPk(some_test_SimpleRealmProxy.createDetachedCopy(realmSource.realmGet$columnObjectWithoutPk(), currentDepth + 1, maxDepth, cache));",
+    "resolution": "// Deep copy of columnObjectWithoutPk unmanagedCopy.realmSet$columnObjectWithoutPk(some_test_SimpleRealmProxy.createDetachedCopy(realmSource.realmGet$columnObjectWithoutPk(), currentDepth + 1, maxDepth, cache));",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 77960,
+    "v2": "// TODO: add queries for dictionaries break;",
+    "resolution": "// TODO: add queries for dictionaries break;",
+    "conflict": "// TODO: fix this when adding support for dictionary queries throw new IllegalArgumentException();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 77961,
+    "v2": "// TODO: add queries for dictionaries break;",
+    "resolution": "// TODO: add queries for dictionaries break;",
+    "conflict": "// TODO: fix this when adding support for dictionary queries throw new IllegalArgumentException();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77983,
+    "v2": "",
+    "resolution": "if (value == null) { return false; }",
+    "conflict": "if (value == null) { return false; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77995,
+    "v2": "import androidx.test.InstrumentationRegistry; import androidx.test.core.app.ApplicationProvider; import androidx.test.rule.UiThreadTestRule;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78038,
+    "v2": "mapValueOperator = new ByteValueOperator(baseRealm, osMap, classContainer); } else if (valueClass.equals(Byte[].class.getCanonicalName())) { mapValueOperator = new BoxedByteArrayValueOperator(baseRealm, osMap, classContainer);",
+    "resolution": "mapValueOperator = new ByteValueOperator<K>(baseRealm, osMap, classContainer); } else if (valueClass.equals(Byte[].class.getCanonicalName())) { mapValueOperator = new BoxedByteArrayValueOperator<K>(baseRealm, osMap, classContainer);",
+    "conflict": "mapValueOperator = new ByteValueOperator<K>(baseRealm, osMap, classContainer);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78046,
+    "v2": "",
+    "resolution": "unmanagedCopy.realmSet$columnUUIDList(new RealmList<java.util.UUID>()); unmanagedCopy.realmGet$columnUUIDList().addAll(realmSource.realmGet$columnUUIDList());",
+    "conflict": "unmanagedCopy.realmSet$columnUUIDList(new RealmList<java.util.UUID>()); unmanagedCopy.realmGet$columnUUIDList().addAll(realmSource.realmGet$columnUUIDList());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78049,
+    "v2": "import io.realm.Sort; import io.realm.internal.core.DescriptorOrdering; import io.realm.internal.core.QueryDescriptor; import io.realm.internal.objectstore.OsKeyPathMapping;",
+    "resolution": "import io.realm.internal.core.DescriptorOrdering;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78056,
+    "v2": "",
+    "resolution": "import org.bson.types.Decimal128; import org.bson.types.ObjectId;  import java.util.Date;",
+    "conflict": "import org.bson.types.Decimal128; import org.bson.types.ObjectId;  import java.util.Date;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78062,
+    "v2": "",
+    "resolution": "case STRING_TO_DECIMAL128_MAP: // TODO: fix this when adding maps to AllJavaTypes object.linkingObjects(AllJavaTypes.CLASS_NAME, AllJavaTypes.FIELD_UUID_LIST); break;",
+    "conflict": "case STRING_TO_DECIMAL128_MAP: // TODO: fix this when adding maps to AllJavaTypes object.linkingObjects(AllJavaTypes.CLASS_NAME, AllJavaTypes.FIELD_UUID_LIST); break;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78091,
+    "v2": "@Override @Nullable",
+    "resolution": "@Nullable @Override",
+    "conflict": "@Nullable @Override"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78097,
+    "v2": "",
+    "resolution": "import org.bson.types.Decimal128; import org.bson.types.ObjectId;  import java.util.Date;",
+    "conflict": "import org.bson.types.Decimal128; import org.bson.types.ObjectId;  import java.util.Date;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78105,
+    "v2": "}  public void addUUIDValueDictionary(long columnKey, RealmDictionary<UUID> dictionary) { addDictionaryItem(builderPtr, columnKey, dictionary, uuidMapItemCallback);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78112,
+    "v2": "public static OsResults createFromMap(OsSharedRealm sharedRealm, Table table, long resultsPtr) { return new OsResults(sharedRealm, table, resultsPtr);",
+    "resolution": "public static OsResults createFromMap(OsSharedRealm sharedRealm, Table table, long resultsPtr) { return new OsResults(sharedRealm, table, resultsPtr);",
+    "conflict": "public static OsResults createFromMap(OsSharedRealm sharedRealm, Table table, long nativePtr) { return new OsResults(sharedRealm, table, nativePtr);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78113,
+    "v2": "return nativeGetValue(nativePtr, index);",
+    "resolution": "return nativeGetValue(nativePtr, index);",
+    "conflict": "//        Object value = nativeGetValue(nativePtr, index); //        return value; throw new RuntimeException();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78118,
+    "v2": "assertEquals(1, realmTypes.getColumnMixedList().size()); assertEquals(Mixed.valueOf(UUID.fromString(TestHelper.generateUUIDString(7))), realmTypes.getColumnMixedList().get(0));",
+    "resolution": "assertEquals(1, realmTypes.getColumnMixedList().size()); assertEquals(Mixed.valueOf(UUID.fromString(TestHelper.generateUUIDString(7))), realmTypes.getColumnMixedList().get(0));",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78120,
+    "v2": "",
+    "resolution": "",
+    "conflict": "assertEquals(1, realmTypes.getColumnMixedList().size()); assertEquals(Mixed.valueOf(UUID.fromString(TestHelper.generateUUIDString(7))), realmTypes.getColumnMixedList().get(0));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78128,
+    "v2": "",
+    "resolution": "assertEquals(1, realmTypes.getColumnMixedList().size()); assertEquals(Mixed.valueOf(UUID.fromString(TestHelper.generateUUIDString(7))), realmTypes.getColumnMixedList().get(0));",
+    "conflict": "assertEquals(1, realmTypes.getColumnMixedList().size()); assertEquals(Mixed.valueOf(UUID.fromString(TestHelper.generateUUIDString(7))), realmTypes.getColumnMixedList().get(0));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78134,
+    "v2": "public T put(Object key, @Nullable T value) { T original = get(key);",
+    "resolution": "public V put(Object key, @Nullable V value) { V original = get(key);",
+    "conflict": "public V put(Object key, V value) { V original = get(key);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78150,
+    "v2": "@Nullable public T put(Object key, @Nullable T value) {",
+    "resolution": "@Nullable @Override public T put(Object key, @Nullable T value) {",
+    "conflict": "public T put(Object key, T value) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78151,
+    "v2": "",
+    "resolution": "import io.realm.internal.android.TypeUtils;",
+    "conflict": "import io.realm.internal.android.TypeUtils; import io.realm.internal.core.NativeMixed;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78171,
+    "v2": "case MIXED_LIST:",
+    "resolution": "case STRING_TO_MIXED_MAP: case STRING_TO_BOOLEAN_MAP:case MIXED_LIST:",
+    "conflict": "case STRING_TO_MIXED_MAP: case STRING_TO_BOOLEAN_MAP:"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78181,
+    "v2": "for (int i = 0; i < original.size(); i++) { value.add(ProxyUtils.copyToRealmIfNeeded(proxyState, original.get(i)));",
+    "resolution": "for (int i = 0; i < original.size(); i++) { value.add(ProxyUtils.copyToRealmIfNeeded(proxyState, original.get(i)));",
+    "conflict": "for (Mixed item : original) { value.add(ProxyUtils.copyToRealmIfNeeded(proxyState, item));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78267,
+    "v2": "public long mixedGetRowKey(long columnKey, long rowKey){ return nativeMixedGetRowKey(nativeTableRefPtr, columnKey, rowKey); }",
+    "resolution": "public long mixedGetRowKey(long columnKey, long rowKey){ return nativeMixedGetRowKey(nativeTableRefPtr, columnKey, rowKey); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78268,
+    "v2": "public String mixedGetClassName(OsSharedRealm sharedRealm, long columnKey, long rowKey) { return Table.getClassNameForTable(nativeMixedGetTableName(sharedRealm.getNativePtr(), nativeTableRefPtr, columnKey, rowKey)); }",
+    "resolution": "public String mixedGetClassName(OsSharedRealm sharedRealm, long columnKey, long rowKey) { return Table.getClassNameForTable(nativeMixedGetTableName(sharedRealm.getNativePtr(), nativeTableRefPtr, columnKey, rowKey)); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78270,
+    "v2": "public static native long nativeMixedGetRowKey(long nativeTableRefPtr, long columnKey, long rowKey);  public static native String nativeMixedGetTableName(long sharedRealmPtr, long nativeTableRefPtr, long columnKey, long rowKey);",
+    "resolution": "public static native long nativeMixedGetRowKey(long nativeTableRefPtr, long columnKey, long rowKey);  public static native String nativeMixedGetTableName(long sharedRealmPtr, long nativeTableRefPtr, long columnKey, long rowKey);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78278,
+    "v2": "",
+    "resolution": "// TODO: add more map times ad-hoc STRING_TO_MIXED_MAP(CORE_TYPE_VALUE_MIXED + DICTIONARY_OFFSET);",
+    "conflict": "// TODO: add more map times ad-hoc STRING_TO_MIXED_MAP(CORE_TYPE_VALUE_MIXED + DICTIONARY_OFFSET);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78279,
+    "v2": "case UUID: return (E) proxyState.getRow$realm().getUUID(columnKey);",
+    "resolution": "case UUID: return (E) proxyState.getRow$realm().getUUID(columnKey);case MIXED: return (E) getMixed(columnKey);",
+    "conflict": "case MIXED: return (E) getMixed(columnKey);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78289,
+    "v2": "case UUID_LIST:",
+    "resolution": "case UUID_LIST:",
+    "conflict": "case MIXED_LIST: case TYPED_LINK:"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78303,
+    "v2": "case UUID: return clazz.cast(table.mixedAsUUID(columnIndex, rowIndex));",
+    "resolution": "case UUID: return clazz.cast(table.mixedAsUUID(columnIndex, rowIndex));case OBJECT: return getRealmModel(clazz);",
+    "conflict": "case OBJECT: return getRealmModel(clazz);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78309,
+    "v2": "public static native String nativeMixedAsUUID(long nativeTableRefPtr, long columnKey, long rowKey);",
+    "resolution": "public static native String nativeMixedAsUUID(long nativeTableRefPtr, long columnKey, long rowKey);public static native long nativeMixedGetRowKey(long nativeTableRefPtr, long columnKey, long rowKey);  public static native String nativeMixedGetTableName(long sharedRealmPtr, long nativeTableRefPtr, long columnKey, long rowKey);",
+    "conflict": "public static native long nativeMixedGetRowKey(long nativeTableRefPtr, long columnKey, long rowKey);  public static native String nativeMixedGetTableName(long sharedRealmPtr, long nativeTableRefPtr, long columnKey, long rowKey);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78310,
+    "v2": "public static native void nativeMixedSetUUID(long nativeTableRefPtr, long columnKey, long rowKey, String data, boolean isDefault);  public static native void nativeMixedSetLink(long nativeTableRefPtr, long columnKey, long rowKey, long value, boolean isDefault);",
+    "resolution": "public static native void nativeMixedSetLink(long nativeTableRefPtr, long columnKey, long rowKey, long tableKey, long targetRowKey, boolean isDefault);  public static native void nativeMixedSetUUID(long nativeTableRefPtr, long columnKey, long rowKey, String data, boolean isDefault);",
+    "conflict": "public static native void nativeMixedSetLink(long nativeTableRefPtr, long columnKey, long rowKey, long tableKey, long targetRowKey, boolean isDefault);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78316,
+    "v2": "case UUID_LIST:",
+    "resolution": "case MIXED_LIST: case UUID_LIST:",
+    "conflict": "case MIXED_LIST: case STRING_TO_MIXED_MAP:"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78318,
+    "v2": "case TYPE_UUID | TYPE_ARRAY: return UUID_LIST;",
+    "resolution": "case TYPE_MIXED | TYPE_DICTIONARY: return STRING_TO_MIXED_MAP;case TYPE_UUID | TYPE_ARRAY: return UUID_LIST;",
+    "conflict": "case TYPE_MIXED | TYPE_DICTIONARY: return STRING_TO_MIXED_MAP;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78320,
+    "v2": "if (mixedType == NULL) { continue; }",
+    "resolution": "if (mixedType == NULL) { continue; }",
+    "conflict": "if (mixedType == NO_TYPE) continue;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78321,
+    "v2": "if (realmFieldType == -1) { return NULL; }",
+    "resolution": "if (realmFieldType == -1) { return NULL; }",
+    "conflict": "if (realmFieldType == -1) return NO_TYPE;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78340,
+    "v2": "case CORE_TYPE_VALUE_UUID: return (obj instanceof java.util.UUID);",
+    "resolution": "case CORE_TYPE_VALUE_UUID: return (obj instanceof java.util.UUID);",
+    "conflict": "case CORE_TYPE_VALUE_MIXED: return (obj instanceof Mixed);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78343,
+    "v2": "case UUID: type = TYPE_UUID;",
+    "resolution": "case MIXED: type = TYPE_MIXED;case UUID: type = TYPE_UUID;",
+    "conflict": "case MIXED: type = TYPE_MIXED;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78344,
+    "v2": "case TYPE_UUID: return RealmFieldType.UUID;",
+    "resolution": "case TYPE_MIXED: return RealmFieldType.MIXED;case TYPE_UUID: return RealmFieldType.UUID;",
+    "conflict": "case TYPE_MIXED: return RealmFieldType.MIXED;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78359,
+    "v2": "// the ObjectKey. So the Index was stripped if found. However, this turned out to cause other bugs: https://github.com/realm/realm-core/pull/3893 // In file format 11, the index is thus re-added for String primary keys.",
+    "resolution": "// the ObjectKey. So the Index was stripped if found. However, this turned out to cause other bugs: https://github.com/realm/realm-core/pull/3893 // In file format 11, the index is thus re-added for String primary keys.",
+    "conflict": "// the ObjectKey. In this case the Core 5 index is now automatically removed."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78383,
+    "v2": "private ResetableRealmAsyncTask networkRequest; // private RealmAsyncTask refreshTokenTask; private ResetableRealmAsyncTask refreshTokenNetworkRequest; private AtomicBoolean onGoingAccessTokenQuery = new AtomicBoolean(false);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78385,
+    "v2": "public static RealmConfiguration createConfiguration(File dir, String name, @Nullable byte[] key) { RealmConfiguration.Builder config = new RealmConfiguration.Builder(InstrumentationRegistry.getTargetContext())",
+    "resolution": "public static RealmConfiguration createConfiguration(File dir, String name, @Nullable byte[] key) { RealmConfiguration.Builder config = new RealmConfiguration.Builder(InstrumentationRegistry.getInstrumentation().getTargetContext())",
+    "conflict": "public static RealmConfiguration createConfiguration(File dir, String name, byte[] key) { RealmConfiguration.Builder config = new RealmConfiguration.Builder(InstrumentationRegistry.getInstrumentation().getTargetContext())"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78410,
+    "v2": "private Builder(User user, BsonValue partitionValue) { Context context = Realm.getApplicationContext();",
+    "resolution": "Builder(User user, BsonValue partitionValue) { Context context = Realm.getApplicationContext();",
+    "conflict": "Builder(RealmUser user, BsonValue partitionValue) { Context context = BaseRealm.applicationContext;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78457,
+    "v2": "LOGGED_IN(OsSyncUser.STATE_LOGGED_IN), REMOVED(OsSyncUser.STATE_REMOVED),",
+    "resolution": "LOGGED_IN(OsSyncUser.STATE_LOGGED_IN), REMOVED(OsSyncUser.STATE_REMOVED),",
+    "conflict": "ACTIVE(OsSyncUser.STATE_LOGGED_IN), ERROR(OsSyncUser.STATE_REMOVED),"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78475,
+    "v2": "import static androidx.test.InstrumentationRegistry.getContext;",
+    "resolution": "import static androidx.test.platform.app.InstrumentationRegistry.getContext; import static junit.framework.Assert.assertTrue;",
+    "conflict": "import static androidx.test.platform.app.InstrumentationRegistry.getContext; import static junit.framework.Assert.assertTrue;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78497,
+    "v2": "OsResults osResults = OsResults.createFromQuery(sharedRealm, table.where().greaterThan(new long[] {2}, oneNullTable, 1)); QueryDescriptor sortDescriptor = QueryDescriptor.getTestInstance(table, new long[] {2});",
+    "resolution": "OsResults osResults = OsResults.createFromQuery(sharedRealm, table.where().greaterThan(new long[] {colKey2}, oneNullTable, 1)); QueryDescriptor sortDescriptor = QueryDescriptor.getTestInstance(table, new long[] {colKey2});",
+    "conflict": "OsResults osResults = OsResults.createFromQuery(sharedRealm, table.where().greaterThan(new long[] {colKey2}, oneNullTable, 1)); SortDescriptor sortDescriptor = SortDescriptor.getTestInstance(table, new long[] {colKey2});"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78504,
+    "v2": "QueryDescriptor sortDescriptor = QueryDescriptor.getInstanceForSort(null, table, new String[] { stringType.name(), intType.name()}, new Sort[] {Sort.ASCENDING, Sort.DESCENDING});",
+    "resolution": "QueryDescriptor sortDescriptor = QueryDescriptor.getInstanceForSort(null, table, new String[] { stringType.name(), intType.name()}, new Sort[] {Sort.ASCENDING, Sort.DESCENDING});",
+    "conflict": "SortDescriptor sortDescriptor = SortDescriptor.getInstanceForSort(null, table, new String[]{ stringType.name(), intType.name()}, new Sort[]{Sort.ASCENDING, Sort.DESCENDING});"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78505,
+    "v2": "QueryDescriptor.getInstanceForSort(null, table, new String[] {stringType.name(), intType.name()}, new Sort[] {Sort.ASCENDING});",
+    "resolution": "QueryDescriptor.getInstanceForSort(null, table, new String[] {stringType.name(), intType.name()}, new Sort[] {Sort.ASCENDING});",
+    "conflict": "SortDescriptor.getInstanceForSort(null, table, new String[]{stringType.name(), intType.name()}, new Sort[]{Sort.ASCENDING});"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78580,
+    "v2": ".connectTimeout(2, TimeUnit.MINUTES) .readTimeout(30, TimeUnit.SECONDS)",
+    "resolution": ".connectTimeout(40, TimeUnit.SECONDS) .readTimeout(40, TimeUnit.SECONDS)// since ROS startup timeout is 30s",
+    "conflict": ".connectTimeout(40, TimeUnit.SECONDS) .readTimeout(40, TimeUnit.SECONDS)// since ROS startup timeout is 30s"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78583,
+    "v2": "boolean loadResults) {",
+    "resolution": "boolean loadResults, String subscriptionName) {",
+    "conflict": "boolean loadResults, String subscriptionName) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78597,
+    "v2": "? new EmptyLoadChangeSet() : new OsCollectionChangeSet(nativeChangeSetPtr, !isLoaded());",
+    "resolution": "? new EmptyLoadChangeSet() : new OsCollectionChangeSet(nativeChangeSetPtr, !loaded);",
+    "conflict": "? new ForcedLoadChangeset() : new OsCollectionChangeSet(nativeChangeSetPtr, !loaded);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78611,
+    "v2": "\"OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(\\\"%s\\\", %s, %s)\", this.simpleClassName, persistedFields, computedFields);",
+    "resolution": "\"OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(\\\"%s\\\", %s, %s)\", internalClassName, persistedFields, computedFields);",
+    "conflict": "\"OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(\\\"%s\\\")\", internalClassName);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78627,
+    "v2": "private final Set<VariableElement> nullableFields = new HashSet<VariableElement>(); // Set of fields which can be nullable private final Set<VariableElement> nullableValueListFields = new HashSet<VariableElement>(); // Set of fields whose elements can be nullable",
+    "resolution": "private final Set<RealmFieldElement> nullableFields = new HashSet<RealmFieldElement>(); // Set of fields which can be nullable private final Set<RealmFieldElement> nullableValueListFields = new HashSet<RealmFieldElement>(); // Set of fields whose elements can be nullable",
+    "conflict": "private final Set<RealmFieldElement> nullableFields = new HashSet<RealmFieldElement>(); // Set of fields which can be nullable"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78630,
+    "v2": "private boolean processAnnotations(RoundEnvironment roundEnv) { final TypeMirrors typeMirrors = new TypeMirrors(processingEnv);",
+    "resolution": "private boolean processClassAnnotations(RoundEnvironment roundEnv, TypeMirrors typeMirrors) {",
+    "conflict": "private boolean processClassAnnotations(RoundEnvironment roundEnv) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78652,
+    "v2": "import javax.annotation.Nullable;",
+    "resolution": "import javax.annotation.Nullable; import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;",
+    "conflict": "import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78666,
+    "v2": "SyncManager.getUserStore().remove(syncUser.getIdentity(), getAuthenticationUrl().toString());",
+    "resolution": "// Mark the user as logged out in the ObjectStore SyncManager.getUserStore().remove(identity);",
+    "conflict": "// Mark the user as logged out in the ObjectStore SyncManager.getUserStore().remove(identity);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78667,
+    "v2": "Token userToken = getSyncUser().getUserToken(); return userToken != null && userToken.expiresMs() > System.currentTimeMillis() && SyncManager.getUserStore().isActive(getIdentity(), getAuthenticationUrl().toString());",
+    "resolution": "return refreshToken != null && refreshToken.expiresMs() > System.currentTimeMillis() && SyncManager.getUserStore().isActive(identity);",
+    "conflict": "return refreshToken != null && refreshToken.expiresMs() > System.currentTimeMillis() && SyncManager.getUserStore().isActive(identity);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78673,
+    "v2": "protected static void migrateRealm(final RealmConfiguration configuration, @Nullable final RealmMigration migration, final MigrationCallback callback, @Nullable final RealmMigrationNeededException cause)",
+    "resolution": "protected static void migrateRealm(final RealmConfiguration configuration, @Nullable final RealmMigration migration, @Nullable final RealmMigrationNeededException cause)",
+    "conflict": "protected static void migrateRealm(final RealmConfiguration configuration, final RealmMigration migration, final RealmMigrationNeededException cause)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78674,
+    "v2": "static boolean containsAttribute(FieldAttribute[] attributeList, FieldAttribute attribute) {",
+    "resolution": "static boolean containsAttribute(FieldAttribute[] attributeList, FieldAttribute attribute) { //noinspection ConstantConditions",
+    "conflict": "private boolean containsAttribute(FieldAttribute[] attributeList, FieldAttribute attribute) { //noinspection ConstantConditions"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78676,
+    "v2": "static void checkLegalName(String fieldName) {",
+    "resolution": "static void checkLegalName(String fieldName) { //noinspection ConstantConditions",
+    "conflict": "void checkLegalName(String fieldName) { //noinspection ConstantConditions"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78681,
+    "v2": "// Ignore the isRequired when creating the linking property. int propertyType = convertFromRealmFieldType(type, false); this.nativePtr = nativeCreateProperty(name, propertyType, linkedClassName);",
+    "resolution": "// Ignore the isRequired when creating the linking property. int propertyType = convertFromRealmFieldType(type, false); this.nativePtr = nativeCreatePersistedLinkProperty(name, propertyType, linkedClassName);",
+    "conflict": "this.nativePtr = nativeCreatePersistedLinkProperty(name, type.getNativeValue(), linkedClassName);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78687,
+    "v2": "private static final String TABLE_PREFIX = Util.getTablePrefix(); static final String PRIMARY_KEY_TABLE_NAME = \"pk\";",
+    "resolution": "static final String PRIMARY_KEY_TABLE_NAME = \"pk\";",
+    "conflict": "private static final String PRIMARY_KEY_TABLE_NAME = \"pk\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78720,
+    "v2": "assertTrue(user.isAdmin()); final SyncConfiguration config = new SyncConfiguration.Builder(user, Constants.SYNC_SERVER_URL)",
+    "resolution": "assertTrue(user.isAdmin()); final SyncConfiguration config = new SyncConfiguration.Builder(user, Constants.SYNC_SERVER_URL)",
+    "conflict": "final SyncConfiguration config = configFactory.createSyncConfigurationBuilder(user, Constants.SYNC_SERVER_URL)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78722,
+    "v2": "assertTrue(SyncManager.getSession(config).getUser().isValid());",
+    "resolution": "assertTrue(SyncManager.getSession(config).getUser().isValid());",
+    "conflict": "assertEquals(SessionState.BOUND, SyncManager.getSession(config).getState()); realm.close();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78730,
+    "v2": "final String className = proxyState.getRow$realm().getTable().getClassName(); StringBuilder sb = new StringBuilder(className + \" = [\");",
+    "resolution": "final String className = proxyState.getRow$realm().getTable().getClassName(); StringBuilder sb = new StringBuilder(className + \" = dynamic[\");",
+    "conflict": "final String className = Table.tableNameToClassName(proxyState.getRow$realm().getTable().getName()); StringBuilder sb = new StringBuilder(className + \" = dynamic[\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78756,
+    "v2": "Class syncFacadeClass = Class.forName(\"io.realm.internal.SyncObjectServerFacade\");",
+    "resolution": "@SuppressWarnings(\"LiteralClassName\") Class syncFacadeClass = Class.forName(\"io.realm.internal.SyncObjectServerFacade\");",
+    "conflict": "@SuppressWarnings(\"LiteralClassName\") Class syncFacadeClass = Class.forName(\"io.realm.internal.objectserver.SyncObjectServerFacade\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78794,
+    "v2": "",
+    "resolution": "realm.checkIfValid();",
+    "conflict": "realm.checkIfValid();  checkQueryIsNotReused();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78811,
+    "v2": "realm.cancelTransaction(); // Cancels the transaction then throw. throw new RuntimeException(\"Boom\");",
+    "resolution": "realm.cancelTransaction();",
+    "conflict": "realm.cancelTransaction();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78844,
+    "v2": "* \"Null\" objects represents {@code null}.  An exception is throw if any accessor is called, so it is important to * also check {@link #isValid()} before calling any methods. A common pattern is:",
+    "resolution": "* \"Null\" objects represents {@code null}.  An exception is throw if any accessor is called, so it is important to * also check {@link #isValid()} before calling any methods. A common pattern is:",
+    "conflict": "* \"Null\" objects represent {@code null}.  An exception is thrown if any accessor is called, so it is important to also * check {@link #isValid()} before calling any methods. A common pattern is:"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78858,
+    "v2": "private void validateQuery() { if (!queryValidated) { // If not yet validated, checks if syntax is valid",
+    "resolution": "void validateQuery() { if (! queryValidated) { // If not yet validated, checks if syntax is valid",
+    "conflict": "void validateQuery() { if (! queryValidated) { // If not yet validated, check if syntax is valid"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78871,
+    "v2": "private static native boolean nativeRequiresMigration(long nativePtr, long nativeSchemaPtr); private static native long nativeGetFinalizerPtr();",
+    "resolution": "private static native boolean nativeRequiresMigration(long nativePtr, long nativeSchemaPtr); private static native long nativeGetFinalizerPtr();private static native void nativeSetAutoRefresh(long nativePtr, boolean enabled); private static native boolean nativeIsAutoRefresh(long nativePtr);",
+    "conflict": "private static native void nativeSetAutoRefresh(long nativePtr, boolean enabled); private static native boolean nativeIsAutoRefresh(long nativePtr);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78874,
+    "v2": "final Realm realm = Realm.getInstance(config); looperThread.testRealms.add(realm);",
+    "resolution": "final Realm realm = Realm.getInstance(config); looperThread.testRealms.add(realm);",
+    "conflict": "looperThread.testRealm = Realm.getInstance(config);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78931,
+    "v2": "vh.text.setText(view.getResources().getString(R.string.coordinate, getItem(i).getX(), getItem(i).getY()));",
+    "resolution": "vh.text.setText(view.getResources().getString(R.string.coordinate, getItem(i).getX(), getItem(i).getY()));",
+    "conflict": "vh.text.setText(view.getResources().getString(R.string.coordinate, Integer.toString(getItem(i).getX()), Integer.toString(getItem(i).getY())));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78939,
+    "v2": "volatile static Context applicationContext;  // Thread pool for all async operations (Query & transaction)",
+    "resolution": "// Thread pool for all async operations (Query & transaction) public volatile static Context applicationContext; // FIXME Make package protected once all sync code moves to io.realm",
+    "conflict": "// Thread pool for all async operations (Query / transaction / network requests)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78945,
+    "v2": "",
+    "resolution": "imports.add(\"io.realm.RealmObjectSchema\"); imports.add(\"io.realm.RealmSchema\");",
+    "conflict": "imports.add(\"io.realm.RealmFieldType\"); imports.add(\"io.realm.RealmObjectSchema\"); imports.add(\"io.realm.RealmSchema\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78946,
+    "v2": "",
+    "resolution": "import io.realm.RealmObjectSchema; import io.realm.RealmSchema;",
+    "conflict": "import io.realm.RealmFieldType; import io.realm.RealmObjectSchema; import io.realm.RealmSchema;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78947,
+    "v2": "",
+    "resolution": "import io.realm.RealmObjectSchema; import io.realm.RealmSchema;",
+    "conflict": "import io.realm.RealmFieldType; import io.realm.RealmObjectSchema; import io.realm.RealmSchema;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78948,
+    "v2": "",
+    "resolution": "import io.realm.RealmObjectSchema; import io.realm.RealmSchema;",
+    "conflict": "import io.realm.RealmFieldType; import io.realm.RealmObjectSchema; import io.realm.RealmSchema;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78950,
+    "v2": "",
+    "resolution": "import io.realm.RealmObjectSchema; import io.realm.RealmSchema;",
+    "conflict": "import io.realm.RealmFieldType; import io.realm.RealmObjectSchema; import io.realm.RealmSchema;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78964,
+    "v2": "",
+    "resolution": "",
+    "conflict": "// Map between a Handler and the canonical path to a Realm file public static final Map<Handler, String> handlers = new ConcurrentHashMap<Handler, String>();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78965,
+    "v2": "HandlerController handlerController;",
+    "resolution": "HandlerController handlerController;",
+    "conflict": "public Handler handler; public HandlerController handlerController;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78966,
+    "v2": "true);",
+    "resolution": "true, null, null);",
+    "conflict": "false, null, null);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78973,
+    "v2": "protected SharedRealm sharedRealm;",
+    "resolution": "protected SharedRealm sharedRealm;",
+    "conflict": "public SharedGroupManager sharedGroupManager;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78977,
+    "v2": "sharedRealm = SharedRealm.getInstance(realmConfiguration);",
+    "resolution": "sharedRealm = SharedRealm.getInstance(realmConfiguration);",
+    "conflict": "sharedGroup = new SharedGroup(realmConfiguration);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78983,
+    "v2": "",
+    "resolution": "import io.realm.RealmObject; import io.realm.RealmQuery;",
+    "conflict": "import io.realm.RealmObject; import io.realm.RealmQuery; import io.realm.annotations.internal.OptionalAPI;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78991,
+    "v2": "",
+    "resolution": "* @throws io.realm.exceptions.RealmPrimaryKeyConstraintException if two objects with the same primary key is * inserted or if a primary key value already exists in the Realm. *",
+    "conflict": "* @throws io.realm.exceptions.RealmPrimaryKeyConstraintException if two objects with the same primary key is * inserted or if a primary key value already exists in the Realm. *"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79040,
+    "v2": "status += \"\\nSorting \" + sortedPersons.last().getName() + \" == \" + realm.allObjects(Person.class).first().getName();",
+    "resolution": "status += \"\\nSorting \" + sortedPersons.last().name + \" == \" + realm.allObjects(Person.class).first().name;",
+    "conflict": "assert(realm.allObjects(Person.class).last().name == sortedPersons.first().name); status += \"\\nSorting \" + sortedPersons.last().name + \" == \" + realm.allObjects(Person.class).first().name;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79061,
+    "v2": "",
+    "resolution": "",
+    "conflict": "@Override public int hashCode() { return 37; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79064,
+    "v2": "String os = System.getProperty(\"os.name\").toLowerCase(Locale.getDefault()); return os.contains(\"win\");",
+    "resolution": "String os = System.getProperty(\"os.name\").toLowerCase(Locale.US); return (os.contains(\"win\"));",
+    "conflict": "String os = System.getProperty(\"os.name\").toLowerCase(Locale.US); return (os.contains(\"win\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79066,
+    "v2": "} catch (Throwable e) { System.out.println(\"Failed to load native library path\\n\");",
+    "resolution": "} catch (Throwable e) { System.out.println(\"Failed to load native library path\\n\");",
+    "conflict": "} catch (Throwable ignored) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79072,
+    "v2": "",
+    "resolution": "import java.lang.Throwable; import java.lang.reflect.Field;",
+    "conflict": "import java.io.ObjectInputStream; import java.io.ObjectOutputStream; import java.io.Serializable; import java.lang.Throwable;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79085,
+    "v2": "}",
+    "resolution": "}",
+    "conflict": "}"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79093,
+    "v2": "Table(Context context, Object parent, long nativePointer) {",
+    "resolution": "Table(Context context, TableParent parent, long nativePointer) {",
+    "conflict": "protected native long createNative();  Table(Context context, TableParent parent, long nativePointer) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79176,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native void nativeGreaterDateTime(long nativeQueryPtr, long columnIndex[], long value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79178,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native void nativeLessDateTime(long nativeQueryPtr, long columnIndex[], long value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79198,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native Double nativeMinimumDouble(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79199,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native double nativeAverageDouble(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79201,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native Long nativeMinimumDate(long nativeQueryPtr, long columnIndex, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79202,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native long nativeCount(long nativeQueryPtr, long start, long end, long limit);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79205,
+    "v2": "* @param realmResults  The @{link io.realm.RealmResults} to query * @param clazz         The class to query",
+    "resolution": "* @param realmResults  The @{link io.realm.RealmResults} to query * @param clazz         The class to query",
+    "conflict": "* @param realmList The @{link io.realm.RealmResults} to query * @param clazz     The class to query"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79223,
+    "v2": "import io.realm.entities.NullTypes; import io.realm.entities.StringOnly; import io.realm.internal.ColumnType; import io.realm.internal.Table;",
+    "resolution": "import io.realm.entities.NullTypes; import io.realm.entities.StringOnly; import io.realm.internal.ColumnType; import io.realm.internal.Table;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79225,
+    "v2": "import io.realm.annotations.Required;",
+    "resolution": "import io.realm.annotations.Required;import io.realm.internal.async.QueryUpdateTask; import io.realm.internal.log.RealmLog;",
+    "conflict": "import io.realm.internal.async.QueryUpdateTask; import io.realm.internal.log.RealmLog;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79226,
+    "v2": "private static final String LINK_NOT_SUPPORTED_METHOD = \"'%s' is not supported for link queries\"; private static final String TYPE_MISMATCH = \"Field '%s': type mismatch - %s expected.\";",
+    "resolution": "private static final String LINK_NOT_SUPPORTED_METHOD = \"'%s' is not supported for link queries\"; private static final String TYPE_MISMATCH = \"Field '%s': type mismatch - %s expected.\";",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79246,
+    "v2": "* @return The object found or {@code null} if no object matches the query conditions. * @see io.realm.RealmObject",
+    "resolution": "* @return The object found or {@code null} if no object matches the query conditions. * @see io.realm.RealmObject",
+    "conflict": "* @return The object found or null if no object matches the query conditions."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79263,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import io.realm.internal.android.DebugAndroidLogger; import io.realm.internal.async.QueryUpdateTask; import io.realm.internal.async.RealmThreadPoolExecutor; import io.realm.internal.android.ReleaseAndroidLogger;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79272,
+    "v2": "long nameColumnIndex = petTable.addColumn(ColumnType.STRING, \"name\"); long typeColumnIndex = petTable.addColumn(ColumnType.STRING, \"type\");",
+    "resolution": "long nameColumnIndex = petTable.addColumn(ColumnType.STRING, \"name\"); long typeColumnIndex = petTable.addColumn(ColumnType.STRING, \"type\");",
+    "conflict": "long nameColumn = petTable.addColumn(ColumnType.STRING, \"name\"); long typeColumn = petTable.addColumn(ColumnType.STRING, \"type\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79280,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79301,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private native void nativeAdvanceRead(long nativePtr, long nativeReplicationPtr); private native void nativeAdvanceReadToVersion(long nativePtr, long nativeReplicationPtr, long version, long index);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79305,
+    "v2": "import java.util.concurrent.atomic.AtomicBoolean;",
+    "resolution": "import java.util.concurrent.atomic.AtomicBoolean;import java.util.concurrent.TimeUnit; import java.util.concurrent.TimeoutException;",
+    "conflict": "import java.util.concurrent.TimeUnit; import java.util.concurrent.TimeoutException;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79318,
+    "v2": "",
+    "resolution": "import java.util.concurrent.ExecutorService; import java.util.concurrent.Executors; import java.util.concurrent.Future;",
+    "conflict": "import java.util.concurrent.ExecutorService; import java.util.concurrent.Executors; import java.util.concurrent.Future;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79335,
+    "v2": "",
+    "resolution": "import io.realm.RealmObject;",
+    "conflict": "import java.util.Scanner;  import io.realm.RealmObject;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79337,
+    "v2": "private final List<WeakReference<RealmChangeListener>> changeListeners = new CopyOnWriteArrayList<WeakReference<RealmChangeListener>>();",
+    "resolution": "private final List<WeakReference<RealmChangeListener>> changeListeners = new CopyOnWriteArrayList<WeakReference<RealmChangeListener>>();",
+    "conflict": "private final List<WeakReference<RealmChangeListener>> changeListeners = new CopyOnWriteArrayList<WeakReference<RealmChangeListener>>();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79338,
+    "v2": "List<WeakReference<RealmChangeListener>> toRemoveList = null;",
+    "resolution": "List<WeakReference<RealmChangeListener>> toRemoveList = null;",
+    "conflict": "List<WeakReference<RealmChangeListener>> toRemoveList = new ArrayList<WeakReference<RealmChangeListener>>(changeListeners.size());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79339,
+    "v2": "if (toRemoveList == null) { toRemoveList = new ArrayList<WeakReference<RealmChangeListener>>(changeListeners.size()); }",
+    "resolution": "if (toRemoveList == null) { toRemoveList = new ArrayList<WeakReference<RealmChangeListener>>(changeListeners.size()); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79340,
+    "v2": "if (toRemoveList != null) { changeListeners.removeAll(toRemoveList); }",
+    "resolution": "if (toRemoveList != null) { changeListeners.removeAll(toRemoveList); }",
+    "conflict": "changeListeners.removeAll(toRemoveList);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79364,
+    "v2": "boolean sortAscending1, String fieldName2, boolean sortAscending2) {",
+    "resolution": "boolean sortAscending1, String fieldName2, boolean sortAscending2) {",
+    "conflict": "boolean sortAscending1, String fieldName2, boolean sortAscending2) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79371,
+    "v2": "// Maps ids to a boolean set to true if the Realm is open. This is only needed by deleteRealmFile private static final Map<String, AtomicInteger> openRealms = new ConcurrentHashMap<String, AtomicInteger>();",
+    "resolution": "private static RealmConfiguration defaultConfiguration;",
+    "conflict": "private static RealmConfiguration defaultConfiguration;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79386,
+    "v2": "writer.beginControlFlow(\"if (!table.hasSearchIndex(table.getColumnIndex(\\\"%s\\\")))\", fieldName); writer.emitStatement(\"throw new IllegalStateException(\\\"Index not defined for field '%s'\\\")\", fieldName);",
+    "resolution": "writer.beginControlFlow(\"if (!table.hasSearchIndex(table.getColumnIndex(\\\"%s\\\")))\", fieldName); writer.emitStatement(\"throw new RealmMigrationNeededException(transaction.getPath(), \\\"Index not defined for field '%s'\\\")\", fieldName);",
+    "conflict": "writer.beginControlFlow(\"if (!table.hasIndex(table.getColumnIndex(\\\"%s\\\")))\", fieldName); writer.emitStatement(\"throw new RealmMigrationNeededException(transaction.getPath(), \\\"Index not defined for field '%s'\\\")\", fieldName);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79387,
+    "v2": "if (!table.hasSearchIndex(table.getColumnIndex(\"columnString\"))) { throw new IllegalStateException(\"Index not defined for field 'columnString'\");",
+    "resolution": "if (!table.hasSearchIndex(table.getColumnIndex(\"columnString\"))) { throw new RealmMigrationNeededException(transaction.getPath(), \"Index not defined for field 'columnString'\");",
+    "conflict": "if (!table.hasIndex(table.getColumnIndex(\"columnString\"))) { throw new RealmMigrationNeededException(transaction.getPath(), \"Index not defined for field 'columnString'\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79388,
+    "v2": "public static AllTypes copyOrUpdate(Realm realm, AllTypes object, boolean update, Map<RealmObject,RealmObject> cache) { if (object.realm != null && object.realm.getPath().equals(realm.getPath())) {",
+    "resolution": "public static AllTypes copyOrUpdate(Realm realm, AllTypes object, boolean update, Map<RealmObject,RealmObjectProxy> cache) { if (object.realm != null && object.realm.getPath().equals(realm.getPath())) {",
+    "conflict": "public static AllTypes copyOrUpdate(Realm realm, AllTypes object, boolean update, Map<RealmObject,RealmObjectProxy> cache) { if (object.realm != null && object.realm.getId() == realm.getId()) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79389,
+    "v2": "public static Booleans copyOrUpdate(Realm realm, Booleans object, boolean update, Map<RealmObject,RealmObject> cache) { if (object.realm != null && object.realm.getPath().equals(realm.getPath())) {",
+    "resolution": "public static Booleans copyOrUpdate(Realm realm, Booleans object, boolean update, Map<RealmObject,RealmObjectProxy> cache) { if (object.realm != null && object.realm.getPath().equals(realm.getPath())) {",
+    "conflict": "public static Booleans copyOrUpdate(Realm realm, Booleans object, boolean update, Map<RealmObject,RealmObjectProxy> cache) { if (object.realm != null && object.realm.getId() == realm.getId()) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79390,
+    "v2": "public static Simple copyOrUpdate(Realm realm, Simple object, boolean update, Map<RealmObject,RealmObject> cache) { if (object.realm != null && object.realm.getPath().equals(realm.getPath())) {",
+    "resolution": "public static Simple copyOrUpdate(Realm realm, Simple object, boolean update, Map<RealmObject,RealmObjectProxy> cache) { if (object.realm != null && object.realm.getPath().equals(realm.getPath())) {",
+    "conflict": "public static Simple copyOrUpdate(Realm realm, Simple object, boolean update, Map<RealmObject,RealmObjectProxy> cache) { if (object.realm != null && object.realm.getId() == realm.getId()) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79391,
+    "v2": "private static final Map<String, AtomicInteger> openRealms = new ConcurrentHashMap<String, AtomicInteger>(); private static final String APT_NOT_EXECUTED_MESSAGE = \"Annotation processor may not have been executed.\";",
+    "resolution": "private static final Map<String, AtomicInteger> openRealms = new ConcurrentHashMap<String, AtomicInteger>(); private static final String INCORRECT_THREAD_MESSAGE = \"Realm access from incorrect thread. Realm objects can only be accessed on the thread they where created.\";",
+    "conflict": "private static final Map<Integer, AtomicInteger> openRealms = new ConcurrentHashMap<Integer, AtomicInteger>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79400,
+    "v2": "realmJson.createOrUpdateUsingJsonObject(clazz, this, json.getJSONObject(i), true);",
+    "resolution": "proxyMediator.createOrUpdateUsingJsonObject(clazz, this, json.getJSONObject(i), true);",
+    "conflict": "proxyMediator.populateUsingJsonObject(obj, json.getJSONObject(i)); copyToRealmOrUpdate(obj);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79401,
+    "v2": "realmJson.createUsingJsonStream(clazz, this, reader);",
+    "resolution": "proxyMediator.createUsingJsonStream(clazz, this, reader);",
+    "conflict": "E obj = createObject(clazz); proxyMediator.populateUsingJsonStream(obj, reader);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79404,
+    "v2": "return realmJson.createOrUpdateUsingJsonObject(clazz, this, json, true);",
+    "resolution": "return proxyMediator.createOrUpdateUsingJsonObject(clazz, this, json, true);",
+    "conflict": "proxyMediator.populateUsingJsonObject(obj, json); copyToRealmOrUpdate(obj);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79405,
+    "v2": "return realmJson.createUsingJsonStream(clazz, this, reader);",
+    "resolution": "return proxyMediator.createUsingJsonStream(clazz, this, reader);",
+    "conflict": "E obj = createObject(clazz); proxyMediator.populateUsingJsonStream(obj, reader); return obj;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79420,
+    "v2": "import io.realm.entities.AnnotationTypes;",
+    "resolution": "import io.realm.entities.FieldOrder; import io.realm.entities.AnnotationTypes;",
+    "conflict": "import io.realm.entities.Dog; import io.realm.entities.FieldOrder;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79429,
+    "v2": "long columnIndex = columnIndices.getColumnIndex(clazz, fieldName); if (columnIndex < 0) {",
+    "resolution": "long columnIndex = columnIndices.getColumnIndex(clazz, fieldName); if (columnIndex < 0) {",
+    "conflict": "Long columnIndex = columnIndices.get(clazz.getSimpleName()).get(fieldName); if (columnIndex == null || columnIndex < 0) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79431,
+    "v2": "\"return (%s) row.get%s(%s)\", fieldTypeCanonicalName, realmType, staticFieldIndexVarName(field));",
+    "resolution": "\"return (%s) row.get%s(%s)\", fieldTypeCanonicalName, realmType, staticFieldIndexVarName(field));",
+    "conflict": "\"return (%s) row.get%s(realm.getColumnIndices().get(\\\"%s\\\").get(\\\"%s\\\"))\", fieldTypeCanonicalName, realmType, className, fieldName);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79432,
+    "v2": "\"row.set%s(%s, (%s) value)\", realmType, staticFieldIndexVarName(field), castingType);",
+    "resolution": "\"row.set%s(%s, (%s) value)\", realmType, staticFieldIndexVarName(field), castingType);",
+    "conflict": "\"row.set%s(realm.getColumnIndices().get(\\\"%s\\\").get(\\\"%s\\\"), (%s) value)\", realmType, className, fieldName, castingType);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79435,
+    "v2": "\"return new RealmList<%s>(%s.class, row.getLinkList(%s), realm)\", genericType, genericType, staticFieldIndexVarName(field));",
+    "resolution": "\"return new RealmList<%s>(%s.class, row.getLinkList(%s), realm)\", genericType, genericType, staticFieldIndexVarName(field));",
+    "conflict": "\"return new RealmList<%s>(%s.class, row.getLinkList(realm.getColumnIndices().get(\\\"%s\\\").get(\\\"%s\\\")), realm)\", genericType, genericType, className, fieldName);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79471,
+    "v2": "Set<ClassMetaData> classesToValidate = new HashSet<ClassMetaData>(); boolean done = false;",
+    "resolution": "Set<ClassMetaData> classesToValidate = new HashSet<ClassMetaData>(); private boolean hasProcessedModules = false;",
+    "conflict": "Set<String> classesToValidate = new HashSet<String>(); private boolean hasProcessedModules = false;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79474,
+    "v2": "Utils.error(e.getMessage());",
+    "resolution": "Utils.error(e.getMessage());",
+    "conflict": "error(e.getMessage()); return true;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79475,
+    "v2": "writer.emitStatement(\"cache.put(newObject, realmObject)\"); for (VariableElement field : metadata.getFields()) {",
+    "resolution": "writer.emitStatement(\"cache.put(newObject, (RealmObjectProxy) realmObject)\"); for (VariableElement field : metadata.getFields()) {",
+    "conflict": "writer.emitStatement(\"cache.put(newObject, (RealmObjectProxy) realmObject)\"); for (VariableElement field : fields) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79480,
+    "v2": "boolean contains(Class<?> clazz) { return transaction.hasTable(TABLE_PREFIX + getClassSimpleName(clazz));",
+    "resolution": "boolean contains(Class<? extends RealmObject> clazz) { return defaultModule.getModuleClasses().contains(clazz);",
+    "conflict": "boolean contains(Class<? extends RealmObject> clazz) { return defaultModule.getModuleClasses().contains(clazz);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79483,
+    "v2": "Long columnIndex = columnIndices.get(getClassSimpleName(clazz)).get(fieldName); if (columnIndex == null || columnIndex < 0) {",
+    "resolution": "long columnIndex = columnIndices.getColumnIndex(clazz, fieldName); if (columnIndex < 0) {",
+    "conflict": "long columnIndex = columnIndices.getColumnIndex(clazz, fieldName); if (columnIndex < 0) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79493,
+    "v2": "public static AllTypes copyOrUpdate(Realm realm, AllTypes object, boolean update) { return copy(realm, object, update);",
+    "resolution": "public static AllTypes copyOrUpdate(Realm realm, AllTypes object, boolean update, Map<RealmObject, RealmObject> cache) { return copy(realm, object, update, cache);",
+    "conflict": "public static AllTypes copyOrUpdate(Realm realm, AllTypes object, boolean update, Map<RealmObject, RealmObject> cache) { return copy(realm, object, false, cache);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79494,
+    "v2": "public static Booleans copyOrUpdate(Realm realm, Booleans object, boolean update) { return copy(realm, object, update);",
+    "resolution": "public static Booleans copyOrUpdate(Realm realm, Booleans object, boolean update, Map<RealmObject, RealmObject> cache) { return copy(realm, object, update, cache);",
+    "conflict": "public static Booleans copyOrUpdate(Realm realm, Booleans object, boolean update, Map<RealmObject, RealmObject> cache) { return copy(realm, object, false, cache);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79495,
+    "v2": "public static Simple copyOrUpdate(Realm realm, Simple object, boolean update) { return copy(realm, object, update);",
+    "resolution": "public static Simple copyOrUpdate(Realm realm, Simple object, boolean update, Map<RealmObject, RealmObject> cache) { return copy(realm, object, update, cache);",
+    "conflict": "public static Simple copyOrUpdate(Realm realm, Simple object, boolean update, Map<RealmObject, RealmObject> cache) { return copy(realm, object, false, cache);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79496,
+    "v2": "import io.realm.entities.Cat;",
+    "resolution": "import io.realm.entities.Cat;import io.realm.entities.CyclicType; import io.realm.entities.CyclicTypePrimaryKey;",
+    "conflict": "import io.realm.entities.CyclicType; import io.realm.entities.CyclicTypePrimaryKey;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79498,
+    "v2": "* * Use {@link io.realm.Realm#copyToRealm(Iterable)} to properly persist it's elements in",
+    "resolution": "* <p> * Use {@link io.realm.Realm#copyToRealm(Iterable)}  to properly persist it's elements in",
+    "conflict": "* <p> * Use {@link io.realm.Realm#copyToRealm(Iterable)}  to properly persist it's elements in"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79505,
+    "v2": "RealmProxyClassGenerator sourceCodeGenerator = new RealmProxyClassGenerator(processingEnv, className, packageName, fields, getters, setters, indexedFields);",
+    "resolution": "RealmProxyClassGenerator sourceCodeGenerator = new RealmProxyClassGenerator(processingEnv, className, packageName, fields, getters, setters, indexedFields, primaryKey);",
+    "conflict": "RealmProxyClassGenerator sourceCodeGenerator = new RealmProxyClassGenerator(processingEnv, className, packageName, fields, getters, setters, indexedFields, primaryKey);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79525,
+    "v2": "if (name == null || name.isEmpty()) { throw new IllegalArgumentException(\"Invalid name. Name must be a non-empty String.\"); }",
+    "resolution": "if (name == null || name.isEmpty()) { throw new IllegalArgumentException(\"Invalid name. Name must be a non-empty String.\"); }",
+    "conflict": "if (name == null || name.equals(\"\")) throw new IllegalArgumentException(\"Invalid name. Name must be a non-empty String.\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79539,
+    "v2": "parent.checkImmutable(); if (value == null) throw new IllegalArgumentException(\"Null String is not allowed.\");",
+    "resolution": "parent.checkImmutable(); if (value == null) throw new IllegalArgumentException(\"Null String is not allowed.\");",
+    "conflict": "getTable().assertStringValueIsLegal(columnIndex, value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79540,
+    "v2": "parent.checkImmutable(); if (data == null) throw new IllegalArgumentException(\"Null Array\");",
+    "resolution": "parent.checkImmutable(); if (data == null) throw new IllegalArgumentException(\"Null Array\");",
+    "conflict": "if (data == null) throw new IllegalArgumentException(\"Null Array\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79541,
+    "v2": "parent.checkImmutable(); if (data == null) throw new IllegalArgumentException();",
+    "resolution": "parent.checkImmutable(); if (data == null) throw new IllegalArgumentException();",
+    "conflict": "if (data == null) throw new IllegalArgumentException();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79545,
+    "v2": "handlers.remove(handler); handler = null;",
+    "resolution": "removeHandler(handler);",
+    "conflict": "removeHandler(handler);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79546,
+    "v2": "handler.removeCallbacksAndMessages(null); handlers.remove(handler); handler = null;",
+    "resolution": "removeHandler(handler);",
+    "conflict": "removeHandler(handler);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79566,
+    "v2": "import java.io.BufferedWriter; import java.io.IOException; import java.util.*;",
+    "resolution": "import java.io.BufferedWriter; import java.io.IOException; import java.util.*;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79598,
+    "v2": "} catch (IllegalStateException ignored) {}",
+    "resolution": "} catch (IllegalStateException ignored) { }",
+    "conflict": "} catch (IllegalStateException ignored) { }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79599,
+    "v2": "private SharedGroup sharedGroup;",
+    "resolution": "private final String path; private SharedGroup sharedGroup;",
+    "conflict": "private final String path; private final SharedGroup sharedGroup;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79607,
+    "v2": "import java.util.HashSet; import java.util.Set;",
+    "resolution": "import java.util.HashSet; import java.util.Set;import java.util.Calendar; import java.util.Date;",
+    "conflict": "import java.util.Calendar; import java.util.Date;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79633,
+    "v2": "// Verify exception is thrown if the field in not indexed.",
+    "resolution": "// Verify exception is thrown if the field in not indexed.",
+    "conflict": "// distinct() only works on indexed fields and will throw an exception if not"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79658,
+    "v2": "",
+    "resolution": "import java.io.IOException; import java.io.InputStream; import java.io.InputStreamReader;",
+    "conflict": "import java.io.IOException; import java.io.InputStream; import java.io.InputStreamReader; import java.lang.ref.SoftReference;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79662,
+    "v2": "* Get a sorted RealmList from an existing RealmList. * Only fields of type boolean, int, float, double, Date, and String are supported.",
+    "resolution": "* Get a sorted RealmList from an existing RealmList. * Only fields of type boolean, short, int, long, float, double, Date, and String are supported.",
+    "conflict": "* Get a sorted RealmList from an existing RealmList. Boolean, short, int, long, * float, double, Date, and String fields are supported."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79664,
+    "v2": "List<String> ignoredFields = new ArrayList<String>(); List<String> expectedGetters = new ArrayList<String>(); List<String> expectedSetters = new ArrayList<String>();",
+    "resolution": "List<VariableElement> indexedFields = new ArrayList<VariableElement>(); List<String> ignoredFields = new ArrayList<String>(); List<String> expectedGetters = new ArrayList<String>(); List<String> expectedSetters = new ArrayList<String>();",
+    "conflict": "List<VariableElement> fieldsToIndex = new ArrayList<VariableElement>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79669,
+    "v2": "",
+    "resolution": "RealmVersionChecker updateChecker = new RealmVersionChecker(processingEnv); updateChecker.executeRealmVersionUpdate();",
+    "conflict": "RealmVersionChecker updateChecker = new RealmVersionChecker(processingEnv); updateChecker.executeRealmVersionUpdate();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79672,
+    "v2": "Set<String> classesToValidate = new HashSet<String>(); boolean done = false;",
+    "resolution": "Set<String> classesToValidate = new HashSet<String>(); boolean done = false;",
+    "conflict": "private static Set<String> classesToValidate = new HashSet<String>(); private static boolean done = false;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79681,
+    "v2": "import com.google.common.base.Throwables;",
+    "resolution": "import com.google.common.base.Throwables;import com.google.common.base.Splitter; import com.google.common.collect.Iterables;",
+    "conflict": "import com.google.common.base.Splitter; import com.google.common.collect.Iterables;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79682,
+    "v2": "import android.util.Log;",
+    "resolution": "import android.util.Log;import android.os.Handler; import android.os.Looper; import android.os.Message;",
+    "conflict": "import android.os.Handler; import android.os.Looper; import android.os.Message;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79683,
+    "v2": "private static final Map<String, ThreadRealm> realms = new HashMap<String, ThreadRealm>(); private static final String TAG = \"REALM\"; private static final String TABLE_PREFIX = \"class_\";",
+    "resolution": "private static final Map<String, ThreadRealm> realms = new HashMap<String, ThreadRealm>(); private static final String TAG = \"REALM\"; private static final String TABLE_PREFIX = \"class_\";",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79686,
+    "v2": "writer.beginControlFlow(\"if (!transaction.hasTable(\\\"%s\\\"))\", fieldTypeName); writer.emitStatement(\"%sRealmProxy.initTable(transaction)\", fieldTypeName);",
+    "resolution": "writer.beginControlFlow(\"if (!transaction.hasTable(\\\"%s%s\\\"))\", table_prefix, fieldTypeName); writer.emitStatement(\"%sRealmProxy.initTable(transaction)\", fieldTypeName);",
+    "conflict": "writer.beginControlFlow(\"if (!transaction.hasTable(\\\"%s%s\\\"))\", table_prefix, fieldTypeName); writer.emitStatement(\"%sRealmProxy.initTable(transaction)\", fieldTypeCanonicalName);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79687,
+    "v2": "writer.beginControlFlow(\"if (!transaction.hasTable(\\\"%s\\\"))\", genericType); writer.emitStatement(\"%sRealmProxy.initTable(transaction)\", genericType);",
+    "resolution": "writer.beginControlFlow(\"if (!transaction.hasTable(\\\"%s%s\\\"))\", table_prefix, genericType); writer.emitStatement(\"%sRealmProxy.initTable(transaction)\", genericType);",
+    "conflict": "writer.beginControlFlow(\"if (!transaction.hasTable(\\\"%s%s\\\"))\", table_prefix, genericType); writer.emitStatement(\"%sRealmProxy.initTable(transaction)\", genericCanonicalType);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79716,
+    "v2": "if (mode.equals(OpenMode.READ_ONLY)) this.immutable = true; // Group immutable",
+    "resolution": "context = new Context();if (mode.equals(OpenMode.READ_ONLY)) this.immutable = true; // Group immutable",
+    "conflict": "context = new Context();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79717,
+    "v2": "}",
+    "resolution": "}",
+    "conflict": "}"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79722,
+    "v2": "private Table getSubtableDuringInsert(long columnIndex, long rowIndex) { return new Table(this, nativeGetSubtableDuringInsert(nativePtr, columnIndex, rowIndex), immutable);",
+    "resolution": "private Table getSubTableDuringInsert(long columnIndex, long rowIndex) { return new Table(this, nativeGetSubtableDuringInsert(nativePtr, columnIndex, rowIndex), immutable);",
+    "conflict": "private Table getSubTableDuringInsert(long columnIndex, long rowIndex) { return new Table(this, nativeGetSubTableDuringInsert(nativePtr, columnIndex, rowIndex), immutable);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79733,
+    "v2": "",
+    "resolution": "// Delete file to start from scratch (new File(\"mydatabase.tightdb\")).delete();",
+    "conflict": "// Delete file to start from scratch (new File(\"mydatabase.tightdb\")).delete();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79737,
+    "v2": "adjustExample();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79738,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79742,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79743,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79744,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79747,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79750,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79752,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79754,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79758,
+    "v2": "// Delete file to start from scratch (new File(\"mydatabase.tightdb\")).delete();",
+    "resolution": "// Delete file to start from scratch (new File(\"mydatabase.tightdb\")).delete();",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79768,
+    "v2": "try { query.equal(9, true);                       assert(false); } catch(ArrayIndexOutOfBoundsException e) {}",
+    "resolution": "try { query.equalTo(9, true);                       assert(false); } catch(ArrayIndexOutOfBoundsException e) {}",
+    "conflict": "try { query.equalTo(9, true);                       assert(false); } catch(ArrayIndexOutOfBoundsException e) {}"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79779,
+    "v2": "@Override",
+    "resolution": "@Override /*",
+    "conflict": "/*"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79780,
+    "v2": "@Override public void addLong(long columnIndex, long value) {",
+    "resolution": "@Override public void adjust(long columnIndex, long value) {",
+    "conflict": "public void adjust(long columnIndex, long value) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79789,
+    "v2": "@Override",
+    "resolution": "@Override*/",
+    "conflict": "*/"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79791,
+    "v2": "@Override public void addLong(long columnIndex, long value) {",
+    "resolution": "@Override public void adjust(long columnIndex, long value) {",
+    "conflict": "public void adjust(long columnIndex, long value) {"
+  },
+  {
+    "devdecision": "None",
+    "id": 79801,
+    "v2": "//  new File(FILENAME).delete();",
+    "resolution": "String FILENAME = \"only-test-file.tightdb\";",
+    "conflict": "new File(FILENAME).delete(); new File(FILENAME + \".lock\").delete();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79805,
+    "v2": "@Override public TableDefinition getSubTableDefinition(long columnIndex) {",
+    "resolution": "@Override public TableSchema getSubTableSchema(long columnIndex) {",
+    "conflict": "public TableSchema getSubTableSchema(long columnIndex) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79828,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import com.tightdb.Table; import com.tightdb.ReadTransaction; import com.tightdb.SharedGroup; import com.tightdb.WriteTransaction;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79829,
+    "v2": "@Test (enabled=true, expectedExceptions = IllegalStateException.class) public void shouldCloseTable() throws Throwable {",
+    "resolution": "@Test (enabled=true, expectedExceptions = IllegalStateException.class) public void shouldCloseTable() throws Throwable {",
+    "conflict": "@Test (expectedExceptions = IllegalStateException.class) public void shouldCloseTable() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79830,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import java.util.Date;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79832,
+    "v2": "table.insert(0, false); fail(\"expected exception.\");",
+    "resolution": "table.addAt(0, false); fail(\"expected exception.\");",
+    "conflict": "table.addAt(0, false); assertTrue(false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79833,
+    "v2": "table.insert(1, false, 1, \"hi\", buf, new Date(), mix, null); fail(\"expected exception.\");",
+    "resolution": "table.addAt(1, false, 1, \"hi\", buf, new Date(), mix, null); fail(\"expected exception.\");",
+    "conflict": "table.addAt(1, false, 1, \"hi\", buf, new Date(), mix, null); assertTrue(false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79834,
+    "v2": "table.insert(3, false, 1, \"hi\", buf, new Date(), mix, null); fail(\"expected exception.\");",
+    "resolution": "table.addAt(3, false, 1, \"hi\", buf, new Date(), mix, null); fail(\"expected exception.\");",
+    "conflict": "table.addAt(3, false, 1, \"hi\", buf, new Date(), mix, null); assertTrue(false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79835,
+    "v2": "table.insert(0, 999, 1, \"hi\", buf, new Date(), mix, null); fail(\"expected exception.\");",
+    "resolution": "table.addAt(0, 999, 1, \"hi\", buf, new Date(), mix, null); fail(\"expected exception.\");",
+    "conflict": "table.addAt(0, 999, 1, \"hi\", buf, new Date(), mix, null); assertTrue(false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79836,
+    "v2": "table.insert(0, true, false, \"hi\", buf, new Date(), mix, null); fail(\"expected exception.\");",
+    "resolution": "table.addAt(0, true, false, \"hi\", buf, new Date(), mix, null); fail(\"expected exception.\");",
+    "conflict": "table.addAt(0, true, false, \"hi\", buf, new Date(), mix, null); assertTrue(false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79837,
+    "v2": "table.insert(0, false, 1, 999, buf, new Date(), mix, null); fail(\"expected exception.\");",
+    "resolution": "table.addAt(0, false, 1, 999, buf, new Date(), mix, null); fail(\"expected exception.\");",
+    "conflict": "table.addAt(0, false, 1, 999, buf, new Date(), mix, null); assertTrue(false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79838,
+    "v2": "table.insert(0, false, 1, \"hi\", 999, new Date(), mix, null); fail(\"expected exception.\");",
+    "resolution": "table.addAt(0, false, 1, \"hi\", 999, new Date(), mix, null); fail(\"expected exception.\");",
+    "conflict": "table.addAt(0, false, 1, \"hi\", 999, new Date(), mix, null); assertTrue(false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79839,
+    "v2": "table.insert(0, false, 1, \"hi\", buf, 999, mix, null); fail(\"expected exception.\");",
+    "resolution": "table.addAt(0, false, 1, \"hi\", buf, 999, mix, null); fail(\"expected exception.\");",
+    "conflict": "table.addAt(0, false, 1, \"hi\", buf, 999, mix, null); assertTrue(false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79840,
+    "v2": "table.insert(0, false, 1, \"hi\", buf, new Date(), mix, 999); fail(\"expected exception.\");",
+    "resolution": "table.addAt(0, false, 1, \"hi\", buf, new Date(), mix, 999); fail(\"expected exception.\");",
+    "conflict": "table.addAt(0, false, 1, \"hi\", buf, new Date(), mix, 999); assertTrue(false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79841,
+    "v2": "table.insert(0, false, 1, \"hi\", buf, new Date(), mix, new Object[][] { {\"err\",2,3}} ); fail(\"expected exception.\");",
+    "resolution": "table.addAt(0, false, 1, \"hi\", buf, new Date(), mix, new Object[][] { {\"err\",2,3}} ); fail(\"expected exception.\");",
+    "conflict": "table.addAt(0, false, 1, \"hi\", buf, new Date(), mix, new Object[][] { {\"err\",2,3}} ); assertTrue(false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79842,
+    "v2": "table.insert(0, false, 1, \"hi\", buf, new Date(), mix, new Object[] {1,2,3} ); fail(\"expected exception.\");",
+    "resolution": "table.addAt(0, false, 1, \"hi\", buf, new Date(), mix, new Object[] {1,2,3} ); fail(\"expected exception.\");",
+    "conflict": "table.addAt(0, false, 1, \"hi\", buf, new Date(), mix, new Object[] {1,2,3} ); assertTrue(false);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79849,
+    "v2": "import com.tightdb.ReadTransaction; import com.tightdb.SharedGroup; import com.tightdb.WriteTransaction;",
+    "resolution": "import com.tightdb.ReadTransaction; import com.tightdb.SharedGroup; import com.tightdb.WriteTransaction;import com.tightdb.Table;",
+    "conflict": "import com.tightdb.Table;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79856,
+    "v2": "@Test",
+    "resolution": "@Test",
+    "conflict": "@Test()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79864,
+    "v2": "",
+    "resolution": "import com.tightdb.internal.Util; import com.tightdb.typed.TightDB;",
+    "conflict": "import com.tightdb.internal.Util; import com.tightdb.typed.TightDB;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79873,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79884,
+    "v2": "private void throwImmutable() {",
+    "resolution": "private void throwImmutable() {",
+    "conflict": "private void throwImmutable() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79896,
+    "v2": "t.addColumn(ColumnType.ColumnTypeString, \"test\");",
+    "resolution": "t.addColumn(ColumnType.STRING, \"test\"); g.close();",
+    "conflict": "t.addColumn(ColumnType.STRING, \"test\"); g.close();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79923,
+    "v2": "String name2 = peopleTable.get(2).name.get();",
+    "resolution": "String name2 = peopleTable.get(2).name.get();",
+    "conflict": "String name2 = peopleTable.at(2).name.get();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79962,
+    "v2": "long cnt = t.getTableCount(); for (int i=0; i< cnt; ++i) System.out.println(i  + \":\" + t.getTableName(i));",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79963,
+    "v2": "group.getTable(TestEmployeeTable.class.getSimpleName()).size());",
+    "resolution": "group.getTable(TestEmployeeTable.class.getSimpleName()).size());",
+    "conflict": "group.getTable(TestEmployeeTable.class.getCanonicalName()).size());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79975,
+    "v2": "",
+    "resolution": "",
+    "conflict": "// Enable below to compare Tightdb performance against a Java ArrayList Performance.TestTightdb(250000); Performance.TestJavaArray(250000);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79976,
+    "v2": "employees.firstName.eq(\"John\").findLast().salary.set(30000);",
+    "resolution": "employees.firstName.eq(\"John\").findLast().salary.set(30000);",
+    "conflict": "TightDB.print(\"Employees\", employees);  employees.firstName.is(\"John\").findLast().salary.set(30000);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79981,
+    "v2": "",
+    "resolution": "import com.tightdb.lib.TightDB;  import com.tightdb.TableBase;",
+    "conflict": "import com.tightdb.generated.PhoneTable; import com.tightdb.lib.TightDB;  import com.tightdb.TableBase;"
+  }
+]
+}

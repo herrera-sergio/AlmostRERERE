@@ -1,0 +1,1928 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 45510,
+    "v2": "when(mockUriLocatorFactory.getInstance(anyString())).thenReturn(mockUriLocator); when(mockUriLocatorFactory.locate(anyString())).then(new Answer<InputStream>() {",
+    "resolution": "when(mockLocatorFactory.getLocator(anyString())).thenReturn(mockLocator); when(mockLocatorFactory.locate(anyString())).thenAnswer(new Answer<InputStream>() {",
+    "conflict": "when(mockLocatorFactory.getLocator(anyString())).thenReturn(mockLocator); when(mockLocatorFactory.locate(anyString())).thenAnswer(new Answer<InputStream>() {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45520,
+    "v2": "public void process(final Reader reader, final Writer writer) throws IOException { process(null, reader, writer); }  @Override",
+    "resolution": "public void process(final Resource resource, final Reader reader, final Writer writer) throws IOException { try {",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45548,
+    "v2": "final Class<?> actualClass = ((DefaultWroManagerFactory) AbstractDecorator.getOriginalDecoratedObject(victim.getWroManagerFactory())).getFactory().getClass(); assertSame(managerClass, actualClass);",
+    "resolution": "final Class<?> actualClass = ((DefaultWroManagerFactory) AbstractDecorator.getOriginalDecoratedObject(victim.getWroManagerFactory())).getFactory().getClass(); assertSame(managerClass, actualClass);",
+    "conflict": "final Class<?> actualClass = ((DefaultWroManagerFactory) AbstractDecorator.getOriginalDecoratedObject(victim .getWroManagerFactory())).getFactory().getClass(); Assert.assertSame(managerClass, actualClass);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45556,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.DefaultUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.model.resource.locator.support.DispatcherStreamLocator;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.support.DispatcherStreamLocator;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45566,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.model.resource.processor.Destroyable; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45567,
+    "v2": "private ResourcePreProcessor createCssImportProcessor(final AtomicBoolean changeDetected, final String groupName) { final ResourcePreProcessor cssImportProcessor = new AbstractCssImportPreProcessor() {",
+    "resolution": "private ResourceProcessor createCssImportProcessor(final AtomicBoolean changeDetected, final String groupName) { final ResourceProcessor cssImportProcessor = new AbstractCssImportPreProcessor() {",
+    "conflict": "private ResourceProcessor createCssImportProcessor(final AtomicBoolean changeDetected, final String groupName) { final ResourceProcessor cssImportProcessor = new AbstractCssImportPreProcessor() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45584,
+    "v2": "* Check if a uri is a classpath resource. * * @param uri *          to check. * @return true if the uri is a classpath resource.",
+    "resolution": "* {@inheritDoc}",
+    "conflict": "* {@inheritDoc}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45596,
+    "v2": "public void shouldDoNothingWhenNoProcessorProvided() throws Exception { doFilterWithProcessors(Collections.<ResourcePreProcessor> emptyList());",
+    "resolution": "public void shouldDoNothingWhenNoProcessorProvided() throws Exception { doFilterWithProcessors(Collections.<ResourceProcessor>emptyList());",
+    "conflict": "public void shouldDoNothingWhenNoProcessorProvided() throws Exception { doFilterWithProcessors(Collections.<ResourceProcessor>emptyList());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45598,
+    "v2": "import ro.isdc.wro.config.Context; import ro.isdc.wro.model.resource.locator.ClasspathUriLocator; import ro.isdc.wro.model.resource.locator.UriLocator;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45610,
+    "v2": "import static org.junit.Assert.assertEquals; import static org.junit.Assert.assertFalse; import static org.junit.Assert.assertTrue;  import java.io.IOException; import java.io.InputStream;",
+    "resolution": "import static org.junit.Assert.assertEquals; import static org.junit.Assert.assertFalse; import static org.junit.Assert.assertTrue;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45617,
+    "v2": "",
+    "resolution": "/** * When a wildcard uri is used to import wro.xml, the resulted xml to parse won't be valid, because it will contain * merged content. */",
+    "conflict": "/** * When a wildcard uri is used to import wro.xml, the resulted xml to parse won't be valid, because it will contain * merged content. */"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45628,
+    "v2": "import ro.isdc.wro.model.resource.locator.ClasspathUriLocator; import ro.isdc.wro.model.resource.locator.ServletContextUriLocator; import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.locator.UrlUriLocator;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45629,
+    "v2": "import ro.isdc.wro.config.Context; import ro.isdc.wro.model.resource.locator.ServletContextUriLocator; import ro.isdc.wro.model.resource.locator.ServletContextUriLocator.LocatorStrategy; import ro.isdc.wro.model.resource.locator.UriLocator;",
+    "resolution": "import ro.isdc.wro.config.Context; import ro.isdc.wro.model.resource.locator.support.ServletContextResourceLocator; import ro.isdc.wro.model.resource.locator.support.ServletContextResourceLocator.LocatorStrategy;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.support.ServletContextResourceLocator; import ro.isdc.wro.model.resource.locator.support.ServletContextResourceLocator.LocatorStrategy;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45633,
+    "v2": "import ro.isdc.wro.config.Context; import ro.isdc.wro.model.resource.locator.ClasspathUriLocator; import ro.isdc.wro.model.resource.locator.UriLocator;",
+    "resolution": "import ro.isdc.wro.config.Context; import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45642,
+    "v2": "WroTestUtils.compareProcessedResourceContents(resourceUri, resourceUri, new ResourcePostProcessor() { public void process(final Reader reader, final Writer writer) throws IOException {",
+    "resolution": "WroTestUtils.compareProcessedResourceContents(resourceUri, \"classpath:cssUrlRewriting-classpath-outcome.css\", new ResourceProcessor() { public void process(final Resource resource, final Reader reader, final Writer writer)",
+    "conflict": "WroTestUtils.compareProcessedResourceContents(resourceUri, resourceUri, new ResourceProcessor() { public void process(final Resource resource, final Reader reader, final Writer writer) throws IOException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45655,
+    "v2": "throws IOException { final ResourcePreProcessor processor = new SemicolonAppenderPreProcessor();",
+    "resolution": "throws IOException { final ResourceProcessor processor = new SemicolonAppenderPreProcessor();",
+    "conflict": "throws IOException { final ResourceProcessor processor = new SemicolonAppenderPreProcessor();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45657,
+    "v2": "@Test public void shouldSupportCorrectResourceTypes() { WroTestUtils.assertProcessorSupportResourceTypes(processor, ResourceType.CSS); }",
+    "resolution": "@Test public void shouldSupportCorrectResourceTypes() { WroTestUtils.assertProcessorSupportResourceTypes(processor, ResourceType.CSS); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45659,
+    "v2": "private void compareResultsFromFolderUsingProcessor(final String expectedFolderName, final ResourcePreProcessor processor) throws Exception {",
+    "resolution": "private void compareResultsFromFolderUsingProcessor(final String expectedFolderName, final ResourcePreProcessor processor) throws Exception {",
+    "conflict": "private void compareResultsFromFolderUsingProcessor(final String expectedFolderName, final ResourceProcessor processor) throws Exception {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45661,
+    "v2": "private ResourcePreProcessor createImportsRemovalProcessor() { return new ResourcePreProcessor() {",
+    "resolution": "private ResourceProcessor createImportsRemovalProcessor() { return new ResourceProcessor() {",
+    "conflict": "private ResourceProcessor createImportsRemovalProcessor() { return new ResourceProcessor() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45662,
+    "v2": "private ResourcePreProcessor createRemoveImportsProcessor() { return new ResourcePreProcessor() {",
+    "resolution": "private ResourceProcessor createRemoveImportsProcessor() { return new ResourceProcessor() {",
+    "conflict": "private ResourceProcessor createRemoveImportsProcessor() { return new ResourceProcessor() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45665,
+    "v2": "private UriLocator mockLocator;",
+    "resolution": "private ResourceLocator mockLocator; @Mock private ResourceLocatorFactory mockLocatorFactory;",
+    "conflict": "private ResourceLocator mockLocator; @Mock private ResourceLocatorFactory mockLocatorFactory;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45668,
+    "v2": "Mockito.when(mockLocator.locate(Mockito.anyString())).thenReturn(new ByteArrayInputStream(\"different\".getBytes()));",
+    "resolution": "Mockito.when(mockLocatorFactory.locate(Mockito.anyString())).then(answerWithContent(\"different\"));",
+    "conflict": "Mockito.when(mockLocatorFactory.locate(Mockito.anyString())).then(answerWithContent(\"different\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45669,
+    "v2": "Mockito.when(mockLocator.locate(Mockito.anyString())).thenThrow(new IOException(\"Resource is unavailable\"));",
+    "resolution": "Mockito.when(mockLocatorFactory.locate(Mockito.anyString())).thenThrow(new IOException(\"Resource is unavailable\"));",
+    "conflict": "Mockito.when(mockLocatorFactory.locate(Mockito.anyString())).thenThrow(new IOException(\"Resource is unavailable\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45672,
+    "v2": "when(mockLocator.locate(RESOURCE_FIRST)).thenAnswer(answerWithContent(\"changed\"));",
+    "resolution": "Mockito.when(mockLocatorFactory.locate(RESOURCE_FIRST)).then(answerWithContent(\"different\"));",
+    "conflict": "Mockito.when(mockLocatorFactory.locate(RESOURCE_FIRST)).then(answerWithContent(\"different\"));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45692,
+    "v2": "import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.locator.factory.AbstractUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.util.ObjectFactory;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.util.ObjectFactory;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45708,
+    "v2": "import ro.isdc.wro.model.resource.locator.ServletContextUriLocator; import ro.isdc.wro.model.resource.locator.StandaloneServletContextUriLocator;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.support.FileSystemResourceLocator;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.support.FileSystemResourceLocator;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45721,
+    "v2": "/** * Required to make jshint not complain. */ private static final String DEFINE_WINDOW = \"var window = {};\"; private WebjarUriLocator webjarLocator;",
+    "resolution": "/** * Required to make jshint not complain. */ private static final String DEFINE_WINDOW = \"var window = {};\"; private ResourceLocatorFactory webjarLocatorFactory;",
+    "conflict": "private ResourceLocatorFactory webjarLocatorFactory;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45729,
+    "v2": "public String processAndMerge(final List<Resource> resources, final boolean minimize) throws IOException { return processAndMerge(resources, ProcessingCriteria.create(ProcessingType.ALL, minimize));",
+    "resolution": "public String processAndMerge(final Group group, final boolean minimize) throws IOException { return processAndMerge(group, ProcessingCriteria.create(ProcessingType.ALL, minimize));",
+    "conflict": "public String processAndMerge(final Group group, final boolean minimize) throws IOException { return processAndMerge(group, ProcessingCriteria.create(ProcessingType.ALL, minimize));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45737,
+    "v2": "import static org.mockito.Mockito.mock; import static org.mockito.Mockito.verify;",
+    "resolution": "import static org.mockito.Mockito.mock; import static org.mockito.Mockito.verify;",
+    "conflict": "import static org.mockito.Mockito.verify;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45743,
+    "v2": "*/ public boolean isFailNever() {",
+    "resolution": "*/ public boolean isFailNever() {",
+    "conflict": "* @VisibleForTesting */ boolean isFailNever() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45748,
+    "v2": "private ExecutorService getExecutor() { if (completionExecutor == null) {",
+    "resolution": "private ExecutorService getExecutor() { if (completionExecutor == null) {",
+    "conflict": "public ExecutorService getExecutor() { if (completionExecutor == null) { final StopWatch watch = new StopWatch(); watch.start(\"create executor\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45756,
+    "v2": "// number of milliseconds added by overhead final long overhead = 40; Assert.assertTrue(delta < delay + overhead);",
+    "resolution": "//number of milliseconds added by overhead final long overhead = 40; assertTrue(delta < delay + overhead);",
+    "conflict": "//number of milliseconds added by overhead final long overhead = 40; assertTrue(delta < delay + overhead);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45773,
+    "v2": "Mockito.when(response.getOutputStream()).thenReturn(new DelegatingServletOutputStream(new NullOutputStream()));  //init context",
+    "resolution": "Mockito.when(response.getOutputStream()).thenReturn(new DelegatingServletOutputStream(new NullOutputStream()));  //init context",
+    "conflict": "Mockito.when(response.getOutputStream()).thenReturn(new DelegatingServletOutputStream(new ByteArrayOutputStream()));  // init context"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45778,
+    "v2": "final String message = \"Exception occured while processing: \" + e.toString() + \", class: \" + e.getClass().getName() + \",caused by: \" + (e.getCause() != null ? e.getCause().getClass().getName() : \"\"); getLog().error(message, e); throw new MojoExecutionException(message, e);",
+    "resolution": "getLog().error(\"Exception occured while executing maven plugin\", e); throw new MojoExecutionException(\"Exception occured while processing: \" + e.getMessage(), e);",
+    "conflict": "getLog().error(\"Exception occured while executing maven plugin\", e); throw new MojoExecutionException(\"Exception occured while processing: \" + e.getMessage(), e);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45781,
+    "v2": "* This parameter is not meant to be used. The only purpose is to hold the final build name of the artifact * * @parameter default-value=\"${project.build.directory}/${project.build.finalName}\"",
+    "resolution": "* This parameter is not meant to be used. The only purpose is to hold the final build name of the artifact * * @parameter default-value=\"${project.build.directory}/${project.build.finalName}\"",
+    "conflict": "* This parameter is not meant to be used. The only purpose is to hold the final build name of the artifacty * * @parameter default-value=\"${project.build.directory}/${project.build.finalName}"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45786,
+    "v2": "* * @param buildDirectory the buildDirectory to set * @VisibleForTesting",
+    "resolution": "* @param buildDirectory *          the buildDirectory to set * @VisibleForTesting",
+    "conflict": "* * @param buildDirectory *          the buildDirectory to set"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45801,
+    "v2": "assertEquals(1, processorsFactory.getPostProcessors().size()); assertEquals(JSMinProcessor.class, ((ProcessorDecorator) processorsFactory.getPostProcessors().iterator().next()).getDecoratedObject().getClass());",
+    "resolution": "assertEquals(1, processorsFactory.getPostProcessors().size()); assertEquals(JSMinProcessor.class, processorsFactory.getPostProcessors().iterator().next().getClass());",
+    "conflict": "Assert.assertEquals(1, processorsFactory.getPostProcessors().size()); Assert.assertEquals(JSMinProcessor.class, processorsFactory.getPostProcessors().iterator().next().getClass());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45802,
+    "v2": "assertEquals(2, processorsFactory.getPostProcessors().size()); assertEquals( JSMinProcessor.class, ((ProcessorDecorator) processorsFactory.getPostProcessors().iterator().next()).getDecoratedObject().getClass());",
+    "resolution": "assertEquals(2, processorsFactory.getPostProcessors().size()); assertEquals(JSMinProcessor.class, processorsFactory.getPostProcessors().iterator().next().getClass());",
+    "conflict": "Assert.assertEquals(2, processorsFactory.getPostProcessors().size()); Assert.assertEquals(JSMinProcessor.class, processorsFactory.getPostProcessors().iterator().next().getClass());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45843,
+    "v2": "package ro.isdc.wro.model.resource.locator;  import static org.junit.Assert.assertEquals; import static org.junit.Assert.assertFalse; import static org.mockito.Mockito.when;",
+    "resolution": "package ro.isdc.wro.model.resource.locator.support;  import static org.junit.Assert.assertEquals; import static org.junit.Assert.assertFalse;",
+    "conflict": "package ro.isdc.wro.model.resource.locator.support;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45912,
+    "v2": "when(mockLocator.locate(Mockito.eq(importResource))).thenAnswer(answerWithContent(\"Changed\")); assertFalse(victim.getTargetGroupsAsList().isEmpty());",
+    "resolution": "when(mockLocatorFactory.locate(Mockito.eq(importResource))).thenAnswer(answerWithContent(\"Changed\")); assertFalse(victim.getTargetGroupsAsList().isEmpty());",
+    "conflict": "when(mockLocatorFactory.locate(Mockito.eq(importResource))).thenAnswer(answerWithContent(\"Changed\"));  assertFalse(mojo.getTargetGroupsAsList().isEmpty());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45920,
+    "v2": "inputStreams.add(getWebjarLocator().locate(WebjarUriLocator.createUri(\"jquery.js\"))); inputStreams.add(getWebjarLocator().locate(WebjarUriLocator.createUri(\"handlebars.js\"))); inputStreams.add(getWebjarLocator().locate(WebjarUriLocator.createUri(\"ember.js\")));",
+    "resolution": "inputStreams.add(getWebjarLocatorFactory().locate(WebjarResourceLocator.createUri(\"jquery.js\"))); inputStreams.add(getWebjarLocatorFactory().locate(WebjarResourceLocator.createUri(\"handlebars.js\"))); inputStreams.add(getWebjarLocatorFactory().locate(WebjarResourceLocator.createUri(\"ember.js\")));",
+    "conflict": "inputStreams.add(getWebjarLocatorFactory().locate(WebjarResourceLocator.createUri(\"jquery.js\"))); inputStreams.add(getWebjarLocatorFactory().locate(WebjarResourceLocator.createUri(\"handlebars.js\"))); inputStreams.add(getWebjarLocatorFactory().locate(WebjarResourceLocator.createUri(\"ember.js\")));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45922,
+    "v2": "public class WebjarUriLocator implements UriLocator { private static final Logger LOG = LoggerFactory.getLogger(WebjarUriLocator.class);",
+    "resolution": "public class WebjarResourceLocator implements ResourceLocator { private static final Logger LOG = LoggerFactory.getLogger(WebjarUriLocator.class);",
+    "conflict": "public class WebjarResourceLocator implements ResourceLocator {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45924,
+    "v2": "import ro.isdc.wro.model.resource.locator.ServletContextUriLocator; import ro.isdc.wro.model.resource.locator.factory.DefaultUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.SimpleUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.model.resource.processor.factory.ProcessorsFactory; import ro.isdc.wro.model.resource.processor.factory.SimpleProcessorsFactory;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45929,
+    "v2": "* Check if a uri is a classpath resource. * * @param uri *          to check. * @return true if the uri is a classpath resource.",
+    "resolution": "* {@inheritDoc}",
+    "conflict": "* {@inheritDoc}"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45938,
+    "v2": "import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.locator.support.LocatorProvider; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.locator.support.LocatorProvider; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45946,
+    "v2": "public void shouldLoadNonEmptyPostProcessors() throws Exception { final Map<String, ResourcePostProcessor> map = victim.providePostProcessors();",
+    "resolution": "public void shouldLoadNonEmptyPostProcessors() throws Exception { final Map<String, ResourceProcessor> map = victim.providePostProcessors();",
+    "conflict": "public void shouldLoadNonEmptyPostProcessors() throws Exception { final Map<String, ResourceProcessor> map = victim.providePostProcessors();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45947,
+    "v2": "public void shouldLoadNonEmptyPreProcessors() throws Exception { final Map<String, ResourcePreProcessor> map = victim.providePreProcessors();",
+    "resolution": "public void shouldLoadNonEmptyPreProcessors() throws Exception { final Map<String, ResourceProcessor> map = victim.providePreProcessors();",
+    "conflict": "public void shouldLoadNonEmptyPreProcessors() throws Exception { final Map<String, ResourceProcessor> map = victim.providePreProcessors();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45948,
+    "v2": "/** * Factory method responsible for creating the processor which will be applied for this build. */ protected abstract ResourcePreProcessor createResourceProcessor();",
+    "resolution": "/** * Factory method responsible for creating the processor which will be applied for this build. */ protected abstract ResourceProcessor createResourceProcessor();",
+    "conflict": "protected abstract ResourceProcessor createResourceProcessor();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45957,
+    "v2": "final List<ResourcePreProcessor> processors = new ArrayList<ResourcePreProcessor>(); processors.add(new ResourcePreProcessor() { public void process(final Resource resource, final Reader reader, final Writer writer)",
+    "resolution": "final List<ResourceProcessor> processors = new ArrayList<ResourceProcessor>(); processors.add(new ResourceProcessor() { public void process(final Resource resource, final Reader reader, final Writer writer)",
+    "conflict": "final List<ResourceProcessor> processors = new ArrayList<ResourceProcessor>(); processors.add(new ResourceProcessor() { public void process(Resource resource, Reader reader, Writer writer)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45958,
+    "v2": "final List<ResourcePreProcessor> processors = new ArrayList<ResourcePreProcessor>(); processors.add(new ResourcePreProcessor() { public void process(final Resource resource, final Reader reader, final Writer writer)",
+    "resolution": "final List<ResourceProcessor> processors = new ArrayList<ResourceProcessor>(); processors.add(new ResourceProcessor() { public void process(final Resource resource, final Reader reader, final Writer writer)",
+    "conflict": "final List<ResourceProcessor> processors = new ArrayList<ResourceProcessor>(); processors.add(new ResourceProcessor() { public void process(Resource resource, Reader reader, Writer writer)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45959,
+    "v2": "import static org.junit.Assert.assertEquals;  import java.io.InputStream;",
+    "resolution": "import static org.junit.Assert.assertEquals; import org.junit.After; import org.junit.Assert;",
+    "conflict": "import static junit.framework.Assert.assertEquals; import junit.framework.Assert;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45963,
+    "v2": "",
+    "resolution": "/** * When a wildcard uri is used to import wro.xml, the resulted xml to parse won't be valid, because it will contain * merged content. */",
+    "conflict": "/** * When a wildcard uri is used to import wro.xml, the resulted xml to parse won't be valid, because it will contain * merged content. */"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45971,
+    "v2": "import static org.junit.Assert.assertFalse; import static org.junit.Assert.assertTrue;",
+    "resolution": "import static org.junit.Assert.assertFalse; import static org.junit.Assert.assertTrue; import static org.mockito.Mockito.mock;",
+    "conflict": "import static junit.framework.Assert.assertFalse; import static junit.framework.Assert.assertTrue; import static org.mockito.Mockito.mock;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45980,
+    "v2": "assertEquals(1, processorsFactory.getPreProcessors().size()); assertEquals(CssMinProcessor.class, getProcessor(processorsFactory.getPreProcessors().iterator().next()).getClass());",
+    "resolution": "assertEquals(1, processorsFactory.getPreProcessors().size()); assertEquals(CssMinProcessor.class, processorsFactory.getPreProcessors().iterator().next().getClass());",
+    "conflict": "Assert.assertEquals(1, processorsFactory.getPreProcessors().size()); Assert.assertEquals(CssMinProcessor.class, processorsFactory.getPreProcessors().iterator().next().getClass());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45981,
+    "v2": "assertEquals(1, processorsFactory.getPostProcessors().size()); assertEquals( JSMinProcessor.class, ((ProcessorDecorator) processorsFactory.getPostProcessors().iterator().next()).getDecoratedObject().getClass());",
+    "resolution": "assertEquals(1, processorsFactory.getPostProcessors().size()); assertEquals( JSMinProcessor.class, ((ProcessorDecorator) processorsFactory.getPostProcessors().iterator().next()).getDecoratedObject().getClass());",
+    "conflict": "Assert.assertEquals(1, processorsFactory.getPostProcessors().size()); Assert.assertEquals(JSMinProcessor.class, processorsFactory.getPostProcessors().iterator().next().getClass());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45988,
+    "v2": "final ResourcePreProcessor processor = new ExceptionHandlingProcessorDecorator(cssImportProcessor) {",
+    "resolution": "final ResourceProcessor processor = new ExceptionHandlingProcessorDecorator(cssImportProcessor) {",
+    "conflict": "/** * Ignore processor failure, since we are interesting in detecting change only. A failure is treated as lack of * change. */ final ResourceProcessor processor = new ExceptionHandlingProcessorDecorator(cssImportProcessor) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46010,
+    "v2": "* Check if a uri is a classpath resource. * * @param uri *          to check. * @return true if the uri is a classpath resource.",
+    "resolution": "* {@inheritDoc}",
+    "conflict": "* {@inheritDoc}"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46027,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.DefaultUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.model.resource.processor.factory.DefaultProcessorsFactory;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.factory.DefaultProcesorsFactory;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46036,
+    "v2": "import ro.isdc.wro.model.factory.ConfigurableModelFactory; import ro.isdc.wro.model.factory.XmlModelFactory; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.WroModel; import ro.isdc.wro.model.factory.ConfigurableModelFactory; import ro.isdc.wro.model.factory.WroModelFactory; import ro.isdc.wro.model.factory.XmlModelFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.WroModel; import ro.isdc.wro.model.factory.WroModelFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46046,
+    "v2": "import ro.isdc.wro.model.factory.WroModelFactory; import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.factory.WroModelFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46056,
+    "v2": "* Compare if content of expected stream is the same as content of the actual stream. When compared content is not * equal, the assertion error will be thrown. *",
+    "resolution": "* Compare if content of expected stream is the same as content of the actual stream. When compared content is not * equal, the assertion error will be thrown. *",
+    "conflict": "* Compare if content of expected stream is the same as content of the actual stream. *"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46061,
+    "v2": "import static junit.framework.Assert.assertEquals; import static junit.framework.Assert.assertNotNull;  import java.io.IOException; import java.io.InputStream;",
+    "resolution": "import static junit.framework.Assert.assertEquals; import static junit.framework.Assert.assertNotNull;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46072,
+    "v2": "return new InjectorObjectFactory<UriLocatorFactory>() { public UriLocatorFactory create() { return managerFactory.create().getUriLocatorFactory();",
+    "resolution": "return new InjectorObjectFactory<UriLocatorFactory>() { public UriLocatorFactory create() { return locatorFactoryInitializer.get();",
+    "conflict": "return new InjectorObjectFactory<ResourceLocatorFactory>() { public ResourceLocatorFactory create() { return locatorFactoryInitializer.get();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46088,
+    "v2": "private final CacheStrategy<CacheKey, CacheValue> cacheStrategy; private final ProcessorsFactory processorsFactory; private final UriLocatorFactory locatorFactory;",
+    "resolution": "private final CacheStrategy<CacheKey, CacheValue> cacheStrategy; private final ProcessorsFactory processorsFactory; private final ResourceLocatorFactory locatorFactory;",
+    "conflict": "private CacheStrategy<CacheKey, CacheValue> cacheStrategy; private ProcessorsFactory processorsFactory; private ResourceLocatorFactory locatorFactory;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46091,
+    "v2": "import ro.isdc.wro.model.group.processor.Injector; import ro.isdc.wro.model.resource.locator.factory.DefaultUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46093,
+    "v2": "final UriLocatorFactory locatorFactory = InjectorAwareUriLocatorFactoryDecorator.decorate(manager .getUriLocatorFactory(), injector); return locatorFactory;",
+    "resolution": "//      manager.setResourceLocatorFactory(InjectorAwareResourceLocatorFactoryDecorator.decorate( //          manager.getResourceLocatorFactory(), injector)); return manager.getResourceLocatorFactory();",
+    "conflict": "manager.setResourceLocatorFactory(InjectorAwareResourceLocatorFactoryDecorator.decorate( manager.getResourceLocatorFactory(), injector)); return manager.getResourceLocatorFactory();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46094,
+    "v2": "return managerFactory.create().getModelFactory();",
+    "resolution": "return managerFactory.create().getModelFactory();",
+    "conflict": "final WroManager manager = managerFactory.create(); // update manager with new decorated factory manager.setModelFactory(DefaultWroModelFactoryDecorator.decorate(manager.getModelFactory(), manager.getModelTransformers())); return manager.getModelFactory();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46106,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.decorator.LazyProcessorDecorator; import ro.isdc.wro.util.LazyInitializer;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.decorator.LazyProcessorDecorator; import ro.isdc.wro.util.LazyInitializer;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.SupportAware; import ro.isdc.wro.util.WroUtil;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46107,
+    "v2": "extends AbstractNodeWithFallbackProcessor {",
+    "resolution": "extends AbstractNodeWithFallbackProcessor {",
+    "conflict": "implements ResourceProcessor, SupportAware { private static final String TYPESCRIPT_EXTENSION = \"ts\"; private static final String SHELL_COMMAND = \"tsc\"; private static final String ARG_OUT = \"--out\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46160,
+    "v2": "import ro.isdc.wro.model.resource.locator.UrlUriLocator; import ro.isdc.wro.model.resource.processor.ImportAware; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46194,
+    "v2": "for (final ResourcePostProcessor processor : processors) { final ResourcePreProcessor decoratedProcessor = decorateProcessor(processor, cacheKey.isMinimize()); stopWatch.start(\"Using \" + decoratedProcessor.toString());",
+    "resolution": "for (final ResourceProcessor processor : processors) { final ResourceProcessor decoratedProcessor = decorateProcessor(processor, cacheKey.isMinimize()); stopWatch.start(\"Using \" + decoratedProcessor.toString());",
+    "conflict": "for (final ResourceProcessor processor : processors) { stopWatch.start(\"Using \" + processor.toString());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46229,
+    "v2": "import ro.isdc.wro.extensions.processor.js.RhinoCoffeeScriptProcessor; import ro.isdc.wro.model.resource.ResourceType; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.extensions.processor.js.RhinoCoffeeScriptProcessor; import ro.isdc.wro.model.resource.ResourceType; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.extensions.processor.js.CoffeeScriptProcessor; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46238,
+    "v2": "import org.slf4j.Logger; import org.slf4j.LoggerFactory;  import ro.isdc.wro.WroRuntimeException; import ro.isdc.wro.extensions.processor.support.yui.YuiCssCompressor;",
+    "resolution": "import org.slf4j.Logger; import org.slf4j.LoggerFactory;  import ro.isdc.wro.WroRuntimeException; import ro.isdc.wro.extensions.processor.support.yui.YuiCssCompressor;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46256,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.DefaultUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;",
+    "conflict": "import ro.isdc.wro.model.group.processor.Injector; import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46260,
+    "v2": "private final GroupsProcessor groupsProcessor = new GroupsProcessor(); private final PreProcessorExecutor preProcessorExecutor = new PreProcessorExecutor(); private ResourceBundleProcessor bundleProcessor;",
+    "resolution": "private final GroupsProcessor groupsProcessor = new GroupsProcessor(); private final PreProcessorExecutor preProcessorExecutor = new PreProcessorExecutor(); private ResourceBundleProcessor bundleProcessor;",
+    "conflict": "private final GroupsProcessor groupsProcessor = new GroupsProcessor(); private final PreProcessorExecutor preProcessorExecutor = new PreProcessorExecutor();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46263,
+    "v2": "private final LazyInitializer<CacheStrategy<CacheKey, CacheValue>> cacheStrategyInitializer = new LazyInitializer<CacheStrategy<CacheKey, CacheValue>>() { @Override protected CacheStrategy<CacheKey, CacheValue> initialize() {",
+    "resolution": "private final LazyInitializer<CacheStrategy<CacheKey, CacheValue>> cacheStrategyInitializer = new LazyInitializer<CacheStrategy<CacheKey, CacheValue>>() { @Override protected CacheStrategy<CacheKey, CacheValue> initialize() {",
+    "conflict": "private final LazyInitializer<CacheStrategy<CacheEntry, ContentHashEntry>> cacheStrategyInitializer = new LazyInitializer<CacheStrategy<CacheEntry, ContentHashEntry>>() { @Override protected CacheStrategy<CacheEntry, ContentHashEntry> initialize() {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46271,
+    "v2": "import static junit.framework.Assert.assertNotNull; import static junit.framework.Assert.assertSame; import static org.mockito.Mockito.mock;",
+    "resolution": "import static org.junit.Assert.assertNotNull; import static org.junit.Assert.assertSame; import static org.mockito.Mockito.mock;",
+    "conflict": "import static org.junit.Assert.assertNotNull; import static org.junit.Assert.assertSame;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46272,
+    "v2": "final NamingStrategy mockNamingStrategy = mock(NamingStrategy.class); final ProcessorsFactory mockProcessorsFactory = mock(ProcessorsFactory.class); final UriLocatorFactory mockLocatorFactory = mock(UriLocatorFactory.class);",
+    "resolution": "final NamingStrategy mockNamingStrategy = mock(NamingStrategy.class); final ProcessorsFactory mockProcessorsFactory = mock(ProcessorsFactory.class); final ResourceLocatorFactory mockLocatorFactory = mock(ResourceLocatorFactory.class);",
+    "conflict": "final NamingStrategy mockNamingStrategy = Mockito.mock(NamingStrategy.class); final ProcessorsFactory mockProcessorsFactory = Mockito.mock(ProcessorsFactory.class); final ResourceLocatorFactory mockLocatorFactory = Mockito.mock(ResourceLocatorFactory.class);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46286,
+    "v2": "public void setCacheKeyFactory(final CacheKeyFactory cacheKeyFactory) { this.cacheKeyFactory = cacheKeyFactory; }",
+    "resolution": "public void setCacheKeyFactory(final CacheKeyFactory cacheKeyFactory) { this.cacheKeyFactory = cacheKeyFactory; }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46287,
+    "v2": "public WroModelFactory getModelFactory() { return modelFactory; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46309,
+    "v2": "/** * @return default implementation of {@link MetaDataFactory} used when no {@link MetaDataFactory} is set. */ protected MetaDataFactory newMetaDataFactory() { return new DefaultMetaDataFactory(); }",
+    "resolution": "/** * @return default implementation of {@link MetaDataFactory} used when no {@link MetaDataFactory} is set. */ protected MetaDataFactory newMetaDataFactory() { return new DefaultMetaDataFactory(); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46319,
+    "v2": "import ro.isdc.wro.model.group.Inject; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.group.Inject; import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ServletContextResourceLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ServletContextResourceLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46325,
+    "v2": "@Override protected Map<String, ResourcePreProcessor> newPreProcessorsMap() { final Map<String, ResourcePreProcessor> map = super.newPreProcessorsMap();",
+    "resolution": "protected Map<String, ResourceProcessor> newPreProcessorsMap() { final Map<String, ResourceProcessor> map = super.newPreProcessorsMap();",
+    "conflict": "protected Map<String, ResourceProcessor> newPreProcessorsMap() { final Map<String, ResourceProcessor> map = super.newPreProcessorsMap();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46341,
+    "v2": "extends AbstractDecorator<LazyInitializer<ResourcePreProcessor>> implements ResourcePreProcessor, ResourcePostProcessor, SupportedResourceTypeAware, MinimizeAware, SupportAware, ImportAware {",
+    "resolution": "extends AbstractDecorator<LazyInitializer<ResourceProcessor>> implements ResourceProcessor, SupportedResourceTypeAware, MinimizeAware, SupportAware, ImportAware {",
+    "conflict": "extends AbstractDecorator<LazyInitializer<ResourceProcessor>> implements ResourceProcessor, SupportedResourceTypeAware, MinimizeAware, SupportAware {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46346,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.model.resource.processor.ImportAware; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ImportAware; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46349,
+    "v2": "sb.append(preProcessorExecutor.processAndMerge(foundImports, ProcessingCriteria.create(ProcessingType.IMPORT_ONLY, false)));",
+    "resolution": "Group group = new Group(\"dummy\"); group.setResources(foundImports); sb.append(preProcessorExecutor.processAndMerge(group, ProcessingCriteria.create(ProcessingType.IMPORT_ONLY, false)));",
+    "conflict": "Group group = new Group(\"dummy\"); group.setResources(foundImports); sb.append(preProcessorExecutor.processAndMerge(group, true));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46351,
+    "v2": "private UriLocatorFactory locatorFactory;",
+    "resolution": "private ResourceLocatorFactory resourceLocatorFactory;",
+    "conflict": "private ResourceLocatorFactory resourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46356,
+    "v2": "when(mockLocator.locate(Mockito.anyString())).thenReturn(WroUtil.EMPTY_STREAM); when(mockLocatorFactory.getInstance(Mockito.anyString())).thenReturn(mockLocator);",
+    "resolution": "when(mockLocator.getInputStream()).thenReturn(WroUtil.EMPTY_STREAM); when(mockLocatorFactory.getLocator(Mockito.anyString())).thenReturn(mockLocator);",
+    "conflict": "when(mockLocator.getInputStream()).thenReturn(WroUtil.EMPTY_STREAM); when(mockLocatorFactory.getLocator(Mockito.anyString())).thenReturn(mockLocator);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46358,
+    "v2": "Assert.assertEquals(\"\", victim.processAndMerge(resources, true)); Assert.assertEquals(\"\", victim.processAndMerge(resources, false));",
+    "resolution": "final Group group = new Group(\"dummy\"); group.setResources(resources); Assert.assertEquals(\"\", victim.processAndMerge(group, true)); Assert.assertEquals(\"\", victim.processAndMerge(group, false));",
+    "conflict": "final Group group = new Group(\"dummy\"); group.setResources(resources); Assert.assertEquals(\"\", executor.processAndMerge(group, true)); Assert.assertEquals(\"\", executor.processAndMerge(group, false));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46361,
+    "v2": "throws Exception { Context.get().getConfig().setIgnoreFailingProcessor(false); useFailingPreProcessor();",
+    "resolution": "throws Exception { useFailingPreProcessor();",
+    "conflict": "throws Exception { genericUseFailingPreProcessorWithIngoreFlag(false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46369,
+    "v2": "final ResourcePreProcessor decoratedProcessor = new CssMinProcessor(); final ResourcePreProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); final URL url = ResourcePreProcessor.class.getResource(\"copyright\");",
+    "resolution": "final ResourceProcessor decoratedProcessor = new CssMinProcessor(); final ResourceProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); final URL url = ResourceProcessor.class.getResource(\"copyright\");",
+    "conflict": "final ResourceProcessor decoratedProcessor = new CssMinProcessor(); final ResourceProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); final URL url = TestProcessorsUtils.class.getResource(\"copyright\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46379,
+    "v2": "private ResourcePreProcessor mockRhinoProcessor; private ResourcePreProcessor victim;",
+    "resolution": "private ResourceProcessor mockRhinoProcessor; private ResourceProcessor victim;",
+    "conflict": "private ResourceProcessor mockRhinoProcessor; private ResourceProcessor victim;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46385,
+    "v2": "private UriLocatorFactory uriLocatorFactory;",
+    "resolution": "private ResourceLocatorFactory locatorFactory;",
+    "conflict": "private ResourceLocatorFactory locatorFactory; @Inject private WroConfiguration configuration;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46393,
+    "v2": "@Mock private ResourcePreProcessor mockProcessor; @Mock",
+    "resolution": "@Mock private ResourceProcessor mockProcessor; @Mock",
+    "conflict": "@Mock private ResourceProcessor mockProcessor; @Mock"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46395,
+    "v2": "private UriLocator mockLocator;",
+    "resolution": "private ResourceLocator mockLocator; @Mock private ResourceLocatorFactory mockLocatorFactory;",
+    "conflict": "private ResourceLocator mockLocator; @Mock private ResourceLocatorFactory mockLocatorFactory;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46398,
+    "v2": "assertTrue(victim.getResourceChangeDetector().checkChangeForGroup(RESOURCE_URI, GROUP_NAME));  Mockito.when(mockLocator.locate(Mockito.anyString())).thenReturn(",
+    "resolution": "assertTrue(victim.getResourceChangeDetector().checkChangeForGroup(RESOURCE_URI, GROUP_NAME));  Mockito.when(mockLocator.getInputStream()).thenReturn(new ByteArrayInputStream(\"different\".getBytes()));",
+    "conflict": "assertEquals(1, victim.getPreviousHashes().keySet().size());  Mockito.when(mockLocator.getInputStream()).thenReturn("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46402,
+    "v2": "@Test(expected = IllegalArgumentException.class) public void shouldNotAcceptInvalidProcessor() { new ProcessorDecorator(new Object()); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46409,
+    "v2": "final Iterator<UriLocator> iterator = locators.iterator(); assertSame(mockUriLocator, iterator.next());",
+    "resolution": "final Iterator<ResourceLocatorFactory> iterator = locators.iterator(); assertSame(mockResourceLocatorFactory, iterator.next());",
+    "conflict": "final Iterator<ResourceLocatorFactory> iterator = locators.iterator(); assertSame(mockResourceLocatorFactory, iterator.next());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46418,
+    "v2": "extends AbstractProcessorDecoratorSupport<ResourcePreProcessor> {",
+    "resolution": "extends AbstractProcessorDecoratorSupport {",
+    "conflict": "extends AbstractProcessorDecoratorSupport { /** * Decorated processor. */ private final ResourceProcessor decoratedProcessor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46443,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.decorator.DefaultProcessorDecorator;",
+    "resolution": "import ro.isdc.wro.model.resource.Resource; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.decorator.DefaultProcessorDecorator;",
+    "conflict": "import ro.isdc.wro.model.resource.Resource; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.decorator.ExceptionHandlingProcessorDecorator;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46450,
+    "v2": "private static UriLocatorFactory createDefaultUriLocatorFactory() { return new DefaultUriLocatorFactory();",
+    "resolution": "private static ResourceLocatorFactory createDefaultUriLocatorFactory() { return new DefaultResourceLocatorFactory();",
+    "conflict": "private static ResourceLocatorFactory createDefaultUriLocatorFactory() { return new DefaultResourceLocatorFactory();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46454,
+    "v2": "} catch (final Exception e) { LOG.error(\"Compare.... [FAIL]\", e.getMessage()); throw WroRuntimeException.wrap(e);",
+    "resolution": "} catch (final ComparisonFailure e) { LOG.error(\"Compare.... [FAIL]\", e.getMessage()); throw e;",
+    "conflict": "} catch (final ComparisonFailure e) { LOG.debug(\"Compare.... [FAIL]\", e.getMessage()); throw e;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46479,
+    "v2": "@SuppressWarnings(\"resource\") public void process(final Resource resource, final Reader reader, final Writer writer) throws IOException {",
+    "resolution": "@SuppressWarnings(\"resource\") public void process(final Resource resource, final Reader reader, final Writer writer) throws IOException {",
+    "conflict": "public void process(final Resource resource, final Reader reader, final Writer writer) throws IOException { try {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46483,
+    "v2": "import ro.isdc.wro.http.handler.RequestHandler; import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.http.handler.RequestHandler; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46491,
+    "v2": "import ro.isdc.wro.cache.CacheStrategy; import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.cache.CacheStrategy; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46492,
+    "v2": "import ro.isdc.wro.cache.CacheStrategy; import ro.isdc.wro.cache.CacheStrategyProvider; import ro.isdc.wro.cache.DefaultCacheStrategyProvider; import ro.isdc.wro.model.resource.locator.UriLocator;",
+    "resolution": "import ro.isdc.wro.cache.CacheStrategy; import ro.isdc.wro.cache.CacheStrategyProvider; import ro.isdc.wro.cache.DefaultCacheStrategyProvider; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46496,
+    "v2": "@Inject private ResourceAuthorizationManager authorizationManager;",
+    "resolution": "@Inject private ResourceAuthorizationManager authorizationManager;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46497,
+    "v2": "if (authorizationManager == null) { authorizationManager = newAuthorizationManager(); }",
+    "resolution": "if (authorizationManager == null) { authorizationManager = newAuthorizationManager(); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46498,
+    "v2": "public BaseWroManagerFactory setResourceAuthorizationManager(final ResourceAuthorizationManager authorizationManager) { this.authorizationManager = authorizationManager; return this; }",
+    "resolution": "public BaseWroManagerFactory setResourceAuthorizationManager(final ResourceAuthorizationManager authorizationManager) { this.authorizationManager = authorizationManager; return this; }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46501,
+    "v2": "return new InjectorBuilder( new BaseWroManagerFactory().setUriLocatorFactory(mockUriLocatorFactory).setResourceAuthorizationManager( mockAuthorizationManager)).build();",
+    "resolution": "return new InjectorBuilder( new BaseWroManagerFactory().setLocatorFactory(mockLocatorFactory).setResourceAuthorizationManager( mockAuthorizationManager)).build();",
+    "conflict": "return new InjectorBuilder(new BaseWroManagerFactory().setLocatorFactory(mockUriLocatorFactory)).setResourceAuthorizationManager( mockAuthorizationManager).build();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46503,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.support.MutableResourceAuthorizationManager;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.support.MutableResourceAuthorizationManager;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.support.ResourceAuthorizationManager;"
+  },
+  {
+    "devdecision": "None",
+    "id": 46508,
+    "v2": "import java.io.InputStream;",
+    "resolution": "import junit.framework.Assert;",
+    "conflict": "import java.util.Arrays; import java.util.Collection; import java.util.Collections; import java.util.List;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46531,
+    "v2": "public void shouldCreateHelperWithPreProcessor() { new ProcessorDecorator(new ResourcePreProcessor() { public void process(final Resource resource, final Reader reader, final Writer writer)",
+    "resolution": "public void shouldDecorateAProcessor() { new ProcessorDecorator(new ResourceProcessor() { public void process(final Resource resource, final Reader reader, final Writer writer)",
+    "conflict": "public void shouldDecorateAProcessor() { new ProcessorDecorator(new ResourceProcessor() { public void process(Resource resource, Reader reader, Writer writer)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46536,
+    "v2": "private ResourcePreProcessor initializeProcessor() { final ProcessorDecorator processor = new ProcessorDecorator(createNodeProcessor()); return processor.isSupported() ? processor : createRhinoProcessor();",
+    "resolution": "private ResourceProcessor initializeProcessor() { final ProcessorDecorator processor = new ProcessorDecorator(createNodeProcessor()); return processor.isSupported() ? processor : createRhinoProcessor();",
+    "conflict": "private ResourceProcessor initializeProcessor() { final NodeLessCssProcessor nodeProcessor = createNodeProcessor(); return nodeProcessor.isSupported() ? nodeProcessor : createRhinoProcessor();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46575,
+    "v2": "if (System.getProperty(\"os.name\").contains(\"Windows\")) new ProcessBuilder(\"cmd\",\"/s\",SHELL_COMMAND).start(); else new ProcessBuilder(SHELL_COMMAND).start();",
+    "resolution": "new ProcessBuilder(getCommandLine(\"\")).start();",
+    "conflict": "new ProcessBuilder(getCommandLine(\"\")).start();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46587,
+    "v2": "managerFactory = new BaseWroManagerFactory().setModelFactory(getValidModelFactory());",
+    "resolution": "managerFactory = new BaseWroManagerFactory().setModelFactory(getValidModelFactory());",
+    "conflict": "managerFactory = new InjectableWroManagerFactoryDecorator( new BaseWroManagerFactory().setModelFactory(getValidModelFactory())); MockitoAnnotations.initMocks(this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46589,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { throw new IOException();",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new ClasspathResourceLocator(\"INVALID\");",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new ClasspathResourceLocator(\"INVALID\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46591,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return getClass().getResourceAsStream(\"wroWithHiphen.groovy\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"wroWithHiphen.groovy\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"wroWithHiphen.groovy\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46592,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return getClass().getResourceAsStream(\"wroGroupRefOrder.groovy\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"wroGroupRefOrder.groovy\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"wroGroupRefOrder.groovy\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46593,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return getClass().getResourceAsStream(\"wroRecursiveReference.groovy\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"wroRecursiveReference.groovy\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"wroRecursiveReference.groovy\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46594,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return getClass().getResourceAsStream(\"wroDuplicateGroupName.groovy\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"wroDuplicateGroupName.groovy\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"wroDuplicateGroupName.groovy\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46595,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return getClass().getResourceAsStream(\"IncompleteWro.groovy\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"IncompleteWro.groovy\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"IncompleteWro.groovy\"));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46601,
+    "v2": "private CacheEntry cacheEntry = new CacheEntry(GROUP_NAME, ResourceType.JS, true); private ResourceWatcher victim; @Mock private UriLocator mockLocator;",
+    "resolution": "private final CacheEntry cacheEntry = new CacheEntry(GROUP_NAME, ResourceType.JS, true); private ResourceWatcher victim;",
+    "conflict": "private ResourceWatcherRunnable victim; private static ResourceLocator mockLocator;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46650,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.model.resource.locator.support.LocatorProvider; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.support.LocatorProvider; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46655,
+    "v2": "import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.model.resource.locator.support.DispatcherStreamLocator;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46670,
+    "v2": "* * @param e *          {@link RuntimeException} thrown during request processing. * @deprecated use {@link WroFilter#onException(Exception, HttpServletResponse, FilterChain)}",
+    "resolution": "* * @param e *          {@link RuntimeException} thrown during request processing. * @deprecated use {@link WroFilter#onException(Exception, HttpServletResponse, FilterChain)}",
+    "conflict": "* * @param e {@link RuntimeException} thrown during request processing."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46671,
+    "v2": "import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.locator.factory.ConfigurableLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.factory.ConfigurableLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46683,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.decorator.ProcessorDecorator;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ProcessorProvider; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46692,
+    "v2": "AbstractConfigurableMultipleStrategy.createItemsAsString(JSMinProcessor.ALIAS, CssImportPreProcessor.ALIAS, CssVariablesProcessor.ALIAS)); final List<ResourcePreProcessor> list = (List<ResourcePreProcessor>) processorsFactory.getPreProcessors();",
+    "resolution": "AbstractConfigurableMultipleStrategy.createItemsAsString(JSMinProcessor.ALIAS, CssImportPreProcessor.ALIAS, CssVariablesProcessor.ALIAS)); final List<ResourceProcessor> list = (List<ResourceProcessor>) processorsFactory.getPreProcessors();",
+    "conflict": "JSMinProcessor.ALIAS + \",\" + CssImportPreProcessor.ALIAS + \",\" + CssVariablesProcessor.ALIAS); final List<ResourceProcessor> list = (List<ResourceProcessor>) processorsFactory.getPreProcessors();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46695,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ProcessorProvider; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46706,
+    "v2": "throws IOException, ServletException { final HttpServletRequest request = (HttpServletRequest) req; final HttpServletResponse response = (HttpServletResponse) res;",
+    "resolution": "throws IOException, ServletException { final HttpServletRequest request = (HttpServletRequest)req; final HttpServletResponse response = (HttpServletResponse)res;",
+    "conflict": "throws IOException, ServletException { final HttpServletRequest request = (HttpServletRequest)req; final HttpServletResponse response = (HttpServletResponse)res;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46712,
+    "v2": "import javax.servlet.ServletContext;  import ro.isdc.wro.WroRuntimeException; import ro.isdc.wro.config.ReadOnlyContext;",
+    "resolution": "import ro.isdc.wro.config.ReadOnlyContext;",
+    "conflict": "import ro.isdc.wro.config.Context;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46738,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.DefaultUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory;",
+    "resolution": "import ro.isdc.wro.model.group.processor.InjectorBuilder; import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;",
+    "conflict": "import ro.isdc.wro.model.group.processor.InjectorBuilder; import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46754,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.support.ResourceAuthorizationManager;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.support.ResourceAuthorizationManager;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.impl.css.CssUrlRewritingProcessor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46770,
+    "v2": "import ro.isdc.wro.model.resource.locator.ClasspathUriLocator; import ro.isdc.wro.model.resource.locator.ServletContextUriLocator; import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.locator.factory.SimpleUriLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ClasspathUriLocator; import ro.isdc.wro.model.resource.locator.ServletContextUriLocator; import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46774,
+    "v2": "createManager();  configureValidUriLocators(mockFilterConfig); Mockito.when(mockFilterConfig.getInitParameter(ConfigurableProcessorsFactory.PARAM_PRE_PROCESSORS)).thenReturn(",
+    "resolution": "createManager();  configureValidUriLocators(mockFilterConfig); Mockito.when(mockFilterConfig.getInitParameter(ConfigurableProcessorsFactory.PARAM_PRE_PROCESSORS)).thenReturn(",
+    "conflict": "final FilterConfig filterConfig = Mockito.mock(FilterConfig.class); Mockito.when(filterConfig.getInitParameter(ConfigurableProcessorsFactory.PARAM_PRE_PROCESSORS)).thenReturn("
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46788,
+    "v2": "throws ServletException {}",
+    "resolution": "throws ServletException { }",
+    "conflict": "throws ServletException { }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46824,
+    "v2": "initFilterWithValidConfig(); final HttpServletRequest request = Mockito.mock(HttpServletRequest.class, Mockito.RETURNS_DEEP_STUBS); Mockito.when(request.getRequestURI()).thenReturn(PATH_API + \"/someMethod\");",
+    "resolution": "initChainOnErrorFilter(); Mockito.when(mockRequest.getRequestURI()).thenReturn(ReloadCacheRequestHandler.PATH_API + \"/someMethod\");",
+    "conflict": "initChainOnErrorFilter(); Mockito.when(mockRequest.getRequestURI()).thenReturn(ReloadCacheRequestHandler.PATH_API + \"/someMethod\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46825,
+    "v2": "initFilterWithValidConfig(); final HttpServletRequest request = Mockito.mock(HttpServletRequest.class, Mockito.RETURNS_DEEP_STUBS); Mockito.when(request.getRequestURI()).thenReturn(PATH_API + \"/someMethod\");",
+    "resolution": "initChainOnErrorFilter(); Mockito.when(mockRequest.getRequestURI()).thenReturn(ReloadCacheRequestHandler.PATH_API + \"/someMethod\");",
+    "conflict": "initChainOnErrorFilter(); Mockito.when(mockRequest.getRequestURI()).thenReturn(ReloadCacheRequestHandler.PATH_API + \"/someMethod\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46831,
+    "v2": "import ro.isdc.wro.model.resource.processor.impl.css.CssUrlRewritingProcessor; import ro.isdc.wro.model.resource.support.hash.CRC32HashStrategy; import ro.isdc.wro.model.resource.support.hash.MD5HashStrategy;",
+    "resolution": "import ro.isdc.wro.model.resource.support.hash.CRC32HashStrategy; import ro.isdc.wro.model.resource.support.hash.MD5HashStrategy;",
+    "conflict": "import ro.isdc.wro.model.resource.util.CRC32HashBuilder; import ro.isdc.wro.model.resource.util.MD5HashBuilder;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46838,
+    "v2": "import ro.isdc.wro.model.resource.processor.ProcessorProvider; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ProcessorProvider; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ProcessorsProvider; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46840,
+    "v2": "final Map<String, ResourcePreProcessor> resultMap = new HashMap<String, ResourcePreProcessor>(); final List<ProcessorProvider> providers = getProcessorProviderFinder().find(); for (ProcessorProvider provider : providers) {",
+    "resolution": "final Map<String, ResourceProcessor> resultMap = new HashMap<String, ResourceProcessor>(); final List<ProcessorProvider> providers = getProcessorProviderFinder().find(); for (ProcessorProvider provider : providers) {",
+    "conflict": "final Map<String, ResourceProcessor> resultMap = new HashMap<String, ResourceProcessor>(); final List<ProcessorsProvider> providers = discoverProcessorsProviders(); for (ProcessorsProvider provider : providers) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46841,
+    "v2": "final Map<String, ResourcePostProcessor> resultMap = new HashMap<String, ResourcePostProcessor>(); final List<ProcessorProvider> providers = getProcessorProviderFinder().find(); for (ProcessorProvider provider : providers) {",
+    "resolution": "final Map<String, ResourceProcessor> resultMap = new HashMap<String, ResourceProcessor>(); final List<ProcessorProvider> providers = getProcessorProviderFinder().find(); for (ProcessorProvider provider : providers) {",
+    "conflict": "final Map<String, ResourceProcessor> resultMap = new HashMap<String, ResourceProcessor>(); final List<ProcessorsProvider> providers = discoverProcessorsProviders(); for (ProcessorsProvider provider : providers) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46842,
+    "v2": "import ro.isdc.wro.model.resource.processor.ProcessorProvider; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.decorator.ProcessorDecorator;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ProcessorProvider; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ProcessorsProvider; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46847,
+    "v2": "import ro.isdc.wro.model.resource.processor.ProcessorProvider; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ProcessorProvider; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ProcessorsProvider; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46861,
+    "v2": "final String dataUri = getDataUriGenerator().generateDataURI(uriLocatorFactory.locate(fullPath), fileName); if (isReplaceAccepted(dataUri)) {",
+    "resolution": "final InputStream inputStream = resourceLocatorFactory.locate(fullPath).getInputStream(); final String dataUri = getDataUriGenerator().generateDataURI(inputStream, fileName); if (isReplaceAccepted(dataUri)) {",
+    "conflict": "final InputStream inputStream = resourceLocatorFactory.locate(fullPath).getInputStream(); final String dataUri = getDataUriGenerator().generateDataURI(inputStream, fileName); if (replaceWithDataUri(dataUri)) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46871,
+    "v2": "private static final Pattern PATTERN_ACCEPT_ENCODING = Pattern.compile(loadRegexpWithKey(\"requestHeader.acceptEncoding\")); private static final Pattern PATTERN_GZIP = Pattern.compile(loadRegexpWithKey(\"requestHeader.gzip\"));",
+    "resolution": "private static final Pattern PATTERN_ACCEPT_ENCODING = Pattern.compile(loadRegexpWithKey(\"requestHeader.acceptEncoding\")); private static final Pattern PATTERN_GZIP = Pattern.compile(loadRegexpWithKey(\"requestHeader.gzip\"));",
+    "conflict": "private static final Pattern PATTERN_ACCEPT_ENCODING = Pattern.compile(\"(?im)^(Accept-Encoding|Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$\"); private static final Pattern PATTERN_GZIP = Pattern.compile(\"(?im)^((gzip|deflate)\\\\s?,?\\\\s?(gzip|deflate)?.*|X{4,13}|~{4,13}|-{4,13})$\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46880,
+    "v2": "public class TestFallbackCssDataUriProcessor extends TestCssDataUriPreProcessor { private ResourcePreProcessor processor;",
+    "resolution": "public class TestFallbackCssDataUriProcessor extends TestCssDataUriPreProcessor { private ResourceProcessor processor;",
+    "conflict": "public class TestFallbackCssDataUriProcessor { private ResourceProcessor processor;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 46882,
+    "v2": "import ro.isdc.wro.model.transformer.WildcardExpanderModelTransformer; import ro.isdc.wro.util.Transformer;",
+    "resolution": "import ro.isdc.wro.model.transformer.WildcardExpanderModelTransformer; import ro.isdc.wro.util.Transformer;import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46898,
+    "v2": "private Map<String, ResourcePreProcessor> preProcessorsMap; private Map<String, ResourcePostProcessor> postProcessorsMap;",
+    "resolution": "private Map<String, ResourceProcessor> preProcessorsMap; private Map<String, ResourceProcessor> postProcessorsMap;",
+    "conflict": "private Map<String, ResourceProcessor> preProcessorsMap; private Map<String, ResourceProcessor> postProcessorsMap;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46905,
+    "v2": "public static void runConcurrently(final Callable<Void> task) throws Exception { runConcurrently(task, 50);",
+    "resolution": "public static void runConcurrently(final Callable<Void> task) throws Exception { runConcurrently(task, 50);",
+    "conflict": "public static void runConcurrently(final Callable<Void> task) throws Exception { runConcurrently(task, 100);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46949,
+    "v2": "",
+    "resolution": "",
+    "conflict": "@Test public void testRubySassPostProcessor() throws IOException { final URL url = getClass().getResource(\"rubysass\"); final ResourceProcessor processor = new RubySassCssProcessor();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 46967,
+    "v2": "Reader reader = new StringReader(content.toString()); Writer writer = null;",
+    "resolution": "Reader reader = new StringReader(content.toString()); Writer writer = null;",
+    "conflict": "Reader input = new StringReader(content.toString()); Writer output = null;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46977,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.decorator.ExtensionsAwareProcessorDecorator;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.decorator.ExtensionsAwareProcessorDecorator;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.impl.ExtensionsAwareProcessorDecorator;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 46978,
+    "v2": "public class JSMinProcessor implements ResourcePreProcessor, ResourcePostProcessor {",
+    "resolution": "public class JSMinProcessor implements ResourceProcessor { private static final Logger LOG = LoggerFactory.getLogger(JSMinProcessor.class);",
+    "conflict": "public class JSMinProcessor implements ResourceProcessor { private static final Logger LOG = LoggerFactory.getLogger(JSMinProcessor.class);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46982,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.SimpleUriLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.decorator.ExtensionsAwareProcessorDecorator; import ro.isdc.wro.model.resource.processor.decorator.ProcessorDecorator;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.decorator.ExtensionsAwareProcessorDecorator;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46984,
+    "v2": "Collection<ResourcePreProcessor> list = processorsFactory.getPreProcessors(); Assert.assertEquals(1, list.size()); Assert.assertEquals(CssMinProcessor.class, list.iterator().next().getClass());",
+    "resolution": "Collection<ResourceProcessor> list = processorsFactory.getPreProcessors(); Assert.assertEquals(1, list.size()); Assert.assertEquals(CssMinProcessor.class, list.iterator().next().getClass());",
+    "conflict": "Assert.assertEquals(1, processorsFactory.getPreProcessors().size()); Assert.assertEquals(CssMinProcessor.class, processorsFactory.getPreProcessors().toArray(new ResourceProcessor[] {})[0].getClass());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 46986,
+    "v2": "import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.locator.factory.SimpleUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.decorator.CopyrightKeeperProcessorDecorator;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.support.AbstractResourceLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46989,
+    "v2": "final ResourcePreProcessor decoratedProcessor = new CssMinProcessor(); final ResourcePreProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); final URL url = TestProcessorsUtils.class.getResource(\"copyright\");",
+    "resolution": "final ResourceProcessor decoratedProcessor = new CssMinProcessor(); final ResourceProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); final URL url = TestProcessorsUtils.class.getResource(\"copyright\");",
+    "conflict": "final ResourceProcessor decoratedProcessor = new CssMinProcessor(); final ResourceProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); final URL url = getClass().getResource(\"copyright\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46992,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.decorator.ExtensionsAwareProcessorDecorator;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.decorator.ExtensionsAwareProcessorDecorator;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.impl.ExtensionsAwareProcessorDecorator;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 46993,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.decorator.LazyProcessorDecorator; import ro.isdc.wro.model.resource.processor.decorator.ProcessorDecorator;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.decorator.LazyProcessorDecorator;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.impl.LazyProcessorDecorator;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47003,
+    "v2": "private UriLocatorFactory uriLocatorFactory;",
+    "resolution": "private ResourceLocatorFactory resourceLocatorFactory;",
+    "conflict": "private ResourceLocatorFactory resourceLocatorFactory;"
+  },
+  {
+    "devdecision": "None",
+    "id": 47027,
+    "v2": "import java.io.IOException; import java.io.InputStream;",
+    "resolution": "* A base class for template processors like: dustJS or hoganJS.",
+    "conflict": "public abstract class JsTemplateCompiler { private ScriptableObject scope;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47057,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.util.StopWatch;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.util.StopWatch;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47059,
+    "v2": "final String result = preProcessorExecutor.processAndMerge(filteredGroup.getResources(), cacheKey.isMinimize()); return doPostProcess(result, cacheKey);",
+    "resolution": "final String result = preProcessorExecutor.processAndMerge(filteredGroup, cacheKey.isMinimize()); return doPostProcess(group, result, cacheKey);",
+    "conflict": "final String result = decorateWithMergeCallback(preProcessorExecutor).processAndMerge( filteredGroup, minimize); return doPostProcess(group, type, result, minimize);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47063,
+    "v2": "decorateWithPostProcessCallback(processor).process(input, output);",
+    "resolution": "decorateWithPostProcessCallback(processor).process(mergedResource, input, output);",
+    "conflict": "decorateWithPostProcessCallback(processor).process(mergedResource, input, output);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47072,
+    "v2": "final String processedImageUrl = cleanImageUrl.startsWith(ServletContextUriLocator.PREFIX) ? cleanImageUrl.substring(1) : cleanImageUrl;",
+    "resolution": "final String processedImageUrl = cleanImageUrl.startsWith(ServletContextResourceLocator.PREFIX) ? cleanImageUrl.substring(1) : cleanImageUrl;",
+    "conflict": "final String processedImageUrl = cleanImageUrl.startsWith(ServletContextResourceLocator.PREFIX) ? cleanImageUrl.substring(1) : cleanImageUrl;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47079,
+    "v2": "factory.setProcessorsFactory(new SimpleProcessorsFactory().addPostProcessor(processor)); final Injector injector = InjectorBuilder.create(factory).build();",
+    "resolution": "factory.setProcessorsFactory(new SimpleProcessorsFactory().addPreProcessor(processor).addPostProcessor(processor)); final Injector injector = InjectorBuilder.create(factory).build();",
+    "conflict": "factory.setProcessorsFactory(new SimpleProcessorsFactory().addPreProcessor(processor).addPostProcessor(processor)); final WroManager manager = factory.create(); final Injector injector = new InjectorBuilder(manager).build();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47087,
+    "v2": "protected InputStream getModelResourceAsStream() { return Thread.currentThread().getContextClassLoader().getResourceAsStream(\"wro1.xml\"); }",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(Thread.currentThread().getContextClassLoader().getResource(\"wro1.xml\")); };",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(Thread.currentThread().getContextClassLoader().getResource(\"wro1.xml\")); };"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47088,
+    "v2": "protected InputStream getModelResourceAsStream() { // get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"wro-minimizeAttribute.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"wro-minimizeAttribute.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"wro-minimizeAttribute.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47089,
+    "v2": "protected InputStream getModelResourceAsStream() { // get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"testimport/validImports.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/validImports.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/validImports.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47090,
+    "v2": "protected InputStream getModelResourceAsStream() { // get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"testimport/recursive.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/recursive.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/recursive.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47091,
+    "v2": "protected InputStream getModelResourceAsStream() { // get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"testimport/deepRecursive.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/deepRecursive.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/deepRecursive.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47092,
+    "v2": "protected InputStream getModelResourceAsStream() { // get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"testimport/circular1.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/circular1.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/circular1.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47093,
+    "v2": "protected InputStream getModelResourceAsStream() { // get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"testimport/invalidImports.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/invalidImports.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/invalidImports.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47095,
+    "v2": "",
+    "resolution": "/** * When a wildcard uri is used to import wro.xml, the resulted xml to parse won't be valid, because it will contain * merged content. */",
+    "conflict": "/** * When a wildcard uri is used to import wro.xml, the resulted xml to parse won't be valid, because it will contain * merged content. */"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47097,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.DefaultUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactoryDecorator;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47099,
+    "v2": "Assert.assertNotNull(sample.preProcessorExecutor); Assert.assertSame(processorsFactory, AbstractDecorator.getOriginalDecoratedObject(sample.processorsFactory)); Assert.assertSame(uriLocatorFactory, AbstractDecorator.getOriginalDecoratedObject(sample.uriLocatorFactor));",
+    "resolution": "Assert.assertNotNull(sample.preProcessorExecutor); Assert.assertSame(processorsFactory, AbstractDecorator.getOriginalDecoratedObject(sample.processorsFactory)); Assert.assertSame(resourceLocatorFactory, AbstractDecorator.getOriginalDecoratedObject(sample.resourceLocatorFactory));",
+    "conflict": "Assert.assertSame(preProcessorExecutor, sample.preProcessorExecutor); Assert.assertSame(processorsFactory, ((ProcessorsFactoryDecorator) sample.processorsFactory).getDecoratedObject()); Assert.assertSame(resourceLocatorFactory, ((UriLocatorFactoryDecorator) sample.resourceLocatorFactory).getDecoratedObject());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47103,
+    "v2": "import ro.isdc.wro.util.WroTestUtils;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.AbstractResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.AbstractResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47104,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { throw new IOException();",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new ClasspathResourceLocator(\"INVALID.json\");",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new ClasspathResourceLocator(\"INVALID.json\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47106,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return TestGroovyModelFactory.class.getResourceAsStream(\"wro.json\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestJsonModelFactory.class.getResource(\"wro.json\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestJsonModelFactory.class.getResource(\"wro.json\"));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47107,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return getClass().getResourceAsStream(\"incomplete-wro.json\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestJsonModelFactory.class.getResource(\"incomplete-wro.json\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestJsonModelFactory.class.getResource(\"incomplete-wro.json\"));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47111,
+    "v2": "import ro.isdc.wro.manager.WroManager; import ro.isdc.wro.model.resource.locator.factory.SimpleUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactoryDecorator; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.manager.WroManager; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47133,
+    "v2": "if (getWildcardStreamLocator().hasWildcard(uri)) { final ServletContext servletContext = context.getServletContext(); final String fullPath = FilenameUtils.getFullPath(uri);",
+    "resolution": "if (getWildcardStreamLocator().hasWildcard(path)) { final String fullPath = FilenameUtils.getFullPath(path);",
+    "conflict": "if (getWildcardStreamLocator().hasWildcard(path)) { final String fullPath = FilenameUtils.getFullPath(path);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47139,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.DefaultUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47148,
+    "v2": "WroConfiguration config = Context.get().getConfig();",
+    "resolution": "WroConfiguration config = Context.get().getConfig();",
+    "conflict": "final WroConfiguration config = Context.get().getConfig(); watch.start(\"parallel preProcessing\"); config.setParallelPreprocessing(true);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47151,
+    "v2": "final ResourcePreProcessor decoratedProcessor = new JSMinProcessor(); final ResourcePreProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); Assert.assertTrue(new ProcessorDecorator(processor).isMinimize());",
+    "resolution": "final ResourceProcessor decoratedProcessor = new JSMinProcessor(); final ResourceProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); Assert.assertTrue(new ProcessorDecorator(processor).isMinimize());",
+    "conflict": "final ResourceProcessor decoratedProcessor = new JSMinProcessor(); final ResourceProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); Assert.assertEquals(true, ProcessorsUtils.isMinimizeAwareProcessor(processor));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47152,
+    "v2": "final ResourcePreProcessor decoratedProcessor = new CssUrlRewritingProcessor(); final ResourcePreProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); Assert.assertFalse(new ProcessorDecorator(processor).isMinimize());",
+    "resolution": "final ResourceProcessor decoratedProcessor = new CssUrlRewritingProcessor(); final ResourceProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); Assert.assertFalse(new ProcessorDecorator(processor).isMinimize());",
+    "conflict": "final ResourceProcessor decoratedProcessor = new CssUrlRewritingProcessor(); final ResourceProcessor processor = CopyrightKeeperProcessorDecorator.decorate(decoratedProcessor); Assert.assertEquals(false, ProcessorsUtils.isMinimizeAwareProcessor(processor));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47153,
+    "v2": "final ResourcePreProcessor decoratedProcessor = new JSMinProcessor(); final ResourcePreProcessor processor = ExtensionsAwareProcessorDecorator.decorate(decoratedProcessor); Assert.assertTrue(new ProcessorDecorator(processor).isMinimize());",
+    "resolution": "final ResourceProcessor decoratedProcessor = new JSMinProcessor(); final ResourceProcessor processor = ExtensionsAwareProcessorDecorator.decorate(decoratedProcessor); Assert.assertTrue(new ProcessorDecorator(processor).isMinimize());",
+    "conflict": "final ResourceProcessor decoratedProcessor = new JSMinProcessor(); final ResourceProcessor processor = ExtensionsAwareProcessorDecorator.decorate(decoratedProcessor); Assert.assertTrue(ProcessorsUtils.isMinimizeAwareProcessor(processor));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47154,
+    "v2": "final ResourcePreProcessor decoratedProcessor = new CssUrlRewritingProcessor(); final ResourcePreProcessor processor = ExtensionsAwareProcessorDecorator.decorate(decoratedProcessor); Assert.assertFalse(new ProcessorDecorator(processor).isMinimize());",
+    "resolution": "final ResourceProcessor decoratedProcessor = new CssUrlRewritingProcessor(); final ResourceProcessor processor = ExtensionsAwareProcessorDecorator.decorate(decoratedProcessor); Assert.assertFalse(new ProcessorDecorator(processor).isMinimize());",
+    "conflict": "final ResourceProcessor decoratedProcessor = new CssUrlRewritingProcessor(); final ResourceProcessor processor = ExtensionsAwareProcessorDecorator.decorate(decoratedProcessor); Assert.assertFalse(ProcessorsUtils.isMinimizeAwareProcessor(processor));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47163,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.impl.LazyProcessorDecorator; import ro.isdc.wro.model.resource.processor.support.ProcessorDecorator; import ro.isdc.wro.util.LazyInitializer;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.impl.LazyProcessorDecorator; import ro.isdc.wro.util.LazyInitializer;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47168,
+    "v2": "protected Map<String, ResourcePreProcessor> createPreProcessorsMap() { final Map<String, ResourcePreProcessor> map = ProcessorsUtils.createPreProcessorsMap(); ExtensionsConfigurableWroManagerFactory.populateMapWithExtensionsProcessors(map);",
+    "resolution": "protected Map<String, ResourceProcessor> createPreProcessorsMap() { final Map<String, ResourceProcessor> map = ProcessorsUtils.createProcessorsMap(); ExtensionsConfigurableWroManagerFactory.populateMapWithExtensionsProcessors(map);",
+    "conflict": "protected Map<String, ResourceProcessor> createPreProcessorsMap() { final Map<String, ResourceProcessor> map = ProcessorsUtils.createProcessorsMap(); ExtensionsConfigurableWroManagerFactory.pupulateMapWithExtensionsProcessors(map);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47169,
+    "v2": "protected Map<String, ResourcePostProcessor> createPostProcessorsMap() { final Map<String, ResourcePostProcessor> map = ProcessorsUtils.createPostProcessorsMap(); ExtensionsConfigurableWroManagerFactory.populateMapWithExtensionsPostProcessors(map);",
+    "resolution": "protected Map<String, ResourceProcessor> createPostProcessorsMap() { final Map<String, ResourceProcessor> map = ProcessorsUtils.createProcessorsMap(); ExtensionsConfigurableWroManagerFactory.populateMapWithExtensionsProcessors(map);",
+    "conflict": "protected Map<String, ResourceProcessor> createPostProcessorsMap() { final Map<String, ResourceProcessor> map = ProcessorsUtils.createProcessorsMap(); ExtensionsConfigurableWroManagerFactory.pupulateMapWithExtensionsProcessors(map);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47233,
+    "v2": "",
+    "resolution": "import org.mockito.invocation.InvocationOnMock; import org.mockito.stubbing.Answer;  import ro.isdc.wro.config.Context; import ro.isdc.wro.model.resource.locator.support.DispatcherStreamLocator;",
+    "conflict": "import org.mockito.invocation.InvocationOnMock; import org.mockito.stubbing.Answer;  import ro.isdc.wro.config.Context; import ro.isdc.wro.model.resource.locator.support.DispatcherStreamLocator;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47244,
+    "v2": "long sequentialExecution = watch.getLastTaskTimeMillis();  String message = \"Processing details: \\n\" + watch.prettyPrint();",
+    "resolution": "final long sequentialExecution = watch.getLastTaskTimeMillis();  final String message = \"Processing details: \\n\" + watch.prettyPrint();",
+    "conflict": "final long sequentialExecution = watch.getLastTaskTimeMillis();  final String message = \"Processing details: \\n\" + watch.prettyPrint();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47271,
+    "v2": "private static void compareFromDifferentFolders(final File sourceFolder, final File targetFolder, final IOFileFilter fileFilter, final Transformer<String> toTargetFileName, final ResourcePreProcessor preProcessor) throws IOException {",
+    "resolution": "private static void compareFromDifferentFolders(final File sourceFolder, final File targetFolder, final IOFileFilter fileFilter, final Transformer<String> toTargetFileName, final ResourceProcessor preProcessor) throws IOException {",
+    "conflict": "public static void compareFromDifferentFolders(final File sourceFolder, final File targetFolder, final IOFileFilter fileFilter, final Transformer<String> toTargetFileName, final ResourceProcessor preProcessor) throws IOException {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47301,
+    "v2": "implements ResourcePreProcessor, ResourcePostProcessor { private static final Logger LOG = LoggerFactory.getLogger(JawrCssMinifierProcessor.class); public static final String ALIAS = \"cssMinJawr\";",
+    "resolution": "implements ResourceProcessor { private static final Logger LOG = LoggerFactory.getLogger(JawrCssMinifierProcessor.class); public static final String ALIAS = \"cssMinJawr\";",
+    "conflict": "implements ResourceProcessor { public static final String ALIAS = \"cssMinJawr\";"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47303,
+    "v2": "public class JSMinProcessor implements ResourcePreProcessor, ResourcePostProcessor { private static final Logger LOG = LoggerFactory.getLogger(JSMinProcessor.class);",
+    "resolution": "public class JSMinProcessor implements ResourceProcessor { private static final Logger LOG = LoggerFactory.getLogger(JSMinProcessor.class);",
+    "conflict": "public class JSMinProcessor implements ResourceProcessor {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47307,
+    "v2": "import ro.isdc.wro.model.group.processor.InjectorBuilder; import ro.isdc.wro.model.resource.locator.factory.DefaultUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.group.processor.InjectorBuilder;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47309,
+    "v2": "import ro.isdc.wro.model.group.processor.InjectorBuilder.InjectorObjectFactory;",
+    "resolution": "import ro.isdc.wro.model.group.processor.InjectorBuilder.InjectorObjectFactory;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.factory.InjectorResourceLocatorFactoryDecorator; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.processor.factory.ProcessorsFactory; import ro.isdc.wro.model.resource.util.NamingStrategy;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47319,
+    "v2": "Context.webContext(request, Mockito.mock(HttpServletResponse.class, Mockito.RETURNS_DEEP_STUBS), Mockito.mock(FilterConfig.class)), newConfigWithUpdatePeriodValue(0)); managerFactory.create().process();",
+    "resolution": "Context.webContext(request, Mockito.mock(HttpServletResponse.class, Mockito.RETURNS_DEEP_STUBS), Mockito.mock(FilterConfig.class)), newConfigWithUpdatePeriodValue(0)); managerFactory.create().process();",
+    "conflict": "Context.webContext(request, Mockito.mock(HttpServletResponse.class, Mockito.RETURNS_DEEP_STUBS), Mockito.mock(FilterConfig.class)), newConfigWithUpdatePeriodValue(0)); manager.process();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47340,
+    "v2": "public void shouldUglifyFiles() throws IOException { final ResourcePostProcessor processor = new UglifyJsProcessor();",
+    "resolution": "public void shouldUglifyFiles() throws IOException { final ResourceProcessor processor = new UglifyJsProcessor();",
+    "conflict": "public void testFromFolder() throws IOException { final ResourceProcessor processor = new UglifyJsProcessor();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47344,
+    "v2": "decorateWithPostProcessCallback(processor).process(input, output);",
+    "resolution": "decorateWithPostProcessCallback(processor).process(mergedResource, input, output);",
+    "conflict": "decorateWithPostProcessCallback(processor).process(mergedResource, input, output);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47350,
+    "v2": "final Collection<ResourcePreProcessor> input = Collections.EMPTY_LIST; final Collection<ResourcePreProcessor> output = ProcessorsUtils.filterProcessorsToApply(true, ResourceType.CSS, input);",
+    "resolution": "final Collection<ResourcePreProcessor> input = Collections.EMPTY_LIST; final Collection<ResourcePreProcessor> output = ProcessorsUtils.filterProcessorsToApply(true, ResourceType.CSS, input);",
+    "conflict": "final Collection<ResourceProcessor> input = Collections.EMPTY_LIST; final Collection<ResourceProcessor> output = ProcessorsUtils.getProcessorsByType(ResourceType.CSS, input);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47359,
+    "v2": "private String applyPostProcessors(final Collection<ResourcePostProcessor> processors, final String content) throws IOException {",
+    "resolution": "private String applyPostProcessors(final Resource mergedResource, final Collection<ResourceProcessor> processors, final String content) throws IOException {",
+    "conflict": "private String applyPostProcessors(final Resource mergedResource, final Collection<ResourceProcessor> processors, final String content) throws IOException {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47372,
+    "v2": "final String postProcessedResult = applyPostProcessors(type, result, minimize);  callbackRegistry.onAfterProcess();",
+    "resolution": "final String postProcessedResult = applyPostProcessors(filteredGroup, type, result, minimize);  callbackRegistry.onAfterProcess();",
+    "conflict": "final String postProcessedResult = applyPostProcessors(filteredGroup, type, result, minimize);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47382,
+    "v2": "public class JSMinProcessor implements ResourcePreProcessor, ResourcePostProcessor {",
+    "resolution": "public class JSMinProcessor implements ResourceProcessor { public static final String ALIAS = \"jsMin\";",
+    "conflict": "public class JSMinProcessor implements ResourceProcessor { private static final Logger LOG = LoggerFactory.getLogger(JSMinProcessor.class);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47383,
+    "v2": "import ro.isdc.wro.model.WroModel; import ro.isdc.wro.model.factory.WroModelFactory; import ro.isdc.wro.model.resource.Resource; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.WroModel; import ro.isdc.wro.model.factory.WroModelFactory; import ro.isdc.wro.model.resource.Resource; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47389,
+    "v2": "public final void onModelPeriodChanged(final long period) { LOG.info(\"onModelPeriodChanged with value {} has been triggered!\", period);",
+    "resolution": "public final void onModelPeriodChanged(final long period) { LOG.info(\"onModelPeriodChanged with value {} has been triggered!\", period);",
+    "conflict": "public final void onModelPeriodChanged() { LOG.info(\"ModelChange event triggered!\"); //trigger model destroy"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47392,
+    "v2": "private final List<Resource> getFilteredResources(final Group group, final ResourceType type) {",
+    "resolution": "private final void filterResources(final Group group, final ResourceType type) { final List<Resource> allResources = new ArrayList<Resource>(); allResources.addAll(group.getResources());",
+    "conflict": "private final void filterResources(final Group group, final ResourceType type) { final List<Resource> allResources = new ArrayList<Resource>(); allResources.addAll(group.getResources());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47445,
+    "v2": "final ResourcePostProcessor processor = new JsHintProcessor() { protected void onLinterException(final LinterException e, final Resource resource) throws Exception {",
+    "resolution": "final ResourceProcessor processor = new JsHintProcessor() { @Override protected void onLinterException(final LinterException e, final Resource resource) throws Exception {",
+    "conflict": "final JsHintProcessor processor = new JsHintProcessor() { @Override protected void onJsHintException(final JsHintException e, final Resource resource) throws Exception {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47466,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return TestGroovyModelFactory.class.getResourceAsStream(\"wro.groovy\"); };",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"wro.groovy\")); }",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyModelFactory.class.getResource(\"Wro.groovy\")); }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47487,
+    "v2": "public WroManager setUriLocatorFactory(final UriLocatorFactory uriLocatorFactory) { this.uriLocatorFactory = uriLocatorFactory; return this;",
+    "resolution": "public WroManager setResourceLocatorFactory(final ResourceLocatorFactory resourceLocatorFactory) { this.resourceLocatorFactory = resourceLocatorFactory; return this;",
+    "conflict": "public ResourceLocatorFactory getResourceLocatorFactory() { return resourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47499,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.support.Lessify;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.algorithm.Lessify;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.algorithm.Lessify;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47500,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.support.CssCompressor;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.support.CssCompressor;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.algorithm.CssCompressor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47503,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.support.CSSMin;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.support.CSSMin;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.algorithm.CSSMin;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47504,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.support.JawrCssMinifier;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.algorithm.JawrCssMinifier;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.algorithm.JawrCssMinifier;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47505,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.support.Lessify;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.algorithm.Lessify;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.algorithm.Lessify;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47506,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.support.JSMin;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.algorithm.JSMin;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.algorithm.JSMin;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47508,
+    "v2": "LOG.debug(\"comparing with: {}\", targetFile.getName()); compare(new FileInputStream(file), targetFileStream, new ResourcePostProcessor() { public void process(final Reader reader, final Writer writer)",
+    "resolution": "LOG.debug(\"comparing with: {}\", targetFile.getName()); compare(new FileInputStream(file), targetFileStream, new ResourceProcessor() { public void process(final Resource resource, final Reader reader, final Writer writer)",
+    "conflict": "LOG.debug(\"comparing with: \" + targetFile.getName()); compare(new FileInputStream(file), targetFileStream, new ResourceProcessor() { public void process(final Resource resource, final Reader reader, final Writer writer)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47517,
+    "v2": "inject(wroManager);",
+    "resolution": "inject(wroManager);",
+    "conflict": "public Injector(final ResourceLocatorFactory uriLocatorFactory, final ProcessorsFactory processorsFactory) { Validate.notNull(uriLocatorFactory, \"uriLocatorFactory cannot be null\"); Validate.notNull(processorsFactory, \"processorsFactory cannot be null\"); this.resourceLocatorFactory = new InjectorResourceLocatorFactoryDecorator(uriLocatorFactory, this); this.processorsFactory = new InjectorProcessorsFactoryDecorator(processorsFactory, this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47521,
+    "v2": "private static UriLocatorFactory createDefaultUriLocatorFactory() { return new DefaultUriLocatorFactory();",
+    "resolution": "private static ResourceLocatorFactory createDefaultUriLocatorFactory() { return DefaultResourceLocatorFactory.contextAwareFactory();",
+    "conflict": "private static ResourceLocatorFactory createDefaultUriLocatorFactory() { return DefaultResourceLocatorFactory.contextAwareFactory();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47523,
+    "v2": "public static void initProcessor(final ResourcePostProcessor processor) { final WroManager manager = new BaseWroManagerFactory().setProcessorsFactory(new SimpleProcessorsFactory().addPostProcessor(processor)).create(); final Injector injector = new Injector(manager);",
+    "resolution": "public static void initProcessor(final ResourceProcessor processor) { final WroManager manager = new BaseWroManagerFactory().setProcessorsFactory(new SimpleProcessorsFactory().addPostProcessor(processor)).create(); final Injector injector = new Injector(manager);",
+    "conflict": "public static void initProcessor(final ResourceProcessor processor) { final Injector injector = new Injector( createDefaultUriLocatorFactory(), new SimpleProcessorsFactory().addPreProcessor(processor));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47526,
+    "v2": "import ro.isdc.wro.util.WroTestUtils;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator; import ro.isdc.wro.model.resource.processor.factory.DefaultProcesorsFactory;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator; import ro.isdc.wro.model.resource.processor.factory.DefaultProcesorsFactory;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47562,
+    "v2": "script = new GroovyShell().parse(new InputStreamReader(getModelResourceAsStream())); LOG.debug(\"Parsing groovy script to build the model\");",
+    "resolution": "final InputStream configResource = getModelResourceLocator().getInputStream(); script = new GroovyShell().parse(new InputStreamReader(configResource)); LOG.debug(\"Parsing groovy script to build the model\");",
+    "conflict": "final InputStream configResource = getModelResourceLocator().getInputStream(); script = new GroovyShell().parse(new InputStreamReader(configResource));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47563,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.InjectorUriLocatorFactoryDecorator; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.factory.InjectorResourceLocatorFactoryDecorator; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;",
+    "conflict": "import ro.isdc.wro.model.resource.DuplicateResourceDetector; import ro.isdc.wro.model.resource.locator.factory.InjectorResourceLocatorFactoryDecorator; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47565,
+    "v2": "final InputStream is = new BOMInputStream(uriLocatorFactory.locate(resource.getUri()));",
+    "resolution": "final InputStream is = new BOMInputStream(resourceLocatorFactory.locate(resource.getUri()).getInputStream());",
+    "conflict": "// populate duplicate Resource detector with known used resource uri's for (final Resource r : resources) { duplicateResourceDetector.addResourceUri(r.getUri()); } final InputStream is = new BOMInputStream(resourceLocatorFactory.locate(resource.getUri()).getInputStream());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47573,
+    "v2": "Context.set(Context.standaloneContext()); final UriLocatorFactory uriLocatorFactory = new DefaultUriLocatorFactory(); final Injector injector = new Injector(uriLocatorFactory, processorsFactory);",
+    "resolution": "final ResourceLocatorFactory resourceLocatorFactory = DefaultResourceLocatorFactory.contextAwareFactory(); final Injector injector = new Injector(resourceLocatorFactory, processorsFactory);",
+    "conflict": "final ResourceLocatorFactory resourceLocatorFactory = DefaultResourceLocatorFactory.contextAwareFactory(); final Injector injector = new Injector(resourceLocatorFactory, processorsFactory);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47574,
+    "v2": "import ro.isdc.wro.model.resource.locator.ClasspathUriLocator; import ro.isdc.wro.model.resource.locator.UriLocator;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator;",
+    "conflict": "import ro.isdc.wro.model.resource.DuplicateResourceDetector; import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47582,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return TestGroovyModelFactory.class.getResourceAsStream(\"Wro.groovy\"); };",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyWroModelFactory.class.getResource(\"Wro.groovy\")); }",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyWroModelFactory.class.getResource(\"Wro.groovy\")); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47587,
+    "v2": "",
+    "resolution": "",
+    "conflict": "* Constant for WEB-INF folder. */ private static final String PROTECTED_PREFIX = \"/WEB-INF/\";  /**"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47588,
+    "v2": "if (ServletContextUriLocator.isValid(cssUri)) { if (ServletContextUriLocator.isValid(imageUrl)) {",
+    "resolution": "if (isContextRelativeUri(cssUri)) { if (isContextRelativeUri(imageUrl)) {",
+    "conflict": "LOG.debug(\"replace url for image: \" + imageUrl + \", from css: \" + cssUri); if (isContextRelativeUri(cssUri)) { if (isContextRelativeUri(imageUrl)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47609,
+    "v2": "* @param <T> *          type of processors (pre or post). This can be one of the following: {@link ResourcePreProcessor} or *          {@link ResourcePostProcessor}. * @param map *          to populate.",
+    "resolution": "* @param map to populate.",
+    "conflict": "* @param map to populate."
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47614,
+    "v2": "import ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor;",
+    "resolution": "import ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory; import ro.isdc.wro.model.resource.Resource; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.factory.ConfigurableProcessorsFactory;",
+    "conflict": "import ro.isdc.wro.maven.plugin.support.ConfigurableWroManagerFactory; import ro.isdc.wro.model.resource.Resource; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47616,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return new FileInputStream(standaloneContext.getWroFile());",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new FileSystemResourceLocator(standaloneContext.getWroFile());",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new FileSystemResourceLocator(standaloneContext.getWroFile());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47625,
+    "v2": "protected InputStream getModelResourceAsStream() { return getClass().getResourceAsStream(\"wro.xml\"); }",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(getClass().getResource(\"wro.xml\")); };",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(getClass().getResource(\"wro.xml\")); };"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47628,
+    "v2": "protected InputStream getModelResourceAsStream() { //get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"wro-minimizeAttribute.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"wro-minimizeAttribute.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"wro-minimizeAttribute.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47629,
+    "v2": "protected InputStream getModelResourceAsStream() { //get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"testimport/validImports.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/validImports.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/validImports.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47630,
+    "v2": "protected InputStream getModelResourceAsStream() { //get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"testimport/recursive.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/recursive.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/recursive.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47631,
+    "v2": "protected InputStream getModelResourceAsStream() { //get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"testimport/deepRecursive.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/deepRecursive.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/deepRecursive.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47632,
+    "v2": "protected InputStream getModelResourceAsStream() { //get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"testimport/circular1.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/circular1.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/circular1.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47633,
+    "v2": "protected InputStream getModelResourceAsStream() { //get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"testimport/invalidImports.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/invalidImports.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/invalidImports.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47634,
+    "v2": "protected InputStream getModelResourceAsStream() { // get a class relative test resource return TestXmlModelFactory.class.getResourceAsStream(\"testimport/wildcard.xml\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/wildcard.xml\"));",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestXmlModelFactory.class.getResource(\"testimport/wildcard.xml\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47635,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return new FileInputStream(\"D:\\\\temp\\\\____wro\\\\wro.xml\");",
+    "resolution": "public ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(\"D:\\\\temp\\\\____wro\\\\wro.xml\");",
+    "conflict": "public ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(\"D:\\\\temp\\\\____wro\\\\wro.xml\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47636,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return Context.get().getServletContext().getResourceAsStream(\"/WEB-INF/wro.groovy\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new ServletContextResourceLocator(Context.get().getServletContext(), \"/WEB-INF/wro.groovy\");",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new ServletContextResourceLocator(Context.get().getServletContext(), \"/WEB-INF/wro.groovy\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47638,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return Context.get().getServletContext().getResourceAsStream(\"/WEB-INF/\" + DEFAULT_FILE_NAME);",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new ServletContextResourceLocator(Context.get().getServletContext(), \"/WEB-INF/\" + DEFAULT_FILE_NAME);",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new ServletContextResourceLocator(Context.get().getServletContext(), \"/WEB-INF/wro.xml\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47642,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { return TestGroovyWroModelFactory.class.getResourceAsStream(\"Wro.groovy\"); };",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyWroModelFactory.class.getResource(\"Wro.groovy\")); }",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyWroModelFactory.class.getResource(\"Wro.groovy\")); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47648,
+    "v2": "protected InputStream getModelResourceAsStream() throws IOException { throw new IOException();",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new ClasspathResourceLocator(\"INVALID.json\");",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new ClasspathResourceLocator(\"INVALID.json\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47653,
+    "v2": "protected InputStream getConfigResourceAsStream() throws IOException { return Context.get().getServletContext().getResourceAsStream(\"/WEB-INF/wro.xml\");",
+    "resolution": "protected InputStream getConfigResourceAsStream() throws IOException { return Context.get().getServletContext().getResourceAsStream(\"/WEB-INF/wro.xml\");",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new ClasspathResourceLocator(XML_CONFIG_FILE);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47655,
+    "v2": "protected InputStream getConfigResourceAsStream() throws IOException { return Context.get().getServletContext().getResourceAsStream(\"/WEB-INF/wro.groovy\");",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new ClasspathResourceLocator(\"wro.groovy\");",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new ClasspathResourceLocator(\"wro.groovy\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47658,
+    "v2": "protected InputStream getConfigResourceAsStream() throws IOException { return TestGroovyWroModelFactory.class.getResourceAsStream(\"Wro.groovy\"); };",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyWroModelFactory.class.getResource(\"Wro.groovy\")); }",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new UrlResourceLocator(TestGroovyWroModelFactory.class.getResource(\"Wro.groovy\")); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47665,
+    "v2": "protected InputStream getConfigResourceAsStream() throws IOException { throw new IOException();",
+    "resolution": "protected ResourceLocator getModelResourceLocator() { return new ClasspathResourceLocator(\"INVALID.json\");",
+    "conflict": "protected ResourceLocator getModelResourceLocator() { return new ClasspathResourceLocator(\"INVALID.json\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47673,
+    "v2": "public final Collection<ResourcePreProcessor> getPreProcessors() { final String processorsAsString = getProperties().getProperty(PARAM_PRE_PROCESSORS); return getListOfItems(processorsAsString, getPreProcessorsMap());",
+    "resolution": "public final Collection<ResourceProcessor> getPreProcessors() { final String processorsAsString = properties.getProperty(PARAM_PRE_PROCESSORS); return getListOfItems(processorsAsString, preProcessorsMap);",
+    "conflict": "public final Collection<ResourceProcessor> getPreProcessors() { final String processorsAsString = properties.getProperty(PARAM_PRE_PROCESSORS); return getListOfItems(processorsAsString, preProcessorsMap);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47674,
+    "v2": "public final Collection<ResourcePostProcessor> getPostProcessors() { final String processorsAsString = getProperties().getProperty(PARAM_POST_PROCESSORS); return getListOfItems(processorsAsString, getPostProcessorsMap());",
+    "resolution": "public final Collection<ResourceProcessor> getPostProcessors() { final String processorsAsString = properties.getProperty(PARAM_POST_PROCESSORS); return getListOfItems(processorsAsString, postProcessorsMap);",
+    "conflict": "public final Collection<ResourceProcessor> getPostProcessors() { final String processorsAsString = properties.getProperty(PARAM_POST_PROCESSORS); return getListOfItems(processorsAsString, postProcessorsMap);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47684,
+    "v2": "import ro.isdc.wro.maven.plugin.support.ConfigurableWroManagerFactory; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.factory.ConfigurableProcessorsFactory;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.Resource; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.factory.ConfigurableProcessorsFactory;",
+    "conflict": "import ro.isdc.wro.model.resource.Resource; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47692,
+    "v2": "import ro.isdc.wro.model.resource.locator.UrlUriLocator; import ro.isdc.wro.model.resource.processor.ResourcePostProcessor; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.support.UrlResourceLocator; import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47694,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.SimpleUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory; import ro.isdc.wro.model.resource.processor.ResourcePreProcessor; import ro.isdc.wro.model.resource.processor.factory.ConfigurableProcessorsFactory; import ro.isdc.wro.model.resource.processor.factory.ProcessorsFactory;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.factory.ConfigurableProcessorsFactory; import ro.isdc.wro.model.resource.processor.factory.ProcessorsFactory;",
+    "conflict": "import ro.isdc.wro.model.resource.processor.ResourceProcessor;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47705,
+    "v2": "@Option(name = \"-c\", aliases = { \"--compressor\" }, metaVar = \"COMPRESSOR\", usage = \"Comma separated list of processors\") private String processorsList;",
+    "resolution": "@Option(name = \"-c\", aliases = { \"--compressor\" }, metaVar = \"COMPRESSOR\", usage = \"Comma separated list of processors\") private String processorsList;",
+    "conflict": "@Option(name = \"-c\", aliases = { \"--compressor\" }, metaVar = \"COMPRESSOR\", handler = CompressorOptionHandler.class, usage = \"Name of the compressor to process scripts\") private ResourceProcessor compressor = new JSMinProcessor();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47729,
+    "v2": "private GroupExtractor groupExtractor = newGroupExtractor(); private WroModelFactory modelFactory = newModelFactory(); private CacheStrategy<CacheEntry, ContentHashEntry> cacheStrategy = newCacheStrategy(); private HashBuilder hashBuilder = newHashBuilder(); private List<? extends Transformer<WroModel>> modelTransformers = newModelTransformers();",
+    "resolution": "private GroupExtractor groupExtractor = newGroupExtractor(); private WroModelFactory modelFactory = newModelFactory(); private CacheStrategy<CacheEntry, ContentHashEntry> cacheStrategy = newCacheStrategy(); private HashBuilder hashBuilder = newHashBuilder(); private List<? extends Transformer<WroModel>> modelTransformers = newModelTransformers();",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47733,
+    "v2": "import java.io.File; import java.io.FileInputStream; import java.io.IOException; import java.io.InputStream;",
+    "resolution": "import java.io.File; import java.io.FileInputStream; import java.io.IOException; import java.io.InputStream;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47735,
+    "v2": "import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory;",
+    "resolution": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator;",
+    "conflict": "import ro.isdc.wro.model.resource.locator.ResourceLocator; import ro.isdc.wro.model.resource.locator.factory.DefaultResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.ResourceLocatorFactory; import ro.isdc.wro.model.resource.locator.support.ClasspathResourceLocator;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47736,
+    "v2": "* Used to locate imports; */ @Inject private UriLocatorFactory uriLocatorFactory; /**",
+    "resolution": "* Used to locate imports; */ @Inject private ResourceLocatorFactory resourceLocatorFactory; /**",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47791,
+    "v2": "implements ResourcePreProcessor, ResourcePostProcessor { public static final String ALIAS = \"cssMinJawr\";  /**",
+    "resolution": "implements ResourceProcessor { public static final String ALIAS = \"cssMinJawr\";  /**",
+    "conflict": "implements ResourceProcessor { public static final String ALIAS = \"cssMinJawr\";  /**"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47803,
+    "v2": "public class PlaceholderProcessor implements ResourcePreProcessor, ResourcePostProcessor { private static final Logger LOG = LoggerFactory.getLogger(PlaceholderProcessor.class);",
+    "resolution": "public class PlaceholderProcessor implements ResourceProcessor { private static final Logger LOG = LoggerFactory.getLogger(PlaceholderProcessor.class);",
+    "conflict": "public class PlaceholderInterpolationProcessor implements ResourceProcessor { private static final Logger LOG = LoggerFactory.getLogger(PlaceholderInterpolationProcessor.class);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47831,
+    "v2": "import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;",
+    "resolution": "import ro.isdc.wro.model.resource.processor.ResourceProcessor;",
+    "conflict": "import ro.isdc.wro.model.resource.ResourceType; import ro.isdc.wro.model.resource.processor.ResourceProcessor; import ro.isdc.wro.model.resource.processor.factory.ProcessorsFactory; import ro.isdc.wro.model.resource.processor.factory.SimpleProcessorsFactory;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47904,
+    "v2": "import ro.isdc.wro.model.resource.locator.ClasspathUriLocator; import ro.isdc.wro.model.resource.locator.ServletContextUriLocator; import ro.isdc.wro.model.resource.locator.UriLocator; import ro.isdc.wro.model.resource.locator.UrlUriLocator; import ro.isdc.wro.model.resource.locator.factory.SimpleUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47910,
+    "v2": "import ro.isdc.wro.model.resource.locator.ClasspathUriLocator; import ro.isdc.wro.model.resource.locator.ServletContextUriLocator; import ro.isdc.wro.model.resource.locator.UrlUriLocator; import ro.isdc.wro.model.resource.locator.factory.SimpleUriLocatorFactory; import ro.isdc.wro.model.resource.locator.factory.UriLocatorFactory;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 47934,
+    "v2": "private void initGroupMap(final Document document) { final NodeList groupNodeList = document.getElementsByTagName( XmlModelBuilder.TAG_GROUP);",
+    "resolution": "private void processGroups(final Document document) { // handle imports final NodeList groupNodeList = document.getElementsByTagName( XmlModelBuilder.TAG_GROUP);",
+    "conflict": "private void processGroups(final Document document) { // handle imports final NodeList groupNodeList = document.getElementsByTagName(TAG_GROUP);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47943,
+    "v2": "private static UriLocatorFactory createDefaultUriLocatorFactory() { return new SimpleUriLocatorFactory().addUriLocator(new ServletContextUriLocator()).addUriLocator( new ClasspathUriLocator()).addUriLocator(new UrlUriLocator());",
+    "resolution": "private static ResourceLocatorFactory createDefaultUriLocatorFactory() { return DefaultResourceLocatorFactory.contextAwareFactory();",
+    "conflict": "private static ResourceLocatorFactory createDefaultUriLocatorFactory() { return DefaultResourceLocatorFactory.contextAwareFactory();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 47946,
+    "v2": "",
+    "resolution": "import java.io.File; import java.io.FileInputStream; import java.io.IOException; import java.io.InputStream;",
+    "conflict": "import java.io.File; import java.io.FileInputStream; import java.io.IOException; import java.io.InputStream;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 47947,
+    "v2": "if (classpathUriValid(cssUri) || UrlResourceLocator.isValid(cssUri)) {",
+    "resolution": "if (UrlResourceLocator.isValid(cssUri)) { return computeNewImageLocation(cssUri, imageUrl); } if (classpathUriValid(cssUri)) {",
+    "conflict": "if (UrlUriLocator.isValid(cssUri)) { return computeNewImageLocation(cssUri, imageUrl); } if (ClasspathUriLocator.isValid(cssUri)) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 47950,
+    "v2": "// ResourceType doesn't matter here final ResourceProcessor resourceProcessor = WroUtil.newResourceProcessor( Resource.create(\"file:\" + file.getAbsolutePath(), ResourceType.CSS), preProcessor);  compare(new FileInputStream(file), targetFileStream, resourceProcessor);",
+    "resolution": "// ResourceType doesn't matter here final ResourceProcessor resourceProcessor = WroUtil.newResourceProcessor( Resource.create(\"file:\" + file.getAbsolutePath(), ResourceType.CSS), preProcessor);  compare(new FileInputStream(file), targetFileStream, resourceProcessor);",
+    "conflict": "compare(new FileInputStream(file), targetFileStream, processor);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 48002,
+    "v2": "private String getResourceContent(final Resource resource, final List<Resource> resources) throws IOException {",
+    "resolution": "private String getResourceContent(final Resource resource, final List<Resource> resources) throws IOException {",
+    "conflict": "private Reader getResourceReader(final Resource resource, final List<Resource> resources) throws IOException { InputStream is = null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 48006,
+    "v2": "final String fullPath = FilenameUtils.getFullPath(location); final URL url = Thread.currentThread().getContextClassLoader().getResource(fullPath);",
+    "resolution": "// prefix with '/' because we use class relative resource retrieval. Using ClassLoader.getSystemResource doesn't // work well. final String fullPath = \"/\" + FilenameUtils.getFullPathNoEndSeparator(location); final URL url = getClass().getResource(fullPath);",
+    "conflict": "// prefix with '/' because we use class relative resource retrieval. Using ClassLoader.getSystemResource doesn't // work well. final String fullPath = \"/\" + FilenameUtils.getFullPathNoEndSeparator(location); final URL url = getClass().getResource(fullPath);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 48008,
+    "v2": "final String fullPath = FilenameUtils.getFullPath(location); final URL url = Thread.currentThread().getContextClassLoader().getResource(fullPath);",
+    "resolution": "final String fullPath = FilenameUtils.getFullPath(location); final URL url = Thread.currentThread().getContextClassLoader().getResource(fullPath);",
+    "conflict": "// prefix with '/' because we use class relative resource retrieval. Using ClassLoader.getSystemResource doesn't // work well. final String fullPath = \"/\" + FilenameUtils.getFullPathNoEndSeparator(location); final URL url = getClass().getResource(fullPath);"
+  }
+]
+}

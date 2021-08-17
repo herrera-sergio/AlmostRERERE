@@ -1,0 +1,262 @@
+{"conflicts":[
+  {
+    "devdecision": "Manual",
+    "id": 7890,
+    "v2": "statements.append(maker.VarDef(maker.Modifiers(isEmpty && !cacheHashCode ? finalFlag : 0), resultName, maker.TypeIdent(CTC_INT), init));",
+    "resolution": "statements.append(maker.VarDef(maker.Modifiers(isEmpty && !cacheHashCode ? finalFlag : 0L), resultName, maker.TypeIdent(CTC_INT), init));",
+    "conflict": "statements.append(maker.VarDef(maker.Modifiers(isEmpty ? finalFlag : 0L), resultName, maker.TypeIdent(CTC_INT), init));"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 7893,
+    "v2": "public static final FieldAugment<CompilationUnit, ConcurrentMap<String, List<SourceMethod>>> CompilationUnit_delegateMethods = FieldAugment.augment(CompilationUnit.class, ConcurrentMap.class, \"$delegateMethods\");",
+    "resolution": "public static final FieldAugment<CompilationUnit, ConcurrentMap<String, List<SourceMethod>>> CompilationUnit_delegateMethods = FieldAugment.augment(CompilationUnit.class, ConcurrentMap.class, \"$delegateMethods\");public static final FieldAugment<CompilationUnit, Map<String, String>> CompilationUnit_javadoc = FieldAugment.augment(CompilationUnit.class, Map.class, \"$javadoc\");",
+    "conflict": "public static final FieldAugment<CompilationUnit, Map<String, String>> CompilationUnit_javadoc = FieldAugment.augment(CompilationUnit.class, Map.class, \"$javadoc\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7899,
+    "v2": "makeSetterMethodsForBuilder(cfv, builderType, bfd, annotationNode, fluent, chain, accessForInners, bfd.originalFieldNode);",
+    "resolution": "makePrefixedSetterMethodsForBuilder(cfv, builderType, bfd, annotationNode, fluent, chain, accessForInners, bfd.originalFieldNode, builderInstance.setterPrefix());",
+    "conflict": "makePrefixedSetterMethodsForBuilder(builderType, bfd, annotationNode, fluent, chain, accessForInners, bfd.originalFieldNode, builderInstance.setterPrefix());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7900,
+    "v2": "makeSetterMethodsForBuilder(cfv, builderType, bfd, annotationNode, fluent, chain, accessForInners);",
+    "resolution": "makePrefixedSetterMethodsForBuilder(cfv, builderType, bfd, annotationNode, fluent, chain, accessForInners, builderInstance.setterPrefix());",
+    "conflict": "makePrefixedSetterMethodsForBuilder(builderType, bfd, annotationNode, fluent, chain, accessForInners, builderInstance.setterPrefix());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7914,
+    "v2": "generateSimpleSetterMethodForBuilder(builderType, deprecate, fieldNode.createdFields.get(0), fieldNode.nameOfSetFlag, source, true, true, returnTypeMaker.make(), returnStatementMaker.make(), fieldNode.annotations);",
+    "resolution": "generateSimpleSetterMethodForBuilder(builderType, deprecate, fieldNode.createdFields.get(0), fieldNode.nameOfSetFlag, source, true, returnTypeMaker.make(), returnStatementMaker.make(), fieldNode.annotations);",
+    "conflict": "generateSimpleSetterMethodForBuilder(builderType, deprecate, fieldNode.createdFields.get(0), fieldNode.nameOfSetFlag, source, true, returnTypeMaker.make(), returnStatementMaker.make());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7915,
+    "v2": "private void generateSimpleSetterMethodForBuilder(JavacNode builderType, boolean deprecate, JavacNode fieldNode, Name nameOfSetFlag, JavacNode source, boolean fluent, boolean chain, JCExpression returnType, JCStatement returnStatement, List<JCAnnotation> annosOnParam) {",
+    "resolution": "private void generateSimpleSetterMethodForBuilder(JavacNode builderType, boolean deprecate, JavacNode fieldNode, Name nameOfSetFlag, JavacNode source, boolean fluent, JCExpression returnType, JCStatement returnStatement, List<JCAnnotation> annosOnParam) {",
+    "conflict": "private void generateSimpleSetterMethodForBuilder(JavacNode builderType, boolean deprecate, JavacNode fieldNode, Name nameOfSetFlag, JavacNode source, boolean fluent, JCExpression returnType, JCStatement returnStatement) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7929,
+    "v2": "return URI.create(\"file:///\" + name);",
+    "resolution": "return URI.create(\"file:///\" + (name.startsWith(\"/\") ? name.substring(1) : name));",
+    "conflict": "return URI.create(\"file:///\" + (name.startsWith(\"/\") ? name.substring(1) : name));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7944,
+    "v2": "new HandleConstructor().generateConstructor(typeNode, level, fields, force, staticName, SkipIfConstructorExists.NO, onConstructor, annotationNode);",
+    "resolution": "new HandleConstructor().generateConstructor(typeNode, level, fields, force, staticName, SkipIfConstructorExists.NO, onConstructor, annotationNode, null, false);",
+    "conflict": "new HandleConstructor().generateConstructor(typeNode, level, fields, force, staticName, SkipIfConstructorExists.NO, null, onConstructor, annotationNode, null, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7945,
+    "v2": "onConstructor, annotationNode);",
+    "resolution": "onConstructor, annotationNode, null, false);",
+    "conflict": "suppressConstructorProperties, onConstructor, annotationNode, null, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7946,
+    "v2": "onConstructor, annotationNode);",
+    "resolution": "onConstructor, annotationNode, null, false);",
+    "conflict": "suppressConstructorProperties, onConstructor, annotationNode, null, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7947,
+    "v2": "generateConstructor(typeNode, level, findRequiredFields(typeNode), false, staticName, skipIfConstructorExists, onConstructor, sourceNode);",
+    "resolution": "generateConstructor(typeNode, level, findRequiredFields(typeNode), false, staticName, skipIfConstructorExists, onConstructor, sourceNode, null, false);",
+    "conflict": "generateConstructor(typeNode, level, findRequiredFields(typeNode), false, staticName, skipIfConstructorExists, null, onConstructor, sourceNode, null, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7948,
+    "v2": "generateConstructor(typeNode, level, findAllFields(typeNode), false, staticName, skipIfConstructorExists, onConstructor, sourceNode);",
+    "resolution": "generateConstructor(typeNode, level, findAllFields(typeNode), false, staticName, skipIfConstructorExists, onConstructor, sourceNode, null, false);",
+    "conflict": "generateConstructor(typeNode, level, findAllFields(typeNode), false, staticName, skipIfConstructorExists, null, onConstructor, sourceNode, null, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7949,
+    "v2": "List<Annotation> onConstructor, EclipseNode sourceNode) {",
+    "resolution": "List<Annotation> onConstructor, EclipseNode sourceNode, String builderClassnameAsParameter, boolean callBuilderBasedSuperConstructor) {",
+    "conflict": "Boolean suppressConstructorProperties, List<Annotation> onConstructor, EclipseNode sourceNode, String builderClassnameAsParameter, boolean callBuilderBasedSuperConstructor) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7950,
+    "v2": "sourceNode, onConstructor);",
+    "resolution": "sourceNode, onConstructor, builderClassnameAsParameter, callBuilderBasedSuperConstructor);",
+    "conflict": "suppressConstructorProperties, sourceNode, onConstructor, builderClassnameAsParameter, callBuilderBasedSuperConstructor);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7953,
+    "v2": "builderType = makeBuilderClass(isStatic, annotationNode, tdParent, builderClassName, typeParams, ast);",
+    "resolution": "builderType = makeBuilderClass(isStatic, annotationNode, tdParent, builderClassName, typeParams, ast, inherit ? superclassBuilderClassName : null);",
+    "conflict": "builderType = makeBuilderClass(isStatic, tdParent, builderClassName, typeParams, ast, inherit ? superclassBuilderClassName : null);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7954,
+    "v2": "JCMethodDecl cd = HandleConstructor.createConstructor(AccessLevel.PACKAGE, List.<JCAnnotation>nil(), builderType, List.<JavacNode>nil(), false, annotationNode);",
+    "resolution": "JCMethodDecl cd = HandleConstructor.createConstructor(AccessLevel.PACKAGE, List.<JCAnnotation>nil(), builderType, List.<JavacNode>nil(), false, annotationNode, null, false);",
+    "conflict": "JCMethodDecl cd = HandleConstructor.createConstructor(AccessLevel.PACKAGE, List.<JCAnnotation>nil(), builderType, List.<JavacNode>nil(), false, null, annotationNode, null, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7955,
+    "v2": "public JavacNode makeBuilderClass(boolean isStatic, JavacNode source, JavacNode tdParent, String builderClassName, List<JCTypeParameter> typeParams, JCAnnotation ast) {",
+    "resolution": "public JavacNode makeBuilderClass(boolean isStatic, JavacNode source, JavacNode tdParent, String builderClassName, List<JCTypeParameter> typeParams, JCAnnotation ast, String parentBuilderClassName) {",
+    "conflict": "public JavacNode makeBuilderClass(boolean isStatic, JavacNode tdParent, String builderClassName, List<JCTypeParameter> typeParams, JCAnnotation ast, String parentBuilderClassName) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7957,
+    "v2": "new HandleConstructor().generateConstructor(typeNode, level, onConstructor, fields, force, staticName, SkipIfConstructorExists.NO, annotationNode);",
+    "resolution": "new HandleConstructor().generateConstructor(typeNode, level, onConstructor, fields, force, staticName, SkipIfConstructorExists.NO, annotationNode, null, false);",
+    "conflict": "new HandleConstructor().generateConstructor(typeNode, level, onConstructor, fields, force, staticName, SkipIfConstructorExists.NO, null, annotationNode, null, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7958,
+    "v2": "new HandleConstructor().generateConstructor(typeNode, level, onConstructor, findRequiredFields(typeNode), false, staticName, SkipIfConstructorExists.NO, annotationNode);",
+    "resolution": "new HandleConstructor().generateConstructor(typeNode, level, onConstructor, findRequiredFields(typeNode), false, staticName, SkipIfConstructorExists.NO, annotationNode, null, false);",
+    "conflict": "new HandleConstructor().generateConstructor(typeNode, level, onConstructor, findRequiredFields(typeNode), false, staticName, SkipIfConstructorExists.NO, suppressConstructorProperties, annotationNode, null, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7959,
+    "v2": "new HandleConstructor().generateConstructor(typeNode, level, onConstructor, findAllFields(typeNode), false, staticName, SkipIfConstructorExists.NO, annotationNode);",
+    "resolution": "new HandleConstructor().generateConstructor(typeNode, level, onConstructor, findAllFields(typeNode), false, staticName, SkipIfConstructorExists.NO, annotationNode, null, false);",
+    "conflict": "new HandleConstructor().generateConstructor(typeNode, level, onConstructor, findAllFields(typeNode), false, staticName, SkipIfConstructorExists.NO, suppressConstructorProperties, annotationNode, null, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7960,
+    "v2": "generateConstructor(typeNode, level, List.<JCAnnotation>nil(), findRequiredFields(typeNode), false, staticName, skipIfConstructorExists, source);",
+    "resolution": "generateConstructor(typeNode, level, List.<JCAnnotation>nil(), findRequiredFields(typeNode), false, staticName, skipIfConstructorExists, source, null, false);",
+    "conflict": "generateConstructor(typeNode, level, List.<JCAnnotation>nil(), findRequiredFields(typeNode), false, staticName, skipIfConstructorExists, null, source, null, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7962,
+    "v2": "JCMethodDecl constr = createConstructor(staticConstrRequired ? AccessLevel.PRIVATE : level, onConstructor, typeNode, fields, allToDefault, source);",
+    "resolution": "JCMethodDecl constr = createConstructor(staticConstrRequired ? AccessLevel.PRIVATE : level, onConstructor, typeNode, fields, allToDefault, source, builderClassnameAsParameter, callBuilderBasedSuperConstructor);",
+    "conflict": "JCMethodDecl constr = createConstructor(staticConstrRequired ? AccessLevel.PRIVATE : level, onConstructor, typeNode, fields, allToDefault, suppressConstructorProperties, source, builderClassnameAsParameter, callBuilderBasedSuperConstructor);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7972,
+    "v2": "AccessLevel.PACKAGE, builderType, Collections.<EclipseNode>emptyList(), false, null,",
+    "resolution": "AccessLevel.PACKAGE, builderType, Collections.<EclipseNode>emptyList(), false, null,",
+    "conflict": "AccessLevel.PACKAGE, builderType, Collections.<EclipseNode>emptyList(), null,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 7976,
+    "v2": "import lombok.core.BooleanFieldAugment;",
+    "resolution": "import lombok.core.BooleanFieldAugment;import lombok.core.configuration.ConfigurationKeysLoader;",
+    "conflict": "import lombok.core.configuration.ConfigurationKeysLoader;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7978,
+    "v2": "",
+    "resolution": "import lombok.core.configuration.ConfigurationKeysLoader;",
+    "conflict": "import lombok.core.AnnotationValues.AnnotationValueDecodeFail; import lombok.core.configuration.ConfigurationKeysLoader;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7982,
+    "v2": "FieldDeclaration fieldDeclaration = createField(framework, source, loggingType, loggerCategory);",
+    "resolution": "FieldDeclaration fieldDeclaration = createField(framework, source, loggingType, logFieldName, useStatic, loggerTopic);",
+    "conflict": "FieldDeclaration fieldDeclaration = createField(framework, source, loggingType, logFieldName, useStatic);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7983,
+    "v2": "public static FieldDeclaration createField(LoggingFramework framework, Annotation source, ClassLiteralAccess loggingType, String loggerCategory) {",
+    "resolution": "private static FieldDeclaration createField(LoggingFramework framework, Annotation source, ClassLiteralAccess loggingType, String logFieldName, boolean useStatic, String loggerTopic) {",
+    "conflict": "private static FieldDeclaration createField(LoggingFramework framework, Annotation source, ClassLiteralAccess loggingType, String logFieldName, boolean useStatic) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7995,
+    "v2": "createField(framework, typeNode, loggingType, annotationNode.get(), loggerCategory);",
+    "resolution": "createField(framework, typeNode, loggingType, annotationNode.get(), logFieldName, useStatic, loggerTopic);",
+    "conflict": "createField(framework, typeNode, loggingType, annotationNode.get(), logFieldName, useStatic);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7996,
+    "v2": "public static boolean createField(LoggingFramework framework, JavacNode typeNode, JCFieldAccess loggingType, JCTree source, String loggerCategory) {",
+    "resolution": "private static boolean createField(LoggingFramework framework, JavacNode typeNode, JCFieldAccess loggingType, JCTree source, String logFieldName, boolean useStatic, String loggerTopic) {",
+    "conflict": "private static boolean createField(LoggingFramework framework, JavacNode typeNode, JCFieldAccess loggingType, JCTree source, String logFieldName, boolean useStatic) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8005,
+    "v2": "JCVariableDecl param = maker.VarDef(maker.Modifiers(Flags.FINAL, nonNulls.appendList(nullables)), fieldName, field.vartype, null);",
+    "resolution": "JCVariableDecl param = maker.VarDef(maker.Modifiers(Flags.FINAL | Flags.PARAMETER, nonNulls.appendList(nullables)), fieldName, field.vartype, null);",
+    "conflict": "JCVariableDecl param = maker.VarDef(maker.Modifiers(Flags.FINAL | Flags.PARAMETER, nonNulls.appendList(nullables)), field.name, field.vartype, null);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8006,
+    "v2": "JCVariableDecl param = maker.VarDef(maker.Modifiers(Flags.FINAL, nonNulls.appendList(nullables)), fieldName, pType, null);",
+    "resolution": "JCVariableDecl param = maker.VarDef(maker.Modifiers(Flags.FINAL | Flags.PARAMETER, nonNulls.appendList(nullables)), fieldName, pType, null);",
+    "conflict": "JCVariableDecl param = maker.VarDef(maker.Modifiers(Flags.FINAL | Flags.PARAMETER, nonNulls.appendList(nullables)), field.name, pType, null);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8015,
+    "v2": "import com.sun.tools.javac.tree.JCTree.JCTypeApply;",
+    "resolution": "import com.sun.tools.javac.tree.JCTree.JCTypeApply;import com.sun.tools.javac.tree.JCTree.JCTypeParameter;",
+    "conflict": "import com.sun.tools.javac.tree.JCTree.JCTypeParameter;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8017,
+    "v2": "import lombok.core.TypeResolver;",
+    "resolution": "import lombok.core.TypeResolver;import lombok.experimental.Accessors;",
+    "conflict": "import lombok.experimental.Accessors;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8025,
+    "v2": "/* Do not add @Override's for generated methods */",
+    "resolution": "/* Do not add  @Override's for generated methods */",
+    "conflict": "/* Do not add  @Override's for generated methods */"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8033,
+    "v2": "patchListRewriteHandleGeneratedMethods(sm);",
+    "resolution": "patchListRewriteHandleGeneratedMethods(sm);patchDisableLombokForCodeFormatterAndCleanup(sm);",
+    "conflict": "patchDisableLombokForCodeFormatterAndCleanup(sm);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8037,
+    "v2": "* Copyright © 2009-2010 Reinier Zwitserloot, Roel Spilker and Robbert Jan Grootjans.",
+    "resolution": "* Copyright © 2009-2010 Reinier Zwitserloot, Roel Spilker and Robbert Jan Grootjans.",
+    "conflict": "* Copyright © 2009-2010 Reinier Zwitserloot and Roel Spilker."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8041,
+    "v2": "Argument param = new Argument(field.name, pos, copyType(field.type), 0);",
+    "resolution": "Argument param = new Argument(field.name, pos, copyType(field.type), Modifier.FINAL);",
+    "conflict": "Argument param = new Argument(field.name, pos, Eclipse.copyType(field.type), Modifier.FINAL);"
+  }
+]
+}

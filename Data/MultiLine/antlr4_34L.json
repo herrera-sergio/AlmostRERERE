@@ -1,0 +1,2684 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 5074,
+    "v2": "*/",
+    "resolution": "*/",
+    "conflict": "*/"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5139,
+    "v2": "return action(cmdST.render());",
+    "resolution": "cmdST.add(\"grammar\", arg.g); return cmdST.render();",
+    "conflict": "cmdST.add(\"grammar\", arg.g); return cmdST.render();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5174,
+    "v2": "BitSet conflictingAlts, ATNConfigSet configs)",
+    "resolution": "@Nullable BitSet conflictingAlts, @NotNull SimulatorState conflictState)",
+    "conflict": "@Nullable BitSet conflictingAlts, @NotNull SimulatorState conflictState)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5176,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5177,
+    "v2": "protected Pair<TokenSource, CharStream> source;",
+    "resolution": "@NotNull protected Tuple2<? extends TokenSource, CharStream> source;",
+    "conflict": "@NotNull protected Tuple2<? extends TokenSource, CharStream> source;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5179,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable; import org.antlr.v4.runtime.misc.Tuple;",
+    "conflict": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable; import org.antlr.v4.runtime.misc.Tuple;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5180,
+    "v2": "BitSet conflictingAlts, ATNConfigSet configs)",
+    "resolution": "@Nullable BitSet conflictingAlts, @NotNull SimulatorState conflictState)",
+    "conflict": "@Nullable BitSet conflictingAlts, @NotNull SimulatorState conflictState)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5184,
+    "v2": "public InputMismatchException(Parser recognizer) {",
+    "resolution": "private static final long serialVersionUID = 1532568338707443067L;  public InputMismatchException(@NotNull Parser recognizer) {",
+    "conflict": "private static final long serialVersionUID = 1532568338707443067L;  public InputMismatchException(@NotNull Parser recognizer) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5185,
+    "v2": "import org.antlr.v4.runtime.atn.PredictionContextCache; import org.antlr.v4.runtime.dfa.DFA;",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull;",
+    "conflict": "import org.antlr.v4.runtime.misc.NotNull;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5186,
+    "v2": "",
+    "resolution": "@NotNull",
+    "conflict": "@NotNull"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5187,
+    "v2": "ATNConfigSet deadEndConfigs) { super(lexer, input, null);",
+    "resolution": "@Nullable ATNConfigSet deadEndConfigs) { super(lexer, input);",
+    "conflict": "@Nullable ATNConfigSet deadEndConfigs) { super(lexer, input);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5188,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Tuple;",
+    "conflict": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Tuple;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5190,
+    "v2": "public TokenFactory<?> getTokenFactory() {",
+    "resolution": "@NotNull public TokenFactory getTokenFactory() {",
+    "conflict": "@NotNull public TokenFactory getTokenFactory() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5193,
+    "v2": "public List<ParseTreeListener> getParseListeners() {",
+    "resolution": "@NotNull public List<ParseTreeListener> getParseListeners() {",
+    "conflict": "@NotNull public List<ParseTreeListener> getParseListeners() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5198,
+    "v2": "Pair<ParserRuleContext, Integer> pair = new Pair<ParserRuleContext, Integer>(_ctx, localctx.invokingState); _parentContextStack.push(pair);",
+    "resolution": "_parentContextStack.push(Tuple.create(_ctx, localctx.invokingState));",
+    "conflict": "_parentContextStack.push(Tuple.create(_ctx, localctx.invokingState));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5201,
+    "v2": "import org.antlr.v4.runtime.atn.ATNConfigSet; import org.antlr.v4.runtime.dfa.DFA;",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable;",
+    "conflict": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5205,
+    "v2": "public RuleContext getCtx() {",
+    "resolution": "@Nullable public RuleContext getContext() {",
+    "conflict": "@Nullable public RuleContext getContext() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5207,
+    "v2": "",
+    "resolution": "import org.antlr.v4.runtime.misc.Args; import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable;",
+    "conflict": "import org.antlr.v4.runtime.misc.Args; import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5213,
+    "v2": "public final String toString(Recognizer<?,?> recog) { return toString(recog, ParserRuleContext.EMPTY);",
+    "resolution": "public final String toString(@Nullable Recognizer<?, ?> recog) { return toString(recog, ParserRuleContext.emptyContext());",
+    "conflict": "public final String toString(@Nullable Recognizer<?, ?> recog) { return toString(recog, ParserRuleContext.emptyContext());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5215,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5216,
+    "v2": "Symbol create(Pair<TokenSource, CharStream> source, int type, String text,",
+    "resolution": "@NotNull Token create(@NotNull Tuple2<? extends TokenSource, CharStream> source, int type, String text,",
+    "conflict": "@NotNull Token create(@NotNull Tuple2<? extends TokenSource, CharStream> source, int type, String text,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5217,
+    "v2": "Symbol create(int type, String text);",
+    "resolution": "@NotNull Token create(int type, String text);",
+    "conflict": "@NotNull Token create(int type, String text);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5219,
+    "v2": "public TokenFactory<?> getTokenFactory();",
+    "resolution": "@NotNull public TokenFactory getTokenFactory();",
+    "conflict": "@NotNull public TokenFactory getTokenFactory();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5220,
+    "v2": "public Token LT(int k);",
+    "resolution": "@NotNull public Token LT(int k);",
+    "conflict": "@NotNull public Token LT(int k);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5221,
+    "v2": "public Token get(int index);",
+    "resolution": "@NotNull public Token get(int i);",
+    "conflict": "@NotNull public Token get(int i);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5222,
+    "v2": "public String getText(Token start, Token stop);",
+    "resolution": "@NotNull public String getText(Object start, Object stop);",
+    "conflict": "@NotNull public String getText(Object start, Object stop);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5223,
+    "v2": "public IntervalSet nextTokens(ATNState s, RuleContext ctx) {",
+    "resolution": "@NotNull public IntervalSet nextTokens(ATNState s, @NotNull PredictionContext ctx) { Args.notNull(\"ctx\", ctx);",
+    "conflict": "@NotNull public IntervalSet nextTokens(ATNState s, @NotNull PredictionContext ctx) { Args.notNull(\"ctx\", ctx);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5226,
+    "v2": "public final ATNState state;",
+    "resolution": "@NotNull private final ATNState state;",
+    "conflict": "@NotNull private final ATNState state;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5236,
+    "v2": "public ATNSimulator(ATN atn, PredictionContextCache sharedContextCache) {",
+    "resolution": "public ATNSimulator(@NotNull ATN atn) {",
+    "conflict": "public ATNSimulator(@NotNull ATN atn) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5239,
+    "v2": "public final ATNConfigSet configs;",
+    "resolution": "@Nullable public final SimulatorState state;",
+    "conflict": "@Nullable public final SimulatorState state;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5243,
+    "v2": "public IntervalSet LOOK(ATNState s, ATNState stopState, RuleContext ctx) {",
+    "resolution": "@NotNull public IntervalSet LOOK(@NotNull ATNState s, @Nullable ATNState stopState, @NotNull PredictionContext ctx) {",
+    "conflict": "@NotNull public IntervalSet LOOK(@NotNull ATNState s, @Nullable ATNState stopState, @NotNull PredictionContext ctx) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5264,
+    "v2": "protected ATNConfigSet removeAllConfigsNotInRuleStopState(ATNConfigSet configs, boolean lookToEndOfRule) {",
+    "resolution": "@NotNull protected ATNConfigSet removeAllConfigsNotInRuleStopState(@NotNull ATNConfigSet configs, PredictionContextCache contextCache) {",
+    "conflict": "@NotNull protected ATNConfigSet removeAllConfigsNotInRuleStopState(@NotNull ATNConfigSet configs, PredictionContextCache contextCache) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5267,
+    "v2": "protected ATNConfigSet applyPrecedenceFilter(ATNConfigSet configs) {",
+    "resolution": "@NotNull protected ATNConfigSet applyPrecedenceFilter(@NotNull ATNConfigSet configs, ParserRuleContext globalContext, PredictionContextCache contextCache) {",
+    "conflict": "@NotNull protected ATNConfigSet applyPrecedenceFilter(@NotNull ATNConfigSet configs, ParserRuleContext globalContext, PredictionContextCache contextCache) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5268,
+    "v2": "protected ATNState getReachableTarget(Transition trans, int ttype) {",
+    "resolution": "@Nullable protected ATNState getReachableTarget(@NotNull ATNConfig source, @NotNull Transition trans, int ttype) {",
+    "conflict": "@Nullable protected ATNState getReachableTarget(@NotNull ATNConfig source, @NotNull Transition trans, int ttype) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5277,
+    "v2": "protected ATNConfig ruleTransition(ATNConfig config, RuleTransition t) {",
+    "resolution": "@NotNull protected ATNConfig ruleTransition(@NotNull ATNConfig config, @NotNull RuleTransition t, @Nullable PredictionContextCache contextCache) {",
+    "conflict": "@NotNull protected ATNConfig ruleTransition(@NotNull ATNConfig config, @NotNull RuleTransition t, @Nullable PredictionContextCache contextCache) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5291,
+    "v2": "",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable; import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5294,
+    "v2": "new AmbiguityInfo(currentDecision, configs, ambigAlts, _input, startIndex, stopIndex, configs.fullCtx)",
+    "resolution": "new AmbiguityInfo(currentDecision, currentState, ambigAlts, _input, startIndex, stopIndex)",
+    "conflict": "new AmbiguityInfo(currentDecision, currentState, _input, startIndex, stopIndex)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5295,
+    "v2": "public boolean isPrecedenceRule; //Synonymous with rule being left recursive; consider renaming.",
+    "resolution": "public boolean isPrecedenceRule; public boolean leftFactored;",
+    "conflict": "public boolean isPrecedenceRule; public boolean leftFactored;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5301,
+    "v2": "public String toString(String[] tokenNames) { if ( s0==null ) return \"\";",
+    "resolution": "public String toString(@Nullable String[] tokenNames) { if ( s0.get()==null ) return \"\";",
+    "conflict": "public String toString(@Nullable String[] tokenNames) { if ( s0.get()==null ) return \"\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5302,
+    "v2": "public String toString(Vocabulary vocabulary) { if (s0 == null) {",
+    "resolution": "public String toString(@NotNull Vocabulary vocabulary) { if (s0.get() == null) {",
+    "conflict": "public String toString(@NotNull Vocabulary vocabulary) { if (s0.get() == null) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5306,
+    "v2": "public ATNConfigSet configs = new ATNConfigSet();",
+    "resolution": "@NotNull public final ATNConfigSet configs;",
+    "conflict": "@NotNull public final ATNConfigSet configs;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5307,
+    "v2": "public DFAState[] edges;",
+    "resolution": "@NotNull private volatile AbstractEdgeMap<DFAState> edges;",
+    "conflict": "@NotNull private volatile AbstractEdgeMap<DFAState> edges;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5308,
+    "v2": "public DFAState(ATNConfigSet configs) { this.configs = configs; }",
+    "resolution": "public final boolean isContextSensitive() { return contextSymbols != null; }",
+    "conflict": "public final boolean isContextSensitive() { return contextSymbols != null; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5309,
+    "v2": "public abstract class AbstractParseTreeVisitor<T> implements ParseTreeVisitor<T> {",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull;  public abstract class AbstractParseTreeVisitor<Result> implements ParseTreeVisitor<Result> {",
+    "conflict": "import org.antlr.v4.runtime.misc.NotNull;  public abstract class AbstractParseTreeVisitor<Result> implements ParseTreeVisitor<Result> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5311,
+    "v2": "public T visitChildren(RuleNode node) { T result = defaultResult();",
+    "resolution": "public Result visitChildren(@NotNull RuleNode node) { Result result = defaultResult();",
+    "conflict": "public Result visitChildren(@NotNull RuleNode node) { Result result = defaultResult();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 5334,
+    "v2": "import java.util.LinkedHashMap;",
+    "resolution": "import java.lang.reflect.InvocationTargetException; import java.util.LinkedHashMap;",
+    "conflict": "import java.lang.reflect.InvocationTargetException; import java.util.HashMap;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5341,
+    "v2": "",
+    "resolution": "import org.antlr.v4.runtime.misc.Func1; import org.antlr.v4.runtime.misc.IntegerList; import org.antlr.v4.runtime.misc.Predicate;",
+    "conflict": "import org.antlr.v4.runtime.misc.Func1; import org.antlr.v4.runtime.misc.IntegerList; import org.antlr.v4.runtime.misc.Predicate;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5343,
+    "v2": "public static Attribute parseAttributeDef(ActionAST action, Pair<String, Integer> decl, Grammar g) { if ( decl.a==null ) return null;",
+    "resolution": "public static Attribute parseAttributeDef(@Nullable ActionAST action, @NotNull Tuple2<String, Integer> decl, Grammar g) { if ( decl.getItem1()==null ) return null;",
+    "conflict": "public static Attribute parseAttributeDef(@Nullable ActionAST action, @NotNull Tuple2<String, Integer> decl, Grammar g) { if ( decl.getItem1()==null ) return null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5344,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 5396,
+    "v2": "import org.antlr.v4.runtime.atn.PredictionContextCache; import org.antlr.v4.runtime.dfa.DFA; import org.antlr.v4.runtime.misc.NotNull;",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 5403,
+    "v2": "import org.antlr.v4.runtime.Vocabulary; import org.antlr.v4.runtime.VocabularyImpl;",
+    "resolution": "import org.antlr.v4.runtime.dfa.AcceptStateInfo;import org.antlr.v4.runtime.Vocabulary; import org.antlr.v4.runtime.VocabularyImpl;",
+    "conflict": "import org.antlr.v4.runtime.dfa.AcceptStateInfo;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 5416,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import java.util.Arrays; import java.util.Collection; import java.util.LinkedHashMap;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5418,
+    "v2": "public Map<String, List<Pair<Integer, AltAST>>> getAltLabels() { Map<String, List<Pair<Integer, AltAST>>> labels = new LinkedHashMap<String, List<Pair<Integer, AltAST>>>();",
+    "resolution": "public Map<String, List<Tuple2<Integer, AltAST>>> getAltLabels() { Map<String, List<Tuple2<Integer, AltAST>>> labels = new LinkedHashMap<String, List<Tuple2<Integer, AltAST>>>();",
+    "conflict": "public Map<String, List<Tuple2<Integer, AltAST>>> getAltLabels() { Map<String, List<Tuple2<Integer, AltAST>>> labels = new HashMap<String, List<Tuple2<Integer, AltAST>>>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5419,
+    "v2": "DFA dfa = interp.parser.decisionToDFA[decision]; assertEquals(dfaString[i], dfa.toString(g.getVocabulary()));",
+    "resolution": "DFA dfa = interp.getATNSimulator().atn.decisionToDFA[decision]; assertEquals(dfaString[i], dfa.toString(g.getVocabulary(), g.rules.keySet().toArray(new String[g.rules.size()])));",
+    "conflict": "DFA dfa = interp.getATNSimulator().atn.decisionToDFA[decision]; assertEquals(dfaString[i], dfa.toString(g.getTokenDisplayNames(), g.rules.keySet().toArray(new String[g.rules.size()])));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5420,
+    "v2": "\"s0-'}'->:s2=>2\\n\" + \"s0-'else'->:s1^=>1\\n\";",
+    "resolution": "\"s0-'}'->:s2=>2\\n\" + \"s0-'else'->:s1=>1\\n\";",
+    "conflict": "\"s0-'else'->:s1=>1\\n\" + \"s0-'}'->:s2=>2\\n\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5421,
+    "v2": "\"s0-'}'->:s2=>2\\n\" + \"s0-'else'->:s1^=>1\\n\";",
+    "resolution": "\"s0-'}'->:s2=>2\\n\" + \"s0-'else'->:s1=>1\\n\";",
+    "conflict": "\"s0-'else'->:s1=>1\\n\" + \"s0-'}'->:s2=>2\\n\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5422,
+    "v2": "\"s0-'}'->:s2=>2\\n\" + \"s0-'else'->:s1^=>1\\n\";",
+    "resolution": "\"s0-'}'->:s2=>2\\n\" + \"s0-'else'->:s1=>1\\n\";",
+    "conflict": "\"s0-'else'->:s1=>1\\n\" + \"s0-'}'->:s2=>2\\n\";"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 5426,
+    "v2": "@Deprecated ALL_OPS_NEED_SAME_ASSOC(118, \"all operators of alt <arg> of left-recursive rule must have same associativity\", ErrorSeverity.WARNING),",
+    "resolution": "@Deprecated ALL_OPS_NEED_SAME_ASSOC(118, \"all operators of alt '<arg>' of left-recursive rule must have same associativity\", ErrorSeverity.WARNING),",
+    "conflict": "ALL_OPS_NEED_SAME_ASSOC(118, \"all operators of alt '<arg>' of left-recursive rule must have same associativity\", ErrorSeverity.WARNING),"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 5456,
+    "v2": "label = lrlabel.getText(); isListLabel = lrlabel.getParent().getType() == PLUS_ASSIGN; leftRecursiveRuleRefLabels.add(new Pair<GrammarAST,String>(lrlabel,altLabel));",
+    "resolution": "label = lrlabel.getText(); isListLabel = lrlabel.getParent().getType() == PLUS_ASSIGN; leftRecursiveRuleRefLabels.add(Tuple.create(lrlabel,altLabel));",
+    "conflict": "leftRecursiveRuleRefLabels.add(Tuple.create(lrlabel,altLabel));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 5457,
+    "v2": "label = lrlabel.getText(); isListLabel = lrlabel.getParent().getType() == PLUS_ASSIGN; leftRecursiveRuleRefLabels.add(new Pair<GrammarAST,String>(lrlabel,altLabel));",
+    "resolution": "label = lrlabel.getText(); isListLabel = lrlabel.getParent().getType() == PLUS_ASSIGN; leftRecursiveRuleRefLabels.add(Tuple.create(lrlabel,altLabel));",
+    "conflict": "leftRecursiveRuleRefLabels.add(Tuple.create(lrlabel,altLabel));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5470,
+    "v2": "import org.antlr.v4.runtime.misc.Nullable;",
+    "resolution": "import org.antlr.v4.runtime.atn.ATNSimulator; import org.antlr.v4.runtime.misc.NotNull;",
+    "conflict": "import org.antlr.v4.runtime.atn.ATNSimulator; import org.antlr.v4.runtime.misc.NotNull;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 5473,
+    "v2": "if ( decl.a.trim().length()>0 ) { Attribute a = parseAttributeDef(action, decl, g);",
+    "resolution": "if ( decl.getItem1().trim().length()>0 ) { Attribute a = parseAttributeDef(action, decl, g);",
+    "conflict": "if ( decl.getItem1().trim().length()>0 ) { Attribute a = parseAttributeDef(action, decl, errMgr);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5474,
+    "v2": "public static Attribute parseAttributeDef(@Nullable ActionAST action, @NotNull Pair<String, Integer> decl, Grammar g) { if ( decl.a==null ) return null;",
+    "resolution": "public static Attribute parseAttributeDef(@Nullable ActionAST action, @NotNull Tuple2<String, Integer> decl, Grammar g) { if ( decl.getItem1()==null ) return null;",
+    "conflict": "public static Attribute parseAttributeDef(@Nullable ActionAST action, @NotNull Tuple2<String, Integer> decl, ErrorManager errMgr) { if ( decl.getItem1()==null ) return null;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 5484,
+    "v2": "import java.io.InputStreamReader; import java.io.OutputStreamWriter;",
+    "resolution": "import java.io.InputStreamReader; import java.io.OutputStreamWriter;",
+    "conflict": "import java.io.Writer;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 5822,
+    "v2": "\"@header {import org.antlr.v4.runtime.tree.*;}\\n\"+ \"@parser::members {\\n\" +",
+    "resolution": "\"@header {import org.antlr.v4.runtime.tree.TerminalNode;}\\n\"+ \"@parser::members {\\n\" +",
+    "conflict": "\"@header {import org.antlr.v4.runtime.tree.TerminalNode;}\\n\"+ \"@members {\\n\" +"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5824,
+    "v2": "boolean fullCtx = false; // in dfa boolean predicateEvaluationResult = evalSemanticContext(pair.pred, outerContext, pair.alt, fullCtx);",
+    "resolution": "boolean evaluatedResult = evalSemanticContext(pair.pred, outerContext, pair.alt);",
+    "conflict": "boolean evaluatedResult = pair.pred.eval(parser, outerContext);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5832,
+    "v2": "public boolean eval(Recognizer<?,?> parser, RuleContext parserCallStack) { RuleContext localctx = isCtxDependent ? parserCallStack : null;",
+    "resolution": "public <T> boolean eval(Recognizer<T, ?> parser, RuleContext parserCallStack) { RuleContext localctx = isCtxDependent ? parserCallStack : null;",
+    "conflict": "public <T> boolean eval(Recognizer<T, ?> parser, RuleContext outerContext) { RuleContext localctx = isCtxDependent ? outerContext : null;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5833,
+    "v2": "public boolean eval(Recognizer<?, ?> parser, RuleContext parserCallStack) { return parser.precpred(parserCallStack, precedence);",
+    "resolution": "public <T> boolean eval(Recognizer<T, ?> parser, RuleContext parserCallStack) { return parser.precpred(parserCallStack, precedence);",
+    "conflict": "public <T> boolean eval(Recognizer<T, ?> parser, RuleContext outerContext) { return parser.precpred(outerContext, precedence);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 5840,
+    "v2": "public Parser getParser() { return parser; }",
+    "resolution": "public Parser getParser() { return parser; }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 5866,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5875,
+    "v2": "boolean treatEofAsEpsilon = t == CharStream.EOF; if (closure(input, new LexerATNConfig((LexerATNConfig)c, target, lexerActionExecutor), reach, currentAltReachedAcceptState, true, treatEofAsEpsilon)) {",
+    "resolution": "boolean treatEofAsEpsilon = t == CharStream.EOF; if (closure(input, c.transform(target, lexerActionExecutor, true), reach, currentAltReachedAcceptState, true, treatEofAsEpsilon)) {",
+    "conflict": "if (closure(input, c.transform(target, lexerActionExecutor, true), reach, currentAltReachedAcceptState, true)) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 5876,
+    "v2": "LexerATNConfig c = new LexerATNConfig(target, i+1, initialContext); closure(input, c, configs, false, false, false);",
+    "resolution": "ATNConfig c = ATNConfig.create(target, i+1, initialContext); closure(input, c, configs, false, false, false);",
+    "conflict": "ATNConfig c = ATNConfig.create(target, i+1, initialContext); closure(input, c, configs, false, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5886,
+    "v2": "closureCheckingStopState(c, configs, closureBusy, collectPredicates, fullCtx, depth - 1, treatEofAsEpsilon);",
+    "resolution": "closure(c, configs, intermediate, closureBusy, collectPredicates, hasMoreContexts, contextCache, depth - 1, treatEofAsEpsilon);",
+    "conflict": "closure(c, configs, intermediate, closureBusy, collectPredicates, hasMoreContexts, contextCache, depth - 1);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5888,
+    "v2": "ATNConfig c = getEpsilonTarget(config, t, continueCollecting, depth == 0, fullCtx, treatEofAsEpsilon);",
+    "resolution": "ATNConfig c = getEpsilonTarget(config, t, continueCollecting, depth == 0, contextCache, treatEofAsEpsilon);",
+    "conflict": "ATNConfig c = getEpsilonTarget(config, t, continueCollecting, depth == 0, contextCache);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5889,
+    "v2": "closureCheckingStopState(c, configs, closureBusy, continueCollecting, fullCtx, newDepth, treatEofAsEpsilon);",
+    "resolution": "closure(c, configs, intermediate, closureBusy, continueCollecting, hasMoreContexts, contextCache, newDepth, treatEofAsEpsilon);",
+    "conflict": "closure(c, configs, intermediate, closureBusy, continueCollecting, hasMoreContexts, contextCache, newDepth);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 5903,
+    "v2": "import java.util.HashMap;",
+    "resolution": "import java.util.HashMap;import java.util.Collections; import java.util.Comparator;",
+    "conflict": "import java.util.Collections; import java.util.Comparator;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5907,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.atn.ATNSimulator; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.atn.ATNSimulator; import org.antlr.v4.runtime.misc.Tuple3;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5912,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.atn.ATNSimulator;",
+    "conflict": "import org.antlr.v4.runtime.atn.ATNSimulator; import org.antlr.v4.runtime.misc.Tuple3;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 5914,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2; import org.antlr.v4.runtime.misc.Tuple3;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 5917,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.MultiMap; import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.MultiMap; import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple3;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6099,
+    "v2": "@Nullable BitSet conflictingAlts, @NotNull ATNConfigSet configs)",
+    "resolution": "@Nullable BitSet conflictingAlts, @NotNull SimulatorState conflictState)",
+    "conflict": "BitSet conflictingAlts, SimulatorState conflictState)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6103,
+    "v2": "text = oldToken.getText(); source = new Pair<TokenSource, CharStream>(oldToken.getTokenSource(), oldToken.getInputStream());",
+    "resolution": "text = oldToken.getText(); source = Tuple.create(oldToken.getTokenSource(), oldToken.getInputStream());",
+    "conflict": "source = Tuple.create(oldToken.getTokenSource(), oldToken.getInputStream());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6123,
+    "v2": "* but different {@link ATNConfig#alt} value, e.g. {@code (s, i, ctx, _)} * and {@code (s, j, ctx, _)} for {@code i!=j}.</p>",
+    "resolution": "* but different {@link ATNConfig#getAlt} value, e.g. {@code (s, i, ctx, _)} * and {@code (s, j, ctx, _)} for {@code i!=j}.",
+    "conflict": "* but different {@link ATNConfig#getAlt} value, e.g. {@code (s, i, ctx, _)} * and {@code (s, j, ctx, _)} for {@code i!=j}."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6127,
+    "v2": "Iterable<String> compileOptions = Arrays.asList(\"-g\", \"-source\", \"1.6\", \"-target\", \"1.6\", \"-implicit:class\", \"-Xlint:-options\", \"-d\", tmpdir, \"-cp\", tmpdir+pathSep+CLASSPATH);",
+    "resolution": "List<String> compileOptions = getCompileOptions();",
+    "conflict": "List<String> compileOptions = getCompileOptions();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6135,
+    "v2": "if (atn.grammarType == ATNType.LEXER) {",
+    "resolution": "boolean leftFactored = ruleNames.get(ruleStartState.ruleIndex).indexOf(ATNSimulator.RULE_VARIANT_DELIMITER) >= 0; data.add(leftFactored ? 1 : 0); if (atn.grammarType == ATNType.LEXER) {",
+    "conflict": "boolean leftFactored = g.getRule(ruleStartState.ruleIndex).name.indexOf(ATNSimulator.RULE_VARIANT_DELIMITER) >= 0; data.add(leftFactored ? 1 : 0); if ( g.isLexer() ) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6136,
+    "v2": "int numNonGreedyStates = ATNDeserializer.toInt(data[p++]);",
+    "resolution": "int numNonGreedyStates = ATNDeserializer.toInt(data[p++]);",
+    "conflict": "int numNonGreedyStates = ATNSimulator.toInt(data[p++]);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6158,
+    "v2": "import org.antlr.v4.runtime.atn.ATNConfigSet; import org.antlr.v4.runtime.atn.DecisionState;",
+    "resolution": "import org.antlr.v4.runtime.atn.ATNConfigSet; import org.antlr.v4.runtime.atn.ATNState;",
+    "conflict": "import org.antlr.v4.runtime.atn.ATNState;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6168,
+    "v2": "import org.antlr.v4.runtime.misc.IntervalSet; import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.IntervalSet; import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6170,
+    "v2": "//long start = System.currentTimeMillis();",
+    "resolution": "@SuppressWarnings(\"unused\") long start = System.currentTimeMillis();",
+    "conflict": "@SuppressWarnings(\"unused\") long start = System.currentTimeMillis();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6171,
+    "v2": "//long stop = System.currentTimeMillis();",
+    "resolution": "@SuppressWarnings(\"unused\") long stop = System.currentTimeMillis();",
+    "conflict": "@SuppressWarnings(\"unused\") long stop = System.currentTimeMillis();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6174,
+    "v2": "org.antlr.runtime.tree.TreeWizard wiz, List<Pair<GrammarAST,GrammarAST>> lexerRuleToStringLiteral)",
+    "resolution": "org.antlr.runtime.tree.TreeWizard wiz, List<Tuple2<GrammarAST,GrammarAST>> lexerRuleToStringLiteral)",
+    "conflict": "TreeWizard wiz, List<Tuple2<GrammarAST,GrammarAST>> lexerRuleToStringLiteral)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6177,
+    "v2": "import org.antlr.v4.runtime.atn.ATNDeserializer; import org.antlr.v4.runtime.atn.ATNSerializer; import org.antlr.v4.runtime.misc.Utils;",
+    "resolution": "import org.antlr.v4.runtime.atn.ATNDeserializationOptions; import org.antlr.v4.runtime.atn.ATNDeserializer; import org.antlr.v4.runtime.atn.ATNSerializer;",
+    "conflict": "import org.antlr.v4.runtime.atn.ATNSimulator;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6181,
+    "v2": "ATN atn = createATN(g, true); String result = ATNSerializer.getDecoded(atn, Arrays.asList(g.getTokenNames()));",
+    "resolution": "ATN atn = createATN(g, false); String result = ATNSerializer.getDecoded(atn, Arrays.asList(g.getRuleNames()), Arrays.asList(g.getTokenNames()));",
+    "conflict": "ATN atn = createATN(g, false); String result = ATNSerializer.getDecoded(g, atn);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6192,
+    "v2": "setTrace(false);",
+    "resolution": "setTrace(false); _precedenceStack.clear(); _precedenceStack.push(0);",
+    "conflict": "_tracer = null; _precedenceStack.clear(); _precedenceStack.push(0);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 6201,
+    "v2": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable;",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable;import org.antlr.v4.parse.ANTLRParser;",
+    "conflict": "import org.antlr.v4.parse.ANTLRParser;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6264,
+    "v2": "String action = \"$lab.e; $b.e; $y.e = \\\"\\\";\"; String expected = \"((AContext)_localctx).lab.e; ((AContext)_localctx).b.e; _localctx.y.e = \\\"\\\";\";",
+    "resolution": "String action = \"$lab.e; $b.e; $y.e = \\\"\\\";\"; String expected = \"_localctx.lab.e; _localctx.b.e; _localctx.y.e = \\\"\\\";\";",
+    "conflict": "String action = \"$lab.e; $b.e;\"; String expected = \"_localctx.lab.e; _localctx.b.e;\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6276,
+    "v2": "",
+    "resolution": "import java.util.Deque; import java.util.HashSet; import java.util.Set;",
+    "conflict": "import java.util.Deque; import java.util.HashSet; import java.util.Set;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6278,
+    "v2": "_LOOK(s.transition(alt).target, null, PredictionContext.EMPTY,",
+    "resolution": "_LOOK(s.transition(alt).target, null, PredictionContext.EMPTY_FULL,",
+    "conflict": "_LOOK(s.transition(alt).target, PredictionContext.EMPTY_FULL,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6295,
+    "v2": "import java.util.Collections; import java.util.Comparator; import java.util.HashMap; import java.util.IdentityHashMap;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6302,
+    "v2": "public T visitChildren(@NotNull RuleNode node) { T result = defaultResult();",
+    "resolution": "public Result visitChildren(@NotNull RuleNode<? extends Symbol> node) { Result result = defaultResult();",
+    "conflict": "public Result visitChildren(RuleNode<? extends Symbol> node) { Result result = defaultResult();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6310,
+    "v2": "import org.antlr.v4.runtime.misc.Triple;",
+    "resolution": "import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple3;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6313,
+    "v2": "",
+    "resolution": "",
+    "conflict": "if (Boolean.valueOf(blkAST.getOptionString(\"preventepsilon\"))) { preventEpsilonDecisions.add(Tuple.create(currentRule, start)); }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6321,
+    "v2": "public void reportAttemptingFullContext(Parser recognizer, DFA dfa, int startIndex, int stopIndex, BitSet conflictingAlts, ATNConfigSet configs) { _sllConflict = conflictingAlts; _sllConfigs = configs;",
+    "resolution": "public <T extends Token> void reportAttemptingFullContext(Parser<T> recognizer, DFA dfa, int startIndex, int stopIndex, BitSet conflictingAlts, SimulatorState<T> conflictState) { _sllConflict = conflictingAlts; _sllConfigs = conflictState.s0.configs;",
+    "conflict": "public <T extends Token> void reportAttemptingFullContext(Parser<T> recognizer, DFA dfa, int startIndex, int stopIndex, SimulatorState<T> initialState) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6331,
+    "v2": "List<Future<?>> passResults = new ArrayList<Future<?>>(); passResults.add(executorService.submit(new Runnable() {",
+    "resolution": "List<Future<?>> passResults = new ArrayList<Future<?>>(); passResults.add(executorService.submit(new Runnable() {",
+    "conflict": "executorService.submit(new Runnable() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6332,
+    "v2": "})); }",
+    "resolution": "})); }",
+    "conflict": "}); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6355,
+    "v2": "protected DFAState.PredPrediction[] getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {",
+    "resolution": "protected DFAState.PredPrediction[] getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {",
+    "conflict": "public DFAState.PredPrediction[] getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6360,
+    "v2": "protected BitSet getConflictingAlts(ATNConfigSet configs) { Collection<BitSet> altsets = PredictionMode.getConflictingAltSubsets(configs); return PredictionMode.getAlts(altsets);",
+    "resolution": "return config.transform(t.target, newContext);",
+    "conflict": "return config.transform(t.target, newContext);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6361,
+    "v2": "protected NoViableAltException noViableAlt(@NotNull TokenStream input, @NotNull ParserRuleContext outerContext,",
+    "resolution": "protected NoViableAltException noViableAlt(@NotNull TokenStream<? extends Symbol> input, @NotNull ParserRuleContext<Symbol> outerContext,",
+    "conflict": "public NoViableAltException noViableAlt(@NotNull TokenStream<? extends Symbol> input, @NotNull ParserRuleContext<Symbol> outerContext,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6368,
+    "v2": "import org.antlr.v4.runtime.misc.DoubleKeyMap; import org.antlr.v4.runtime.misc.MurmurHash;",
+    "resolution": "import org.antlr.v4.runtime.misc.AbstractEqualityComparator; import org.antlr.v4.runtime.misc.FlexibleHashMap; import org.antlr.v4.runtime.misc.MurmurHash;",
+    "conflict": "import org.antlr.v4.runtime.misc.AbstractEqualityComparator; import org.antlr.v4.runtime.misc.FlexibleHashMap;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6390,
+    "v2": "\"s1-ID->:s2^=>1\\n\";",
+    "resolution": "\"s1-ID->:s2=>1\\n\" + \"s3**-ctx:15(a)->s4\\n\" + \"s4-INT->:s5=>1\\n\";",
+    "conflict": "\"s1-ID->:s2=>1\\n\" + \"s3**-ctx:15(a)->s4\\n\" + \"s4-INT->:s5=>1\\n\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6393,
+    "v2": "\"s1-ID->:s2^=>1\\n\"; // Must point at accept state",
+    "resolution": "\"s1-ID->:s2=>1\\n\" + \"s3**-ctx:11(a)->s4\\n\" + \"s4-INT->:s5=>1\\n\"; // Must point at accept state",
+    "conflict": "\"s1-ID->:s2=>1\\n\" + \"s3**-ctx:11(a)->s4\\n\" + \"s4-INT->:s5=>1\\n\"; // Must point at accept state"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6394,
+    "v2": "\"s0-'else'->:s1^=>1\\n\";",
+    "resolution": "\"s0-'else'->:s1=>1\\n\" + \"s2**-ctx:7(s)->s3\\n\" + \"s3-'else'->:s4=>1\\n\";",
+    "conflict": "\"s0-'else'->:s1=>1\\n\" + \"s2**-ctx:7(s)->s3\\n\" + \"s3-'else'->:s4=>1\\n\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6402,
+    "v2": "int index = FILE_GRANULARITY ? 0 : ((NumberedThread)Thread.currentThread()).getThreadNumber(); Parser parser = sharedParsers[index];",
+    "resolution": "int index = FILE_GRANULARITY ? 0 : ((NumberedThread)Thread.currentThread()).getThreadNumber(); Parser<?> parser = sharedParsers[index];",
+    "conflict": "Parser<?> parser = sharedParsers[0];"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6422,
+    "v2": "@NotNull Token recoverInline(@NotNull Parser recognizer)",
+    "resolution": "@NotNull <T extends Symbol> T recoverInline(@NotNull Parser<T> recognizer)",
+    "conflict": "<T extends Symbol> T recoverInline(@NotNull Parser<T> recognizer)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6426,
+    "v2": "",
+    "resolution": "import org.antlr.v4.runtime.atn.PredictionContext;",
+    "conflict": "import org.antlr.v4.runtime.atn.BlockStartState; import org.antlr.v4.runtime.atn.PlusBlockStartState; import org.antlr.v4.runtime.atn.PlusLoopbackState; import org.antlr.v4.runtime.atn.PredictionContext;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6427,
+    "v2": "import org.antlr.v4.runtime.misc.Nullable; import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.Nullable; import org.antlr.v4.runtime.misc.Tuple;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6440,
+    "v2": "Token matchedSymbol = recognizer.getCurrentToken(); reportMatch(recognizer);  // we know current token is correct",
+    "resolution": "T matchedSymbol = recognizer.getCurrentToken(); reportMatch(recognizer);  // we know current token is correct",
+    "conflict": "T matchedSymbol = recognizer.getCurrentToken(); endErrorCondition(recognizer);  // we know current token is correct"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6442,
+    "v2": "recognizer.getTokenFactory().create(new Pair<TokenSource, CharStream>(current.getTokenSource(), current.getTokenSource().getInputStream()), expectedTokenType, tokenText, Token.DEFAULT_CHANNEL,",
+    "resolution": "factory.create(Tuple.create(tokenSource, current.getTokenSource().getInputStream()), expectedTokenType, tokenText, Symbol.DEFAULT_CHANNEL,",
+    "conflict": "factory.create(Tuple.create(tokenSource, current.getTokenSource().getInputStream()), expectedTokenType, tokenText, Symbol.DEFAULT_CHANNEL,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6443,
+    "v2": "@NotNull protected IntervalSet getExpectedTokens(@NotNull Parser recognizer) {",
+    "resolution": "@NotNull protected IntervalSet getExpectedTokens(@NotNull Parser<? extends Symbol> recognizer) {",
+    "conflict": "public IntervalSet getExpectedTokens(Parser<? extends Symbol> recognizer) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6445,
+    "v2": "@NotNull protected IntervalSet getErrorRecoverySet(@NotNull Parser recognizer) {",
+    "resolution": "@NotNull protected IntervalSet getErrorRecoverySet(@NotNull Parser<? extends Symbol> recognizer) {",
+    "conflict": "protected IntervalSet getErrorRecoverySet(Parser<? extends Symbol> recognizer) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6446,
+    "v2": "/** Consume tokens until one matches the given token set. */ protected void consumeUntil(@NotNull Parser recognizer, @NotNull IntervalSet set) {",
+    "resolution": "/** Consume tokens until one matches the given token set. */ protected void consumeUntil(@NotNull Parser<? extends Symbol> recognizer, @NotNull IntervalSet set) {",
+    "conflict": "/** Consume tokens until one matches the given token set */ public void consumeUntil(Parser<? extends Symbol> recognizer, IntervalSet set) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6447,
+    "v2": "public InputMismatchException(@NotNull Parser recognizer) {",
+    "resolution": "private static final long serialVersionUID = 1532568338707443067L; public <T extends Token> InputMismatchException(@NotNull Parser<T> recognizer) {",
+    "conflict": "private static final long serialVersionUID = 1532568338707443067L;  public <T extends Token> InputMismatchException(Parser<T> recognizer) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6450,
+    "v2": "setTrace(false);",
+    "resolution": "setTrace(false); _precedenceStack.clear(); _precedenceStack.push(0);",
+    "conflict": "_tracer = null; _precedenceStack.clear(); _precedenceStack.push(0);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6460,
+    "v2": "/** Set the token stream and reset the parser. */ public void setTokenStream(TokenStream input) {",
+    "resolution": "/** Set the token stream and reset the parser. */ public void setInputStream(TokenStream<? extends Symbol> input) {",
+    "conflict": "/** Set the token stream and reset the parser */ public void setInputStream(TokenStream<? extends Symbol> input) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6466,
+    "v2": "@Nullable private final IntStream input;",
+    "resolution": "@Nullable private final IntStream input;",
+    "conflict": "private RuleContext<?> ctx;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6473,
+    "v2": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6474,
+    "v2": "@NotNull Symbol create(@NotNull Pair<TokenSource, CharStream> source, int type, String text,",
+    "resolution": "@NotNull Symbol create(@NotNull Tuple2<? extends TokenSource<? super Symbol>, CharStream> source, int type, String text,",
+    "conflict": "Symbol create(Tuple2<? extends TokenSource<? super Symbol>, CharStream> source, int type, String text,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6491,
+    "v2": "if ( depth != 0 && !closureBusy.add(config) ) return; // avoid infinite recursion",
+    "resolution": "if ( !optimize_closure_busy && depth != 0 && !closureBusy.add(config) ) { return; // avoid infinite recursion }",
+    "conflict": "if ( !optimize_closure_busy && !closureBusy.add(config) ) { return; // avoid infinite recursion }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6494,
+    "v2": "contextCache.add(context); visited.put(context, context);",
+    "resolution": "existing = contextCache.putIfAbsent(context, context); visited.put(context, existing != null ? existing : context);",
+    "conflict": "existing = contextCache.putIfAbsent(context, context); visited.put(context, existing != null ? existing : context);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6500,
+    "v2": "if ( optionsRoot!=null && optionsRoot.getChildCount()!=0 ) { GrammarAST lexerOptionsRoot = (GrammarAST)adaptor.dupNode(optionsRoot);",
+    "resolution": "if ( optionsRoot!=null && optionsRoot.getChildCount()!=0 ) { GrammarAST lexerOptionsRoot = adaptor.dupNode(optionsRoot);",
+    "conflict": "if ( optionsRoot!=null ) { GrammarAST lexerOptionsRoot = adaptor.dupNode(optionsRoot);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6510,
+    "v2": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn,new DFA[] { new DFA(lexatn.modeToStartState.get(Lexer.DEFAULT_MODE)) },new PredictionContextCache());",
+    "resolution": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn);",
+    "conflict": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6511,
+    "v2": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn,new DFA[] { new DFA(lexatn.getDecisionState(Lexer.DEFAULT_MODE)) }, new PredictionContextCache());",
+    "resolution": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn);",
+    "conflict": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6522,
+    "v2": "protected static final Pair<TokenSource, CharStream> EMPTY_SOURCE = new Pair<TokenSource, CharStream>(null, null);",
+    "resolution": "private static final long serialVersionUID = -6708843461296520577L; protected static final Tuple2<TokenSource<?>, CharStream> EMPTY_SOURCE = Tuple.<TokenSource<?>, CharStream>create(null, null);",
+    "conflict": "private static final long serialVersionUID = -6708843461296520577L;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6527,
+    "v2": "//TODO: can't be acceptstate here; rm that part of test? if (!s.requiresFullContext && !s.isAcceptState && t != IntStream.EOF) {",
+    "resolution": "if (!s.isAcceptState && t != IntStream.EOF) {",
+    "conflict": "if (!s.isAcceptState && t != IntStream.EOF) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6530,
+    "v2": "return Utils.capitalize(r.name)+getTemplates().getInstanceOf(\"RuleContextNameSuffix\").render();",
+    "resolution": "String baseName = function.variantOf != null ? function.variantOf : function.name; return Utils.capitalize(baseName)+getTemplates().getInstanceOf(\"RuleContextNameSuffix\").render();",
+    "conflict": "String baseName = function.variantOf != null ? function.variantOf : function.name; return Utils.capitalize(baseName)+gen.templates.getInstanceOf(\"RuleContextNameSuffix\").render();"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 6566,
+    "v2": "// LR rule transformation sets this to help with reporting EPSILON_LR_FOLLOW ParserBlockOptions.add(\"preventepsilon\");",
+    "resolution": "ParserBlockOptions.add(\"sll\");// LR rule transformation sets this to help with reporting EPSILON_LR_FOLLOW ParserBlockOptions.add(\"preventepsilon\");",
+    "conflict": "ParserBlockOptions.add(\"sll\");"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 6578,
+    "v2": "import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable;",
+    "resolution": "import org.antlr.v4.parse.ANTLRParser;import org.antlr.v4.runtime.misc.NotNull; import org.antlr.v4.runtime.misc.Nullable;",
+    "conflict": "import org.antlr.v4.parse.ANTLRParser;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6586,
+    "v2": "configs.add(config, mergeCache); //            if ( debug ) System.out.println(\"added config \"+configs);",
+    "resolution": "configs.add(config, contextCache); if ( debug ) System.out.println(\"added config \"+configs);",
+    "conflict": "configs.add(config, contextCache); if ( debug ) System.out.println(\"added config \"+configs);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6599,
+    "v2": "if ( config.state instanceof RuleStopState) { assert !fullCtx;",
+    "resolution": "if ( config.getState() instanceof RuleStopState ) {",
+    "conflict": "if ( config.getState() instanceof RuleStopState ) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6608,
+    "v2": "/** {@code edges[symbol]} points to target of symbol. Shift up by 1 so (-1) *  {@link Token#EOF} maps to {@code edges[0]}. */",
+    "resolution": "/** {@code edges.get(symbol)} points to target of symbol. */",
+    "conflict": "/** edges[symbol] points to target of symbol */"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6610,
+    "v2": "/** The {@link ParseTreeVisitor} needs a double dispatch method. */ public <T> T accept(ParseTreeVisitor<? extends T> visitor);",
+    "resolution": "/** The {@link ParseTreeVisitor} needs a double dispatch method. */ public <T> T accept(ParseTreeVisitor<? super Symbol, ? extends T> visitor);",
+    "conflict": "/** The ParseTreeVisitor needs a double dispatch method */ public <T> T accept(ParseTreeVisitor<? super Symbol, ? extends T> visitor);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6634,
+    "v2": "public TokenFactory<? extends Token> getTokenFactory() { return _factory;",
+    "resolution": "public void setTokenFactory(TokenFactory<? extends Token> factory) { this._factory = factory;",
+    "conflict": "public void setTokenFactory(TokenFactory<? extends Token> factory) { this._factory = factory;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6644,
+    "v2": "public boolean isEmpty() { return true; }",
+    "resolution": "protected PredictionContext addEmptyContext() { return this; }",
+    "conflict": "protected PredictionContext addEmptyContext() { return this; }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6647,
+    "v2": "protected T getOrAddImpl(T o) {",
+    "resolution": "protected T getOrAddImpl(T o) {",
+    "conflict": "@SuppressWarnings(\"unchecked\") protected T absorb_(T o) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6649,
+    "v2": "T[][] newTable = createBuckets(newCapacity); int[] newBucketLengths = new int[newTable.length];",
+    "resolution": "T[][] newTable = createBuckets(newCapacity); int[] newBucketLengths = new int[newTable.length];",
+    "conflict": "@SuppressWarnings(\"unchecked\") T[][] newTable = (T[][])new Object[newCapacity][];"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6656,
+    "v2": "Collection<?> nestedOmos = (Collection<?>)o; for (Object nestedOmo : nestedOmos) {",
+    "resolution": "Collection<?> nestedOmos = (Collection<?>)o; for (Object nestedOmo : nestedOmos) {",
+    "conflict": "for (OutputModelObject nestedOmo : nestedOmos) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6680,
+    "v2": "for (String tokenName : tokens) {",
+    "resolution": "for (String tokenName : tokens) {",
+    "conflict": "for (Iterator<String> iter = tokens.iterator(); iter.hasNext();) { String tokenName = iter.next();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6684,
+    "v2": "public DFAState.PredPrediction[] getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {",
+    "resolution": "public DFAState.PredPrediction[] getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {",
+    "conflict": "public DFAState.PredPrediction[] getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6685,
+    "v2": "ParserRuleContext outerContext, boolean complete)",
+    "resolution": "ParserRuleContext<Symbol> outerContext, boolean complete)",
+    "conflict": "ParserRuleContext<Symbol> outerContext, boolean complete)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6689,
+    "v2": "public DFAState.PredPrediction[] getPredicatePredictions(IntervalSet ambigAlts, SemanticContext[] altToPred) {",
+    "resolution": "public DFAState.PredPrediction[] getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {",
+    "conflict": "public List<DFAState.PredPrediction> getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6694,
+    "v2": "public void enterRecursionRule(ParserRuleContext localctx, int ruleIndex, int precedence) { _precedenceStack.push(precedence);",
+    "resolution": "public void enterRecursionRule(ParserRuleContext<Symbol> localctx, int ruleIndex, int precedence) { _precedenceStack.push(precedence);",
+    "conflict": "public void enterRecursionRule(ParserRuleContext<Symbol> localctx, int ruleIndex) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6695,
+    "v2": "public void unrollRecursionContexts(ParserRuleContext _parentctx) { _precedenceStack.pop();",
+    "resolution": "public void unrollRecursionContexts(ParserRuleContext<Symbol> _parentctx) { _precedenceStack.pop();",
+    "conflict": "public void unrollRecursionContexts(ParserRuleContext<Symbol> _parentctx) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6696,
+    "v2": "public boolean precpred(RuleContext localctx, int precedence) { return precedence >= _precedenceStack.peek();",
+    "resolution": "public boolean precpred(RuleContext<Symbol> localctx, int precedence) { return precedence >= _precedenceStack.peek(); }  @Override public ParserErrorListener<? super Symbol> getErrorListenerDispatch() { return new ProxyParserErrorListener<Symbol>(getErrorListeners());",
+    "conflict": "public ParserErrorListener<? super Symbol> getErrorListenerDispatch() { return new ProxyParserErrorListener<Symbol>(getErrorListeners());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6701,
+    "v2": "import org.antlr.v4.runtime.misc.Pair; import org.antlr.v4.semantics.BasicSemanticChecks; import org.antlr.v4.semantics.RuleCollector;",
+    "resolution": "import org.antlr.v4.runtime.misc.Tuple2; import org.antlr.v4.semantics.BasicSemanticChecks; import org.antlr.v4.semantics.RuleCollector;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6710,
+    "v2": "protected Pair<TokenSource, CharStream> source;",
+    "resolution": "protected Pair<TokenSource, CharStream> source;",
+    "conflict": "protected TokenSource<?> source; // TODO: rm protected transient CharStream input;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6713,
+    "v2": "public TokenSource getTokenSource() { return source.a;",
+    "resolution": "public TokenSource<?> getTokenSource() { return source.a;",
+    "conflict": "public TokenSource<?> getTokenSource() { return source;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6715,
+    "v2": "_factory.create(new Pair<TokenSource, CharStream>(current.getTokenSource(), current.getTokenSource().getInputStream()), expectedTokenType, tokenText, Token.DEFAULT_CHANNEL,",
+    "resolution": "factory.create(new Pair<TokenSource, CharStream>(current.getTokenSource(), current.getTokenSource().getInputStream()), expectedTokenType, tokenText, Symbol.DEFAULT_CHANNEL,",
+    "conflict": "factory.create(tokenSource, expectedTokenType, tokenText, Symbol.DEFAULT_CHANNEL,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6716,
+    "v2": "this._input = (CharStream)input; this._tokenFactorySourcePair = new Pair<TokenSource, CharStream>(this, _input);",
+    "resolution": "this._input = input; this._tokenFactorySourcePair = new Pair<TokenSource, CharStream>(this, _input);",
+    "conflict": "this._input = input;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6735,
+    "v2": "* This interface defines the basic notion of a parse tree visitor. Generated * visitors implement this interface and the {@code XVisitor} interface for * grammar {@code X}.",
+    "resolution": "* This interface defines the basic notion of a parse tree visitor. Generated * visitors implement this interface and the {@code XVisitor} interface for * grammar {@code X}.",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6747,
+    "v2": "import org.antlr.v4.runtime.atn.PredictionContextCache; import org.antlr.v4.runtime.dfa.DFA; import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.Pair;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6748,
+    "v2": "import org.antlr.v4.runtime.atn.SingletonPredictionContext;",
+    "resolution": "import org.antlr.v4.runtime.atn.PredictionContext;",
+    "conflict": "import org.antlr.v4.runtime.atn.PredictionContext; import static org.junit.Assert.*;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6754,
+    "v2": "",
+    "resolution": "}  public static <T> RuleContext<T> getChildContext(RuleContext<T> parent, int invokingState) { return new RuleContext<T>(parent, invokingState);",
+    "conflict": "}  public static <T> RuleContext<T> getChildContext(RuleContext<T> parent, int invokingState) { return new RuleContext<T>(parent, invokingState);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6765,
+    "v2": "closureCheckingStopState(c, configs, closureBusy, continueCollecting, fullCtx, newDepth);",
+    "resolution": "closure(c, configs, intermediate, closureBusy, continueCollecting, hasMoreContexts, contextCache, newDepth);",
+    "conflict": "closure(c, configs, intermediate, closureBusy, continueCollecting, hasMoreContexts, contextCache, newDepth);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6767,
+    "v2": "import org.antlr.v4.runtime.atn.ATNSimulator; import org.antlr.v4.runtime.misc.Triple;",
+    "resolution": "import org.antlr.v4.runtime.atn.ATNSimulator; import org.antlr.v4.runtime.misc.Tuple3;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple3;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6768,
+    "v2": "import org.antlr.v4.runtime.atn.ATNSimulator; import org.antlr.v4.runtime.misc.Triple;",
+    "resolution": "import org.antlr.v4.runtime.atn.ATNSimulator; import org.antlr.v4.runtime.misc.Tuple3;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple3;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6796,
+    "v2": "public Token getStart() { return start; } public Token getStop() { return stop; }",
+    "resolution": "public Symbol getStart() { return start; } public Symbol getStop() { return stop; }",
+    "conflict": "public Symbol getStart() { return start; } public Symbol getStop() { return stop; }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6798,
+    "v2": "return a.state.stateNumber==b.state.stateNumber && a.context.equals(b.context);",
+    "resolution": "return a.getState().stateNumber==b.getState().stateNumber && a.getContext().equals(b.getContext());",
+    "conflict": "return a.getState().stateNumber==b.getState().stateNumber && b.getContext().equals(b.getContext());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6799,
+    "v2": "* This class defines the basic notion of a parse tree visitor object. Generated * visitors extend this class and implement the {@code XVisitor} interface for * grammar {@code X}.",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6809,
+    "v2": "public class BufferedTokenStream implements TokenStream {",
+    "resolution": "public class BufferedTokenStream implements TokenStream { @NotNull",
+    "conflict": "public class BufferedTokenStream<T extends Token> implements TokenStream { @NotNull"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6811,
+    "v2": "if ( p == -1 ) setup(); List<Token> subset = new ArrayList<Token>();",
+    "resolution": "lazyInit(); List<Token> subset = new ArrayList<Token>();",
+    "conflict": "lazyInit(); List<T> subset = new ArrayList<T>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6812,
+    "v2": "public Token LT(int k) { if ( p == -1 ) setup();",
+    "resolution": "public Token LT(int k) { lazyInit();",
+    "conflict": "public T LT(int k) { lazyInit();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6821,
+    "v2": "lastErrorStates.contains(recognizer.getState()) ) {",
+    "resolution": "lastErrorStates != null && lastErrorStates.contains(recognizer.getState()) ) {",
+    "conflict": "lastErrorStates != null && lastErrorStates.contains(recognizer._ctx.s) ) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6823,
+    "v2": "public void enterRule(ParserRuleContext<Token> localctx, int state, int ruleIndex) { setState(state);",
+    "resolution": "public void enterRule(ParserRuleContext localctx, int state, int ruleIndex) { setState(state);",
+    "conflict": "public void enterRule(ParserRuleContext localctx, int ruleIndex) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6824,
+    "v2": "setState(_ctx.invokingState); _ctx = (ParserRuleContext<Token>)_ctx.parent;",
+    "resolution": "setState(_ctx.invokingState); _ctx = (ParserRuleContext)_ctx.parent;",
+    "conflict": "_ctx = (ParserRuleContext)_ctx.parent;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6825,
+    "v2": "/* like enterRule but for recursive rules; no enter events for recursive rules. */ public void pushNewRecursionContext(ParserRuleContext<Token> localctx, int state, int ruleIndex) { setState(state);",
+    "resolution": "public void enterRecursionRule(ParserRuleContext localctx, int ruleIndex) {",
+    "conflict": "public void enterRecursionRule(ParserRuleContext localctx, int ruleIndex) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6827,
+    "v2": "setState(_ctx.invokingState); _ctx = (ParserRuleContext<Token>)_ctx.parent;",
+    "resolution": "_ctx = (ParserRuleContext)_ctx.parent;",
+    "conflict": "_ctx = (ParserRuleContext)_ctx.parent;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6828,
+    "v2": "ParserRuleContext<?> ctx = _ctx; ATNState s = atn.states.get(getState());",
+    "resolution": "ParserRuleContext ctx = _ctx; ATNState s = atn.states.get(getState());",
+    "conflict": "ParserRuleContext ctx = _ctx; ATNState s = atn.states.get(ctx.s);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6829,
+    "v2": "ParserRuleContext<?> ctx = _ctx; ATNState s = atn.states.get(getState());",
+    "resolution": "ParserRuleContext ctx = _ctx; ATNState s = atn.states.get(getState());",
+    "conflict": "ParserRuleContext ctx = _ctx; ATNState s = atn.states.get(ctx.s);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6839,
+    "v2": "PredictionContext.EMPTY, look[alt], lookBusy, seeThruPreds, false);",
+    "resolution": "PredictionContext.EMPTY_FULL, look[alt], lookBusy, seeThruPreds, false);",
+    "conflict": "PredictionContext.EMPTY_FULL, look[alt], lookBusy, seeThruPreds);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6841,
+    "v2": "PredictionContext lookContext = ctx != null ? PredictionContext.fromRuleContext(s.atn, ctx) : null; _LOOK(s, lookContext, r, new HashSet<ATNConfig>(), seeThruPreds, true);",
+    "resolution": "_LOOK(s, ctx, r, new HashSet<ATNConfig>(), seeThruPreds, true);",
+    "conflict": "_LOOK(s, ctx, r, new HashSet<ATNConfig>(), seeThruPreds);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 6847,
+    "v2": "if ( SLL ) { // overrides diagnostics parser.getInterpreter().setPredictionMode(PredictionMode.SLL);",
+    "resolution": "if ( SLL ) { // overrides diagnostics parser.getInterpreter().disable_global_context = true;",
+    "conflict": "if ( SLL ) { parser.getInterpreter().disable_global_context = true;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6853,
+    "v2": "public void recover(Parser recognizer, RecognitionException e) { for (ParserRuleContext context = recognizer.getContext(); context != null; context = context.getParent()) {",
+    "resolution": "public void recover(Parser<? extends Symbol> recognizer, RecognitionException e) { for (ParserRuleContext<?> context = recognizer.getContext(); context != null; context = context.getParent()) {",
+    "conflict": "public void recover(Parser<? extends Symbol> recognizer, RecognitionException e) { for (ParserRuleContext<?> context = recognizer.getContext(); context != null; context = context.getParent()) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6857,
+    "v2": "public Token LT(int k) { if ( p == -1 ) setup();",
+    "resolution": "public T LT(int k) { lazyInit();",
+    "conflict": "public T LT(int k) { lazyInit();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6858,
+    "v2": "public List<Token> getTokens(int start, int stop, Set<Integer> types) { if ( p == -1 ) setup();",
+    "resolution": "public List<T> getTokens(int start, int stop, BitSet types) { lazyInit();",
+    "conflict": "public List<T> getTokens(int start, int stop, BitSet types) { lazyInit();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6859,
+    "v2": "Token t = tokens.get(i); if ( types==null || types.contains(t.getType()) ) {",
+    "resolution": "T t = tokens.get(i); if ( types==null || types.get(t.getType()) ) {",
+    "conflict": "T t = tokens.get(i); if ( types==null || types.get(t.getType()) ) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6861,
+    "v2": "public List<Token> getHiddenTokensToRight(int tokenIndex, int channel) { if ( p == -1 ) setup();",
+    "resolution": "public List<T> getHiddenTokensToRight(int tokenIndex, int channel) { lazyInit();",
+    "conflict": "public List<T> getHiddenTokensToRight(int tokenIndex, int channel) { lazyInit();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6862,
+    "v2": "public List<Token> getHiddenTokensToLeft(int tokenIndex, int channel) { if ( p == -1 ) setup();",
+    "resolution": "public List<T> getHiddenTokensToLeft(int tokenIndex, int channel) { lazyInit();",
+    "conflict": "public List<T> getHiddenTokensToLeft(int tokenIndex, int channel) { lazyInit();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6877,
+    "v2": "public void enterRule(ParserRuleContext localctx, int ruleIndex) {",
+    "resolution": "public void enterRule(ParserRuleContext<Symbol> localctx, int state, int ruleIndex) { setState(state);",
+    "conflict": "public void enterRule(ParserRuleContext<Symbol> localctx, int state, int ruleIndex) { setState(state);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6880,
+    "v2": "public void pushNewRecursionContext(ParserRuleContext localctx, int state, int ruleIndex) { ParserRuleContext previous = _ctx;",
+    "resolution": "public void pushNewRecursionContext(ParserRuleContext<Symbol> localctx, int state, int ruleIndex) { ParserRuleContext<Symbol> previous = _ctx;",
+    "conflict": "public void pushNewRecursionContext(ParserRuleContext<Symbol> localctx, int state, int ruleIndex) { ParserRuleContext<Symbol> previous = _ctx;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6885,
+    "v2": "ParserRuleContext ctx = _ctx; ATNState s = atn.states.get(ctx.s);",
+    "resolution": "ParserRuleContext<?> ctx = _ctx; ATNState s = atn.states.get(getState());",
+    "conflict": "ParserRuleContext<?> ctx = _ctx; ATNState s = atn.states.get(getState());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6886,
+    "v2": "ParserRuleContext ctx = _ctx; ATNState s = atn.states.get(ctx.s);",
+    "resolution": "ParserRuleContext<?> ctx = _ctx; ATNState s = atn.states.get(getState());",
+    "conflict": "ParserRuleContext<?> ctx = _ctx; ATNState s = atn.states.get(getState());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6888,
+    "v2": "public class ParserRuleContext extends RuleContext {",
+    "resolution": "public class ParserRuleContext<Symbol extends Token> extends RuleContext<Symbol> { private static final ParserRuleContext<?> EMPTY = new ParserRuleContext<Token>();",
+    "conflict": "public class ParserRuleContext<Symbol extends Token> extends RuleContext<Symbol> { private static final ParserRuleContext<?> EMPTY = new ParserRuleContext<Token>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6892,
+    "v2": "public TerminalNode addChild(Token matchedToken) { TerminalNodeImpl t = new TerminalNodeImpl(matchedToken);",
+    "resolution": "public TerminalNode<Symbol> addChild(Symbol matchedToken) { TerminalNodeImpl<Symbol> t = new TerminalNodeImpl<Symbol>(matchedToken);",
+    "conflict": "public TerminalNode<Symbol> addChild(Symbol matchedToken) { TerminalNodeImpl<Symbol> t = new TerminalNodeImpl<Symbol>(matchedToken);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6898,
+    "v2": "public class RuleContext implements RuleNode { public static final ParserRuleContext EMPTY = new ParserRuleContext();",
+    "resolution": "public class RuleContext<Symbol> implements RuleNode<Symbol> {",
+    "conflict": "public class RuleContext<Symbol> implements RuleNode<Symbol> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6906,
+    "v2": "public NoViableAltException noViableAlt(@NotNull TokenStream input, @NotNull ParserRuleContext outerContext,",
+    "resolution": "public NoViableAltException noViableAlt(@NotNull TokenStream<? extends Symbol> input, @NotNull ParserRuleContext<Symbol> outerContext,",
+    "conflict": "public NoViableAltException noViableAlt(@NotNull TokenStream<? extends Symbol> input, @NotNull ParserRuleContext<Symbol> outerContext,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6910,
+    "v2": "Method startRule = parserClass.getMethod(startRuleName); ParserRuleContext tree = (ParserRuleContext)startRule.invoke(parser, (Object[])null);",
+    "resolution": "Method startRule = parserClass.getMethod(startRuleName, (Class[])null); ParserRuleContext<?> tree = (ParserRuleContext<?>)startRule.invoke(parser, (Object[])null);",
+    "conflict": "Method startRule = parserClass.getMethod(startRuleName, (Class[])null); ParserRuleContext<?> tree = (ParserRuleContext<?>)startRule.invoke(parser, (Object[])null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6916,
+    "v2": "public T visitErrorNode(ErrorNode node) { return null; }",
+    "resolution": "Result visitErrorNode(@NotNull ErrorNode<? extends Symbol> node);",
+    "conflict": "Result visitErrorNode(@NotNull ErrorNode<? extends Symbol> node);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6918,
+    "v2": "protected void enterRule(ParseTreeListener listener, RuleNode r) { ParserRuleContext ctx = (ParserRuleContext)r.getRuleContext();",
+    "resolution": "protected <Symbol extends Token> void enterRule(ParseTreeListener<? super Symbol> listener, RuleNode<Symbol> r) { ParserRuleContext<Symbol> ctx = (ParserRuleContext<Symbol>)r.getRuleContext();",
+    "conflict": "protected <Symbol extends Token> void enterRule(ParseTreeListener<? super Symbol> listener, RuleNode<Symbol> r) { ParserRuleContext<Symbol> ctx = (ParserRuleContext<Symbol>)r.getRuleContext();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6919,
+    "v2": "protected void exitRule(ParseTreeListener listener, RuleNode r) { ParserRuleContext ctx = (ParserRuleContext)r.getRuleContext();",
+    "resolution": "protected <Symbol extends Token> void exitRule(ParseTreeListener<? super Symbol> listener, RuleNode<Symbol> r) { ParserRuleContext<Symbol> ctx = (ParserRuleContext<Symbol>)r.getRuleContext();",
+    "conflict": "protected <Symbol extends Token> void exitRule(ParseTreeListener<? super Symbol> listener, RuleNode<Symbol> r) { ParserRuleContext<Symbol> ctx = (ParserRuleContext<Symbol>)r.getRuleContext();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6928,
+    "v2": "public synchronized DFA getDFA(LexerGrammar lg, Grammar g, String ruleName, String inputString, ParserRuleContext ctx)",
+    "resolution": "public DFA getDFA(LexerGrammar lg, Grammar g, String ruleName, String inputString, ParserRuleContext<Token> ctx)",
+    "conflict": "public DFA getDFA(LexerGrammar lg, Grammar g, String ruleName, String inputString, ParserRuleContext<Token> ctx)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6929,
+    "v2": "protected TokenStream createTokenStream(TokenSource src) { return new BufferedTokenStream(src);",
+    "resolution": "protected TokenStream<Token> createTokenStream(TokenSource<? extends Token> src) { return new BufferedTokenStream<Token>(src);",
+    "conflict": "protected TokenStream<Token> createTokenStream(TokenSource<? extends Token> src) { return new BufferedTokenStream<Token>(src);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6935,
+    "v2": "ATN atn = recognizer.getInterpreter().atn; IntervalSet expectingAtLL2 = atn.nextTokens(next, recognizer._ctx);",
+    "resolution": "ATN atn = recognizer.getInterpreter().atn; IntervalSet expectingAtLL2 = atn.nextTokens(next, PredictionContext.fromRuleContext(atn, recognizer._ctx));",
+    "conflict": "IntervalSet expectingAtLL2 = recognizer.getInterpreter().atn.nextTokens(next, PredictionContext.fromRuleContext(recognizer._ctx));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 6943,
+    "v2": "_LOOK(s, PredictionContext.fromRuleContext(s.atn, ctx), r, new HashSet<ATNConfig>(), seeThruPreds);",
+    "resolution": "_LOOK(s, ctx, r, new HashSet<ATNConfig>(), seeThruPreds);",
+    "conflict": "_LOOK(s, ctx, r, new HashSet<ATNConfig>(), seeThruPreds);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6945,
+    "v2": "PredictionContext newContext = SingletonPredictionContext.create(ctx, ((RuleTransition)t).followState.stateNumber);",
+    "resolution": "PredictionContext newContext = ctx.getChild(((RuleTransition)t).followState.stateNumber);",
+    "conflict": "PredictionContext newContext = ctx.getChild(s.stateNumber);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6972,
+    "v2": "if (current.getReturnState(i) == PredictionContext.EMPTY_RETURN_STATE) {",
+    "resolution": "if (current.getReturnState(i) == PredictionContext.EMPTY_FULL_STATE_KEY || current.getReturnState(i) == PredictionContext.EMPTY_LOCAL_STATE_KEY)",
+    "conflict": "if (current.getInvokingState(i) == PredictionContext.EMPTY_FULL_STATE_KEY || current.getInvokingState(i) == PredictionContext.EMPTY_LOCAL_STATE_KEY) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6975,
+    "v2": "finally {",
+    "resolution": "finally {",
+    "conflict": "finally { traceEndMatch();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 6984,
+    "v2": "",
+    "resolution": "",
+    "conflict": "// Did we hit a stop state during reach op? processAcceptConfigs(input, reach);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 6988,
+    "v2": "LexerATNConfig c = new LexerATNConfig(target, i+1, initialContext); closure(input, c, configs, false, false);",
+    "resolution": "ATNConfig c = ATNConfig.create(target, i+1, initialContext); closure(input, c, configs, false);",
+    "conflict": "ATNConfig c = ATNConfig.create(target, i+1, initialContext); closure(c, configs);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7011,
+    "v2": "sharedParsers[thread] = parserCtor.newInstance(tokens);",
+    "resolution": "@SuppressWarnings(\"unchecked\") Parser<Token> parser = parserCtor.newInstance(tokens); sharedParsers[thread] = parser;",
+    "conflict": "@SuppressWarnings(\"unchecked\") Parser<Token> parser = parserCtor.newInstance(tokens); sharedParsers[thread] = parser;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7016,
+    "v2": "Parser parser = parserCtor.newInstance(tokens);",
+    "resolution": "@SuppressWarnings(\"unchecked\") Parser<Token> parser = parserCtor.newInstance(tokens);",
+    "conflict": "@SuppressWarnings(\"unchecked\") Parser<Token> parser = parserCtor.newInstance(tokens);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7030,
+    "v2": "public String getText(RuleContext ctx) { return getText(ctx.getSourceInterval()); }",
+    "resolution": "public String getText(RuleContext<?> ctx) { return getText(ctx.getSourceInterval()); }",
+    "conflict": "public String getText(RuleContext<?> ctx) { return getText(ctx.getSourceInterval()); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7031,
+    "v2": "public Transition[] getTransitions() { return transitions.toArray(new Transition[transitions.size()]); }",
+    "resolution": "public Transition[] getTransitions() { return transitions.toArray(new Transition[transitions.size()]); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7033,
+    "v2": "if (target == null) {",
+    "resolution": "DFAState target = s.getTarget(t); if ( target == null ) {",
+    "conflict": "DFAState target = s.getTarget(t); if ( target == null ) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7036,
+    "v2": "boolean currentAltReachedAcceptState = c.alt == skipAlt; if (currentAltReachedAcceptState && ((LexerATNConfig)c).hasPassedThroughNonGreedyDecision()) {",
+    "resolution": "if (c.getAlt() == skipAlt) {",
+    "conflict": "if (c.getAlt() == skipAlt) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7038,
+    "v2": "@NotNull protected ATNConfigSet processAcceptConfigs(@NotNull CharStream input, @NotNull ATNConfigSet reach) {",
+    "resolution": "protected void processAcceptConfigs(@NotNull CharStream input, @NotNull ATNConfigSet reach) {",
+    "conflict": "protected void processAcceptConfigs(@NotNull CharStream input, @NotNull ATNConfigSet reach) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7039,
+    "v2": "LexerATNConfig c = new LexerATNConfig(target, i+1, initialContext); closure(c, configs, false);",
+    "resolution": "ATNConfig c = ATNConfig.create(target, i+1, initialContext); closure(c, configs);",
+    "conflict": "ATNConfig c = ATNConfig.create(target, i+1, initialContext); closure(c, configs);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7051,
+    "v2": "public String getText(Token start, Token stop) { throw new UnsupportedOperationException(\"can't give strings\");",
+    "resolution": "public String getText(Object start, Object stop) { throw new UnsupportedOperationException(\"can't give strings\");",
+    "conflict": "public String getText(Object start, Object stop) { return null;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7055,
+    "v2": "WARNING_TREATED_AS_ERROR(9, \"warning treated as error\", ErrorSeverity.ERROR), //FILENAME_EXTENSION_ERROR(\"\", ErrorSeverity.ERROR),",
+    "resolution": "BAD_OPTION_SET_SYNTAX(9, \"invalid -Dname=value syntax: <arg>\", ErrorSeverity.ERROR), WARNING_TREATED_AS_ERROR(10, \"warning treated as error\", ErrorSeverity.ERROR),",
+    "conflict": "BAD_OPTION_SET_SYNTAX(9, \"invalid -Dname=value syntax: <arg>\", ErrorSeverity.ERROR),"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7062,
+    "v2": "String msg = \"rule \"+ruleName+\" \"+e.getMessage(); recognizer.notifyErrorListeners(e.getOffendingToken(), msg, e);",
+    "resolution": "String msg = \"rule \"+ruleName+\" \"+e.getMessage(); notifyErrorListeners(recognizer, msg, e);",
+    "conflict": "String msg = \"rule \"+ruleName+\" \"+e.msg; notifyErrorListeners(recognizer, msg, e);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7065,
+    "v2": "this.setOffendingToken(recognizer.getCurrentToken());",
+    "resolution": "this.setOffendingToken(recognizer, recognizer.getCurrentToken());",
+    "conflict": "T la = recognizer.getCurrentToken(); this.offendingToken = la;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7066,
+    "v2": "@Nullable ATNConfigSet deadEndConfigs) { super(lexer, input, null);",
+    "resolution": "@Nullable ATNConfigSet deadEndConfigs) { super(lexer, input);",
+    "conflict": "ATNConfigSet deadEndConfigs) { super(lexer, input);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7076,
+    "v2": "",
+    "resolution": "import java.util.ListIterator; import java.util.Map; import java.util.NoSuchElementException;",
+    "conflict": "import java.util.ListIterator; import java.util.Map; import java.util.NoSuchElementException;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7081,
+    "v2": "PredictionContext initialContext = PredictionContext.EMPTY; ATNConfigSet configs = new OrderedATNConfigSet();",
+    "resolution": "PredictionContext initialContext = PredictionContext.EMPTY_FULL; ATNConfigSet configs = new OrderedATNConfigSet();",
+    "conflict": "PredictionContext initialContext = PredictionContext.EMPTY_FULL; ATNConfigSet configs = new ATNConfigSet();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7084,
+    "v2": "return false;",
+    "resolution": "return false;",
+    "conflict": "return;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7089,
+    "v2": "public boolean hasEmptyPath() { return getInvokingState(size() - 1) == EMPTY_INVOKING_STATE;",
+    "resolution": "protected static int calculateHashCode(int parentHashCode, int invokingStateHashCode) { return (INITIAL_HASH * HASH_MULTIPLIER ^ parentHashCode) * HASH_MULTIPLIER ^ invokingStateHashCode;",
+    "conflict": "protected static int calculateHashCode(int parentHashCode, int invokingStateHashCode) { return (INITIAL_HASH * HASH_MULTIPLIER ^ parentHashCode) * HASH_MULTIPLIER ^ invokingStateHashCode;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7096,
+    "v2": "import java.util.Map;",
+    "resolution": "import java.util.ListIterator; import java.util.Map; import java.util.NoSuchElementException;",
+    "conflict": "import java.util.ListIterator; import java.util.Map; import java.util.NoSuchElementException;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7100,
+    "v2": "if ( config.state instanceof RuleStopState ) {",
+    "resolution": "if ( config.getState() instanceof RuleStopState ) {",
+    "conflict": "// TODO? if ( closure.contains(t) ) return;  if ( config.getState() instanceof RuleStopState ) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7107,
+    "v2": "ATN lexatn = createATN(lg, true); LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn,new DFA[1],null);",
+    "resolution": "ATN lexatn = createATN(lg, true); LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn);",
+    "conflict": "ATN lexatn = createATN(lg); LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7109,
+    "v2": "ATN lexatn = createATN(lg, true); LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn,null,null);",
+    "resolution": "ATN lexatn = createATN(lg, true); LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn);",
+    "conflict": "ATN lexatn = createATN(lg); LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7111,
+    "v2": "import org.antlr.v4.runtime.atn.ATNConfigSet; import org.antlr.v4.runtime.dfa.DFA; import org.antlr.v4.runtime.misc.NotNull;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7116,
+    "v2": "import org.antlr.v4.runtime.atn.ATNConfigSet; import org.antlr.v4.runtime.dfa.DFA;  import java.util.BitSet;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7128,
+    "v2": "PredictionContext newContext = SingletonPredictionContext.create(ctx, s.stateNumber);",
+    "resolution": "PredictionContext newContext = ctx.getChild(s.stateNumber);",
+    "conflict": "PredictionContext newContext = ctx.getChild(s.stateNumber);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7137,
+    "v2": "// since we don't report ambiguities in execDFA, we never need to // use complete predicate evaluation here",
+    "resolution": "// since we don't report ambiguities in execDFA, we never need to use complete predicate evaluation here",
+    "conflict": "// since we don't report ambiguities in execDFA, we never need to use complete predicate evaluation here"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7148,
+    "v2": "if ( ambigAlts.get(c.alt) ) { altToPred[c.alt] = SemanticContext.or(altToPred[c.alt], c.semanticContext);",
+    "resolution": "if ( ambigAlts.get(c.getAlt()) ) { altToPred[c.getAlt()] = SemanticContext.or(altToPred[c.getAlt()], c.getSemanticContext());",
+    "conflict": "if ( ambigAlts.get(c.getAlt()) ) { altToPred[c.getAlt()] = SemanticContext.or(altToPred[c.getAlt()], c.getSemanticContext());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7149,
+    "v2": "public List<DFAState.PredPrediction> getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {",
+    "resolution": "public DFAState.PredPrediction[] getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {",
+    "conflict": "public DFAState.PredPrediction[] getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7157,
+    "v2": "closureCheckingStopStateAndLoopRecursion(c, configs, closureBusy, continueCollecting, fullCtx, newDepth);",
+    "resolution": "closure(c, configs, intermediate, closureBusy, continueCollecting, hasMoreContexts, contextCache, newDepth);",
+    "conflict": "closure(c, configs, intermediate, closureBusy, continueCollecting, hasMoreContexts, contextCache, newDepth);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7180,
+    "v2": "public SingletonPredictionContext createSingleton(PredictionContext parent, int payload) { SingletonPredictionContext a = SingletonPredictionContext.create(parent, payload);",
+    "resolution": "public PredictionContext createSingleton(PredictionContext parent, int payload) { PredictionContext a = contextCache.getChild(parent, payload);",
+    "conflict": "public PredictionContext createSingleton(PredictionContext parent, int payload) { PredictionContext a = contextCache.getChild(parent, payload);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7182,
+    "v2": "if (current.getInvokingState(i) == PredictionContext.EMPTY_INVOKING_STATE) {",
+    "resolution": "if (current.getInvokingState(i) == PredictionContext.EMPTY_FULL_STATE_KEY || current.getInvokingState(i) == PredictionContext.EMPTY_LOCAL_STATE_KEY) {",
+    "conflict": "if (current.getInvokingState(i) == PredictionContext.EMPTY_FULL_STATE_KEY || current.getInvokingState(i) == PredictionContext.EMPTY_LOCAL_STATE_KEY) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7183,
+    "v2": "\"line 1:3 reportAttemptingFullContext d=3, input='*'\\n\",",
+    "resolution": "\"line 1:3 reportAttemptingFullContext d=3, input='*'\\n\" + \"line 1:3 reportAmbiguity d=3: ambigAlts={1, 2}, input='*'\\n\",",
+    "conflict": "\"line 1:3 reportAttemptingFullContext d=3, input='*'\\n\" + \"line 1:3 reportAmbiguity d=3: ambigAlts={1, 2}, input='*'\\n\","
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7184,
+    "v2": "* This test is meant to detect regressions of bug antlr/antlr4#41. * https://github.com/antlr/antlr4/issues/41",
+    "resolution": "* This test is meant to detect regressions of bug antlr/antlr4#41. * https://github.com/antlr/antlr4/issues/41",
+    "conflict": "* Related to https://github.com/antlr/antlr4/issues/41."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7188,
+    "v2": "import org.antlr.v4.runtime.atn.ArrayPredictionContext; import org.antlr.v4.runtime.atn.EmptyPredictionContext; import org.antlr.v4.runtime.atn.PredictionContext;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7197,
+    "v2": "PredictionContext r = PredictionContext.merge(a1, a2, rootIsWildcard(), null); System.out.println(toDOTString(r, rootIsWildcard()));",
+    "resolution": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));",
+    "conflict": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7199,
+    "v2": "PredictionContext r = PredictionContext.merge(a1, a2, fullCtx(), null); System.out.println(toDOTString(r, fullCtx()));",
+    "resolution": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));",
+    "conflict": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7206,
+    "v2": "PredictionContext r = PredictionContext.merge(a1, a2, rootIsWildcard(), null); System.out.println(toDOTString(r, rootIsWildcard()));",
+    "resolution": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));",
+    "conflict": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7208,
+    "v2": "PredictionContext r = PredictionContext.merge(a1, a2, rootIsWildcard(), null); System.out.println(toDOTString(r, rootIsWildcard()));",
+    "resolution": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));",
+    "conflict": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7210,
+    "v2": "PredictionContext r = PredictionContext.merge(a1, a2, rootIsWildcard(), null); System.out.println(toDOTString(r, rootIsWildcard()));",
+    "resolution": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));",
+    "conflict": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7212,
+    "v2": "PredictionContext r = PredictionContext.merge(a1, a2, rootIsWildcard(), null); System.out.println(toDOTString(r, rootIsWildcard()));",
+    "resolution": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));",
+    "conflict": "PredictionContext r = contextCache.join(a1, a2); System.out.println(toDOTString(r));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7214,
+    "v2": "PredictionContext r = PredictionContext.merge(a, b, rootIsWildcard(), null); System.out.println(toDOTString(r, rootIsWildcard()));",
+    "resolution": "PredictionContext r = contextCache.join(a, b); System.out.println(toDOTString(r));",
+    "conflict": "PredictionContext r = contextCache.join(a, b); System.out.println(toDOTString(r));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7216,
+    "v2": "PredictionContext r = PredictionContext.merge(a, b, rootIsWildcard(), null); System.out.println(toDOTString(r, rootIsWildcard()));",
+    "resolution": "PredictionContext r = contextCache.join(a, b); System.out.println(toDOTString(r));",
+    "conflict": "PredictionContext r = contextCache.join(a, b); System.out.println(toDOTString(r));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7219,
+    "v2": "PredictionContext r = PredictionContext.merge(a, b, rootIsWildcard(), null); System.out.println(toDOTString(r, rootIsWildcard()));",
+    "resolution": "PredictionContext r = contextCache.join(a, b); System.out.println(toDOTString(r));",
+    "conflict": "PredictionContext r = contextCache.join(a, b); System.out.println(toDOTString(r));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7221,
+    "v2": "PredictionContext r = PredictionContext.merge(a, b, fullCtx(), null); System.out.println(toDOTString(r, fullCtx()));",
+    "resolution": "PredictionContext r = contextCache.join(a, b); System.out.println(toDOTString(r));",
+    "conflict": "PredictionContext r = contextCache.join(a, b); System.out.println(toDOTString(r));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7223,
+    "v2": "PredictionContext r = PredictionContext.merge(a, b, rootIsWildcard(), null); System.out.println(toDOTString(r, rootIsWildcard()));",
+    "resolution": "PredictionContext r = contextCache.join(a, b); System.out.println(toDOTString(r));",
+    "conflict": "PredictionContext r = contextCache.join(a, b); System.out.println(toDOTString(r));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7241,
+    "v2": "public void pushNewRecursionContext(ParserRuleContext<Token> localctx, int state, int ruleIndex) { ParserRuleContext<Token> previous = _ctx;",
+    "resolution": "public void pushNewRecursionContext(ParserRuleContext<Symbol> localctx, int state, int ruleIndex) { ParserRuleContext<Symbol> previous = _ctx;",
+    "conflict": "public void pushNewRecursionContext(ParserRuleContext<Symbol> localctx, int state, int ruleIndex) { ParserRuleContext<Symbol> previous = _ctx;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7249,
+    "v2": "@NotNull public Token get(int index);",
+    "resolution": "@NotNull public Symbol get(int i);",
+    "conflict": "public Symbol get(int i);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7250,
+    "v2": "@NotNull public TokenSource getTokenSource();",
+    "resolution": "@NotNull public TokenSource<? extends Symbol> getTokenSource();",
+    "conflict": "public TokenSource<? extends Symbol> getTokenSource();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7252,
+    "v2": "@NotNull public String getText(@NotNull Token start, @NotNull Token stop);",
+    "resolution": "@NotNull public String getText(Object start, Object stop);",
+    "conflict": "public String getText(Object start, Object stop);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7255,
+    "v2": "public TokenSource getTokenSource() { return tokenSource;",
+    "resolution": "public TokenSource<T> getTokenSource() { return tokenSource;",
+    "conflict": "public TokenSource<T> getTokenSource() { return null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7260,
+    "v2": "if ( s.edges == null || t >= s.edges.length || t <= IntStream.EOF || s.edges[t] == null )",
+    "resolution": "DFAState target = s.getTarget(t); if ( target == null )",
+    "conflict": "DFAState target = s.getTarget(t); if ( target == null )"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7266,
+    "v2": "//ParserATNSimulator interp = new ParserATNSimulator(atn); TokenStream input = new IntTokenStream(types);",
+    "resolution": "//ParserATNSimulator<Token> interp = new ParserATNSimulator<Token>(atn); TokenStream<Token> input = new IntTokenStream(types);",
+    "conflict": "//ParserATNSimulator<Token> interp = new ParserATNSimulator<Token>(atn); TokenStream<Token> input = new IntTokenStream(types);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7267,
+    "v2": "ParserATNSimulator interp = new ParserATNSimulator(atn, new DFA[atn.getNumberOfDecisions()],null);",
+    "resolution": "ParserATNSimulator<Token> interp = new ParserATNSimulator<Token>(atn);",
+    "conflict": "ParserATNSimulator<Token> interp = new ParserATNSimulator<Token>(atn);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7268,
+    "v2": "final ParserATNSimulator interpreter = sharedParser.getInterpreter(); final DFA[] decisionToDFA = interpreter.decisionToDFA;",
+    "resolution": "final ParserATNSimulator<?> interpreter = parser.getInterpreter(); final DFA[] decisionToDFA = interpreter.atn.decisionToDFA;",
+    "conflict": "final ParserATNSimulator<?> interpreter = parser.getInterpreter(); final DFA[] decisionToDFA = interpreter.atn.decisionToDFA;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7274,
+    "v2": "DFAState s = s0;  DecisionState decState = atn.getDecisionState(dfa.decision);",
+    "resolution": "DFAState s = state.s0;",
+    "conflict": "DFAState s = state.s0;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7286,
+    "v2": "closureCheckingStopStateAndLoopRecursion(c, configs, closureBusy, continueCollecting, loopsSimulateTailRecursion, fullCtx, newDepth);",
+    "resolution": "closure(c, configs, intermediate, closureBusy, continueCollecting, hasMoreContexts, contextCache, newDepth);",
+    "conflict": "closure(c, configs, intermediate, closureBusy, continueCollecting, greedy, hasMoreContexts, contextCache, newDepth);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7296,
+    "v2": "int tokenIndex = symbol.getTokenIndex(); return new Interval(tokenIndex, tokenIndex);",
+    "resolution": "int tokenIndex = ((Token)symbol).getTokenIndex(); return new Interval(tokenIndex, tokenIndex);",
+    "conflict": "return new Interval(((Token)symbol).getStartIndex(), ((Token)symbol).getStopIndex());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7300,
+    "v2": "import org.antlr.v4.runtime.misc.DoubleKeyMap; import org.antlr.v4.runtime.misc.FlexibleHashMap;",
+    "resolution": "import org.antlr.v4.runtime.misc.IntegerList;",
+    "conflict": "import org.antlr.v4.runtime.misc.IntegerList;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7311,
+    "v2": "if ( s.requiresFullContext) { buf.append(\"^\"); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7312,
+    "v2": "// Sam's works here but mine doesn't since I fail over to LL even // though SLL + preds evals to single alt; i could avoid but // code complexity wasn't worth it. see branch SLL-w-preds-avoids-LL",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7320,
+    "v2": "public TerminalNode addChild(TerminalNode<Symbol> t) { if ( children==null ) children = new ArrayList<ParseTree>();",
+    "resolution": "public void addChild(TerminalNode<Symbol> t) { if ( children==null ) children = new ArrayList<ParseTree<Symbol>>();",
+    "conflict": "public void addChild(TerminalNode<Symbol> t) { if ( children==null ) children = new ArrayList<ParseTree<Symbol>>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7321,
+    "v2": "public RuleContext addChild(RuleContext ruleInvocation) { if ( children==null ) children = new ArrayList<ParseTree>();",
+    "resolution": "public void addChild(RuleContext<Symbol> ruleInvocation) { if ( children==null ) children = new ArrayList<ParseTree<Symbol>>();",
+    "conflict": "public void addChild(RuleContext<Symbol> ruleInvocation) { if ( children==null ) children = new ArrayList<ParseTree<Symbol>>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7325,
+    "v2": "List<Pair<GrammarAST,GrammarAST>> litAliases = Grammar.getStringLiteralAliasesFromLexerRules(g.ast); Set<String> conflictingLiterals = new HashSet<String>();",
+    "resolution": "List<Tuple2<GrammarAST,GrammarAST>> litAliases = Grammar.getStringLiteralAliasesFromLexerRules(g.ast); Set<String> conflictingLiterals = new HashSet<String>();",
+    "conflict": "List<Tuple2<GrammarAST,GrammarAST>> litAliases = Grammar.getStringLiteralAliasesFromLexerRules(g.ast);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7327,
+    "v2": "assertEquals(\"line 1:12 reportAttemptingFullContext d=1, input='else'\\n\", this.stderrDuringParse);",
+    "resolution": "assertNull(this.stderrDuringParse);",
+    "conflict": "assertNull(this.stderrDuringParse);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7328,
+    "v2": "import org.antlr.v4.runtime.tree.ParseTreeWalker; import org.antlr.v4.runtime.tree.TerminalNode; import org.antlr.v4.runtime.tree.TerminalNodeImpl;",
+    "resolution": "import org.antlr.v4.runtime.tree.ParseTreeWalker; import org.antlr.v4.runtime.tree.TerminalNode;",
+    "conflict": "import org.antlr.v4.runtime.tree.TerminalNode;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7341,
+    "v2": "public class ParserRuleContext<Symbol extends Token> extends RuleContext {",
+    "resolution": "public class ParserRuleContext<Symbol extends Token> extends RuleContext<Symbol> { private static final ParserRuleContext<?> EMPTY = new ParserRuleContext<Token>();",
+    "conflict": "public class ParserRuleContext<Symbol extends Token> extends RuleContext<Symbol> { private static final ParserRuleContext<?> EMPTY = new ParserRuleContext<Token>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7343,
+    "v2": "public List<? extends ANTLRErrorListener> getErrorListeners() { return _listeners;",
+    "resolution": "public List<? extends ANTLRErrorListener<? super Symbol>> getErrorListeners() { return new ArrayList<ANTLRErrorListener<? super Symbol>>(_listeners);",
+    "conflict": "public List<? extends ANTLRErrorListener<? super Symbol>> getErrorListeners() { return new ArrayList<ANTLRErrorListener<? super Symbol>>(_listeners);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7344,
+    "v2": "public class RuleContext implements RuleNode { public static final ParserRuleContext<Token> EMPTY = new ParserRuleContext<Token>();",
+    "resolution": "public class RuleContext<Symbol> implements RuleNode<Symbol> {",
+    "conflict": "public class RuleContext<Symbol> implements RuleNode<Symbol> {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7346,
+    "v2": "/** Call this method to view a parse tree in a dialog box visually. */ public void inspect(Parser parser) {",
+    "resolution": "/** Call this method to view a parse tree in a dialog box visually. */ public void inspect(Parser<?> parser) {",
+    "conflict": "public void inspect(Parser<?> parser) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7347,
+    "v2": "/** Save this tree in a postscript file */ public void save(Parser parser, String fileName)",
+    "resolution": "/** Save this tree in a postscript file */ public void save(Parser<?> parser, String fileName)",
+    "conflict": "public void save(Parser<?> parser, String fileName)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7348,
+    "v2": "/** Save this tree in a postscript file using a particular font name and size */ public void save(Parser parser, String fileName,",
+    "resolution": "/** Save this tree in a postscript file using a particular font name and size */ public void save(Parser<?> parser, String fileName,",
+    "conflict": "public void save(Parser<?> parser, String fileName,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7356,
+    "v2": "for (ATNConfig c : configs) { states.add(c.state);",
+    "resolution": "for (ATNConfig c : this.configs) { states.add(c.getState());",
+    "conflict": "for (ATNConfig c : this.configs) { states.add(c.getState());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7361,
+    "v2": "import java.util.IdentityHashMap;",
+    "resolution": "import java.util.BitSet; import java.util.Deque;",
+    "conflict": "import java.util.BitSet; import java.util.Deque;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7367,
+    "v2": "PredictionContext newContext = new SingletonPredictionContext(ctx, s.stateNumber);",
+    "resolution": "PredictionContext newContext = ctx.getChild(s.stateNumber);",
+    "conflict": "PredictionContext newContext = ctx.getChild(s.stateNumber);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7375,
+    "v2": "LexerATNConfig c = (LexerATNConfig)reach.get(ci); if ( c.state instanceof RuleStopState) {",
+    "resolution": "ATNConfig c = reach.get(ci); if ( c.getState() instanceof RuleStopState) {",
+    "conflict": "ATNConfig c = reach.get(ci); if ( c.getState() instanceof RuleStopState) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7381,
+    "v2": "ATNState p = config.state;",
+    "resolution": "ATNState p = config.getState(); ATNConfig c;",
+    "conflict": "ATNState p = config.getState(); ATNConfig c;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7400,
+    "v2": "previous = reach; previousD = D;",
+    "resolution": "previous = nextState;",
+    "conflict": "previous = nextState;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7404,
+    "v2": "public List<DFAState.PredPrediction> getPredicatePredictions(IntervalSet ambigAlts, SemanticContext[] altToPred) {",
+    "resolution": "public DFAState.PredPrediction[] getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {",
+    "conflict": "public DFAState.PredPrediction[] getPredicatePredictions(BitSet ambigAlts, SemanticContext[] altToPred) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7407,
+    "v2": "if ( pair.pred==SemanticContext.NONE ) { predictions.add(pair.alt);",
+    "resolution": "if ( pair.pred==null ) { predictions.set(pair.alt);",
+    "conflict": "if ( pair.pred==null ) { predictions.set(pair.alt);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7409,
+    "v2": "getRuleName(config.state.ruleIndex)); configs.add(config, mergeCache);",
+    "resolution": "getRuleName(config.getState().ruleIndex)); configs.add(config, contextCache);",
+    "conflict": "getRuleName(config.getState().ruleIndex)); configs.add(config, contextCache);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7413,
+    "v2": "closureCheckingStopStateAndLoopRecursion(c, configs, closureBusy, continueCollecting, greedy, loopsSimulateTailRecursion, fullCtx, newDepth);",
+    "resolution": "closure(c, configs, intermediate, closureBusy, continueCollecting, greedy, hasMoreContexts, contextCache, newDepth);",
+    "conflict": "closure(c, configs, intermediate, closureBusy, continueCollecting, greedy, hasMoreContexts, contextCache, newDepth);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7430,
+    "v2": "lexer.setInputStream(input);",
+    "resolution": "lexer.setInputStream(input);",
+    "conflict": "Constructor<? extends Lexer> lexerCtor = lexerClass.getConstructor(CharStream.class); Lexer lexer = lexerCtor.newInstance(input);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7451,
+    "v2": "REWRITE_ELEMENT_NOT_PRESENT_ON_LHS(86, \"\", ErrorSeverity.ERROR), UNDEFINED_TOKEN_REF_IN_REWRITE(87, \"\", ErrorSeverity.ERROR),",
+    "resolution": "REWRITE_ELEMENT_NOT_PRESENT_ON_LHS(86, \"\", ErrorSeverity.ERROR), UNDEFINED_TOKEN_REF_IN_REWRITE(87, \"\", ErrorSeverity.ERROR),",
+    "conflict": "REWRITE_ELEMENT_NOT_PRESENT_ON_LHS(86, \"reference to rewrite element <arg> not found to left of ->\", ErrorSeverity.ERROR), UNDEFINED_TOKEN_REF_IN_REWRITE(87, \"token <arg> in rewrite is undefined\", ErrorSeverity.ERROR),"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7452,
+    "v2": "//TOKEN_STRING_REASSIGNMENT(107, \"cannot alias <arg> in tokens {}; string already assigned to <arg2>\", ErrorSeverity.ERROR), //TOKEN_NAME_REASSIGNMENT(108, \"cannot redefine <arg>; token name already <if(arg2)>assigned to <arg2><else>defined<endif>\", ErrorSeverity.ERROR),",
+    "resolution": "//TOKEN_STRING_REASSIGNMENT(107, \"cannot alias <arg> in tokens {}; string already assigned to <arg2>\", ErrorSeverity.ERROR), //TOKEN_NAME_REASSIGNMENT(108, \"cannot redefine <arg>; token name already <if(arg2)>assigned to <arg2><else>defined<endif>\", ErrorSeverity.ERROR),",
+    "conflict": "TOKEN_STRING_REASSIGNMENT(107, \"cannot alias <arg> in tokens {}; string already assigned to <arg2>\", ErrorSeverity.ERROR), TOKEN_NAME_REASSIGNMENT(108, \"cannot redefine <arg>; token name already <if(arg2)>assigned to <arg2><else>defined<endif>\", ErrorSeverity.ERROR),"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7454,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7457,
+    "v2": "List<Pair<GrammarAST,GrammarAST>> lexerRuleToStringLiteral = new ArrayList<Pair<GrammarAST,GrammarAST>>();",
+    "resolution": "List<Tuple2<GrammarAST,GrammarAST>> lexerRuleToStringLiteral = new ArrayList<Tuple2<GrammarAST,GrammarAST>>();",
+    "conflict": "List<Tuple2<GrammarAST,GrammarAST>> lexerRuleToStringLiteral = new ArrayList<Tuple2<GrammarAST,GrammarAST>>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7459,
+    "v2": "Pair<GrammarAST, GrammarAST> pair = new Pair<GrammarAST, GrammarAST>(nameNode, litNode);",
+    "resolution": "Tuple2<GrammarAST, GrammarAST> pair = Tuple.create(nameNode, litNode);",
+    "conflict": "Tuple2<GrammarAST, GrammarAST> pair = Tuple.create(nameNode, litNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7460,
+    "v2": "import org.antlr.v4.runtime.misc.DoubleKeyMap; import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.DoubleKeyMap; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7467,
+    "v2": "ParserATNFactory f = new LexerATNFactory((LexerGrammar)g);",
+    "resolution": "ParserATNFactory f = new LexerATNFactory(g);",
+    "conflict": "ParserATNFactory f = new LexerATNFactory(g);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7469,
+    "v2": "IntTokenStream input = new IntTokenStream(types); System.out.println(\"input=\"+input.types);",
+    "resolution": "IntTokenStream input = new IntTokenStream(types); System.out.println(\"input=\"+input.types);",
+    "conflict": "TokenStream<Token> input = new IntTokenStream(types);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7471,
+    "v2": "public synchronized DFA getDFA(LexerGrammar lg, Grammar g, String ruleName, String inputString, ParserRuleContext<?> ctx)",
+    "resolution": "public DFA getDFA(LexerGrammar lg, Grammar g, String ruleName, String inputString, ParserRuleContext<Token> ctx)",
+    "conflict": "public DFA getDFA(LexerGrammar lg, Grammar g, String ruleName, String inputString, ParserRuleContext<Token> ctx)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7472,
+    "v2": "DFA dfa = interp.parser.decisionToDFA[decision]; assertEquals(dfaString[i], dfa.toString(g.getTokenDisplayNames()));",
+    "resolution": "DFA dfa = interp.getATNSimulator().atn.decisionToDFA[decision]; assertEquals(dfaString[i], dfa.toString(g.getTokenDisplayNames(), g.rules.keySet().toArray(new String[g.rules.size()])));",
+    "conflict": "DFA dfa = interp.getATNSimulator().atn.decisionToDFA[decision]; assertEquals(dfaString[i], dfa.toString(g.getTokenDisplayNames(), g.rules.keySet().toArray(new String[g.rules.size()])));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7475,
+    "v2": "assertEquals(\"line 1:12 reportAttemptingFullContext d=1, input='else'\\n\" + \"line 1:12 reportContextSensitivity d=1, input='else'\\n\", this.stderrDuringParse);",
+    "resolution": "assertNull(this.stderrDuringParse);",
+    "conflict": "assertNull(this.stderrDuringParse);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7477,
+    "v2": "for (ATNConfig config : state.configs) { if (config.reachesIntoOuterContext > 0) {",
+    "resolution": "for (ATNConfig config : state.configs) { if (config.getReachesIntoOuterContext()) {",
+    "conflict": "for (ATNConfig config : state.configset) { if (config.getReachesIntoOuterContext()) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7481,
+    "v2": "public String toStringTree(@Nullable Parser recog) {",
+    "resolution": "@Override public String toStringTree(@Nullable Parser<?> recog) {",
+    "conflict": "@Override public String toStringTree(Parser<?> recog) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7482,
+    "v2": "public final String toString(@Nullable Recognizer<?,?> recog) { return toString(recog, ParserRuleContext.EMPTY);",
+    "resolution": "public final String toString(@Nullable Recognizer<?, ?> recog) { return toString(recog, ParserRuleContext.emptyContext());",
+    "conflict": "public String toString(@Nullable Recognizer<?, ?> recog) { return toString(recog, ParserRuleContext.emptyContext());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7486,
+    "v2": "List<Pair<LoopEndState, Integer>> loopBackStateNumbers = new ArrayList<Pair<LoopEndState, Integer>>(); List<Pair<BlockStartState, Integer>> endStateNumbers = new ArrayList<Pair<BlockStartState, Integer>>();",
+    "resolution": "List<Tuple2<LoopEndState, Integer>> loopBackStateNumbers = new ArrayList<Tuple2<LoopEndState, Integer>>(); List<Tuple2<BlockStartState, Integer>> endStateNumbers = new ArrayList<Tuple2<BlockStartState, Integer>>();",
+    "conflict": "List<Tuple2<LoopEndState, Integer>> loopBackStateNumbers = new ArrayList<Tuple2<LoopEndState, Integer>>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7489,
+    "v2": "public class RuleContext implements RuleNode {",
+    "resolution": "public class RuleContext implements RuleNode { public static final ParserRuleContext<Token> EMPTY = new ParserRuleContext<Token>();",
+    "conflict": "public class RuleContext implements ParseTree.RuleNode { public static final ParserRuleContext<Token> EMPTY = new ParserRuleContext<Token>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7495,
+    "v2": "protected <Symbol extends Token> void enterRule(ParseTreeListener<Symbol> listener, RuleNode r) { @SuppressWarnings(\"unchecked\")",
+    "resolution": "protected <Symbol extends Token> void enterRule(ParseTreeListener<? super Symbol> listener, RuleNode<Symbol> r) {",
+    "conflict": "protected <Symbol extends Token> void enterRule(ParseTreeListener<? super Symbol> listener, ParseTree.RuleNode<Symbol> r) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7496,
+    "v2": "protected <Symbol extends Token> void exitRule(ParseTreeListener<Symbol> listener, RuleNode r) { @SuppressWarnings(\"unchecked\")",
+    "resolution": "protected <Symbol extends Token> void exitRule(ParseTreeListener<? super Symbol> listener, RuleNode<Symbol> r) {",
+    "conflict": "protected <Symbol extends Token> void exitRule(ParseTreeListener<? super Symbol> listener, ParseTree.RuleNode<Symbol> r) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7512,
+    "v2": "altList.sort(); Set<ATNConfig> configurations = s.configset;",
+    "resolution": "altList.sort(); Set<ATNConfig> configurations = s.configs;",
+    "conflict": "Collections.sort(altList); Set<ATNConfig> configurations = s.configs;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7513,
+    "v2": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn); IntegerList types = getTokenTypesViaATN(inputString, lexInterp);",
+    "resolution": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn,null,null); IntegerList types = getTokenTypesViaATN(inputString, lexInterp);",
+    "conflict": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn,null,null); List<Integer> types = getTokenTypesViaATN(inputString, lexInterp);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7514,
+    "v2": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn); IntegerList types = getTokenTypesViaATN(inputString, lexInterp);",
+    "resolution": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn,null,null); IntegerList types = getTokenTypesViaATN(inputString, lexInterp);",
+    "conflict": "LexerATNSimulator lexInterp = new LexerATNSimulator(lexatn,null,null); List<Integer> types = getTokenTypesViaATN(inputString, lexInterp);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7516,
+    "v2": "import org.antlr.v4.runtime.misc.IntegerList;",
+    "resolution": "import org.antlr.v4.runtime.misc.Func1; import org.antlr.v4.runtime.misc.IntegerList; import org.antlr.v4.runtime.misc.Predicate;",
+    "conflict": "import org.antlr.v4.runtime.misc.Func1; import org.antlr.v4.runtime.misc.Predicate;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7517,
+    "v2": "public static class IntTokenStream implements TokenStream { IntegerList types;",
+    "resolution": "public static class IntTokenStream implements TokenStream<Token> { IntegerList types;",
+    "conflict": "public static class IntTokenStream implements TokenStream<Token> { List<Integer> types;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7521,
+    "v2": "public void setInputStream(CharStream input) {",
+    "resolution": "public void setInputStream(CharStream input) {",
+    "conflict": "@Override public void setInputStream(IntStream<? extends Integer> input) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7524,
+    "v2": "public abstract void setTokenFactory(TokenFactory<?> input);",
+    "resolution": "public abstract IntStream<? extends Symbol> getInputStream();",
+    "conflict": "public abstract IntStream<? extends Symbol> getInputStream();  public abstract void setInputStream(IntStream<? extends Symbol> input);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7525,
+    "v2": "System.out.println(\"reportAttemptingFullContext decision=\"+dfa.decision+\":\"+configs+ \", input=\"+parser.getInputStream().getText(interval));",
+    "resolution": "System.out.println(\"reportAttemptingFullContext decision=\"+dfa.decision+\":\"+initialState.s0.configset+ \", input=\"+parser.getInputStream().getText(interval));",
+    "conflict": "System.out.println(\"reportAttemptingFullContext decision=\"+dfa.decision+\":\"+initialState.s0.configset+ \", input=\"+parser.getTokenStream().getText(interval));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7526,
+    "v2": "System.out.println(\"reportContextSensitivity decision=\"+dfa.decision+\":\"+configs+ \", input=\"+parser.getInputStream().getText(interval));",
+    "resolution": "System.out.println(\"reportContextSensitivity decision=\"+dfa.decision+\":\"+acceptState.s0.configset+ \", input=\"+parser.getInputStream().getText(interval));",
+    "conflict": "System.out.println(\"reportContextSensitivity decision=\"+dfa.decision+\":\"+acceptState.s0.configset+ \", input=\"+parser.getTokenStream().getText(interval));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7531,
+    "v2": "public IntervalSet evalSemanticContext(@NotNull DFAState.PredPrediction[] predPredictions, ParserRuleContext<?> outerContext,",
+    "resolution": "public IntervalSet evalSemanticContext(@NotNull DFAState.PredPrediction[] predPredictions, ParserRuleContext<Symbol> outerContext,",
+    "conflict": "public IntervalSet evalSemanticContext(@NotNull List<DFAState.PredPrediction> predPredictions, ParserRuleContext<Symbol> outerContext,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7534,
+    "v2": "lastErrorStates != null && lastErrorStates.contains(recognizer._ctx.s) ) {",
+    "resolution": "lastErrorStates != null && lastErrorStates.contains(recognizer.getState()) ) {",
+    "conflict": "lastErrorStates.contains(recognizer.getState()) ) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7538,
+    "v2": "public class FrequencySet<T> extends HashMap<T, MutableInt> {",
+    "resolution": "public class FrequencySet<T> extends HashMap<T, MutableInt> { private static final long serialVersionUID = -134984205245480177L;",
+    "conflict": "public class FrequencySet<T> extends Hashtable<T, MutableInt> { private static final long serialVersionUID = -134984205245480177L;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7539,
+    "v2": "if ( !paraphrases.isEmpty() ) { String paraphrase = (String)paraphrases.peek();",
+    "resolution": "if ( !paraphrases.isEmpty() ) { String paraphrase = paraphrases.peek();",
+    "conflict": "if ( paraphrases.size()>0 ) { String paraphrase = paraphrases.peek();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7557,
+    "v2": "ANTLRErrorListener<? super Token> listener = getErrorListenerDispatch(); listener.syntaxError(this, offendingToken, line, charPositionInLine, msg, e);",
+    "resolution": "ANTLRErrorListener<? super Symbol> listener = getErrorListenerDispatch(); listener.syntaxError(this, offendingToken, line, charPositionInLine, msg, e);",
+    "conflict": "ANTLRErrorListener<? super Symbol> listener = getErrorListenerDispatch(); listener.error(this, offendingToken, line, charPositionInLine, msg, e);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7561,
+    "v2": "@Override public int LA(int i) { return LT(i).getType(); }",
+    "resolution": "@Override public int LA(int i) { return LT(i).getType(); }",
+    "conflict": "@Override public TokenSource<T> getTokenSource() { return tokenSource; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7574,
+    "v2": "RuleContext newContext = new RuleContext(ctx, s.stateNumber);",
+    "resolution": "PredictionContext newContext = new SingletonPredictionContext(ctx, s.stateNumber);",
+    "conflict": "PredictionContext newContext = new SingletonPredictionContext(ctx, s.stateNumber);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7591,
+    "v2": "public Token LT(int k);",
+    "resolution": "public Symbol LT(int k);",
+    "conflict": "@Override public Symbol LT(int k);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7592,
+    "v2": "public Token get(int i);",
+    "resolution": "public Symbol get(int i);",
+    "conflict": "@Override public Symbol get(int i);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7593,
+    "v2": "public String getText();  public String getText(RuleContext ctx);",
+    "resolution": "public String getText(); public String getText(RuleContext<?> ctx);",
+    "conflict": "public String getText(RuleContext<?> ctx);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7600,
+    "v2": "public NoViableAltException noViableAlt(@NotNull TokenStream input, @NotNull ParserRuleContext<?> outerContext,",
+    "resolution": "public NoViableAltException noViableAlt(@NotNull TokenStream<? extends Symbol> input, @NotNull ParserRuleContext<Symbol> outerContext,",
+    "conflict": "public NoViableAltException noViableAlt(@NotNull SymbolStream<? extends Symbol> input, @NotNull ParserRuleContext<Symbol> outerContext,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7601,
+    "v2": "public int predictATN(@NotNull DFA dfa, @NotNull TokenStream input, @Nullable ParserRuleContext outerContext,",
+    "resolution": "public int predictATN(@NotNull DFA dfa, @NotNull TokenStream<Token> input, @Nullable ParserRuleContext<Token> outerContext,",
+    "conflict": "public int predictATN(@NotNull DFA dfa, @NotNull SymbolStream<Token> input, @Nullable ParserRuleContext<Token> outerContext,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7602,
+    "v2": "public int adaptivePredict(@NotNull TokenStream input, int decision, @Nullable ParserRuleContext outerContext)",
+    "resolution": "public int adaptivePredict(@NotNull TokenStream<Token> input, int decision, @Nullable ParserRuleContext<Token> outerContext)",
+    "conflict": "public int adaptivePredict(@NotNull SymbolStream<Token> input, int decision, @Nullable ParserRuleContext<Token> outerContext)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7629,
+    "v2": "found = execParser(\"T.g4\", grammar, \"TParser\", \"TLexer\", \"s\",",
+    "resolution": "found = execParser(\"T.g4\", grammar, \"TParser\", \"TLexer\", \"s\",",
+    "conflict": "found = execParser(\"T.g\", grammar, \"TParser\", \"TLexer\", \"s\","
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7634,
+    "v2": "public void enterRule(ParserRuleContext<Token> localctx, int state, int ruleIndex) { setState(state);",
+    "resolution": "public void enterRule(ParserRuleContext<Symbol> localctx, int state, int ruleIndex) { setState(state);",
+    "conflict": "public void enterRule(ParserRuleContext<Symbol> localctx, int ruleIndex) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7635,
+    "v2": "setState(_ctx.invokingState); _ctx = (ParserRuleContext<Token>)_ctx.parent;",
+    "resolution": "_ctx = (ParserRuleContext<Symbol>)_ctx.parent;",
+    "conflict": "_ctx = (ParserRuleContext<Symbol>)_ctx.parent;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7636,
+    "v2": "public void pushNewRecursionContext(ParserRuleContext<Token> localctx, int state, int ruleIndex) { setState(state);",
+    "resolution": "public void pushNewRecursionContext(ParserRuleContext<Symbol> localctx, int state, int ruleIndex) { setState(state);",
+    "conflict": "public void pushNewRecursionContext(ParserRuleContext<Symbol> localctx, int ruleIndex) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7638,
+    "v2": "setState(_ctx.invokingState); _ctx = (ParserRuleContext<Token>)_ctx.parent;",
+    "resolution": "setState(_ctx.invokingState); _ctx = (ParserRuleContext<Symbol>)_ctx.parent;",
+    "conflict": "_ctx = (ParserRuleContext<Symbol>)_ctx.parent;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7641,
+    "v2": "public void sync(Parser recognizer) { ATNState s = recognizer.getInterpreter().atn.states.get(recognizer.getState());",
+    "resolution": "public void sync(Parser<? extends Symbol> recognizer) { ATNState s = recognizer.getInterpreter().atn.states.get(recognizer.getState());",
+    "conflict": "public void sync(Parser<? extends Symbol> recognizer) { ATNState s = recognizer.getInterpreter().atn.states.get(recognizer._ctx.s);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7644,
+    "v2": "assertEquals(\"line 1:5 reportAttemptingFullContext d=1, input='34abc'\\n\" + \"line 1:2 reportContextSensitivity d=1, input='34'\\n\",",
+    "resolution": "assertEquals(\"line 1:5 reportAttemptingFullContext d=1, input='34abc'\\n\" + \"line 1:2 reportContextSensitivity d=1, input='34'\\n\",",
+    "conflict": "assertEquals(\"line 1:5 reportAttemptingFullContext d=1: [(28,1,[18 10]), (20,2,[10])], input='34abc'\\n\" + \"line 1:2 reportContextSensitivity d=1: [(33,1,[18 10])],uniqueAlt=1, input='34'\\n\","
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7645,
+    "v2": "assertEquals(\"line 1:5 reportAttemptingFullContext d=1, input='34abc'\\n\" + \"line 1:5 reportContextSensitivity d=1, input='34abc'\\n\",",
+    "resolution": "assertEquals(\"line 1:5 reportAttemptingFullContext d=1, input='34abc'\\n\" + \"line 1:5 reportContextSensitivity d=1, input='34abc'\\n\",",
+    "conflict": "assertEquals(\"line 1:5 reportAttemptingFullContext d=1: [(28,1,[22 14]), (24,2,[14])], input='34abc'\\n\" + \"line 1:5 reportContextSensitivity d=1: [(27,2,[14])],uniqueAlt=2, input='34abc'\\n\","
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7648,
+    "v2": "\"s0-'else'->s1^\\n\";",
+    "resolution": "\"s0**-ctx:6(s)->s1\\n\" + \"s1-'else'->:s2=>1\\n\";",
+    "conflict": "\"s0**-ctx:6(s)->s1\\n\" + \"s1-'else'->:s2=>1\\n\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7649,
+    "v2": "assertEquals(\"line 1:19 reportAttemptingFullContext d=1, input='else'\\n\" + \"line 1:19 reportContextSensitivity d=1, input='else'\\n\",",
+    "resolution": "assertEquals(\"line 1:19 reportAttemptingFullContext d=1, input='else'\\n\" + \"line 1:19 reportContextSensitivity d=1, input='else'\\n\",",
+    "conflict": "assertEquals(\"line 1:19 reportAttemptingFullContext d=1: [(23,1,[6]), (13,2,[]), (15,2,[6 12]), (29,2,[6 12])], input='else'\\n\" + \"line 1:19 reportContextSensitivity d=1: [(25,1,[6])],uniqueAlt=1, input='else'\\n\","
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7658,
+    "v2": "import org.antlr.v4.runtime.atn.ATNConfigSet; import org.antlr.v4.runtime.dfa.DFA; import org.antlr.v4.runtime.misc.IntervalSet; import org.antlr.v4.runtime.misc.NotNull;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "None",
+    "id": 7665,
+    "v2": "import org.antlr.v4.runtime.atn.ATNConfigSet; import org.antlr.v4.runtime.dfa.DFA; import org.antlr.v4.runtime.misc.IntervalSet;",
+    "resolution": "import java.util.Collection;",
+    "conflict": "import java.util.Collection;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7677,
+    "v2": "import java.util.Arrays;  public class DiagnosticErrorListener extends BaseErrorListener<Token> {",
+    "resolution": "public class DiagnosticErrorListener extends BaseErrorListener<Token> {",
+    "conflict": "public class DiagnosticErrorStrategy extends DefaultErrorStrategy {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7690,
+    "v2": "public CommonTokenStream(TokenSource tokenSource) {",
+    "resolution": "public CommonTokenStream(TokenSource<? extends Token> tokenSource) {",
+    "conflict": "public CommonTokenStream() { ; }  public CommonTokenStream(TokenSource<? extends Token> tokenSource) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7693,
+    "v2": "closure(reachIntermediate, reach, collectPredicates, dfa.isContextSensitive(), greedy, contextCache.isContextSensitive(), hasMoreContext, contextCache); stepIntoGlobal = reach.getDipsIntoOuterContext();",
+    "resolution": "closure(reachIntermediate, reach, collectPredicates, greedy, previous.useContext, hasMoreContext, contextCache); stepIntoGlobal = reach.getDipsIntoOuterContext();",
+    "conflict": "stepIntoGlobal = closure(reachIntermediate, reach, collectPredicates, greedy, previous.useContext, hasMoreContext, contextCache);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7694,
+    "v2": "closure(reachIntermediate, configs, collectPredicates, dfa.isContextSensitive(), greedy, contextCache.isContextSensitive(), hasMoreContext, contextCache); boolean stepIntoGlobal = configs.getDipsIntoOuterContext();",
+    "resolution": "closure(reachIntermediate, configs, collectPredicates, greedy, useContext, hasMoreContext, contextCache); boolean stepIntoGlobal = configs.getDipsIntoOuterContext();",
+    "conflict": "boolean stepIntoGlobal = closure(reachIntermediate, configs, collectPredicates, greedy, useContext, hasMoreContext, contextCache);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7695,
+    "v2": "boolean hasEmpty = config.context == null || config.context.isEmpty();",
+    "resolution": "boolean hasEmpty = config.context.hasEmpty();",
+    "conflict": "boolean stepIntoGlobal = false; boolean hasEmpty = config.context.hasEmpty();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7699,
+    "v2": "ATNConfigSet closure = s0;",
+    "resolution": "ATNConfigSet closure = s0;",
+    "conflict": "ATNConfigSet closure = new ATNConfigSet(); closure.addAll(s0);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7700,
+    "v2": "",
+    "resolution": "",
+    "conflict": "@NotNull ATNConfigSet reach = new ATNConfigSet(); atnPrevAccept.reset();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7702,
+    "v2": "ATNConfigSet closure = s0;",
+    "resolution": "ATNConfigSet closure = s0;",
+    "conflict": "ATNConfigSet closure = new ATNConfigSet(false); closure.addAll(s0);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7703,
+    "v2": "",
+    "resolution": "",
+    "conflict": "@NotNull ATNConfigSet reach = new ATNConfigSet(false); atnPrevAccept.reset();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7708,
+    "v2": "public class DiagnosticErrorStrategy extends DefaultErrorStrategy {",
+    "resolution": "public class DiagnosticErrorListener extends BaseErrorListener<Token> {",
+    "conflict": "import java.util.Arrays;  public class DiagnosticErrorListener extends BaseErrorListener<Token> {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7729,
+    "v2": "import java.util.Arrays;  public class DiagnosticErrorListener extends BaseErrorListener<Token> {",
+    "resolution": "public class DiagnosticErrorListener<Symbol extends Token> extends BaseErrorListener<Symbol> {",
+    "conflict": "public class DiagnosticErrorStrategy<Symbol extends Token> extends DefaultErrorStrategy<Symbol> {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7739,
+    "v2": "public class DiagnosticErrorStrategy extends DefaultErrorStrategy {",
+    "resolution": "public class DiagnosticErrorStrategy<Symbol extends Token> extends DefaultErrorStrategy<Symbol> {",
+    "conflict": "import java.util.Arrays;  public class DiagnosticErrorStrategy<Symbol extends Token> extends DefaultErrorStrategy<Symbol> {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7743,
+    "v2": "if ( reportAmbiguities && !D.configset.hasSemanticContext ) { reportAmbiguity(dfa, D, startIndex, input.index(), D.configset.conflictingAlts, D.configset);",
+    "resolution": "if ( reportAmbiguities && !D.configset.hasSemanticContext() ) { reportAmbiguity(dfa, D, startIndex, input.index(), D.configset.getConflictingAlts(), D.configset);",
+    "conflict": "if ( !D.configset.hasSemanticContext() ) { reportAmbiguity(dfa, D, startIndex, input.index(), D.configset.getConflictingAlts(), D.configset);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7752,
+    "v2": "assertEquals(\"line 1:4 reportAmbiguity d=0: ambigAlts={2..3}:[(6,2,[],up=1), (10,2,[],up=1), (1,2,[],up=1), (6,3,[],up=1), (10,3,[],up=1), (1,3,[],up=1), (6,4,[],{1:0}?,up=1), (10,4,[],{1:0}?,up=1), (1,4,[],{1:0}?,up=1)],hasSemanticContext=true,conflictingAlts={2..4},dipsIntoOuterContext, input='x'\\n\", this.stderrDuringParse);",
+    "resolution": "assertEquals(\"line 1:4 reportAmbiguity d=0: ambigAlts={2..3}:[(1,2,[],up=1), (6,2,[],up=1), (10,2,[],up=1), (1,3,[],up=1), (6,3,[],up=1), (10,3,[],up=1), (1,4,[],{1:0}?,up=1), (6,4,[],{1:0}?,up=1), (10,4,[],{1:0}?,up=1)],hasSemanticContext=true,conflictingAlts={2..4},dipsIntoOuterContext, input='x'\\n\", this.stderrDuringParse);",
+    "conflict": "assertEquals(\"line 1:4 reportInsufficientPredicates d=0, decState=32, ambigAlts={2..4}:[{-1:-1}?, {-1:-1}?, {-1:-1}?, {-1:-1}?, {1:0}?], [(1,2,[],up=1), (6,2,[],up=1), (10,2,[],up=1), (1,3,[],up=1), (6,3,[],up=1), (10,3,[],up=1), (1,4,[],{1:0}?,up=1), (6,4,[],{1:0}?,up=1), (10,4,[],{1:0}?,up=1)],hasSemanticContext=true,conflictingAlts={2..4},dipsIntoOuterContext, input='x'\\n\", this.stderrDuringParse);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7753,
+    "v2": "public interface SymbolStream<T> extends IntStream { /** Get the symbol at absolute index i; 0..n-1.",
+    "resolution": "public interface SymbolStream<T> extends IntStream<T> { /** Get the symbol at absolute index i; 0..n-1.",
+    "conflict": "public interface SymbolStream<T> extends IntStream<T> { /** Get an object at absolute index i; 0..n-1."
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7754,
+    "v2": "private static final long serialVersionUID = 1532568338707443067L;  public InputMismatchException(Parser recognizer) {",
+    "resolution": "private static final long serialVersionUID = 1532568338707443067L; public <T extends Token> InputMismatchException(Parser<T> recognizer) {",
+    "conflict": "public <T extends Token> InputMismatchException(Parser<T> recognizer) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7756,
+    "v2": "@SuppressWarnings(\"unchecked\") public List<TerminalNode<Symbol>> getTokens(int ttype) {",
+    "resolution": "public List<? extends TerminalNode<Symbol>> getTokens(int ttype) {",
+    "conflict": "public List<? extends TerminalNode<Symbol>> getTokens(int ttype) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7772,
+    "v2": "@SuppressWarnings(\"checked\") public TerminalNode<Symbol> getToken(int ttype, int i) {",
+    "resolution": "public TerminalNode<Symbol> getToken(int ttype, int i) {",
+    "conflict": "public Symbol getToken(int ttype, int i) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7774,
+    "v2": "@SuppressWarnings(\"checked\") public List<TerminalNode<Symbol>> getTokens(int ttype) {",
+    "resolution": "public List<? extends TerminalNode<Symbol>> getTokens(int ttype) {",
+    "conflict": "public List<? extends Symbol> getTokens(int ttype) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7776,
+    "v2": "import org.antlr.v4.runtime.misc.Pair;",
+    "resolution": "import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;",
+    "conflict": "import org.antlr.v4.runtime.misc.Tuple; import org.antlr.v4.runtime.misc.Tuple2;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7785,
+    "v2": "public void reportContextSensitivity(@NotNull Parser<? extends Symbol> recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull ATNConfigSet configs)",
+    "resolution": "public <T extends Symbol> void reportContextSensitivity(@NotNull Parser<T> recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull SimulatorState<T> acceptState)",
+    "conflict": "public <T extends Symbol> void reportContextSensitivity(@NotNull Parser<T> recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull SimulatorState<T> acceptState)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7786,
+    "v2": "public void reportContextSensitivity(@NotNull Parser<? extends Symbol> recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull ATNConfigSet configs)",
+    "resolution": "public <T extends Symbol> void reportContextSensitivity(@NotNull Parser<T> recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull SimulatorState<T> acceptState)",
+    "conflict": "public <T extends Symbol> void reportContextSensitivity(@NotNull Parser<T> recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull SimulatorState<T> acceptState)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7787,
+    "v2": "import org.antlr.v4.runtime.misc.IntervalSet; import org.antlr.v4.runtime.misc.Nullable;",
+    "resolution": "import org.antlr.v4.runtime.misc.IntervalSet; import org.antlr.v4.runtime.misc.Nullable; import org.antlr.v4.runtime.tree.ParseTreeListener;",
+    "conflict": "import org.antlr.v4.runtime.misc.*; import org.antlr.v4.runtime.tree.ParseTreeListener;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7798,
+    "v2": "public ErrorNode<Symbol> addErrorNode(Symbol badToken) { ErrorNodeImpl<Symbol> t = new ErrorNodeImpl<Symbol>(badToken);",
+    "resolution": "public ErrorNode<Symbol> addErrorNode(Symbol badToken) { ErrorNodeImpl<Symbol> t = new ErrorNodeImpl<Symbol>(badToken);",
+    "conflict": "public TerminalNode<Symbol> addErrorNode(Symbol badToken) { TerminalNodeImpl<Symbol> t = new ErrorNodeImpl<Symbol>(badToken);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7809,
+    "v2": "public <T extends Symbol> void reportContextSensitivity(@NotNull Parser<T> recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull ATNConfigSet configs)",
+    "resolution": "public <T extends Symbol> void reportContextSensitivity(@NotNull Parser<T> recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull SimulatorState<T> acceptState)",
+    "conflict": "public void reportContextSensitivity(@NotNull Parser recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull SimulatorState acceptState)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7810,
+    "v2": "public <T extends Symbol> void reportContextSensitivity(@NotNull Parser<T> recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull ATNConfigSet configs)",
+    "resolution": "public <T extends Symbol> void reportContextSensitivity(@NotNull Parser<T> recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull SimulatorState<T> acceptState)",
+    "conflict": "public void reportContextSensitivity(@NotNull Parser recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull SimulatorState acceptState)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7815,
+    "v2": "for (ParseListener<? super Symbol> l : _parseListeners) { l.enterNonLRRule(_ctx);",
+    "resolution": "for (ParseTreeListener<? super Symbol> l : _parseListeners) { l.enterEveryRule(_ctx);",
+    "conflict": "for (ParseTreeListener<Token> l : _parseListeners) { l.enterEveryRule(_ctx);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7818,
+    "v2": "// parse listener public void enterRule(ParseListener<? super Symbol> listener) { } public void exitRule(ParseListener<? super Symbol> listener) { }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7827,
+    "v2": "ParserRuleContext.emptyContext(),",
+    "resolution": "PredictionContext.EMPTY, false,",
+    "conflict": "PredictionContext.EMPTY, false,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7829,
+    "v2": "protected void _LOOK(@NotNull ATNState s, @Nullable RuleContext<?> ctx,",
+    "resolution": "protected void _LOOK(@NotNull ATNState s, @NotNull PredictionContext ctx, boolean epsilonStopState,",
+    "conflict": "protected void _LOOK(@NotNull ATNState s, @NotNull PredictionContext ctx, boolean epsilonStopState,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7830,
+    "v2": "RuleContext<?> newContext = RuleContext.getChildContext(ctx, s.stateNumber); _LOOK(t.target, newContext, look, lookBusy, seeThruPreds);",
+    "resolution": "PredictionContext newContext = ctx.getChild(s.stateNumber); _LOOK(t.target, newContext, epsilonStopState, look, lookBusy, seeThruPreds);",
+    "conflict": "PredictionContext newContext = ctx.getChild(s.stateNumber); _LOOK(t.target, newContext, epsilonStopState, look, lookBusy, seeThruPreds);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7833,
+    "v2": "reach = new ATNConfigSet(); s = target; // flip; current DFA target becomes new src/from state",
+    "resolution": "reach = new ATNConfigSet(false); s = target; // flip; current DFA target becomes new src/from state",
+    "conflict": "reach = new ATNConfigSet(false); s = next;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7834,
+    "v2": "RuleContext<?> initialContext = EMPTY_LEXER_RULE_CONTEXT; ATNConfigSet configs = new ATNConfigSet();",
+    "resolution": "PredictionContext initialContext = PredictionContext.EMPTY; ATNConfigSet configs = new ATNConfigSet(false);",
+    "conflict": "PredictionContext initialContext = PredictionContext.EMPTY; ATNConfigSet configs = new ATNConfigSet(false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7836,
+    "v2": "RuleContext<?> newContext = RuleContext.getChildContext(config.context, p.stateNumber);",
+    "resolution": "PredictionContext newContext = config.context.getChild(p.stateNumber);",
+    "conflict": "PredictionContext newContext = config.context.getChild(p.stateNumber);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7851,
+    "v2": "sharedParser.addErrorListener(DescriptiveErrorListener.INSTANCE);",
+    "resolution": "sharedParser.addErrorListener(DescriptiveErrorListener.INSTANCE); sharedParser.getInterpreter().force_global_context = FORCE_GLOBAL_CONTEXT; sharedParser.getInterpreter().always_try_local_context = TRY_LOCAL_CONTEXT_FIRST;",
+    "conflict": "sharedParser.getInterpreter().disable_global_context = DISABLE_GLOBAL_CONTEXT; sharedParser.getInterpreter().force_global_context = FORCE_GLOBAL_CONTEXT; sharedParser.getInterpreter().always_try_local_context = TRY_LOCAL_CONTEXT_FIRST;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7854,
+    "v2": "configs.dipsIntoOuterContext = true; // TODO: can remove? only care when we add to set per middle of this method assert newDepth > Integer.MIN_VALUE;",
+    "resolution": "stepIntoGlobal = true; assert newDepth > Integer.MIN_VALUE;",
+    "conflict": "stepIntoGlobal = true;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 7857,
+    "v2": "public boolean isReadOnly() { return mergedConfigs == null;",
+    "resolution": "public boolean isReadOnly() { return mergedConfigs == null;public boolean isLocalContext() { return localContext;",
+    "conflict": "public boolean isLocalContext() { return localContext;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7860,
+    "v2": "\"line 1:14 reportAttemptingFullContext d=2: [(30,1,[24 14]), (26,2,[14])], input='34abc'\\n\" + \"line 1:14 reportContextSensitivity d=2: [(8,2,[18]), (12,2,[18]), (1,2,[])],uniqueAlt=2, input='34abc'\\n\",",
+    "resolution": "\"line 1:14 reportAttemptingFullContext d=2: [(30,1,[24 14]), (26,2,[14])], input='34abc'\\n\" + \"line 1:14 reportContextSensitivity d=2: [(1,2,[]), (8,2,[18]), (12,2,[18])],uniqueAlt=2, input='34abc'\\n\",",
+    "conflict": "\"line 1:17 reportAttemptingFullContext d=2: [(30,1,[24 14]), (26,2,[14])], input='34abc'\\n\" + \"line 1:14 reportContextSensitivity d=2: [(1,2,[]), (8,2,[18]), (12,2,[18])],uniqueAlt=2, input='34abc'\\n\","
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7862,
+    "v2": "String action = \"$lab.start; $c.text;\"; String expected = \"(((aContext)_localctx).lab!=null?(((aContext)_localctx).lab.start):null); (((aContext)_localctx).c!=null?_input.toString(((aContext)_localctx).c.start,((aContext)_localctx).c.stop):null);\";",
+    "resolution": "String action = \"$lab.start; $c.text;\"; String expected = \"(((aContext)_localctx).lab!=null?(((aContext)_localctx).lab.start):null); (((aContext)_localctx).c!=null?_input.toString(((aContext)_localctx).c.start,((aContext)_localctx).c.stop):null);\";",
+    "conflict": "String action = \"$lab.start;\"; String expected = \"(_localctx.lab!=null?(_localctx.lab.start):null);\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7871,
+    "v2": "String action = \"$lab.start; $c.text;\"; String expected = \"(((aContext)_localctx).lab!=null?(((aContext)_localctx).lab.start):null); (((aContext)_localctx).c!=null?_input.toString(((aContext)_localctx).c.start,((aContext)_localctx).c.stop):null);\";",
+    "resolution": "String action = \"$lab.start; $c.text;\"; String expected = \"(((aContext)_localctx).lab!=null?(((aContext)_localctx).lab.start):null); (((aContext)_localctx).c!=null?_input.toString(((aContext)_localctx).c.start,((aContext)_localctx).c.stop):null);\";",
+    "conflict": "String action = \"$lab.start;\"; String expected = \"(_localctx.lab!=null?(_localctx.lab.start):null);\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7872,
+    "v2": "@Nullable ParserRuleContext<?> outerContext)",
+    "resolution": "@Nullable ParserRuleContext<?> outerContext, boolean useContext)",
+    "conflict": "@Nullable ParserRuleContext<?> outerContext, boolean useContext)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7885,
+    "v2": "DFAState D; ATNConfigSet fullCtxSet;",
+    "resolution": "DFAState D;",
+    "conflict": "DFAState D = null;"
+  }
+]
+}

@@ -1,0 +1,276 @@
+{"conflicts":[
+  {
+    "devdecision": "Manual",
+    "id": 74043,
+    "v2": "AbortException, assert, createPromiseCapability, getVerbosityLevel, info,",
+    "resolution": "assert, createPromiseCapability, getVerbosityLevel, info,",
+    "conflict": "assert, createPromiseCapability, deprecated, getVerbosityLevel, info,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74061,
+    "v2": "if (definePropertyPossible) return true;",
+    "resolution": "if (definePropertyPossible) return;",
+    "conflict": "if (definePropertyPossible) return;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74122,
+    "v2": "RadialAxial.fromIR = function RadialAxial_fromIR(ctx, raw) {",
+    "resolution": "RadialAxial.fromIR = function RadialAxial_fromIR(raw) {",
+    "conflict": "RadialAxial.fromIR = function radialAxialShadingGetIR(raw) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74189,
+    "v2": "for (var i = 0, ii = charstrings.length; i < ii; i++) {",
+    "resolution": "for (var i = 0, ii = charstrings.length; i < ii; i++)",
+    "conflict": "for (var i = 0; i < charstrings.length; i++)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74202,
+    "v2": "startRendering: function pageStartRendering(ctx, callback)  {",
+    "resolution": "startRendering: function pageStartRendering(ctx, callback, textLayer)  {",
+    "conflict": "startRendering: function(ctx, callback, textLayer)  {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74212,
+    "v2": "this.page = params.page; // simple page",
+    "resolution": "this.page = params.page; // simple page",
+    "conflict": "this.page = page; // simple page"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74237,
+    "v2": "setStrokeColorSpace: function canvasGraphicsSetStrokeColorSpace(space) {",
+    "resolution": "setStrokeColorSpace: function canvasGraphicsSetStrokeColorSpacefunction(raw) {",
+    "conflict": "setStrokeColorSpace: function(raw) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74238,
+    "v2": "setFillColorSpace: function canvasGraphicsSetFillColorSpace(space) {",
+    "resolution": "setFillColorSpace: function canvasGraphicsSetFillColorSpace(raw) {",
+    "conflict": "setFillColorSpace: function(raw) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74240,
+    "v2": "setFillColorN: function canvasGraphicsSetFillColorN(/*...*/) {",
+    "resolution": "setFillColorN_IR: function canvasGraphicsSetFillColorN(/*...*/) {",
+    "conflict": "setFillColorN_IR: function(/*...*/) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74248,
+    "v2": "getPattern: function radialAxialShadingGetPattern() {",
+    "resolution": "getIR: function RadialAxialShading_getIR() {",
+    "conflict": "getIR: function() {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74249,
+    "v2": "var TilingPattern = (function tilingPattern() {",
+    "resolution": "var TilingPatternIR = (function tilingPattern() {",
+    "conflict": "var TilingPatternIR = (function() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74276,
+    "v2": "this.black = (name.search(/Black/g) != -1);",
+    "resolution": "this.black = (name.search(/Black/g) != -1);",
+    "conflict": "this.black = (name.indexOf(\"Black\") != -1)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74286,
+    "v2": "return (charsCache[chars] = str);",
+    "resolution": "return (charsCache[chars] = glyphs);",
+    "conflict": "return charsCache[chars] = glyphs;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74287,
+    "v2": "this.serif = serifFonts[names] || (name.indexOf('Serif') != -1);",
+    "resolution": "this.serif = serifFonts[names] || (name.search(/serif/gi) != -1);",
+    "conflict": "this.serif = serifFonts[names] || (name.search(/serif/gi) != -1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74293,
+    "v2": "this.ctx.font = size + 'px\"' + fontName + '\"';",
+    "resolution": "this.ctx.font = size + 'px \"' + fontName + '\"';",
+    "conflict": "this.ctx.font = size + 'px \"' + fontName + '\"';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74298,
+    "v2": "prepareFontLoadEvent: function(rules, names, ids) {",
+    "resolution": "prepareFontLoadEvent: function(rules, names, ids) {",
+    "conflict": "prepareFontLoadEvent: function prepareFontLoadEvent(rules, names) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74299,
+    "v2": "var Font = (function() {",
+    "resolution": "var Font = (function() {",
+    "conflict": "var Font = (function Font() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74308,
+    "v2": "nameTable += strings.join('') + stringsUnicode.join('');",
+    "resolution": "nameTable += strings.join('') + stringsUnicode.join('');",
+    "conflict": "nameTable += strings.join(\"\") + stringsUnicode.join(\"\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74309,
+    "v2": "createOpenTypeHeader('\\x4F\\x54\\x54\\x4F', otf, offsets, 9);",
+    "resolution": "createOpenTypeHeader('\\x4F\\x54\\x54\\x4F', otf, offsets, 9);",
+    "conflict": "createOpenTypeHeader(\"\\x4F\\x54\\x54\\x4F\", otf, offsets, tablesCount);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74310,
+    "v2": "'head': (function() {",
+    "resolution": "'head': (function() {",
+    "conflict": "\"head\": (function convert_fields_head() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74311,
+    "v2": "'hhea': (function() {",
+    "resolution": "'hhea': (function() {",
+    "conflict": "\"hhea\": (function convert_fields_hhea() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74313,
+    "v2": "'maxp': (function() {",
+    "resolution": "'maxp': (function() {",
+    "conflict": "\"maxp\": (function convert_fields_maxp() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74322,
+    "v2": "'header': '\\x01\\x00\\x04\\x04',",
+    "resolution": "'header': '\\x01\\x00\\x04\\x04',",
+    "conflict": "\"header\": \"\\x01\\x00\\x04\\x04\","
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74325,
+    "v2": "'private': (function(self) {",
+    "resolution": "'private': (function(self) {",
+    "conflict": "\"private\": (function wrap_private(self) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74336,
+    "v2": "return rule;",
+    "resolution": "return rule;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74366,
+    "v2": "this.font = this.convert(cff, aProperties);",
+    "resolution": "this.font = this.cover(aName, cff, aProperties);",
+    "conflict": "this.font = this.cover(aName, cff, aProperties);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74374,
+    "v2": "var ch;",
+    "resolution": "var ch;",
+    "conflict": "var ch = null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74375,
+    "v2": "var pdfDocument, canvas, numPages, pageDisplay, pageNum, pageInterval;",
+    "resolution": "var pdfDocument, canvas, pageDisplay, pageNum, numPages, pageInterval;",
+    "conflict": "var pdfDocument, canvas, pageDisplay, pageNum, numPages, pageInterval;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74378,
+    "v2": "this.font = this.convert(cff, aProperties);",
+    "resolution": "this.font = this.cover(aName, cff, aProperties);",
+    "conflict": "this.font = this.cover(aName, cff, aProperties);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74386,
+    "v2": "var ch;",
+    "resolution": "var ch;",
+    "conflict": "var ch = null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74387,
+    "v2": "var pdfDocument, canvas, numPages, pageDisplay, pageNum, pageInterval;",
+    "resolution": "var pdfDocument, canvas, pageDisplay, pageNum, numPages, pageInterval;",
+    "conflict": "var pdfDocument, canvas, pageDisplay, pageNum, numPages, pageInterval;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74396,
+    "v2": "if (bufferLength <= pos) {",
+    "resolution": "while (this.bufferLength <= pos) {",
+    "conflict": "while (this.bufferLength <= pos) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74397,
+    "v2": "if (bufferLength <= pos) {",
+    "resolution": "while (this.bufferLength <= pos) {",
+    "conflict": "while (this.bufferLength <= pos) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74398,
+    "v2": "if (bufferLength <= pos) {",
+    "resolution": "while (this.bufferLength <= pos) {",
+    "conflict": "while (this.bufferLength <= pos) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74399,
+    "v2": "if (bufferLength <= pos) {",
+    "resolution": "while (this.bufferLength <= pos) {",
+    "conflict": "while (this.bufferLength <= pos) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74410,
+    "v2": "this.end = (start + length) || arrayBuffer.byteLength;",
+    "resolution": "this.end = (start + length) || arrayBuffer.byteLength;",
+    "conflict": "this.length = (start + length) || arrayBuffer.byteLength;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74412,
+    "v2": "if (this.pos >= this.end)",
+    "resolution": "if (this.pos >= this.end)",
+    "conflict": "if (this.pos >= this.length)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74415,
+    "v2": "this.end = (start + length) || arrayBuffer.byteLength;",
+    "resolution": "this.end = (start + length) || arrayBuffer.byteLength;",
+    "conflict": "this.length = (start + length) || arrayBuffer.byteLength;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74417,
+    "v2": "if (this.pos >= this.end)",
+    "resolution": "if (this.pos >= this.end)",
+    "conflict": "if (this.pos >= this.length)"
+  }
+]
+}

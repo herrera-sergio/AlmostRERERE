@@ -1,0 +1,682 @@
+{"conflicts":[
+  {
+    "devdecision": "Concatenation",
+    "id": 60560,
+    "v2": "private static final Class REFERENCE_BINDING; private static final Method GET_VALUE;",
+    "resolution": "private static final Class REFERENCE_BINDING; private static final Method GET_VALUE; private final static Map<String, Object> localBeans = new HashMap<String, Object>();",
+    "conflict": "private final static Map<String, Object> localBeans = new HashMap<String, Object>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 60629,
+    "v2": "removeAttribute(Attributes.BEFORE_MODEL_ITEMS_RENDERED); } else if (inPagingMold()) { //B30-2129667, B36-2782751, (ROD) exception when zul applyProperties //must update paginal totalSize or exception in setActivePage final Paginal pgi = getPaginal(); pgi.setTotalSize(getDataLoader().getTotalSize());",
+    "resolution": "removeAttribute(Attributes.BEFORE_MODEL_ITEMS_RENDERED);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 60630,
+    "v2": "removeAttribute(Attributes.BEFORE_MODEL_ITEMS_RENDERED); } else if (inPagingMold()) { //B30-2129667, B36-2782751, (ROD) exception when zul applyProperties //must update paginal totalSize or exception in setActivePage final Paginal pgi = getPaginal(); pgi.setTotalSize(getDataLoader().getTotalSize());",
+    "resolution": "removeAttribute(Attributes.BEFORE_MODEL_ITEMS_RENDERED);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 61173,
+    "v2": "value += \";filename=\" + encodeFilename(request, flnm); response.setHeader(\"Content-Disposition\", value);",
+    "resolution": "value += \";filename=\" + encodeFilename(request, flnm); if (media.isContentDisposition()) response.setHeader(\"Content-Disposition\", value);",
+    "conflict": "value += \";filename=\" + encodeFilename(flnm); if (media.isContentDisposition()) response.setHeader(\"Content-Disposition\", value);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61225,
+    "v2": "@SuppressWarnings(\"unchecked\") public void setValue(ELContext context, Object base, Object property,",
+    "resolution": "@SuppressWarnings(\"unchecked\") public void setValue(ELContext context, Object base, Object property,",
+    "conflict": "@SuppressWarnings(\"unchecked\") public void setValue(ELContext context, Object base, Object property,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 61398,
+    "v2": "import static org.zkoss.lang.Generics.cast;",
+    "resolution": "import org.slf4j.Logger; import org.slf4j.LoggerFactory; import org.zkoss.io.Serializables;",
+    "conflict": "import org.slf4j.Logger; import org.slf4j.LoggerFactory; import org.zkoss.io.Serializables;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62106,
+    "v2": "if (child instanceof Caption) { _caption = null; invalidate(); }",
+    "resolution": "if (child instanceof Caption) { _caption = null; invalidate(); }",
+    "conflict": "if (child instanceof Caption) _caption = null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62132,
+    "v2": "final BrowserIdentifier bwid = _bwid; if (bwid != null && bwid.isBrowser(userAgent, type)) return true;",
+    "resolution": "int last = (type = type.trim()).length(); if (last == 0) return false;",
+    "conflict": "int last = (type = type.trim()).length(); if (last == 0) return false;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62229,
+    "v2": "private static Cache _infs = new MultiCache(100, 30, 4*60*60*1000);",
+    "resolution": "private static transient Cache<Class<? extends Component>, String> _infs = new FastReadCache<Class<? extends Component>, String>( 100, 4 * 60 * 60 * 1000);",
+    "conflict": "private static transient Cache<Class<? extends Component>, String> _infs = new FastReadCache<Class<? extends Component>, String>( 100, 4 * 60 * 60 * 1000);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62244,
+    "v2": "final Map data = request.getData(); _anchorTop = AuRequests.getInt(data, \"top\", 0); _anchorLeft = AuRequests.getInt(data, \"left\", 0);",
+    "resolution": "final Map<String, Object> data = request.getData(); _anchorTop = AuRequests.getInt(data, \"top\", 0); _anchorLeft = AuRequests.getInt(data, \"left\", 0);",
+    "conflict": "final Map<String, Object> data = request.getData(); _anchorTop = AuRequests.getInt(data, \"top\", 0); _anchorLeft = AuRequests.getInt(data, \"left\", 0);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62259,
+    "v2": "if (!_evtInfos.isEmpty()) return ((EventInfo)_evtInfos.remove(0)).event;",
+    "resolution": "if (!_evtInfos.isEmpty()) return _evtInfos.remove(0).event;",
+    "conflict": "if (!_evtInfos.isEmpty()) return _evtInfos.remove(0).event; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62335,
+    "v2": "List chd = themeSelectListbox.getItems(); for (int i = 0; i < chd.size(); i++) { Listitem item = (Listitem)chd.get(i);",
+    "resolution": "for (Listitem item : themeSelectListbox.getItems()) {",
+    "conflict": "for (Listitem item : themeSelectListbox.getItems()) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62365,
+    "v2": "argTypes.add(getClassOfSignature(mi.argTypes[i]));",
+    "resolution": "final String clsnm = mi.argTypes[i]; argTypes.add(getClassOfSignature(resolver, clsnm));",
+    "conflict": "final String clsnm = mi.argTypes[i]; argTypes.add( resolver != null ? resolver.resolveClass(clsnm): forNameByThread(clsnm));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62436,
+    "v2": "private final List _children; private Object _data;",
+    "resolution": "private final List<TreeNode<E>> _children; private E _data;",
+    "conflict": "private List<DefaultTreeNode<E>> _children; private E _data; private final boolean _leaf;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62512,
+    "v2": "private final ResourceCache getCache() { final ServletContext ctx = getServletContext(); ResourceCache cache = (ResourceCache)ctx.getAttribute(ATTR_PAGE_CACHE);",
+    "resolution": "@SuppressWarnings(\"unchecked\") private final ResourceCache<Interpretation> getCache() { final ServletContext ctx = getServletContext();",
+    "conflict": "@SuppressWarnings(\"unchecked\") private final ResourceCache<Interpretation> getCache() { ResourceCache cache = (ResourceCache)_ctx.getAttribute(ATTR_PAGE_CACHE);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62546,
+    "v2": "import org.zkoss.zk.ui.ext.RawId; import org.zkoss.zk.ui.ext.render.DirectContent; import org.zkoss.zk.ui.ext.render.PrologAllowed; import org.zkoss.zk.ui.ext.render.Merger;",
+    "resolution": "import org.zkoss.zk.ui.ext.RawId; import org.zkoss.zk.ui.ext.render.DirectContent; import org.zkoss.zk.ui.ext.render.PrologAllowed; import org.zkoss.zk.ui.ext.render.Merger;",
+    "conflict": "import org.zkoss.zk.ui.ext.render.PrologAllowed;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62550,
+    "v2": "/** Returns if the specified variable resolver has been registered * @see #addVariableResolver * @since 5.0.3",
+    "resolution": "/** Returns if the specified variable resolver has been registered * @see #addVariableResolver * @since 5.0.3",
+    "conflict": "/** Returns if the specified variable resolved has been registered * @see #addVariableResolver * @since 3.6.5"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62553,
+    "v2": "* @exception IllegalStateException if {@link #isInline} is false. * @return if it has been added successfully * @since 5.0.4",
+    "resolution": "* @exception IllegalStateException if {@link #isInline} is false. * @return if it has been added successfully * @since 5.0.4",
+    "conflict": "* @return if it has been added successfully * @since 3.6.5"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62579,
+    "v2": "} else if (val instanceof ListModel) { //Bug 3354086: Model attribute will not accept a ListModel return new BindingListModelListModel((ListModel) val); } else { throw new UiException(\"Expects java.util.Set, java.util.List, java.util.Map, Object[], Enum Class, GroupsModel, ListModel,or BindingListModel only. \"+val.getClass());",
+    "resolution": "} else if (val instanceof ListModel) { //Bug 3354086: Model attribute will not accept a ListModel return new BindingListModelListModel((ListModel) val); } else { throw new UiException(\"Expects java.util.Set, java.util.List, java.util.Map, Object[], Enum Class, GroupsModel, ListModel,or BindingListModel only. \"+val.getClass());",
+    "conflict": "} else { throw new UiException(\"Expects java.util.Set, java.util.List, java.util.Map, Object[], Enum Class, GroupsModel, or BindingListModel only. \"+val.getClass());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62602,
+    "v2": "for (Iterator it = _attrs.iterator(); it.hasNext();) { final Object[] p = (Object[])it.next(); final String nm = (String)p[0];",
+    "resolution": "for (AttrInfo attr: _attrs) { final String nm = attr.name;",
+    "conflict": "for (AttrInfo attr: _attrs) { final String nm = attr.name; String val = (String)((ExValue)attr.value).getValue(eval, page);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62603,
+    "v2": "final Map args = new LinkedHashMap(params); if (clsnm == null) { if (zsrc == null)",
+    "resolution": "final Map<String, String> args = new LinkedHashMap<String, String>(params); if (clsnm == null) { if (zsrc == null)",
+    "conflict": "final Map<String, String> args = new LinkedHashMap<String, String>(params); if (isEmpty(clsnm)) { if (isEmpty(zsrc))"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62616,
+    "v2": "|| \"script\".equals(target) || \"style\".equals(target)) { //declare a header element pgdef.addHeaderInfo(new HeaderInfo( pgdef.getEvaluatorRef(), target, params,",
+    "resolution": "|| \"script\".equals(target) || \"style\".equals(target)) { //declare a header element pgdef.addHeaderInfo(new HeaderInfo(target, params,",
+    "conflict": "|| \"script\".equals(target)) { //declare a header element pgdef.addHeaderInfo(new HeaderInfo(target, params,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62627,
+    "v2": "* !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.zscript\", \"true\")), * !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.xel\", \"true\")))</code>. * <p>In other words, whether to ignore variables defined in ZSCRIPT and XEL depends",
+    "resolution": "* !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.zscript\")), * !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.xel\")))</code>. * <p>In other words, whether to ignore variables defined in ZSCRIPT and XEL depends",
+    "conflict": "* !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.zscript\", \"false\")), * !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.xel\", \"false\")))</code>. * In other words, whether to ignore variables defined in ZSCRIPT and XEL depends"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62628,
+    "v2": "* !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.zscript\", \"true\")), * !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.xel\", \"true\")))</code>. * <p>In other words, whether to ignore variables defined in ZSCRIPT and XEL depends",
+    "resolution": "* !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.zscript\")), * !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.xel\")))</code>. * <p>In other words, whether to ignore variables defined in ZSCRIPT and XEL depends",
+    "conflict": "* !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.zscript\", \"false\")), * !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.xel\", \"false\")))</code>. * In other words, whether to ignore variables defined in ZSCRIPT and XEL depends"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62630,
+    "v2": "* !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.zscript\", \"true\")), * !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.xel\", \"true\")))</code>. * <p>In other words, whether to ignore variables defined in ZSCRIPT and XEL depends",
+    "resolution": "* !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.zscript\")), * !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.xel\")))</code>. * <p>In other words, whether to ignore variables defined in ZSCRIPT and XEL depends",
+    "conflict": "* !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.zscript\", \"false\")), * !\"true\".equals(Library.getProperty(\"org.zkoss.zk.ui.composer.autowire.xel\", \"false\")))</code>. * In other words, whether to ignore variables defined in ZSCRIPT and XEL depends"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62633,
+    "v2": "public class Treecell extends LabelImageElement implements org.zkoss.zul.api.Treecell { private AuxInfo _auxinf;",
+    "resolution": "public class Treecell extends LabelImageElement { private AuxInfo _auxinf;",
+    "conflict": "public class Treecell extends LabelImageElement { private int _span = 1;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62647,
+    "v2": "public class Datebox extends FormatInputElement implements org.zkoss.zul.api.Datebox {  private static final Log log = Log.lookup(Datebox.class);",
+    "resolution": "public class Datebox extends FormatInputElement {",
+    "conflict": "public class Datebox extends FormatInputElement {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62721,
+    "v2": "private static void stringToJS(Collection contents, Collection result) { for (Iterator it = contents.iterator(); it.hasNext();) result.add(new JavaScriptValue((String)it.next()));",
+    "resolution": "private static void stringToJS(Collection<String> contents, Collection<Object> result) { for (String content: contents) result.add(new JavaScriptValue(content));",
+    "conflict": "private static void stringToJS(Collection<String> contents, Collection<Object> result) { for (String content: contents) result.add(new JavaScriptValue(content));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62728,
+    "v2": "private transient List _piggyRes; /** A set of keys that shall be generated to the client only once per desktop. */ private transient Set _clientPerDesktops;",
+    "resolution": "private transient List<AuResponse> _piggyRes; /** A set of keys that shall be generated to the client only once per desktop. */ private transient Set<String> _clientPerDesktops;",
+    "conflict": "private transient List<AuResponse> _piggyRes; /** A set of widget classes whose important events are generated. */ private transient Set<String> _importantEventGened;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62734,
+    "v2": "private static List _addons; private static List _langs;",
+    "resolution": "/** List<Object[Locator, URL]> */ private static List<Object[]> _addons; private static List<Object[]> _langs;",
+    "conflict": "/** List<Object[Locator, URL]> */ private static List<Object[]> _addons; private static List<Object[]> _langs;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62788,
+    "v2": "Object child = _children.remove(index); if (child instanceof DefaultTreeNode) ((DefaultTreeNode)child).setParent(null);",
+    "resolution": "DefaultTreeNode<E> child = _children.remove(index); child.setParent(null);",
+    "conflict": "DefaultTreeNode<E> child = _children.remove(index); child.setParent(null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62790,
+    "v2": "public void sort(Comparator cmpr, final boolean ascending) { Arrays.sort(_array, cmpr);",
+    "resolution": "@SuppressWarnings(\"unchecked\") public void sort(Comparator<E> cmpr, final boolean ascending) { Arrays.sort(_array, (Comparator)cmpr);",
+    "conflict": "@SuppressWarnings(\"unchecked\") public void sort(Comparator<E> cmpr, final boolean ascending) { Arrays.sort(_array, (Comparator)cmpr);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62792,
+    "v2": "public void removeValue(Comparable series, Comparable category) { //key was created by 2 length of array, do not add more elements. List key = new ArrayList(2);",
+    "resolution": "public void removeValue(Comparable<?> series, Comparable<?> category) { List<Comparable<?>> key = new ArrayList<Comparable<?>>(2);",
+    "conflict": "public void removeValue(Comparable<?> series, Comparable<?> category) { List<Comparable<?>> key = new ArrayList<Comparable<?>>(2);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62793,
+    "v2": "public void sort(Comparator cmpr, final boolean ascending) { Arrays.sort(_data, cmpr);",
+    "resolution": "@SuppressWarnings(\"unchecked\") public void sort(Comparator<E> cmpr, final boolean ascending) { Arrays.sort(_data, (Comparator)cmpr);",
+    "conflict": "@SuppressWarnings(\"unchecked\") public void sort(Comparator<E> cmpr, final boolean ascending) { Arrays.sort(_data, (Comparator)cmpr);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62830,
+    "v2": "private final Map loadLabels(Locale locale) {",
+    "resolution": "/** Returns Map(String key, ExValue label) of the specified locale. */ @SuppressWarnings(\"unchecked\") private final Map<String, ExValue> loadLabels(Locale locale) {",
+    "conflict": "/** Returns Map(String key, String label) of the specified locale. */ @SuppressWarnings(\"unchecked\") private final Map<String, String> getLabels(Locale locale) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62831,
+    "v2": "if (locale != null) log.info(\"Loading labels for \"+locale); Map labels = new HashMap(512);",
+    "resolution": "if (locale != null) log.info(\"Loading labels for \"+locale); Map labels = new HashMap(512);",
+    "conflict": "log.info(\"Loading labels for \"+locale); final Map<String, String> labels = new HashMap<String, String>(512);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62846,
+    "v2": "final ClassLocator loc = new ClassLocator(); for (Enumeration en = loc.getResources(XML); en.hasMoreElements();) {",
+    "resolution": "final XMLResourcesLocator loc = Utils.getXMLResourcesLocator(); for (Enumeration en = loc.getResources(XML); en.hasMoreElements();) {",
+    "conflict": "final XMLResourcesLocator loc = Utils.getXMLResourcesLocator(); for (Enumeration en = loc.getResources(\"metainfo/zk/zk.xml\"); en.hasMoreElements();) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62847,
+    "v2": "",
+    "resolution": "",
+    "conflict": "if (_props != null) { for (Property prop: _props) { prop.assign(comp); } }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62848,
+    "v2": "public void applyAttributes(Component comp) { } public Map evalProperties(Map propmap, Page owner, Component parent) { return propmap != null ? propmap: new HashMap(3);",
+    "resolution": "public void applyAttributes(Component comp) { } public Map<String, Object> evalProperties(Map<String, Object> propmap, Page owner, Component parent) { return propmap != null ? propmap: new HashMap<String, Object>(2);",
+    "conflict": "public Map<String, Object> evalProperties(Map<String, Object> propmap, Page owner, Component parent) { return propmap != null ? propmap: new HashMap<String, Object>(2);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 62875,
+    "v2": "final Execution exec = _desktop.getExecution(); if (exec != null) //just in case ((ExecutionCtrl)exec).setExecutionInfo(null);",
+    "resolution": "if (execmon != null &&_event != null) execmon.eventComplete(_event);final Execution exec = _desktop.getExecution(); if (exec != null) //just in case ((ExecutionCtrl)exec).setExecutionInfo(null);",
+    "conflict": "if (execmon != null &&_event != null) execmon.eventComplete(_event);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62880,
+    "v2": "private static List _parsers; // Map<int, boolean>: whether an instance of Configuration private static final Map _syscfgLoadedConfigs = new HashMap(4); private static boolean _syscfgLoaded;",
+    "resolution": "private static List<org.zkoss.zk.ui.util.ConfigParser> _parsers; // Map<int, boolean>: whether an instance of Configuration private static final Map _syscfgLoadedConfigs = new HashMap(4); private static boolean _syscfgLoaded;",
+    "conflict": "private static boolean _syscfgLoaded; private static List<org.zkoss.zk.ui.util.ConfigParser> _parsers;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62890,
+    "v2": "//@Override public int compare(Object o1, Object o2) {",
+    "resolution": "@Override @SuppressWarnings(\"unchecked\") public int compare(E o1, E o2) {",
+    "conflict": "@Override @SuppressWarnings(\"unchecked\") public int compare(E o1, E o2) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62892,
+    "v2": "public class DefaultTreeNode implements TreeNode, Comparable,java.io.Serializable  { private DefaultTreeModel _model; private DefaultTreeNode _parent;",
+    "resolution": "public class DefaultTreeNode<E> implements TreeNode<E>, Comparable<DefaultTreeNode<E>>, java.io.Serializable  { private DefaultTreeModel<E> _model; private DefaultTreeNode<E> _parent;",
+    "conflict": "public class DefaultTreeNode<E> implements TreeNode<E>, Comparable<DefaultTreeNode<E>>, java.io.Serializable  { private DefaultTreeModel<E> _model; private DefaultTreeNode<E> _parent;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62896,
+    "v2": "_children = new ArrayList(); _children.add(index, child); ((DefaultTreeNode)child).setParent(this);",
+    "resolution": "_children = new ArrayList<DefaultTreeNode<E>>(); _children.add(index, (DefaultTreeNode<E>)child); ((DefaultTreeNode<E>)child).setParent(this);",
+    "conflict": "_children = new ArrayList<DefaultTreeNode<E>>(); _children.add(index, (DefaultTreeNode<E>)child); ((DefaultTreeNode<E>)child).setParent(this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62901,
+    "v2": "final Set selItems = new HashSet(2); selItems.add(tab); Events.postEvent(new SelectEvent(Events.ON_SELECT, tab, selItems));",
+    "resolution": "final Set<Tab> selItems = new HashSet<Tab>(2); selItems.add(tab); Events.postEvent(new SelectEvent<Tab>(Events.ON_SELECT, tab, selItems));",
+    "conflict": "final Set<Tab> selItems = new HashSet<Tab>(2); selItems.add(tab); Events.postEvent(new SelectEvent<Tab>(Events.ON_SELECT, tab, selItems));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62936,
+    "v2": "final Map old = setupDynams(exec); final String attrRenderedKey = ATTR_RENDERED+'$'+getUuid(); final String oldSrc  = (String) exec.getAttribute(attrRenderedKey);",
+    "resolution": "final Map<String, Object> old = setupDynams(exec); final String attrRenderedKey = ATTR_RENDERED+'$'+getUuid(); final String oldSrc  = (String) exec.getAttribute(attrRenderedKey);",
+    "conflict": "final Map<String, Object> old = setupDynams(exec); final String oldSrc  = (String) exec.getAttribute(ATTR_RENDERED);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62960,
+    "v2": "private static final Method myGetCloseMethod(final Class cls, final String name, final Class[] argTypes, final boolean bySubclass)",
+    "resolution": "private static final Method myGetCloseMethod(final Class<?> cls, final String name, final Class<?>[] argTypes, final boolean bySubclass)",
+    "conflict": "private static final Method myGetCloseMethod(final Class<?> cls, final String name, final Class<?>[] argTypes, final boolean bySubclass)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62968,
+    "v2": "gdata = (List)gd[i]; _data[i] = gdata.toArray(new Object[gdata.size()]);",
+    "resolution": "gdata = gd[i]; _data[i] = (D[])Array.newInstance( _nativedata.getClass().getComponentType().getComponentType(), gdata.size()); gdata.toArray(_data[i]);",
+    "conflict": "gdata = gd[i]; _data[i] = (D[])Array.newInstance( _nativedata.getClass().getComponentType().getComponentType(), gdata.size()); gdata.toArray(_data[i]);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62982,
+    "v2": "final List l = (List)_auxinf.listeners.get(evtnm); if (l != null) return CollectionsX.comodifiableIterator(l);",
+    "resolution": "final List<EventListener> l = _auxinf.listeners.get(evtnm); if (l != null) return CollectionsX.comodifiableIterator(l);",
+    "conflict": "final List<EventListener> ls = _auxinf.listeners.get(evtnm); if (ls != null) return new ListenerIterator(ls);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62992,
+    "v2": "for (Iterator it = CollectionsX.comodifiableIterator(_resolvers); it.hasNext();) { Object o = Evaluators.resolveVariable( ctx, (VariableResolver)it.next(), base, name);",
+    "resolution": "for (Iterator<VariableResolver> it = CollectionsX.comodifiableIterator(_resolvers); it.hasNext();) { Object o = Evaluators.resolveVariable(ctx, it.next(), base, name);",
+    "conflict": "for (VariableResolver resolver: _resolvers) { Object o = Evaluators.resolveVariable(ctx, resolver, base, name);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62993,
+    "v2": "final List l = (List)_listeners.get(evtnm); if (l != null) return CollectionsX.comodifiableIterator(l);",
+    "resolution": "final List<EventListener> l = _listeners.get(evtnm); if (l != null) return CollectionsX.comodifiableIterator(l);",
+    "conflict": "final List<EventListener> ls = _listeners.get(evtnm); if (ls != null) return new ListenerIterator(ls);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63004,
+    "v2": "/** Map(desktop, DesktopInfo). */ private final Map _dtInfos = new HashMap(); private boolean _closed;",
+    "resolution": "/** Map(desktop, DesktopInfo). */ private final Map<Desktop, DesktopInfo> _dtInfos = new HashMap<Desktop, DesktopInfo>(); private boolean _closed;",
+    "conflict": "/** A map of (Desktop, DesktopThread). */ private final Map<Desktop, DesktopThread> _dts = new HashMap<Desktop, DesktopThread>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63005,
+    "v2": "synchronized (_dtInfos) { for (Iterator it = _dtInfos.values().iterator(); it.hasNext();) ((DesktopInfo)it.next()).publish(event);",
+    "resolution": "synchronized (_dtInfos) { for (DesktopInfo di: _dtInfos.values()) di.publish(event);",
+    "conflict": "synchronized (_dts) { for (DesktopThread dtthd: _dts.values()) dtthd.publish(event);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63007,
+    "v2": "final DesktopInfo di; synchronized (_dtInfos) { di = (DesktopInfo)_dtInfos.get(desktop);",
+    "resolution": "final DesktopInfo di; synchronized (_dtInfos) { di = _dtInfos.get(desktop);",
+    "conflict": "synchronized (_dts) { DesktopThread dtthd = _dts.get(desktop); return dtthd != null && dtthd.isSubscribed(listener);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63064,
+    "v2": "Object o = it.next(); ((Listitem) o).setIndexDirectly(j);",
+    "resolution": "Listitem o = it.next(); o.setIndexDirectly(j);",
+    "conflict": "Listitem o = it.next(); o.setIndexDirectly(j);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63065,
+    "v2": "final int[] g = (int[]) _groupsInfo .get(getGroupCount() - 1);",
+    "resolution": "final int[] g = _groupsInfo.get(getGroupCount() - 1);",
+    "conflict": "final int[] g = _groupsInfo.get(getGroupCount() - 1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63067,
+    "v2": "",
+    "resolution": "@SuppressWarnings(\"unchecked\") private final void setModelDirectly(TreeModel model) { _model = (TreeModel<Object>)model; }",
+    "conflict": "@SuppressWarnings(\"unchecked\") private final void setModelDirectly(TreeModel model) { _model = (TreeModel<Object>)model; }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63068,
+    "v2": "private final Map _labels = new HashMap(6); /** A list of LabelLocator or LabelLocator2. */ private final List _locators = new LinkedList();",
+    "resolution": "private final Map<Locale, Object> _labels = new HashMap<Locale, Object>(6); /** A list of LabelLocator or LabelLocator2. */ private final List<Object> _locators = new LinkedList<Object>();",
+    "conflict": "private final Map<Locale, Object> _labels = new HashMap<Locale, Object>(6); /** A list of LabelLocator. */ private final List<LabelLocator> _locators = new LinkedList<LabelLocator>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63127,
+    "v2": "*/ public String getDefaultWidgetClass(Component comp); /** @deprecated As of release 5.0.4, replaced with {@link #getWidgetClass(Component, String)}. */ public String getWidgetClass(String moldName); /** @deprecated As of release 5.0.4, replaced with {@link #getDefaultWidgetClass(Component)}.",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63342,
+    "v2": "public void redraw(java.io.Writer out) throws java.io.IOException { if (isDynamic() && _content != null) { super.redraw(out); return; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63359,
+    "v2": "private transient ListModel _model; private transient ListitemRenderer _renderer;",
+    "resolution": "private transient Frozen _frozen; private transient ListModel _model; private transient ListitemRenderer _renderer;",
+    "conflict": "private transient Frozen _frozen; private ListModel _model; private ListitemRenderer _renderer;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63403,
+    "v2": "import org.zkoss.lang.Library; import org.zkoss.util.logging.Log;",
+    "resolution": "import org.zkoss.lang.Library; import org.zkoss.util.logging.Log; import org.zkoss.web.servlet.Servlets; import org.zkoss.web.servlet.http.HttpBufferedResponse;",
+    "conflict": "import org.zkoss.util.logging.Log; import org.zkoss.web.servlet.Servlets; import org.zkoss.web.servlet.http.HttpBufferedResponse;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63417,
+    "v2": "/** Sets whether the button (on the right of the textbox) is visible.",
+    "resolution": "/** * Sets whether the button (on the right of the textbox) is visible. *",
+    "conflict": "/** * Sets whether the button (on the right of the textbox) is visible. *"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63441,
+    "v2": "private boolean replaceZkhead(StringBuffer sb, boolean zktagGened) { final Execution exec = Executions.getCurrent(); if (exec == null || exec.getAttribute(ATTR_ZKHEAD_FOUND) == null) {",
+    "resolution": "private void replaceZkhead(Execution exec, StringBuffer sb, RenderContext rc) { if (!rc.zkheadFound) {",
+    "conflict": "private void replaceZkhead(Execution exec, StringBuffer sb, RenderContext rc) { if (!rc.zkheadFound) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63442,
+    "v2": "if (!zktagGened) { final String zktags = ZkFns.outZkHeadHtmlTags(getPage());",
+    "resolution": "if (!rc.zktagGened) { rc.zktagGened = true; final String zktags = HtmlPageRenders.outZkTags(exec, getDesktop());",
+    "conflict": "if (!rc.zktagGened) { rc.zktagGened = true; final String zktags = HtmlPageRenders.outZkTags(exec, getDesktop());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63458,
+    "v2": "setRequestLocal(request, ATTR_DESKTOP, desktop);",
+    "resolution": "request.setAttribute(ATTR_DESKTOP, desktop);",
+    "conflict": "/*if (D.ON) { final Desktop dt = (Desktop)request.getAttribute(ATTR_DESKTOP); assert dt == null || dt == desktop: \"old:\"+dt+\", new:\"+desktop; }*/ request.setAttribute(ATTR_DESKTOP, desktop);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63471,
+    "v2": "if (_attrs != null) didActivate(_attrs.values());",
+    "resolution": "if (_attrs != null) { didActivate(_attrs.getAttributes().values()); didActivate(_attrs.getListeners()); if (_parent == null) _attrs.notifyParentChanged(_page);",
+    "conflict": "didActivate(_attrs.getAttributes().values()); didActivate(_attrs.getListeners()); if (_parent == null) _attrs.notifyParentChanged(_page);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63479,
+    "v2": "&& !isDummyTimeout(request.getParameterValues(\"data.\"+j)))) { URIInfo ui = (URIInfo)config.getTimeoutURI(getDeviceType(request)); String uri = ui != null ? ui.uri: null;",
+    "resolution": "&& !isDummyTimeout(request.getParameter(\"data_\"+j)))) { final String deviceType = getDeviceType(request); URIInfo ui = (URIInfo)config.getTimeoutURI(getDeviceType(request)); String uri = ui != null ? ui.uri: null;",
+    "conflict": "&& !isDummyTimeout(request.getParameter(\"data_\"+j)))) { final String deviceType = getDeviceType(request); String uri = Devices.getTimeoutURI(deviceType);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63494,
+    "v2": "&& !(\"dummy\".equals(cmdId) && !isDummyTimeout(request.getParameterValues(\"data.\"+j)))) { String uri = Devices.getTimeoutURI(getDeviceType(request));",
+    "resolution": "&& !(\"dummy\".equals(cmdId) && !isDummyTimeout(request.getParameter(\"data_\"+j)))) { final String deviceType = getDeviceType(request); String uri = Devices.getTimeoutURI(deviceType);",
+    "conflict": "&& !\"dummy\".equals(cmdId)) {//possible in FF due to cache final String deviceType = getDeviceType(request); String uri = Devices.getTimeoutURI(deviceType);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63551,
+    "v2": "byte[] data = _out.toString().getBytes(\"UTF-8\"); if (_compress && data.length > 200) { byte[] bs = Https.gzip(request, response, null, data);",
+    "resolution": "byte[] data = getResult().getBytes(\"UTF-8\"); if (_compress && data.length > 200) { byte[] bs = Https.gzip(hreq, hres, null, data);",
+    "conflict": "byte[] data = getResult().getBytes(\"UTF-8\"); if (data.length > 200) { byte[] bs = Https.gzip(hreq, hres, null, data);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63560,
+    "v2": "* * <p>{@link Toolbar} only works in the horizontal default mold and * the {@link #isTabscroll()} to be true. (since 3.6.3) *",
+    "resolution": "* * <p>{@link Toolbar} only works in the horizontal default mold and * the {@link #isTabscroll()} to be true. (since 3.6.3) *",
+    "conflict": "*"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63704,
+    "v2": "",
+    "resolution": "",
+    "conflict": "//restore ID space by binding itself and all children if (!ComponentsCtrl.isAutoId(getIdDirectly(this))) bindToIdSpace(this); for (AbstractComponent ac = _first; ac != null; ac = ac._next) addToIdSpacesDown(ac, this);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63743,
+    "v2": "} else if (refChild instanceof Caption) {",
+    "resolution": "} else if (refChild instanceof Caption) {",
+    "conflict": "insertBefore = getFirstChild(); //always makes caption as the first child _caption = (Caption)child; } else if (insertBefore instanceof Caption) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63745,
+    "v2": "* <li>If {@link Include} (in defer mode) includes a ZUML page, a * {@link org.zkoss.zk.ui.Page} instance is created which is owned * by {@link Include}. On the other hand, a macro component makes",
+    "resolution": "* <li>If {@link Include} (in defer mode) includes a ZUML page, a * {@link org.zkoss.zk.ui.Page} instance is created which is owned * by {@link Include}. On the other hand, a macro component makes",
+    "conflict": "* <li>If {@link Include} includes a ZUML page, a * {@link Page} instance is created as a child * of {@link Include}. On the other hand, a macro component makes"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63750,
+    "v2": "",
+    "resolution": "",
+    "conflict": "if (_listfoot != null && _listfoot != newChild) throw new UiException(\"Only one listfoot is allowed: \"+this);  if (inSelectMold()) log.warning(\"Mold select ignores listfoot\"); _listfoot = (Listfoot)newChild;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63752,
+    "v2": "public String getOuterAttrs() { final String attrs = super.getOuterAttrs(); return _autodrop ?  attrs + \" z.autodrop=\\\"true\\\"\": attrs; } public void beforeChildAdded(Component child, Component refChild) {",
+    "resolution": "public void beforeChildAdded(Component child, Component refChild) {",
+    "conflict": "public boolean insertBefore(Component child, Component insertBefore) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63756,
+    "v2": "} else if (refChild instanceof Caption) {",
+    "resolution": "} else if (refChild instanceof Caption) {",
+    "conflict": "insertBefore = getFirstChild(); //always makes caption as the first child _caption = (Caption)child; } else if (insertBefore instanceof Caption) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63778,
+    "v2": "Grid.this.renderItems(items); }",
+    "resolution": "renderItems(items); } else super.service(request, everError);",
+    "conflict": "renderItems(items); } else super.service(request, everError);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63834,
+    "v2": "* and any kind of objects. * @since 3.6.1",
+    "resolution": "* and any kind of objects that * the client accepts (marshaled by JSON since 5.0.0). * @since 3.6.1",
+    "conflict": "* and any kind of objects that * the client accepts (marshaled by JSON). * @since 5.0.0"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63997,
+    "v2": "} public String getOuterAttrs() { final StringBuffer sb = new StringBuffer(80).append(super.getOuterAttrs()); HTMLs.appendAttribute(sb, \"code\", _code); return sb.toString();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64003,
+    "v2": "} public void clearSelectionByClient(){}",
+    "resolution": "Events.postEvent(evt); } else super.process(request, everError);",
+    "conflict": "Events.postEvent(evt); } else super.process(request, everError);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64004,
+    "v2": "protected String getRealSclass() { final String cls = super.getRealSclass(); final String added = isClosable() && !isOpen() ? getZclass() + \"-colpsd\" : \"\"; return cls == null ? added : cls + \" \" + added; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64008,
+    "v2": "}  //-- super --// public String getZclass() { return _zclass == null ? \"z-textbox\" : _zclass;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64033,
+    "v2": "{{IS_RIGHT This program is distributed under GPL Version 3.0 in the hope that it will be useful, but WITHOUT ANY WARRANTY. }}IS_RIGHT",
+    "resolution": "This program is distributed under GPL Version 3.0 in the hope that it will be useful, but WITHOUT ANY WARRANTY.",
+    "conflict": "This program is distributed under GPL Version 3.0 in the hope that it will be useful, but WITHOUT ANY WARRANTY."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64206,
+    "v2": "} public String getOuterAttrs() { final StringBuffer sb = new StringBuffer(32).append( super.getOuterAttrs()); HTMLs.appendAttribute(sb, \"z.nostripe\", true); return sb.toString();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64210,
+    "v2": "} public String getOuterAttrs() { final StringBuffer sb = new StringBuffer(32).append( super.getOuterAttrs()); HTMLs.appendAttribute(sb, \"z.nostripe\", true); return sb.toString();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64218,
+    "v2": "} public String getOuterAttrs() { //Note: don't generate z.type here because Menupopup's z.type diff final StringBuffer sb = appendAsapAttr(null, Events.ON_OPEN); final String attrs = super.getOuterAttrs(); return sb != null ? sb.append(attrs).toString(): attrs;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64219,
+    "v2": "} public String getOuterAttrs() { final StringBuffer sb = new StringBuffer(64).append(super.getOuterAttrs()); HTMLs.appendAttribute(sb, \"z.value\", _val); return sb.toString();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64220,
+    "v2": "}  protected String getRealStyle() { if (this instanceof Group || this instanceof Groupfoot || !isVisible()) return super.getRealStyle(); final Group g = getGroup(); return super.getRealStyle() + (g != null && !g.isOpen() ? \"display:none\" : \"\") ;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64221,
+    "v2": "return _zclass == null ? \"z-separator\" + (isVertical() ? \"-ver\" + (isBar() ? \"-bar\" : \"\") : \"-hor\" + (isBar() ? \"-bar\" : \"\")) : _zclass;",
+    "resolution": "return _zclass == null ? \"z-separator\" + (isVertical() ? \"-ver\" + (isBar() ? \"-bar\" : \"\") : \"-hor\" + (isBar() ? \"-bar\" : \"\")) : _zclass;",
+    "conflict": "return _zclass != null ? _zclass: \"z-separator\" + (isVertical() ? \"-ver\" + (isBar() ? \"-bar\" : \"\") : \"-hor\" + (isBar() ? \"-bar\" : \"\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64303,
+    "v2": "// sometimes the item is unloaded. if (!item.isLoaded()) { itemList.renderItem(item); }",
+    "resolution": "// sometimes the item is unloaded. if (!item.isLoaded()) { itemList.renderItem(item); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64339,
+    "v2": "* <p>Default: none (since 3.6.0; * older version: 302, 401 and 403 are associated with an empty URI).",
+    "resolution": "* <p>If not specified, it shows up an error message at client. * * <p>Default: none.",
+    "conflict": "* <p>If not specified, it shows up an error message at client. * * <p>Default: none."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64385,
+    "v2": "} protected String getRealSclass() { final String scls = super.getRealSclass(); final String zcls = getZclass(); return scls + (\"normal\".equals(_border) ? \"\" : ' ' + zcls + \"-noborder\") + (_open ? \"\" : \" \" + zcls + \"-collapsed\");",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64386,
+    "v2": "*/ public org.zkoss.zul.api.Group getGroupApi() { return getGroup(); } /** Returns the HTML attributes for the child of the specified index.",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64387,
+    "v2": "} protected String getRealStyle() { final Treecol h = getTreecol(); return isVisible() && h != null && !h.isVisible() ? super.getRealStyle() + \"display:none;\" : super.getRealStyle();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 64406,
+    "v2": "cnt.interpret(new ExtendletDspContext(_webctx, request, response, sw)); if (extra != null) (sw != null ? (Writer)sw: response.getWriter()).write(extra);",
+    "resolution": "cnt.interpret(new ExtendletDspContext(_webctx, request, response, sw));",
+    "conflict": "cnt.interpret(new ServletDspContext( _webctx.getServletContext(), request, response, sw, _webctx.getLocator()));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64589,
+    "v2": "// it is not reliable when infront is true. if ((!infront || beginning != j) && o instanceof Listgroup) { int[] g = getLastGroupsInfoAt(j + (infront ? -1 : 1));",
+    "resolution": "// it is not reliable when infront is true. if ((!infront || beginning != j) && o instanceof Listgroup) { int[] g = getLastGroupsInfoAt(j + (infront ? -1 : 1));",
+    "conflict": "// it is not reliable. if (beginning != j && o instanceof Listgroup) { int[] g = getGroupsInfoAt(j + (infront ? -1 : 1), true);"
+  }
+]
+}

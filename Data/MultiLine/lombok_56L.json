@@ -1,0 +1,101 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 2",
+    "id": 7903,
+    "v2": "String setterName = fluent ? paramName.toString() : HandlerUtil.buildAccessorName(\"set\", paramName.toString());",
+    "resolution": "String setterName = fluent ? paramName.toString() : HandlerUtil.buildAccessorName(\"set\", paramName.toString());",
+    "conflict": "String setterName = fluent ? fieldNode.getName() : HandlerUtil.buildAccessorName(\"set\", fieldNode.getName());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7909,
+    "v2": "return new BuilderWithToBuilderBuilder<T>().one(this.mOne).two(this.mTwo).foo(BuilderWithToBuilder.<T>rrr(this)).bars(((this.bars == null) ? java.util.Collections.<T>emptyList() : this.bars));",
+    "resolution": "final BuilderWithToBuilderBuilder<T> builder = new BuilderWithToBuilderBuilder<T>().one(this.mOne).two(this.mTwo).foo(BuilderWithToBuilder.rrr(this)); if ((this.bars != null)) builder.bars(this.bars); return builder;",
+    "conflict": "final BuilderWithToBuilderBuilder<T> builder = new BuilderWithToBuilderBuilder<T>().one(this.mOne).two(this.mTwo).foo(BuilderWithToBuilder.rrr(this)); if ((this.bars != null)) builder.bars(this.bars); return builder;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7918,
+    "v2": "// In case of @Builder.Default, set the value to the default if it was not set in the builder.",
+    "resolution": "// In case of @Builder.Default, set the value to the default if it was not set in the builder.",
+    "conflict": "statements.append(assign);  // In case of @Builder.Default, set the value to the default if it was NOT set in the builder."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7923,
+    "v2": "if (b.doubleField$set) this.doubleField = b.doubleField; else",
+    "resolution": "if (b.doubleField$set) this.doubleField = b.doubleField; else",
+    "conflict": "this.doubleField = b.doubleField; if ((! b.doubleField$set))"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7956,
+    "v2": "JCClassDecl builder = maker.ClassDef(mods, tdParent.toName(builderClassName), copyTypeParams(source, typeParams), null, List.<JCExpression>nil(), List.<JCTree>nil());",
+    "resolution": "JCExpression extending = null; if (parentBuilderClassName != null) { extending = maker.Ident(tdParent.toName(parentBuilderClassName)); } JCClassDecl builder = maker.ClassDef(mods, tdParent.toName(builderClassName), copyTypeParams(source, typeParams), extending, List.<JCExpression>nil(), List.<JCTree>nil());",
+    "conflict": "JCExpression extending = null; if (parentBuilderClassName != null) { extending = maker.Ident(tdParent.toName(parentBuilderClassName)); } JCClassDecl builder = maker.ClassDef(mods, tdParent.toName(builderClassName), copyTypeParams(maker, typeParams), extending, List.<JCExpression>nil(), List.<JCTree>nil());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7969,
+    "v2": "public MethodDeclaration generateBuildMethod(boolean isStatic, String name, char[] staticName, TypeReference returnType, List<BuilderFieldData> builderFields, EclipseNode type, TypeReference[] thrownExceptions, boolean addCleaning, ASTNode source) { MethodDeclaration out = new MethodDeclaration( ((CompilationUnitDeclaration) type.top().get()).compilationResult);",
+    "resolution": "public MethodDeclaration generateBuildMethod(boolean isStatic, String name, char[] staticName, TypeReference returnType, List<BuilderFieldData> builderFields, EclipseNode type, TypeReference[] thrownExceptions, boolean addCleaning, ASTNode source) { MethodDeclaration out = new MethodDeclaration( ((CompilationUnitDeclaration) type.top().get()).compilationResult);",
+    "conflict": "public MethodDeclaration generateBuildMethod(String name, char[] staticName, TypeReference returnType, List<BuilderFieldData> builderFields, EclipseNode type, TypeReference[] thrownExceptions, boolean addCleaning, ASTNode source) { MethodDeclaration out = new MethodDeclaration(((CompilationUnitDeclaration) type.top().get()).compilationResult);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7990,
+    "v2": "/** * Sets the category of the constructed Logger. By default, it will use the type where the annotation is placed. */ String topic() default \"\"; }",
+    "resolution": "/** * Sets the category of the constructed Logger. By default, it will use the type where the annotation is placed. */ String topic() default \"\"; }",
+    "conflict": "}"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7991,
+    "v2": "/** * Sets the category of the constructed Logger. By default, it will use the type where the annotation is placed. */ String topic() default \"\"; }",
+    "resolution": "/** * Sets the category of the constructed Logger. By default, it will use the type where the annotation is placed. */ String topic() default \"\"; }",
+    "conflict": "}"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7992,
+    "v2": "/** * Sets the category of the constructed Logger. By default, it will use the type where the annotation is placed. */ String topic() default \"\"; }",
+    "resolution": "/** * Sets the category of the constructed Logger. By default, it will use the type where the annotation is placed. */ String topic() default \"\"; }",
+    "conflict": "}"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7993,
+    "v2": "/** * Sets the category of the constructed Logger. By default, it will use the type where the annotation is placed. */ String topic() default \"\"; }",
+    "resolution": "/** * Sets the category of the constructed Logger. By default, it will use the type where the annotation is placed. */ String topic() default \"\"; }",
+    "conflict": "}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7994,
+    "v2": "if (fieldExists(\"log\", typeNode)!= MemberExistsResult.NOT_EXISTS) { annotationNode.addWarning(\"Field 'log' already exists.\");",
+    "resolution": "if (fieldExists(logFieldName, typeNode)!= MemberExistsResult.NOT_EXISTS) { annotationNode.addWarning(\"Field '\" + logFieldName + \"' already exists.\");",
+    "conflict": "if (fieldExists(logFieldName, typeNode)!= MemberExistsResult.NOT_EXISTS) { annotationNode.addWarning(\"Field '\" + logFieldName + \"' already exists.\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8003,
+    "v2": "@SuppressWarnings({\"resource\", \"all\"}) final JarFile toolsJarFile = new JarFile(toolsJar);",
+    "resolution": "// The jar file is used for the lifetime of the classLoader, therefore the lifetime of delombok. // Since we only read from it, not closing it should not be a problem. @SuppressWarnings({\"resource\", \"all\"}) final JarFile toolsJarFile = new JarFile(toolsJar);",
+    "conflict": "@SuppressWarnings(\"resource\") // The jar file is used for the lifetime of the classLoader, therefore the lifetime of delombok. // Since we only read from it, not closing it should not be a problem. final JarFile toolsJarFile = new JarFile(toolsJar);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8042,
+    "v2": "List<JCAnnotation> nonNulls = findAnnotations(fieldNode, NON_NULL_PATTERN); List<JCAnnotation> nullables = findAnnotations(fieldNode, NULLABLE_PATTERN); JCVariableDecl param = maker.VarDef(maker.Modifiers(0, nonNulls.appendList(nullables)), field.name, field.vartype, null);",
+    "resolution": "List<JCAnnotation> nonNulls = findAnnotations(fieldNode, NON_NULL_PATTERN); List<JCAnnotation> nullables = findAnnotations(fieldNode, NULLABLE_PATTERN); JCVariableDecl param = maker.VarDef(maker.Modifiers(Flags.FINAL, nonNulls.appendList(nullables)), field.name, field.vartype, null);",
+    "conflict": "JCVariableDecl param = maker.VarDef(maker.Modifiers(Flags.FINAL), field.name, field.vartype, null);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8043,
+    "v2": "List<JCAnnotation> nonNulls = findAnnotations(fieldNode, NON_NULL_PATTERN); List<JCAnnotation> nullables = findAnnotations(fieldNode, NULLABLE_PATTERN); JCVariableDecl param = maker.VarDef(maker.Modifiers(0, nonNulls.appendList(nullables)), field.name, pType, null);",
+    "resolution": "List<JCAnnotation> nonNulls = findAnnotations(fieldNode, NON_NULL_PATTERN); List<JCAnnotation> nullables = findAnnotations(fieldNode, NULLABLE_PATTERN); JCVariableDecl param = maker.VarDef(maker.Modifiers(Flags.FINAL, nonNulls.appendList(nullables)), field.name, pType, null);",
+    "conflict": "JCVariableDecl param = maker.VarDef(maker.Modifiers(Flags.FINAL), field.name, pType, null);"
+  }
+]
+}

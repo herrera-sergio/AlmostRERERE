@@ -1,0 +1,353 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 74051,
+    "v2": "textLayerDiv.appendChild(textDiv);",
+    "resolution": "textLayerFrag.appendChild(textDiv);",
+    "conflict": "if (textDiv.dataset.textLength > 0) { textLayerFrag.appendChild(textDiv);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74054,
+    "v2": "fileReader.readAsArrayBuffer(file); document.title = file.name;",
+    "resolution": "fileReader.readAsArrayBuffer(file); PDFView.setTitleUsingUrl(file.name);",
+    "conflict": "fileReader.readAsBinaryString(file); PDFView.setTitleUsingUrl(file.name);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74058,
+    "v2": "var url, data, headers, password, parameters = {}, workerInitializedPromise, workerReadyPromise, transport;",
+    "resolution": "var workerInitializedPromise, workerReadyPromise, transport;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74060,
+    "v2": "// Some browsers (e.g. safari) cannot use this on DOM objects",
+    "resolution": "// some browsers (e.g. safari) cannot use defineProperty() on DOM objects // and thus the native version is not sufficient",
+    "conflict": "// some browsers (e.g. safari) cannot use defineProperty() on DOM objects // and thus the native version is not sufficient"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74069,
+    "v2": "const PREF_PREFIX = 'PDFJSSCRIPT_PREF_PREFIX';",
+    "resolution": "const PREF_PREFIX = 'PDFJSSCRIPT_PREF_PREFIX';",
+    "conflict": "const EXT_ID = 'uriloader@pdf.js'; const EXT_PREFIX = 'extensions.' + EXT_ID;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74085,
+    "v2": "image.src = kImageDirectory + 'annotation-' + type.toLowerCase() + '.svg'; image.alt = '[' + type + ' Annotation]';",
+    "resolution": "image.src = kImageDirectory + 'annotation-' + type.toLowerCase() + '.svg'; image.alt = mozL10n.get('text_annotation_type', {type: type});",
+    "conflict": "image.src = kImageDirectory + type.toLowerCase() + '.svg'; image.alt = mozL10n.get('text_annotation_type', {type: type});"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74097,
+    "v2": "if (!font.loadedName) {",
+    "resolution": "if (!font.loadedName) {",
+    "conflict": "++self.objIdCounter; if (!font.translated) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74104,
+    "v2": "",
+    "resolution": "",
+    "conflict": "var view = page.view; ctx.translate(-view.x * scaleX, -view.y * scaleY);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74107,
+    "v2": "this._stats = new StatTimer(); this._stats.enabled = !!globalScope.PDFJS.enableStats;",
+    "resolution": "this.stats = new StatTimer(); this.stats.enabled = !!globalScope.PDFJS.enableStats;",
+    "conflict": "this.stats = new StatTimer();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74111,
+    "v2": "charToGlyph: function Font_charToGlyph(charcode) { var fontCharCode, width, operatorList, disabled;",
+    "resolution": "charToGlyph: function Font_charToGlyph(charcode) { var fontCharCode, width, operatorList, disabled;",
+    "conflict": "charToGlyph: function fonts_charToGlyph(charcode) { var fontChar, width, codeIRQueue;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74124,
+    "v2": "getPageProp: function Page_getPageProp(key) { return this.xref.fetchIfRef(this.pageDict.get(key));",
+    "resolution": "getPageProp: function Page_getPageProp(key) { return this.pageDict.get(key);",
+    "conflict": "getPageProp: function pageGetPageProp(key) { return this.pageDict.get(key);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74126,
+    "v2": "get: function Dict_get(key1, key2, key3) {",
+    "resolution": "// automatically dereferences Ref objects get: function Dict_get(key1, key2, key3) {",
+    "conflict": "// automatically dereferences Ref objects get: function dictGet(key1, key2, key3) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74127,
+    "v2": "fetch: function XRef_fetch(ref, suppressEncryption) {",
+    "resolution": "fetch: function XRef_fetch(ref, suppressEncryption) { assertWellFormed(isRef(ref), 'ref object is not a reference');",
+    "conflict": "fetch: function xRefFetch(ref, suppressEncryption) { assertWellFormed(isRef(ref), 'ref object is not a reference');"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74128,
+    "v2": "getCatalogObj: function XRef_getCatalogObj() { return this.fetch(this.root);",
+    "resolution": "getCatalogObj: function XRef_getCatalogObj() { return this.this.root;",
+    "conflict": "getCatalogObj: function xRefGetCatalogObj() { return this.root;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74132,
+    "v2": "// if it is, replacing with meaningful toUnicode values if (isIdentity && !this.isSymbolicFont) {",
+    "resolution": "// if it is, replacing with meaningful toUnicode values if (isIdentity && !this.isSymbolicFont) {",
+    "conflict": "// if it is, replacing with meaningful toFontChar values if (isIdentity) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74133,
+    "v2": "unicode = this.useToUnicode ? this.toUnicode[charcode] : (this.symbolicGlyphsOffset + charcode);",
+    "resolution": "fontCharCode = this.useToFontChar ? this.toFontChar[charcode] : charcode;",
+    "conflict": "fontCharCode = this.useToFontChar ? this.toFontChar[charcode] : charcode;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74140,
+    "v2": "",
+    "resolution": "if (!('file' in this)) return false;",
+    "conflict": "if (inPrivateBrowsing || !('file' in this)) return false;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74141,
+    "v2": "",
+    "resolution": "if (!('file' in this)) return defaultValue;",
+    "conflict": "if (inPrivateBrowsing || !('file' in this)) return defaultValue;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74157,
+    "v2": "",
+    "resolution": "break; case 'Image': var imageData = data[2]; this.objs.resolve(id, imageData);",
+    "conflict": "break; case 'Image': var imageData = data[2]; this.objs.resolve(id, imageData);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 74162,
+    "v2": "var sidebarScrollView = document.getElementById('sidebarScrollView'); sidebarScrollView.addEventListener('scroll', updateThumbViewArea, true);",
+    "resolution": "var sidebarScrollView = document.getElementById('sidebarScrollView'); sidebarScrollView.addEventListener('scroll', updateThumbViewArea, true);if ('disableWorker' in params) PDFJS.disableWorker = params['disableWorker'] === 'true' ? true : false;",
+    "conflict": "if ('disableWorker' in params) PDFJS.disableWorker = params['disableWorker'] === 'true' ? true : false;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74196,
+    "v2": "var gfx = new CanvasGraphics(this.ctx, this.objs);",
+    "resolution": "var gfx = new CanvasGraphics(this.ctx, this.objs, this.textLayer);",
+    "conflict": "var gfx = new CanvasGraphics(this.ctx, this.objs, this.textLayer); var startTime = Date.now();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74209,
+    "v2": "var args = [], argsArray = [], fnArray = [], obj;",
+    "resolution": "var res = resources; var args = [], obj;",
+    "conflict": "var res = resources; var args = [], obj;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74211,
+    "v2": "// Avoid scrolling the first page during loading if (this.loading && val == 1) return;",
+    "resolution": "// Avoid scrolling the first page during loading if (this.loading && val == 1) return;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74213,
+    "v2": "window.addEventListener('unload', function webViewerUnload(evt) { window.scrollTo(0, 0); }, true);",
+    "resolution": "window.addEventListener('unload', function webViewerUnload(evt) { window.scrollTo(0, 0); }, true);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74217,
+    "v2": "this.coded = properties.coded; this.resources = properties.resources;",
+    "resolution": "// Glyhps are no needed anymore? MERGE // this.glyphs = properties.glyphs; this.loadedName = properties.loadedName; this.coded = properties.coded; this.resources = properties.resources;",
+    "conflict": "this.glyphs = properties.glyphs; this.loadedName = properties.loadedName;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74218,
+    "v2": "this.defaultWidth = properties.defaultWidth; this.loadedName = fontName.split('-')[0]; this.composite = properties.composite;",
+    "resolution": "this.defaultWidth = properties.defaultWidth; // MERGE // this.loadedName = fontName.split('-')[0]; this.composite = properties.composite;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74230,
+    "v2": "var font = xref.fetchIfRef(fontRes.get(args[0].name)); assertWellFormed(isDict(font));",
+    "resolution": "var font = xref.fetchIfRef(fontRes.get(fontName)); assertWellFormed(isDict(font));",
+    "conflict": "var font = xref.fetchIfRef(fontRes.get(fontName)); assertWellFormed(IsDict(font));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74256,
+    "v2": "constructInterpolated: function pdfFunctionConstructInterpolated(str, dict) {",
+    "resolution": "constructInterpolated: function pdfFunctionConstructInterpolated(str, dict) {",
+    "conflict": "constructInterpolated: function(str, dict) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74258,
+    "v2": "constructStiched: function pdfFunctionConstructStiched(fn, dict, xref) {",
+    "resolution": "constructStiched: function pdfFunctionConstructStiched(fn, dict, xref) {",
+    "conflict": "constructStiched: function(fn, dict, xref) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74269,
+    "v2": "} catch (e) { log('Error - ' + e);",
+    "resolution": "} catch (e) { log('Error retrieving the pdf.js base url - ' + e);",
+    "conflict": "} catch(e) { log(\"Error retrieving the pdf.js base url - \" + e);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74296,
+    "v2": "warn(\"Unknown or NYI type of shading '\"+ typeNum +\"'\"); return 'hotpink';",
+    "resolution": "warn(\"Unknown or NYI type of shading '\"+ typeNum +\"'\"); return 'hotpink';",
+    "conflict": "TODO(\"Unknown or NYI type of shading '\"+ typeNum +\"'\"); return this.makeCssRgb(0, 0, 0);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74306,
+    "v2": "TODO('Use an other source of informations than ' + 'charset here, it is not reliable');",
+    "resolution": "TODO('Use an other source of informations than ' + 'charset here, it is not reliable');",
+    "conflict": "TODO(\"Charset is not reliable, use somethin else\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74307,
+    "v2": "assert(ranges.length == 1, 'Got ' + ranges.length + ' ranges in a dense array');",
+    "resolution": "assert(ranges.length == 1, 'Got ' + ranges.length + ' ranges in a dense array');",
+    "conflict": "assert(ranges.length == 1, \"Got \" + ranges.length + \" ranges in a dense array\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74312,
+    "v2": "'hmtx': (function() { var hmtx = '\\x00\\x00\\x00\\x00'; // Fake .notdef",
+    "resolution": "'hmtx': (function() { var hmtx = '\\x00\\x00\\x00\\x00'; // Fake .notdef",
+    "conflict": "\"hmtx\": (function convert_fields_hmtx() { var hmtx = \"\\x00\\x00\\x00\\x00\"; // Fake .notdef"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74317,
+    "v2": "case '/FontMatrix': var matrix = readNumberArray(headerString, i + 1);",
+    "resolution": "case '/FontMatrix': var matrix = readNumberArray(headerString, i + 1);",
+    "conflict": "case \"/FontMatrix\": var matrix = readNumbers(headerString, i + 1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74319,
+    "v2": "this.data = this.wrap(name, type2Charstrings, this.charstrings, subrs, properties);",
+    "resolution": "this.data = this.wrap(name, type2Charstrings, this.charstrings, subrs, properties);",
+    "conflict": "this.data = this.wrap(name, type2Charstrings, this.charstrings, subrs, properties);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74321,
+    "v2": "type2Charstrings.push(this.flattenCharstring(charstring.slice(), this.commandsMap));",
+    "resolution": "type2Charstrings.push(this.flattenCharstring(charstring.slice(), this.commandsMap));",
+    "conflict": "var flate = this.flattenCharstring(charstring.slice(), this.commandsMap); type2Charstrings.push(flate);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74323,
+    "v2": "'topDict': (function topDict(self) { return function() {",
+    "resolution": "'topDict': (function topDict(self) { return function() {",
+    "conflict": "\"topDict\": (function topDict(self) { return function wrap_inner_topDict() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74338,
+    "v2": "styleSheet.insertRule(rule, styleSheet.length);  return rule;",
+    "resolution": "styleSheet.insertRule(rule, styleSheet.cssRules.length);",
+    "conflict": "styleSheet.insertRule(rule, styleSheet.cssRules.length);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74339,
+    "v2": "bind: function(fonts) { var ready = true;",
+    "resolution": "bind: function(fonts, callback) {",
+    "conflict": "bind: function(fonts, callback) { var worker = (typeof window == \"undefined\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74361,
+    "v2": "} else if (name == \"DCTDecode\") { var bytes = stream.getBytes(length); return new JpegStream(bytes, stream.dict);",
+    "resolution": "} else if (name == \"DCTDecode\") { var bytes = stream.getBytes(length); return new JpegStream(bytes, stream.dict);",
+    "conflict": "*/"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74363,
+    "v2": "} else if (name == \"DCTDecode\") { var bytes = stream.getBytes(length); return new JpegStream(bytes, stream.dict);",
+    "resolution": "} else if (name == \"DCTDecode\") { var bytes = stream.getBytes(length); return new JpegStream(bytes, stream.dict);",
+    "conflict": "*/"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74372,
+    "v2": "var inGlyphs = false; var inSubrs = false;",
+    "resolution": "var inGlyphs = false; var inSubrs = false;",
+    "conflict": "var inSubrs = false; var inGlyphs = false;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74373,
+    "v2": "/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- / /* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab: */",
+    "resolution": "/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- / /* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab: */",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74384,
+    "v2": "var inGlyphs = false; var inSubrs = false;",
+    "resolution": "var inGlyphs = false; var inSubrs = false;",
+    "conflict": "var inSubrs = false; var inGlyphs = false;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74385,
+    "v2": "/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- / /* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab: */",
+    "resolution": "/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- / /* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab: */",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74389,
+    "v2": "",
+    "resolution": "toString: function() { return this.name; }",
+    "conflict": "toString: function() { return this.name; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74390,
+    "v2": "",
+    "resolution": "toString: function() { return this.cmd; }",
+    "conflict": "toString: function() { return this.cmd; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74393,
+    "v2": "",
+    "resolution": "toString: function() { return this.name; }",
+    "conflict": "toString: function() { return this.name; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74394,
+    "v2": "",
+    "resolution": "toString: function() { return this.cmd; }",
+    "conflict": "toString: function() { return this.cmd; }"
+  }
+]
+}

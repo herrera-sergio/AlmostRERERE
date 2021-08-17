@@ -1,0 +1,24 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 8059,
+    "v2": "plotDataFedUpdateHandler.updateFromFeed(data, false); for (Runnable r : feedCallbacks) { SwingUtilities.invokeLater(r); }",
+    "resolution": "plotDataFeedUpdateHandler.updateFromFeed(data, false); for (Runnable r : feedCallbacks) { SwingUtilities.invokeLater(r); }",
+    "conflict": "plotDataFeedUpdateHandler.updateFromFeed(data, false);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8060,
+    "v2": "",
+    "resolution": "",
+    "conflict": "JPanel view = new JPanel(); view.setLayout(new BoxLayout(view, BoxLayout.Y_AXIS));  // Add the content for this view manifestation. AbstractComponent component = getManifestedComponent();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8087,
+    "v2": "if (!plot.plotAbstraction.getTimeAxis().isPinned()) { dataSeries.get(feed).updateRegressionLine(); }",
+    "resolution": "dataSeries.get(feed).updateRegressionLine();",
+    "conflict": "//if (!plot.plotAbstraction.getTimeAxis().isPinned()) { dataSeries.get(feed).updateRegressionLine(); //}"
+  }
+]
+}

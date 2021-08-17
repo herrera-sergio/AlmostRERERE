@@ -1,0 +1,528 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 41818,
+    "v2": "import org.geometerplus.zlibrary.core.util.XmlUtil; import org.geometerplus.zlibrary.ui.android.R;",
+    "resolution": "import org.geometerplus.zlibrary.core.util.XmlUtil; import net.sourceforge.arabicReader.R;",
+    "conflict": "import org.geometerplus.zlibrary.core.xml.ZLStringMap; import org.geometerplus.zlibrary.core.xml.ZLXMLReaderAdapter; import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 41819,
+    "v2": "",
+    "resolution": "import org.geometerplus.zlibrary.core.resources.ZLResource; import org.geometerplus.zlibrary.ui.android.error.ErrorKeys; import org.geometerplus.zlibrary.ui.android.error.ErrorUtil;",
+    "conflict": "import org.geometerplus.zlibrary.core.resources.ZLResource; import org.geometerplus.zlibrary.ui.android.error.ErrorKeys; import org.geometerplus.zlibrary.ui.android.error.ErrorUtil;  import android.app.Activity;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 41820,
+    "v2": "import org.geometerplus.zlibrary.core.resources.ZLResource;  import org.geometerplus.zlibrary.ui.android.error.ErrorKeys; import org.geometerplus.zlibrary.ui.android.error.ErrorUtil; import org.geometerplus.android.fbreader.util.SimpleDialogActivity;",
+    "resolution": "import org.geometerplus.zlibrary.core.resources.ZLResource;  import org.geometerplus.zlibrary.ui.android.error.ErrorKeys; import org.geometerplus.zlibrary.ui.android.error.ErrorUtil; import org.geometerplus.android.fbreader.util.SimpleDialogActivity;",
+    "conflict": "import net.sourceforge.arabicReader.R;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 41835,
+    "v2": "final List<ZLTextHighlighting> hilites = findHilites(page);  x = getLeftMargin();",
+    "resolution": "final List<ZLTextHighlighting> hilites = findHilites(page); x = (myRTLMode ? ((page.twoColumnView() ? page.getTextWidth() * 2 + getSpaceBetweenColumns() : page.getTextWidth()) + getLeftMargin()) : getLeftMargin());",
+    "conflict": "x = (myRTLMode ? ((page.twoColumnView() ? page.getTextWidth() * 2 + getSpaceBetweenColumns() : page.getTextWidth()) + getLeftMargin()) : getLeftMargin());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 41891,
+    "v2": "import org.geometerplus.zlibrary.core.options.*; import org.geometerplus.zlibrary.ui.android.library.*;",
+    "resolution": "import org.geometerplus.zlibrary.core.options.*; import org.geometerplus.zlibrary.ui.android.library.UncaughtExceptionHandler; import org.geometerplus.zlibrary.ui.android.library.ZLAndroidLibrary;",
+    "conflict": "import org.geometerplus.zlibrary.core.options.ZLIntegerOption; import org.geometerplus.zlibrary.core.options.ZLStringOption; import org.geometerplus.zlibrary.ui.android.library.UncaughtExceptionHandler; import org.geometerplus.zlibrary.ui.android.library.ZLAndroidLibrary;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 41892,
+    "v2": "return reader != null && reader.Model != null && reader.Model.TOCTree != null && reader.Model.TOCTree.hasChildren();",
+    "resolution": "return reader != null && reader.Model != null && reader.Model.TOCTree != null && reader.Model.TOCTree.hasChildren();",
+    "conflict": "return reader.Model != null && reader.Model.TOCTree.hasChildren();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 41901,
+    "v2": "import org.geometerplus.zlibrary.core.options.ZLStringOption; import org.geometerplus.zlibrary.ui.android.library.*; import org.geometerplus.zlibrary.ui.android.view.AndroidFontUtil;",
+    "resolution": "import org.geometerplus.zlibrary.core.options.ZLStringOption; import org.geometerplus.zlibrary.ui.android.library.UncaughtExceptionHandler; import org.geometerplus.zlibrary.ui.android.library.ZLAndroidLibrary; import org.geometerplus.zlibrary.ui.android.view.AndroidFontUtil;",
+    "conflict": "import org.geometerplus.zlibrary.ui.android.library.UncaughtExceptionHandler; import org.geometerplus.zlibrary.ui.android.library.ZLAndroidLibrary;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 41904,
+    "v2": "public final class FBReader extends FBReaderMainActivity implements ZLApplicationWindow {",
+    "resolution": "public final class FBReader extends FBReaderMainActivity implements ZLApplicationWindow {",
+    "conflict": "public final class FBReader extends Activity implements ZLApplicationWindow { public static final int REQUEST_PREFERENCES = 1; public static final int REQUEST_CANCEL_MENU = 2; public static final int REQUEST_DICTIONARY = 3;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 41907,
+    "v2": "import org.geometerplus.zlibrary.ui.android.view.animation.*;",
+    "resolution": "import org.geometerplus.zlibrary.ui.android.R; import org.geometerplus.zlibrary.ui.android.library.ZLAndroidLibrary; import org.geometerplus.zlibrary.ui.android.view.animation.*;",
+    "conflict": "import org.geometerplus.zlibrary.ui.android.R; import org.geometerplus.zlibrary.ui.android.library.ZLAndroidLibrary;  import org.geometerplus.fbreader.fbreader.options.PageTurningOptions;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 41912,
+    "v2": "if (resultCode != RESULT_DO_NOTHING && data != null) { final Book book = FBReaderIntents.getBookExtra(data, myFBReaderApp.Collection);",
+    "resolution": "if (resultCode != RESULT_DO_NOTHING) { invalidateOptionsMenu(); final Book book = data != null ? FBReaderIntents.getBookExtra(data, myFBReaderApp.Collection) : null;",
+    "conflict": "if (resultCode != RESULT_DO_NOTHING) { invalidateOptionsMenu(); final Book book = data != null ? FBReaderIntents.getBookExtra(data) : null;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 41968,
+    "v2": "return mgr != null && !mgr.mayBeAuthorised(false);",
+    "resolution": "final NetworkAuthenticationManager mgr = tree.getLink().authenticationManager(); return mgr != null && !mgr.mayBeAuthorised(false);",
+    "conflict": "return mgr != null && !mgr.mayBeAuthorised(false) && Util.isRegistrationSupported(link);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 41979,
+    "v2": "",
+    "resolution": "import org.geometerplus.fbreader.network.opds.OPDSBookItem; import org.geometerplus.fbreader.network.urlInfo.BookUrlInfo; import org.geometerplus.fbreader.network.urlInfo.UrlInfo;  import org.geometerplus.android.util.UIUtil;",
+    "conflict": "import org.geometerplus.fbreader.network.opds.OPDSBookItem; import org.geometerplus.fbreader.network.urlInfo.BookUrlInfo; import org.geometerplus.fbreader.network.urlInfo.UrlInfo;  import org.geometerplus.android.util.UIUtil;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 41984,
+    "v2": "downloadButton.setTextColor(0xFF777777); cancelButton.setTextColor(0xFF777777);",
+    "resolution": "if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) { downloadButton.setTextColor(0xFF777777); cancelButton.setTextColor(0xFF777777); }",
+    "conflict": "if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) { downloadButton.setTextColor(0xFF777777); cancelButton.setTextColor(0xFF777777); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 41998,
+    "v2": "elements.addAll(BookElementsHolder.getElements(entry.Data));",
+    "resolution": "elements.addAll(BookElementsHolder.getElements(entry.Data));",
+    "conflict": "try { elements.addAll(BookElementsHolder.getElements(entry.Data)); } catch (Exception e) { // ignore }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42010,
+    "v2": "",
+    "resolution": "try { elements.addAll(BookHolder.get(entry.Data).Elements); } catch (Exception e) { // ignore }",
+    "conflict": "try { elements.addAll(BookHolder.get(entry.Data).Elements); } catch (Exception e) { // ignore }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42070,
+    "v2": "if (iconId != -1) { item.setIcon(iconId); }",
+    "resolution": "if (iconId != -1) { //item.setIcon(iconId); } item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);",
+    "conflict": "//item.setIcon(iconId); item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42098,
+    "v2": "if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO) { setButtonLightInternal(enabled); }",
+    "resolution": "final WindowManager.LayoutParams attrs = getWindow().getAttributes(); attrs.buttonBrightness = enabled ? -1.0f : 0.0f; getWindow().setAttributes(attrs);",
+    "conflict": "final WindowManager.LayoutParams attrs = getWindow().getAttributes(); attrs.buttonBrightness = enabled ? -1.0f : 0.0f; getWindow().setAttributes(attrs);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42134,
+    "v2": "import android.app.ListActivity; import android.content.Intent;",
+    "resolution": "import android.app.AlertDialog; import android.app.ListActivity; import android.content.*;",
+    "conflict": "import android.app.AlertDialog; import android.app.ListActivity; import android.content.*;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42152,
+    "v2": "final String value = FileChooserUtil.pathFromData(data); if (MiscUtil.isEmptyString(value)) { return; }",
+    "resolution": "final List<String> value = FileChooserUtil.pathArrayFromData(data); if (value.isEmpty()){ return; }",
+    "conflict": "setValue(FileChooserUtil.pathArrayFromData(data)); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42190,
+    "v2": "",
+    "resolution": "public static final String BOOK_PATH_KEY = \"BookPath\";",
+    "conflict": "public static final String ACTION_OPEN_BOOK = \"android.fbreader.action.VIEW\"; public static final String BOOK_KEY = \"fbreader.book\"; public static final String BOOKMARK_KEY = \"fbreader.bookmark\";  public static final String BOOK_PATH_KEY = \"BookPath\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42206,
+    "v2": "if (resultCode != RESULT_DO_NOTHING && data != null) { final Book book = FBReaderIntents.getBookExtra(data);",
+    "resolution": "if (resultCode != RESULT_DO_NOTHING) { invalidateOptionsMenu(); final Book book = data != null ? FBReaderIntents.getBookExtra(data) : null;",
+    "conflict": "if (resultCode != RESULT_DO_NOTHING) { invalidateOptionsMenu(); final Book book = BookInfoActivity.bookByIntent(data);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42207,
+    "v2": "myDontReloadBook = getIntent().getBooleanExtra(FROM_READING_MODE_KEY, false); myBook = FBReaderIntents.getBookExtra(getIntent());",
+    "resolution": "final Intent intent = getIntent(); myDontReloadBook = intent.getBooleanExtra(FROM_READING_MODE_KEY, false); myBook = FBReaderIntents.getBookExtra(intent);",
+    "conflict": "final Intent intent = getIntent(); myDontReloadBook = intent.getBooleanExtra(FROM_READING_MODE_KEY, false); myBook = bookByIntent(intent);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42229,
+    "v2": "zlibrary.ShowStatusBarOption.saveSpecialValue();",
+    "resolution": "zlibrary.ShowStatusBarOption.saveSpecialValue();",
+    "conflict": "getSharedPreferences(\"fbreader.ui\", MODE_PRIVATE).edit() .putBoolean(\"statusBar\", showStatusBar) .putBoolean(\"actionBar\", showActionBar) .commit();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42230,
+    "v2": "public final ZLBooleanOption ShowStatusBarOption = new ZLBooleanOption(\"LookNFeel\", \"ShowStatusBar\", DeviceType.Instance().hasNoHardwareMenuButton()); { ShowStatusBarOption.setSpecialName(\"statusBar\"); }",
+    "resolution": "public final ZLBooleanOption ShowStatusBarOption = new ZLBooleanOption(\"LookNFeel\", \"ShowStatusBar\", false); public final ZLBooleanOption ShowActionBarOption = new ZLBooleanOption(\"LookNFeel\", \"ShowActionBar\", true);",
+    "conflict": "public final ZLBooleanOption ShowStatusBarOption = new ZLBooleanOption(\"LookNFeel\", \"ShowStatusBar\", false); public final ZLBooleanOption ShowActionBarOption = new ZLBooleanOption(\"LookNFeel\", \"ShowActionBar\", true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42236,
+    "v2": "} else { myShowStatusBarFlag = zlibrary.ShowStatusBarOption.getValue();",
+    "resolution": "myShowActionBarFlag = preferences.getBoolean(\"actionBar\", myShowActionBarFlag); } else { myShowStatusBarFlag = zlibrary.ShowStatusBarOption.getValue(); myShowActionBarFlag = zlibrary.ShowActionBarOption.getValue();",
+    "conflict": "myShowActionBarFlag = preferences.getBoolean(\"actionBar\", myShowActionBarFlag); } else { myShowStatusBarFlag = zlibrary.ShowStatusBarOption.getValue(); myShowActionBarFlag = zlibrary.ShowActionBarOption.getValue();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42280,
+    "v2": "});",
+    "resolution": "}  if (myNavigationPopup != null) { myNavigationPopup.update(); }",
+    "conflict": "}  if (myNavigationPopup != null) { myNavigationPopup.update(); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42286,
+    "v2": "if (getZLibrary().isYotaPhone()) { addMenuItem(menu, ActionCode.YOTA_SWITCH_TO_BACK_SCREEN, R.drawable.ic_menu_p2b); addMenuItem(menu, ActionCode.YOTA_SWITCH_TO_FRONT_SCREEN, R.drawable.ic_menu_p2b); } addMenuItem(menu, ActionCode.SHOW_NETWORK_LIBRARY, R.drawable.ic_menu_networklibrary);",
+    "resolution": "if (getZLibrary().isYotaPhone()) { addMenuItem(menu, ActionCode.YOTA_SWITCH_TO_BACK_SCREEN, R.drawable.ic_menu_p2b); addMenuItem(menu, ActionCode.YOTA_SWITCH_TO_FRONT_SCREEN, R.drawable.ic_menu_p2b); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42295,
+    "v2": "protected void runWithMessage(String key, Runnable action, Runnable postAction) {",
+    "resolution": "public String getTitle() { return myTitle; } protected void runWithMessage(String key, Runnable action, Runnable postAction) {",
+    "conflict": "public String getTitle() { return myTitle; }  protected void runWithMessage(String key, Runnable runnable, Runnable postAction) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42486,
+    "v2": "TopMarginOption = new ZLIntegerRangeOption(\"Options\", \"TopMargin\", 0, 100, 0); BottomMarginOption = new ZLIntegerRangeOption(\"Options\", \"BottomMargin\", 0, 100, 4); SpaceBetweenColumnsOption = new ZLIntegerRangeOption(\"Options\", \"SpaceBetweenColumns\", 0, 300, 3 * horMargin);",
+    "resolution": "TopMarginOption = new ZLIntegerRangeOption(\"Options\", \"TopMargin\", 0, 100, 15); BottomMarginOption = new ZLIntegerRangeOption(\"Options\", \"BottomMargin\", 0, 100, 20); SpaceBetweenColumnsOption = new ZLIntegerRangeOption(\"Options\", \"SpaceBetweenColumns\", 0, 300, 3 * horMargin);",
+    "conflict": "TopMarginOption = new ZLIntegerRangeOption(\"Options\", \"TopMargin\", 0, 100, 15); BottomMarginOption = new ZLIntegerRangeOption(\"Options\", \"BottomMargin\", 0, 100, 20); SpaceBetweenColumnsOption = new ZLIntegerRangeOption(\"Options\", \"SpaceBetweenColumns\", 0, 100, 3 * horMargin);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42487,
+    "v2": "TopMarginOption = new ZLIntegerRangeOption(\"Options\", \"TopMargin\", 0, 100, 0); BottomMarginOption = new ZLIntegerRangeOption(\"Options\", \"BottomMargin\", 0, 100, 4); SpaceBetweenColumnsOption = new ZLIntegerRangeOption(\"Options\", \"SpaceBetweenColumns\", 0, 100, 3 * horMargin);",
+    "resolution": "TopMarginOption = new ZLIntegerRangeOption(\"Options\", \"TopMargin\", 0, 100, 15); BottomMarginOption = new ZLIntegerRangeOption(\"Options\", \"BottomMargin\", 0, 100, 20); SpaceBetweenColumnsOption = new ZLIntegerRangeOption(\"Options\", \"SpaceBetweenColumns\", 0, 100, 3 * horMargin);",
+    "conflict": "TopMarginOption = new ZLIntegerRangeOption(\"Options\", \"TopMargin\", 0, 100, 15); BottomMarginOption = new ZLIntegerRangeOption(\"Options\", \"BottomMargin\", 0, 100, 20);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42498,
+    "v2": "private void setupNavigation(PopupWindow panel) { final SeekBar slider = (SeekBar)panel.findViewById(R.id.navigation_slider); final TextView text = (TextView)panel.findViewById(R.id.navigation_text);",
+    "resolution": "private void setupNavigation() { final SeekBar slider = (SeekBar)myWindow.findViewById(R.id.navigation_slider); final TextView text = (TextView)myWindow.findViewById(R.id.navigation_text);",
+    "conflict": "private void setupNavigation() { final SeekBar slider = (SeekBar)myWindow.findViewById(R.id.navigation_slider); final TextView text = (TextView)myWindow.findViewById(R.id.navigation_text);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42510,
+    "v2": "private int myFullScreenFlag; private String myMenuLanguage;",
+    "resolution": "private boolean myShowStatusBarFlag; private boolean myShowActionBarFlag; private boolean myActionBarIsVisible;",
+    "conflict": "private boolean myShowStatusBarFlag; private boolean myShowActionBarFlag; private boolean myActionBarIsVisible;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42513,
+    "v2": "final int fullScreenFlag = zlibrary.ShowStatusBarOption.getValue() ? 0 : WindowManager.LayoutParams.FLAG_FULLSCREEN; if (fullScreenFlag != myFullScreenFlag) {",
+    "resolution": "if (zlibrary.ShowStatusBarOption.getValue() != myShowStatusBarFlag || zlibrary.ShowActionBarOption.getValue() != myShowActionBarFlag) {",
+    "conflict": "if (zlibrary.ShowStatusBarOption.getValue() != myShowStatusBarFlag || zlibrary.ShowActionBarOption.getValue() != myShowActionBarFlag) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42515,
+    "v2": "private int myFullScreenFlag; private String myLanguage;",
+    "resolution": "private boolean myShowStatusBarFlag; private boolean myShowActionBarFlag; private boolean myActionBarIsVisible;",
+    "conflict": "private boolean myShowStatusBarFlag; private boolean myShowActionBarFlag; private boolean myActionBarIsVisible;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42517,
+    "v2": "final int fullScreenFlag = zlibrary.ShowStatusBarOption.getValue() ? 0 : WindowManager.LayoutParams.FLAG_FULLSCREEN; if (fullScreenFlag != myFullScreenFlag || !myLanguage.equals(ZLResource.LanguageOption.getValue())) {",
+    "resolution": "if (zlibrary.ShowStatusBarOption.getValue() != myShowStatusBarFlag || zlibrary.ShowActionBarOption.getValue() != myShowActionBarFlag) {",
+    "conflict": "if (zlibrary.ShowStatusBarOption.getValue() != myShowStatusBarFlag || zlibrary.ShowActionBarOption.getValue() != myShowActionBarFlag) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42605,
+    "v2": "",
+    "resolution": "protected void onStop() { ((BookCollectionShadow)myLibrary.Collection).unbind(); super.onStop(); }  @Override",
+    "conflict": "protected void onStop() { ((BookCollectionShadow)myLibrary.Collection).unbind(); super.onStop(); }  @Override"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42619,
+    "v2": "import org.geometerplus.android.fbreader.library.KillerCallback; import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow; import org.geometerplus.android.fbreader.libraryService.SQLiteBooksDatabase;",
+    "resolution": "import org.geometerplus.android.fbreader.library.BookInfoActivity; import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow;",
+    "conflict": "import org.geometerplus.android.fbreader.library.BookInfoActivity; import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42700,
+    "v2": "bookmark.onOpen(); final Book book = Book.getById(bookmark.getBookId());",
+    "resolution": "bookmark.markAsAccessed(); myCollection.saveBookmark(bookmark); final Book book = myCollection.getBookById(bookmark.getBookId());",
+    "conflict": "bookmark.markAsAccessed(); myCollection.saveBookmark(bookmark); final Book book = myCollection.getBookById(bookmark.getBookId());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 42708,
+    "v2": "myDontReloadBook = getIntent().getBooleanExtra(FROM_READING_MODE_KEY, false); myBook = bookByIntent(getIntent());",
+    "resolution": "final Intent intent = getIntent(); myDontReloadBook = intent.getBooleanExtra(FROM_READING_MODE_KEY, false); myBook = bookByIntent(intent);",
+    "conflict": "final Intent intent = getIntent(); final String path = intent.getStringExtra(CURRENT_BOOK_PATH_KEY); myDontReloadBook = intent.getBooleanExtra(FROM_READING_MODE_KEY, false); myFile = ZLFile.createFileByPath(path);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42718,
+    "v2": "public Library(BooksDatabase db) { myDatabase = db; Collection = new BookCollection(db);",
+    "resolution": "public Library(IBookCollection collection) { Collection = collection;",
+    "conflict": "public Library(IBookCollection collection) { Collection = collection;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42725,
+    "v2": "",
+    "resolution": "public void update(Bookmark other) { // TODO: copy other fields (?) myId = other.myId; }",
+    "conflict": "public void update(Bookmark other) { // TODO: copy other fields (?) myId = other.myId; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42739,
+    "v2": "public Library(BooksDatabase db) { Collection = null; myDatabase = db;",
+    "resolution": "public Library(IBookCollection collection) { Collection = collection;",
+    "conflict": "public Library(IBookCollection collection) { Collection = collection;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42747,
+    "v2": "private FBReaderApp myFBReaderApp;  private int myFullScreenFlag;",
+    "resolution": "private FBReaderApp myFBReaderApp; private boolean myShowStatusBarFlag; private boolean myShowActionBarFlag; private boolean myActionBarIsVisible;",
+    "conflict": "private boolean myShowStatusBarFlag; private boolean myShowActionBarFlag; private boolean myActionBarIsVisible;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42753,
+    "v2": "final RelativeLayout root = (RelativeLayout)findViewById(R.id.root_view); ((PopupPanel)myFBReaderApp.getPopupById(TextSearchPopup.ID)).setPanelInfo(this, root); ((PopupPanel)myFBReaderApp.getPopupById(NavigationPopup.ID)).setPanelInfo(this, root);",
+    "resolution": "final RelativeLayout root = (RelativeLayout)findViewById(R.id.root_view); ((PopupPanel)myFBReaderApp.getPopupById(TextSearchPopup.ID)).setPanelInfo(this, root); ((PopupPanel)myFBReaderApp.getPopupById(SelectionPopup.ID)).setPanelInfo(this, root);",
+    "conflict": "final FBReaderApp myFBReaderApp = (FBReaderApp)FBReaderApp.Instance(); final RelativeLayout root = (RelativeLayout)findViewById(R.id.root_view); ((PopupPanel)myFBReaderApp.getPopupById(TextSearchPopup.ID)).setPanelInfo(this, root);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42755,
+    "v2": "PopupPanel.restoreVisibilities(myFBReaderApp);",
+    "resolution": "PopupPanel.restoreVisibilities(myFBReaderApp); hideBars();",
+    "conflict": "PopupPanel.restoreVisibilities(FBReaderApp.Instance());  hideBars();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42764,
+    "v2": "if (SQLiteBooksDatabase.Instance() == null) { new SQLiteBooksDatabase(this, \"READER\"); } myFBReaderApp = new FBReaderApp();",
+    "resolution": "myFBReaderApp = new FBReaderApp(new BookCollectionShadow());",
+    "conflict": "myFBReaderApp = new FBReaderApp(new BookCollectionShadow());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42769,
+    "v2": "private void onPreferencesUpdate(int resultCode) {",
+    "resolution": "private void onPreferencesUpdate(int resultCode, Book book) { if (book != null) { myFBReaderApp.Collection.saveBook(book, true); }",
+    "conflict": "private void onPreferencesUpdate(int resultCode, Book book) { if (book != null) { myFBReaderApp.Collection.saveBook(book, true); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42777,
+    "v2": "",
+    "resolution": "protected void onRestart() { super.onRestart(); getCollection().bindToService(null); }  @Override",
+    "conflict": "protected void onRestart() { super.onRestart(); getCollection().bindToService(null); }  @Override"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42798,
+    "v2": "import org.geometerplus.android.fbreader.library.KillerCallback; import org.geometerplus.android.fbreader.libraryService.SQLiteBooksDatabase;",
+    "resolution": "import org.geometerplus.android.fbreader.library.BookInfoActivity; import org.geometerplus.android.fbreader.library.KillerCallback; import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow;",
+    "conflict": "import org.geometerplus.android.fbreader.library.BookInfoActivity; import org.geometerplus.android.fbreader.library.KillerCallback; import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42809,
+    "v2": "System.err.println(\"LibraryService.onDestroy()\"); myLibrary = null;",
+    "resolution": "if (myLibrary != null) { myLibrary.deactivate(); myLibrary = null; }",
+    "conflict": "if (myLibrary != null) { myLibrary.deactivate(); myLibrary = null; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42819,
+    "v2": "import org.geometerplus.fbreader.book.Tag; import org.geometerplus.fbreader.bookmodel.BookReadingException; import org.geometerplus.fbreader.library.Book;",
+    "resolution": "import org.geometerplus.fbreader.book.Book; import org.geometerplus.fbreader.book.Tag; import org.geometerplus.fbreader.bookmodel.BookReadingException;",
+    "conflict": "import org.geometerplus.fbreader.book.Book; import org.geometerplus.fbreader.book.Tag; import org.geometerplus.fbreader.bookmodel.BookReadingException;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 42889,
+    "v2": "import org.geometerplus.zlibrary.ui.android.R; import org.geometerplus.zlibrary.ui.android.library.*;",
+    "resolution": "import com.ahlalhdeeth.arabicReader.R; import org.geometerplus.zlibrary.ui.android.library.*;",
+    "conflict": "import com.ahlalhdeeth.arabicReader.R; import org.geometerplus.zlibrary.ui.android.library.ZLAndroidActivity; import org.geometerplus.zlibrary.ui.android.library.ZLAndroidApplication; import org.geometerplus.zlibrary.ui.android.library.ZLAndroidLibrary;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42893,
+    "v2": "SelectionTranslateAction(FBReader baseActivity, FBReaderApp fbreader) { super(baseActivity, fbreader); }",
+    "resolution": "SelectionTranslateAction(ArabicReader baseActivity, FBReaderApp fbreader) { super(baseActivity, fbreader); }",
+    "conflict": "SelectionTranslateAction(ArabicReader baseActivity, FBReaderApp fbreader) { super(baseActivity, fbreader); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42900,
+    "v2": "return ApiObject.envelope(getZoneMap()); case SET_ZONEMAP: setZoneMap(((ApiObject.String)parameters[0]).Value);",
+    "resolution": "return ApiObject.envelope(getZoneMap()); case SET_ZONEMAP: setZoneMap(((ApiObject.String)parameters[0]).Value);",
+    "conflict": "return ApiObject.envelope(getZoneMap()); case SET_ZONEMAP: setZoneMap(((ApiObject.String)parameters[0]).Value);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42907,
+    "v2": "import org.geometerplus.zlibrary.ui.android.R;",
+    "resolution": "import com.ahlalhdeeth.arabicReader.R;",
+    "conflict": "import com.ahlalhdeeth.arabicReader.R;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42912,
+    "v2": "@Override public String toString() { return \"NativeFormatPlugin [\" + supportedFileType() + \"]\"; }",
+    "resolution": "@Override public String toString() { return \"NativeFormatPlugin [\" + supportedFileType() + \"]\"; }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42916,
+    "v2": "",
+    "resolution": "",
+    "conflict": "protected String getSortKey() { return \"BSK:\" + super.getSortKey(); }  @Override"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 42922,
+    "v2": "final ZLTextStyleEntry entry = type == ZLTextParagraph.Entry.STYLE_CSS ? new ZLTextCSSStyleEntry() : new ZLTextOtherStyleEntry();",
+    "resolution": "final ZLTextStyleEntry entry = type == ZLTextParagraph.Entry.STYLE_CSS ? new ZLTextCSSStyleEntry() : new ZLTextOtherStyleEntry();",
+    "conflict": "final ZLTextStyleEntry entry = new ZLTextStyleEntry();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 42976,
+    "v2": "private static Map<String,File[]> getFontMap(boolean forceReload) { if (ourFontCreationMethod == null) { return Collections.emptyMap(); }",
+    "resolution": "public static Map<String,File[]> getFontMap(boolean forceReload) {",
+    "conflict": "public static Map<String,File[]> getFontMap(boolean forceReload) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43001,
+    "v2": "final ZLPhysicalFile physFile = book.File.getPhysicalFile(); final File file = physFile == null ? null : physFile.javaFile();",
+    "resolution": "final ZLPhysicalFile physFile = book.File.getPhysicalFile(); final File file = physFile == null ? null : physFile.javaFile();",
+    "conflict": "final ZLFile physFile = book.File.getPhysicalFile(); final File file = physFile == null ? null : new File(physFile.getPath());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 43034,
+    "v2": "protected void runWithMessage(String key, Runnable runnable, Runnable postAction) {",
+    "resolution": "public String getTitle() { return myTitle; } protected void runWithMessage(String key, Runnable runnable, Runnable postAction) {",
+    "conflict": "public String getTitle() { return myTitle; }  protected void runWithMessage(String key, Runnable runnable) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43061,
+    "v2": "private Map<ImageView,InvalidateViewRunnable> myImageViews = Collections.synchronizedMap(new HashMap<ImageView,InvalidateViewRunnable>());  private final class InvalidateViewRunnable implements Runnable {",
+    "resolution": "private Map<ImageView,InvalidateViewRunnable> myImageViews = Collections.synchronizedMap(new HashMap<ImageView,InvalidateViewRunnable>());  private final class InvalidateViewRunnable implements Runnable {",
+    "conflict": "private static final class InvalidateViewRunnable implements Runnable {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 43115,
+    "v2": "requestWindowFeature(Window.FEATURE_NO_TITLE); final ZLAndroidLibrary library = (ZLAndroidLibrary)ZLAndroidLibrary.Instance(); final boolean showStatusBar = library.ShowStatusBarOption.getValue();",
+    "resolution": "requestWindowFeature(Window.FEATURE_ACTION_BAR); final ZLAndroidLibrary library = (ZLAndroidLibrary)ZLAndroidLibrary.Instance(); final boolean showStatusBar = library.ShowStatusBarOption.getValue();",
+    "conflict": "requestWindowFeature(Window.FEATURE_ACTION_BAR); final ZLAndroidApplication application = ZLAndroidApplication.Instance(); final boolean showStatusBar = application.ShowStatusBarOption.getValue();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 43147,
+    "v2": "public Credentials createCredentials(String scheme, AuthScope scope) { final String authScheme = scope.getScheme(); if (!\"basic\".equalsIgnoreCase(authScheme) && !\"digest\".equalsIgnoreCase(authScheme)) {",
+    "resolution": "public Credentials createCredentials(String scheme, AuthScope scope, boolean quietMode) { final String authScheme = scope.getScheme(); if (!\"basic\".equalsIgnoreCase(authScheme) && !\"digest\".equalsIgnoreCase(authScheme)) {",
+    "conflict": "public Credentials createCredentials(String scheme, AuthScope scope, boolean quietMode) { if (!\"basic\".equalsIgnoreCase(scope.getScheme()) && !\"digest\".equalsIgnoreCase(scope.getScheme())) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43180,
+    "v2": "new ZLIntegerRangeOption(\"Options\", \"LeftMargin\", 0, 30, myDpi / 20); public final ZLIntegerRangeOption RightMarginOption = new ZLIntegerRangeOption(\"Options\", \"RightMargin\", 0, 30, myDpi / 20);",
+    "resolution": "new ZLIntegerRangeOption(\"Options\", \"LeftMargin\", 0, 30, myDpi / 5); public final ZLIntegerRangeOption RightMarginOption = new ZLIntegerRangeOption(\"Options\", \"RightMargin\", 0, 30, myDpi / 5);",
+    "conflict": "new ZLIntegerRangeOption(\"Options\", \"LeftMargin\", 0, 30, myDpi / 5); public final ZLIntegerRangeOption RightMarginOption = new ZLIntegerRangeOption(\"Options\", \"RightMargin\", 0, 30, myDpi / 5);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 43192,
+    "v2": "new ZLIntegerRangeOption(\"Options\", \"LeftMargin\", 0, 30, myDpi / 10); public final ZLIntegerRangeOption RightMarginOption = new ZLIntegerRangeOption(\"Options\", \"RightMargin\", 0, 30, myDpi / 10);",
+    "resolution": "new ZLIntegerRangeOption(\"Options\", \"LeftMargin\", 0, 30, myDpi / 5); public final ZLIntegerRangeOption RightMarginOption = new ZLIntegerRangeOption(\"Options\", \"RightMargin\", 0, 30, myDpi / 5);",
+    "conflict": "new ZLIntegerRangeOption(\"Options\", \"LeftMargin\", 0, 60, 40); public final ZLIntegerRangeOption RightMarginOption = new ZLIntegerRangeOption(\"Options\", \"RightMargin\", 0, 60, 40);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43199,
+    "v2": "import org.geometerplus.android.fbreader.tree.TreeActivity;  public class LibraryActivity extends TreeActivity implements MenuItem.OnMenuItemClickListener, View.OnCreateContextMenuListener, Library.ChangeListener {",
+    "resolution": "import org.geometerplus.android.fbreader.tree.TreeActivity;  public class LibraryActivity extends TreeActivity implements MenuItem.OnMenuItemClickListener, View.OnCreateContextMenuListener, Library.ChangeListener {",
+    "conflict": "import org.geometerplus.android.fbreader.tree.BaseActivity;  public class LibraryActivity extends BaseActivity implements MenuItem.OnMenuItemClickListener, View.OnCreateContextMenuListener, Library.ChangeListener {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43215,
+    "v2": "private ApiObject.Error exceptionInMethodError(int method, Throwable e) { return new ApiObject.Error(\"Exception in method \" + method + \": \" + e); }  @Override",
+    "resolution": "private ApiObject.Error exceptionInMethodError(int method, Throwable e) { return new ApiObject.Error(\"Exception in method \" + method + \": \" + e); }  @Override",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43226,
+    "v2": "final NetworkCatalogItem item = ((NetworkCatalogTree)tree).Item; if (!(item instanceof NetworkURLCatalogItem)) {",
+    "resolution": "final NetworkCatalogItem item = ((NetworkCatalogTree)tree).Item; if (!(item instanceof NetworkURLCatalogItem)) {",
+    "conflict": "final NetworkCatalogTree catalogTree = (NetworkCatalogTree)tree; final NetworkCatalogItem item = catalogTree.Item; if (item.URLByType.get(NetworkCatalogItem.URL_CATALOG) != null) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43228,
+    "v2": "private boolean consumeByVisibility(final NetworkBaseActivity activity, final NetworkTree tree, final int actionCode) { final NetworkCatalogItem item = ((NetworkCatalogTree)tree).Item; switch (item.getVisibility()) {",
+    "resolution": "private boolean consumeByVisibility(final NetworkBaseActivity activity, final NetworkTree tree, final int actionCode) { final NetworkCatalogItem item = ((NetworkCatalogTree)tree).Item; switch (item.getVisibility()) {",
+    "conflict": "private boolean consumeByVisibility(final NetworkBaseActivity activity, final NetworkCatalogTree tree, final int actionCode) { switch (tree.Item.getVisibility()) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 43242,
+    "v2": "boolean litresCatalogue = false; NetworkCatalogItem.CatalogType catalogType = NetworkCatalogItem.CatalogType.OTHER; for (ATOMLink link: entry.Links) {",
+    "resolution": "String litresRel = null; NetworkCatalogItem.CatalogType catalogType = NetworkCatalogItem.CatalogType.OTHER; for (ATOMLink link : entry.Links) {",
+    "conflict": "String litresRel = null; int catalogType = NetworkCatalogItem.CATALOG_OTHER; for (ATOMLink link : entry.Links) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43248,
+    "v2": "public String getAttributeValue(ZLStringMap attributes, String namespace, String name) { if (namespace == null) { return attributes.getValue(name); }",
+    "resolution": "public String getAttributeValue(ZLStringMap attributes, String namespace, String name) { if (namespace == null) { return attributes.getValue(name); }",
+    "conflict": "protected String getAttributeValue(ZLStringMap attributes, String namespace, String name) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43250,
+    "v2": "import android.util.Log; import android.view.MenuItem; import android.view.View; import android.widget.AdapterView;",
+    "resolution": "import android.view.*; import android.widget.*;",
+    "conflict": "import android.view.*; import android.widget.*;"
+  },
+  {
+    "devdecision": "None",
+    "id": 43251,
+    "v2": "import org.geometerplus.fbreader.Paths;  import org.geometerplus.android.fbreader.FBReader;",
+    "resolution": "import org.geometerplus.fbreader.Paths;",
+    "conflict": "import org.geometerplus.zlibrary.ui.android.R;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 43279,
+    "v2": "",
+    "resolution": "case MENU_LANGUAGES: for (String langCode : NetworkLibrary.Instance().languages()) { System.err.println(\"Language: \" + ZLLanguageUtil.languageName(langCode)); } //showDialog(R.layout.network_languages_list_dialog); return true;",
+    "conflict": "case MENU_LANGUAGES: for (String langCode : NetworkLibrary.Instance().languages()) { System.err.println(\"Language: \" + ZLLanguageUtil.languageName(langCode)); } showDialog(R.layout.network_languages_list_dialog); return true;"
+  }
+]
+}

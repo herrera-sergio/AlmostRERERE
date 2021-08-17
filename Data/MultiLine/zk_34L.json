@@ -1,0 +1,1081 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 60567,
+    "v2": "if(getExtension().isLifeCycleHandling(comp)){ BinderUtil.markHandling(comp, binder); // Bug ZK-3045",
+    "resolution": "if (getExtension().isLifeCycleHandling(comp)) {",
+    "conflict": "if (getExtension().isLifeCycleHandling(comp)) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 60768,
+    "v2": "import org.zkoss.zul.Attributes;",
+    "resolution": "import org.zkoss.zul.ListModel; import org.zkoss.zul.ListModelArray; import org.zkoss.zul.ListModelList;import org.zkoss.zul.Attributes;",
+    "conflict": "import org.zkoss.zul.ListModel; import org.zkoss.zul.ListModelArray; import org.zkoss.zul.ListModelList;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 60769,
+    "v2": "import org.zkoss.zul.Attributes;",
+    "resolution": "import org.zkoss.zul.ListModel; import org.zkoss.zul.ListModelArray; import org.zkoss.zul.ListModelList;import org.zkoss.zul.Attributes;",
+    "conflict": "import org.zkoss.zul.ListModel; import org.zkoss.zul.ListModelArray; import org.zkoss.zul.ListModelList;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 60778,
+    "v2": "//B70-ZK-1816, also add in zk 8, ZK-2660",
+    "resolution": "//B70-ZK-1816, also add in zk 8, ZK-2660",
+    "conflict": "//Since 8.0.0, B80-ZK-2660"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 60917,
+    "v2": "",
+    "resolution": "import org.zkoss.zk.ui.sys.ShadowElementsCtrl;",
+    "conflict": "import org.zkoss.zk.ui.event.Event; import org.zkoss.zk.ui.event.Events; import org.zkoss.zk.ui.sys.ShadowElementsCtrl;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 61318,
+    "v2": "static final Log log = Log.lookup(BindUiLifeCycle.class); private static final String ON_ZKBIND_LATER = \"onZKBindLater\"; private static final String REMOVE_MARK = \"$$RemoveMark$$\";",
+    "resolution": "static final Logger log = LoggerFactory.getLogger(BindUiLifeCycle.class); private static final String ON_ZKBIND_LATER = \"onZKBindLater\"; private static final String REMOVE_MARK = \"$$RemoveMark$$\";",
+    "conflict": "static final Logger log = LoggerFactory.getLogger(BindUiLifeCycle.class);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 61448,
+    "v2": "import org.zkoss.util.logging.Log; import org.zkoss.io.Serializables; import org.zkoss.web.servlet.Servlets;",
+    "resolution": "import org.zkoss.util.DualCollection; import org.zkoss.web.servlet.Servlets;",
+    "conflict": "import org.zkoss.util.DualCollection;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 61673,
+    "v2": "import org.zkoss.web.fn.ThemeFns; import org.zkoss.web.theme.ThemeRegistry; import org.zkoss.web.theme.ThemeResolver;",
+    "resolution": "import org.zkoss.web.fn.ThemeFns; import org.zkoss.web.theme.ThemeRegistry; import org.zkoss.web.theme.ThemeResolver;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 61714,
+    "v2": "if(ConditionType.PROMPT != type && Strings.isEmpty(command)){ throw new IllegalArgumentException(\"condition type is \"+type+\", but command is empty\");",
+    "resolution": "if(ConditionType.PROMPT != type && Strings.isEmpty(command)){ throw new IllegalArgumentException(MiscUtil.formatLocationMessage(\"condition type is \"+type+\", but command is null\",binding.getComponent()));",
+    "conflict": "if(ConditionType.PROMPT != type && command==null){ throw new IllegalArgumentException(MiscUtil.formatLocationMessage(\"condition type is \"+type+\", but command is null\",binding.getComponent()));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62213,
+    "v2": "final WcsInfo wi = (WcsInfo)_cache.get(path);",
+    "resolution": "final WcsInfo wi = _cache.get(path);",
+    "conflict": "final WcsInfo wi = _cache.get(path);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62231,
+    "v2": "for (Iterator it = root.getElements(\"message-loader-class\").iterator(); it.hasNext();) { final Element el = (Element) it.next();",
+    "resolution": "for (Element el : root.getElements(\"message-loader-class\")) {",
+    "conflict": "for (Element el : root.getElements(\"message-loader-class\")) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62232,
+    "v2": "for (Iterator it = root.getElements(\"library-property\").iterator(); it.hasNext();) { final Element el = (Element)it.next();",
+    "resolution": "for (Element el: root.getElements(\"library-property\")) {",
+    "conflict": "for (Element el: root.getElements(\"library-property\")) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62233,
+    "v2": "private final FastReadArray _msgloads = new FastReadArray(MessageLoader.class);",
+    "resolution": "private final FastReadArray<MessageLoader> _msgloads = new FastReadArray<MessageLoader>(MessageLoader.class);",
+    "conflict": "private final FastReadArray<MessageLoader> _msgloads = new FastReadArray<MessageLoader>(MessageLoader.class);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62234,
+    "v2": "public Collection getMessageLoaders() { return new CollectionsX.ArrayCollection(_msgloads.toArray());",
+    "resolution": "public Collection<MessageLoader> getMessageLoaders() { return new CollectionsX.ArrayCollection<MessageLoader>(_msgloads.toArray());",
+    "conflict": "public Collection<MessageLoader> getMessageLoaders() { return new CollectionsX.ArrayCollection<MessageLoader>(_msgloads.toArray());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62243,
+    "v2": "",
+    "resolution": "// since 6.0.0, F60-ZK-715 addClientEvent(Listbox.class, \"onAcrossPage\", CE_DUPLICATE_IGNORE | CE_IMPORTANT | CE_NON_DEFERRABLE);",
+    "conflict": "// since 6.0.0, F60-ZK-715 addClientEvent(Listbox.class, \"onAcrossPage\", CE_DUPLICATE_IGNORE | CE_IMPORTANT | CE_NON_DEFERRABLE);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62258,
+    "v2": "",
+    "resolution": "private List<VariableResolver> _resolvers;",
+    "conflict": "private List<VariableResolver> _resolvers; /** Whether onPiggyback is checked for this execution. */ private boolean _piggybacked;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62263,
+    "v2": "cacheable = wc.cacheable; zkpkg = wc.zkpkg;",
+    "resolution": "pkg = wc.name; cacheable = wc.cacheable;",
+    "conflict": "pkg = wc.name; cacheable = wc.cacheable;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62318,
+    "v2": "} else //B50-ZK-721 if (!(parent instanceof Treeitem) || ((Treeitem) parent).isLoaded()) {",
+    "resolution": "} else if (!(parent instanceof Treeitem) || ((Treeitem) parent).isLoaded()) {",
+    "conflict": "} else if (!(parent instanceof Treeitem) || ((Treeitem) parent).isLoaded()) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62321,
+    "v2": "abstract public class AbstractGroupsModel implements GroupsModel, java.io.Serializable{ private transient List _listeners = new LinkedList();",
+    "resolution": "abstract public class AbstractGroupsModel<D, G, F> implements GroupsModel<D, G, F>, java.io.Serializable { private transient List<GroupsDataListener> _listeners = new LinkedList<GroupsDataListener>();",
+    "conflict": "abstract public class AbstractGroupsModel<D, G, F> implements GroupsModel<D, G, F> { private transient List<GroupsDataListener> _listeners = new LinkedList<GroupsDataListener>();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62332,
+    "v2": "render(renderer, \"radiogroup\", _group);",
+    "resolution": "render(renderer, \"radiogroup\", _group);",
+    "conflict": "if (_group != null) render(renderer, \"radiogroup\", _group);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62336,
+    "v2": "if (url == null && _path != null && locale == null) log.error(\"File not found: \" + path); return url;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62339,
+    "v2": "if (isVisible()) {",
+    "resolution": "if (_open != open) { _open = open; if (isVisible()) {",
+    "conflict": "if (_open != open) { _open = open;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62340,
+    "v2": "if (isVisible()) {",
+    "resolution": "if (_open != open) { _open = open; if (isVisible()) {",
+    "conflict": "if (_open != open) { _open = open;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62341,
+    "v2": "} else { Integer v = parseInteger(el, \"resend-delay\", ANY_VALUE); if (v != null) Library.setProperty(Attributes.RESEND_DELAY, v.toString());",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62342,
+    "v2": "v = parseInteger(conf, \"resend-delay\", ANY_VALUE); if (v != null) config.setResendDelay(v.intValue());",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62344,
+    "v2": "value instanceof BigDecimal ? BigDecimals.toLocaleString((BigDecimal)value, getDefaultLocale()):",
+    "resolution": "value instanceof BigDecimal ? BigDecimals.toLocaleString((BigDecimal)value, getDefaultLocale()):",
+    "conflict": "value instanceof BigDecimal ? ((BigDecimal)value).toPlainString():"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62346,
+    "v2": "final Map params = new HashMap(); final ItemFactory fty = new ItemFactory(desktop, request, key);",
+    "resolution": "final Map<String, Object> params = new HashMap<String, Object>(); final ItemFactory fty = new ItemFactory(desktop, request, key);",
+    "conflict": "final Map<String, Object> params = new HashMap<String, Object>(); final ZkFileItemFactory fty = new ZkFileItemFactory(desktop, request, key);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62356,
+    "v2": "{{IS_RIGHT This program is distributed under LGPL Version 2.1 in the hope that it will be useful, but WITHOUT ANY WARRANTY. }}IS_RIGHT",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62371,
+    "v2": "final List errs = new LinkedList(); final ExecutionCtrl execCtrl = (ExecutionCtrl)exec;",
+    "resolution": "final List<Throwable> errs = new LinkedList<Throwable>(); final ExecutionCtrl execCtrl = (ExecutionCtrl)exec;",
+    "conflict": "final List<Throwable> errs = new LinkedList<Throwable>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62437,
+    "v2": "public List getChildren(){ return isLeaf() ? null : _children;",
+    "resolution": "public List<? extends TreeNode<E>> getChildren(){ return isLeaf() ? null : _children;",
+    "conflict": "public List<? extends TreeNode<E>> getChildren(){ return _children;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62438,
+    "v2": "public int getIndex(TreeNode node) { return isLeaf() ? -1 : _children.indexOf(node);",
+    "resolution": "public int getIndex(TreeNode<E> node) { return isLeaf() ? -1 : _children.indexOf(node);",
+    "conflict": "public int getIndex(TreeNode<E> node) { return _children != null ? _children.indexOf(node): -1;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62449,
+    "v2": "Object[][] infs = config.getClientErrorReloads(getDeviceType(), null);",
+    "resolution": "final String deviceType = getDeviceType(); Object[][] infs = config.getClientErrorReloads(deviceType, null);",
+    "conflict": "final String deviceType = getDeviceType(); Object[][] infs = config.getClientErrorReloads(deviceType, null);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62452,
+    "v2": "_segLabels = Collections.EMPTY_MAP; _labels = Collections.EMPTY_MAP;",
+    "resolution": "_segLabels = Collections.emptyMap(); _labels = Collections.emptyMap();",
+    "conflict": "_labels = Collections.emptyMap();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62453,
+    "v2": "/** A stack of implicit objects ({@link Implicit}. */ private static final ThreadLocal _implicits = new ThreadLocal();",
+    "resolution": "/** A stack of implict objects ({@link Implicit}). */ private static final ThreadLocal<List<Implicit>> _implicits = new ThreadLocal<List<Implicit>>();",
+    "conflict": "/** A stack of implict objects ({@link Implicit}). */ private static final ThreadLocal<List<Implicit>> _implicits = new ThreadLocal<List<Implicit>>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62454,
+    "v2": "/*package*/ abstract class AbstractExtendlet implements Extendlet { static final Log log = Log.lookup(AbstractExtendlet.class);",
+    "resolution": "/*package*/ abstract class AbstractExtendlet<V> implements Extendlet { static final Log log = Log.lookup(AbstractExtendlet.class);",
+    "conflict": "/*package*/ abstract class AbstractExtendlet<V> implements Extendlet { static final Log log = Log.lookup(WpdExtendlet.class);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62456,
+    "v2": "public class Bandbox extends Textbox implements org.zkoss.zul.api.Bandbox {",
+    "resolution": "public class Bandbox extends Textbox { private boolean _autodrop, _btnVisible = true;",
+    "conflict": "public class Bandbox extends Textbox { private transient Bandpopup _drop;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62477,
+    "v2": "final ServletContext ctx = getServletContext(); final boolean withpi = pi != null && pi.length() != 0;",
+    "resolution": "final ServletContext ctx = getServletContext(); final boolean withpi = pi != null && pi.length() != 0 && !(pi.startsWith(\"/_/\") || \"/_\".equals(pi));",
+    "conflict": "final boolean withpi = pi != null && pi.length() != 0 && !(pi.startsWith(\"/_/\") || \"/_\".equals(pi));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62479,
+    "v2": "} catch (AbstractMethodError ex) { //backward compatible } catch (Throwable ex) { ex.printStackTrace(); //not using log since it might be cleaned up",
+    "resolution": "} catch (NoClassDefFoundError ex) { //Bug 3046360 } catch (Throwable ex) { ex.printStackTrace(); //not using log since it might be cleaned up",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62487,
+    "v2": "public class DelegatingVariableResolver implements VariableResolver, java.io.Serializable  {",
+    "resolution": "public class DelegatingVariableResolver implements VariableResolver, java.io.Serializable { private static final Log log = Log.lookup(DelegatingVariableResolver.class);",
+    "conflict": "public class DelegatingVariableResolver implements VariableResolver { private static final Log log = Log.lookup(DelegatingVariableResolver.class);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62551,
+    "v2": "* * <p>This method is used only internally.",
+    "resolution": "* * <p>This method is used only internally.",
+    "conflict": "* It is called only {@link #isInline} is true."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62558,
+    "v2": "} public Page getFirstPage() { return _pages.isEmpty() ? null: (Page)_pages.get(0);",
+    "resolution": "} public Page getFirstPage() { return _pages.isEmpty() ? null: (Page)_pages.get(0);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62565,
+    "v2": "uvlock.wait(tmout); tried = true;",
+    "resolution": "uvlock.wait(tmout); tried = true;",
+    "conflict": "uvlock.wait(getRetryTimeout());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62587,
+    "v2": "//bug #3049167: Totalsize increase when drag & drop in paging Listbox/Grid if (!isReorder) { //if reorder, not an insert",
+    "resolution": "//bug #3049167: Totalsize increase when drag & drop in paging Listbox/Grid if (!isReorder) { //if reorder, not an insert",
+    "conflict": "//bug #3049167: Total size increase when drag & drop item in listbox/Grid if (!isReorder) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62591,
+    "v2": "//bug #3049167: Totalsize increase when drag & drop in paging Listbox/Grid if (!isReorder) {",
+    "resolution": "//bug #3049167: Totalsize increase when drag & drop in paging Listbox/Grid if (!isReorder) {",
+    "conflict": "//bug #3049167: Total size increase when drag & drop item in listbox/Grid if (!isReorder) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62593,
+    "v2": "import java.io.IOException;",
+    "resolution": "import java.io.IOException;",
+    "conflict": "import org.zkoss.lang.Objects; import org.zkoss.xml.HTMLs;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62621,
+    "v2": "_resolvers = (List)Serializables.smartRead(s, _resolvers); //might be null _mappers = (List)Serializables.smartRead(s, _mappers); //might be null",
+    "resolution": "_resolvers = Serializables.smartRead(s, _resolvers); //might be null _mappers = Serializables.smartRead(s, _mappers); //might be null",
+    "conflict": "_resolvers = Serializables.smartRead(s, _resolvers); //might be null"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62639,
+    "v2": "/** @deprecated As of release 5.0.8, no longer used. */ protected void renderIdSpace(ContentRenderer renderer) throws IOException { }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62645,
+    "v2": "String puName2 = getPersistenceUnitName(puName); em = (EntityManager) getEmMap().get(puName2);",
+    "resolution": "String puName2 = getPersistenceUnitName(puName); em = (EntityManager) getEmMap().get(puName2);",
+    "conflict": "em = getEmMap().get(puName);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62649,
+    "v2": "private transient ListModel _model;",
+    "resolution": "private transient ListModel<?> _model;",
+    "conflict": "private String _pagingPosition = \"bottom\"; private transient ListModel<?> _model;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62651,
+    "v2": "public ListIterator listIterator() { return listIterator(0);",
+    "resolution": "public ListIterator<E> listIterator() { return listIterator(0);",
+    "conflict": "public ListIterator<E> listIterator() { return _list.listIterator();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62652,
+    "v2": "public class Listbox extends MeshElement implements org.zkoss.zul.api.Listbox { private static final long serialVersionUID = 2009111111L;",
+    "resolution": "public class Listbox extends MeshElement { private static final long serialVersionUID = 2009111111L;",
+    "conflict": "public class Listbox extends MeshElement implements Paginated {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62655,
+    "v2": "/** Returns whether an item is the last visible child. * @deprecated As release of 5.0.8, no longer used",
+    "resolution": "/** Returns the width which the same as {@link #getTreecol}'s width. */",
+    "conflict": "/** Returns an array of Treeitem from the root."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62672,
+    "v2": "protected void onRemove(Object item) { ((Item)item).setParent(null); //then calls this.setModified",
+    "resolution": "protected void onRemove(Item item) { item.setParent(null);",
+    "conflict": "protected void onRemove(Item item) { item.setParent(null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62678,
+    "v2": "for (Iterator it = _attrs.iterator(); it.hasNext();) elem._attrs.add((Attribute)((Attribute)it.next()).clone());",
+    "resolution": "for (Attribute attr:  _attrs) elem._attrs.add((Attribute)attr.clone());",
+    "conflict": "for (Attribute attr:  _attrs) elem._attrs.add((Attribute)attr.clone());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62680,
+    "v2": "private void checkAdd(Object newValue, Object other, boolean replace) { Attribute newItem = (Attribute)newValue;",
+    "resolution": "private void checkAdd(Attribute newItem, Attribute other, boolean replace) {",
+    "conflict": "private void checkAdd(Attribute newItem, Attribute other, boolean replace) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62681,
+    "v2": "protected void onRemove(Object item) { ((Attribute)item).setOwner(null);",
+    "resolution": "protected void onRemove(Attribute item) { item.setOwner(null);",
+    "conflict": "protected void onRemove(Attribute item) { item.setOwner(null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62686,
+    "v2": "for (Iterator it = _children.iterator(); it.hasNext();) group._children.add((Item)((Item)it.next()).clone());",
+    "resolution": "for (Item src: _children) group._children.add((Item)src.clone());",
+    "conflict": "for (Item src: _children) group._children.add((Item)src.clone());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62698,
+    "v2": "for (Iterator it = col.iterator(); it.hasNext();) { final Object val = it.next();",
+    "resolution": "for (T val: col) {",
+    "conflict": "for (T val: col) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62726,
+    "v2": "Utils.markClientInfoPerDesktop(desktop, getWidgetClass()));",
+    "resolution": "Utils.markClientInfoPerDesktop(desktop, getWidgetClass()));",
+    "conflict": "desktop != null && Utils.shallGenerateImportantEvents(desktop, getWidgetClass())); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62730,
+    "v2": "Collection sibs = parent != null ?",
+    "resolution": "Collection<? extends Component> sibs = parent != null ?",
+    "conflict": "Collection<? extends Component> sibs = parent != null ?"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62731,
+    "v2": "for (List group; (group = nextGroupedSiblings(newsibs)) != null;) { final Collection contents = redrawComponents(group);",
+    "resolution": "for (List<Component> group; (group = nextGroupedSiblings(newsibs)) != null;) { final Collection<String> contents = redrawComponents(group);",
+    "conflict": "for (List<Component> group; (group = nextGroupedSiblings(newsibs)) != null;) { final Collection<String> contents = redrawComponents(group);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62736,
+    "v2": "for (Iterator it = _langs.iterator(); it.hasNext();) { final Object[] p = (Object[])it.next();",
+    "resolution": "for (Iterator<Object[]> it = _langs.iterator(); it.hasNext();) { final Object[] p = it.next();",
+    "conflict": "for (Iterator<Object[]> it = _langs.iterator(); it.hasNext();) { final Object[] p = it.next();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62737,
+    "v2": "for (Iterator it = _addons.iterator(); it.hasNext();) { final Object[] p = (Object[])it.next();",
+    "resolution": "for (Iterator<Object[]> it = _addons.iterator(); it.hasNext();) { final Object[] p = it.next();",
+    "conflict": "for (Iterator<Object[]> it = _addons.iterator(); it.hasNext();) { final Object[] p = it.next();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62747,
+    "v2": "",
+    "resolution": "import static org.zkoss.lang.Generics.cast;  import org.zkoss.zk.ui.Component;",
+    "conflict": "import static org.zkoss.lang.Generics.cast;  import org.zkoss.zk.ui.Component;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62750,
+    "v2": "",
+    "resolution": "import static org.zkoss.lang.Generics.cast;  import org.zkoss.zk.ui.Component; import org.zkoss.zk.ui.IdSpace;",
+    "conflict": "import static org.zkoss.lang.Generics.cast;  import org.zkoss.zk.ui.Component; import org.zkoss.zk.ui.IdSpace;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62796,
+    "v2": "if (_model instanceof Selectable) ((Selectable) _model).addSelection(item.getTreeNode());",
+    "resolution": "addSelectionToModel(item);",
+    "conflict": "addSelectionToModel(item);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62797,
+    "v2": "if (_model instanceof Selectable) ((Selectable) _model).addSelection(item.getTreeNode());",
+    "resolution": "addSelectionToModel(item);",
+    "conflict": "addSelectionToModel(item);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62798,
+    "v2": "if (_model instanceof Selectable) ((Selectable) _model).addSelection(item.getTreeNode());",
+    "resolution": "addSelectionToModel(item);",
+    "conflict": "addSelectionToModel(item);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62799,
+    "v2": "if (_model instanceof Selectable) ((Selectable) _model).addSelection(item.getTreeNode());",
+    "resolution": "addSelectionToModel(item);",
+    "conflict": "addSelectionToModel(item);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62800,
+    "v2": "if (_model instanceof Selectable) ((Selectable) _model).addSelection(ti.getTreeNode());",
+    "resolution": "addSelectionToModel(ti);",
+    "conflict": "addSelectionToModel(ti);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62803,
+    "v2": "",
+    "resolution": "@SuppressWarnings(\"unchecked\")",
+    "conflict": "@SuppressWarnings(\"unchecked\")"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62874,
+    "v2": "private Collection _resps; /** The information of the event being served, or null if not under event processing. */ private ExecutionInfo _execinf;",
+    "resolution": "private Collection<AuResponse> _resps; /** The information of the event being served, or null if not under event processing. */ private ExecutionInfo _execinf;",
+    "conflict": "private Collection<AuResponse> _resps;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62876,
+    "v2": "final EventListener el = (EventListener)it.next(); execinf.update(null, el, null);",
+    "resolution": "final EventListener el = it.next(); execinf.update(null, el, null);",
+    "conflict": "final EventListener el = it.next();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62877,
+    "v2": "final EventListener el = (EventListener)it.next(); execinf.update(null, el, null);",
+    "resolution": "final EventListener el = it.next(); execinf.update(null, el, null);",
+    "conflict": "final EventListener el = it.next();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62878,
+    "v2": "final EventListener el = (EventListener)it.next(); execinf.update(null, el, null);",
+    "resolution": "final EventListener el = it.next(); execinf.update(null, el, null);",
+    "conflict": "final EventListener el = it.next();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62898,
+    "v2": "public int compareTo(Object obj) { DefaultTreeNode node = (DefaultTreeNode) obj;",
+    "resolution": "@SuppressWarnings(\"unchecked\") public int compareTo(DefaultTreeNode<E> node) {",
+    "conflict": "@SuppressWarnings(\"unchecked\") public int compareTo(DefaultTreeNode<E> node) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62900,
+    "v2": "public class Listbox extends MeshElement implements Paginated, org.zkoss.zul.api.Listbox {",
+    "resolution": "public class Listbox extends MeshElement implements Paginated {",
+    "conflict": "public class Listbox extends MeshElement implements Paginated {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62905,
+    "v2": "//@Override public org.zkoss.zul.api.Treeitem renderItemByPathApi(int[] path) { return renderItemByPath(path); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62919,
+    "v2": "final long v = si.file.lastModified(); return v == -1 ? 0: //not to reload if unknown (5.0.6 for better performance) v == 0 ? -1: v; //0 means nonexistent so reload",
+    "resolution": "final long v = src.file.lastModified(); return v == -1 ? 0: //not to reload if unknown (5.0.6 for better performance) v == 0 ? -1: v; //0 means nonexistent so reload",
+    "conflict": "return src.file.lastModified();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62931,
+    "v2": "public class A extends LabelImageElement implements org.zkoss.zul.api.A, org.zkoss.zk.ui.ext.Disable {",
+    "resolution": "public class A extends LabelImageElement implements org.zkoss.zk.ui.ext.Disable {",
+    "conflict": "public class A extends LabelImageElement {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62932,
+    "v2": "public class Button extends LabelImageElement implements org.zkoss.zul.api.Button, org.zkoss.zk.ui.ext.Disable {",
+    "resolution": "public class Button extends LabelImageElement implements org.zkoss.zk.ui.ext.Disable {",
+    "conflict": "public class Button extends LabelImageElement {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62933,
+    "v2": "public class Checkbox extends LabelImageElement implements org.zkoss.zul.api.Checkbox, org.zkoss.zk.ui.ext.Disable {",
+    "resolution": "public class Checkbox extends LabelImageElement implements org.zkoss.zk.ui.ext.Disable {",
+    "conflict": "public class Checkbox extends LabelImageElement {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62934,
+    "v2": "public class Comboitem extends LabelImageElement implements org.zkoss.zul.api.Comboitem, org.zkoss.zk.ui.ext.Disable {",
+    "resolution": "public class Comboitem extends LabelImageElement implements org.zkoss.zk.ui.ext.Disable {",
+    "conflict": "public class Comboitem extends LabelImageElement {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62935,
+    "v2": "public class Include extends XulElement implements org.zkoss.zul.api.Include, Includer, DynamicPropertied, AfterCompose, IdSpace {",
+    "resolution": "public class Include extends XulElement implements Includer, DynamicPropertied, AfterCompose, IdSpace {",
+    "conflict": "public class Include extends XulElement implements Includer {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62937,
+    "v2": "public class Menuitem extends LabelImageElement implements org.zkoss.zul.api.Menuitem, org.zkoss.zk.ui.ext.Disable {",
+    "resolution": "public class Menuitem extends LabelImageElement implements org.zkoss.zk.ui.ext.Disable {",
+    "conflict": "public class Menuitem extends LabelImageElement {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62939,
+    "v2": "public class Treeitem extends XulElement implements org.zkoss.zul.api.Treeitem, org.zkoss.zk.ui.ext.Disable {",
+    "resolution": "public class Treeitem extends XulElement implements org.zkoss.zk.ui.ext.Disable {",
+    "conflict": "public class Treeitem extends XulElement {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62940,
+    "v2": "public class Window extends XulElement implements org.zkoss.zul.api.Window, Framable, IdSpace {",
+    "resolution": "public class Window extends XulElement implements Framable, IdSpace {",
+    "conflict": "public class Window extends XulElement {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62958,
+    "v2": "public static final Method getMethodByObject(Class cls, String name, Object[] args)",
+    "resolution": "public static final Method getMethodByObject(Class<?> cls, String name, Object[] args)",
+    "conflict": "public static final Method getMethodByObject(Class<?> cls, String name, Object[] args)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62961,
+    "v2": "public abstract class AbstractTreeModel implements TreeModel, java.io.Serializable  {",
+    "resolution": "public abstract class AbstractTreeModel<E> implements TreeModel<E>, java.io.Serializable  {",
+    "conflict": "public abstract class AbstractTreeModel<E> implements TreeModel<E>, java.io.Serializable  {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 62963,
+    "v2": "import java.util.LinkedList;",
+    "resolution": "import java.util.LinkedList;",
+    "conflict": "import java.lang.reflect.Array; import java.util.ArrayList;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62967,
+    "v2": "List[] gd = (List[])group.toArray(new List[group.size()]);",
+    "resolution": "List<D>[] gd = new List[group.size()]; group.toArray(gd);",
+    "conflict": "List<D>[] gd = new List[group.size()]; group.toArray(gd);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62970,
+    "v2": "public class SimpleTreeModel extends AbstractTreeModel {",
+    "resolution": "public class SimpleTreeModel<E> extends AbstractTreeModel<TreeNode<E>> {",
+    "conflict": "public class SimpleTreeModel<E> extends AbstractTreeModel<SimpleTreeNode<E>> {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 62973,
+    "v2": "public interface TreeModel {",
+    "resolution": "public interface TreeModel<E> {",
+    "conflict": "public interface TreeModel<E> {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62985,
+    "v2": "for (Iterator it = CollectionsX.comodifiableIterator(_dtCleans); it.hasNext();) { final DesktopCleanup listener = (DesktopCleanup)it.next();",
+    "resolution": "for (Iterator<DesktopCleanup> it = CollectionsX.comodifiableIterator(_dtCleans); it.hasNext();) { final DesktopCleanup listener = it.next();",
+    "conflict": "for (DesktopCleanup listener: _dtCleans) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62987,
+    "v2": "for (Iterator it = CollectionsX.comodifiableIterator(_execCleans); it.hasNext();) { final ExecutionCleanup listener = (ExecutionCleanup)it.next();",
+    "resolution": "for (Iterator<ExecutionCleanup> it = CollectionsX.comodifiableIterator(_execCleans); it.hasNext();) { final ExecutionCleanup listener = it.next();",
+    "conflict": "for (ExecutionCleanup listener: _execCleans) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 62988,
+    "v2": "for (Iterator it = CollectionsX.comodifiableIterator(_uiCycles); it.hasNext();) { final UiLifeCycle listener = (UiLifeCycle)it.next();",
+    "resolution": "for (Iterator<UiLifeCycle> it = CollectionsX.comodifiableIterator(_uiCycles); it.hasNext();) { final UiLifeCycle listener = it.next();",
+    "conflict": "for (UiLifeCycle listener: _uiCycles) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 62998,
+    "v2": "private final List _schedInfos = new LinkedList(); /** For handling scheduled task in onSchedule. */ private Component _dummyTarget = null;",
+    "resolution": "private final List<ScheduleInfo> _schedInfos = new LinkedList<ScheduleInfo>(); /** For handling scheduled task in onSchedule. */ private Component _dummyTarget = null;",
+    "conflict": "private final List<ScheduleInfo> _schedInfos = new LinkedList<ScheduleInfo>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63002,
+    "v2": "for (Iterator it = _listenerInfos.iterator(); it.hasNext();) { final ListenerInfo inf = (ListenerInfo)it.next();",
+    "resolution": "for (Iterator<ListenerInfo> it = _listenerInfos.iterator(); it.hasNext();) { final ListenerInfo inf = it.next();",
+    "conflict": "for (Iterator<ListenerInfo> it = _listeners.iterator(); it.hasNext();) { final ListenerInfo inf = it.next();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63003,
+    "v2": "for (Iterator it = _listenerInfos.iterator(); it.hasNext();) if (listener.equals(((ListenerInfo)it.next()).listener))",
+    "resolution": "for (ListenerInfo li: _listenerInfos) if (listener.equals(li.listener))",
+    "conflict": "for (ListenerInfo li: _listeners) if (listener.equals(li.listener))"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63014,
+    "v2": "Class cls, String macroURI, boolean inline) { return new MacroDefinition(langdef, pgdef, name, cls, macroURI, inline);",
+    "resolution": "Class<? extends Component> cls, String macroURI, boolean inline) { return new MacroDefinition(langdef, pgdef, name, cls, macroURI, inline);",
+    "conflict": "Class<? extends Component> cls, String macroURI, String compose, boolean inline) { return new MacroDefinition(langdef, pgdef, name, cls, macroURI, compose, inline);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63034,
+    "v2": "Class cls, String macroURI, String compose, boolean inline) { return new MacroDefinition(langdef, pgdef, name, cls, macroURI, compose, inline);",
+    "resolution": "Class<? extends Component> cls, String macroURI, String compose, boolean inline) { return new MacroDefinition(langdef, pgdef, name, cls, macroURI, compose, inline);",
+    "conflict": "Class<? extends Component> cls, String macroURI, boolean inline) { return new MacroDefinition(langdef, pgdef, name, cls, macroURI, inline);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63054,
+    "v2": "private static final SimpleDateFormat getHttpDateFormat() { SimpleDateFormat df = (SimpleDateFormat)_df.get();",
+    "resolution": "private static final DateFormat getDateFormat(boolean dateOnly) { final Locale locale = Locales.getCurrent(); return dateOnly ? DateFormat.getDateInstance(DateFormat.DEFAULT, locale): DateFormat.getDateTimeInstance( DateFormat.DEFAULT, DateFormat.DEFAULT, locale);",
+    "conflict": "private static final SimpleDateFormat getDateFormat() { SimpleDateFormat df = _df.get();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63057,
+    "v2": "private Map _rootAttrs; private ExValue _contentType, _docType, _firstLine, _wgtcls;",
+    "resolution": "private Map<String, ExValue> _rootAttrs; private ExValue _contentType, _docType, _firstLine, _wgtcls;",
+    "conflict": "private Map<String, ExValue> _rootAttrs; private ExValue _contentType, _docType, _firstLine;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63059,
+    "v2": "final List errs = new LinkedList();",
+    "resolution": "final List<Throwable> errs = new LinkedList<Throwable>();",
+    "conflict": "cleaned = true; final List<Throwable> errs = new LinkedList<Throwable>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63063,
+    "v2": "while (!_resumed.isEmpty()) { //no need to sync (better performance) final List list;",
+    "resolution": "while (!_resumed.isEmpty()) { //no need to sync (better performance) final List<EventProcessingThreadImpl> list;",
+    "conflict": "for (;;) { final List<EventProcessingThreadImpl> list;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63066,
+    "v2": "private TreeModel _model; private TreeitemRenderer _renderer;",
+    "resolution": "private TreeModel<Object> _model; private TreeitemRenderer _renderer;",
+    "conflict": "private TreeModel<Object> _model; private TreeitemRenderer _renderer;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63074,
+    "v2": "private List _dtzones; private boolean _btnVisible = true, _lenient = true, _dtzonesReadonly = false;",
+    "resolution": "private List<TimeZone> _dtzones; private boolean _btnVisible = true, _lenient = true, _dtzonesReadonly = false;",
+    "conflict": "private List<TimeZone> _dtzones; private boolean _btnVisible = true, _lenient = true, _open = false, _dtzonesReadonly = false;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63077,
+    "v2": "_ldefByName.put(namespace, this); final Object old = _ldefByName.put(name, this);",
+    "resolution": "_ldefByName.put(namespace, this); final LanguageDefinition old = _ldefByName.put(name, this);",
+    "conflict": "final LanguageDefinition old = _ldefByName.put(name, this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63080,
+    "v2": "for (Iterator it = _pages.iterator(); it.hasNext();) { final Page page = (Page)it.next();",
+    "resolution": "for (Page page: _pages) {",
+    "conflict": "for (Page page: _pages) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 63123,
+    "v2": "import org.zkoss.zk.device.Devices; import org.zkoss.zk.device.Device;",
+    "resolution": "import org.zkoss.zk.device.Devices; import org.zkoss.zk.device.Device;import org.zkoss.zk.ui.impl.Utils;",
+    "conflict": "import org.zkoss.zk.ui.impl.Utils;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63126,
+    "v2": "} public void removeComponent(Component comp) { removeComponent(comp, false);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63128,
+    "v2": "*/ public void addMold(String name, String moldURI); /** @deprecated As of release 5.0.4, replaced with {@link #addMold(String, String)}.",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63135,
+    "v2": "if (_auxinf != null && !_auxinf.visible) //don't call isVisible since it might be overriden (backward compatible) renderer.render(\"visible\", false);",
+    "resolution": "if (_auxinf != null && !_auxinf.visible) //don't call isVisible since it might be overriden (backward compatible) renderer.render(\"visible\", false);",
+    "conflict": "if (!_visible) renderer.render(\"visible\", false); render(renderer, \"autag\", getAutag());"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 63136,
+    "v2": "final String seqId = resultOfRepeat != null ? ((ExecutionCtrl)exec).getRequestId(): null;",
+    "resolution": "final String seqId = resultOfRepeat != null ? ((ExecutionCtrl)exec).getRequestId(): null;final ExecutionMonitor execmon = desktop.getWebApp() .getConfiguration().getExecutionMonitor();",
+    "conflict": "final ExecutionMonitor execmon = desktop.getWebApp() .getConfiguration().getExecutionMonitor();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63145,
+    "v2": "",
+    "resolution": "",
+    "conflict": "Object val = clone._ausvc; if (val instanceof ComponentCloneListener) clone._ausvc = (AuService)((ComponentCloneListener)val).willClone(clone);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63149,
+    "v2": "/** @deprecated As of release 5.0.2 */ public void setServerPushDelay(int min, int max, int factor);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63193,
+    "v2": "import org.zkoss.lang.Strings; import org.zkoss.xml.HTMLs;",
+    "resolution": "import org.zkoss.lang.Strings; import org.zkoss.html.HTMLs;",
+    "conflict": "import org.zkoss.html.HTMLs;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63295,
+    "v2": "",
+    "resolution": "* <p>Note: The attribute is removed (by {@link #removeAttribute} * if value is null. *",
+    "conflict": "* <p>Note: The attribute is removed (by {@link #removeAttribute} * if value is null. *"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63296,
+    "v2": "/** @deprecated As of release 5.0.2 */ public void setServerPushDelay(int min, int max, int factor);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63305,
+    "v2": "ip.interpret(script, _ns);",
+    "resolution": "ip.interpret(script, this);",
+    "conflict": "ip.interpret(script, this);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63343,
+    "v2": "private static boolean isVariableSerializable(String name, Object value) { return !\"spaceScope\".equals(name) && !\"spaceOwner\".equals(name) /*Removed in 3.6.4: && !(value instanceof Component)*/; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63352,
+    "v2": "sessDidActivate(page, true); } private void sessDidActivate(Page page, boolean pageLevelIdSpace) {",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63399,
+    "v2": "* @param id the time zone's ID, such as GMT+12. * The time zone will be retrieved by calling TimeZone.getTimeZone(id).",
+    "resolution": "* @param id the time zone's ID, such as GMT+12. * The time zone will be retrieved by calling TimeZone.getTimeZone(id).",
+    "conflict": "* @since 3.6.3"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 63402,
+    "v2": "import java.util.Calendar;",
+    "resolution": "import java.util.Calendar;import java.util.Iterator; import java.io.StringWriter;",
+    "conflict": "import java.util.Iterator; import java.io.StringWriter;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63412,
+    "v2": "_compact = \"zh\".equals(Locales.getCurrent().getLanguage()); }",
+    "resolution": "}",
+    "conflict": "}"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63433,
+    "v2": "import org.zkoss.zk.ui.Page;",
+    "resolution": "import org.zkoss.zk.ui.Executions; import org.zkoss.zk.ui.Execution; import org.zkoss.zk.ui.Page;",
+    "conflict": "import org.zkoss.zk.ui.Executions; import org.zkoss.zk.ui.Execution; import org.zkoss.zk.ui.Desktop;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63434,
+    "v2": "addZkHeadHtmlTags(buf, getPage(), \"head\");",
+    "resolution": "final Execution exec = Executions.getCurrent(); if (exec != null) addHeaderZkTags(exec, getPage(), buf, \"head\");",
+    "conflict": "final Execution exec = Executions.getCurrent(); if (exec != null) addZkHtmlTags(exec, getDesktop(), buf, \"head\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63450,
+    "v2": "} else smartUpdate(\"select\", item.getUuid());",
+    "resolution": "} else smartUpdate(\"selectedItem\", item.getUuid());",
+    "conflict": "} else smartUpdate(\"selectedItem\", item.getUuid());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63457,
+    "v2": "if (log.debugable()) log.debug(\"Create desktop for \"+path); setRequestLocal(request, ATTR_DESKTOP,",
+    "resolution": "if (log.debugable()) log.debug(\"Create desktop for \"+path); request.setAttribute(ATTR_DESKTOP,",
+    "conflict": "if (D.ON && log.debugable()) log.debug(\"Create desktop for \"+path); request.setAttribute(ATTR_DESKTOP,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 63462,
+    "v2": "/** The prefix used to encode URL. */ private String _encURLPrefix;",
+    "resolution": "/** The prefix used to encode URL. */ private String _encURLPrefix;/** Additional locator. */ private Locator _extraloc;",
+    "conflict": "/** Additional locator. */ private Locator _extraloc;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63465,
+    "v2": "",
+    "resolution": "",
+    "conflict": "* <p>Note: unlike {@link Encodes#encodeURL(ServletContext, ServletRequest, ServletResponse, String)}, * it always locates the Locale by handling \"*\". *"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63466,
+    "v2": "_spaceInfo = this instanceof IdSpace ? new SpaceInfo(this): null;",
+    "resolution": "_spaceInfo = this instanceof IdSpace ? new SpaceInfo(): null;",
+    "conflict": "init();  _spaceInfo = this instanceof IdSpace ? new SpaceInfo(): null;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63470,
+    "v2": "if (_attrs != null) willPassivate(_attrs.values());",
+    "resolution": "if (_attrs != null) { willPassivate(_attrs.getAttributes().values()); willPassivate(_attrs.getListeners());",
+    "conflict": "willPassivate(_attrs.getAttributes().values()); willPassivate(_attrs.getListeners());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63486,
+    "v2": "* <p>Default: none (none since 3.6.0, while",
+    "resolution": "* <p>Default: none (none since 3.6.0, while",
+    "conflict": "* <p>If not specified, it shows up an error message at client. * * <p>Default: none (since 3.6.0;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63496,
+    "v2": "private static final Log _zklog = Log.lookup(\"org.zkoss.zk.log\"); private static final long serialVersionUID = 20091008L;",
+    "resolution": "private static final long serialVersionUID = 20091008L;",
+    "conflict": "private static final long serialVersionUID = 20081026L;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63498,
+    "v2": "//private static final Log log = Log.lookup(AbstractComponent.class); private static final long serialVersionUID = 20091007L;",
+    "resolution": "private static final Log log = Log.lookup(AbstractComponent.class); private static final long serialVersionUID = 20091007L;",
+    "conflict": "private static final Log log = Log.lookup(AbstractComponent.class); private static final long serialVersionUID = 20070920L;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63514,
+    "v2": "abstract public class GenericAutowireComposer extends GenericComposer implements ComponentCloneListener {",
+    "resolution": "abstract public class GenericAutowireComposer extends GenericComposer implements ComponentCloneListener {",
+    "conflict": "abstract public class GenericAutowireComposer extends GenericComposer implements ComponentCloneListener {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63515,
+    "v2": "import org.zkoss.zk.scripting.Namespace; import org.zkoss.zk.scripting.NamespaceActivationListener;",
+    "resolution": "import org.zkoss.lang.Objects;",
+    "conflict": "import org.zkoss.lang.Objects;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63523,
+    "v2": "sessDidActivate(page, true); } public void sessDidActivate(Page page, boolean pageLevelIdSpace) {",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63549,
+    "v2": "protected StringWriter _out; private boolean _compress = true;",
+    "resolution": "private JSONObject _out; private JSONArray _rs; private boolean _compress = true;",
+    "conflict": "private JSONObject _out; private JSONArray _rs;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 63714,
+    "v2": "private transient Comparator _sortAsc, _sortDsc;",
+    "resolution": "private transient Comparator _sortAsc, _sortDsc; private String _sortAscNm = \"none\"; private String _sortDscNm = \"none\";",
+    "conflict": "private Comparator _sortAsc, _sortDsc; private String _sortAscNm = \"none\"; private String _sortDscNm = \"none\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 63771,
+    "v2": "if (atg >= _pgi.getPageCount()) atg = _pgi.getPageCount() - 1;",
+    "resolution": "if (atg >= _pgi.getPageCount()) atg = _pgi.getPageCount() - 1;",
+    "conflict": "if (atg > _pgi.getPageCount()) atg = _pgi.getPageCount();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 63858,
+    "v2": "private static Helper _helper = new HtmlHelper(); private static final String ATTR_ZKHEAD_FOUND = \"org.zkoss.zk.ui.zkheadFound\";",
+    "resolution": "private static final Helper _helper = new HtmlHelper(); private static final String ATTR_TOP_NATIVE = \"org.zkoss.zk.top-native\"; private static final String ATTR_RENDER_CONTEXT = \"org.zkoss.zk.render-context\";",
+    "conflict": "private static final Helper _helper = new HtmlHelper(); private static final String ATTR_TOP_NATIVE = \"org.zkoss.zk.top-native\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 63944,
+    "v2": "String uri = Devices.getTimeoutURI(getDeviceType(request));",
+    "resolution": "final String deviceType = getDeviceType(request); String uri = Devices.getTimeoutURI(deviceType);",
+    "conflict": "final String deviceType = getDeviceType(request); String uri = Devices.getTimeoutURI(deviceType);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64171,
+    "v2": "return _zclass == null ? \"z-checkbox\" : _zclass; }",
+    "resolution": "return _zclass == null ? \"z-checkbox\" : _zclass;}",
+    "conflict": "return _zclass == null ? \"z-checkbox\" : _zclass;}"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 64178,
+    "v2": "page = execCtrl.getCurrentPage(); } else if (page != null) { parent = ((PageCtrl)page).getDefaultParent();",
+    "resolution": "page = execCtrl.getCurrentPage();",
+    "conflict": "page = getCurrentPage(exec);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64181,
+    "v2": "_promptDelay = 900, _tooltipDelay = 800, _resendDelay, _clkFilterDelay = 0;",
+    "resolution": "_promptDelay = 900, _tooltipDelay = 800, _resendDelay = -1, _clkFilterDelay = 0;",
+    "conflict": "_promptDelay = 900, _tooltipDelay = 800, _resendDelay = -1;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 64189,
+    "v2": "/** Whether to use the same UUID sequence. */ private boolean _repeatUuid;",
+    "resolution": "/** Whether to use the same UUID sequence. */ private boolean _repeatUuid;/** Whether the ZK application is crawlable. */ private boolean _crawlable;",
+    "conflict": "/** Whether the ZK application is crawlable. */ private boolean _crawlable;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64213,
+    "v2": "} public String getOuterAttrs() { final String attrs = super.getOuterAttrs(); return _autodrop ?  attrs + \" z.autodrop=\\\"true\\\"\": attrs;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64214,
+    "v2": "}  public String getImgTag() { return getImgTag(getZclass() + \"-img\", true);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64280,
+    "v2": "import org.zkoss.zk.ui.event.Event; import org.zkoss.zk.ui.event.Events;",
+    "resolution": "import org.zkoss.zk.ui.event.*;",
+    "conflict": "import org.zkoss.zk.ui.event.*;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64381,
+    "v2": "public class Include extends XulElement implements DynamicPropertied, org.zkoss.zul.api.Include {",
+    "resolution": "public class Include extends XulElement implements DynamicPropertied, org.zkoss.zul.api.Include, Includer {",
+    "conflict": "public class Include extends XulElement implements DynamicPropertied, org.zkoss.zul.api.Include, Includer {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64400,
+    "v2": "public void redraw(Collection responses, Writer out) throws IOException {",
+    "resolution": "public void redraw(Writer out) throws IOException {",
+    "conflict": "public void redraw(Writer out) throws IOException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64412,
+    "v2": "final String zktags = ZkFns.outZkHtmlTags();",
+    "resolution": "final String zktags = HtmlPageRenders.outZkTags(Executions.getCurrent(), null, null);",
+    "conflict": "final String zktags = HtmlPageRenders.outZkTags(Executions.getCurrent(), null, null);"
+  }
+]
+}

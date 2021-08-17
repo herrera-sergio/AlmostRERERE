@@ -1,0 +1,1165 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 51967,
+    "v2": "ContentFilter.filter(inputStream, outputStream, \"image/png\", new URI(\"http://127.0.0.1:8888/\"), null, null, null);",
+    "resolution": "ContentFilter.filter(inputStream, outputStream, \"image/png\", new URI(\"http://127.0.0.1:8888/\"), null, null, null, null); }",
+    "conflict": "ContentFilter.filter(inputStream, outputStream, \"image/png\", new URI(\"http://127.0.0.1:8888/\"), null, null, null, null); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 51969,
+    "v2": "ContentFilter.filter(inputStream, outputStream, \"image/png\", new URI(\"http://127.0.0.1:8888/\"), null, null, null); }",
+    "resolution": "ContentFilter.filter(inputStream, outputStream, \"image/png\", new URI(\"http://127.0.0.1:8888/\"), null, null, null); }",
+    "conflict": "ContentFilter.filter(inputStream, outputStream, \"image/png\", new URI(\"http://127.0.0.1:8888/\"), null, null, null, null);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 51991,
+    "v2": "String[] inlineURIAttrs, String[] booleanAttrs) { super(tag, allowedAttrs, uriAttrs, inlineURIAttrs, booleanAttrs);",
+    "resolution": "String[] inlineURIAttrs, String[] booleanAttrs) { super(tag, allowedAttrs, uriAttrs, inlineURIAttrs, booleanAttrs); allowedHTMLTags.add(tag);",
+    "conflict": "String[] inlineURIAttrs) { super(tag, allowedAttrs, uriAttrs, inlineURIAttrs); allowedHTMLTags.add(tag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52206,
+    "v2": "} catch(IOException e) { Logger.error(this, \"Peer \" + source + \" asked us for the blob file for the \"+name+\" jar, we have downloaded it but can't read the file on disk!: \" + e, e); return;",
+    "resolution": "} catch(IOException e) { Logger.error(this, \"Peer \" + source + \" asked us for the blob file for the \"+name+\" jar, we have downloaded it but can't read the file on disk!: \" + e, e); return;",
+    "conflict": "} catch(IOException e) { Logger.error(this, \"Peer \" + source + \" asked us for the blob file for the \"+name+\" jar, we have downloaded it but can't read the file on disk!: \" + e, e); return;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52209,
+    "v2": "} catch(IOException e) { Logger.error(this, \"Peer \" + source + \" asked us for the blob file for the \"+name+\" jar, we have downloaded it but can't read the file due to a disk I/O error: \" + e, e); return;",
+    "resolution": "} catch(IOException e) { Logger.error(this, \"Peer \" + source + \" asked us for the blob file for the \"+name+\" jar, we have downloaded it but can't read the file due to a disk I/O error: \" + e, e); return;",
+    "conflict": "} catch(IOException e) { Logger.error(this, \"Peer \" + source + \" asked us for the blob file for the \"+name+\" jar, we have downloaded it but can't read the file due to a disk I/O error: \" + e, e); return;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52211,
+    "v2": "Logger.error(this, \"Peer \" + source + \" asked us for the dependency with hash \"+HexUtil.bytesToHex(buf.getData())+\" jar, we have downloaded it but \" + (e instanceof FileNotFoundException ? \"don't have the file\" : \"can't read the file\")+ \" even though we did have it when we checked!: \" + e, e);",
+    "resolution": "Logger.error(this, \"Peer \" + source + \" asked us for the dependency with hash \"+HexUtil.bytesToHex(buf.getData())+\" jar, we have downloaded it but \" + (e instanceof FileNotFoundException ? \"don't have the file\" : \"can't read the file\")+ \" even though we did have it when we checked!: \" + e, e);",
+    "conflict": "Logger.error(this, \"Peer \" + source + \" asked us for the dependency with hash \"+HexUtil.bytesToHex(buf.getData())+\" jar, we have downloaded it but \" + (e instanceof FileNotFoundException ? \"don't have the file\" : \"can't read the file\")+ \" even though we did have it when we checked!: \" + e, e);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52215,
+    "v2": "import com.db4o.ObjectContainer;  import freenet.client.async.ClientContext; import freenet.crypt.EncryptedRandomAccessThing;",
+    "resolution": "import freenet.crypt.AEADCryptBucket; import freenet.client.async.ClientContext; import freenet.crypt.EncryptedRandomAccessThing;",
+    "conflict": "import freenet.crypt.AEADCryptBucket;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52228,
+    "v2": "return new int[] { 8, 9, 10 }; else return new int[] { 8, 9, 10 };",
+    "resolution": "return new int[] { 6, 7, 8, 9, 10 }; else return new int[] { 7, 8, 9, 10 };",
+    "conflict": "return new int[] { 6, 7, 8, 9 }; else return new int[] { 7, 8, 9 };"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52231,
+    "v2": "for (int peerIndex = 0, peerCount = peerNodeStatuses.length; peerIndex < peerCount; peerIndex++) { PeerNodeStatus peerNodeStatus = peerNodeStatuses[peerIndex]; drawRow(peerTable, peerNodeStatus, mode >= PageMaker.MODE_ADVANCED, fProxyJavascriptEnabled, now, path, enablePeerActions, endCols, drawMessageTypes, totalSelectionRate, fix1);",
+    "resolution": "for (PeerNodeStatus peerNodeStatus: peerNodeStatuses) { drawRow(peerTable, peerNodeStatus, advancedMode, fProxyJavascriptEnabled, now, path, enablePeerActions, endCols, drawMessageTypes, totalSelectionRate, fix1);",
+    "conflict": "for (PeerNodeStatus peerNodeStatus: peerNodeStatuses) { drawRow(peerTable, peerNodeStatus, advancedMode, fProxyJavascriptEnabled, now, path, enablePeerActions, endCols, drawMessageTypes, totalSelectionRate, fix1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52233,
+    "v2": "} else if(!MessageDigest.isEqual(myNi, nonceInitiator)) { if(shouldLogErrorInHandshake(t1)) { Logger.normal(this, \"Ignoring old JFK(2) (different nonce to the one we sent - either a timing artefact or an attempt to change the nonce)\"); } return;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52241,
+    "v2": "for(PeerNode oldPeer: opennet.getOldPeers()) { if(tryProcessAuth(buf, offset, length, oldPeer, peer, true, now)) return DECODED.DECODED;",
+    "resolution": "for(PeerNode oldPeer : opennet.getOldPeers()) { if(tryProcessAuth(buf, offset, length, oldPeer.getPeerTransport(sock), address, true, now)) return DECODED.DECODED;",
+    "conflict": "PeerNode[] oldPeers = opennet.getOldPeers(); for(PeerNode oldPeer : oldPeers) { if(tryProcessAuth(buf, offset, length, oldPeer.getPeerTransport(sock), address, true, now)) return DECODED.DECODED;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52246,
+    "v2": "for(PeerNode pn: node.peers.myPeers()) { if(pn.handshakeUnknownInitiator() && pn.getOutgoingMangler() == packetMangler)",
+    "resolution": "for(PeerNode pn: node.peers.myPeers()) { if(pn.handshakeUnknownInitiator() && pn.getMode() == transportMode && pn.containsTransport(plugin.transportName))",
+    "conflict": "PeerNode[] peers = node.peers.myPeers(); for(int i=0;i<peers.length;i++) { PeerNode pn = peers[i]; if(pn.handshakeUnknownInitiator() && pn.getMode() == transportMode && pn.containsTransport(plugin.transportName))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52270,
+    "v2": "persistentQueue[i].clear();",
+    "resolution": "persistentQueue[i].clear();",
+    "conflict": "persistentCheckerItems[i].clear(); persistentSchedulers[i].clear(); persistentGetters[i].clear(); persistentKeys[i].clear(); persistentBlockSets[i].clear();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52280,
+    "v2": "for(PeerNode peer : peers) { if(Arrays.equals(peer.getIdentity(), identity)) return peer;",
+    "resolution": "for(PeerNode peer : peers) { if(Arrays.equals(peer.getIdentity(), identity)) return peer;",
+    "conflict": "for(int i = 0; i < peers.length; i++) { if(Arrays.equals(peers[i].getIdentity(), identity)) return peers[i];"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52284,
+    "v2": "} else if (x == 1) { timedJobsByTime.put(t, newJobs[0]); } else { if(x != newJobs.length)",
+    "resolution": "} else if (x == 1) { timedJobsByTime.put(t, newJobs[0]); } else { if(x != newJobs.length)",
+    "conflict": "} else { if(x != newJobs.length) // XXX impossible"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52285,
+    "v2": "} else if (x == 1) { timedJobsByTime.put(t, newJobs[0]); } else { if(x != newJobs.length)",
+    "resolution": "} else if (x == 1) { timedJobsByTime.put(t, newJobs[0]); } else { if(x != newJobs.length)",
+    "conflict": "} else { if(x != newJobs.length) // XXX impossible"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52288,
+    "v2": "persistentCheckerItems[i].clear(); persistentSchedulers[i].clear(); persistentGetters[i].clear(); persistentKeys[i].clear(); persistentBlockSets[i].clear();",
+    "resolution": "persistentQueue[i].clear();",
+    "conflict": "persistentQueue[i].clear();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52292,
+    "v2": "final List<Runnable>[] dbJobs = node.clientCore.clientDatabaseExecutor.getQueuedJobsByPriority();  for(List<Runnable> list : dbJobs) {",
+    "resolution": "final Runnable[][] dbJobs = node.clientCore.clientDatabaseExecutor.getQueuedJobsByPriority();  for(Runnable[] list : dbJobs) {",
+    "conflict": "final Runnable[][] dbJobs = node.clientCore.clientDatabaseExecutor.getQueuedJobsByPriority();  for(Runnable[] list : dbJobs) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52299,
+    "v2": "for(int i = 0; i < peers.length; i++) { if(Arrays.equals(peers[i].getIdentity(), identity)) return peers[i];",
+    "resolution": "for(PeerNode peer : peers) { if(Arrays.equals(peer.getIdentity(), identity)) return peer;",
+    "conflict": "for(PeerNode peer : peers) { if(Arrays.equals(peer.getIdentity(), identity)) return peer;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52304,
+    "v2": "} else { if(x != newJobs.length) // XXX impossible",
+    "resolution": "} else if (x == 1) { timedJobsByTime.put(t, newJobs[0]); } else { if(x != newJobs.length)",
+    "conflict": "} else if (x == 1) { timedJobsByTime.put(t, newJobs[0]); } else { if(x != newJobs.length)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52305,
+    "v2": "} else { if(x != newJobs.length) // XXX impossible",
+    "resolution": "} else if (x == 1) { timedJobsByTime.put(t, newJobs[0]); } else { if(x != newJobs.length)",
+    "conflict": "} else if (x == 1) { timedJobsByTime.put(t, newJobs[0]); } else { if(x != newJobs.length)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52314,
+    "v2": "byte[] initiatorExponential = Arrays.copyOfRange(payload, inputOffset, inputOffset+modulusLength); inputOffset += modulusLength;",
+    "resolution": "byte[] initiatorExponential = Arrays.copyOfRange(payload, inputOffset, inputOffset+modulusLength); inputOffset += modulusLength;",
+    "conflict": "byte[] initiatorExponential = new byte[DiffieHellman.modulusLengthInBytes()]; System.arraycopy(payload, inputOffset, initiatorExponential, 0, DiffieHellman.modulusLengthInBytes()); inputOffset += DiffieHellman.modulusLengthInBytes();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52320,
+    "v2": "pn.sentPacket(); pn.reportOutgoingBytes(data.length); if(pn.shouldThrottle()) {",
+    "resolution": "peerTransport.sentPacket(); peerTransport.reportOutgoingBytes(data.length); if(peerTransport.shouldThrottle()) {",
+    "conflict": "peerTransport.sentPacket(); peerTransport.reportOutgoingPacket(data, 0, data.length, now); if(peerTransport.shouldThrottle()) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52321,
+    "v2": "List<MessageWrapper> messages = new ArrayList<MessageWrapper>(); List<int[]> ranges = new ArrayList<int[]>();",
+    "resolution": "PeerMessageTracker pmt; List<MessageWrapper> messages = new ArrayList<MessageWrapper>(); List<int[]> ranges = new ArrayList<int[]>();",
+    "conflict": "PeerMessageTracker pmt; LinkedList<MessageWrapper> messages = new LinkedList<MessageWrapper>(); LinkedList<int[]> ranges = new LinkedList<int[]>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52327,
+    "v2": "public synchronized boolean noContactDetails() { return handshakeIPs == null || handshakeIPs.length == 0; }  public synchronized void reportIncomingBytes(int length) {",
+    "resolution": "public synchronized void reportIncomingBytes(int length) { totalBytesIn += length; }",
+    "conflict": "synchronized void reportIncomingBytes(int length) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52331,
+    "v2": "import freenet.node.useralerts.UserAlertManager;",
+    "resolution": "import freenet.pluginmanager.MalformedPluginAddressException; import freenet.pluginmanager.PacketTransportPlugin; import freenet.pluginmanager.PluginAddress; import freenet.pluginmanager.UnsupportedIPAddressOperationException;import freenet.node.useralerts.UserAlertManager;",
+    "conflict": "import freenet.pluginmanager.MalformedPluginAddressException; import freenet.pluginmanager.PacketTransportPlugin; import freenet.pluginmanager.PluginAddress; import freenet.pluginmanager.UnsupportedIPAddressOperationException;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52360,
+    "v2": "private final PacketSocketHandler sock;",
+    "resolution": "/* * This object was of type PacketSocketHandler, but now PacketTransportPlugin extends PacketSocketHandler. */ private final PacketTransportPlugin sock; protected final String transportName;",
+    "conflict": "/* * This object was of type PacketSocketHandler, but now PacketTransportPlugin extends PacketSocketHandler. */ private final PacketTransportPlugin sock; protected final String transportName;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52364,
+    "v2": "if(negType > 7) Logger.error(this, \"Unknown neg type: \"+negType); else Logger.warning(this, \"Received a setup packet with unsupported obsolete neg type: \"+negType);",
+    "resolution": "if(negType > 7) Logger.error(this, \"Unknown neg type: \"+negType); else Logger.warning(this, \"Received a setup packet with unsupported obsolete neg type: \"+negType);",
+    "conflict": "Logger.error(this, \"Unknown neg type: \"+negType);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52365,
+    "v2": "if(negType > 7) Logger.error(this, \"Unknown neg type: \"+negType); else Logger.warning(this, \"Received a setup packet with unsupported obsolete neg type: \"+negType);",
+    "resolution": "if(negType > 7) Logger.error(this, \"Unknown neg type: \"+negType); else Logger.warning(this, \"Received a setup packet with unsupported obsolete neg type: \"+negType);",
+    "conflict": "Logger.error(this, \"Unknown neg type: \"+negType);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52367,
+    "v2": "private final LRUMap<InetAddress, Long> throttleRekeysByIP = LRUMap.createSafeMap(InetAddressComparator.COMPARATOR);  private static final int REKEY_BY_IP_TABLE_SIZE = 1024;",
+    "resolution": "private final LRUMap<PluginAddress, Long> throttleRekeysByAddress = LRUMap.createSafeMap(PluginAddressComparator.COMPARATOR);  private static final int REKEY_BY_IP_TABLE_SIZE = 1024;",
+    "conflict": "private final LRUHashtable<PluginAddress, Long> throttleRekeysByAddress = new LRUHashtable<PluginAddress, Long>();  private final int REKEY_BY_IP_TABLE_SIZE = 1024;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52373,
+    "v2": "private HashSet<Peer> peersWithProblems = new HashSet<Peer>();",
+    "resolution": "private HashSet<PluginAddress> addressesWithProblems = new HashSet<PluginAddress>();",
+    "conflict": "private HashSet<PluginAddress> addressesWithProblems = new HashSet<PluginAddress>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52374,
+    "v2": "@Override public int[] supportedNegTypes(boolean forPublic) {",
+    "resolution": "/** * List of supported negotiation types in preference order (best last) */ public static int[] supportedNegTypes(boolean forPublic) {",
+    "conflict": "/** * List of supported negotiation types in preference order (best last) */ public static int[] supportedNegTypes(boolean forPublic) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52392,
+    "v2": "/** Time after which we log message requeues while rate limiting */ private long nextMessageRequeueLogTime; /** Interval between rate limited message requeue logs (in milliseconds) */ private static final long messageRequeueLogRateLimitInterval = 1000; /** Number of messages to be requeued after which we rate limit logging of such */ private static final int messageRequeueLogRateLimitThreshold = 15;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52412,
+    "v2": "}",
+    "resolution": "this.transportPlugin = transportPlugin; }",
+    "conflict": "this.transportPlugin = transportPlugin; }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52413,
+    "v2": "NewPacketFormat npf = new NewPacketFormat(null, 0, 0); PeerMessageQueue pmq = new PeerMessageQueue(); SessionKey s = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1);",
+    "resolution": "NewPacketFormat npf = new NewPacketFormat(null, null); PeerMessageQueue pmq = new PeerMessageQueue(); SessionKey s = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null);",
+    "conflict": "NewPacketFormat npf = new NewPacketFormat(null, null); PeerMessageQueue pmq = new PeerMessageQueue(new NullBasePeerNode()); SessionKey s = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52414,
+    "v2": "NewPacketFormat npf = new NewPacketFormat(pn, 0, 0); PeerMessageQueue pmq = new PeerMessageQueue(); SessionKey s = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1);",
+    "resolution": "NewPacketFormat npf = new NewPacketFormat(pn, null); PeerMessageQueue pmq = new PeerMessageQueue(); SessionKey s = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null);",
+    "conflict": "NewPacketFormat npf = new NewPacketFormat(pn, null); PeerMessageQueue pmq = new PeerMessageQueue(pn); SessionKey s = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52425,
+    "v2": "NewPacketFormat receiver = new NewPacketFormat(receiverNode, 0, 0); SessionKey senderKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1); SessionKey receiverKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1);",
+    "resolution": "NewPacketFormat receiver = new NewPacketFormat(receiverNode, null); SessionKey senderKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null); SessionKey receiverKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null);",
+    "conflict": "NewPacketFormat receiver = new NewPacketFormat(receiverNode, null); SessionKey senderKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null); SessionKey receiverKey = new SessionKey(null, null, null, null, null, null, null, null, new NewPacketFormatKeyContext(0, 0), 1, null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52426,
+    "v2": "import freenet.io.comm.SocketHandler; import freenet.io.comm.Peer.LocalAddressException; import freenet.io.xfer.PacketThrottle;",
+    "resolution": "import freenet.io.xfer.PacketThrottle; import freenet.pluginmanager.PacketTransportPlugin; import freenet.pluginmanager.TransportPlugin;",
+    "conflict": "import freenet.io.xfer.PacketThrottle; import freenet.pluginmanager.PacketTransportPlugin; import freenet.pluginmanager.TransportPlugin;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52427,
+    "v2": "public int getThrottleWindowSize() { // Arbitrary. return 10;",
+    "resolution": "public int getThrottleWindowSize() { // Arbitrary. return 10;public PeerMessageTracker getPeerMessageTracker() { return null;",
+    "conflict": "public PeerMessageTracker getPeerMessageTracker() { return null;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52430,
+    "v2": "public static final String bytesToHex(byte[] bs, int off, int length) { if (bs.length < off+length) throw new IllegalArgumentException(\"Total length: \" + bs.length + \", offset: \" + off + \", length: \" + length);",
+    "resolution": "public static final String bytesToHex(byte[] bs, int off, int length) { if (bs.length < off+length) throw new IllegalArgumentException(\"Total length: \" + bs.length + \", offset: \" + off + \", length: \" + length);",
+    "conflict": "public static String bytesToHex(byte[] bs, int off, int length) { if (bs.length <= off || bs.length < off+length) throw new IllegalArgumentException();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52440,
+    "v2": "* @param dis * @throws IOException If the length integer is negative or exceeds 32KiB.",
+    "resolution": "* @param dis to read bytes from * @throws IllegalArgumentException If the length integer is negative. * @throws IOException error reading from dis",
+    "conflict": "* @param dis to read bytes from * @throws IllegalArgumentException If the length integer is negative. * @throws IOException error reading from dis"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52442,
+    "v2": "float[] array = new float[dis.readShort()];",
+    "resolution": "final short length = dis.readShort(); if (length < 0 || length > MAX_ARRAY_LENGTH/4) { throw new IOException(\"Invalid flat array length: \" + length); } float[] array = new float[length];",
+    "conflict": "final short length = dis.readShort(); if (length < 0 || length > MAX_ARRAY_LENGTH/4) { throw new IOException(\"Invalid flat array length: \" + length); } float[] array = new float[length];"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52471,
+    "v2": "* @param ignoreOld If true, ignore any old cached copies of the plugin, * and download a new version anyway. This is especially important on Windows, * where we will not usually be able to delete the file after determining * that it is too old.",
+    "resolution": "* @param ignoreOld If true, ignore any old cached copies of the plugin, * and download a new version anyway. This is especially important on Windows, * where we will not usually be able to delete the file after determining * that it is too old.",
+    "conflict": "* @param ignoreOld"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52491,
+    "v2": "addOfficialPlugin(\"Freetalk\", false, 6, true, new FreenetURI(\"CHK@VDHh51wa~-bP-XXsy0ME9sj14x143vPrWpwrt0ej4K4,BmWr7cIAgLa776LPiUWxuyFgWvoK66JO~8AtjUIMqN8,AAIC--8/Freetalk.jar\"), false, false, false); addOfficialPlugin(\"WebOfTrust\", false, 6, true, new FreenetURI(\"CHK@nnE9Wq02H7WKxksE0bL9vULdNFctQIetQGnGk7Kzwmc,P6Lo5K~qyg0929CaMRTaRMHTIiB4FW7mbNM51by3QPE,AAIC--8/WebOfTrust.jar\"), false, false, false);",
+    "resolution": "addOfficialPlugin(\"Freetalk\", false, 6, true, new FreenetURI(\"CHK@VDHh51wa~-bP-XXsy0ME9sj14x143vPrWpwrt0ej4K4,BmWr7cIAgLa776LPiUWxuyFgWvoK66JO~8AtjUIMqN8,AAIC--8/Freetalk.jar\"), false, false, false); // WoT: Testnet fork, alternative seed identities. addOfficialPlugin(\"WebOfTrust\", false, 5, true, new FreenetURI(\"CHK@bkB9x~mIAc1jvKD2UK8mmRaxtKR5-usC2mWaJ1pCII0,zC1aRp2Crxct5wtZeQkt2q~XwKiNG7E8H0ZIico0K5s,AAIC--8/WebOfTrust.jar\"), false, false, false);",
+    "conflict": "addOfficialPlugin(\"Freetalk\", false, 5, true, new FreenetURI(\"CHK@fnUq1nz-cS3sais7CdhWqWQuCK2nAb7MtNn3UYJf2Gc,yRFjWgbjZMb~hb0di5TDtZqjl9Lrxwr-k93eGJtvYZ0,AAIC--8/Freetalk.jar\"), false, false, false); // WoT: Testnet fork, alternative seed identities. addOfficialPlugin(\"WebOfTrust\", false, 5, true, new FreenetURI(\"CHK@bkB9x~mIAc1jvKD2UK8mmRaxtKR5-usC2mWaJ1pCII0,zC1aRp2Crxct5wtZeQkt2q~XwKiNG7E8H0ZIico0K5s,AAIC--8/WebOfTrust.jar\"), false, false, false);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52492,
+    "v2": "// If wrapper.conf currently contains freenet-ext.jar.new, we need to update wrapper.conf even // on unix. Reason: freenet-ext.jar.new won't be read if it's not the first item on the classpath, // because freenet.jar includes freenet-ext.jar implicitly via its manifest. boolean tryEasyWay = File.pathSeparatorChar == ':' && !ctx.currentExtJarHasNewExtension();",
+    "resolution": "// If wrapper.conf currently contains freenet-ext.jar.new, we need to update wrapper.conf even // on unix. Reason: freenet-ext.jar.new won't be read if it's not the first item on the classpath, // because freenet.jar includes freenet-ext.jar implicitly via its manifest. boolean tryEasyWay = File.pathSeparatorChar == ':' && !ctx.currentExtJarHasNewExtension();",
+    "conflict": "boolean tryEasyWay = File.pathSeparatorChar == ':' && !hasNewExtJar;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52505,
+    "v2": "/** Only used in rare special cases e.g. ClientRequestSelector. * FIXME add some interfaces to get rid of this gross layer violation. */ Node getNode() { return node;",
+    "resolution": "/** Only used in rare special cases e.g. ClientRequestSelector. * FIXME add some interfaces to get rid of this gross layer violation. */ Node getNode() { return node;public void setUseAIMDs(boolean val) { starter.setUseAIMDs(val);",
+    "conflict": "public void setUseAIMDs(boolean val) { starter.setUseAIMDs(val);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52520,
+    "v2": "synchronized(sendBufferLock) { if(sendBufferUsed > maxSendBufferSize / 2) { if(logDEBUG) Logger.debug(this, \"Must send because other side buffer size is \"+sendBufferUsed);",
+    "resolution": "synchronized(sendBufferLock) { if(sendBufferUsed > maxSendBufferSize / 2) { if(logDEBUG) Logger.debug(this, \"Must send because other side buffer size is \"+sendBufferUsed);",
+    "conflict": "synchronized(bufferUsageLock) { if(usedBufferOtherSide > maxSendBufferSize / 2) { if(logDEBUG) Logger.debug(this, \"Must send because other side buffer size is \"+usedBufferOtherSide);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52526,
+    "v2": "if(p.isDisconnecting()) { if(logMINOR) Logger.minor(this, \"Skipping (disconnecting): \"+p.getPeer());",
+    "resolution": "if(p.isDisconnecting()) { if(logMINOR) Logger.minor(this, \"Skipping (disconnecting): \"+p.getPeer());if(p.outputLoadTracker(realTime).getLastIncomingLoadStats() == null) { if(logMINOR) Logger.minor(this, \"Skipping (no load stats): \"+p.getPeer());",
+    "conflict": "if(p.outputLoadTracker(realTime).getLastIncomingLoadStats() == null) { if(logMINOR) Logger.minor(this, \"Skipping (no load stats): \"+p.getPeer());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52551,
+    "v2": "int t = timeSinceSent(); node.failureTable.onFailed(key, source, htl, t, t); origTag.removeRoutingTo(source);",
+    "resolution": "int t = timeSinceSent(); node.failureTable.onFailed(key, source, htl, t, t); source.noLongerRoutingTo(origTag, false);",
+    "conflict": "node.failureTable.onFailed(key, source, htl, timeSinceSent()); source.noLongerRoutingTo(origTag, false);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52554,
+    "v2": "int t = timeSinceSent(); node.failureTable.onFailed(key, next, htl, t, t); origTag.removeRoutingTo(next);",
+    "resolution": "int t = timeSinceSent(); node.failureTable.onFailed(key, next, htl, t, t); origTag.removeRoutingTo(next);",
+    "conflict": "node.failureTable.onFailed(key, next, htl, timeSinceSent()); next.noLongerRoutingTo(origTag, false);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52559,
+    "v2": "Logger.error(this, \"Fatal timeout awaiting FNPRejectedTimeout on insert to \"+next+\" for \"+SSKInsertSender.this); next.fatalTimeout(tag, false);",
+    "resolution": "Logger.error(this, \"Fatal timeout awaiting FNPRejectedTimeout on insert to \"+next+\" for \"+SSKInsertSender.this); next.fatalTimeout(tag, false);",
+    "conflict": "Logger.error(this, \"Timed out awaiting FNPRejectedTimeout on insert to \"+next); next.noLongerRoutingTo(tag, false); next.fatalTimeout();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52570,
+    "v2": "",
+    "resolution": "",
+    "conflict": "String datastoreDir = nodeConfig.getString(\"storeDir\"); storeDir = new File(datastoreDir); if(!((storeDir.exists() && storeDir.isDirectory()) || (storeDir.mkdir()))) { msg = \"Could not find or create datastore directory\"; throw new NodeInitException(NodeInitException.EXIT_STORE_OTHER, msg); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52581,
+    "v2": "if(!(node.enableULPRDataPropagation || node.enablePerNodeFailureTables)) return;",
+    "resolution": "if(!(node.enableULPRDataPropagation || node.enablePerNodeFailureTables)) { if(logMINOR) Logger.minor(this, \"Ignoring onFound because enable ULPR = \"+node.enableULPRDataPropagation+\" and enable failure tables = \"+node.enablePerNodeFailureTables); return; }",
+    "conflict": "if(!(node.enableULPRDataPropagation || node.enablePerNodeFailureTables)) { if(logMINOR) Logger.minor(this, \"Ignoring onFound because enable ULPR = \"+node.enableULPRDataPropagation+\" and enable failure tables = \"+node.enablePerNodeFailureTables); return; }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52586,
+    "v2": "addOfficialPlugin(\"Freetalk\", false, 5, true, new FreenetURI(\"CHK@fnUq1nz-cS3sais7CdhWqWQuCK2nAb7MtNn3UYJf2Gc,yRFjWgbjZMb~hb0di5TDtZqjl9Lrxwr-k93eGJtvYZ0,AAIC--8/Freetalk.jar\"), false, false, false); addOfficialPlugin(\"WebOfTrust\", false, 5, true, new FreenetURI(\"CHK@YLoIl0~hG6BXrjG9aLhNh2HJv0p3H2jNoo3sgBhxunM,aJ63kjk7oxF1QMh4Qcd4cVTt~cXmQB5BtpOrJlJFJnI,AAIC--8/WebOfTrust.jar\"), false, false, false);",
+    "resolution": "addOfficialPlugin(\"Freetalk\", false, 5, true, new FreenetURI(\"CHK@fnUq1nz-cS3sais7CdhWqWQuCK2nAb7MtNn3UYJf2Gc,yRFjWgbjZMb~hb0di5TDtZqjl9Lrxwr-k93eGJtvYZ0,AAIC--8/Freetalk.jar\"), false, false, false); // WoT: Testnet fork, alternative seed identities. addOfficialPlugin(\"WebOfTrust\", false, 5, true, new FreenetURI(\"CHK@bkB9x~mIAc1jvKD2UK8mmRaxtKR5-usC2mWaJ1pCII0,zC1aRp2Crxct5wtZeQkt2q~XwKiNG7E8H0ZIico0K5s,AAIC--8/WebOfTrust.jar\"), false, false, false);",
+    "conflict": "addOfficialPlugin(\"Freetalk\", false, 4, true, new FreenetURI(\"CHK@u-~mSgBb~Wpff0dppSfoRaMPMdpl-v~RXvNBcWgpl20,M-Q-Wxh~k0-bS9kOhqimwLZIPM0YCtvSFcCHQWLkJPU,AAIC--8/Freetalk.jar\"), false, false, false); // WoT: Testnet fork, alternative seed identities. addOfficialPlugin(\"WebOfTrust\", false, 5, true, new FreenetURI(\"CHK@bkB9x~mIAc1jvKD2UK8mmRaxtKR5-usC2mWaJ1pCII0,zC1aRp2Crxct5wtZeQkt2q~XwKiNG7E8H0ZIico0K5s,AAIC--8/WebOfTrust.jar\"), false, false, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52678,
+    "v2": "Logger.normal(this, \"Disconnected from \" + waitingFor + \" while waiting for reply on \" + this); origTag.removeRoutingTo(waitingFor);",
+    "resolution": "Logger.normal(this, \"Disconnected from \" + waitingFor + \" while waiting for reply on \" + this); waitingFor.noLongerRoutingTo(origTag, false); origTag.removeRoutingTo(waitingFor);",
+    "conflict": "Logger.normal(this, \"Disconnected from \" + next + \" while waiting for InsertReply on \" + this); next.noLongerRoutingTo(origTag, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52679,
+    "v2": "Logger.error(this, \"Fatal timeout waiting for reply after Accepted on \"+this+\" from \"+waitingFor); waitingFor.fatalTimeout(); origTag.removeRoutingTo(waitingFor);",
+    "resolution": "Logger.error(this, \"Fatal timeout waiting for reply after Accepted on \"+this+\" from \"+waitingFor); waitingFor.fatalTimeout(); waitingFor.noLongerRoutingTo(origTag, false);",
+    "conflict": "Logger.error(this, \"Fatal timeout waiting for reply after Accepted on \"+this+\" from \"+next); next.fatalTimeout(); next.noLongerRoutingTo(origTag, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52699,
+    "v2": "NewPacketFormat npf = new NewPacketFormat(null, 0, 0); PeerMessageQueue pmq = new PeerMessageQueue();",
+    "resolution": "BasePeerNode pn = new NullBasePeerNode(); NewPacketFormat npf = new NewPacketFormat(pn, 0, 0); PeerMessageQueue pmq = new PeerMessageQueue(pn);",
+    "conflict": "BasePeerNode pn = new NullBasePeerNode(); NewPacketFormat npf = new NewPacketFormat(pn, 0, 0, NEW_FORMAT); PeerMessageQueue pmq = new PeerMessageQueue(pn);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52713,
+    "v2": "public boolean shallWeRouteAccordingToOurPeersLocation() { return node.shallWeRouteAccordingToOurPeersLocation();",
+    "resolution": "public boolean shallWeRouteAccordingToOurPeersLocation() { return node.shallWeRouteAccordingToOurPeersLocation();public void fatalTimeout() { // Disconnect. forceDisconnect(true);",
+    "conflict": "public void fatalTimeout() { // Disconnect. forceDisconnect(true);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52716,
+    "v2": "public boolean shallWeRouteAccordingToOurPeersLocation() { return false; // Irrelevant",
+    "resolution": "public boolean shallWeRouteAccordingToOurPeersLocation() { return false; // Irrelevantpublic void fatalTimeout() { // Disconnect. forceDisconnect(true);",
+    "conflict": "public void fatalTimeout() { // Disconnect. forceDisconnect(true);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 52717,
+    "v2": "public boolean shallWeRouteAccordingToOurPeersLocation() { return false; // Irrelevant",
+    "resolution": "public boolean shallWeRouteAccordingToOurPeersLocation() { return false; // Irrelevantpublic void fatalTimeout() { // Disconnect. forceDisconnect(true);",
+    "conflict": "public void fatalTimeout() { // Disconnect. forceDisconnect(true);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 52730,
+    "v2": "}  boolean wantAnonAuthChangeIP = wantAnonAuth && crypto.wantAnonAuthChangeIP();  if(wantAnonAuth && wantAnonAuthChangeIP) { if(checkAnonAuthChangeIP(opn, buf, offset, length, peer, now)) return;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52744,
+    "v2": "if(negTypes[negTypes.length - 1] != 5) { packetFormat = new FNPWrapper(this); } else { packetFormat = new NewPacketFormat(this, 0, 0); }",
+    "resolution": "if(negTypes[negTypes.length - 1] != 5) { packetFormat = new FNPWrapper(this); } else { packetFormat = new NewPacketFormat(this, 0, 0); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52762,
+    "v2": "// It could still be running. So the timeout is fatal to the node. Logger.error(this, \"Timeout awaiting Accepted/Rejected \"+this+\" to \"+next); //next.fatalTimeout(); next.noLongerRoutingTo(origTag, false);",
+    "resolution": "handleAcceptedRejectedTimeout(next, origTag);",
+    "conflict": "handleAcceptedRejectedTimeout(next, origTag);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52766,
+    "v2": "public synchronized void setSender(RequestSender rs, boolean coalesced) { // If it's because of transfer coalescing, we won't get anything from the RequestSender, so we should not wait for it. if(!coalesced) sent = true;",
+    "resolution": "public synchronized void setSender(RequestSender rs, boolean coalesced) { // If it's because of transfer coalescing, we won't get anything from the RequestSender, so we should not wait for it. if(!coalesced) sent = true;",
+    "conflict": "public synchronized void setSender(RequestSender rs) { sent = true;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52776,
+    "v2": "if(logMINOR) Logger.minor(this, \"Finished: \"+code+\" on \"+this, new Exception(\"debug\"));  if(origTag != null) origTag.removeRoutingTo(next); if(forkedRequestTag != null) forkedRequestTag.removeRoutingTo(next);",
+    "resolution": "if(logMINOR) Logger.minor(this, \"Finished: \"+getStatusString(code)+\" on \"+this, new Exception(\"debug\"));  if(origTag != null) origTag.removeRoutingTo(next); if(forkedRequestTag != null) forkedRequestTag.removeRoutingTo(next);",
+    "conflict": "if(logMINOR) Logger.minor(this, \"Finished: \"+getStatusString(code)+\" on \"+this, new Exception(\"debug\"));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52778,
+    "v2": "if(logMINOR) Logger.minor(this, \"Finished: \"+code+\" on \"+this, new Exception(\"debug\"));  if(origTag != null) origTag.removeRoutingTo(next); if(forkedRequestTag != null) forkedRequestTag.removeRoutingTo(next);",
+    "resolution": "if(logMINOR) Logger.minor(this, \"Finished: \"+getStatusString(code)+\" on \"+this, new Exception(\"debug\"));  if(origTag != null) origTag.removeRoutingTo(next); if(forkedRequestTag != null) forkedRequestTag.removeRoutingTo(next);",
+    "conflict": "if(logMINOR) Logger.minor(this, \"Finished: \"+getStatusString(code)+\" on \"+this, new Exception(\"debug\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52781,
+    "v2": "if(ignoreOldBlocks && block.oldBlock) { Logger.normal(this, \"Ignoring old block\"); return null; }",
+    "resolution": "if(ignoreOldBlocks && block.oldBlock) { Logger.normal(this, \"Ignoring old block\"); return null; }",
+    "conflict": "if(ignoreOldBlocks && block.oldBlock) return null;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52808,
+    "v2": "OfferReplyTag tag = new OfferReplyTag(isSSK, source); node.lockUID(uid, isSSK, false, true, false, tag);",
+    "resolution": "boolean realTimeFlag = DMT.getRealTimeFlag(m); OfferReplyTag tag = new OfferReplyTag(isSSK, source, realTimeFlag); node.lockUID(uid, isSSK, false, true, false, realTimeFlag, tag);",
+    "conflict": "boolean realTimeFlag = DMT.getRealTimeFlag(m); OfferReplyTag tag = new OfferReplyTag(isSSK, source, realTimeFlag); node.lockUID(uid, isSSK, false, true, false, realTimeFlag, tag);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52810,
+    "v2": "final RequestTag tag = new RequestTag(isSSK, RequestTag.START.REMOTE, source); if(!node.lockUID(id, isSSK, false, false, false, tag)) {",
+    "resolution": "boolean realTimeFlag = DMT.getRealTimeFlag(m); final RequestTag tag = new RequestTag(isSSK, RequestTag.START.REMOTE, source, realTimeFlag); if(!node.lockUID(id, isSSK, false, false, false, realTimeFlag, tag)) {",
+    "conflict": "boolean realTimeFlag = DMT.getRealTimeFlag(m); final RequestTag tag = new RequestTag(isSSK, RequestTag.START.REMOTE, source, realTimeFlag); if(!node.lockUID(id, isSSK, false, false, false, realTimeFlag, tag)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52812,
+    "v2": "InsertTag tag = new InsertTag(isSSK, InsertTag.START.REMOTE, source); if(!node.lockUID(id, isSSK, true, false, false, tag)) {",
+    "resolution": "boolean realTimeFlag = DMT.getRealTimeFlag(m); InsertTag tag = new InsertTag(isSSK, InsertTag.START.REMOTE, source, realTimeFlag); if(!node.lockUID(id, isSSK, true, false, false, realTimeFlag, tag)) {",
+    "conflict": "boolean realTimeFlag = DMT.getRealTimeFlag(m); InsertTag tag = new InsertTag(isSSK, InsertTag.START.REMOTE, source, realTimeFlag); if(!node.lockUID(id, isSSK, true, false, false, realTimeFlag, tag)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52822,
+    "v2": "RunningRequestsSnapshot(Node node, boolean ignoreLocalVsRemote, int transfersPerInsert) {",
+    "resolution": "final boolean realTimeFlag;  RunningRequestsSnapshot(Node node, boolean realTimeFlag, boolean ignoreLocalVsRemote, int transfersPerInsert) {",
+    "conflict": "final boolean realTimeFlag;  RunningRequestsSnapshot(Node node, boolean realTimeFlag, boolean ignoreLocalVsRemote, int transfersPerInsert) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52843,
+    "v2": "if(SEND_LOAD_STATS_NOTICES && source != null && !dontTellPeer) { // FIXME tell local as well somehow? source.onSetPeerAllocation(input, (int)thisAllocation, transfersPerInsert);",
+    "resolution": "if(SEND_LOAD_STATS_NOTICES && source != null && !dontTellPeer) { // FIXME tell local as well somehow? source.onSetPeerAllocation(input, (int)thisAllocation, realTimeFlag, transfersPerInsert);",
+    "conflict": "if(source != null && !dontTellPeer) { // FIXME tell local as well somehow? source.onSetPeerAllocation(input, (int)thisAllocation, realTimeFlag, transfersPerInsert);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52851,
+    "v2": "long now = System.currentTimeMillis(); synchronized(this) { int last = input ? lastSentAllocationInput : lastSentAllocationOutput;",
+    "resolution": "long now = System.currentTimeMillis(); synchronized(this) { int last = input ? lastSentAllocationInput : lastSentAllocationOutput;",
+    "conflict": "synchronized(this) { int last = input ? lastSentAllocationInput : lastSentAllocationOutput; long now = System.currentTimeMillis();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52887,
+    "v2": "public BlockReceiver(MessageCore usm, PeerContext sender, long uid, PartiallyReceivedBlock prb, ByteCounter ctr, Ticker ticker, boolean doTooLong) {",
+    "resolution": "public BlockReceiver(MessageCore usm, PeerContext sender, long uid, PartiallyReceivedBlock prb, ByteCounter ctr, Ticker ticker, boolean doTooLong, boolean realTime, BlockReceiverTimeoutHandler timeoutHandler) { _timeoutHandler = timeoutHandler == null ? nullTimeoutHandler : timeoutHandler;",
+    "conflict": "boolean logMINOR=Logger.shouldLog(LogLevel.MINOR, this);  public BlockReceiver(MessageCore usm, PeerContext sender, long uid, PartiallyReceivedBlock prb, ByteCounter ctr, Ticker ticker, boolean doTooLong, boolean realTime, BlockReceiverTimeoutHandler timeoutHandler) { _timeoutHandler = timeoutHandler == null ? nullTimeoutHandler : timeoutHandler;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52907,
+    "v2": "clientContext.init(requestStarters, alerts);",
+    "resolution": "useAIMDs = nodeConfig.getBoolean(\"useAIMDs\"); requestStarters.setUseAIMDs(useAIMDs); clientContext.init(requestStarters, alerts);",
+    "conflict": "useAIMDs = nodeConfig.getBoolean(\"useAIMDs\"); requestStarters.setUseAIMDs(useAIMDs);  clientContext.init(requestStarters);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52909,
+    "v2": "long uid = makeUID(); RequestTag tag = new RequestTag(false, RequestTag.START.LOCAL); if(!node.lockUID(uid, false, false, false, true, tag)) {",
+    "resolution": "long uid = makeUID(); RequestTag tag = new RequestTag(false, RequestTag.START.LOCAL, null, realTimeFlag); if(!node.lockUID(uid, false, false, false, true, realTimeFlag, tag)) {",
+    "conflict": "long uid = random.nextLong(); RequestTag tag = new RequestTag(false, RequestTag.START.LOCAL, null, realTimeFlag); if(!node.lockUID(uid, false, false, false, true, realTimeFlag, tag)) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52910,
+    "v2": "long uid = makeUID(); RequestTag tag = new RequestTag(true, RequestTag.START.LOCAL); if(!node.lockUID(uid, true, false, false, true, tag)) {",
+    "resolution": "long uid = makeUID(); RequestTag tag = new RequestTag(true, RequestTag.START.LOCAL, null, realTimeFlag); if(!node.lockUID(uid, true, false, false, true, realTimeFlag, tag)) {",
+    "conflict": "long uid = random.nextLong(); RequestTag tag = new RequestTag(true, RequestTag.START.LOCAL, null, realTimeFlag); if(!node.lockUID(uid, true, false, false, true, realTimeFlag, tag)) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52911,
+    "v2": "long uid = makeUID(); InsertTag tag = new InsertTag(false, InsertTag.START.LOCAL); if(!node.lockUID(uid, false, true, false, true, tag)) {",
+    "resolution": "long uid = makeUID(); InsertTag tag = new InsertTag(false, InsertTag.START.LOCAL, null, realTimeFlag); if(!node.lockUID(uid, false, true, false, true, realTimeFlag, tag)) {",
+    "conflict": "long uid = random.nextLong(); InsertTag tag = new InsertTag(false, InsertTag.START.LOCAL, null, realTimeFlag); if(!node.lockUID(uid, false, true, false, true, realTimeFlag, tag)) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 52912,
+    "v2": "long uid = makeUID(); InsertTag tag = new InsertTag(true, InsertTag.START.LOCAL); if(!node.lockUID(uid, true, true, false, true, tag)) {",
+    "resolution": "long uid = makeUID(); InsertTag tag = new InsertTag(true, InsertTag.START.LOCAL, null, realTimeFlag); if(!node.lockUID(uid, true, true, false, true, realTimeFlag, tag)) {",
+    "conflict": "long uid = random.nextLong(); InsertTag tag = new InsertTag(true, InsertTag.START.LOCAL, null, realTimeFlag); if(!node.lockUID(uid, true, true, false, true, realTimeFlag, tag)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52913,
+    "v2": "// FIXME increase to 4 minutes when bulk/realtime flag merged!  private static final double MAX_PEER_QUEUE_TIME = 2 * 60 * 1000.0;",
+    "resolution": "private static final double MAX_PEER_QUEUE_TIME = 4 * 60 * 1000.0;",
+    "conflict": "private static final double MAX_PEER_QUEUE_TIME = 4 * 60 * 1000.0;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52938,
+    "v2": "",
+    "resolution": "// int's because that's what they are transferred as  public final IncomingLoadSummaryStats incomingLoadStatsRealTime;  public final IncomingLoadSummaryStats incomingLoadStatsBulk;",
+    "conflict": "// int's because that's what they are transferred as  public final IncomingLoadSummaryStats incomingLoadStatsRealTime;  public final IncomingLoadSummaryStats incomingLoadStatsBulk;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 52963,
+    "v2": "if(_receivedCount == _packets) { if(logDEBUG) Logger.debug(this, \"Received \"+_receivedCount+\" of \"+_packets); return true; }",
+    "resolution": "if(_receivedCount == _packets) { if(logDEBUG) Logger.debug(this, \"Received \"+_receivedCount+\" of \"+_packets); return true; }",
+    "conflict": "if(_receivedCount == _packets) return true;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52970,
+    "v2": "public static synchronized int getRunningReceives() { return runningBlockReceives; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 52979,
+    "v2": "_destination.sendThrottledMessage(DMT.createPacketTransmit(_uid, packetNo, _sentPackets, _prb.getPacket(packetNo)), _prb._packetSize, _ctr, SEND_TIMEOUT, false, new MyAsyncMessageCallback());",
+    "resolution": "MessageItem item = _destination.sendThrottledMessage(DMT.createPacketTransmit(_uid, packetNo, _sentPackets, _prb.getPacket(packetNo), boostPrio), _prb._packetSize, _ctr, SEND_TIMEOUT, false, new MyAsyncMessageCallback()); synchronized(itemsPending) { itemsPending.add(item); }",
+    "conflict": "MessageItem item = _destination.sendThrottledMessage(DMT.createPacketTransmit(_uid, packetNo, _sentPackets, _prb.getPacket(packetNo), boostPrio), _prb._packetSize, _ctr, SEND_TIMEOUT, false, new MyAsyncMessageCallback()); synchronized(itemsPending) { itemsPending.add(item); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53015,
+    "v2": "fs.put(\"routingMissDistance\", routingMissDistance.currentValue());",
+    "resolution": "fs.put(\"routingMissDistanceLocal\", routingMissDistanceLocal.currentValue()); fs.put(\"routingMissDistanceRemote\", routingMissDistanceRemote.currentValue()); fs.put(\"routingMissDistanceOverall\", routingMissDistanceOverall.currentValue());",
+    "conflict": "fs.put(\"routingMissDistanceLocal\", routingMissDistanceLocal.currentValue()); fs.put(\"routingMissDistanceRemote\", routingMissDistanceRemote.currentValue()); fs.put(\"routingMissDistanceOverall\", routingMissDistanceOverall.currentValue());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53034,
+    "v2": "BucketChainBucketFactory bucketFactory2 = new BucketChainBucketFactory(bucketFactory, NodeCHK.BLOCK_SIZE, persistent ? context.jobRunner : null, 1024, true); COMPRESSOR_TYPE[] comps = COMPRESSOR_TYPE.getCompressorsArray(compressorDescriptor);",
+    "resolution": "BucketChainBucketFactory bucketFactory2 = new BucketChainBucketFactory(bucketFactory, NodeCHK.BLOCK_SIZE, persistent ? context.jobRunner : null, 1024, true); COMPRESSOR_TYPE[] comps = COMPRESSOR_TYPE.getCompressorsArray(compressorDescriptor, pre1254); boolean first = true;",
+    "conflict": "BucketChainBucketFactory bucketFactory2 = new BucketChainBucketFactory(bucketFactory, NodeCHK.BLOCK_SIZE, persistent ? context.jobRunner : null, 1024); COMPRESSOR_TYPE[] comps = COMPRESSOR_TYPE.getCompressorsArray(compressorDescriptor, pre1254); boolean first = true;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53037,
+    "v2": "if(filteredResult != null && filteredResult != returnBucket) { filteredResult.free(); if(persistent()) filteredResult.removeFrom(container); } else if(returnBucket != null && persistent()) returnBucket.storeTo(container); // Need to store the counter on FileBucket's so it can overwrite next time.",
+    "resolution": "if(finalResult != null && finalResult != returnBucket) { finalResult.free(); if(persistent()) finalResult.removeFrom(container); } else if(returnBucket != null && persistent()) returnBucket.storeTo(container); // Need to store the counter on FileBucket's so it can overwrite next time.",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53038,
+    "v2": "if(filteredResult != null && filteredResult != returnBucket) { filteredResult.free(); if(persistent()) filteredResult.removeFrom(container); } else if(returnBucket != null && persistent()) returnBucket.storeTo(container); // Need to store the counter on FileBucket's so it can overwrite next time.",
+    "resolution": "if(finalResult != null && finalResult != returnBucket) { finalResult.free(); if(persistent()) finalResult.removeFrom(container); } else if(returnBucket != null && persistent()) returnBucket.storeTo(container); // Need to store the counter on FileBucket's so it can overwrite next time.",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53039,
+    "v2": "if(filteredResult != null && filteredResult != returnBucket) { filteredResult.free(); if(persistent()) filteredResult.removeFrom(container); } else if(returnBucket != null && persistent()) returnBucket.storeTo(container); // Need to store the counter on FileBucket's so it can overwrite next time.",
+    "resolution": "if(finalResult != null && finalResult != returnBucket) { finalResult.free(); if(persistent()) finalResult.removeFrom(container); } else if(returnBucket != null && persistent()) returnBucket.storeTo(container); // Need to store the counter on FileBucket's so it can overwrite next time.",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53049,
+    "v2": "Decoder decoder = new Decoder(); decoder.SetDecoderProperties(props); CountedOutputStream cos = new CountedOutputStream(os);",
+    "resolution": "CountedOutputStream cos = new CountedOutputStream(os); Decoder decoder = new Decoder(); decoder.SetDecoderProperties(props);",
+    "conflict": "CountedOutputStream cos = new CountedOutputStream(os); Decoder decoder = new Decoder(); decoder.SetDecoderProperties(props);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53069,
+    "v2": "dos.writeShort(parsedVersion); // version",
+    "resolution": "dos.writeShort(parsedVersion); // version",
+    "conflict": "if(compatibilityMode < InsertContext.COMPAT_HASHES || hashes == null) dos.writeShort(0); // version else dos.writeShort(1); // version 1 is the same as version 0 but supports hashes."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53070,
+    "v2": "if(topBlocksRequired != 0 || topBlocksTotal != 0 || topSize != 0 || topCompressedSize != 0) { assert(parsedVersion >= 1); flags |= FLAGS_TOP_SIZE; }",
+    "resolution": "if(hashes != null) flags |= FLAGS_HASHES; if(topBlocksRequired != 0 || topBlocksTotal != 0 || topSize != 0 || topCompressedSize != 0) { assert(parsedVersion >= 1); flags |= FLAGS_TOP_SIZE; }",
+    "conflict": "if(hashes != null) flags |= hashes;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53073,
+    "v2": "public final long topSize; public final long topCompressedSize;",
+    "resolution": "public final long topSize; public final long topCompressedSize; final HashResult[] hashes;",
+    "conflict": "final HashResult[] hashes;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53077,
+    "v2": "if(buf.length < length) if(logDEBUG) Logger.debug(this, \"The packet is smaller than the decrypted size: it's probably the wrong tracker (\"+buf.length+'<'+length+')'); else",
+    "resolution": "if(buf.length < length) { if(logDEBUG) Logger.debug(this, \"The packet is smaller than the decrypted size: it's probably the wrong tracker (\"+buf.length+'<'+length+')'); } else {",
+    "conflict": "if(buf.length < length) { Logger.debug(this, \"The packet is smaller than the decrypted size: it's probably the wrong tracker (\"+buf.length+'<'+length+')'); } else {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53079,
+    "v2": "// For scaling purposes, 128 data 128 check blocks i.e. one check block per data block. public static final int SPLITFILE_SCALING_BLOCKS_PER_SEGMENT = 128; /* We can go down to 131 data 125 check if it avoids creating a new segment. * FECCodec.standardOnionCheckBlocks will automatically reduce check blocks to compensate for more than half data blocks. */ public static final int SPLITFILE_BLOCKS_PER_SEGMENT = 131;",
+    "resolution": "// For scaling purposes, 128 data 128 check blocks i.e. one check block per data block. public static final int SPLITFILE_SCALING_BLOCKS_PER_SEGMENT = 128; /* We can go down to 131 data 125 check if it avoids creating a new segment. * FECCodec.standardOnionCheckBlocks will automatically reduce check blocks to compensate for more than half data blocks. */ public static final int SPLITFILE_BLOCKS_PER_SEGMENT = 131;",
+    "conflict": "public static final int SPLITFILE_BLOCKS_PER_SEGMENT = 128;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53085,
+    "v2": "processTag(splitTag, w, this); currentTag = splitTag.get(0); if(detectCharset && currentTag.equalsIgnoreCase(\"</head>\")) return;",
+    "resolution": "String s = processTag(splitTag, w, this); currentTag = s;",
+    "conflict": "String s = processTag(splitTag, w, this); currentTag = s;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53088,
+    "v2": "w.write(headContent+\"</head>\"); if(pc.detectCharset) return;",
+    "resolution": "if(!pc.onlyDetectingCharset) w.write(headContent+\"</head>\"); pc.headEnded = true; if(pc.onlyDetectingCharset) pc.failedDetectCharset = true;",
+    "conflict": "if(!pc.onlyDetectingCharset) w.write(headContent+\"</head>\"); pc.headEnded = true; if(pc.onlyDetectingCharset) pc.failedDetectCharset = true;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53092,
+    "v2": "/** Stores the fetch context this class was created with*/ private FetchContext fctx; private int fetched = 0;",
+    "resolution": "private int fetched = 0; /** Stores the fetch context this class was created with*/ private FetchContext fctx;",
+    "conflict": "private int fetched = 0; /** Stores the fetch context this class was created with*/ private FetchContext fctx;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53096,
+    "v2": "import java.io.InputStream; import java.io.OutputStream;",
+    "resolution": "import java.io.InputStream; import java.io.OutputStream;import java.io.FileOutputStream; import java.io.IOException; import java.io.UnsupportedEncodingException;",
+    "conflict": "import java.io.FileOutputStream; import java.io.IOException; import java.io.UnsupportedEncodingException;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53113,
+    "v2": "",
+    "resolution": "",
+    "conflict": "@Deprecated public ClientGetter fetch(FreenetURI uri, long maxSize, RequestClient clientContext, ClientCallback callback, FetchContext fctx) throws FetchException { return fetch(uri, maxSize, clientContext, (ClientGetCallback)callback,  fctx); }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53120,
+    "v2": "if(toDrop == null) { if(logMINOR) Logger.minor(this, \"No more peers to drop (in first bit), still \"+peersLRU.size()+\" peers, cannot accept peer\"+(nodeToAddNow == null ? \"\" : nodeToAddNow.toString())); canAdd = false;",
+    "resolution": "if(toDrop != null) { hasDisconnected = !toDrop.isConnected();",
+    "conflict": "if(toDrop != null) { hasDisconnected = !toDrop.isConnected();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53122,
+    "v2": "if (logMINOR) if(logMINOR) Logger.minor(this, \"Estimated opennet size(session): \" + knownIds.size());",
+    "resolution": "if (logMINOR) { Logger.minor(this, \"Estimated opennet size(session): \" + knownIds.size()); }",
+    "conflict": "if (logMINOR) { Logger.minor(this, \"Estimated opennet size(session): \" + knownIds.size()); }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53125,
+    "v2": "public synchronized long getAnnounceBytesPayloadSent() { return announceBytesPayload; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53127,
+    "v2": "if(toDrop == null) { if(logMINOR) Logger.minor(this, \"No more peers to drop (in first bit), still \"+peersLRU.size()+\" peers, cannot accept peer\"+(nodeToAddNow == null ? \"\" : nodeToAddNow.toString())); canAdd = false;",
+    "resolution": "if(toDrop != null) { hasDisconnected = !toDrop.isConnected();",
+    "conflict": "if(toDrop != null) { hasDisconnected = !toDrop.isConnected();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53143,
+    "v2": "FilterOutput fo = ContentFilter.filter(data, bucketFactory, mimeType, key.toURI(basePath), container.enableInlinePrefetch() ? prefetchHook : null, maybeCharset);",
+    "resolution": "//Horrible hack needed for GWT as it relies on document.write() which is not supported in xhtml if(mimeType.compareTo(\"application/xhtml+xml\")==0){ mimeType=\"text/html\"; } FilterOutput fo = ContentFilter.filter(data, bucketFactory, mimeType, key.toURI(basePath), container.enableInlinePrefetch() ? prefetchHook : null,new PushingTagReplacerCallback(core.getFProxy().fetchTracker, MAX_LENGTH, ctx), maybeCharset);",
+    "conflict": "//Horrible hack needed for GWT as it relies on document.write() which is not supported in xhtml if(mimeType.compareTo(\"application/xhtml+xml\")==0){ mimeType=\"text/html\"; } FilterOutput fo = ContentFilter.filter(data, bucketFactory, mimeType, key.toURI(basePath), container.enableInlinePrefetch() ? prefetchHook : null,new PushingTagReplacerCallback(core.getFProxy().fetchTracker, MAX_LENGTH, ctx));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53185,
+    "v2": "contentNode.addChild(core.alerts.createSummary()); HTMLNode infoboxContent = pageMaker.getInfobox(\"infobox-information\", NodeL10n.getBase().getString(\"QueueToadlet.globalQueueIsEmpty\"), contentNode, \"queue-empty\", true); infoboxContent.addChild(\"#\", NodeL10n.getBase().getString(\"QueueToadlet.noTaskOnGlobalQueue\"));",
+    "resolution": "contentNode.addChild(new AlertElement(ctx)); HTMLNode infoboxContent = pageMaker.getInfobox(\"infobox-information\", NodeL10n.getBase().getString(\"QueueToadlet.globalQueueIsEmpty\"), contentNode, \"queue-empty\", true); infoboxContent.addChild(\"#\", NodeL10n.getBase().getString(\"QueueToadlet.noTaskOnGlobalQueue\"));",
+    "conflict": "contentNode.addChild(new AlertElement(ctx)); HTMLNode infoboxContent = pageMaker.getInfobox(\"infobox-information\", L10n.getString(\"QueueToadlet.globalQueueIsEmpty\"), contentNode, \"queue-empty\", true); infoboxContent.addChild(\"#\", L10n.getString(\"QueueToadlet.noTaskOnGlobalQueue\"));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53196,
+    "v2": "private final Set<FCPConnectionHandler> subscribers;",
+    "resolution": "/** Listeners that will be notified when the alerts list is changed*/ private final Set<UserEventListener> listeners;  private final Set<FCPConnectionHandler> subscribers;",
+    "conflict": "private final Set<FeedCallback> subscribers;  /** Listeners that will be notified when the alerts list is changed*/ private final Set<UserEventListener> listeners;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53208,
+    "v2": "drawPeerStatsBox(peerStatsInfobox, mode >= PageMaker.MODE_ADVANCED, numberOfConnected, numberOfRoutingBackedOff, numberOfTooNew, numberOfTooOld, numberOfDisconnected, numberOfNeverConnected, numberOfDisabled, numberOfBursting, numberOfListening, numberOfListenOnly, numberOfSeedServers, numberOfSeedClients, numberOfRoutingDisabled, numberOfClockProblem, numberOfConnError, numberOfDisconnecting, node);",
+    "resolution": "drawPeerStatsBox(peerStatsInfobox, mode >= PageMaker.MODE_ADVANCED, peers,ctx);",
+    "conflict": "drawPeerStatsBox(peerStatsInfobox, mode >= PageMaker.MODE_ADVANCED, peers,ctx);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53225,
+    "v2": "private HTMLNode createRecommendCell(PageMaker pageMaker, FreenetURI URI, ToadletContext ctx) { HTMLNode recommendNode = new HTMLNode(\"td\", \"class\", \"request-delete\"); HTMLNode shareForm = ctx.addFormChild(recommendNode, path(), \"recommendForm\"); shareForm.addChild(\"input\", new String[] {\"type\", \"name\", \"value\"}, new String[] {\"hidden\", \"URI\", URI.toString() }); shareForm.addChild(\"input\", new String[] { \"type\", \"name\", \"value\" }, new String[] { \"submit\", \"recommend_request\", L10n.getString(\"QueueToadlet.recommendToFriends\") });",
+    "resolution": "private HTMLNode createRecommendCell(PageMaker pageMaker, FreenetURI URI, ToadletContext ctx) { HTMLNode recommendNode = new HTMLNode(\"td\", \"class\", \"request-delete\"); HTMLNode shareForm = ctx.addFormChild(recommendNode, path(), \"recommendForm\"); shareForm.addChild(\"input\", new String[] {\"type\", \"name\", \"value\"}, new String[] {\"hidden\", \"URI\", URI.toString() }); shareForm.addChild(\"input\", new String[] { \"type\", \"name\", \"value\" }, new String[] { \"submit\", \"recommend_request\", L10n.getString(\"QueueToadlet.recommendToFriends\") });",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53232,
+    "v2": "import freenet.support.LogThresholdCallback; import freenet.support.RandomGrabArray; import freenet.support.SectoredRandomGrabArrayWithInt; import freenet.support.SectoredRandomGrabArrayWithObject; import freenet.support.SortedVectorByNumber;",
+    "resolution": "import freenet.support.PrioritizedSerialExecutor;",
+    "conflict": "import freenet.support.PrioritizedSerialExecutor;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53243,
+    "v2": "resolve(e);",
+    "resolution": "if(logMINOR) Logger.minor(this, \"Main metadata needs resolving: \"+e); resolve(e, container, context); if(persistent()) container.deactivate(baseMetadata, 1);",
+    "conflict": "if(logMINOR) Logger.minor(this, \"Main metadata needs resolving: \"+e); resolve(e, container, context); if(persistent()) container.deactivate(baseMetadata, 1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53255,
+    "v2": "sched.moveKeysFromCooldownQueue(); if(req == null) req = sched.removeFirst();",
+    "resolution": "boolean logMINOR = Logger.shouldLog(Logger.MINOR, this); if(req == null) { req = sched.grabRequest(); }",
+    "conflict": "boolean logMINOR = Logger.shouldLog(Logger.MINOR, this); if(req == null) { req = sched.grabRequest(); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53274,
+    "v2": "meta = new Metadata(Metadata.ARCHIVE_MANIFEST, archiveType, null, uri, block.clientMetadata); else  // redirect meta = new Metadata(Metadata.SIMPLE_REDIRECT, archiveType, null, uri, block.clientMetadata);",
+    "resolution": "meta = new Metadata(Metadata.ARCHIVE_MANIFEST, archiveType, null, uri, block.clientMetadata); else  // redirect meta = new Metadata(Metadata.SIMPLE_REDIRECT, archiveType, null, uri, block.clientMetadata);",
+    "conflict": "meta = new Metadata(Metadata.ARCHIVE_MANIFEST, archiveType, codec, uri, block.clientMetadata); else // redirect meta = new Metadata(Metadata.SIMPLE_REDIRECT, archiveType, codec, uri, block.clientMetadata);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 53283,
+    "v2": "public FreenetURI sskForUSK() { if(!keyType.equalsIgnoreCase(\"USK\")) throw new IllegalStateException(); return new FreenetURI(\"SSK\", docName+\"-\"+suggestedEdition, metaStr, routingKey, cryptoKey, extra, 0);",
+    "resolution": "public FreenetURI sskForUSK() { if(!keyType.equalsIgnoreCase(\"USK\")) throw new IllegalStateException(); return new FreenetURI(\"SSK\", docName+\"-\"+suggestedEdition, metaStr, routingKey, cryptoKey, extra, 0);public void removeFrom(ObjectContainer container) { // All members are inline (arrays, ints etc), treated as values, so we can happily just call delete(this). container.delete(this);",
+    "conflict": "public void removeFrom(ObjectContainer container) { // All members are inline (arrays, ints etc), treated as values, so we can happily just call delete(this). container.delete(this);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53284,
+    "v2": "public void onFailure(InsertException e, BaseClientPutter state) { Logger.error(this, \"Failed to insert \"+type+\" binary blob: \" + e, e);",
+    "resolution": "public void onFailure(InsertException e, BaseClientPutter state, ObjectContainer container) { Logger.error(this, \"Failed to insert \"+type+\" binary blob: \" + e, e);",
+    "conflict": "public void onFailure(InsertException e, BaseClientPutter state, ObjectContainer container) { Logger.error(this, \"Failed to insert revocation key binary blob: \" + e, e);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53290,
+    "v2": "SingleFileFetcher.this.onFailure(new FetchException(FetchException.BUCKET_ERROR, e), sched); return; } finally { result.asBucket().free();",
+    "resolution": "SingleFileFetcher.this.onFailure(new FetchException(FetchException.BUCKET_ERROR, e), false, container, context); } finally { result.asBucket().free();",
+    "conflict": "SingleFileFetcher.this.onFailure(new FetchException(FetchException.BUCKET_ERROR, e), false, container, context);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53296,
+    "v2": "i, getCHKOnly, false, false, parent.token, false); dataBlockInserters[i].schedule();",
+    "resolution": "i, getCHKOnly, false, false, parent.token, container, context, persistent, false); dataBlockInserters[i].schedule(container, context); if(persistent)",
+    "conflict": "i, getCHKOnly, false, false, parent.token, container, context, persistent); dataBlockInserters[i].schedule(container, context); if(persistent) container.deactivate(dataBlockInserters[i], 1);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53297,
+    "v2": "getCHKOnly, false, false, parent.token, false); checkBlockInserters[i].schedule();",
+    "resolution": "getCHKOnly, false, false, parent.token, container, context, persistent, false); checkBlockInserters[i].schedule(container, context); if(persistent)",
+    "conflict": "getCHKOnly, false, false, parent.token, container, context, persistent); checkBlockInserters[i].schedule(container, context); if(persistent) container.deactivate(checkBlockInserters[i], 1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53311,
+    "v2": "if(logMINOR) Logger.minor(this, \"Fetched block \"+blockNo+\" on \"+seg+\" data=\"+dataBuckets.length+\" check=\"+checkBuckets.length); if(parentFetcher.parent instanceof ClientGetter) ((ClientGetter)parentFetcher.parent).addKeyToBinaryBlob(block);",
+    "resolution": "if(logMINOR) Logger.minor(this, \"Fetched block \"+blockNo+\" in \"+this); if(parent instanceof ClientGetter) ((ClientGetter)parent).addKeyToBinaryBlob(block, container, context);",
+    "conflict": "if(logMINOR) Logger.minor(this, \"Fetched block \"+blockNo+\" in \"+this); if(parent instanceof ClientGetter) ((ClientGetter)parent).addKeyToBinaryBlob(block, container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53312,
+    "v2": "private void queueHeal(Bucket data) { if(logMINOR) Logger.minor(this, \"Queueing healing insert for \"+data+\" on \"+this); fetchContext.healingQueue.queue(data);",
+    "resolution": "private void queueHeal(Bucket data, ClientContext context) { if(logMINOR) Logger.minor(this, \"Queueing healing insert\"); context.healingQueue.queue(data, context);",
+    "conflict": "private void queueHeal(Bucket data, ClientContext context) { if(logMINOR) Logger.minor(this, \"Queueing healing insert\"); context.healingQueue.queue(data, context);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53341,
+    "v2": "if(logMINOR) Logger.minor(this, \"Putting hashmap into base metadata: \"+name); namesToByteArrays((HashMap)o, subMap);",
+    "resolution": "if(logMINOR) Logger.minor(this, \"Putting hashmap into base metadata: \"+name); Logger.minor(this, \"Putting directory: \"+name); namesToByteArrays((HashMap)o, subMap, container);",
+    "conflict": "Logger.minor(this, \"Putting directory: \"+name); namesToByteArrays((HashMap)o, subMap, container);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53347,
+    "v2": "toStart.start(); } catch(FetchException e) { Logger.error(this, \"Error while starting the fetching: \" + e, e);",
+    "resolution": "node.clientCore.clientContext.start(toStart); } catch (FetchException e) { Logger.error(this, \"Error while starting the fetching: \"+e, e);",
+    "conflict": "node.clientCore.clientContext.start(toStart); } catch (FetchException e) { Logger.error(this, \"Error while starting the fetching: \"+e, e);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53353,
+    "v2": "cg.start(); } catch(FetchException e1) { System.err.println(\"Failed to decode UOM blob: \" + e1);",
+    "resolution": "updateManager.node.clientCore.clientContext.start(cg); } catch (FetchException e1) { System.err.println(\"Failed to decode UOM blob: \"+e1);",
+    "conflict": "updateManager.node.clientCore.clientContext.start(cg); } catch (FetchException e1) { System.err.println(\"Failed to decode UOM blob: \"+e1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53355,
+    "v2": "putter.start(false); } catch(InsertException e1) { Logger.error(this, \"Failed to start insert of revocation key binary blob: \" + e1, e1);",
+    "resolution": "updateManager.node.clientCore.clientContext.start(putter, false); } catch (InsertException e1) { Logger.error(this, \"Failed to start insert of revocation key binary blob: \"+e1, e1);",
+    "conflict": "updateManager.node.clientCore.clientContext.start(putter, false); } catch (InsertException e1) { Logger.error(this, \"Failed to start insert of revocation key binary blob: \"+e1, e1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53357,
+    "v2": "cg.start(); } catch(FetchException e1) { myCallback.onFailure(e1, cg);",
+    "resolution": "updateManager.node.clientCore.clientContext.start(cg); } catch (FetchException e1) { myCallback.onFailure(e1, cg, null);",
+    "conflict": "updateManager.node.clientCore.clientContext.start(cg); } catch (FetchException e1) { myCallback.onFailure(e1, cg, null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53363,
+    "v2": "handleZIPArchive(ctx, key, is, element, callback, gotElement, throwAtExit); else if(ARCHIVE_TYPE.TAR == archiveType) handleTARArchive(ctx, key, is, element, callback, gotElement, throwAtExit);",
+    "resolution": "handleZIPArchive(ctx, key, is, element, callback, gotElement, throwAtExit, container, context); else if(ARCHIVE_TYPE.TAR == archiveType) handleTARArchive(ctx, key, is, element, callback, gotElement, throwAtExit, container, context);",
+    "conflict": "handleZIPArchive(ctx, key, is, element, callback, gotElement, throwAtExit, container, context); else if(ARCHIVE_TYPE.TAR == archiveType) handleTARArchive(ctx, key, is, element, callback, gotElement, throwAtExit, container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53369,
+    "v2": "",
+    "resolution": "public static void init(ObjectContainer container, ClientContext context, final long nodeDBHandle) { ArchiveHandlerImpl.init(container, context, nodeDBHandle); }",
+    "conflict": "public static void init(ObjectContainer container, ClientContext context, final long nodeDBHandle) { ArchiveHandlerImpl.init(container, context, nodeDBHandle); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53375,
+    "v2": "random, INSERT_RETRIES, CONSECUTIVE_RNFS_ASSUME_SUCCESS, SPLITFILE_INSERT_THREADS, SPLITFILE_BLOCKS_PER_SEGMENT, SPLITFILE_CHECK_BLOCKS_PER_SEGMENT, globalEventProducer, cacheLocalRequests, core.uskManager, blockEncoder, core.getExecutor(), core.compressor);",
+    "resolution": "INSERT_RETRIES, CONSECUTIVE_RNFS_ASSUME_SUCCESS, SPLITFILE_INSERT_THREADS, SPLITFILE_BLOCKS_PER_SEGMENT, SPLITFILE_CHECK_BLOCKS_PER_SEGMENT, globalEventProducer, cacheLocalRequests, core.compressor);",
+    "conflict": "INSERT_RETRIES, CONSECUTIVE_RNFS_ASSUME_SUCCESS, SPLITFILE_INSERT_THREADS, SPLITFILE_BLOCKS_PER_SEGMENT, SPLITFILE_CHECK_BLOCKS_PER_SEGMENT, globalEventProducer, cacheLocalRequests, core.compressor);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53397,
+    "v2": "boolean getCHKOnly, boolean reportMetadataOnly, Object token, ARCHIVE_TYPE archiveType, boolean freeData, String targetFilename, boolean earlyEncode) throws InsertException {",
+    "resolution": "boolean getCHKOnly, boolean reportMetadataOnly, Object token, ARCHIVE_TYPE archiveType, boolean freeData, String targetFilename, boolean earlyEncode) { hashCode = super.hashCode();",
+    "conflict": "boolean getCHKOnly, boolean reportMetadataOnly, Object token, ARCHIVE_TYPE archiveType, boolean freeData, String targetFilename, boolean earlyEncode) { hashCode = super.hashCode();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53411,
+    "v2": "MultiValueTable<String, String> pageHeaders = new MultiValueTable<String, String>(); writeHTMLReply(ctx, 200, \"OK\", pageHeaders, pageNode.generate());",
+    "resolution": "return pageNode;",
+    "conflict": "return pageNode;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53475,
+    "v2": "@Override public void onSuccess(ClientKeyBlock block, boolean fromStore, Object reqTokenIgnored, RequestScheduler sched) {",
+    "resolution": "@Override public void onSuccess(ClientKeyBlock block, boolean fromStore, Object reqTokenIgnored, ObjectContainer container, ClientContext context) { if(persistent) { container.activate(parent, 1); }",
+    "conflict": "public void onSuccess(ClientKeyBlock block, boolean fromStore, Object reqTokenIgnored, ObjectContainer container, ClientContext context) { if(persistent) { container.activate(parent, 1); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53477,
+    "v2": "@Override public void onFailure(LowLevelPutException e, Object keyNum) {",
+    "resolution": "@Override public void onFailure(LowLevelPutException e, Object keyNum, ObjectContainer container, ClientContext context) { if(persistent) container.activate(errors, 1);",
+    "conflict": "public void onFailure(LowLevelPutException e, Object keyNum, ObjectContainer container, ClientContext context) { if(persistent) container.activate(errors, 1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53492,
+    "v2": "@Override public void onFailure(LowLevelGetException e, Object token, RequestScheduler sched) { if(logMINOR) Logger.minor(this, \"onFailure(\"+e+\" , \"+token);",
+    "resolution": "private FetchException translateException(LowLevelGetException e) {",
+    "conflict": "private FetchException translateException(LowLevelGetException e) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53494,
+    "v2": "@Override public Object getClient() { return segment.parentFetcher.parent.getClient();",
+    "resolution": "@Override public RequestClient getClient() { return parent.getClient();",
+    "conflict": "public RequestClient getClient() { return parent.getClient();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53495,
+    "v2": "@Override public short getPriorityClass() { return segment.parentFetcher.parent.priorityClass;",
+    "resolution": "@Override public short getPriorityClass(ObjectContainer container) { if(persistent) container.activate(parent, 1); return parent.priorityClass;",
+    "conflict": "public short getPriorityClass(ObjectContainer container) { if(persistent) container.activate(parent, 1); return parent.priorityClass;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53496,
+    "v2": "@Override public boolean isCancelled() {",
+    "resolution": "@Override public boolean isCancelled(ObjectContainer container) { if(persistent) { container.activate(parent, 1);",
+    "conflict": "public boolean isCancelled(ObjectContainer container) { if(persistent) { container.activate(parent, 1); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53507,
+    "v2": "@Override public Key getNodeKey(Object token) { ClientKey key = getKey(token);",
+    "resolution": "@Override public Key getNodeKey(Object token, ObjectContainer container) { ClientKey key = getKey(token, container);",
+    "conflict": "public Key getNodeKey(Object token, ObjectContainer container) { ClientKey key = getKey(token, container);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53510,
+    "v2": "@Override public void internalError(Object keyNum, Throwable t, RequestScheduler sched) { onFailure(new LowLevelPutException(LowLevelPutException.INTERNAL_ERROR, t.getMessage(), t), keyNum);",
+    "resolution": "@Override public void internalError(Throwable t, RequestScheduler sched, ObjectContainer container, ClientContext context, boolean persistent) { sched.callFailure(this, new LowLevelPutException(LowLevelPutException.INTERNAL_ERROR, t.getMessage(), t), NativeThread.MAX_PRIORITY, persistent);",
+    "conflict": "public void internalError(Throwable t, RequestScheduler sched, ObjectContainer container, ClientContext context, boolean persistent) { sched.callFailure(this, new LowLevelPutException(LowLevelPutException.INTERNAL_ERROR, t.getMessage(), t), NativeThread.MAX_PRIORITY, persistent);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53525,
+    "v2": "@Override public double getSuccessFraction() {",
+    "resolution": "@Override public double getSuccessFraction(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);",
+    "conflict": "public double getSuccessFraction(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53526,
+    "v2": "@Override public double getTotalBlocks() {",
+    "resolution": "@Override public double getTotalBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);",
+    "conflict": "public double getTotalBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53527,
+    "v2": "@Override public double getMinBlocks() {",
+    "resolution": "@Override public double getMinBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);",
+    "conflict": "public double getMinBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53528,
+    "v2": "@Override public double getFailedBlocks() {",
+    "resolution": "@Override public double getFailedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);",
+    "conflict": "public double getFailedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53529,
+    "v2": "@Override public double getFatalyFailedBlocks() {",
+    "resolution": "@Override public double getFatalyFailedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);",
+    "conflict": "public double getFatalyFailedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53530,
+    "v2": "@Override public double getFetchedBlocks() {",
+    "resolution": "@Override public double getFetchedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);",
+    "conflict": "public double getFetchedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressPending != null) container.activate(progressPending, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53541,
+    "v2": "@Override public synchronized double getSuccessFraction() {",
+    "resolution": "@Override public synchronized double getSuccessFraction(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);",
+    "conflict": "public synchronized double getSuccessFraction(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53542,
+    "v2": "@Override public synchronized double getTotalBlocks() {",
+    "resolution": "@Override public synchronized double getTotalBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);",
+    "conflict": "public synchronized double getTotalBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53543,
+    "v2": "@Override public synchronized double getMinBlocks() {",
+    "resolution": "@Override public synchronized double getMinBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);",
+    "conflict": "public synchronized double getMinBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53544,
+    "v2": "@Override public synchronized double getFailedBlocks() {",
+    "resolution": "@Override public synchronized double getFailedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);",
+    "conflict": "public synchronized double getFailedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53545,
+    "v2": "@Override public synchronized double getFatalyFailedBlocks() {",
+    "resolution": "@Override public synchronized double getFatalyFailedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);",
+    "conflict": "public synchronized double getFatalyFailedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53546,
+    "v2": "@Override public synchronized double getFetchedBlocks() {",
+    "resolution": "@Override public synchronized double getFetchedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);",
+    "conflict": "public synchronized double getFetchedBlocks(ObjectContainer container) { if(persistenceType == PERSIST_FOREVER && progressMessage != null) container.activate(progressMessage, 2);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53583,
+    "v2": "final WeakHashMap<String, FCPClient> clientsByName; final FCPClient globalClient;",
+    "resolution": "final WeakHashMap<String, FCPClient> clientsByName; final FCPClient globalRebootClient; final FCPClient globalForeverClient;",
+    "conflict": "final WeakHashMap clientsByName; final FCPClient globalRebootClient; final FCPClient globalForeverClient;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53588,
+    "v2": "public SectoredRandomGrabArray(RandomSource rand) { this.rand = rand; this.grabArraysByClient = new HashMap<Object, RemoveRandomWithObject>();",
+    "resolution": "public SectoredRandomGrabArray(boolean persistent, ObjectContainer container) { this.persistent = persistent; grabClients = new Object[0];",
+    "conflict": "public SectoredRandomGrabArray(boolean persistent, ObjectContainer container) { this.persistent = persistent; grabClients = new Object[0];"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53598,
+    "v2": "",
+    "resolution": "import java.io.IOException; import freenet.support.api.Bucket; import freenet.support.api.BucketFactory;",
+    "conflict": "import freenet.support.api.Bucket; import freenet.support.api.BucketFactory;  import java.io.IOException;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53618,
+    "v2": "(SingleFileFetcher) SingleFileFetcher.create(this, this, new ClientMetadata(), uri, ctx, new ArchiveContext(ctx.maxTempLength, ctx.maxArchiveLevels), ctx.maxNonSplitfileRetries, 0, true, l, true, null, false); getter.schedule();",
+    "resolution": "(SingleFileFetcher) SingleFileFetcher.create(this, this, new ClientMetadata(), uri, ctx, new ArchiveContext(ctx.maxTempLength, ctx.maxArchiveLevels), ctx.maxNonSplitfileRetries, 0, true, l, true, null, false, null, context); getter.schedule(null, context);",
+    "conflict": "(SingleFileFetcher) SingleFileFetcher.create(this, this, new ClientMetadata(), uri, ctx, new ArchiveContext(ctx.maxArchiveLevels), ctx.maxNonSplitfileRetries, 0, true, l, true, null, false, null, context); getter.schedule(null, context);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53622,
+    "v2": "public LinkedList<String> listMetaStrings() { LinkedList<String> l = new LinkedList<String>(); if(metaStr != null)",
+    "resolution": "public ArrayList<String> listMetaStrings() { if(metaStr != null) { ArrayList<String> l = new ArrayList<String>(metaStr.length);",
+    "conflict": "public ArrayList listMetaStrings() { if(metaStr != null) { ArrayList l = new ArrayList(metaStr.length);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53623,
+    "v2": "nodeConfig.register(\"maxRAMBucketSize\", \"128KiB\", sortOrder++, true, false, \"NodeClientCore.maxRAMBucketSize\", \"NodeClientCore.maxRAMBucketSizeLong\", new LongCallback() {",
+    "resolution": "clientContext = new ClientContext(this); storeChecker.setContext(clientContext); requestStarters = new RequestStarterGroup(node, this, portNumber, random, config, throttleFS, clientContext); clientContext.init(requestStarters); InsertCompressor.load(container, clientContext);",
+    "conflict": "clientContext = new ClientContext(this); storeChecker.setContext(clientContext); requestStarters = new RequestStarterGroup(node, this, portNumber, random, config, throttleFS, clientContext); clientContext.init(requestStarters); InsertCompressor.load(container, clientContext);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53638,
+    "v2": "// FIXME: returning a copy is not an option: find a smarter way of dealing with the synchronization synchronized(numberOfSelectionsSync) { return numberOfSelections;",
+    "resolution": "// FIXME: returning a copy is not an option: find a smarter way of dealing with the synchronization synchronized(numberOfSelectionsSync) { return numberOfSelections;",
+    "conflict": "synchronized(numberOfSelectionsSync) { return new TreeSet<Long>(numberOfSelections);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53643,
+    "v2": "addStoreElement(ctx, key, \".metadata-\"+(x++), bucket, gotElement, element2, callback); } catch (MetadataUnresolvedException e1) { x = resolve(e, x, bucket, ctx, key, gotElement, element2, callback);",
+    "resolution": "addStoreElement(ctx, key, \".metadata-\"+(x++), element, gotElement, element2, callback, container, context); } catch (MetadataUnresolvedException e1) { x = resolve(e, x, element, ctx, key, gotElement, element2, callback, container, context);",
+    "conflict": "addStoreElement(ctx, key, \".metadata-\"+(x++), element, gotElement, element2, callback, container, context); } catch (MetadataUnresolvedException e1) { x = resolve(e, x, element, ctx, key, gotElement, element2, callback, container, context);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53659,
+    "v2": "final Executor executor;",
+    "resolution": "final Ticker ticker;  private ClientContext context;",
+    "conflict": "final Ticker ticker;  private ClientContext context;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53665,
+    "v2": "persistentTempBucketFactory = new PersistentTempBucketFactory(new File(nodeConfig.getString(\"persistentTempDir\")), \"freenet-temp-\", random, node.fastWeakRandom, nodeConfig.getBoolean(\"encryptPersistentTempBuckets\"));",
+    "resolution": "File dir = new File(nodeConfig.getString(\"persistentTempDir\")); String prefix = \"freenet-temp-\"; persistentTempBucketFactory = PersistentTempBucketFactory.load(dir, prefix, random, node.fastWeakRandom, container, node.nodeDBHandle); persistentTempBucketFactory.init(dir, prefix, random, node.fastWeakRandom); persistentEncryptedTempBucketFactory = PersistentEncryptedTempBucketFactory.load(persistentTempBucketFactory, container);",
+    "conflict": "File dir = new File(nodeConfig.getString(\"persistentTempDir\")); String prefix = \"freenet-temp-\"; persistentTempBucketFactory = PersistentTempBucketFactory.load(dir, prefix, random, node.fastWeakRandom, container, node.nodeDBHandle); persistentTempBucketFactory.init(dir, prefix, random, node.fastWeakRandom); persistentEncryptedTempBucketFactory = PersistentEncryptedTempBucketFactory.load(persistentTempBucketFactory, container);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53670,
+    "v2": "ret = client.server.core.persistentTempBucketFactory.makeBucket(fctx.maxOutputLength); else ret = fctx.bucketFactory.makeBucket(fctx.maxOutputLength);",
+    "resolution": "ret = server.core.persistentTempBucketFactory.makeEncryptedBucket(); else ret = server.core.tempBucketFactory.makeBucket(-1);",
+    "conflict": "ret = server.core.persistentTempBucketFactory.makeEncryptedBucket(); else ret = server.core.tempBucketFactory.makeBucket(-1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53671,
+    "v2": "ret = client.server.core.persistentTempBucketFactory.makeBucket(fctx.maxOutputLength); else ret = fctx.bucketFactory.makeBucket(fctx.maxOutputLength);",
+    "resolution": "ret = server.core.persistentTempBucketFactory.makeEncryptedBucket(); else ret = server.core.tempBucketFactory.makeBucket(-1);",
+    "conflict": "ret = server.core.persistentTempBucketFactory.makeEncryptedBucket(); else ret = server.core.tempBucketFactory.makeBucket(-1);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53679,
+    "v2": "private volatile boolean encrypt;  public PersistentTempBucketFactory(File dir, final String prefix, RandomSource strongPRNG, Random weakPRNG, boolean encrypt) throws IOException {",
+    "resolution": "private final long nodeDBHandle;  public PersistentTempBucketFactory(File dir, final String prefix, RandomSource strongPRNG, Random weakPRNG, long nodeDBHandle) throws IOException {",
+    "conflict": "private final long nodeDBHandle;  public PersistentTempBucketFactory(File dir, final String prefix, RandomSource strongPRNG, Random weakPRNG, long nodeDBHandle) throws IOException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53690,
+    "v2": "contentNode.addChild(createBulkDownloadForm(ctx, pageMaker));  MultiValueTable pageHeaders = new MultiValueTable(); writeHTMLReply(ctx, 200, \"OK\", pageHeaders, pageNode.generate());",
+    "resolution": "return pageNode;",
+    "conflict": "return pageNode;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53695,
+    "v2": "final File tempDir;\t// Persistent temporary buckets",
+    "resolution": "final File tempDir; public final FECQueue fecQueue;",
+    "conflict": "final File tempDir; public final FECQueue fecQueue;  // Persistent temporary buckets"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53704,
+    "v2": "public SendableRequest removeFirst();  /** * Tell the scheduler that a request from a specific RandomGrabArray succeeded.",
+    "resolution": "/** Tell the scheduler that a request from a specific RandomGrabArray succeeded.",
+    "conflict": "/** Tell the scheduler that a request from a specific RandomGrabArray succeeded."
+  }
+]
+}

@@ -1,0 +1,1095 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 2",
+    "id": 58183,
+    "v2": "private boolean handlingException;",
+    "resolution": "private boolean handlingException;",
+    "conflict": "private ThreadLocal<Boolean> takingScreenshot = new ThreadLocal<>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58185,
+    "v2": "new DefaultArtifactVersion(\"6.4.9.GA\");",
+    "resolution": "new DefaultArtifactVersion(\"7.0.1.GA\");",
+    "conflict": "new DefaultArtifactVersion(\"7.0.1.GA\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58192,
+    "v2": "private UrlUtil urlUtil;",
+    "resolution": "private AuthenticationType authenticationType;",
+    "conflict": "private AuthenticationType authenticationType;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58214,
+    "v2": "@Transactional(readOnly = true)",
+    "resolution": "@Transactional(readOnly = true)",
+    "conflict": "@Transactional"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58228,
+    "v2": "import javax.enterprise.inject.Model;",
+    "resolution": "import javax.enterprise.inject.Model;import javax.annotation.Nullable;",
+    "conflict": "import javax.annotation.Nullable;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58229,
+    "v2": "import org.apache.deltaspike.jpa.api.transaction.Transactional; import org.zanata.seam.security.ZanataJpaIdentityStore;",
+    "resolution": "import org.apache.deltaspike.jpa.api.transaction.Transactional;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "None",
+    "id": 58248,
+    "v2": "import org.zanata.config.JndiBackedConfig;",
+    "resolution": "import org.zanata.events.LogoutEvent;",
+    "conflict": "import org.zanata.events.ConfigurationChanged;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58279,
+    "v2": "private boolean insideInvoke;",
+    "resolution": "private boolean insideInvoke;    private boolean checkingDswids = true;",
+    "conflict": "private boolean checkingDswids = true;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58301,
+    "v2": "",
+    "resolution": "import org.zanata.ui.faces.FacesMessages; import org.zanata.util.UrlUtil;",
+    "conflict": "import org.zanata.ui.faces.FacesMessages; import org.zanata.util.UrlUtil;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58318,
+    "v2": "if (firstException == null || !firstException.isErrorLog()) {",
+    "resolution": "if (firstException == null || !firstException.isErrorLog()) {",
+    "conflict": "if (throwIfWarn && firstException == null) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58333,
+    "v2": "",
+    "resolution": "//    @End //    public String redirectToLogin() {",
+    "conflict": "//    @End     public String redirectToLogin() {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58363,
+    "v2": "",
+    "resolution": "import org.zanata.security.annotations.Authenticated;",
+    "conflict": "import org.zanata.security.annotations.Authenticated; import org.zanata.service.GravatarService;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58375,
+    "v2": "targetLocaleId, maxResults, entityTypes);",
+    "resolution": "targetLocaleId, maxResults, textFlowTargetId, entityTypes);",
+    "conflict": "targetLocaleId, maxResults, textFlowTargetId, entities);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58376,
+    "v2": "import org.zanata.security.ZanataIdentity;",
+    "resolution": "import org.zanata.security.ZanataIdentity;import org.zanata.security.annotations.Authenticated;",
+    "conflict": "import org.zanata.security.annotations.Authenticated;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58393,
+    "v2": "import org.zanata.ui.faces.FacesMessages;",
+    "resolution": "import org.zanata.ui.faces.FacesMessages;import org.zanata.util.FacesNavigationUtil;",
+    "conflict": "import org.zanata.util.FacesNavigationUtil;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58407,
+    "v2": "obsoleteAccount = null;",
+    "resolution": "setObsoleteAccount(null);",
+    "conflict": "setObsoleteAccount(null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58410,
+    "v2": "@In",
+    "resolution": "@Inject",
+    "conflict": "@Inject"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58433,
+    "v2": "0, HTextFlowTarget.class);",
+    "resolution": "0, Optional.<Long>absent(), HTextFlowTarget.class);",
+    "conflict": "0, Optional.<Long>absent(), HTextFlowTarget.class);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58436,
+    "v2": "targetLocaleId, maxResults, entities);",
+    "resolution": "targetLocaleId, maxResults, textFlowTargetId, entities);",
+    "conflict": "targetLocaleId, maxResults, textFlowTargetId, entities);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58438,
+    "v2": "",
+    "resolution": "log.info(\"Executing Lucene query: {}\", textQuery.toString());",
+    "conflict": "log.info(\"Executing Lucene query: {}\", textQuery.toString());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58456,
+    "v2": "log.warn(\"XMLHttpRequest.active is null.  URL: {}\\nPartial page source follows:\\n{}\", url, pageSource);",
+    "resolution": "log.warn(\"XMLHttpRequest.active is null. Is AjaxCounterBean missing? URL: {}\\nPartial page source follows:\\n{}\", url, pageSource);",
+    "conflict": "log.warn(\"XMLHttpRequest.active is null. Is AjaxCounterBean missing? URL: {}\\nPartial page source follows:\\n{}\", url, pageSource);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58484,
+    "v2": "import org.zanata.dao.LocaleDAO;",
+    "resolution": "import org.zanata.events.ProjectIterationUpdate;import org.zanata.dao.LocaleDAO;",
+    "conflict": "import org.zanata.events.ProjectIterationUpdate;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58485,
+    "v2": "",
+    "resolution": "import org.zanata.service.impl.LocaleServiceImpl; import org.zanata.ui.faces.FacesMessages;",
+    "conflict": "import org.zanata.ui.autocomplete.LocaleAutocomplete; import org.zanata.ui.faces.FacesMessages;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58486,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private VersionLocaleAutocomplete localeAutocomplete;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58511,
+    "v2": "import org.jboss.seam.faces.FacesMessages; import org.zanata.dao.AccountActivationKeyDAO;",
+    "resolution": "import org.zanata.dao.AccountActivationKeyDAO;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58515,
+    "v2": "waitForAMoment().until(new NamedPredicate(\"expectUploadItem\") {",
+    "resolution": "waitForAMoment().until(new NamedPredicate(\"expectUploadItem\") {",
+    "conflict": "waitForAMoment().until(new NamedPredicate<WebDriver>(\"expectUploadItem\") {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58517,
+    "v2": "versionDocumentsTab.waitForPageSilence();         // TODO try to eliminate this:",
+    "resolution": "versionDocumentsTab.waitForPageSilence();        // TODO try to eliminate this:",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58527,
+    "v2": "import org.zanata.async.handle.CopyTransTaskHandle;",
+    "resolution": "import org.zanata.cache.InfinispanTestCacheContainer;import org.zanata.async.handle.CopyTransTaskHandle;",
+    "conflict": "import org.zanata.cache.InfinispanTestCacheContainer;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58528,
+    "v2": "import org.zanata.async.handle.CopyVersionTaskHandle;",
+    "resolution": "import org.zanata.cache.InfinispanTestCacheContainer;import org.zanata.async.handle.CopyVersionTaskHandle;",
+    "conflict": "import org.zanata.cache.InfinispanTestCacheContainer;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58548,
+    "v2": "import com.google.common.util.concurrent.MoreExecutors; import org.jboss.seam.Component;",
+    "resolution": "import com.google.common.util.concurrent.MoreExecutors;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58549,
+    "v2": "AsyncTask<V, H> task, Runnable onComplete) {",
+    "resolution": "@Nonnull AsyncTask<V, H> task, Runnable onComplete) {",
+    "conflict": "@Nonnull AsyncTask<V, H> task) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58550,
+    "v2": "import lombok.extern.slf4j.Slf4j; import org.jboss.seam.Component;",
+    "resolution": "import lombok.extern.slf4j.Slf4j;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58554,
+    "v2": "archive.addAsResource(\"messages.properties\");         archive.addAsResource(\"security.drl\");",
+    "resolution": "archive.addAsResource(\"messages.properties\");",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58607,
+    "v2": "String passwordChanged = \"Your password has been successfully changed.\";",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58621,
+    "v2": ".clickInheritCheckbox()                         .waitForLocaleListVisible()",
+    "resolution": ".clickInheritCheckbox()                        .waitForLocaleListVisible()",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58624,
+    "v2": "import org.zanata.page.BasePage;",
+    "resolution": "import org.zanata.page.BasePage;",
+    "conflict": "import org.zanata.page.dashboard.DashboardBasePage;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58634,
+    "v2": "",
+    "resolution": "private static final int USER_IMAGE_SIZE = 115;",
+    "conflict": "private static final int USER_IMAGE_SIZE = 115;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58646,
+    "v2": "languageTabLanguageFilter.resetQueryAndPage();",
+    "resolution": "languageTabLanguageFilter.reset();",
+    "conflict": "languageTabLanguageFilter.reset();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58647,
+    "v2": "projectTabLanguageFilter.resetQueryAndPage();",
+    "resolution": "projectTabLanguageFilter.reset();",
+    "conflict": "projectTabLanguageFilter.reset();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58648,
+    "v2": "languageTabVersionFilter.resetQueryAndPage();",
+    "resolution": "languageTabVersionFilter.reset();",
+    "conflict": "languageTabVersionFilter.reset();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58649,
+    "v2": "projectTabVersionFilter.resetQueryAndPage();",
+    "resolution": "projectTabVersionFilter.reset();",
+    "conflict": "projectTabVersionFilter.reset();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58739,
+    "v2": "@Setter(AccessLevel.NONE)",
+    "resolution": "@Setter(AccessLevel.NONE)",
+    "conflict": "@Setter(AccessLevel.PROTECTED)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58747,
+    "v2": "SlugEntityBase other = new SlugClass(\"abc\");",
+    "resolution": "SlugEntityBase other = new SlugClass(\"abc\");",
+    "conflict": "SlugEntityBase other = new SlugEntityBase(\"abc\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58752,
+    "v2": "@CollectionOfElements(fetch = FetchType.LAZY)",
+    "resolution": "@ElementCollection(fetch = FetchType.LAZY)",
+    "conflict": "@ElementCollection(fetch = FetchType.EAGER)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58753,
+    "v2": "@CollectionOfElements(fetch = FetchType.LAZY)",
+    "resolution": "@ElementCollection(fetch = FetchType.LAZY)",
+    "conflict": "@ElementCollection(fetch = FetchType.EAGER)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58754,
+    "v2": "import com.google.common.base.Objects; import com.google.common.collect.ImmutableList;",
+    "resolution": "import com.google.common.base.Objects; import com.google.common.collect.ImmutableList;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58766,
+    "v2": "return \"\";",
+    "resolution": "return \"\";",
+    "conflict": "return \"/language/language.seam?id=\" + zanataLocalePair.getLocaleId().getId();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58768,
+    "v2": "return Optional.fromNullable(Strings.emptyToNull(documentFileUpload.getAdapterParams()));",
+    "resolution": "return Optional.fromNullable(Strings.emptyToNull(documentFileUpload.getAdapterParams()));",
+    "conflict": "return Optional.of(Strings.emptyToNull(documentFileUpload.getAdapterParams()));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58771,
+    "v2": "final TransUnitCountBar graph = new TransUnitCountBar(messages, LabelFormat.PERCENT_COMPLETE, false, userWorkspaceContext.getWorkspaceRestrictions().isProjectRequireReview());",
+    "resolution": "final TransUnitCountBar graph = new TransUnitCountBar(userWorkspaceContext, messages, LabelFormat.PERCENT_COMPLETE, false, userWorkspaceContext.getWorkspaceRestrictions().isProjectRequireReview());",
+    "conflict": "final TransUnitCountBar graph = new TransUnitCountBar(userWorkspaceContext, messages, LabelFormat.PERCENT_COMPLETE, false);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58772,
+    "v2": "public TransUnitCountBar(WebTransMessages messages, LabelFormat labelFormat, boolean enableClickToggle, boolean projectRequireReview)",
+    "resolution": "public TransUnitCountBar(UserWorkspaceContext userworkspaceContext, WebTransMessages messages, LabelFormat labelFormat, boolean enableClickToggle, boolean projectRequireReview)",
+    "conflict": "public TransUnitCountBar(UserWorkspaceContext userworkspaceContext, WebTransMessages messages, LabelFormat labelFormat, boolean enableClickToggle)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58835,
+    "v2": "private CacheWrapper<TranslatedDocumentKey, Long> docLastTranslatedCache;",
+    "resolution": "private CacheWrapper<TranslatedDocumentKey, Long> docLastTranslatedCache;",
+    "conflict": "private CacheWrapper<TranslatedDocumentKey, Long> docLastTranslateddCache;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58836,
+    "v2": "docLastTranslatedCache = EhcacheWrapper.create(DOC_LAST_TRANSLATED_TFT_CACHE_NAME, cacheManager, docLastTranslatedLoader);",
+    "resolution": "docLastTranslatedCache = EhcacheWrapper.create(DOC_LAST_TRANSLATED_TFT_CACHE_NAME, cacheManager, docLastTranslatedLoader);",
+    "conflict": "docLastTranslateddCache = EhcacheWrapper.create(DOC_LAST_TRANSLATED_TFT_CACHE_NAME, cacheManager, docLastTranslatedLoader);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58837,
+    "v2": "updateDocLastTranslatedCache(textFlowId, localeId, newState);",
+    "resolution": "updateDocLastTranslatedCache(textFlowId, localeId, newState);",
+    "conflict": "updateDocLastModifiedCache(textFlowId, localeId, newState);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58839,
+    "v2": "docLastTranslatedCache.put(new TranslatedDocumentKey(documentId, localeId), target.getId());",
+    "resolution": "docLastTranslatedCache.put(new TranslatedDocumentKey(documentId, localeId), target.getId());",
+    "conflict": "docLastTranslateddCache.put(new TranslatedDocumentKey(documentId, localeId), target.getId());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58859,
+    "v2": "totalOperations += getIndexer(clazz).getEntityCount(session, clazz);",
+    "resolution": "totalOperations += getIndexer(clazz).getEntityCount(session, clazz);",
+    "conflict": "totalOperations += (Long) session.createCriteria(clazz).setProjection(Projections.rowCount()).list().get(0);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58881,
+    "v2": "T unmarshall = (T) RestUtils.unmarshall(type, messageBody, MediaType.APPLICATION_XML_TYPE, new Headers<String>());",
+    "resolution": "T unmarshall = restUtils.unmarshall(type, messageBody, MediaType.APPLICATION_XML_TYPE, new Headers<String>());",
+    "conflict": "T unmarshall = restUtils.unmarshall(type, messageBody, MediaType.APPLICATION_XML_TYPE, null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58885,
+    "v2": "this.configurationServiceImpl.getConfigurationFileContents(this.projectSlug, this.iterationSlug, projectType.toString()).getBytes());",
+    "resolution": "this.configurationServiceImpl.getConfigurationFileContents(this.projectSlug, this.iterationSlug, projectType.name()).getBytes());",
+    "conflict": "this.configurationServiceImpl.getConfigurationFileContents(this.projectSlug, this.iterationSlug, projectType.name()).getBytes());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58901,
+    "v2": "CopyTransOptions options)",
+    "resolution": "HCopyTransOptions options)",
+    "conflict": "HCopyTransOptions options)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58902,
+    "v2": "HTextFlowTarget hTarget = textFlowTargetDAO.getOrCreateTarget(originalTf, locale);",
+    "resolution": "HTextFlowTarget hTarget = textFlowTargetDAO.getOrCreateTarget(originalTf, locale);",
+    "conflict": "HTextFlowTarget hTarget = originalTf.getTargets().get( locale.getId() );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58905,
+    "v2": "//copyClosestEquivalentTranslation(document);",
+    "resolution": "copyTranslations(document);",
+    "conflict": "copyTranslations(document);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58908,
+    "v2": "ScrollableResults results = this.textFlowTargetDAO.findMatchingTranslations(doc, hLocale, false, false, false);",
+    "resolution": "ScrollableResults results = this.textFlowTargetDAO.findMatchingTranslations(doc, hLocale, true, true, true);",
+    "conflict": "ScrollableResults results = this.textFlowTargetDAO.findMatchingTranslations(doc, hLocale, true, true, true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58909,
+    "v2": "import org.zanata.common.CopyTransOptions;",
+    "resolution": "import org.zanata.model.HCopyTransOptions;",
+    "conflict": "import org.zanata.model.HCopyTransOptions;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58911,
+    "v2": "CopyTransOptions options = new CopyTransOptions( execution.getContextMismatchAction(),",
+    "resolution": "HCopyTransOptions options = new HCopyTransOptions( execution.getContextMismatchAction(),",
+    "conflict": "HCopyTransOptions options = new HCopyTransOptions( execution.getContextMismatchAction(),"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58914,
+    "v2": "\"contextMatches\", \"projectMatches\", \"documentMatches\"})",
+    "resolution": "\"contextMatches\", \"projectMatches\", \"documentMatches\"})",
+    "conflict": "\"contextMatches\", \"projectMatches\", \"documentMatches\"})"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58941,
+    "v2": "import java.net.URL; import java.util.Collection;",
+    "resolution": "import java.util.Collection;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58943,
+    "v2": "import org.jboss.security.auth.login.XMLLoginConfigMBean; import org.zanata.exception.ZanataInitializationException;",
+    "resolution": "import org.zanata.exception.ZanataInitializationException;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58948,
+    "v2": "",
+    "resolution": "import org.zanata.webtrans.client.service.NavigationController;",
+    "conflict": "import org.zanata.webtrans.client.rpc.CachingDispatchAsync; import org.zanata.webtrans.client.service.NavigationController;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58949,
+    "v2": "public TranslationPresenter(Display display, EventBus eventBus, final TargetContentsPresenter targetContentsPresenter, final TranslationEditorPresenter translationEditorPresenter, final TransMemoryPresenter transMemoryPresenter, final GlossaryPresenter glossaryPresenter, final WebTransMessages messages, final NativeEvent nativeEvent, final UserWorkspaceContext userWorkspaceContext, final KeyShortcutPresenter keyShortcutPresenter)",
+    "resolution": "public TranslationPresenter(Display display, EventBus eventBus, final TargetContentsPresenter targetContentsPresenter, final TranslationEditorPresenter translationEditorPresenter, final TransMemoryPresenter transMemoryPresenter, final GlossaryPresenter glossaryPresenter, final WebTransMessages messages, final UserWorkspaceContext userWorkspaceContext, final KeyShortcutPresenter keyShortcutPresenter, NavigationController navigationController)",
+    "conflict": "public TranslationPresenter(Display display, EventBus eventBus, CachingDispatchAsync dispatcher, final TargetContentsPresenter targetContentsPresenter, final WorkspaceUsersPresenter workspaceUsersPresenter, final TranslationEditorPresenter translationEditorPresenter, final OptionsPanelPresenter optionsPanelPresenter, final TransMemoryPresenter transMemoryPresenter, final GlossaryPresenter glossaryPresenter, final WebTransMessages messages, final UserWorkspaceContext userWorkspaceContext, final KeyShortcutPresenter keyShortcutPresenter, NavigationController navigationController)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58952,
+    "v2": "public EditorOptionsView(WebTransMessages messages)",
+    "resolution": "public EditorOptionsView(WebTransMessages messages)",
+    "conflict": "public OptionsPanelView(ValidationOptionsPresenter.Display validationOptionsView)"
+  },
+  {
+    "devdecision": "None",
+    "id": 58955,
+    "v2": "mockNativeEvent = createAndAddMock(NativeEvent.class);",
+    "resolution": "",
+    "conflict": "mockSidePanelPresenter = createAndAddMock(OptionsPanelPresenter.class);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 58956,
+    "v2": "translationPresenter = new TranslationPresenter(mockDisplay, mockEventBus, mockTargetContentsPresenter, mockTranslationEditorPresenter, mockTransMemoryPresenter, mockGlossaryPresenter, mockMessages, mockNativeEvent, mockUserWorkspaceContext, mockKeyShortcutPresenter);",
+    "resolution": "translationPresenter = new TranslationPresenter(mockDisplay, mockEventBus, mockTargetContentsPresenter, mockTranslationEditorPresenter, mockTransMemoryPresenter, mockGlossaryPresenter, mockMessages, mockUserWorkspaceContext, mockKeyShortcutPresenter, navigationController);",
+    "conflict": "translationPresenter = new TranslationPresenter(mockDisplay, mockEventBus, mockDispatcher, mockTargetContentsPresenter, mockWorkspaceUsersPresenter, mockTranslationEditorPresenter, mockSidePanelPresenter, mockTransMemoryPresenter, mockGlossaryPresenter, mockMessages, mockUserWorkspaceContext, mockKeyShortcutPresenter, navigationController);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58964,
+    "v2": "prevStateShortcut = new KeyShortcut(new Keys(Keys.ALT_KEY, KeyCodes.KEY_PAGEUP), ShortcutContext.Edit, messages.prevFuzzyOrUntranslated(), new KeyShortcutEventHandler()",
+    "resolution": "prevStateShortcut = new KeyShortcut(new Keys(Keys.ALT_KEY, KeyCodes.KEY_PAGEUP), ShortcutContext.Edit, messages.prevFuzzyOrUntranslated(), new KeyShortcutEventHandler()",
+    "conflict": "prevStateShortcut = new KeyShortcut(new Keys(Keys.ALT_KEY, KeyCodes.KEY_PAGEUP), ShortcutContext.Edit, messages.prevFuzzyOrUntranslated(), new KeyShortcutEventHandler()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58993,
+    "v2": "display.getSearchAndReplaceButton().addClickHandler(new ClickHandler()",
+    "resolution": "Command leaveWorkspaceMenuCommand = new Command()",
+    "conflict": "Command leaveWorkspaceMenuCommand = new Command()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58999,
+    "v2": "capturedKeyShortcutButtonClickHandler.reset();       capturedSignoutLinkCommand.reset();",
+    "resolution": "capturedKeyShortcutButtonClickHandler.reset();      capturedSignoutLinkCommand.reset();",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59004,
+    "v2": "keyShortcutPresenter.register(new KeyShortcut(new Keys(Keys.NO_MODIFIER, KeyCodes.KEY_ENTER), ShortcutContext.Navigation, messages.openEditorInSelectedRow(), KeyEvent.KEY_UP, true, true, new KeyShortcutEventHandler()",
+    "resolution": "keyShortcutPresenter.register(new KeyShortcut(new Keys(Keys.NO_MODIFIER, KeyCodes.KEY_ENTER), ShortcutContext.Navigation, messages.openEditorInSelectedRow(), KeyEvent.KEY_UP, true, true, new KeyShortcutEventHandler()",
+    "conflict": "keyShortcutPresenter.registerKeyShortcut(new KeyShortcut(0, KeyCodes.KEY_ENTER, ShortcutContext.Navigation, messages.openEditorInSelectedRow(), new KeyShortcutEventHandler()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59005,
+    "v2": "public SearchResultsPresenter(Display display, EventBus eventBus, CachingDispatchAsync dispatcher, History history, final WebTransMessages webTransMessages, final WorkspaceContext workspaceContext, final KeyShortcutPresenter keyShortcutPresenter, Location windowLocation)",
+    "resolution": "public SearchResultsPresenter(Display display, EventBus eventBus, CachingDispatchAsync dispatcher, History history, final WebTransMessages webTransMessages, final WorkspaceContext workspaceContext, final KeyShortcutPresenter keyShortcutPresenter, final Provider<UndoLink> undoLinkProvider, Location windowLocation)",
+    "conflict": "public SearchResultsPresenter(Display display, EventBus eventBus, CachingDispatchAsync dispatcher, History history, final WebTransMessages webTransMessages, final WorkspaceContext workspaceContext, final KeyShortcutPresenter keyShortcutPresenter, final Provider<UndoLink> undoLinkProvider, Location windowLocation)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59007,
+    "v2": "import com.allen_sauer.gwt.log.client.Log;",
+    "resolution": "import com.allen_sauer.gwt.log.client.Log;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59012,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import org.zanata.webtrans.client.editor.CheckKey; import org.zanata.webtrans.client.editor.CheckKeyImpl;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59014,
+    "v2": "public class TranslationPresenter extends WidgetPresenter<TranslationPresenter.Display>",
+    "resolution": "public class TranslationPresenter extends WidgetPresenter<TranslationPresenter.Display> implements HasLayoutSelection",
+    "conflict": "public class TranslationPresenter extends WidgetPresenter<TranslationPresenter.Display> implements HasLayoutSelection"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59022,
+    "v2": "mainSplitPanel.setWidgetMinSize(sidePanelOuterContainer, (int) SIDE_PANEL_WIDTH);",
+    "resolution": "mainSplitPanel.setWidgetMinSize(sidePanelOuterContainer, (int) SIDE_PANEL_WIDTH);",
+    "conflict": "mainSplitPanel.setWidgetMinSize(sidePanelOuterContainer, (int) OPTION_PANEL_WIDTH);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59025,
+    "v2": "double splitPosition = visible ? SOUTH_PANEL_HEIGHT : 0;",
+    "resolution": "double splitPosition = visible ? SOUTH_PANEL_HEIGHT : 0;",
+    "conflict": "double splitPosition = visible ? MIN_SOUTH_PANEL_HEIGHT : 0;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59033,
+    "v2": "",
+    "resolution": "",
+    "conflict": "replayAllMocks();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59058,
+    "v2": "log.info(\"got {0} HTextFLow results\", matchedSources.size());",
+    "resolution": "log.info(\"got {} HTextFLow results\", matchedSources.size());",
+    "conflict": "log.info(\"got {} HTextFLowTarget results\", matchedSources.size());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59063,
+    "v2": "@DefaultMessage(\"Disable 'Replace' button until previews have been generated for all selected text flows\")    String requirePreviewDescription();",
+    "resolution": "@DefaultMessage(\"Disable 'Replace' button until previews have been generated for all selected text flows\")   String requirePreviewDescription();",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59068,
+    "v2": "import org.zanata.webtrans.client.presenter.KeyShortcutPresenter;",
+    "resolution": "import org.zanata.webtrans.client.presenter.KeyShortcutPresenter;import org.zanata.webtrans.client.presenter.LayoutSelectorPresenter;",
+    "conflict": "import org.zanata.webtrans.client.presenter.LayoutSelectorPresenter;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59069,
+    "v2": "import org.zanata.webtrans.client.view.KeyShortcutView;",
+    "resolution": "import org.zanata.webtrans.client.view.KeyShortcutView;import org.zanata.webtrans.client.view.LayoutSelectorView;",
+    "conflict": "import org.zanata.webtrans.client.view.LayoutSelectorView;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59073,
+    "v2": "",
+    "resolution": "import org.zanata.webtrans.client.service.UserColorService; import org.zanata.webtrans.client.service.UserSessionService;",
+    "conflict": "import org.zanata.webtrans.client.service.UserColorService; import org.zanata.webtrans.client.service.UserSessionService;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59097,
+    "v2": "",
+    "resolution": "*     * @param locale",
+    "conflict": "*      * @param locale"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59099,
+    "v2": "indexables.add(HTextFlowTarget.class);",
+    "resolution": "indexables.add(HTextFlowTarget.class);      indexables.add(HProjectIteration.class);",
+    "conflict": "indexables.add(HProjectIteration.class);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59102,
+    "v2": "import org.hibernate.search.annotations.IndexedEmbedded;",
+    "resolution": "import org.hibernate.search.annotations.Indexed;",
+    "conflict": "import org.hibernate.search.annotations.Indexed;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59103,
+    "v2": "import org.zanata.webtrans.client.presenter.SourceContentsPresenter;",
+    "resolution": "import org.zanata.webtrans.client.presenter.SourceContentsPresenter;import org.zanata.webtrans.client.presenter.SearchResultsPresenter;",
+    "conflict": "import org.zanata.webtrans.client.presenter.SearchResultsPresenter;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59104,
+    "v2": "import java.util.ArrayList;",
+    "resolution": "import java.util.Comparator;import java.util.ArrayList;",
+    "conflict": "import java.util.Comparator;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59117,
+    "v2": "",
+    "resolution": "private List<String> contents;",
+    "conflict": "private List<String> contents;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59119,
+    "v2": "if (document == null)",
+    "resolution": "if (document == null || contents == null)",
+    "conflict": "if (document == null || contents == null)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59120,
+    "v2": "for (String content : getContents())",
+    "resolution": "for( String content : this.getContents() )",
+    "conflict": "for( String content : this.getContents() )"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59123,
+    "v2": "setContents(textFlow.getContents());",
+    "resolution": "this.contents = new ArrayList<String>(textFlow.getContents());",
+    "conflict": "this.contents = new ArrayList<String>(textFlow.getContents());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59129,
+    "v2": "return \"HTextFlowTarget(\" + \"contents:\" + getContents() + \" locale:\" + getLocale() + \" state:\" + getState() + \" comment:\" + getComment() + \" textflow:\" + getTextFlow().getContents() + \")\";",
+    "resolution": "return \"HTextFlowTarget(\" + \"contents:\" + getContents() + \" locale:\" + getLocale() + \" state:\" + getState() + \" comment:\" + getComment() + \" textflow:\" + getTextFlow().getContents() + \")\";",
+    "conflict": "return \"HTextFlowTarget(\" + \"content:\" + getContent() + \" locale:\" + getLocale() + \" state:\" + getState() + \" comment:\" + getComment() + \" textflow:\" + getTextFlow().getContents() + \")\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59130,
+    "v2": "setContents();",
+    "resolution": "setContents();",
+    "conflict": "setContents(\"\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59131,
+    "v2": "",
+    "resolution": "private List<String> contents;",
+    "conflict": "private List<String> contents;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59134,
+    "v2": "tf.setRevision(d.getRevision());",
+    "resolution": "tf.setRevision( d.getRevision() );",
+    "conflict": "tf.setRevision( d.getRevision() );"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59135,
+    "v2": "import org.zanata.dao.TextFlowTargetHistoryDAO;",
+    "resolution": "import org.zanata.dao.TextFlowTargetHistoryDAO;",
+    "conflict": "import org.zanata.testng.annotations.Disabled;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59143,
+    "v2": "import net.customware.gwt.presenter.client.widget.WidgetDisplay;",
+    "resolution": "import net.customware.gwt.presenter.client.widget.WidgetDisplay;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59145,
+    "v2": "public void saveAsApprovedAndMoveNext(int editorIndex)",
+    "resolution": "public void saveAsApprovedAndMoveNext()",
+    "conflict": "public void saveAsApproved()"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59146,
+    "v2": "listener.saveAsApprovedAndMoveNext(index);",
+    "resolution": "listener.saveAsApprovedAndMoveNext();",
+    "conflict": "listener.saveAsApproved();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59152,
+    "v2": "currentEditor = currentDisplay.openEditorAndCloseOthers(currentEditor);       Log.info(\"show editors at row:\" + rowIndex + \" current editor:\" + currentEditor.getText());",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59154,
+    "v2": "import org.zanata.webtrans.client.events.OpenEditorEvent;",
+    "resolution": "import org.zanata.webtrans.client.events.NotificationEvent.Severity;",
+    "conflict": "import org.zanata.webtrans.client.events.NotificationEvent.Severity;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59159,
+    "v2": "void addValidationMessagePanel(IsWidget validationMessagePanel);",
+    "resolution": "void addValidationMessagePanel(IsWidget validationMessagePanel);   void setSaveButtonTitle(String title);",
+    "conflict": "void setSaveButtonTitle(String title);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59166,
+    "v2": "textArea.setText(cellValue.getTargets().toString());",
+    "resolution": "currentTargetPresenter.getDisplay().setTargets(cellValue.getTargets());",
+    "conflict": "currentTargetPresenter.getDisplay().setTargets(cellValue.getTargets());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59172,
+    "v2": "eventBus.fireEvent(new TransMemoryCopyEvent(item.getSource(), item.getTarget()));",
+    "resolution": "eventBus.fireEvent(new CopyDataToEditorEvent(item.getSource(),  item.getTarget()));",
+    "conflict": "eventBus.fireEvent(new CopyDataToEditorEvent(source, target));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59201,
+    "v2": "PropWriter.write(docIn, new File(\"target/test-output\"));",
+    "resolution": "PropWriter.write(docIn, TEST_OUTPUT_DIR);",
+    "conflict": "PropWriter.write(docIn, TEST_OUTPUT_DIR, ISO_8859_1);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59222,
+    "v2": "import org.zanata.webtrans.client.ui.FilterViewConfirmationPanel; import org.zanata.webtrans.client.ui.ValidationMessagePanel;",
+    "resolution": "import org.zanata.webtrans.client.ui.FilterViewConfirmationPanel;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59266,
+    "v2": "row = pageNum * PAGE_SIZE + rowNum;",
+    "resolution": "row = pageNum * display.getPageSize() + rowNum;",
+    "conflict": "row = pageNum * display.getPageSize() + rowNum;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59274,
+    "v2": "Log.info(\"onTransUnitUpdated - update row:\" + row);",
+    "resolution": "Log.info(\"onTransUnitUpdated - update row:\" + row);",
+    "conflict": "Log.info(\"Updating row:\" + row);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59279,
+    "v2": "row = pageNum * PAGE_SIZE + rowNum;",
+    "resolution": "row = pageNum * display.getPageSize() + rowNum;",
+    "conflict": "row = pageNum * display.getPageSize() + rowNum;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59281,
+    "v2": "int row = getRow(event.getTransUnit().getId());",
+    "resolution": "int row = getRow(event.getTransUnit().getId());",
+    "conflict": "int row = event.getTransUnit().getRowIndex();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59283,
+    "v2": "public IVersion createIVersion()",
+    "resolution": "public IVersionResource createIVersionResource()",
+    "conflict": "protected IVersionResource createIVersionResource()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59293,
+    "v2": "PoTargetHeader poTargetHeader = new PoTargetHeader(\"target header comment\\nAdmin user <root@localhost>, 2012. #zanata\", new HeaderEntry(\"ht\", \"vt1\"), new HeaderEntry(\"th2\", \"tv2\"));",
+    "resolution": "PoTargetHeader poTargetHeader = new PoTargetHeader(\"target header comment\\nAdmin user <root@localhost>, 2011. #zanata\", new HeaderEntry(\"ht\", \"vt1\"), new HeaderEntry(\"th2\", \"tv2\"), new HeaderEntry(\"Content-Type\",\"charset=UTF-8\"));",
+    "conflict": "PoTargetHeader poTargetHeader = new PoTargetHeader(\"target header comment\\nAdmin user <root@localhost>, 2011. #zanata\", new HeaderEntry(\"ht\", \"vt1\"), new HeaderEntry(\"th2\", \"tv2\"), new HeaderEntry(\"Content-Type\",\"charset=UTF-8\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59297,
+    "v2": "public class PullCommand extends PushPullCommand<PullOptions>",
+    "resolution": "public class PullCommand extends PushPullCommand<PullOptions>",
+    "conflict": "public class PullCommand extends ConfigurableProjectCommand<PullOptions>"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59300,
+    "v2": "if (getOpts().isDryRun())",
+    "resolution": "if (getOpts().isDryRun())",
+    "conflict": "if (getOpts().getPullSrc())"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59302,
+    "v2": "else",
+    "resolution": "else",
+    "conflict": "if (getOpts().isDebugSet())"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59304,
+    "v2": "if (!getOpts().isDryRun())",
+    "resolution": "if (!getOpts().isDryRun())",
+    "conflict": "if (getOpts().isInteractiveMode())"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59306,
+    "v2": "public class PushCommand extends PushPullCommand<PushOptions>",
+    "resolution": "public class PushCommand extends PushPullCommand<PushOptions>",
+    "conflict": "public class PushCommand extends ConfigurableProjectCommand<PushOptions>"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59317,
+    "v2": "for (String qualifiedDocName : qualifiedDocNames)",
+    "resolution": "for (String qualifiedDocName : qualifiedDocNames)",
+    "conflict": "if (getOpts().isInteractiveMode())"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59324,
+    "v2": "void createTable(String query, ArrayList<TranslationMemoryItem> memories);",
+    "resolution": "void createTable(String query, ArrayList<TranslationMemoryGlossaryItem> memories);",
+    "conflict": "void createTable(ArrayList<TranslationMemoryGlossaryItem> memories);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59327,
+    "v2": "public void createTable(String query, ArrayList<TranslationMemoryItem> memories)",
+    "resolution": "public void createTable(String query, ArrayList<TranslationMemoryGlossaryItem> memories)",
+    "conflict": "public void createTable(ArrayList<TranslationMemoryGlossaryItem> memories)"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59354,
+    "v2": "private static final String WORKSPACE_TITLE_QUERY_PARAMETER_KEY = \"title\";",
+    "resolution": "private final UserOptionsPanel userOptionsPanel = new UserOptionsPanel(true, eventBus);   private static final String WORKSPACE_TITLE_QUERY_PARAMETER_KEY = \"title\";",
+    "conflict": "private final UserOptionsPanel userOptionsPanel = new UserOptionsPanel(true, eventBus);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59407,
+    "v2": "",
+    "resolution": "import org.zanata.webtrans.client.events.ButtonDisplayChangeEvent; import org.zanata.webtrans.client.events.ButtonDisplayChangeEventHandler;",
+    "conflict": "import org.zanata.webtrans.client.events.ButtonDisplayChangeEvent; import org.zanata.webtrans.client.events.ButtonDisplayChangeEventHandler;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59410,
+    "v2": "tableEditorPresenter.setTransFilterView(transFilterView);",
+    "resolution": "tableEditorPresenter.setTransFilterView(transFilterPresenter.getDisplay());",
+    "conflict": "tableEditorPresenter.setTransFilterView(transFilterPresenter.getDisplay());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59412,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59451,
+    "v2": "import org.zanata.webtrans.client.ui.UserConfigConstants;",
+    "resolution": "import org.zanata.webtrans.client.ui.UserConfigConstants;import org.zanata.webtrans.client.resources.NavigationMessages;",
+    "conflict": "import org.zanata.webtrans.client.resources.NavigationMessages;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59458,
+    "v2": "saveApprovedAndMoveNextState(NavigationType.NextEntry);",
+    "resolution": "saveApprovedAndMoveNextState(NavigationType.NextEntry);",
+    "conflict": "saveApprovedAndMoveRow(NavigationType.NextEntry);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59459,
+    "v2": "saveApprovedAndMoveNextState(NavigationType.NextEntry);",
+    "resolution": "saveApprovedAndMoveNextState(NavigationType.NextEntry);",
+    "conflict": "saveApprovedAndMoveRow(NavigationType.NextEntry);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59495,
+    "v2": "private final TranslationStats projectStats = new TranslationStats();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59526,
+    "v2": "this.statsByWords = statsByWords;       tooltipPanel.setStyleName(\"transUnitCountGraphTooltipPanel\");",
+    "resolution": "this.statsByWords = statsByWords;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59531,
+    "v2": "import com.google.gwt.user.client.rpc.AsyncCallback; import com.google.gwt.user.client.ui.Label;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59549,
+    "v2": "import org.zanata.webtrans.client.events.NavTransUnitEvent.NavigationType;",
+    "resolution": "import org.zanata.webtrans.client.events.NavTransUnitEvent.NavigationType;",
+    "conflict": "import org.zanata.webtrans.client.resources.NavigationMessages;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59553,
+    "v2": "",
+    "resolution": "import org.jboss.security.auth.login.XMLLoginConfigMBean;",
+    "conflict": "import org.jboss.security.auth.login.XMLLoginConfigMBean; import org.zanata.util.DBUnitImporter;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59558,
+    "v2": "selectTransUnit(display.getTransUnitValue(rowNum), false);",
+    "resolution": "selectTransUnit(display.getTransUnitValue(rowNum));",
+    "conflict": "selectTransUnit(display.getTransUnitValue(rowNum));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59567,
+    "v2": "@DefaultMessage(\"Click here to start translation\")",
+    "resolution": "@DefaultMessage(\"Click here to start translating\")",
+    "conflict": "@DefaultMessage(\"Click here to start translating\")"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59570,
+    "v2": "log.warn(e.getMessage(), e);",
+    "resolution": "log.warn(e, e);",
+    "conflict": "log.warn(e, e);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59573,
+    "v2": "protected IVersion createIVersion()",
+    "resolution": "protected IVersion createIVersion()",
+    "conflict": "private IVersion createVersion()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59580,
+    "v2": "protected IVersion createIVersion()",
+    "resolution": "protected IVersion createIVersion()",
+    "conflict": "private IVersion createVersion()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59630,
+    "v2": "log.debug(\"starting join tribe\");",
+    "resolution": "log.debug(\"starting join tribe\");",
+    "conflict": "log.info(\"starting join tribe\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59631,
+    "v2": "log.debug(\"starting leave tribe\");",
+    "resolution": "log.debug(\"starting leave tribe\");",
+    "conflict": "log.info(\"starting leave tribe\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59633,
+    "v2": "beforeTestOperations.add(new DataSetOperation(\"META-INF/testdata/LocalesData.dbunit.xml\", DatabaseOperation.CLEAN_INSERT));",
+    "resolution": "beforeTestOperations.add(new DataSetOperation(\"META-INF/testdata/LocalesData.dbunit.xml\", DatabaseOperation.CLEAN_INSERT));",
+    "conflict": "beforeTestOperations.add(new DataSetOperation(\"META-INF/testdata/SupportedLanguagesData.dbunit.xml\", DatabaseOperation.CLEAN_INSERT));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 59644,
+    "v2": "changed |= resourceUtils.transfer(entity.getExtensions(true), document, extensions, hLocale);",
+    "resolution": "changed |= resourceUtils.transferFromTranslationsResourceExtensions(entity.getExtensions(true), document, extensions, hLocale);",
+    "conflict": "changed |= resourceUtils.transferFromTranslationsResourceExtensions(entity.getExtensions(true), document, extensions, locale);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59690,
+    "v2": "",
+    "resolution": "import org.fedorahosted.flies.gwt.auth.AuthenticationError; import org.fedorahosted.flies.gwt.auth.AuthorizationError;",
+    "conflict": "import org.fedorahosted.flies.gwt.auth.AuthenticationError; import org.fedorahosted.flies.gwt.auth.AuthorizationError;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 59693,
+    "v2": "private Integer resourceRevision;",
+    "resolution": "private Integer resourceRevision;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59694,
+    "v2": "import com.google.gwt.user.client.ui.ScrollPanel; import com.google.gwt.user.client.ui.TextBox;",
+    "resolution": "import com.google.gwt.user.client.ui.ScrollPanel;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59695,
+    "v2": "",
+    "resolution": "import com.google.gwt.user.client.ui.VerticalPanel;",
+    "conflict": "import com.google.gwt.user.client.ui.TreeItem; import com.google.gwt.user.client.ui.VerticalPanel;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59698,
+    "v2": "",
+    "resolution": "this.transUnitInfoPresenter = transUnitInfoPresenter;",
+    "conflict": "this.transUnitInfoPresenter = transUnitInfoPresenter; bind();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59699,
+    "v2": "workspaceUsersPresenter.bind();",
+    "resolution": "display.getWidgets().add(transUnitInfoPresenter.getDisplay().asWidget());",
+    "conflict": "display.getWidgets().add(transUnitInfoPresenter.getDisplay().asWidget());"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 59703,
+    "v2": "import com.google.gwt.gen2.table.client.TableDefinition.AbstractCellView;",
+    "resolution": "import com.google.gwt.gen2.table.override.client.FlexTable.FlexCellFormatter;import com.google.gwt.gen2.table.client.TableDefinition.AbstractCellView;",
+    "conflict": "import com.google.gwt.gen2.table.override.client.FlexTable.FlexCellFormatter;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 59708,
+    "v2": "",
+    "resolution": "import com.extjs.gxt.ui.client.widget.Text;",
+    "conflict": "import com.extjs.gxt.ui.client.widget.Text; import com.extjs.gxt.ui.client.widget.button.Button;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59713,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 59714,
+    "v2": "",
+    "resolution": "import org.fedorahosted.flies.rest.dto.DocumentInline; import org.fedorahosted.flies.rest.dto.ProjectIteration;",
+    "conflict": "import org.fedorahosted.flies.rest.dto.DocumentInline; import org.fedorahosted.flies.rest.dto.ProjectIteration;"
+  }
+]
+}

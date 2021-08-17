@@ -1,0 +1,269 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 7889,
+    "v2": "Map<String, String> docs = EclipseAugments.CompilationUnit_javadoc.get(compilationUnit); if (docs == null) return null;",
+    "resolution": "Map<String, String> docs = CompilationUnit_javadoc.get(compilationUnit);",
+    "conflict": "Map<String, String> docs = CompilationUnit_javadoc.get(compilationUnit);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 7891,
+    "v2": "import java.util.List; import java.util.concurrent.ConcurrentMap;",
+    "resolution": "import java.util.List; import java.util.concurrent.ConcurrentMap;import java.util.Map;",
+    "conflict": "import java.util.Map;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 7897,
+    "v2": "import org.eclipse.jdt.core.dom.AST; import org.eclipse.jdt.core.dom.CompilationUnit;",
+    "resolution": "import org.eclipse.jdt.core.dom.AST; import org.eclipse.jdt.core.dom.CompilationUnit;import org.eclipse.jdt.core.compiler.CharOperation;",
+    "conflict": "import org.eclipse.jdt.core.compiler.CharOperation;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7898,
+    "v2": "char[] sourceArray = source.toCharArray(); final org.eclipse.jdt.internal.compiler.batch.CompilationUnit sourceUnit = new org.eclipse.jdt.internal.compiler.batch.CompilationUnit(sourceArray, file.getName(), encoding == null ? \"UTF-8\" : encoding);",
+    "resolution": "char[] sourceArray = source.toCharArray(); final ICompilationUnit sourceUnit = new TestCompilationUnit(file.getName(), source);",
+    "conflict": "final CompilationUnit sourceUnit = new TestCompilationUnit(file.getName(), source);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7902,
+    "v2": "private void makeSimpleSetterMethodForBuilder(JavacNode builderType, boolean deprecate, JavacNode fieldNode, Name paramName, Name nameOfSetFlag, JavacNode source, boolean fluent, boolean chain, List<JCAnnotation> annosOnParam, JavacNode originalFieldNode, AccessLevel access) {",
+    "resolution": "private void makeSimpleSetterMethodForBuilder(JavacNode builderType, boolean deprecate, JavacNode fieldNode, Name paramName, Name nameOfSetFlag, JavacNode source, boolean fluent, boolean chain, List<JCAnnotation> annosOnParam, JavacNode originalFieldNode, AccessLevel access) {",
+    "conflict": "private void makeSimpleSetterMethodForBuilder(JavacNode builderType, boolean deprecate, JavacNode fieldNode, Name nameOfSetFlag, JavacNode source, boolean fluent, boolean chain, List<JCAnnotation> annosOnParam, JavacNode originalFieldNode, AccessLevel access) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 7908,
+    "v2": "return new BuilderWithToBuilderBuilder<T>().one(this.mOne).two(this.mTwo).foo(BuilderWithToBuilder.<T>rrr(this)).bars(this.bars == null ? java.util.Collections.<T>emptyList() : this.bars);",
+    "resolution": "final BuilderWithToBuilderBuilder<T> builder = new BuilderWithToBuilderBuilder<T>().one(this.mOne).two(this.mTwo).foo(BuilderWithToBuilder.rrr(this)); if (this.bars != null) builder.bars(this.bars); return builder;",
+    "conflict": "final BuilderWithToBuilderBuilder<T> builder = new BuilderWithToBuilderBuilder<T>().one(this.mOne).two(this.mTwo).foo(BuilderWithToBuilder.rrr(this)); if (this.bars != null) builder.bars(this.bars); return builder;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7910,
+    "v2": "private static class BuilderFieldData { Annotation[] annotations;",
+    "resolution": "public static class BuilderFieldData { Annotation[] annotations;",
+    "conflict": "public static class BuilderFieldData {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7912,
+    "v2": "private static class BuilderFieldData { List<JCAnnotation> annotations;",
+    "resolution": "public static class BuilderFieldData { List<JCAnnotation> annotations;",
+    "conflict": "public static class BuilderFieldData {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7919,
+    "v2": "statements.append(maker.If(setField, assign, maker.Exec(assignDefault))); } else { statements.append(assign);",
+    "resolution": "statements.append(maker.If(setField, assign, maker.Exec(assignDefault))); } else { statements.append(assign);",
+    "conflict": "statements.append(maker.If(maker.Unary(CTC_NOT, setField), maker.Exec(assignDefault), null));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 7921,
+    "v2": "if (b.doubleField$set) this.doubleField = b.doubleField; else this.doubleField = Child.$default$doubleField();",
+    "resolution": "if (b.doubleField$set) this.doubleField = b.doubleField; else this.doubleField = Child.$default$doubleField();",
+    "conflict": "this.doubleField = b.doubleField; if (!b.doubleField$set) this.doubleField = Child.$default$doubleField();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7931,
+    "v2": "public abstract void generateMethods(SingularData data, EclipseNode builderType, boolean fluent, boolean chain); public abstract void appendBuildCode(SingularData data, EclipseNode builderType, List<Statement> statements, char[] targetVariableName, String builderVariable);",
+    "resolution": "public abstract void generateMethods(SingularData data, boolean deprecate, EclipseNode builderType, boolean fluent, boolean chain); public abstract void appendBuildCode(SingularData data, EclipseNode builderType, List<Statement> statements, char[] targetVariableName, String builderVariable);",
+    "conflict": "public abstract void generateMethods(SingularData data, boolean deprecate, EclipseNode builderType, boolean fluent, boolean chain); public abstract void appendBuildCode(SingularData data, EclipseNode builderType, List<Statement> statements, char[] targetVariableName);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7933,
+    "v2": "boolean useBuilderBasedConstructor = parent.get() instanceof TypeDeclaration && extendable; MethodDeclaration md = generateBuildMethod(isStatic, buildMethodName, nameOfStaticBuilderMethod, returnType, builderFields, builderType, thrownExceptions, addCleaning, ast, useBuilderBasedConstructor);",
+    "resolution": "MethodDeclaration md = generateBuildMethod(tdParent, isStatic, buildMethodName, nameOfStaticBuilderMethod, returnType, builderFields, builderType, thrownExceptions, addCleaning, ast, extensible);",
+    "conflict": "MethodDeclaration md = generateBuildMethod(tdParent, isStatic, buildMethodName, nameOfStaticBuilderMethod, returnType, builderFields, builderType, thrownExceptions, addCleaning, ast);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7937,
+    "v2": "boolean useBuilderBasedConstructor = parent.get() instanceof JCClassDecl && extendable; JCMethodDecl md = generateBuildMethod(isStatic, buildMethodName, nameOfBuilderMethod, returnType, builderFields, builderType, thrownExceptions, ast, addCleaning, useBuilderBasedConstructor);",
+    "resolution": "JCMethodDecl md = generateBuildMethod(tdParent, isStatic, buildMethodName, nameOfBuilderMethod, returnType, builderFields, builderType, thrownExceptions, ast, addCleaning, extensible);",
+    "conflict": "JCMethodDecl md = generateBuildMethod(tdParent, isStatic, buildMethodName, nameOfBuilderMethod, returnType, builderFields, builderType, thrownExceptions, ast, addCleaning);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7940,
+    "v2": "public abstract void generateMethods(SingularData data, JavacNode builderType, JCTree source, boolean fluent, boolean chain); public abstract void appendBuildCode(SingularData data, JavacNode builderType, JCTree source, ListBuffer<JCStatement> statements, Name targetVariableName, String builderVariable);",
+    "resolution": "public abstract void generateMethods(SingularData data, boolean deprecate, JavacNode builderType, JCTree source, boolean fluent, boolean chain); public abstract void appendBuildCode(SingularData data, JavacNode builderType, JCTree source, ListBuffer<JCStatement> statements, Name targetVariableName, String builderVariable);",
+    "conflict": "public abstract void generateMethods(SingularData data, boolean deprecate, JavacNode builderType, JCTree source, boolean fluent, boolean chain); public abstract void appendBuildCode(SingularData data, JavacNode builderType, JCTree source, ListBuffer<JCStatement> statements, Name targetVariableName);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7943,
+    "v2": "AccessLevel.PACKAGE, builderType, Collections.<EclipseNode>emptyList(), false, annotationNode, Collections.<Annotation>emptyList());",
+    "resolution": "AccessLevel.PACKAGE, builderType, Collections.<EclipseNode>emptyList(), false, annotationNode, Collections.<Annotation>emptyList(), null, false);",
+    "conflict": "AccessLevel.PACKAGE, builderType, Collections.<EclipseNode>emptyList(), false, null, annotationNode, Collections.<Annotation>emptyList(), null, false);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7967,
+    "v2": "* Default for {@code @Builder} on methods: {@code (ReturnTypeName)Builder}.",
+    "resolution": "* <p> * Default for {@code @Builder} on methods: {@code (ReturnTypeName)Builder}.",
+    "conflict": "* <p> * Default for {@code @Builder} on static methods: {@code (ReturnTypeName)Builder}."
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7977,
+    "v2": "import lombok.core.BooleanFieldAugment; import lombok.core.ReferenceFieldAugment; import lombok.core.TransformationsUtil;",
+    "resolution": "import lombok.core.BooleanFieldAugment; import lombok.core.ReferenceFieldAugment;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 7979,
+    "v2": "import lombok.core.ReferenceFieldAugment; import lombok.core.TransformationsUtil;",
+    "resolution": "import lombok.core.ReferenceFieldAugment; import lombok.core.TypeResolver; import lombok.core.handlers.HandlerUtil;",
+    "conflict": "import lombok.core.handlers.HandlerUtil;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7984,
+    "v2": "processAnnotation(LoggingFramework.COMMONS, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_COMMONS_FLAG_USAGE, \"@apachecommons.CommonsLog\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.COMMONS, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_COMMONS_FLAG_USAGE, \"@apachecommons.CommonsLog\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.COMMONS, annotation, source, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7985,
+    "v2": "processAnnotation(LoggingFramework.JUL, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_JUL_FLAG_USAGE, \"@java.Log\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.JUL, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_JUL_FLAG_USAGE, \"@java.Log\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.JUL, annotation, source, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7986,
+    "v2": "processAnnotation(LoggingFramework.LOG4J, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_LOG4J_FLAG_USAGE, \"@Log4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.LOG4J, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_LOG4J_FLAG_USAGE, \"@Log4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.LOG4J, annotation, source, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7987,
+    "v2": "processAnnotation(LoggingFramework.LOG4J2, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_LOG4J2_FLAG_USAGE, \"@Log4j2\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.LOG4J2, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_LOG4J2_FLAG_USAGE, \"@Log4j2\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.LOG4J2, annotation, source, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7988,
+    "v2": "processAnnotation(LoggingFramework.SLF4J, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_SLF4J_FLAG_USAGE, \"@Slf4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.SLF4J, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_SLF4J_FLAG_USAGE, \"@Slf4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.SLF4J, annotation, source, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7989,
+    "v2": "processAnnotation(LoggingFramework.XSLF4J, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_XSLF4J_FLAG_USAGE, \"@XSlf4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.XSLF4J, annotation, source, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_XSLF4J_FLAG_USAGE, \"@XSlf4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.XSLF4J, annotation, source, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7997,
+    "v2": "processAnnotation(LoggingFramework.COMMONS, annotation, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_COMMONS_FLAG_USAGE, \"@apachecommons.CommonsLog\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.COMMONS, annotation, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_COMMONS_FLAG_USAGE, \"@apachecommons.CommonsLog\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.COMMONS, annotation, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7998,
+    "v2": "processAnnotation(LoggingFramework.JUL, annotation, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_JUL_FLAG_USAGE, \"@java.Log\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.JUL, annotation, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_JUL_FLAG_USAGE, \"@java.Log\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.JUL, annotation, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 7999,
+    "v2": "processAnnotation(LoggingFramework.LOG4J, annotation, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_LOG4J_FLAG_USAGE, \"@Log4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.LOG4J, annotation, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_LOG4J_FLAG_USAGE, \"@Log4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.LOG4J, annotation, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8000,
+    "v2": "processAnnotation(LoggingFramework.LOG4J2, annotation, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_LOG4J2_FLAG_USAGE, \"@Log4j2\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.LOG4J2, annotation, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_LOG4J2_FLAG_USAGE, \"@Log4j2\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.LOG4J2, annotation, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8001,
+    "v2": "processAnnotation(LoggingFramework.SLF4J, annotation, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_SLF4J_FLAG_USAGE, \"@Slf4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.SLF4J, annotation, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_SLF4J_FLAG_USAGE, \"@Slf4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.SLF4J, annotation, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8002,
+    "v2": "processAnnotation(LoggingFramework.XSLF4J, annotation, annotationNode, annotation.getInstance().topic());",
+    "resolution": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_XSLF4J_FLAG_USAGE, \"@XSlf4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\"); processAnnotation(LoggingFramework.XSLF4J, annotation, annotationNode, annotation.getInstance().topic());",
+    "conflict": "handleFlagUsage(annotationNode, ConfigurationKeys.LOG_XSLF4J_FLAG_USAGE, \"@XSlf4j\", ConfigurationKeys.LOG_ANY_FLAG_USAGE, \"any @Log\");  processAnnotation(LoggingFramework.XSLF4J, annotation, annotationNode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8004,
+    "v2": "private static final String RELEASE_NAME = \"Angry Butterfly\";",
+    "resolution": "private static final String RELEASE_NAME = \"Edgy Guinea Pig\";",
+    "conflict": "private static final String RELEASE_NAME = \"Edgy Guinea Pig\"; //private static final String RELEASE_NAME = \"Angry Butterfly\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8016,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import lombok.core.AnnotationValues; import lombok.core.TransformationsUtil; import lombok.core.TypeResolver;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8018,
+    "v2": "for (String altName : TransformationsUtil.toAllGetterNames(fieldName, isBoolean)) { switch (methodExists(altName, fieldNode, false, 0)) {",
+    "resolution": "for (String altName : toAllGetterNames(fieldNode, isBoolean)) { switch (methodExists(altName, fieldNode, false, 0)) {",
+    "conflict": "for (String altName : toAllGetterNames(fieldNode, isBoolean)) { switch (methodExists(altName, fieldNode, false)) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 8019,
+    "v2": "for (String altName : TransformationsUtil.toAllSetterNames(new String(field.name), isBoolean)) { switch (methodExists(altName, fieldNode, false, 1)) {",
+    "resolution": "for (String altName : toAllSetterNames(fieldNode, isBoolean)) { switch (methodExists(altName, fieldNode, false, 1)) {",
+    "conflict": "for (String altName : toAllSetterNames(fieldNode, isBoolean)) { switch (methodExists(altName, fieldNode, false)) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8027,
+    "v2": "import org.eclipse.jdt.core.IType; import org.eclipse.jdt.core.JavaModelException;",
+    "resolution": "import org.eclipse.jdt.core.IType; import org.eclipse.jdt.core.JavaModelException;",
+    "conflict": "import org.eclipse.jdt.core.JavaModelException; import org.eclipse.jdt.core.dom.AbstractTypeDeclaration;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8040,
+    "v2": "if ( !isDirectDescendantOfObject && !callSuper ) { errorNode.addWarning(\"Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object.\");",
+    "resolution": "if ( !isDirectDescendantOfObject && !callSuper && implicit ) { errorNode.addWarning(\"Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.\");",
+    "conflict": "if ( !isDirectDescendentOfObject && !callSuper && implicit ) { errorNode.addWarning(\"Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8044,
+    "v2": "if ( !isDirectDescendantOfObject && !callSuper ) { errorNode.addWarning(\"Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object.\");",
+    "resolution": "if ( !isDirectDescendantOfObject && !callSuper && implicit ) { errorNode.addWarning(\"Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.\");",
+    "conflict": "if ( !isDirectDescendentOfObject && !callSuper && implicit ) { errorNode.addWarning(\"Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8045,
+    "v2": "JCVariableDecl param = treeMaker.VarDef(treeMaker.Modifiers(0, nonNulls.appendList(nullables)), fieldDecl.name, fieldDecl.vartype, null);",
+    "resolution": "JCVariableDecl param = treeMaker.VarDef(treeMaker.Modifiers(Flags.FINAL, nonNulls.appendList(nullables)), fieldDecl.name, fieldDecl.vartype, null);",
+    "conflict": "JCVariableDecl param = treeMaker.VarDef(treeMaker.Modifiers(Flags.FINAL), fieldDecl.name, fieldDecl.vartype, null);"
+  }
+]
+}

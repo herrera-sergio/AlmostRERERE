@@ -1,0 +1,451 @@
+{"conflicts":[
+  {
+    "devdecision": "Manual",
+    "id": 64661,
+    "v2": "const VERSION = '9.2.2';",
+    "resolution": "const VERSION = '9.2.3-dev';",
+    "conflict": "const VERSION = '9.2.2-dev';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64667,
+    "v2": "const VERSION = '9.1.11';",
+    "resolution": "const VERSION = '9.1.12-dev';",
+    "conflict": "const VERSION = '9.1.11-dev';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64673,
+    "v2": "const VERSION = '8.9.17';",
+    "resolution": "const VERSION = '8.9.18-dev';",
+    "conflict": "const VERSION = '8.9.17-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64679,
+    "v2": "const VERSION = '9.1.9';",
+    "resolution": "const VERSION = '9.1.9-dev';",
+    "conflict": "const VERSION = '9.1.9-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64685,
+    "v2": "const VERSION = '9.0.14';",
+    "resolution": "const VERSION = '9.0.14-dev';",
+    "conflict": "const VERSION = '9.0.14-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64691,
+    "v2": "const VERSION = '8.9.16';",
+    "resolution": "const VERSION = '8.9.16-dev';",
+    "conflict": "const VERSION = '8.9.16-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64699,
+    "v2": "const VERSION = '8.9.14';",
+    "resolution": "const VERSION = '8.9.14-dev';",
+    "conflict": "const VERSION = '8.9.14-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64705,
+    "v2": "const VERSION = '9.0.12';",
+    "resolution": "const VERSION = '9.0.12-dev';",
+    "conflict": "const VERSION = '9.0.12-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64711,
+    "v2": "const VERSION = '9.1.7';",
+    "resolution": "const VERSION = '9.1.7-dev';",
+    "conflict": "const VERSION = '9.1.7-dev';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64719,
+    "v2": "const VERSION = '9.1.3';",
+    "resolution": "const VERSION = '9.1.4-dev';",
+    "conflict": "const VERSION = '9.1.3-dev';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64725,
+    "v2": "const VERSION = '9.0.11';",
+    "resolution": "const VERSION = '9.0.12-dev';",
+    "conflict": "const VERSION = '9.0.11-dev';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64731,
+    "v2": "const VERSION = '8.9.13';",
+    "resolution": "const VERSION = '8.9.14-dev';",
+    "conflict": "const VERSION = '8.9.13-dev';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64738,
+    "v2": "const VERSION = '8.9.10';",
+    "resolution": "const VERSION = '8.9.11-dev';",
+    "conflict": "const VERSION = '8.9.10-dev';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64745,
+    "v2": "const VERSION = '9.0.9';",
+    "resolution": "const VERSION = '9.0.10-dev';",
+    "conflict": "const VERSION = '9.0.9-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64755,
+    "v2": "const VERSION = '8.8.11';",
+    "resolution": "const VERSION = '8.8.11-dev';",
+    "conflict": "const VERSION = '8.8.11-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64761,
+    "v2": "const VERSION = '8.9.9';",
+    "resolution": "const VERSION = '8.9.9-dev';",
+    "conflict": "const VERSION = '8.9.9-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64762,
+    "v2": "const VERSION = '9.0.8';",
+    "resolution": "const VERSION = '9.0.8-dev';",
+    "conflict": "const VERSION = '9.0.8-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64768,
+    "v2": "const VERSION = '8.8.10';",
+    "resolution": "const VERSION = '8.8.10-dev';",
+    "conflict": "const VERSION = '8.8.10-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64774,
+    "v2": "const VERSION = '8.9.6';",
+    "resolution": "const VERSION = '8.9.6-dev';",
+    "conflict": "const VERSION = '8.9.6-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64780,
+    "v2": "const VERSION = '9.0.6';",
+    "resolution": "const VERSION = '9.0.6-dev';",
+    "conflict": "const VERSION = '9.0.6-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64790,
+    "v2": "const VERSION = '8.8.8';",
+    "resolution": "const VERSION = '8.8.8-dev';",
+    "conflict": "const VERSION = '8.8.8-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64796,
+    "v2": "const VERSION = '8.9.1';",
+    "resolution": "const VERSION = '8.9.1-dev';",
+    "conflict": "const VERSION = '8.9.1-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64802,
+    "v2": "const VERSION = '9.0.1';",
+    "resolution": "const VERSION = '9.0.1-dev';",
+    "conflict": "const VERSION = '9.0.1-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64803,
+    "v2": "const VERSION = '8.7.14';",
+    "resolution": "const VERSION = '8.7.14-dev';",
+    "conflict": "const VERSION = '8.7.14-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64809,
+    "v2": "const VERSION = '8.8.6';",
+    "resolution": "const VERSION = '8.8.6-dev';",
+    "conflict": "const VERSION = '8.8.6-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64811,
+    "v2": "const VERSION = '8.7.12';",
+    "resolution": "const VERSION = '8.7.12-dev';",
+    "conflict": "const VERSION = '8.7.12-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64817,
+    "v2": "const VERSION = '8.8.4';",
+    "resolution": "const VERSION = '8.8.4-dev';",
+    "conflict": "const VERSION = '8.8.4-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64820,
+    "v2": "const VERSION = '8.8.1';",
+    "resolution": "const VERSION = '8.8.1-dev';",
+    "conflict": "const VERSION = '8.8.1-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64822,
+    "v2": "const VERSION = '8.7.11';",
+    "resolution": "const VERSION = '8.7.11-dev';",
+    "conflict": "const VERSION = '8.7.11-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64823,
+    "v2": "const VERSION = '8.7.5';",
+    "resolution": "const VERSION = '8.7.5-dev';",
+    "conflict": "const VERSION = '8.7.5-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64825,
+    "v2": "const VERSION = '8.6.16';",
+    "resolution": "const VERSION = '8.6.16-dev';",
+    "conflict": "const VERSION = '8.6.16-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64826,
+    "v2": "const VERSION = '8.7.1';",
+    "resolution": "const VERSION = '8.7.1-dev';",
+    "conflict": "const VERSION = '8.7.1-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64827,
+    "v2": "const VERSION = '8.7.0';",
+    "resolution": "const VERSION = '8.7.1-dev';",
+    "conflict": "const VERSION = '8.7.1-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64829,
+    "v2": "const VERSION = '8.5.15';",
+    "resolution": "const VERSION = '8.5.15-dev';",
+    "conflict": "const VERSION = '8.5.15-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64830,
+    "v2": "const VERSION = '8.6.15';",
+    "resolution": "const VERSION = '8.6.15-dev';",
+    "conflict": "const VERSION = '8.6.15-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64832,
+    "v2": "const VERSION = '8.5.14';",
+    "resolution": "const VERSION = '8.5.14-dev';",
+    "conflict": "const VERSION = '8.5.14-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64833,
+    "v2": "const VERSION = '8.6.13';",
+    "resolution": "const VERSION = '8.6.13-dev';",
+    "conflict": "const VERSION = '8.6.13-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64834,
+    "v2": "const VERSION = '8.5.11';",
+    "resolution": "const VERSION = '8.5.11-dev';",
+    "conflict": "const VERSION = '8.5.11-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64835,
+    "v2": "const VERSION = '8.6.10';",
+    "resolution": "const VERSION = '8.6.10-dev';",
+    "conflict": "const VERSION = '8.6.10-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64838,
+    "v2": "const VERSION = '8.5.10';",
+    "resolution": "const VERSION = '8.5.10-dev';",
+    "conflict": "const VERSION = '8.5.10-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64839,
+    "v2": "const VERSION = '8.6.7';",
+    "resolution": "const VERSION = '8.6.7-dev';",
+    "conflict": "const VERSION = '8.6.7-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64842,
+    "v2": "const VERSION = '8.5.9';",
+    "resolution": "const VERSION = '8.5.9-dev';",
+    "conflict": "const VERSION = '8.5.9-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64843,
+    "v2": "const VERSION = '8.6.6';",
+    "resolution": "const VERSION = '8.6.6-dev';",
+    "conflict": "const VERSION = '8.6.6-dev';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64845,
+    "v2": "const VERSION = '8.6.2';",
+    "resolution": "const VERSION = '8.6.3-dev';",
+    "conflict": "const VERSION = '8.6.2-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64847,
+    "v2": "const VERSION = '8.5.8';",
+    "resolution": "const VERSION = '8.5.8-dev';",
+    "conflict": "const VERSION = '8.5.8-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64848,
+    "v2": "const VERSION = '8.5.6';",
+    "resolution": "const VERSION = '8.5.6-dev';",
+    "conflict": "const VERSION = '8.5.6-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64849,
+    "v2": "const VERSION = '8.4.8';",
+    "resolution": "const VERSION = '8.4.8-dev';",
+    "conflict": "const VERSION = '8.4.8-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64850,
+    "v2": "const VERSION = '8.5.3';",
+    "resolution": "const VERSION = '8.5.3-dev';",
+    "conflict": "const VERSION = '8.5.3-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64853,
+    "v2": "const VERSION = '8.5.2';",
+    "resolution": "const VERSION = '8.5.2-dev';",
+    "conflict": "const VERSION = '8.5.2-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64856,
+    "v2": "const VERSION = '8.3.9';",
+    "resolution": "const VERSION = '8.3.9-dev';",
+    "conflict": "const VERSION = '8.3.9-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64857,
+    "v2": "const VERSION = '8.4.6';",
+    "resolution": "const VERSION = '8.4.6-dev';",
+    "conflict": "const VERSION = '8.4.6-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64858,
+    "v2": "const VERSION = '8.5.1';",
+    "resolution": "const VERSION = '8.5.1-dev';",
+    "conflict": "const VERSION = '8.5.1-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64861,
+    "v2": "const VERSION = '8.4.5';",
+    "resolution": "const VERSION = '8.4.5-dev';",
+    "conflict": "const VERSION = '8.4.5-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64862,
+    "v2": "const VERSION = '8.4.2';",
+    "resolution": "const VERSION = '8.4.2-dev';",
+    "conflict": "const VERSION = '8.4.2-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64863,
+    "v2": "const VERSION = '8.3.7';",
+    "resolution": "const VERSION = '8.3.7-dev';",
+    "conflict": "const VERSION = '8.3.7-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64864,
+    "v2": "const VERSION = '8.3.4';",
+    "resolution": "const VERSION = '8.3.4-dev';",
+    "conflict": "const VERSION = '8.3.4-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64865,
+    "v2": "const VERSION = '8.2.8';",
+    "resolution": "const VERSION = '8.2.8-dev';",
+    "conflict": "const VERSION = '8.2.8-dev';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 64866,
+    "v2": "const VERSION = '8.3.1';",
+    "resolution": "const VERSION = '8.3.1-dev';",
+    "conflict": "const VERSION = '8.3.1-dev';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64867,
+    "v2": "const VERSION = '8.2.7';",
+    "resolution": "const VERSION = '8.2.6';",
+    "conflict": "const VERSION = '8.2.7-dev';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64872,
+    "v2": "const VERSION = '8.2.3';",
+    "resolution": "const VERSION = '8.2.4-dev';",
+    "conflict": "const VERSION = '8.2.3-dev';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64873,
+    "v2": "const VERSION = '8.1.7';",
+    "resolution": "const VERSION = '8.1.7';",
+    "conflict": "const VERSION = '8.1.7-dev';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64874,
+    "v2": "const VERSION = '8.1.3';",
+    "resolution": "const VERSION = '8.1.3';",
+    "conflict": "const VERSION = '8.1.3-dev';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 64877,
+    "v2": "const VERSION = '8.0.4';",
+    "resolution": "const VERSION = '8.0.5-dev';",
+    "conflict": "const VERSION = '8.0.4-dev';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 64928,
+    "v2": "$this->drupalGet('cron/' . variable_get('cron_key', 'drupal'));",
+    "resolution": "$this->drupalGet('cron/' . variable_get('cron_key', 'drupal'));",
+    "conflict": "$this->drupalGet('cron', array('query' => array('cron_key' => variable_get('cron_key', 'drupal'))));"
+  }
+]
+}

@@ -1,0 +1,1333 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 43293,
+    "v2": "IMDB_JUSTWATCH_ITEM, ImmutableSet.of(JUSTWATCH), IMDB_ITEM_SEQUENCE, ImmutableSet.of(PA, PA_API), IMDB_ITEM_SEARCH, ImmutableSet.of(PA, PA_API)",
+    "resolution": "IMDB_JUSTWATCH_ITEM, ImmutableSet.of(JUSTWATCH), STANDARD_ITEM_SEQUENCE, ImmutableSet.of(PA, PA_API), STANDARD_MULTI_SAME_SOURCE_CANDIDATE_ITEM_SEARCH, ImmutableSet.of(PA, PA_API)",
+    "conflict": "STANDARD_ITEM_SEQUENCE, ImmutableSet.of(PA, PA_API), STANDARD_MULTI_SAME_SOURCE_CANDIDATE_ITEM_SEARCH, ImmutableSet.of(PA, PA_API)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 43299,
+    "v2": "import static org.atlasapi.equiv.update.updaters.types.ContainerEquivalenceUpdaterType.NO_CONTAINER;",
+    "resolution": "import static org.atlasapi.equiv.update.updaters.types.ContainerEquivalenceUpdaterType.PA_API_CONTAINER; import static org.atlasapi.equiv.update.updaters.types.ContainerEquivalenceUpdaterType.PA_API_SERIES; import static org.atlasapi.equiv.update.updaters.types.ContainerEquivalenceUpdaterType.RTE_VOD_CONTAINER; import static org.atlasapi.equiv.update.updaters.types.ContainerEquivalenceUpdaterType.NO_CONTAINER;",
+    "conflict": "import static org.atlasapi.equiv.update.updaters.types.ContainerEquivalenceUpdaterType.NOP_CONTAINER; import static org.atlasapi.equiv.update.updaters.types.ContainerEquivalenceUpdaterType.PA_API_CONTAINER; import static org.atlasapi.equiv.update.updaters.types.ContainerEquivalenceUpdaterType.PA_API_SERIES; import static org.atlasapi.equiv.update.updaters.types.ContainerEquivalenceUpdaterType.RTE_VOD_CONTAINER;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 43300,
+    "v2": "import static org.atlasapi.equiv.update.updaters.types.ItemEquivalenceUpdaterType.NO_ITEM;",
+    "resolution": "import static org.atlasapi.equiv.update.updaters.types.ItemEquivalenceUpdaterType.PA_API_ITEM; import static org.atlasapi.equiv.update.updaters.types.ItemEquivalenceUpdaterType.NO_ITEM;",
+    "conflict": "import static org.atlasapi.equiv.update.updaters.types.ItemEquivalenceUpdaterType.MUSIC_ITEM; import static org.atlasapi.equiv.update.updaters.types.ItemEquivalenceUpdaterType.NOP_ITEM; import static org.atlasapi.equiv.update.updaters.types.ItemEquivalenceUpdaterType.PA_API_ITEM; import static org.atlasapi.equiv.update.updaters.types.ItemEquivalenceUpdaterType.ROVI_ITEM;"
+  },
+  {
+    "devdecision": "None",
+    "id": 43323,
+    "v2": "import org.atlasapi.equiv.generators.ExactTitleGenerator;",
+    "resolution": "import org.atlasapi.equiv.results.combining.AddingEquivalenceCombiner;",
+    "conflict": "import org.atlasapi.equiv.handlers.DelegatingEquivalenceResultHandler; import org.atlasapi.equiv.handlers.EquivalenceSummaryWritingHandler; import org.atlasapi.equiv.handlers.LookupWritingEquivalenceHandler; import org.atlasapi.equiv.handlers.ResultWritingEquivalenceHandler; import org.atlasapi.equiv.messengers.QueueingEquivalenceResultMessenger;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43339,
+    "v2": "queryExecutor = new UriFetchingQueryExecutor (localOrRemoteFetcher, queryExecutor, equivUpdater, ImmutableSet.of(FACEBOOK)); queryExecutor = new CurieResolvingQueryExecutor(queryExecutor);",
+    "resolution": "queryExecutor = new UriFetchingQueryExecutor(localOrRemoteFetcher, queryExecutor, equivUpdater, ImmutableSet.of(FACEBOOK)); queryExecutor = new CurieResolvingQueryExecutor(queryExecutor); queryExecutor = new FilterEquivalentToRespectKeyQueryExecutor(queryExecutor);",
+    "conflict": "queryExecutor = new UriFetchingQueryExecutor(localOrRemoteFetcher, queryExecutor, equivUpdater, ImmutableSet.of(FACEBOOK)); queryExecutor = new CurieResolvingQueryExecutor(queryExecutor); queryExecutor = new FilterEquivalentToRespectKeyQueryExecutor(queryExecutor);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 43343,
+    "v2": ".addMixIn(Iterable.class, org.atlasapi.remotesite.amazonunbox.TelescopeReporterHelperMethods.PreventCircularReferences.class) .addMixIn(Element.class, org.atlasapi.remotesite.amazonunbox.TelescopeReporterHelperMethods.PreventCircularReferences.class) .addMixIn(Document.class, org.atlasapi.remotesite.amazonunbox.TelescopeReporterHelperMethods.PreventCircularReferences.class) ;",
+    "resolution": ".addMixIn(Iterable.class, TelescopeReporterHelperMethods.PreventCircularReferences.class) .addMixIn(Element.class, TelescopeReporterHelperMethods.PreventCircularReferences.class) .addMixIn(Document.class, TelescopeReporterHelperMethods.PreventCircularReferences.class)",
+    "conflict": ".addMixIn(Iterable.class, TelescopeReporterHelperMethods.PreventCircularReferences.class);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43344,
+    "v2": "Optional<ScoredCandidate<Item>> result = Optional.absent();",
+    "resolution": "Optional<ScoredCandidate<Item>> result = Optional.empty();",
+    "conflict": "Optional<ScoredCandidate<Item>> result = Optional.empty();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43353,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import org.atlasapi.reporting.telescope.OwlTelescopeReporter; import org.atlasapi.reporting.telescope.OwlTelescopeReporterFactory; import org.atlasapi.reporting.telescope.OwlTelescopeReporters;  import org.joda.time.DateTime;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43366,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import org.atlasapi.reporting.telescope.OwlTelescopeReporter; import org.atlasapi.reporting.telescope.OwlTelescopeReporterFactory; import org.atlasapi.reporting.telescope.OwlTelescopeReporters;  import com.metabroadcast.columbus.telescope.api.Event;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43376,
+    "v2": "idCodec.encode(BigInteger.valueOf(brand.getId())), TelescopeUtilityMethods.getAliases(brand.getAliases()), nitroBroadcast",
+    "resolution": "idCodec.encode(BigInteger.valueOf(brand.getId())), TelescopeUtilityMethods.getAliases(brand.getAliases()), nitroBroadcast",
+    "conflict": "brand.getModel().getId(), brand.getModel().getAliases(), nitroBroadcast, item.getPayload(), brand.getPayload() //this might be an overkill"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43377,
+    "v2": "idCodec.encode(BigInteger.valueOf(sery.getId())), TelescopeUtilityMethods.getAliases(sery.getAliases()), nitroBroadcast",
+    "resolution": "idCodec.encode(BigInteger.valueOf(sery.getId())), TelescopeUtilityMethods.getAliases(sery.getAliases()), nitroBroadcast",
+    "conflict": "sery.getModel().getId(), sery.getModel().getAliases(), nitroBroadcast, item.getPayload(), sery.getPayload()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43378,
+    "v2": "idCodec.encode(BigInteger.valueOf(item.getId())), TelescopeUtilityMethods.getAliases(item.getAliases()), nitroBroadcast",
+    "resolution": "idCodec.encode(BigInteger.valueOf(item.getId())), TelescopeUtilityMethods.getAliases(item.getAliases()), nitroBroadcast",
+    "conflict": "item.getModel().getId(), item.getModel().getAliases(), nitroBroadcast,  item.getPayload()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43383,
+    "v2": "",
+    "resolution": "",
+    "conflict": "OwlTelescopeReporter telescope = OwlTelescopeReporterFactory.getInstance().getTelescopeReporter( OwlTelescopeReporters.BBC_NITRO_INGEST_API, Event.Type.INGEST ); telescope.startReporting();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43399,
+    "v2": "resp.sendError(HttpStatusCode.NOT_FOUND.code());",
+    "resolution": "resp.sendError(HttpStatusCode.NOT_FOUND.code());",
+    "conflict": "resp.sendError(HttpStatusCode.NOT_FOUND.code(),\"Service \"+service+\" does not exist\"); telescope.reportFailedEvent(\"The request at bbc/nitro/update/service/\"+service+\"/date/\"+date +\" failed, because the service does not exist\"); telescope.endReporting();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43402,
+    "v2": "",
+    "resolution": "",
+    "conflict": "OwlTelescopeReporter telescope = OwlTelescopeReporterFactory.getInstance().getTelescopeReporter( OwlTelescopeReporters.BBC_NITRO_INGEST_CHANNELS, Event.Type.INGEST ); telescope.startReporting();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43403,
+    "v2": "private Iterable<Channel> writeAndMergeChannels(Iterable<Channel> channels) {",
+    "resolution": "private Iterable<Channel> writeAndMergeChannels(Iterable<Channel> channels) {",
+    "conflict": "private Iterable<Channel> writeAndMergeChannels( Iterable<ModelWithPayload<Channel>> channels, OwlTelescopeReporter telescope) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43462,
+    "v2": "Iterable<List<Item> > fetchedItems = contentAdapter.fetchEpisodes(toFetch, broadcastIndex); ImmutableSet<Item> fetchedItemSet = ImmutableSet.copyOf(",
+    "resolution": "Iterable<List<Item>> fetchedItems = contentAdapter.fetchEpisodes(toFetch, broadcastIndex);  ImmutableSet<Item> fetchedItemSet = ImmutableSet.copyOf(",
+    "conflict": "Iterable<List<Item>> fetchedItems = contentAdapter.fetchEpisodes(toFetch, broadcastIndex);  ImmutableSet<Item> fetchedItemSet = ImmutableSet.copyOf("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43473,
+    "v2": ".join(validAnnotations.stream() .map(Annotation.TO_KEY::apply) .collect(MoreCollectors.toImmutableList()) ) )",
+    "resolution": ".join(validAnnotations.stream() .map(Annotation.TO_KEY::apply) .collect(MoreCollectors.toImmutableList()) ) )",
+    "conflict": ".join(Iterables.transform(validAnnotations, Annotation.TO_KEY)))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43504,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import com.metabroadcast.columbus.telescope.client.IngestTelescopeClient; import com.metabroadcast.columbus.telescope.client.IngestTelescopeClientImpl; import com.metabroadcast.columbus.telescope.client.TelescopeClient; import com.metabroadcast.columbus.telescope.client.TelescopeClientImpl; import com.metabroadcast.common.collect.MoreSets;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43514,
+    "v2": "import com.google.common.base.*;",
+    "resolution": "import com.google.common.base.*;",
+    "conflict": "import com.google.common.base.Predicate; import com.google.common.base.Predicates; import com.google.common.base.Splitter; import com.google.common.base.Strings;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 43517,
+    "v2": "import org.atlasapi.equiv.update.metadata.EquivalenceUpdaterMetadata; import org.atlasapi.equiv.update.metadata.NopEquivalenceUpdaterMetadata;",
+    "resolution": "import java.util.Optional;  import com.metabroadcast.columbus.telescope.client.IngestTelescopeClientImpl;import org.atlasapi.equiv.update.metadata.EquivalenceUpdaterMetadata; import org.atlasapi.equiv.update.metadata.NopEquivalenceUpdaterMetadata;",
+    "conflict": "import java.util.Optional;  import com.metabroadcast.columbus.telescope.client.IngestTelescopeClientImpl;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43518,
+    "v2": "",
+    "resolution": "import com.metabroadcast.columbus.telescope.client.IngestTelescopeClientImpl;  import org.slf4j.Logger; import org.slf4j.LoggerFactory;",
+    "conflict": "import com.metabroadcast.columbus.telescope.client.IngestTelescopeClientImpl;  import org.slf4j.Logger; import org.slf4j.LoggerFactory;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43526,
+    "v2": "} else { throw new IllegalArgumentException(\"id / uri parameter not specified\");",
+    "resolution": "} else { throw new IllegalArgumentException(\"id / uri parameter not specified\");",
+    "conflict": "} else { throw new RuntimeException(\"id / uri parameter not specified\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43537,
+    "v2": "new EquivalenceBreaker( contentResolver, entryStore, lookupWriter )",
+    "resolution": "new EquivalenceBreaker( contentResolver, entryStore, lookupWriter )",
+    "conflict": "equivalenceBreaker"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43567,
+    "v2": "this.lookupEntryStore = lookupEntryStore; this.contentResolver = contentResolver; this.contentWriter = contentWriter;",
+    "resolution": "this.lookupEntryStore = lookupEntryStore; this.contentResolver = contentResolver; this.contentWriter = contentWriter;",
+    "conflict": "this.lookupEntryStore = checkNotNull(lookupEntryStore); this.contentResolver = checkNotNull(contentResolver); this.contentWriter = checkNotNull(contentWriter);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43579,
+    "v2": "",
+    "resolution": "private IngestTelescopeClientImpl getTelescopeClient() { TelescopeClient client = TelescopeClientImpl.create(columbusTelescopeHost); return IngestTelescopeClientImpl.create(client); }",
+    "conflict": "private IngestTelescopeClientImpl getTelescopeClient() { TelescopeClient client = TelescopeClientImpl.create(columbusTelescopeHost); return IngestTelescopeClientImpl.create(client); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43594,
+    "v2": "java.util.Optional<String> taskId ) {",
+    "resolution": "java.util.Optional<String> taskId ) {",
+    "conflict": "java.util.Optional<String> taskId, IngestTelescopeClientImpl telescopeClient ) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43598,
+    "v2": "Optional<String> taskId );",
+    "resolution": "Optional<String> taskId );",
+    "conflict": "Optional<String> taskId, IngestTelescopeClientImpl telescopeClient );"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43617,
+    "v2": "Optional<String> taskId = reporter.startReporting( Iterables.getOnlyElement(publishers), reportingEnvironment",
+    "resolution": "Optional<String> taskId = reporter.startReporting( Iterables.getOnlyElement(publishers), reportingEnvironment",
+    "conflict": "Optional<String> taskId = startReporting( telescopeClient, Iterables.getOnlyElement(publishers)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43621,
+    "v2": "",
+    "resolution": "",
+    "conflict": "public Builder withTelescopeClient(IngestTelescopeClientImpl telescopeClient) { this.telescopeClient = telescopeClient; return this; }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43628,
+    "v2": "updater.handle(equivResult1, null); Thread.sleep(cacheDuration.getMillis()*2); updater.handle(equivResult2, null);",
+    "resolution": "updater.handle(equivResult1, null); Thread.sleep(cacheDuration.getMillis()*2); updater.handle(equivResult2, null);",
+    "conflict": "updater.handle(equivResult1, null, null); Thread.sleep(cacheDuration.getMillis()*2); updater.handle(equivResult2, null, null);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43634,
+    "v2": "import static org.mockito.Matchers.any; import static org.mockito.Mockito.mock; import static org.mockito.Mockito.times; import static org.mockito.Mockito.verify;",
+    "resolution": "import static org.mockito.Matchers.any; import static org.mockito.Mockito.mock; import static org.mockito.Mockito.times; import static org.mockito.Mockito.verify;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43637,
+    "v2": "Schedule schedule1 = new Schedule( ImmutableList.of(schChannel1), new Interval(today.toDateTimeAtStartOfDay(), tomorrow.toDateTimeAtStartOfDay()) );",
+    "resolution": "Schedule schedule1 = new Schedule(ImmutableList.of(schChannel1), new Interval(today.toDateTimeAtStartOfDay(), tomorrow.toDateTimeAtStartOfDay()));",
+    "conflict": "Schedule schedule1 = new Schedule(ImmutableList.of(schChannel1), new Interval(today.toDateTimeAtStartOfDay(), tomorrow.toDateTimeAtStartOfDay()));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43639,
+    "v2": ".build().run();",
+    "resolution": ".build().run();",
+    "conflict": ".build().run();  verify(updater).updateEquivalences(yvItemOne, taskId, telescopeClient); verify(updater).updateEquivalences(yvItemTwo,  taskId, telescopeClient); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43664,
+    "v2": "resultBuilder.addEntity(Entity.success() .withId(row.getId()) .withRaw(mapper.writeValueAsString(row)) .build() );",
+    "resolution": "resultBuilder.addEntity(Entity.success() .withId(row.getId()) .withRaw(mapper.writeValueAsString(row)) .build() );",
+    "conflict": "resultBuilder.addEntity(Entity.success().withId(row.getId()).build());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43669,
+    "v2": "verify(updater, never()).updateEquivalences(any(Content.class), any(), any(IngestTelescopeClientImpl.class));",
+    "resolution": "verify(updater, never()).updateEquivalences( any(Content.class), any(), any(IngestTelescopeClientImpl.class) );",
+    "conflict": "verify(updater, never()).updateEquivalences( any(Content.class), any(), any(IngestTelescopeClientImpl.class) );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43672,
+    "v2": "verify(delegate).handle(argThat(resultWithNoStrongEquivalents()), null, null);",
+    "resolution": "verify(delegate).handle(argThat( resultWithNoStrongEquivalents()), any(), any(IngestTelescopeClientImpl.class) );",
+    "conflict": "verify(delegate).handle(argThat( resultWithNoStrongEquivalents()), any(), any(IngestTelescopeClientImpl.class) );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43673,
+    "v2": "verify(delegate).handle(argThat(resultWithStrongEquiv(Publisher.BBC, \"gequiv\")), null, null);",
+    "resolution": "verify(delegate).handle(argThat( resultWithStrongEquiv(Publisher.BBC, \"gequiv\")), any(), any(IngestTelescopeClientImpl.class) );",
+    "conflict": "verify(delegate).handle(argThat( resultWithStrongEquiv(Publisher.BBC, \"gequiv\")), any(), any(IngestTelescopeClientImpl.class) );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43674,
+    "v2": "verify(delegate).handle(argThat(resultWithStrongEquiv(Publisher.C4, \"ignoredequiv\")), null, null);",
+    "resolution": "verify(delegate).handle(argThat( resultWithStrongEquiv(Publisher.C4, \"ignoredequiv\")), any(), any(IngestTelescopeClientImpl.class) );",
+    "conflict": "verify(delegate).handle(argThat( resultWithStrongEquiv(Publisher.C4, \"ignoredequiv\")), any(), any(IngestTelescopeClientImpl.class) );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43675,
+    "v2": "verify(delegate).handle(argThat(resultWithStrongEquiv(Publisher.FIVE, \"nobrand\")), null, null);",
+    "resolution": "verify(delegate).handle(argThat( resultWithStrongEquiv(Publisher.FIVE, \"nobrand\")), any(), any(IngestTelescopeClientImpl.class) );",
+    "conflict": "verify(delegate).handle(argThat( resultWithStrongEquiv(Publisher.FIVE, \"nobrand\")), any(), any(IngestTelescopeClientImpl.class) );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43676,
+    "v2": "verify(delegate).handle(argThat(resultWithNoStrongEquivalents()), null, null);",
+    "resolution": "verify(delegate).handle( argThat(resultWithNoStrongEquivalents()), any(), any(IngestTelescopeClientImpl.class) );",
+    "conflict": "verify(delegate).handle( argThat(resultWithNoStrongEquivalents()), any(), any(IngestTelescopeClientImpl.class) );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43677,
+    "v2": "import static org.mockito.Matchers.any; import static org.mockito.Mockito.mock; import static org.mockito.Mockito.times; import static org.mockito.Mockito.verify;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43680,
+    "v2": "Schedule schedule1 = new Schedule( ImmutableList.of(schChannel1), new Interval(today.toDateTimeAtStartOfDay(), tomorrow.toDateTimeAtStartOfDay()) );",
+    "resolution": "Schedule schedule1 = new Schedule(ImmutableList.of(schChannel1), new Interval(today.toDateTimeAtStartOfDay(), tomorrow.toDateTimeAtStartOfDay()));",
+    "conflict": "Schedule schedule1 = new Schedule(ImmutableList.of(schChannel1), new Interval(today.toDateTimeAtStartOfDay(), tomorrow.toDateTimeAtStartOfDay()));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43682,
+    "v2": ".build().run();",
+    "resolution": ".build().run();  verify(updater).updateEquivalences(yvItemOne, taskId, telescopeClient); verify(updater).updateEquivalences(yvItemTwo,  taskId, telescopeClient); }",
+    "conflict": ".build().run();  verify(updater).updateEquivalences(yvItemOne, taskId, telescopeClient); verify(updater).updateEquivalences(yvItemTwo,  taskId, telescopeClient); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43692,
+    "v2": "",
+    "resolution": "",
+    "conflict": "}  private IngestTelescopeClientImpl getTelescopeClient() { TelescopeClient client = TelescopeClientImpl.create(columbusTelescopeHost); return IngestTelescopeClientImpl.create(client);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43697,
+    "v2": "public void findMatchesForBroadcast(Builder<Item> scores, Broadcast broadcast, Set<Publisher> validPublishers) {  Schedule schedule = scheduleAround(broadcast, validPublishers);",
+    "resolution": "public void findMatchesForBroadcast(Builder<Item> scores, Broadcast broadcast, Set<Publisher> validPublishers) {  Schedule schedule = scheduleAround(broadcast, validPublishers);",
+    "conflict": "public void findMatchesForBroadcast(Builder<Item> scores, Item content, Broadcast broadcast, Set<Publisher> validPublishers) {  Schedule schedule = scheduleAround(broadcast, validPublishers, flexibility);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43705,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import com.google.common.base.Charsets; import com.google.common.base.Strings; import com.google.common.io.Flushables; import com.google.gson.Gson; import com.google.gson.GsonBuilder;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43710,
+    "v2": "@RequestMapping(value=\"/3.0/topics.json\", method = RequestMethod.POST) public WriteResponse writeContent(HttpServletRequest req, HttpServletResponse resp) {",
+    "resolution": "@RequestMapping(value = \"/3.0/topics.json\", method = RequestMethod.POST) public WriteResponse writeContent(HttpServletRequest req, HttpServletResponse resp) {",
+    "conflict": "@RequestMapping(value = \"/3.0/topics.json\", method = RequestMethod.POST) public WriteResponse writeContent(HttpServletRequest req, HttpServletResponse resp) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43713,
+    "v2": "Description desc = descReader.read(new StringReader(respBody), Description.class, Boolean.TRUE);",
+    "resolution": "Description desc = descReader.read(new StringReader(respBody), Description.class, Boolean.TRUE);",
+    "conflict": "Description desc = descReader.read(new StringReader(respBody), Description.class, Boolean.TRUE);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43718,
+    "v2": "ResolvedContent yv1 = ResolvedContent.builder().put(\"yv1\", yvItemOne).build(); ResolvedContent yv2 = ResolvedContent.builder().put(\"yv2\", yvItemTwo).build(); when(contentResolver.findByCanonicalUris(ImmutableSet.of(\"yv1\"))).thenReturn(yv1); when(contentResolver.findByCanonicalUris(ImmutableSet.of(\"yv2\"))).thenReturn(yv2);",
+    "resolution": "ResolvedContent yv1 = ResolvedContent.builder().put(\"yv1\", yvItemOne).build(); ResolvedContent yv2 = ResolvedContent.builder().put(\"yv2\", yvItemTwo).build(); when(contentResolver.findByCanonicalUris(ImmutableSet.of(\"yv1\"))).thenReturn(yv1); when(contentResolver.findByCanonicalUris(ImmutableSet.of(\"yv2\"))).thenReturn(yv2);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43723,
+    "v2": "DateTime now = new DateTime().withZone(DateTimeZone.UTC);",
+    "resolution": "DateTime now = new DateTime().withZone(DateTimeZone.UTC);",
+    "conflict": "DateTime now = new DateTime().withZone(DateTimeZone.UTC);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43725,
+    "v2": "@Value(\"${bt.vod.mpx.systest2.feed.guidLookup.baseUrl}\") private String btVodMpxSystest2GuidLookupBaseUrl; @Value(\"${bt.vod.mpx.systest2.feed.guidLookup.name}\")",
+    "resolution": "@Value(\"${bt.vod.mpx.systest2.feed.guidLookup.baseUrl}\") private String btVodMpxSystest2GuidLookupBaseUrl; @Value(\"${bt.vod.mpx.systest2.feed.guidLookup.name}\")",
+    "conflict": "@Value(\"${bt.vod.mpx.systest2.guidLookup.baseUrl}\") private String btVodMpxSystest2GuidLookupBaseUrl; @Value(\"${bt.vod.mpx.systest2.guidLookup.name}\")"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 43745,
+    "v2": "Iterable<Series> series, Iterable<Brand> brands, String ingestId, @Nullable ImmutableMap<String, String> payloads",
+    "resolution": "@Nullable Iterable<Series> series, @Nullable Iterable<Brand> brands, String ingestId, @Nullable Map<String, String> payloads",
+    "conflict": "@Nullable Iterable<Series> series, @Nullable Iterable<Brand> brands"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43764,
+    "v2": "private final ChannelWriteController channelWriteController;",
+    "resolution": "private final ChannelWriteController channelWriteController;",
+    "conflict": "private final ApplicationConfigurationFetcher configFetcher; private final ChannelStore store; private final ModelReader reader; private final ChannelModelTransformer channelTransformer;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43780,
+    "v2": "when(scheduleResolver.schedule(eq(from), eq(5), argThat(hasItems(channel)), argThat(hasItems(Publisher.BBC)), eq(Optional.absent()))) .thenReturn(Schedule.fromChannelMap(ImmutableMap.of(), new Interval(from, from)));",
+    "resolution": "when(scheduleResolver.schedule(eq(from), eq(5), argThat(hasItems(channel)), argThat(hasItems(Publisher.BBC)), eq(Optional.absent()))) .thenReturn(Schedule.fromChannelMap(ImmutableMap.of(), new Interval(from, from)));",
+    "conflict": "when(scheduleResolver.schedule(eq(from), eq(5), argThat(hasItems(channel)), argThat(hasItems(Publisher.BBC)), eq(Optional.<ApplicationConfiguration>absent()))) .thenReturn(Schedule.fromChannelMap(ImmutableMap.<Channel,List<Item>>of(), new Interval(from, from)));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43791,
+    "v2": "private final NitroEpisodeExtractor extractor = new NitroEpisodeExtractor( new SystemClock(), Mockito.mock(QueuingPersonWriter.class) );",
+    "resolution": "private final NitroEpisodeExtractor extractor = new NitroEpisodeExtractor(new SystemClock(), Mockito.mock(QueuingPersonWriter.class));",
+    "conflict": "private final NitroEpisodeExtractor extractor = new NitroEpisodeExtractor(new SystemClock(), Mockito.mock(QueuingPersonWriter.class));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43836,
+    "v2": "@Nullable @Override public List<Episode> apply(@Nullable List<Programme> input) {",
+    "resolution": "@Override public List<Episode> apply(List<Programme> input) {",
+    "conflict": "@Override public List<Episode> apply(List<Programme> input) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43845,
+    "v2": "Set<Item> mergedItems; try { Iterable<List<Item>> items = contentAdapter",
+    "resolution": "Item item; try { Iterable<List<Item>> itemListIterable = contentAdapter",
+    "conflict": "Item item; try { Iterable<List<Item>> itemListIterable = contentAdapter"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43870,
+    "v2": "duplicatedBrandToCommonKeyMap.put(brand.getCanonicalUri(), key.toString()); if (!commonBrandKeyToCommonBrandMap.containsKey(key.toString())) { commonBrandKeyToCommonBrandMap.put(key.toString(), brand);",
+    "resolution": "duplicatedBrandToCommonKeyMap.put(brand.getCanonicalUri(), key.toString()); if (!commonBrandKeyToCommonBrandMap.containsKey(key.toString())) { commonBrandKeyToCommonBrandMap.put(key.toString(), brand);",
+    "conflict": "linkDuplicatedBrandUri.put(brand.getCanonicalUri(), key.toString()); if (!linkBrandKey.containsKey(key.toString())) { linkBrandKey.put(key.toString(), brand);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43871,
+    "v2": "duplicatedSeriesToCommonKeyMap.put(series.getCanonicalUri(), key.toString()); if (!commonSeriesKeyToCommonSeriesMap.containsKey(key.toString())) { commonSeriesKeyToCommonSeriesMap.put(key.toString(), series);",
+    "resolution": "duplicatedSeriesToCommonKeyMap.put(series.getCanonicalUri(), key.toString()); if (!commonSeriesKeyToCommonSeriesMap.containsKey(key.toString())) { commonSeriesKeyToCommonSeriesMap.put(key.toString(), series);",
+    "conflict": "linkDuplicatedSeriesUri.put(series.getCanonicalUri(), key.toString()); if (!linkSeriesKey.containsKey(key.toString())) { linkSeriesKey.put(key.toString(), series);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43888,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import com.google.common.base.Optional; import com.google.common.collect.ImmutableMap; import org.slf4j.Logger; import org.slf4j.LoggerFactory;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43889,
+    "v2": "private static final String OPTA_URL_PATTERN = \"http://%s/competition.php?feed_type=%s&competition=%s&season_id=%s&user=%s&psw=%s&json\";",
+    "resolution": "private static final String OPTA_URL_PATTERN = \"http://%s/competition.php?feed_type=%s&competition=%s&season_id=%s&user=%s&psw=%s&json\";",
+    "conflict": "private static final String OPTA_URL_PATTERN = \"http://%s/competition.php?feed_type=%s&competition=%s&season_id=%s&user=%s&psw=%s&json\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43893,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private @Value(\"${opta.events.http.baseUrl}\") String baseUrl; private @Value(\"${opta.events.http.credentials.rugby.username}\") String rugbyUsername; private @Value(\"${opta.events.http.credentials.rugby.password}\") String rugbyPassword; private @Value(\"${opta.events.http.credentials.soccer.username}\") String soccerUsername; private @Value(\"${opta.events.http.credentials.soccer.password}\") String soccerPassword;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43894,
+    "v2": "return new OptaEventsIngestTask<SportsTeam, SportsMatchData>(httpEventsFetcher( sportConfig, soccerTransformer(), credentials), dataHandler(sportConfig) );",
+    "resolution": "return new OptaEventsIngestTask<SportsTeam, SportsMatchData>(httpEventsFetcher(sportConfig, soccerTransformer(), credentials), dataHandler(sportConfig));",
+    "conflict": "return new OptaEventsIngestTask<SportsTeam, SportsMatchData>(httpEventsFetcher(sportConfig, soccerTransformer(), credentials), dataHandler(sportConfig));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43909,
+    "v2": "input.getTitle(), Topic.Type.SUBJECT, input.getNamespace(), input.getValue(), input.getPublisher()",
+    "resolution": "input.getTitle(), Topic.Type.SUBJECT, input.getNamespace(), input.getValue(), input.getPublisher()",
+    "conflict": "input.getTitle(), Topic.Type.SUBJECT, input.getNamespace(), input.getValue()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43924,
+    "v2": "",
+    "resolution": "",
+    "conflict": "Set<Restriction> restrictions = Sets.newHashSet(); Version version = new Version(); restrictions.add(createRestrictionForLocation(inputLocation));  setToFirstRestriction(version, restrictions);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43947,
+    "v2": "Maybe<Location> extractedLocation = extractor.extract(new ItunesEpfPricingSource(pricing, Countries.GB, countryCodes));",
+    "resolution": "Maybe<Location> extractedLocation = extractor.extract(new ItunesEpfPricingSource(pricing, Countries.GB, countryCodes));",
+    "conflict": "Maybe<Location> extractedLocation = extractor.extract(new ItunesEpfPricingSource(pricing, Countries.GB, countryCodes));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43952,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import static com.google.common.base.Preconditions.checkNotNull; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.ANCESTOR_TITLES; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.CONTRIBUTIONS; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.GENRE_GROUPINGS; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.IMAGES;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43964,
+    "v2": "Optional<Integer> maybeDuration = Optional.fromNullable(row.get(EpfVideo.TRACK_LENGTH));  if (maybeDuration.isPresent()) { version.setDuration(new Duration(maybeDuration.get().longValue())); }",
+    "resolution": "Optional<Integer> maybeDuration = Optional.fromNullable(row.get(EpfVideo.TRACK_LENGTH));  if (maybeDuration.isPresent()) { version.setDuration(new Duration(maybeDuration.get().longValue())); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 43965,
+    "v2": "import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.GENRE_GROUPINGS; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.PEOPLE; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.TITLES;",
+    "resolution": "import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.ANCESTOR_TITLES; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.CONTRIBUTIONS; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.IMAGES;",
+    "conflict": "import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.ANCESTOR_TITLES; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.CONTRIBUTIONS; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.IMAGES;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 43968,
+    "v2": "import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.GENRE_GROUPINGS; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.PEOPLE; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.TITLES;",
+    "resolution": "import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.ANCESTOR_TITLES; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.CONTRIBUTIONS; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.IMAGES;",
+    "conflict": "import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.ANCESTOR_TITLES; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.CONTRIBUTIONS; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.IMAGES;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43970,
+    "v2": "private boolean isVersionOfType(com.metabroadcast.atlas.glycerin.model.Version nitroVersion, String versionType) { com.metabroadcast.atlas.glycerin.model.Version.VersionTypes versionTypes = nitroVersion.getVersionTypes();",
+    "resolution": "private boolean isVersionOfType(com.metabroadcast.atlas.glycerin.model.Version nitroVersion, String versionType) { Types versionTypes = nitroVersion.getTypes();",
+    "conflict": "private boolean isVersionOfType(com.metabroadcast.atlas.glycerin.model.Version nitroVersion, String versionType) { Types versionTypes = nitroVersion.getTypes();"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 43972,
+    "v2": "import com.google.common.collect.Lists; import com.metabroadcast.atlas.glycerin.model.GenreGroup; import com.metabroadcast.common.intl.Countries;",
+    "resolution": "import com.google.common.collect.Lists; import com.metabroadcast.atlas.glycerin.model.GenreGroup; import com.metabroadcast.common.intl.Countries;import javax.xml.datatype.XMLGregorianCalendar;",
+    "conflict": "import javax.xml.datatype.XMLGregorianCalendar;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 43982,
+    "v2": "import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.ANCESTOR_TITLES; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.CONTRIBUTIONS;",
+    "resolution": "import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.GENRE_GROUPINGS; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.ANCESTOR_TITLES; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.CONTRIBUTIONS;",
+    "conflict": "import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.GENRE_GROUPINGS; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.PEOPLE; import static com.metabroadcast.atlas.glycerin.queries.ProgrammesMixin.TITLES;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 43985,
+    "v2": "private boolean isVersionOfType(com.metabroadcast.atlas.glycerin.model.Version nitroVersion, String versionType) { Types versionTypes = nitroVersion.getTypes();",
+    "resolution": "private boolean isVersionOfType(com.metabroadcast.atlas.glycerin.model.Version nitroVersion, String versionType) { Types versionTypes = nitroVersion.getTypes();",
+    "conflict": "private boolean isVersionOfType(com.metabroadcast.atlas.glycerin.model.Version nitroVersion, String versionType) { com.metabroadcast.atlas.glycerin.model.Version.VersionTypes versionTypes = nitroVersion.getVersionTypes();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 43987,
+    "v2": "import javax.xml.datatype.XMLGregorianCalendar;",
+    "resolution": "import com.google.common.collect.Lists; import com.metabroadcast.atlas.glycerin.model.GenreGroup; import com.metabroadcast.common.intl.Countries;",
+    "conflict": "import com.google.common.collect.Lists; import com.metabroadcast.atlas.glycerin.model.GenreGroup; import com.metabroadcast.common.intl.Countries;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44025,
+    "v2": "new PriorityScoreReasons( content.getPriority().getReasons().getPositive(), content.getPriority().getReasons().getNegative() )",
+    "resolution": "new PriorityScoreReasons(content.getPriority().getReasons().getPositive(), content.getPriority().getReasons().getNegative())",
+    "conflict": "new PriorityScoreReasons(content.getPriority().getReasons().getPositive(), content.getPriority().getReasons().getNegative())"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 44028,
+    "v2": "private static final RepetitionRule UKTV_EQUIVALENCE_REPETITION = RepetitionRules.daily(new LocalTime(20, 00)); private static final RepetitionRule WIKIPEDIA_EQUIVALENCE_REPETITION = RepetitionRules.daily(new LocalTime(18, 00));",
+    "resolution": "private static final RepetitionRule BT_SPORT_EBS_EQUIVALENCE_REPETITION = RepetitionRules.NEVER; private static final RepetitionRule RED_BEE_EQUIVALENCE_REPETITION = RepetitionRules.daily(new LocalTime(3, 00)); private static final RepetitionRule UKTV_EQUIVALENCE_REPETITION = RepetitionRules.daily(new LocalTime(20, 00)); private static final RepetitionRule WIKIPEDIA_EQUIVALENCE_REPETITION = RepetitionRules.daily(new LocalTime(18, 00));",
+    "conflict": "private static final RepetitionRule BT_SPORT_EBS_EQUIVALENCE_REPETITION = RepetitionRules.NEVER; private static final RepetitionRule RED_BEE_EQUIVALENCE_REPETITION = RepetitionRules.daily(new LocalTime(3, 00));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44031,
+    "v2": "",
+    "resolution": "",
+    "conflict": "protected String normalize(String text) { WikiModel model = new WikiModel(\"\",\"\"); String noMarkUp = model.render( new PlainTextConverter(),text); return noMarkUp; }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44033,
+    "v2": "currentResult.title = SwebleHelper.normalizeAndFlattenTextNodeList(a.getValue()); } else if (\"RTitle\".equalsIgnoreCase(name) && currentResult.title == null) { currentResult.title =  SwebleHelper.normalizeAndFlattenTextNodeList(a.getValue());",
+    "resolution": "currentResult.title = SwebleHelper.normalizeAndFlattenTextNodeList(a.getValue()); } else if (\"RTitle\".equalsIgnoreCase(name) && currentResult.title == null) { currentResult.title =  SwebleHelper.normalizeAndFlattenTextNodeList(a.getValue());",
+    "conflict": "currentResult.title = normalize(SwebleHelper.flattenTextNodeList(a.getValue())); } else if (\"RTitle\".equalsIgnoreCase(name) && currentResult.title == null) { currentResult.title =  normalize(SwebleHelper.flattenTextNodeList(a.getValue()));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44057,
+    "v2": "",
+    "resolution": "",
+    "conflict": "@Bean OrganisationController organisationController() { // TODO return new OrganisationController(configFetcher, log, organisationModelOutputter(), idCodec(), topicResolver, organisationResolver); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44058,
+    "v2": "if (nitroVersion.getDuration() != null) { version.setDuration(convertDuration(nitroVersion.getDuration())); }",
+    "resolution": "version.addAlias(new Alias(PID_NAMESPACE, nitroVersion.getPid())); if (nitroVersion.getDuration() != null) { version.setDuration(convertDuration(nitroVersion.getDuration())); }",
+    "conflict": "version.addAlias(new Alias(PID_NAMESPACE, nitroVersion.getPid())); version.setDuration(convertDuration(nitroVersion.getDuration()));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44073,
+    "v2": "programmeCrid.get().replace(\"crid://\", \"\")); } else { return scheduleEventUriFor(publisher, getId(source));",
+    "resolution": "programmeCrid.get().replace(\"crid://\", \"\")); } else { return scheduleEventUriFor(publisher, getId(source));",
+    "conflict": "programmeCrid.get()); } else { return String.format(\"http://%s/scheduleevent/%s\", publisher.key(), getId(source));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44076,
+    "v2": "Set<Alias> currentAliases = ImmutableSet.of(new Alias(\"1\", \"2\"), new Alias(\"2\", \"3\")); Set<Alias> extractedAliases = ImmutableSet.of(new Alias(\"3\", \"4\")); current.setAliases(currentAliases); extracted.setAliases(extractedAliases);",
+    "resolution": "Set<Alias> currentAliases = ImmutableSet.of(new Alias(\"1\", \"2\"), new Alias(\"2\", \"3\")); Set<Alias> extractedAliases = ImmutableSet.of(new Alias(\"3\", \"4\")); current.setAliases(currentAliases); extracted.setAliases(extractedAliases);",
+    "conflict": "current.setAliases(ImmutableSet.of(new Alias(\"1\", \"2\"), new Alias(\"2\", \"3\"))); extracted.setAliases(ImmutableSet.of(new Alias(\"3\", \"4\")));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44081,
+    "v2": "assertEquals(currentAliases, merged.getAliases());",
+    "resolution": "assertEquals(currentAliases, merged.getAliases());",
+    "conflict": "assertEquals(2, merged.getAliases().size()); assertEquals(2, merged.getAliasUrls().size()); assertEquals(\"1\", Iterables.getFirst(merged.getAliases(), null).getNamespace()); assertEquals(\"http://a.com/b\", Iterables.getFirst(merged.getAliasUrls(), null));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44082,
+    "v2": "@Test public void testRemovesLeadingTFromId() { assertEquals(\"http://optasports.com/teams/12345\", utility.createTeamUri(\"t12345\")); assertEquals(\"http://optasports.com/teams/r12345\", utility.createTeamUri(\"r12345\")); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44083,
+    "v2": "import org.atlasapi.remotesite.opta.events.sports.model.SportsMatchData; import org.atlasapi.remotesite.opta.events.sports.model.SportsTeam;",
+    "resolution": "import org.atlasapi.remotesite.opta.events.sports.model.SportsMatchData; import org.atlasapi.remotesite.opta.events.sports.model.SportsTeam;",
+    "conflict": "import org.atlasapi.remotesite.opta.events.sports.model.OptaFixture; import org.atlasapi.remotesite.opta.events.sports.model.OptaSportsTeam; import org.atlasapi.remotesite.util.RestS3ServiceSupplier; import org.jets3t.service.security.AWSCredentials;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44091,
+    "v2": "private Optional<String> fetchTeamName(SportsTeamData teamData) { String teamId = teamData.attributes().teamRef(); Optional<Organisation> team = getTeamByUri(utility.createTeamUri(teamId));",
+    "resolution": "private Optional<String> fetchTeamName(SportsTeamData teamData) { String teamId = teamData.attributes().teamRef(); Optional<Organisation> team = getTeamByUri(utility.createTeamUri(teamId));",
+    "conflict": "private Optional<String> fetchTeamName(OptaFixtureTeam teamData) { Optional<Organisation> team = getTeamByUri(uriCreator.createTeamUri(teamData.attributes().teamId()));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44104,
+    "v2": "String location = Iterables.getOnlyElement(match.stats()).value(); assertEquals(utility.createOrResolveVenue(location).get().getValue(), parsedEvent.venue().getValue());",
+    "resolution": "String location = Iterables.getOnlyElement(match.stats()).value(); assertEquals(utility.createOrResolveVenue(location).get().getValue(), parsedEvent.venue().getValue());",
+    "conflict": "assertEquals(mapper.fetchLocationUrl(match.attributes().venue()).get(), parsedEvent.venue().getValue());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44108,
+    "v2": "if (version.getDuration() == null) { mergedVersion.setDuration(null); } else { mergedVersion.setDuration(Duration.standardSeconds(version.getDuration())); }",
+    "resolution": "if (version.getDuration() == null) { mergedVersion.setDuration(null); } else { mergedVersion.setDuration(Duration.standardSeconds(version.getDuration())); }",
+    "conflict": "mergedVersion.setDuration(Duration.standardSeconds(version.getDuration()));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44119,
+    "v2": "private Multimap<String, Item> toBrandUriMap(Iterable<Item> items) { return Multimaps.index(Iterables.filter(items, HAS_BRAND), TO_BRAND_REF_URI);",
+    "resolution": "private Multimap<String, Item> toBrandUriMap(Iterable<Item> items) { return Multimaps.index(Iterables.filter(items, HAS_BRAND), TO_BRAND_REF_URI);",
+    "conflict": "private Iterable<PidReference> asBrandPidRefs(Iterable<String> pids) { return asTypePidsRefs(pids, \"brand\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44135,
+    "v2": "Version mergedVersion = Iterables.getOnlyElement(merged.getVersions()); assertEquals(\"http://example.org/2\", mergedVersion.getCanonicalUri()); assertTrue(mergedVersion.getRestriction().isRestricted());",
+    "resolution": "Version mergedVersion = Iterables.getOnlyElement(merged.getVersions()); assertEquals(\"http://example.org/2\", mergedVersion.getCanonicalUri()); assertTrue(mergedVersion.getRestriction().isRestricted());",
+    "conflict": "Version mergetVersion = Iterables.getOnlyElement(merged.getVersions()); assertEquals(\"http://example.org/2\", mergetVersion.getCanonicalUri()); assertTrue(mergetVersion.getRestriction().isRestricted());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44140,
+    "v2": "private Version versionWithWarning(String warningMessage) throws DatatypeConfigurationException { Version version = version(WITH_WARNING_VERSION_PID);",
+    "resolution": "private Version versionWithWarning(String warningMessage) throws DatatypeConfigurationException { Version version = version(WITH_WARNING_VERSION_PID);",
+    "conflict": "private Version versionWithWarning(String warningMessage) { Version version = new Version(); version.setPid(WITH_WARNING_VERSION_PID);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44157,
+    "v2": "/** * Provide the override mapping for a channel, if it exists, having rewritten it to * use the standard, non-override, URI. For example http://override.youview.com/service/1 * will be rewritten as http://youview.com/service/1 */",
+    "resolution": "/** * Provide the override mapping for a channel, if it exists, having rewritten it to * use the standard, non-override, URI. For example http://override.youview.com/service/1 * will be rewritten as http://youview.com/service/1 */",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44185,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private static final Set<String> TEST_CHANNELS_FOR_BLACKOUT_FLAG = ImmutableSet.of(\"http://ref.atlasapi.org/channels/nickjr\", \"http://ref.atlasapi.org/channels/cartoonito\");"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 44205,
+    "v2": "private @Autowired TransactionStore transactionStore; private @Autowired FeedStatisticsResolver feedStatsResolver; private @Autowired TvAnytimeGenerator feedGenerator; private @Autowired LastUpdatedContentFinder contentFinder;",
+    "resolution": "private @Autowired TransactionStore transactionStore; private @Autowired FeedStatisticsResolver feedStatsResolver; private @Autowired TvAnytimeGenerator feedGenerator; private @Autowired LastUpdatedContentFinder contentFinder;private @Autowired OrganisationResolver organisationResolver;",
+    "conflict": "private @Autowired OrganisationResolver organisationResolver;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44207,
+    "v2": "if(isProcessing() && processingWriteConcern != null && !Strings.isNullOrEmpty(processingWriteConcern.get())) {",
+    "resolution": "if(isProcessing() && processingWriteConcern != null && !Strings.isNullOrEmpty(processingWriteConcern.get())) {",
+    "conflict": "if(processingConfig != null && processingConfig.toBoolean()) { if (processingWriteConcern != null && !Strings.isNullOrEmpty(processingWriteConcern.get())) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44217,
+    "v2": ".put(BUY_TO_OWN_CATEGORY.toLowerCase(), BtVodContentGroupUpdater.portalContentGroupPredicate(portalClient(), PORTAL_BUY_TO_OWN_GROUP, null)) .put(BOX_OFFICE_CATEGORY.toLowerCase(), BtVodContentGroupUpdater.portalContentGroupPredicate(portalClient(), PORTAL_BOXOFFICE_GROUP, null)) .put(TV_BOX_SETS_CATEGORY.toLowerCase(), BtVodContentGroupUpdater.portalContentGroupPredicate(portalClient(), PORTAL_BOXSET_GROUP, Series.class))",
+    "resolution": ".put(BUY_TO_OWN_CATEGORY.toLowerCase(), BtVodContentGroupUpdater.portalContentGroupPredicate(portalClient(), PORTAL_BUY_TO_OWN_GROUP, null)) .put(BOX_OFFICE_CATEGORY.toLowerCase(), BtVodContentGroupUpdater.portalContentGroupPredicate(portalClient(), PORTAL_BOXOFFICE_GROUP, null)) .put(TV_BOX_SETS_CATEGORY.toLowerCase(), BtVodContentGroupUpdater.portalContentGroupPredicate(portalClient(), PORTAL_BOXSET_GROUP, Series.class))",
+    "conflict": ".put(BUY_TO_OWN_CATEGORY.toLowerCase(), BtVodContentGroupUpdater.portalContentGroupPredicate(portalClient(), \"01_boxoffice/07_new_must_own_movies\")) .put(BOX_OFFICE_CATEGORY.toLowerCase(), BtVodContentGroupUpdater.portalContentGroupPredicate(portalClient(), \"01_boxoffice/35_searcha-z\")) .put(TV_BOX_SETS_CATEGORY.toLowerCase(), BtVodContentGroupUpdater.portalContentGroupPredicate(portalClient(), \"03_tv/40_searcha-z\"))"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 44240,
+    "v2": ".put(\"knowledgemotion\", KnowledgeMotionModule.class)",
+    "resolution": ".put(\"bt-channels\", BtChannelsModule.class) .put(\"bbc-audience-data\", AudienceModule.class) .put(\"btvod\", BtVodModule.class) .put(\"knowledgemotion\", KnowledgeMotionModule.class)",
+    "conflict": ".put(\"bbc-audience-data\", AudienceModule.class) .put(\"bt-channels\", BtChannelsModule.class) .put(\"bloomberg\", BloombergModule.class) .put(\"globalimageworks\", GlobalImageModule.class)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44243,
+    "v2": "",
+    "resolution": ".put(\"bbc-audience-data\", AudienceModule.class) .put(\"bt-channels\", BtChannelsModule.class) .put(\"bloomberg\", BloombergModule.class) .put(\"globalimageworks\", GlobalImageModule.class) .put(\"getty\", GettyModule.class)",
+    "conflict": ".put(\"bbc-audience-data\", AudienceModule.class) .put(\"bt-channels\", BtChannelsModule.class) .put(\"bloomberg\", BloombergModule.class) .put(\"globalimageworks\", GlobalImageModule.class) .put(\"getty\", GettyModule.class)"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 44252,
+    "v2": ".put(\"bloomberg\", BloombergModule.class) .put(\"globalimageworks\", GlobalImageModule.class) .put(\"getty\", GettyModule.class)",
+    "resolution": ".put(\"bloomberg\", BloombergModule.class) .put(\"globalimageworks\", GlobalImageModule.class) .put(\"getty\", GettyModule.class).put(\"bbc-audience-data\", AudienceModule.class) .put(\"bt-channels\", BtChannelsModule.class)",
+    "conflict": ".put(\"bbc-audience-data\", AudienceModule.class) .put(\"bt-channels\", BtChannelsModule.class)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44257,
+    "v2": ".put(\"bt-channels\", BtChannelsModule.class) .put(\"bbc-audience-data\", AudienceModule.class) .put(\"btvod\", BtVodModule.class)",
+    "resolution": ".put(\"btvod\", BtVodModule.class) .put(\"bbc-audience-data\", AudienceModule.class) .put(\"bt-channels\", BtChannelsModule.class)",
+    "conflict": ".put(\"btvod\", BtVodModule.class) .put(\"bbc-audience-data\", AudienceModule.class)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44260,
+    "v2": "return ImmutableList.copyOf(Iterables.transform(Lists.newArrayList(MediaSet.PC), mediaSetToPoliciesFunction));  } }, IPLAYER_STREAMING_H264_FLV_VLO {",
+    "resolution": "return ImmutableList.copyOf(Iterables.transform(Lists.newArrayList(MediaSet.PC), mediaSetToPoliciesFunction));  } }, IPLAYER_STREAMING_H264_FLV_VLO {",
+    "conflict": "return ImmutableList.copyOf(Iterables.transform(Lists.newArrayList(MediaSet.PC), mediaSetToPoliciesFunction));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 44294,
+    "v2": "// episode IDs in the clip API. // // The clipOf field should be unset, since it's not actually a reference to // another item",
+    "resolution": "// episode IDs in the clip API. // // The clipOf field should be unset, since it's not actually a reference to // another item",
+    "conflict": "// episode IDs in the clip API"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44303,
+    "v2": "simpleDescription.setMediumDescription(applyWatermark(content, content.getMediumDescription())); simpleDescription.setLongDescription(applyWatermark(content, content.getLongDescription())); simpleDescription.setDescriptions(simplifyLocalizedDescriptions(content));",
+    "resolution": "simpleDescription.setMediumDescription(applyWatermark(content, content.getMediumDescription())); simpleDescription.setLongDescription(applyWatermark(content, content.getLongDescription())); simpleDescription.setDescriptions(simplifyLocalizedDescriptions(content));",
+    "conflict": "simpleDescription.setMediumDescription(getDescription(content, content.getMediumDescription())); simpleDescription.setLongDescription(getDescription(content, content.getLongDescription()));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 44310,
+    "v2": "import org.atlasapi.application.v3.ApplicationConfiguration; import org.atlasapi.application.v3.SourceStatus; import org.atlasapi.media.entity.ChildRef; import org.atlasapi.media.entity.Container;",
+    "resolution": "import org.atlasapi.media.entity.ChildRef; import org.atlasapi.media.entity.Container;",
+    "conflict": "import org.atlasapi.media.entity.ChildRef;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44319,
+    "v2": "LookupEntry entry = Iterables.getOnlyElement(entries, null); return entry != null ? resolveUri(entry.uri()) : null;",
+    "resolution": "LookupEntry entry = Iterables.getOnlyElement(entries, null); return entry != null ? resolveUri(entry.uri()) : null;",
+    "conflict": "LookupEntry entry = entries.iterator().next(); return resolveUri(entry.uri());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44326,
+    "v2": "private int totalTitles;  public FilmsUpdater(FilmArticleTitleSource titleSource, FetchMeister fetcher, FilmExtractor extractor, ContentWriter writer, int simultaneousness, int threadsToStart) {",
+    "resolution": "private int totalTitles;  public FilmsUpdater(FilmArticleTitleSource titleSource, FetchMeister fetcher, FilmExtractor extractor, ContentWriter writer, int simultaneousness, int threadsToStart) {",
+    "conflict": "private Optional<Integer> totalTitles = Optional.absent();  public FilmsUpdater(FilmArticleTitleSource titleSource, FetchMeister fetcher, FilmExtractor extractor, ContentWriter writer) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44340,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import org.atlasapi.remotesite.wikipedia.film.FilmArticleTitleSource; import org.atlasapi.remotesite.wikipedia.television.TvBrandArticleTitleSource; import com.google.common.base.Function; import com.google.common.collect.ImmutableList; import com.google.common.collect.Lists;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44345,
+    "v2": "private UpdateProgress progress; private Optional<Integer> totalTitles = Optional.absent();  public FilmsUpdater(FilmArticleTitleSource titleSource, FetchMeister fetcher, FilmExtractor extractor, ContentWriter writer) {",
+    "resolution": "private UpdateProgress progress; private Optional<Integer> totalTitles = Optional.absent();  public FilmsUpdater(FilmArticleTitleSource titleSource, FetchMeister fetcher, FilmExtractor extractor, ContentWriter writer) {",
+    "conflict": "public FilmsUpdater(FilmArticleTitleSource titleSource, ArticleFetcher fetcher, FilmExtractor extractor, ContentWriter writer) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44348,
+    "v2": "import org.sweble.wikitext.lazy.parser.Itemization; import org.sweble.wikitext.lazy.parser.ItemizationItem; import org.sweble.wikitext.lazy.parser.LazyParsedPage; import org.sweble.wikitext.lazy.parser.SemiPre; import org.sweble.wikitext.lazy.parser.SemiPreLine;",
+    "resolution": "import org.sweble.wikitext.lazy.parser.Itemization; import org.sweble.wikitext.lazy.parser.ItemizationItem; import org.sweble.wikitext.lazy.parser.LazyParsedPage; import org.sweble.wikitext.lazy.parser.SemiPre; import org.sweble.wikitext.lazy.parser.SemiPreLine;",
+    "conflict": "import org.sweble.wikitext.lazy.parser.LazyParsedPage;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44363,
+    "v2": "TopicStore topicStore, NumberToShortStringCodec idCodec, ClipModelTransformer clipsModelTransformer, Clock clock) { super(lookupStore, topicStore, idCodec, clipsModelTransformer, clock);",
+    "resolution": "TopicStore topicStore, NumberToShortStringCodec idCodec, ClipModelTransformer clipsModelTransformer, Clock clock) { super(lookupStore, topicStore, idCodec, clipsModelTransformer, clock);",
+    "conflict": "TopicStore topicStore, NumberToShortStringCodec idCodec, ClipModelTransformer clipsModelTransformer, Clock clock) { super(lookupStore, topicStore, idCodec, clipsModelTransformer, clock);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44435,
+    "v2": "List<Identified> resolved = Lists.newArrayList(Iterables.concat(queryExecutor.executeUriQuery(candidateUris, ContentQuery.MATCHES_EVERYTHING).values())); log.trace(\"Resolved {}\", Iterables.transform(resolved, Identified.TO_URI));",
+    "resolution": "List<Identified> resolved = Lists.newArrayList(Iterables.concat(queryExecutor.executeUriQuery(candidateUris, ContentQuery.MATCHES_EVERYTHING).values())); log.trace(\"Resolved {}\", Iterables.transform(resolved, Identified.TO_URI));",
+    "conflict": "ArrayList<Content> resolved = Lists.newArrayList(contentResolver.resolveUris(candidateUris, ImmutableSet.of(Publisher.PA), ImmutableSet.<Annotation>of(), true).values());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44436,
+    "v2": "import com.google.common.base.Predicate; import com.google.common.base.Predicates; import com.google.common.collect.ImmutableSet; import com.google.common.collect.Iterables;",
+    "resolution": "import com.google.common.base.Predicate; import com.google.common.base.Predicates; import com.google.common.collect.ImmutableSet; import com.google.common.collect.ImmutableSet.Builder; import com.google.common.collect.Iterables;",
+    "conflict": "import com.google.common.collect.ImmutableSet;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44444,
+    "v2": "String mediaType = source.getProgramme().getMediaType(); if (mediaType != null) { item.setMediaType(MediaType.fromKey(mediaType.toLowerCase()).orNull()); }",
+    "resolution": "String mediaType = source.getProgramme().getMediaType(); if (mediaType != null) { item.setMediaType(MediaType.fromKey(mediaType.toLowerCase()).orNull()); }",
+    "conflict": "item.setMediaType(MediaType.fromKey(source.getProgramme().getMediaType()).orNull());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44450,
+    "v2": "EquivalenceUpdater<Item> standardItemUpdater = standardItemUpdater(acceptablePublishers); EquivalenceUpdater<Container> topLevelContainerUpdater = topLevelContainerUpdater(acceptablePublishers);",
+    "resolution": "EquivalenceUpdater<Item> standardItemUpdater = standardItemUpdater(acceptablePublishers, ImmutableSet.of(new TitleMatchingItemScorer(), new SequenceItemScorer())); EquivalenceUpdater<Container> topLevelContainerUpdater = topLevelContainerUpdater(acceptablePublishers);",
+    "conflict": "EquivalenceUpdater<Item> standardItemUpdater = standardItemUpdater(acceptablePublishers, ImmutableSet.of(new TitleMatchingItemScorer(), new SequenceItemScorer())); EquivalenceUpdater<Container> standardContainerUpdater = standardContainerUpdater(acceptablePublishers);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44464,
+    "v2": "",
+    "resolution": "",
+    "conflict": "}  @Bean public ItvWhatsOnUpdater itvWhatsOnUpdater() { return new ItvWhatsOnUpdater(feedUrl, itvWhatsOnClient(), processor(), log);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44468,
+    "v2": "Episode episode = new Episode(); episode.setContainer(brand.get()); episode.setSeries(series.get()); extractor.setCommonItemAttributes(episode, entry);",
+    "resolution": "Episode episode = new Episode(); episode.setContainer(brand.get()); episode.setSeries(series.get()); extractor.setCommonItemAttributes(episode, entry);",
+    "conflict": "Item item = translator.toEpisodeOrItem(entry);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44471,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private ItvWhatsOnEntryExtractor getTranslator() { return new ItvWhatsOnEntryExtractor(ImmutableMap.of(\"CITV\", Channel.builder() .withUri(\"http://www.itv.com/channels/citv\").build())); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44478,
+    "v2": "private final UpcomingItemsResolver upcomingResolver = context.mock(UpcomingItemsResolver.class); private final AvailableItemsResolver availableResolver = context.mock(AvailableItemsResolver.class); private final ItemModelSimplifier itemSimplifier = new ItemModelSimplifier(\"localHostName\", contentGroupResolver, topicResolver, productResolver, segmentResolver, containerSummaryResolver, channelResolver, new SubstitutionTableNumberCodec(), new SubstitutionTableNumberCodec(), new ImageSimplifier(), peopleQueryResolver,upcomingResolver,availableResolver);",
+    "resolution": "private final UpcomingItemsResolver upcomingResolver = context.mock(UpcomingItemsResolver.class); private final AvailableItemsResolver availableResolver = context.mock(AvailableItemsResolver.class); private final ItemModelSimplifier itemSimplifier = new ItemModelSimplifier(\"localHostName\", contentGroupResolver, topicResolver, productResolver, segmentResolver, containerSummaryResolver, channelResolver, new SubstitutionTableNumberCodec(), new SubstitutionTableNumberCodec(), new ImageSimplifier(), peopleQueryResolver,upcomingResolver,availableResolver);",
+    "conflict": "private final ItemModelSimplifier itemSimplifier = new ItemModelSimplifier(\"localHostName\", contentGroupResolver, topicResolver, productResolver, segmentResolver, containerSummaryResolver, channelResolver, new SubstitutionTableNumberCodec(), new SubstitutionTableNumberCodec(), new ImageSimplifier(), peopleQueryResolver);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44487,
+    "v2": "private final PeopleQueryResolver peopleQueryResolver = context.mock(PeopleQueryResolver.class); private final ItemModelSimplifier itemSimplifier = new ItemModelSimplifier(\"localHostName\", contentGroupResolver, topicResolver, productResolver, segmentResolver, containerSummaryResolver, channelResolver, new SubstitutionTableNumberCodec(), new SubstitutionTableNumberCodec(), new ImageSimplifier(), peopleQueryResolver);",
+    "resolution": "private final PeopleQueryResolver peopleQueryResolver = context.mock(PeopleQueryResolver.class); private final ItemModelSimplifier itemSimplifier = new ItemModelSimplifier(\"localHostName\", contentGroupResolver, topicResolver, productResolver, segmentResolver, containerSummaryResolver, channelResolver, new SubstitutionTableNumberCodec(), new SubstitutionTableNumberCodec(), new ImageSimplifier(), peopleQueryResolver);",
+    "conflict": "private final ItemModelSimplifier itemSimplifier = new ItemModelSimplifier(\"localHostName\", contentGroupResolver, topicResolver, productResolver, segmentResolver, containerSummaryResolver, channelResolver, new SubstitutionTableNumberCodec(), new SubstitutionTableNumberCodec(), new ImageSimplifier());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44510,
+    "v2": "simpleChannel.setHighDefinition(channel.getHighDefinition()); simpleChannel.setRegional(channel.getRegional()); if (channel.getTimeshift() != null) { simpleChannel.setTimeshift(channel.getTimeshift().getStandardSeconds()); }",
+    "resolution": "simpleChannel.setHighDefinition(channel.getHighDefinition()); simpleChannel.setRegional(channel.getRegional()); if (channel.getTimeshift() != null) { simpleChannel.setTimeshift(channel.getTimeshift().getStandardSeconds()); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44546,
+    "v2": "",
+    "resolution": "private static final Map<String, ImageTheme> IMAGE_THEME_MAPPING = ImmutableMap.<String, ImageTheme>builder() .put(\"Normal\", ImageTheme.LIGHT_OPAQUE) .put(\"Transparent Dark\", ImageTheme.DARK_TRANSPARENT) .put(\"Transparent Light\", ImageTheme.LIGHT_TRANSPARENT) .build();",
+    "conflict": "private static final Map<String, ImageTheme> IMAGE_THEME_MAPPING = ImmutableMap.<String, ImageTheme>builder() .put(\"Normal\", ImageTheme.LIGHT_OPAQUE) .put(\"Transparent Dark\", ImageTheme.DARK_TRANSPARENT) .put(\"Transparent Light\", ImageTheme.LIGHT_TRANSPARENT) .build();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 44556,
+    "v2": "public ContentModelSimplifier(String localHostName, ContentGroupResolver contentGroupResolver, TopicQueryResolver topicResolver, ProductResolver productResolver, ImageSimplifier imageSimplifier) { super(imageSimplifier);",
+    "resolution": "public ContentModelSimplifier(String localHostName, ContentGroupResolver contentGroupResolver, TopicQueryResolver topicResolver, ProductResolver productResolver, ImageSimplifier imageSimplifier) { super(SubstitutionTableNumberCodec.lowerCaseOnly(), imageSimplifier);",
+    "conflict": "public ContentModelSimplifier(String localHostName, ContentGroupResolver contentGroupResolver, TopicQueryResolver topicResolver, ProductResolver productResolver) { super(SubstitutionTableNumberCodec.lowerCaseOnly());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 44559,
+    "v2": "public PersonModelSimplifier(ImageSimplifier imageSimplifier) { super(imageSimplifier);",
+    "resolution": "public PersonModelSimplifier(ImageSimplifier imageSimplifier) { super(SubstitutionTableNumberCodec.lowerCaseOnly(), imageSimplifier);",
+    "conflict": "public PersonModelSimplifier() { super(SubstitutionTableNumberCodec.lowerCaseOnly());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44576,
+    "v2": "XmlTvModule.class, RemoteSiteHealthModule.class, EquivModule.class",
+    "resolution": "XmlTvModule.class, EquivModule.class, RemoteSiteHealthModule.class",
+    "conflict": "XmlTvModule.class, EquivModule.class, RemoteSiteHealthModule.class"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 44639,
+    "v2": "scheduler.schedule(paChannelsUpdater().withName(\"PA Channels Updater\"), CHANNELS_INGEST);",
+    "resolution": "scheduler.schedule(paChannelsUpdater().withName(\"PA Channels Updater\"), CHANNELS_INGEST);if (peopleEnabled) { scheduler.schedule(paCompletePeopleUpdater().withName(\"PA Complete People Updater\"), PEOPLE_COMPLETE_INGEST); scheduler.schedule(paDailyPeopleUpdater().withName(\"PA People Updater\"), PEOPLE_INGEST); }",
+    "conflict": "if (peopleEnabled) { scheduler.schedule(paCompletePeopleUpdater().withName(\"PA Complete People Updater\"), PEOPLE_COMPLETE_INGEST); scheduler.schedule(paDailyPeopleUpdater().withName(\"PA People Updater\"), PEOPLE_INGEST); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44689,
+    "v2": "Pattern.compile(\"https?://.*\\\\.youtube.com.*v=([^\\\\./&=]+).*\"), Pattern.compile(\"https?://.*\\\\.youtube.com/v/([^\\\\./&=]+).*\"), Pattern.compile(\"tag:youtube.com,\\\\d+:\\\\w+:([^\\\\./&=]+)\")",
+    "resolution": "Pattern.compile(\"https?://.*\\\\.youtube.com.*v=([^\\\\./&=]+).*\"), Pattern.compile(\"https?://.*\\\\.youtube.com/v/([^\\\\./&=]+).*\"), Pattern.compile(\"tag:youtube.com,\\\\d+:\\\\w+:([^\\\\./&=]+)\")",
+    "conflict": "Pattern.compile(\"https?://.*\\\\.youtube.com.*v=([^\\\\./&=]+).*\"), Pattern.compile(\"https?://.*\\\\.youtube.com/v/([^\\\\./&=]+).*\"), Pattern.compile(\"tag:youtube.com,\\\\d+:\\\\w+:([^\\\\./&=]+)\")"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44705,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import com.google.common.collect.SetMultimap; import com.google.common.collect.Sets; import com.google.common.io.Flushables; import com.google.gson.FieldNamingPolicy; import com.google.gson.Gson; import com.google.gson.GsonBuilder;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44712,
+    "v2": "import org.atlasapi.output.Annotation; import org.atlasapi.output.AtlasErrorSummary; import org.atlasapi.output.AtlasModelWriter; import org.atlasapi.persistence.logging.AdapterLog;",
+    "resolution": "import org.atlasapi.output.Annotation; import org.atlasapi.output.AtlasErrorSummary; import org.atlasapi.output.AtlasModelWriter; import org.atlasapi.persistence.logging.AdapterLog; import org.atlasapi.persistence.media.channel.ChannelGroupResolver;",
+    "conflict": "import org.atlasapi.media.entity.simple.ChannelGroupQueryResult; import org.atlasapi.persistence.media.channel.ChannelGroupResolver;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44714,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import com.google.common.io.Flushables; import com.google.gson.FieldNamingPolicy; import com.google.gson.Gson; import com.google.gson.GsonBuilder; import com.metabroadcast.common.base.Maybe;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44729,
+    "v2": "simpleModel.setAliases(broadcast.getAliasUrls()); simpleModel.setChannel(simplify(channelResolver.fromUri(broadcast.getBroadcastOn()).requireValue(), annotations));",
+    "resolution": "simpleModel.setChannel(simplify(channelResolver.fromUri(broadcast.getBroadcastOn()).requireValue(), annotations)); // TODO new aliases simpleModel.setAliases(broadcast.getAliasUrls());",
+    "conflict": "simpleModel.setChannel(simplify(channelResolver.fromUri(broadcast.getBroadcastOn()).requireValue(), annotations)); // TODO new aliases simpleModel.setAliases(broadcast.getAliasUrls());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44750,
+    "v2": "import static org.atlasapi.media.entity.Publisher.RDIO; import static org.atlasapi.media.entity.Publisher.SOUNDCLOUD; import static org.atlasapi.media.entity.Publisher.SPOTIFY; import static org.atlasapi.media.entity.Publisher.YOUTUBE;",
+    "resolution": "import static org.atlasapi.media.entity.Publisher.RDIO; import static org.atlasapi.media.entity.Publisher.SOUNDCLOUD; import static org.atlasapi.media.entity.Publisher.SPOTIFY; import static org.atlasapi.media.entity.Publisher.YOUTUBE;",
+    "conflict": "import static org.atlasapi.media.entity.Publisher.NETFLIX; import static org.atlasapi.media.entity.Publisher.BBC;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 44762,
+    "v2": "region.setCanonicalUri(REGION_PREFIX + paPlatform.getId() + \"-\" + regionalisation.getRegionId()); region.addAlias(REGION_ALIAS_PREFIX + paPlatform.getId() + \"-\" + regionalisation.getRegionId());",
+    "resolution": "// TODO new aliases region.setCanonicalUri(REGION_PREFIX + paPlatform.getId() + \"-\" + regionalisation.getRegionId()); region.addAliasUrl(REGION_ALIAS_PREFIX + paPlatform.getId() + \"-\" + regionalisation.getRegionId());",
+    "conflict": "region.setCanonicalUri(REGION_PREFIX + regionalisation.getRegionId()); // TODO new aliases region.addAliasUrl(REGION_ALIAS_PREFIX + regionalisation.getRegionId());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44766,
+    "v2": "// TODO new alias brand.addAliasUrl(brandUri + \"/4od\"); brand.addAliasUrl(source.getId());",
+    "resolution": "// TODO new alias brand.addAliasUrl(brandUri + \"/4od\"); brand.addAliasUrl(source.getId());",
+    "conflict": "brand.addAlias(brandUri + \"/4od\"); brand.addAlias(canonicalIdTag(source));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 44782,
+    "v2": "import org.atlasapi.media.channel.ChannelGroupResolver; import org.atlasapi.media.channel.ChannelNumbering; import org.atlasapi.media.channel.ChannelResolver;",
+    "resolution": "import org.atlasapi.persistence.media.channel.ChannelGroupResolver; import org.atlasapi.persistence.media.channel.ChannelGroupStore; import org.atlasapi.persistence.media.channel.ChannelResolver; import org.atlasapi.media.channel.ChannelNumbering;",
+    "conflict": "import org.atlasapi.persistence.media.channel.ChannelGroupStore; import org.atlasapi.persistence.media.channel.ChannelResolver;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44798,
+    "v2": "version.set3d(getBooleanValue(progData.getAttr().getThreeD())); Duration duration = Duration.standardMinutes(Long.valueOf(progData.getDuration())); version.setDuration(duration); setCertificate(progData, episode);",
+    "resolution": "version.set3d(getBooleanValue(progData.getAttr().getThreeD())); Duration duration = Duration.standardMinutes(Long.valueOf(progData.getDuration())); version.setDuration(duration); setCertificate(progData, episode);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 44837,
+    "v2": "import static org.atlasapi.media.entity.Publisher.NETFLIX; import static org.atlasapi.media.entity.Publisher.BBC;",
+    "resolution": "import static org.atlasapi.media.entity.Publisher.NETFLIX; import static org.atlasapi.media.entity.Publisher.BBC;import static org.atlasapi.media.entity.Publisher.RDIO; import static org.atlasapi.media.entity.Publisher.SOUNDCLOUD; import static org.atlasapi.media.entity.Publisher.SPOTIFY; import static org.atlasapi.media.entity.Publisher.YOUTUBE;",
+    "conflict": "import static org.atlasapi.media.entity.Publisher.RDIO; import static org.atlasapi.media.entity.Publisher.SOUNDCLOUD; import static org.atlasapi.media.entity.Publisher.SPOTIFY; import static org.atlasapi.media.entity.Publisher.YOUTUBE;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44853,
+    "v2": "import org.atlasapi.media.product.ProductResolver; import org.atlasapi.media.segment.SegmentResolver; import org.atlasapi.media.channel.ChannelResolver;",
+    "resolution": "import org.atlasapi.persistence.media.channel.ChannelResolver; import org.atlasapi.persistence.media.product.ProductResolver; import org.atlasapi.persistence.media.segment.SegmentResolver;",
+    "conflict": "import org.atlasapi.persistence.media.channel.ChannelResolver; import org.atlasapi.persistence.media.product.ProductResolver; import org.atlasapi.persistence.media.segment.SegmentResolver;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44854,
+    "v2": "import org.atlasapi.media.channel.ChannelResolver; import org.atlasapi.media.product.ProductResolver; import org.atlasapi.media.segment.SegmentResolver;",
+    "resolution": "import org.atlasapi.persistence.media.channel.ChannelResolver; import org.atlasapi.persistence.media.product.ProductResolver; import org.atlasapi.persistence.media.segment.SegmentResolver;",
+    "conflict": "import org.atlasapi.persistence.media.channel.ChannelResolver; import org.atlasapi.persistence.media.product.ProductResolver; import org.atlasapi.persistence.media.segment.SegmentResolver;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44873,
+    "v2": "import org.atlasapi.equiv.scorers.SongCrewMemberExtractor; import org.atlasapi.equiv.scorers.TitleMatchingItemEquivalenceScorer; import org.atlasapi.equiv.update.ContainerEquivalenceUpdater;",
+    "resolution": "import org.atlasapi.equiv.scorers.TitleMatchingContainerScorer; import org.atlasapi.equiv.scorers.TitleMatchingItemScorer; import org.atlasapi.equiv.scorers.SongCrewMemberExtractor;",
+    "conflict": "import org.atlasapi.equiv.scorers.TitleMatchingContainerScorer; import org.atlasapi.equiv.scorers.TitleMatchingItemScorer;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44875,
+    "v2": "import org.atlasapi.equiv.results.scores.DefaultScoredEquivalents; import org.atlasapi.equiv.results.scores.DefaultScoredEquivalents.ScoredEquivalentsBuilder; import org.atlasapi.equiv.results.scores.ScoredEquivalents; import org.atlasapi.equiv.scorers.ContentEquivalenceScorer;",
+    "resolution": "import org.atlasapi.equiv.results.scores.ScoredCandidates;",
+    "conflict": "import org.atlasapi.equiv.results.scores.ScoredCandidates;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44887,
+    "v2": "assertEquals(score(\"biker\", \"biker\"), score(\"biker\", \"biker\")); assertEquals(score(\"bike\", \"biker\"), score(\"biker\", \"bike\")); assertEquals(score(\"bikers\", \"biker\"), score(\"biker\", \"bikers\"));",
+    "resolution": "assertEquals(score(\"biker\", \"biker\"), score(\"biker\", \"biker\")); assertEquals(score(\"bike\", \"biker\"), score(\"biker\", \"bike\")); assertEquals(score(\"bikers\", \"biker\"), score(\"biker\", \"bikers\"));",
+    "conflict": "assertEquals(scorer.scoreCandidates(brandWithTitle(\"biker\"), ImmutableList.of(brandWithTitle(\"biker\")), desc), scorer.scoreCandidates(brandWithTitle(\"biker\"), ImmutableList.of(brandWithTitle(\"biker\")), desc)); assertEquals(scorer.scoreCandidates(brandWithTitle(\"bike\"), ImmutableList.of(brandWithTitle(\"biker\")), desc), scorer.scoreCandidates(brandWithTitle(\"biker\"), ImmutableList.of(brandWithTitle(\"bike\")), desc)); assertEquals(scorer.scoreCandidates(brandWithTitle(\"bikers\"), ImmutableList.of(brandWithTitle(\"biker\")), desc), scorer.scoreCandidates(brandWithTitle(\"biker\"), ImmutableList.of(brandWithTitle(\"bikers\")), desc));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44892,
+    "v2": "taskScheduler.schedule(publisherUpdateTask(Publisher.BBC_MUSIC).withName(\"Music Equivalence Updater\"), RepetitionRules.every(Duration.standardHours(6))); //taskScheduler.schedule(childRefUpdateTask().forPublishers(Publisher.BBC).withName(\"BBC Child Ref Update\"), RepetitionRules.NEVER); //taskScheduler.schedule(childRefUpdateTask().forPublishers(Publisher.PA).withName(\"PA Child Ref Update\"), RepetitionRules.NEVER); //taskScheduler.schedule(childRefUpdateTask().forPublishers(publishersApartFrom(Publisher.BBC, Publisher.PA)).withName(\"Other Publishers Child Ref Update\"), RepetitionRules.NEVER);",
+    "resolution": "taskScheduler.schedule(publisherUpdateTask(Publisher.BBC_MUSIC).withName(\"Music Equivalence Updater\"), RepetitionRules.every(Duration.standardHours(6)));",
+    "conflict": "taskScheduler.schedule(publisherUpdateTask(Publisher.BBC_MUSIC).withName(\"Music Equivalence Updater\"), RepetitionRules.NEVER);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44894,
+    "v2": "taskScheduler.schedule(publisherUpdateTask(Publisher.BBC_MUSIC).withName(\"Music Equivalence Updater\"), RepetitionRules.NEVER); //taskScheduler.schedule(childRefUpdateTask().forPublishers(Publisher.BBC).withName(\"BBC Child Ref Update\"), RepetitionRules.NEVER); //taskScheduler.schedule(childRefUpdateTask().forPublishers(Publisher.PA).withName(\"PA Child Ref Update\"), RepetitionRules.NEVER); //taskScheduler.schedule(childRefUpdateTask().forPublishers(publishersApartFrom(Publisher.BBC, Publisher.PA)).withName(\"Other Publishers Child Ref Update\"), RepetitionRules.NEVER);",
+    "resolution": "taskScheduler.schedule(publisherUpdateTask(Publisher.BBC_MUSIC).withName(\"Music Equivalence Updater\"), RepetitionRules.NEVER);",
+    "conflict": "taskScheduler.schedule(publisherUpdateTask(Publisher.BBC_MUSIC).withName(\"Music Equivalence Updater\"), RepetitionRules.NEVER);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44897,
+    "v2": "",
+    "resolution": "}  public MagpieScheduleItemBuilder withImage(String image) { this.image = image; return this;",
+    "conflict": "}  public MagpieScheduleItemBuilder withImage(String image) { this.image = image; return this;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44923,
+    "v2": "import org.atlasapi.input.DefaultGsonModelReader; import org.atlasapi.input.DelegatingModelTransformer; import org.atlasapi.input.ItemModelTransformer; import org.atlasapi.media.channel.ChannelGroupStore; import org.atlasapi.media.channel.ChannelResolver;",
+    "resolution": "import org.atlasapi.input.DefaultGsonModelReader; import org.atlasapi.input.DelegatingModelTransformer; import org.atlasapi.input.ItemModelTransformer;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44936,
+    "v2": "taskScheduler.schedule(publisherUpdateTask(LOVEFILM).withName(\"Lovefilm Equivalence Updater\"), RepetitionRules.NEVER);  //taskScheduler.schedule(childRefUpdateTask().forPublishers(Publisher.BBC).withName(\"BBC Child Ref Update\"), RepetitionRules.NEVER); //taskScheduler.schedule(childRefUpdateTask().forPublishers(Publisher.PA).withName(\"PA Child Ref Update\"), RepetitionRules.NEVER); //taskScheduler.schedule(childRefUpdateTask().forPublishers(publishersApartFrom(Publisher.BBC, Publisher.PA)).withName(\"Other Publishers Child Ref Update\"), RepetitionRules.NEVER);",
+    "resolution": "taskScheduler.schedule(publisherUpdateTask(LOVEFILM).withName(\"Lovefilm Equivalence Updater\"), RepetitionRules.NEVER);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 44955,
+    "v2": "import com.google.common.base.Strings; import org.atlasapi.persistence.content.ContentResolver; import org.atlasapi.persistence.content.SimpleKnownTypeContentResolver; import org.atlasapi.persistence.lookup.entry.LookupEntryStore;",
+    "resolution": "import com.google.common.collect.ImmutableSet; import org.atlasapi.persistence.content.SearchResolver;",
+    "conflict": "import com.google.common.collect.ImmutableSet;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 44974,
+    "v2": "assertEquals(1, result.size()); context.assertIsSatisfied();",
+    "resolution": "Map<String, List<Identified>> result = executor.executeUriQuery(ImmutableList.of(query), defaultQuery(DEFAULT_CONFIGURATION.getEnabledSources()));  assertEquals(1, result.size());",
+    "conflict": "Map<String, List<Identified>> result = executor.executeUriQuery(ImmutableList.of(query), defaultQuery(DEFAULT_CONFIGURATION.getEnabledSources()));  assertEquals(1, result.size());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44978,
+    "v2": "import org.atlasapi.persistence.lookup.entry.LookupEntryStore;",
+    "resolution": "import org.atlasapi.persistence.lookup.entry.LookupEntryStore; import org.atlasapi.persistence.media.channel.ChannelResolver;",
+    "conflict": "import org.atlasapi.persistence.content.schedule.mongo.MongoScheduleStore; import org.atlasapi.persistence.logging.AdapterLog; import org.atlasapi.persistence.lookup.mongo.MongoLookupEntryStore; import org.atlasapi.persistence.media.channel.ChannelResolver;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44992,
+    "v2": "import org.atlasapi.media.entity.ContentGroup; import org.atlasapi.media.entity.ContentGroupRef; import org.atlasapi.media.entity.Identified; import org.atlasapi.media.entity.Publisher; import org.atlasapi.persistence.content.ContentGroupResolver;",
+    "resolution": "import org.atlasapi.media.entity.ContentGroup; import org.atlasapi.media.entity.ContentGroupRef; import org.atlasapi.media.entity.Identified; import org.atlasapi.persistence.content.ContentGroupResolver;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 44995,
+    "v2": "private final ContainerSummaryResolver containerSummaryResolver; protected final CrewMemberSimplifier crewSimplifier = new CrewMemberSimplifier();  public ItemModelSimplifier(String localHostName, ContentGroupResolver contentGroupResolver, TopicQueryResolver topicResolver, ProductResolver productResolver, SegmentResolver segmentResolver, ContainerSummaryResolver containerSummaryResolver) {",
+    "resolution": "private final ContainerSummaryResolver containerSummaryResolver; protected final CrewMemberSimplifier crewSimplifier = new CrewMemberSimplifier();  public ItemModelSimplifier(String localHostName, ContentGroupResolver contentGroupResolver, TopicQueryResolver topicResolver, ProductResolver productResolver, SegmentResolver segmentResolver, ContainerSummaryResolver containerSummaryResolver) {",
+    "conflict": "public ItemModelSimplifier(String localHostName, ContentGroupResolver contentGroupResolver, TopicQueryResolver topicResolver, ProductResolver productResolver, SegmentResolver segmentResolver, ContainerSummaryResolver containerSummaryResolver){"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 44996,
+    "v2": "import javax.annotation.PostConstruct; import javax.annotation.PreDestroy; import org.atlasapi.persistence.bootstrap.ContentBootstrapper; import org.atlasapi.persistence.content.elasticsearch.ESContentSearcher;",
+    "resolution": "import javax.annotation.PostConstruct; import org.atlasapi.persistence.bootstrap.ContentBootstrapper; import org.atlasapi.persistence.content.elasticsearch.ESContentSearcher;",
+    "conflict": "import org.atlasapi.persistence.bootstrap.ContentBootstrapper;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 44997,
+    "v2": "private org.atlasapi.persistence.content.ContentSearcher contentSearcher;",
+    "resolution": "private TopicContentUriLister topicContentUriLister; @Autowired @Qualifier(\"contentUpdater\") private ContentEquivalenceUpdater<Content> equivUpdater;",
+    "conflict": "private TopicContentUriLister topicContentUriLister;  private @Autowired @Qualifier(\"contentUpdater\") ContentEquivalenceUpdater<Content> equivUpdater;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45008,
+    "v2": "import org.atlasapi.media.product.ProductResolver; import org.atlasapi.output.Annotation; import org.atlasapi.persistence.content.ContentGroupResolver;",
+    "resolution": "import org.atlasapi.output.Annotation; import org.atlasapi.persistence.content.ContentGroupResolver; import org.atlasapi.persistence.media.product.ProductResolver;",
+    "conflict": "import org.atlasapi.output.Annotation; import org.atlasapi.persistence.content.ContentGroupResolver; import org.atlasapi.persistence.media.product.ProductResolver;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45016,
+    "v2": "@Primary public ESTopicSearcher topicSearcher() { return esContentIndexModule().topicSearcher(); }  @Bean",
+    "resolution": "@Primary public ESTopicSearcher topicSearcher() { return esContentIndexModule().topicSearcher(); }  @Bean",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45045,
+    "v2": "",
+    "resolution": "",
+    "conflict": "@Bean public CassandraContentStore cassandraContentStore() { return cassandraContentPersistenceModule().cassandraContentStore(); }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45056,
+    "v2": "@Primary public TopicContentLister topicContentLister() { return mongoContentPersistenceModule().topicContentLister();",
+    "resolution": "@Primary public TopicContentUriLister topicContentUriLister() { return mongoContentPersistenceModule().topicContentUriLister();",
+    "conflict": "public ContentLister contentLister() { return persistenceDelegate.contentLister();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45060,
+    "v2": "import nu.xom.Builder; import nu.xom.Document;  import org.atlasapi.persistence.media.channel.ChannelResolver;",
+    "resolution": "import org.atlasapi.media.entity.Policy.Platform;",
+    "conflict": "import org.atlasapi.media.channel.ChannelResolver; import org.atlasapi.media.entity.Policy.Platform;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45063,
+    "v2": "import org.atlasapi.persistence.media.channel.ChannelResolver;",
+    "resolution": "import org.atlasapi.feeds.upload.FileUploadResult; import org.atlasapi.feeds.upload.FileUploadResult.FileUploadResultType;",
+    "conflict": "import org.atlasapi.feeds.upload.FileUploadResult; import org.atlasapi.feeds.upload.FileUploadResult.FileUploadResultType; import org.atlasapi.feeds.upload.persistence.FileUploadResultStore; import org.atlasapi.media.channel.ChannelResolver;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45082,
+    "v2": "private final static Logger log = LoggerFactory.getLogger(AbstractMetaBroadcastContentUpdater.class);",
+    "resolution": "private final static Logger log = LoggerFactory.getLogger(AbstractMetaBroadcastContentUpdater.class);",
+    "conflict": "private final static Logger log = LoggerFactory.getLogger(AbstractMetaBroadcastContentUpdater.class);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45085,
+    "v2": "private @Value(\"${magpie.s3.bucket}\") String s3MagpieBucket; private @Value(\"${magpie.s3.folder}\") String s3MagpieFolder; private @Value(\"${sosalso.s3.bucket}\") String s3SosalsoBucket; private @Value(\"${sosalso.s3.folder}\") String s3SosalsoFolder;",
+    "resolution": "private @Value(\"${magpie.s3.bucket}\") String s3MagpieBucket; private @Value(\"${magpie.s3.folder}\") String s3MagpieFolder; private @Value(\"${sosalso.s3.bucket}\") String s3SosalsoBucket; private @Value(\"${sosalso.s3.folder}\") String s3SosalsoFolder;",
+    "conflict": "private @Value(\"${magpie.s3.bucket}\") String s3Bucket; private @Value(\"${magpie.s3.folder}\") String s3folder;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45093,
+    "v2": "private static final String API_PATTERN_ROOT = \"https?://[^.]*.channel4.com/pmlsd/\"; private static final Pattern BRAND_API_PAGE_PATTERN = Pattern.compile(String.format(\"%s(%s).atom.*\",  API_PATTERN_ROOT, WEB_SAFE_NAME_PATTERN)); private static final Pattern EPISODE_API_PAGE_PATTERN = Pattern.compile(String.format(\"%s(%s)/episode-guide/series-(\\\\d+)/episode-(\\\\d+).atom.*\",  API_PATTERN_ROOT, WEB_SAFE_NAME_PATTERN));",
+    "resolution": "private static final String API_PATTERN_ROOT = \"https?://[^.]*.channel4.com/pmlsd/\"; private static final Pattern BRAND_API_PAGE_PATTERN = Pattern.compile(String.format(\"%s(%s).atom.*\",  API_PATTERN_ROOT, WEB_SAFE_NAME_PATTERN)); private static final Pattern EPISODE_API_PAGE_PATTERN = Pattern.compile(String.format(\"%s(%s)/episode-guide/series-(\\\\d+)/episode-(\\\\d+).atom.*\",  API_PATTERN_ROOT, WEB_SAFE_NAME_PATTERN));",
+    "conflict": "private static final Pattern BRAND_API_PAGE_PATTERN = Pattern.compile(String.format(\"%s(%s).atom\",  API_BASE_URL, WEB_SAFE_NAME_PATTERN)); private static final Pattern EPISODE_API_PAGE_PATTERN = Pattern.compile(String.format(\"%s(%s)/episode-guide/series-(\\\\d+)/episode-(\\\\d+).atom\",  API_BASE_URL, WEB_SAFE_NAME_PATTERN));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45098,
+    "v2": "Set<String> allAliases = Sets.newHashSet(Sets.union(existingEpisode.getAliases(),fetchedEpisode.getAliases())); allAliases.add(fetchedEpisode.getCanonicalUri()); allAliases.remove(existingEpisode.getCanonicalUri()); existingEpisode.setAliases(allAliases);",
+    "resolution": "Set<String> allAliases = Sets.newHashSet(Sets.union(existingEpisode.getAliases(),fetchedEpisode.getAliases())); allAliases.add(fetchedEpisode.getCanonicalUri()); allAliases.remove(existingEpisode.getCanonicalUri()); existingEpisode.setAliases(allAliases);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45125,
+    "v2": "return new CannonTwitterTopicsUpdater(cannonTopicsClient(), new MetaBroadcastTwitterTopicsUpdater(cannonTopicsClient(), contentResolver, topicStore, topicResolver, contentWriter, TWITTER_NS_FOR_PROGRAMMES, log)); }",
+    "resolution": "return new CannonTwitterTopicsUpdater(cannonTopicsClient(), new MetaBroadcastTwitterTopicsUpdater(cannonTopicsClient(), contentResolver, topicStore, topicResolver, contentWriter, MetaBroadcastTwitterTopicsUpdater.TWITTER_NS_FOR_AUDIENCE, log)); }",
+    "conflict": "return new CannonTwitterTopicsUpdater(cannonTopicsClient(), new MetaBroadcastTwitterTopicsUpdater(cannonTopicsClient(), contentResolver, topicStore, topicResolver, contentWriter, MetaBroadcastTwitterTopicsUpdater.TWITTER_NS_FOR_AUDIENCE, log)); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45134,
+    "v2": "@Override protected org.atlasapi.media.entity.TopicRef.Relationship topicRefRelationship() { return org.atlasapi.media.entity.TopicRef.Relationship.ABOUT; }",
+    "resolution": "@Override protected org.atlasapi.media.entity.TopicRef.Relationship topicRefRelationship() { return org.atlasapi.media.entity.TopicRef.Relationship.ABOUT; }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45138,
+    "v2": "public static final String TWITTER_NS_FOR_AUDIENCE = \"twitter\"; public static final String TWITTER_NS_FOR_AUDIENCE_RELATED = \"twitter:audience-related\"; //",
+    "resolution": "public static final String TWITTER_NS_FOR_AUDIENCE = \"twitter\"; public static final String TWITTER_NS_FOR_AUDIENCE_RELATED = \"twitter:audience-related\"; //",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45154,
+    "v2": "import org.atlasapi.remotesite.music.emimusic.EmiMusicModule;",
+    "resolution": "import org.atlasapi.remotesite.metabroadcast.MetaBroadcastModule; import org.atlasapi.remotesite.music.emimusic.EmiMusicModule; import org.atlasapi.remotesite.space.TheSpaceModule; import org.atlasapi.remotesite.music.emipub.EmiPubModule; import org.atlasapi.remotesite.music.musicbrainz.MusicBrainzModule;",
+    "conflict": "import org.atlasapi.remotesite.music.emipub.EmiPubModule; import org.atlasapi.remotesite.music.musicbrainz.MusicBrainzModule; import org.atlasapi.remotesite.metabroadcast.MetaBroadcastModule; import org.atlasapi.remotesite.space.TheSpaceModule;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45167,
+    "v2": "public ItemModelSimplifier(String localHostName, TopicQueryResolver topicResolver, ProductResolver productResolver, SegmentResolver segmentResolver, ContainerSummaryResolver containerSummaryResolver) { this(localHostName, topicResolver, productResolver, segmentResolver, containerSummaryResolver, new SystemClock());",
+    "resolution": "public ItemModelSimplifier(String localHostName, ContentGroupResolver contentGroupResolver, TopicQueryResolver topicResolver, ProductResolver productResolver, SegmentResolver segmentResolver, ContainerSummaryResolver containerSummaryResolver){ this(localHostName, contentGroupResolver, topicResolver, productResolver, segmentResolver, containerSummaryResolver, new SystemClock());",
+    "conflict": "public ItemModelSimplifier(String localHostName, ContentGroupResolver contentGroupResolver, TopicQueryResolver topicResolver, ProductResolver productResolver, SegmentResolver segmentResolver, ContainerSummaryResolver containerSummaryResolver){ this(localHostName, contentGroupResolver, topicResolver, productResolver, segmentResolver, containerSummaryResolver, new SystemClock());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45194,
+    "v2": "public ItemModelSimplifier(String localHostName, TopicQueryResolver topicResolver, ProductResolver productResolver, SegmentResolver segmentResolver, ContainerSummaryResolver containerSummaryResolver) { this(localHostName, topicResolver, productResolver, segmentResolver, containerSummaryResolver, new SystemClock());",
+    "resolution": "public ItemModelSimplifier(String localHostName, ContentGroupResolver contentGroupResolver, TopicQueryResolver topicResolver, ProductResolver productResolver, SegmentResolver segmentResolver, ContainerSummaryResolver containerSummaryResolver){ this(localHostName, contentGroupResolver, topicResolver, productResolver, segmentResolver, containerSummaryResolver, new SystemClock());",
+    "conflict": "public ItemModelSimplifier(String localHostName, ContentGroupResolver contentGroupResolver, TopicQueryResolver topicResolver, ProductResolver productResolver, SegmentResolver segmentResolver, ContainerSummaryResolver containerSummaryResolver){ this(localHostName, contentGroupResolver, topicResolver, productResolver, segmentResolver, containerSummaryResolver, new SystemClock());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45236,
+    "v2": "public ContentModelSimplifier(String localHostName, ContentGroupResolver contentGroupResolver, TopicQueryResolver topicResolver, ProductResolver productResolver) { this.contentGroupResolver = contentGroupResolver;",
+    "resolution": "private boolean exposeIds = false;  public ContentModelSimplifier(String localHostName, TopicQueryResolver topicResolver, ProductResolver productResolver) {",
+    "conflict": "private boolean exposeIds = false;  public ContentModelSimplifier(String localHostName, TopicQueryResolver topicResolver, ProductResolver productResolver) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45237,
+    "v2": "simpleDescription.setId(null);",
+    "resolution": "if(!exposeIds) { simpleDescription.setId(null); }",
+    "conflict": "if(!exposeIds) { simpleDescription.setId(null); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45300,
+    "v2": "import org.atlasapi.beans.AtlasErrorSummary; import org.atlasapi.beans.AtlasModelType; import org.atlasapi.beans.AtlasModelWriter; import org.atlasapi.media.channel.Channel; import org.atlasapi.media.channel.ChannelResolver;",
+    "resolution": "import org.atlasapi.media.channel.Channel; import org.atlasapi.media.channel.ChannelResolver;",
+    "conflict": "import org.atlasapi.media.entity.Channel;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45311,
+    "v2": "import static org.hamcrest.Matchers.containsString;",
+    "resolution": "import static org.hamcrest.Matchers.allOf; import static org.hamcrest.Matchers.is;  import java.io.IOException;",
+    "conflict": "import static org.hamcrest.Matchers.allOf; import static org.hamcrest.Matchers.is;  import java.io.IOException;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45343,
+    "v2": "import com.google.gson.FieldNamingPolicy; import com.google.gson.GsonBuilder; import com.google.gson.reflect.TypeToken; import com.metabroadcast.common.http.SimpleHttpClient;",
+    "resolution": "import com.metabroadcast.common.persistence.mongo.DatabasedMongo; import com.google.gson.reflect.TypeToken; import com.google.gson.FieldNamingPolicy; import com.google.gson.GsonBuilder; import com.metabroadcast.common.http.SimpleHttpClient;",
+    "conflict": "import com.metabroadcast.common.persistence.mongo.DatabasedMongo; import com.google.gson.reflect.TypeToken;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45350,
+    "v2": "IonSchedule schedule = scheduleClient.get(scheduleUrl); for (IonBroadcast broadcast : schedule.getBlocklist()) { handler.handle(broadcast); } return schedule.getBlocklist().size();",
+    "resolution": "IonSchedule schedule = scheduleClient.get(scheduleUrl); for (IonBroadcast broadcast : schedule.getBlocklist()) { handler.handle(broadcast); } return schedule.getBlocklist().size();",
+    "conflict": "schedule = scheduleClient.get(scheduleUrl);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45365,
+    "v2": "import com.google.common.base.Function;",
+    "resolution": "import com.google.common.base.Objects; import com.google.common.base.Function;",
+    "conflict": "import com.google.common.base.Objects; import com.google.common.base.Function; import com.google.common.base.Objects; import com.google.common.base.Function; import com.google.common.base.Objects;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45376,
+    "v2": "return new C4AtomBackedBrandUpdater(c4AtomFetcher(), contentResolver, new LastUpdatedSettingContentWriter(contentResolver, contentWriter), log);",
+    "resolution": "return new C4AtomBackedBrandUpdater(c4AtomFetcher(), contentResolver, new LastUpdatedSettingContentWriter(contentResolver, lastUpdatedCheckingContentWriter()), log); }",
+    "conflict": "return new C4AtomBackedBrandUpdater(c4AtomFetcher(), contentResolver, lastUpdatedCheckingContentWriter(), log); }  private ContentWriter lastUpdatedCheckingContentWriter() { return new LastUpdatedCheckingContentWriter(log, contentWriter);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45450,
+    "v2": "Encoding encoding = encodingCreator.createEncoding(ondemand, pid); if(encoding != null) { encodings.add(encoding);",
+    "resolution": "Maybe<Encoding> encoding = encodingCreator.createEncoding(ondemand, pid); if(encoding.hasValue()) { encodings.add(encoding.requireValue());",
+    "conflict": "Maybe<Encoding> encoding = encodingCreator.createEncoding(ondemand); if(encoding.hasValue()) { encodings.add(encoding.requireValue());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45453,
+    "v2": "if (episode != null) { episode.setBrand(brand); episodes.add(episode); }",
+    "resolution": "if (episode != null) { episodes.add(episode); }",
+    "conflict": "episodes.add(episode);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45455,
+    "v2": "public Playlist extract(YouTubeFeedSource source) { VideoFeed feed = source.getVideoFeed(); if (feed == null) { return null; }",
+    "resolution": "public ContentGroup extract(YouTubeFeedSource source) { VideoFeed feed = source.getVideoFeed(); if (feed == null) { return null; }",
+    "conflict": "public ContentGroup extract(YouTubeFeedSource source) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 45457,
+    "v2": "Encoding newEncoding = encodingCreator.createEncoding(change); if (newEncoding != null) { version.addManifestedAs(newEncoding);",
+    "resolution": "Maybe<Encoding> newEncoding = encodingCreator.createEncoding(change); if(newEncoding.hasValue()) { version.addManifestedAs(newEncoding.requireValue());",
+    "conflict": "Maybe<Encoding> newEncoding = encodingCreator.createEncoding(change); if(newEncoding.hasValue()) { version.addManifestedAs(newEncoding.requireValue());"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 45462,
+    "v2": "Maybe<Encoding> newEncoding = encodingCreator.createEncoding(change); if(newEncoding.hasValue()) { version.addManifestedAs(newEncoding.requireValue());",
+    "resolution": "Maybe<Encoding> newEncoding = encodingCreator.createEncoding(change); if(newEncoding.hasValue()) { version.addManifestedAs(newEncoding.requireValue());",
+    "conflict": "Encoding newEncoding = encodingCreator.createEncoding(change); if (newEncoding != null) { version.addManifestedAs(newEncoding);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45474,
+    "v2": "import org.atlasapi.remotesite.bbc.ion.BbcIonOndemanChangeDeserialiser; import org.atlasapi.remotesite.bbc.ion.BbcIonOndemandChangeUpdater;",
+    "resolution": "import org.atlasapi.remotesite.bbc.ion.BbcIonOndemanChangeDeserialiser; import org.atlasapi.remotesite.bbc.ion.BbcIonOndemandChangeUpdater; import org.atlasapi.remotesite.bbc.ion.BbcIonScheduleController; import org.atlasapi.remotesite.bbc.ion.BbcIonScheduleDeserialiser;",
+    "conflict": "import org.atlasapi.remotesite.bbc.ion.BbcIonScheduleController; import org.atlasapi.remotesite.bbc.ion.BbcIonScheduleUpdater; import org.atlasapi.remotesite.bbc.ion.BbcIonScheduleUriSource;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45481,
+    "v2": "import org.atlasapi.media.entity.Item; import org.atlasapi.media.entity.MediaType; import org.atlasapi.media.entity.Playlist;",
+    "resolution": "import org.atlasapi.media.entity.Container; import org.atlasapi.media.entity.Item;",
+    "conflict": "import org.atlasapi.media.entity.Container; import org.atlasapi.media.entity.ContentType; import org.atlasapi.media.entity.Item;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45482,
+    "v2": "playlist.setMediaType(cType); for (Item item : playlist.getItems()) { item.setMediaType(cType);",
+    "resolution": "playlist.setMediaType(cType); for (Item item : playlist.getContents()) { item.setMediaType(cType);",
+    "conflict": "playlist.setContentType(cType); for (Item item : playlist.getContents()) { item.setContentType(cType);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45486,
+    "v2": "series.setMediaType(MediaType.VIDEO); series.setSpecialization(Specialization.TV); series.setItems(episodesExtractor.extract(source));",
+    "resolution": "series.setMediaType(MediaType.VIDEO); series.setSpecialization(Specialization.TV);",
+    "conflict": "series.setContents(episodesExtractor.extract(source));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 45489,
+    "v2": "import org.atlasapi.media.entity.Item; import org.atlasapi.media.entity.MediaType; import org.atlasapi.media.entity.Playlist;",
+    "resolution": "import org.atlasapi.media.entity.ContentGroup; import org.atlasapi.media.entity.Item; import org.atlasapi.media.entity.MediaType;",
+    "conflict": "import org.atlasapi.media.entity.ContentGroup; import org.atlasapi.media.entity.ContentType; import org.atlasapi.media.entity.Item;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 45497,
+    "v2": "for (Item item : series.getItems()) { if(brand.getContentType() != null && !brand.getContentType().equals(item.getContentType())) { item.setContentType(brand.getContentType());",
+    "resolution": "for (Content item : series.getContents()) { if(brand.getContentType() != null && !brand.getContentType().equals(item.getContentType())) { item.setContentType(brand.getContentType());",
+    "conflict": "for (Content episode : series.getContents()) { if(!episode.getContentType().equals(brand.getContentType())) { episode.setContentType(brand.getContentType());"
+  }
+]
+}

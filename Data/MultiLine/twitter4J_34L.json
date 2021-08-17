@@ -1,0 +1,52 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 8833,
+    "v2": "import junit.framework.TestCase;",
+    "resolution": "import org.junit.jupiter.api.Test; import twitter4j.*;",
+    "conflict": "import org.junit.jupiter.api.Test; import twitter4j.*;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8837,
+    "v2": "appendParameter(\"attachment_url\", attachmentUrl, params);",
+    "resolution": "appendParameter(\"attachment_url\", attachmentUrl, params);if(autoPopulateReplyMetadata){ appendParameter(\"auto_populate_reply_metadata\", \"true\", params); }",
+    "conflict": "if(autoPopulateReplyMetadata){ appendParameter(\"auto_populate_reply_metadata\", \"true\", params); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8860,
+    "v2": "",
+    "resolution": "if (notNull(props, prefix, INCLUDE_EXT_ALT_TEXT)) { setIncludeExtAltTextEnabled(getBoolean(props, prefix, INCLUDE_EXT_ALT_TEXT)); }",
+    "conflict": "if (notNull(props, prefix, INCLUDE_EXT_ALT_TEXT)) { setIncludeExtAltTextEnabled(getBoolean(props, prefix, INCLUDE_EXT_ALT_TEXT)); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8919,
+    "v2": "",
+    "resolution": "private boolean isFollowing; private int listedCount; private boolean isFollowRequestSent;",
+    "conflict": "private boolean isFollowing; private int listedCount; private boolean isFollowRequestSent;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 8932,
+    "v2": "public abstract String upload (File image, String message) throws TwitterException; public abstract String upload (String imageFileName, InputStream imageBody) throws TwitterException; public abstract String upload (String imageFileName, InputStream imageBody, String message) throws TwitterException;",
+    "resolution": "public abstract String upload(File image, String message) throws TwitterException; public abstract String upload(String imageFileName, InputStream imageBody) throws TwitterException; public abstract String upload(String imageFileName, InputStream imageBody, String message) throws TwitterException;",
+    "conflict": "public abstract String upload (String imageFileName, InputStream imageBody) throws TwitterException;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8945,
+    "v2": "if (!json.isNull(\"text\")) {",
+    "resolution": "if (!json.isNull (\"sender\")) { userStreamListener.onDirectMessage (new DirectMessageJSONImpl (json)); } else if (!json.isNull(\"text\")) {",
+    "conflict": "if (!json.isNull (\"sender\")) { userStreamListener.onDirectMessage (new DirectMessageJSONImpl (json)); } else if (!json.isNull(\"text\")) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8952,
+    "v2": "// used for getting user info",
+    "resolution": "// used for getting user info",
+    "conflict": "// used for getting status and user info, for favoriting, following and unfollowing events"
+  }
+]
+}

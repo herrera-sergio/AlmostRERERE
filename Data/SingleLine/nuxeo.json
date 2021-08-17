@@ -1,0 +1,969 @@
+{"conflicts":[
+  {
+    "devdecision": "Manual",
+    "id": 53795,
+    "v2": "import org.nuxeo.ecm.automation.OperationException;",
+    "resolution": "import org.nuxeo.ecm.automation.jaxrs.io.documents.PaginableDocumentModelListImpl;",
+    "conflict": "import org.nuxeo.ecm.automation.jaxrs.io.documents.PaginableDocumentModelListImpl;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53802,
+    "v2": "\"org.nuxeo.ecm.core.io\", //",
+    "resolution": "\"studio.extensions.template-module-demo\", //",
+    "conflict": "\"studio.extensions.template-module-demo\", //"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53803,
+    "v2": "\"org.nuxeo.template.manager.jxls\", \"org.nuxeo.template.manager.samples\", \"org.nuxeo.ecm.core.io\" })",
+    "resolution": "\"org.nuxeo.template.manager.jxls\", \"org.nuxeo.template.manager.samples\", \"org.nuxeo.ecm.core.io\",",
+    "conflict": "\"org.nuxeo.template.manager.jxls\", \"org.nuxeo.template.manager.samples\", \"studio.extensions.template-module-demo\" })"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53823,
+    "v2": "import org.nuxeo.ecm.platform.importer.random.DictionaryHolder; import org.nuxeo.ecm.platform.importer.random.HunspellDictionaryHolder;",
+    "resolution": "import org.nuxeo.ecm.platform.importer.random.DictionaryHolder; import org.nuxeo.ecm.platform.importer.random.HunspellDictionaryHolder;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53847,
+    "v2": "invalidateSynchronizationRootsCache(userName);",
+    "resolution": "invalidateSynchronizationRootsCache(userName);",
+    "conflict": "cache.clear();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53848,
+    "v2": "invalidateSynchronizationRootsCache(userName);",
+    "resolution": "invalidateSynchronizationRootsCache(userName);",
+    "conflict": "cache.clear();"
+  },
+  {
+    "devdecision": "None",
+    "id": 53861,
+    "v2": "*",
+    "resolution": "* @author Martin Pernollet <mpernollet@nuxeo.com>",
+    "conflict": "*"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 53863,
+    "v2": "Array array = dialect.createArrayOf(Types.VARCHAR,",
+    "resolution": "Array array = dialect.createArrayOf(Types.OTHER,",
+    "conflict": "Array array = sqlInfo.dialect.createArrayOf(Types.OTHER,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53910,
+    "v2": "// MySQL and SQLServer fail with:",
+    "resolution": "// MySQL and SQLServer fail with:",
+    "conflict": "// with MySQL and SQL Server was logging:"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53911,
+    "v2": "deployBundle(\"org.nuxeo.ecm.core.api\");",
+    "resolution": "deployBundle(\"org.nuxeo.ecm.core.api\");",
+    "conflict": "deployBundle(\"org.nuxeo.ecm.core.api\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53917,
+    "v2": "+ \"C:\\\\nuxeo-dm-jboss\\\\server\\\\default\\\\data\\\\NXRuntime\\\\data\"",
+    "resolution": "+ \"C:\\\\nuxeo-dm-jboss\\\\server\\\\default\\\\data\\\\NXRuntime\\\\data\"",
+    "conflict": "+ \"C:\\\\nuxeo-dm-5.4.3-SNAPSHOT-jboss\\\\server\\\\default\\\\data\\\\NXRuntime\\\\data\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53918,
+    "v2": "return runtime.getProperty(key, defValue);",
+    "resolution": "return runtime.getProperty(key, defValue);",
+    "conflict": "return runtime == null ? null : runtime.getProperty(key, defValue);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53919,
+    "v2": "return runtime.getProperties();",
+    "resolution": "return runtime.getProperties();",
+    "conflict": "return runtime == null ? null : runtime.getProperties();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53943,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import java.net.MalformedURLException; import java.net.URL;"
+  },
+  {
+    "devdecision": "None",
+    "id": 53944,
+    "v2": "import java.util.StringTokenizer;",
+    "resolution": "",
+    "conflict": "import java.util.Properties;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 53949,
+    "v2": "",
+    "resolution": "Manager.initializeProtocols();",
+    "conflict": "registries = new HashMap<String, Registrable>();         Manager.initializeProtocols();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 53953,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import java.util.HashMap; import java.util.Map;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53958,
+    "v2": "String secondPassword) {",
+    "resolution": "String secondPassword) throws ClientException {",
+    "conflict": "String secondPassword) throws ClientException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 53962,
+    "v2": "LOG.error(message.getDetail());",
+    "resolution": "LOG.warn(currentUser.getName()+\" : \"+message.getDetail());",
+    "conflict": "LOG.warn(currentUser.getName()+\" : \"+message.getDetail());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54024,
+    "v2": "this.lastSuccessStatus = probeStatus;",
+    "resolution": "lastSuccessStatus = probeStatus;",
+    "conflict": "lastSuccesStatus = probeStatus;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54029,
+    "v2": "import java.io.IOException; import java.io.StringReader;",
+    "resolution": "import java.io.IOException; import java.io.StringReader;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54322,
+    "v2": "log.debug(\"Added theme: \" + themeName);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54338,
+    "v2": "import org.mortbay.jetty.Server;",
+    "resolution": "import  org.mortbay.jetty.Server;",
+    "conflict": "import  org.mortbay.jetty.Server;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54378,
+    "v2": "return MonitoringMapper.newProxy(NetMapper.getMapper(repository, httpClient));",
+    "resolution": "return MapperClient.getMapper(repository);",
+    "conflict": "return MapperClient.getMapper(repository);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 54391,
+    "v2": "import java.util.List; import java.util.Locale;",
+    "resolution": "import java.util.Locale;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54466,
+    "v2": "",
+    "resolution": "",
+    "conflict": "\"org.nuxeo.ecm.platform.picture.web:OSGI-INF/picturebook-types-contrib.xml\",         \"org.nuxeo.ecm.platform.picture.web:OSGI-INF/imaging-urlservice-contrib.xml\","
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54552,
+    "v2": "}",
+    "resolution": "}",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54588,
+    "v2": "String connectionURL = repositoryProperties.get(\"URL\").replace(\"${nuxeo.test.vcs.url};AUTO_SERVER=true\", System.getProperty(\"nuxeo.test.vcs.url\")+\";AUTO_SERVER=true\");",
+    "resolution": "String connectionURL = repositoryProperties.get(\"URL\").replace(\"${nuxeo.test.vcs.url}\", System.getProperty(\"nuxeo.test.vcs.url\"));",
+    "conflict": "String connectionURL = repositoryProperties.get(\"URL\").replace(\"${nuxeo.test.vcs.url}\", System.getProperty(\"nuxeo.test.vcs.url\"));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54592,
+    "v2": "public boolean supportsReadAcl() {",
+    "resolution": "public boolean needsAliasForDerivedTable() {",
+    "conflict": "public boolean needsAliasForDerivedTable() {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 54594,
+    "v2": "private boolean readAclsChanged;",
+    "resolution": "private String threadName;    private boolean readAclsChanged;",
+    "conflict": "private String threadName;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54608,
+    "v2": "",
+    "resolution": "private static final long serialVersionUID = 1L;",
+    "conflict": "private static final long serialVersionUID = 1L;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54609,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private static final long serialVersionUID = 1L;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54621,
+    "v2": "",
+    "resolution": "import javax.servlet.http.HttpServletRequest;",
+    "conflict": "import javax.servlet.http.HttpServletRequest;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54622,
+    "v2": "",
+    "resolution": "import org.nuxeo.common.utils.IdUtils; import org.nuxeo.common.utils.Path;",
+    "conflict": "import org.nuxeo.common.utils.IdUtils; import org.nuxeo.common.utils.Path;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54631,
+    "v2": "return session.hasPermission(doc.getRef(), PERMISSION_MODERATE);",
+    "resolution": "return session.hasPermission(doc.getRef(), WebCommentsConstants.PERMISSION_MODERATE);",
+    "conflict": "return session.hasPermission(doc.getRef(), WebCommentsConstants.PERMISSION_MODERATE);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54647,
+    "v2": "import org.apache.commons.lang.StringUtils;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54672,
+    "v2": "if (principaGroups.contains(group)) {",
+    "resolution": "if (principalGroups.contains(group)) {",
+    "conflict": "if (principalGroups.contains(group)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54675,
+    "v2": "Long.valueOf(222));",
+    "resolution": "222L);",
+    "conflict": "222L);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54676,
+    "v2": "Long.valueOf(333));",
+    "resolution": "333L);",
+    "conflict": "333L);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54677,
+    "v2": "assertEquals(Long.valueOf(333), doc.getProperty(",
+    "resolution": "assertEquals(333L, doc.getProperty(",
+    "conflict": "assertEquals(333L, doc.getProperty("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54682,
+    "v2": "public interface DocumentEntry extends Entry {",
+    "resolution": "public interface DocumentEntry extends Entry {",
+    "conflict": "public interface DocumentEntry {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54703,
+    "v2": "sectionsProvider = queryModel.getResultsProvider(session, params);",
+    "resolution": "sectionsProvider = queryModel.getResultsProvider(coreSession, params);",
+    "conflict": "sectionsProvider = queryModel.getResultsProvider(coreSession, params);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54707,
+    "v2": "createdComment = createCommentDocModel(docModel, comment);",
+    "resolution": "createdComment = createCommentDocModel(session, docModel, comment);",
+    "conflict": "createdComment = createCommentDocModel(session, docModel, comment);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 54713,
+    "v2": "",
+    "resolution": "",
+    "conflict": "protected HibernateConfiguration hibernateConfiguration;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54719,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54720,
+    "v2": "",
+    "resolution": "configuration.links = null; // avoid storing unused data",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54721,
+    "v2": "",
+    "resolution": "}",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54755,
+    "v2": "throw new AuditException(\"Cannot locate remote logs audit\", e);",
+    "resolution": "throw new AuditRuntimeException(\"Cannot locate remote logs audit\", e);",
+    "conflict": "log.error(\"Cannot find remote audit logs service... \", e);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54771,
+    "v2": "import org.nuxeo.ecm.webengine.gwt.client.http.HttpResponse; import org.nuxeo.ecm.webengine.gwt.client.ui.HttpCommand;",
+    "resolution": "import org.nuxeo.ecm.webengine.gwt.client.http.HttpResponse; import org.nuxeo.ecm.webengine.gwt.client.ui.HttpCommand;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 54788,
+    "v2": "contexts = new HashMap<Bundle, RuntimeContext>();",
+    "resolution": "contexts = new ConcurrentHashMap<String, RuntimeContext>();",
+    "conflict": "contexts = new ConcurrentHashMap<String, RuntimeContext>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54802,
+    "v2": "// Tue Oct 28 00:29:49 CET 2008",
+    "resolution": "// Tue Oct 28 00:40:27 CET 2008",
+    "conflict": "// Mon Sep 29 18:33:14 CEST 2008"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54803,
+    "v2": "* @version Tue Oct 28 00:29:49 CET 2008",
+    "resolution": "* @version Tue Oct 28 00:40:27 CET 2008",
+    "conflict": "* @version Mon Sep 29 18:33:14 CEST 2008"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54804,
+    "v2": "\"\\000\\117\\000\\002\\002\\004\\000\\002\\003\\004\\000\\002\\003\" +",
+    "resolution": "\"\\000\\121\\000\\002\\002\\004\\000\\002\\003\\004\\000\\002\\003\" +",
+    "conflict": "\"\\000\\120\\000\\002\\002\\004\\000\\002\\003\\004\\000\\002\\003\" +"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54810,
+    "v2": "case 78: // function_args ::= function_args COMMA predicate_operand",
+    "resolution": "case 80: // function_args ::= function_args COMMA predicate_operand",
+    "conflict": "case 79: // function_args ::= function_args COMMA predicate_operand"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54811,
+    "v2": "case 77: // function_args ::= predicate_operand",
+    "resolution": "case 79: // function_args ::= predicate_operand",
+    "conflict": "case 78: // function_args ::= predicate_operand"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54812,
+    "v2": "case 76: // function ::= IDENTIFIER LPARA function_args RPARA",
+    "resolution": "case 78: // function ::= IDENTIFIER LPARA function_args RPARA",
+    "conflict": "case 77: // function ::= IDENTIFIER LPARA function_args RPARA"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54813,
+    "v2": "case 75: // function ::= IDENTIFIER LPARA RPARA",
+    "resolution": "case 77: // function ::= IDENTIFIER LPARA RPARA",
+    "conflict": "case 76: // function ::= IDENTIFIER LPARA RPARA"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54814,
+    "v2": "case 74: // literal_list ::= literal_list COMMA literal",
+    "resolution": "case 76: // literal_list ::= literal_list COMMA literal",
+    "conflict": "case 75: // literal_list ::= literal_list COMMA literal"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54815,
+    "v2": "case 73: // literal_list ::= literal",
+    "resolution": "case 75: // literal_list ::= literal",
+    "conflict": "case 74: // literal_list ::= literal"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54816,
+    "v2": "case 72: // literal ::= TIMESTAMP STRING",
+    "resolution": "case 74: // literal ::= TIMESTAMP STRING",
+    "conflict": "case 73: // literal ::= TIMESTAMP STRING"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54817,
+    "v2": "case 71: // literal ::= DATE STRING",
+    "resolution": "case 73: // literal ::= DATE STRING",
+    "conflict": "case 72: // literal ::= DATE STRING"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 54819,
+    "v2": "// Tue Oct 28 00:29:49 CET 2008",
+    "resolution": "// Tue Oct 28 00:40:27 CET 2008",
+    "conflict": "// Mon Sep 29 18:33:14 CEST 2008"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 55056,
+    "v2": "import java.util.LinkedHashMap;",
+    "resolution": "import java.util.LinkedHashMap;import java.util.HashMap;",
+    "conflict": "import java.util.HashMap;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55078,
+    "v2": "*       * @throws Exception",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55080,
+    "v2": "*       * @throws Exception",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55085,
+    "v2": "/* The following code was generated by JFlex 1.4.1 on 9/26/08 5:36 PM */",
+    "resolution": "/* The following code was generated by JFlex 1.4.1 on 9/26/08 5:36 PM */",
+    "conflict": "/* The following code was generated by JFlex 1.4.1 on 9/29/08 5:06 PM */"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55086,
+    "v2": "// Fri Sep 26 17:36:53 CEST 2008",
+    "resolution": "// Mon Sep 29 18:33:14 CEST 2008",
+    "conflict": "// Mon Sep 29 17:06:35 CEST 2008"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55087,
+    "v2": "* @version Fri Sep 26 17:36:53 CEST 2008",
+    "resolution": "* @version Mon Sep 29 18:33:14 CEST 2008",
+    "conflict": "* @version Mon Sep 29 17:06:35 CEST 2008"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55094,
+    "v2": "case 78: // function_args ::= function_args COMMA predicate_operand",
+    "resolution": "case 79: // function_args ::= function_args COMMA predicate_operand",
+    "conflict": "case 77: // function_args ::= function_args COMMA predicate_operand"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55095,
+    "v2": "case 77: // function_args ::= predicate_operand",
+    "resolution": "case 78: // function_args ::= predicate_operand",
+    "conflict": "case 76: // function_args ::= predicate_operand"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55096,
+    "v2": "case 76: // function ::= IDENTIFIER LPARA function_args RPARA",
+    "resolution": "case 77: // function ::= IDENTIFIER LPARA function_args RPARA",
+    "conflict": "case 75: // function ::= IDENTIFIER LPARA function_args RPARA"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55097,
+    "v2": "case 75: // function ::= IDENTIFIER LPARA RPARA",
+    "resolution": "case 76: // function ::= IDENTIFIER LPARA RPARA",
+    "conflict": "case 74: // function ::= IDENTIFIER LPARA RPARA"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55099,
+    "v2": "case 71: // literal_list ::= literal",
+    "resolution": "case 74: // literal_list ::= literal",
+    "conflict": "case 72: // literal_list ::= literal"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55100,
+    "v2": "case 70: // literal ::= TIMESTAMP STRING",
+    "resolution": "case 73: // literal ::= TIMESTAMP STRING",
+    "conflict": "case 71: // literal ::= TIMESTAMP STRING"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55101,
+    "v2": "case 69: // literal ::= DATE STRING",
+    "resolution": "case 72: // literal ::= DATE STRING",
+    "conflict": "case 70: // literal ::= DATE STRING"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55102,
+    "v2": "case 68: // literal ::= DOUBLE",
+    "resolution": "case 71: // literal ::= DOUBLE",
+    "conflict": "case 69: // literal ::= DOUBLE"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55103,
+    "v2": "case 67: // literal ::= SUB INTEGER",
+    "resolution": "case 70: // literal ::= SUB INTEGER",
+    "conflict": "case 68: // literal ::= SUB INTEGER"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55104,
+    "v2": "case 66: // literal ::= INTEGER",
+    "resolution": "case 69: // literal ::= INTEGER",
+    "conflict": "case 67: // literal ::= INTEGER"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55105,
+    "v2": "case 65: // literal ::= STRING",
+    "resolution": "case 68: // literal ::= STRING",
+    "conflict": "case 66: // literal ::= STRING"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55106,
+    "v2": "case 64: // operand ::= function",
+    "resolution": "case 67: // operand ::= function",
+    "conflict": "case 65: // operand ::= function"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55108,
+    "v2": "case 61: // reference ::= PATH_IDENTIFIER",
+    "resolution": "case 64: // reference ::= PATH_IDENTIFIER",
+    "conflict": "case 63: // operand ::= IDENTIFIER"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 55111,
+    "v2": "// Fri Sep 26 17:36:53 CEST 2008",
+    "resolution": "// Mon Sep 29 18:33:14 CEST 2008",
+    "conflict": "// Mon Sep 29 17:06:35 CEST 2008"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55153,
+    "v2": "",
+    "resolution": "",
+    "conflict": "// TODO Auto-generated method stub"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55163,
+    "v2": "",
+    "resolution": "import java.util.HashMap; import java.util.List;",
+    "conflict": "import java.util.HashMap; import java.util.List;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55170,
+    "v2": "/* The following code was generated by JFlex 1.4.1 on 9/18/08 6:59 PM */",
+    "resolution": "/* The following code was generated by JFlex 1.4.1 on 9/18/08 6:59 PM */",
+    "conflict": "/* The following code was generated by JFlex 1.4.1 on 6/13/08 12:45 PM */"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55178,
+    "v2": "case 5:",
+    "resolution": "case 5:",
+    "conflict": "case 6:"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55183,
+    "v2": "case 7:",
+    "resolution": "case 7:",
+    "conflict": "case 8:"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55185,
+    "v2": "// Thu Sep 18 18:59:19 CEST 2008",
+    "resolution": "// Thu Sep 18 18:59:19 CEST 2008",
+    "conflict": "// Fri Jun 13 12:45:45 GMT+01:00 2008"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55197,
+    "v2": "case 73: // function ::= IDENTIFIER LPARA RPARA",
+    "resolution": "case 73: // function ::= IDENTIFIER LPARA RPARA",
+    "conflict": "case 73: // function ::= IDENTIFIER LPARA RPARA"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55268,
+    "v2": "// Thu Sep 18 18:59:19 CEST 2008",
+    "resolution": "// Thu Sep 18 18:59:19 CEST 2008",
+    "conflict": "// Fri Jun 13 12:45:45 GMT+01:00 2008"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55270,
+    "v2": "return resultsProvidersCache.get(name);",
+    "resolution": "return resultsProvidersCache.get(name);",
+    "conflict": "return resultsProvidersCache.get(name);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55273,
+    "v2": "",
+    "resolution": "private String url;",
+    "conflict": "private String url;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55276,
+    "v2": "resourcesAccessor.getMessages().get(\"feedback.search.invalid\"));",
+    "resolution": "resourcesAccessor.getMessages().get(\"feedback.search.invalid\"));",
+    "conflict": "resourcesAccessor.getMessages().get(\"feedback.search.invalid\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55279,
+    "v2": "",
+    "resolution": "List<Notification> getNotificationsForEvents(String eventId);",
+    "conflict": "List<Notification> getNotificationsForEvents(String eventId);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55280,
+    "v2": "List<Notification> notifs = service.getNotificationRegistry().getNotificationsForEvent(eventId);",
+    "resolution": "List<Notification> notifs = service.getNotificationsForEvents(eventId);",
+    "conflict": "List<Notification> notifs = service.getNotificationsForEvents(eventId);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55284,
+    "v2": "log.debug(\"Connect workflow document manager\");",
+    "resolution": "log.trace(\"Connect workflow document manager\");",
+    "conflict": "log.trace(\"Connect workflow document manager\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55285,
+    "v2": "log.debug(\"Disconnect workflow document manager\");",
+    "resolution": "log.trace(\"Disconnect workflow document manager\");",
+    "conflict": "log.trace(\"Disconnect workflow document manager\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55286,
+    "v2": "public static void setCheckedOut(Node docNode, boolean checkedout)",
+    "resolution": "public static void setCheckedOut(Node docNode, boolean checkedout)",
+    "conflict": "static public void setCheckedOut(Node docNode, boolean checkedout)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55289,
+    "v2": "",
+    "resolution": "import org.apache.commons.logging.Log; import org.apache.commons.logging.LogFactory;",
+    "conflict": "import org.apache.commons.logging.Log; import org.apache.commons.logging.LogFactory;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55304,
+    "v2": "// FIXME TODO workaround to work with nxruntime core 1.3.3 --------------",
+    "resolution": "// FIXME TODO workaround to work with nxruntime core 1.3.3 --------------",
+    "conflict": "// FIXME TODO workarounf to work with nxruntime core 1.3.3 --------------"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55376,
+    "v2": "public class ServiceDescriptor implements Serializable {",
+    "resolution": "public class ServiceDescriptor implements Serializable{",
+    "conflict": "public class ServiceDescriptor implements Serializable{"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55396,
+    "v2": "final String resourcePath = \"/nuxeo/nxthemes-lib/\";         final TypeRegistry typeRegistry = Manager.getTypeRegistry();",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55408,
+    "v2": "context = new HashMap<String, Serializable>();",
+    "resolution": "sessionContext = new HashMap<String, Serializable>();",
+    "conflict": "sessionContext = new HashMap<String, Serializable>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55432,
+    "v2": "",
+    "resolution": "import java.util.Collection; import java.util.HashMap;",
+    "conflict": "import java.util.Collection; import java.util.HashMap;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55446,
+    "v2": "import java.io.Serializable;",
+    "resolution": "import java.io.Serializable;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55455,
+    "v2": "",
+    "resolution": "import static org.nuxeo.ecm.core.api.event.DocumentEventTypes.BEFORE_DOC_UPDATE; import static org.nuxeo.ecm.core.api.event.DocumentEventTypes.DOCUMENT_CREATED;",
+    "conflict": "import static org.nuxeo.ecm.core.api.event.DocumentEventTypes.BEFORE_DOC_UPDATE; import static org.nuxeo.ecm.core.api.event.DocumentEventTypes.DOCUMENT_CREATED;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55457,
+    "v2": "",
+    "resolution": "import org.nuxeo.ecm.core.api.DocumentModel; import org.nuxeo.ecm.core.api.DocumentRef;",
+    "conflict": "import org.nuxeo.ecm.core.api.DocumentModel; import org.nuxeo.ecm.core.api.DocumentRef;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55466,
+    "v2": "import org.nuxeo.ecm.core.api.impl.blob.StringBlob;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 55483,
+    "v2": "import org.nuxeo.ecm.core.query.sql.model.DateLiteral;",
+    "resolution": "import org.nuxeo.ecm.core.query.sql.model.DateLiteral;import org.nuxeo.ecm.core.query.sql.SQLQueryParser;",
+    "conflict": "import org.nuxeo.ecm.core.query.sql.SQLQueryParser;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 55484,
+    "v2": "import org.nuxeo.ecm.core.query.sql.SQLQueryParser;",
+    "resolution": "import org.nuxeo.ecm.core.query.sql.model.DateLiteral;import org.nuxeo.ecm.core.query.sql.SQLQueryParser;",
+    "conflict": "import org.nuxeo.ecm.core.query.sql.model.DateLiteral;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55692,
+    "v2": "throw new UnsupportedOperationException(\"not implemented\");",
+    "resolution": "getProperty(xpath).setValue(value);",
+    "conflict": "getProperty(xpath).setValue(value);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55693,
+    "v2": "throw new UnsupportedOperationException(\"not implemented\");",
+    "resolution": "throw new java.lang.UnsupportedOperationException(\"not implemented\");",
+    "conflict": "throw new java.lang.UnsupportedOperationException(\"not implemented\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55704,
+    "v2": "",
+    "resolution": "import org.nuxeo.ecm.platform.workflow.api.client.events.EventNames; import org.nuxeo.ecm.platform.workflow.document.api.security.policy.WorkflowDocumentSecurityPolicyManager;",
+    "conflict": "import org.nuxeo.ecm.platform.workflow.api.client.events.EventNames; import org.nuxeo.ecm.platform.workflow.document.api.security.policy.WorkflowDocumentSecurityPolicyManager;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55741,
+    "v2": "publish(event);",
+    "resolution": "CoreEventPublisher.getInstance().publish(event, event.id);",
+    "conflict": "CoreEventPublisher.getInstance().publish(event, event.id);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55742,
+    "v2": "publish(cmdEvents);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55743,
+    "v2": "publish(event);",
+    "resolution": "CoreEventPublisher.getInstance().publish(event, event.id);",
+    "conflict": "CoreEventPublisher.getInstance().publish(event, event.id);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55752,
+    "v2": "@In(create=true)",
+    "resolution": "@In(create = true)",
+    "conflict": "@In(create = true)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55760,
+    "v2": "private CoreSession documentManager;",
+    "resolution": "private transient CoreSession documentManager;",
+    "conflict": "private transient CoreSession documentManager;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 55761,
+    "v2": "public void initialize() throws ClientException {",
+    "resolution": "public void initialize() {",
+    "conflict": "public void initialize() {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 55766,
+    "v2": "import org.nuxeo.ecm.core.api.security.SecurityConstants;",
+    "resolution": "import org.nuxeo.ecm.core.repository.jcr.testing.CoreJCRConnectorTestConstants;import org.nuxeo.ecm.core.api.security.SecurityConstants;",
+    "conflict": "import org.nuxeo.ecm.core.repository.jcr.testing.CoreJCRConnectorTestConstants;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55800,
+    "v2": "} catch (Exception e) {",
+    "resolution": "} catch (Exception e) {",
+    "conflict": "} catch (PropertyException e) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55820,
+    "v2": "private static final long serialVersionUID = 7823660685121811606L;",
+    "resolution": "private static final long serialVersionUID = 7823660685121811606L;",
+    "conflict": "private static final long serialVersionUID = -8961300556253836623L;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55822,
+    "v2": "",
+    "resolution": "",
+    "conflict": "import static org.jboss.seam.ScopeType.SESSION;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55825,
+    "v2": "import java.util.Map; import java.util.Set;",
+    "resolution": "import java.util.Map; import java.util.Set;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55827,
+    "v2": "private static final long serialVersionUID = 7823660685121811606L;",
+    "resolution": "private static final long serialVersionUID = 7823660685121811606L;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 55829,
+    "v2": "import org.nuxeo.ecm.platform.ec.notification.NotificationConstants; import org.nuxeo.ecm.platform.ec.notification.email.templates.NuxeoTemplatesLoader;",
+    "resolution": "import org.nuxeo.ecm.platform.ec.notification.NotificationConstants;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 55997,
+    "v2": "protected transient PrincipalListManager principalListManager;",
+    "resolution": "protected transient PrincipalListManager principalListManager;",
+    "conflict": "protected transient DeleteActions deleteActions;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56001,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private static final long serialVersionUID = 5403775170948512675L;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56002,
+    "v2": "",
+    "resolution": "",
+    "conflict": "protected ProgressMonitor monitor = DefaultProgressMonitor.INSTANCE;"
+  },
+  {
+    "devdecision": "None",
+    "id": 56025,
+    "v2": "private String defaultGroup;",
+    "resolution": "private transient UserManager userManager;",
+    "conflict": "private static final EJBExceptionHandler exceptionHandler = new EJBExceptionHandler();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 56027,
+    "v2": "log.debug(\"SAVIN' WF ACP................................\");             log.debug(\"Granting : \" + principalName);",
+    "resolution": "log.debug(\"Modify acp, granting : \" + principalName);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56028,
+    "v2": "log.debug(\"ACE removal.......\");",
+    "resolution": "log.debug(\"ACE removal.......\");",
+    "conflict": "log.debug(\"ACE removal.\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56029,
+    "v2": "log.debug(\"REMOVIN' WF ACP..............................\");",
+    "resolution": "log.debug(\"Removing wf acp.\");",
+    "conflict": "log.debug(\"Removing wf acp.\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 56030,
+    "v2": "log.debug(\"SAVIN' WF ACP................................\");",
+    "resolution": "log.debug(\"Saving wf acp.\");",
+    "conflict": "log.debug(\"Savign wf acp.\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56039,
+    "v2": "* (C) Copyright 2006-2007 Nuxeo SAS (http://nuxeo.com/) and contributors.",
+    "resolution": "* (C) Copyright 2008 Nuxeo SAS (http://nuxeo.com/) and contributors.",
+    "conflict": "* (C) Copyright 2008 Nuxeo SAS (http://nuxeo.com/) and contributors."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56049,
+    "v2": "public static FeedItem toFeedItem(DocumentModel doc) throws ClientException {",
+    "resolution": "public static FeedItem toFeedItem(DocumentModel doc) throws ClientException {",
+    "conflict": "public FeedItem toFeedItem(DocumentModel doc) throws ParseException {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56063,
+    "v2": "import org.nuxeo.ecm.webapp.security.UserSession; import org.nuxeo.ecm.webapp.versioning.DocumentVersioning;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56064,
+    "v2": "protected transient DocumentVersioning documentVersioning;",
+    "resolution": "protected transient VersioningManager versioningManager;",
+    "conflict": "protected transient VersioningManager versioningManager;"
+  }
+]
+}

@@ -1,0 +1,185 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 74055,
+    "v2": "return false; //#else //  database = FirefoxCom.requestSync('getDatabase', null) || '{}'; //#endif",
+    "resolution": "return; //#else //  database = FirefoxCom.requestSync('getDatabase', null) || '{}'; //#endif",
+    "conflict": "return;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74068,
+    "v2": "return getBoolPref(PREF_PREFIX + '.pdfBugEnabled', false);",
+    "resolution": "return getBoolPref(PREF_PREFIX + '.pdfBugEnabled', false); }, searchEnabled: function() {",
+    "conflict": "return getBoolPref(EXT_PREFIX + '.pdfBugEnabled', false); }, searchEnabled: function() { return getBoolPref(EXT_PREFIX + '.searchEnabled', false);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74117,
+    "v2": "fontCharCode = glyphName in this.glyphNameMap ? this.glyphNameMap[glyphName] : GlyphsUnicode[glyphName];",
+    "resolution": "fontCharCode = glyphName in this.glyphNameMap ? this.glyphNameMap[glyphName] : GlyphsUnicode[glyphName];",
+    "conflict": "fontChar = glyphName in GlyphsUnicode ? GlyphsUnicode[glyphName] : this.glyphNameMap[glyphName];"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74118,
+    "v2": "fontChar: String.fromCharCode(fontCharCode), unicode: unicodeChars,",
+    "resolution": "fontChar: String.fromCharCode(fontCharCode), unicode: unicodeChars,",
+    "conflict": "fontChar: String.fromCharCode(fontChar), unicode: (unicodeChars in NormalizedUnicodes) ? NormalizedUnicodes[unicodeChars] : unicodeChars,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74125,
+    "v2": "readToUnicode: function PartialEvaluator_readToUnicode(toUnicode, xref) { var cmapObj = xref.fetchIfRef(toUnicode);",
+    "resolution": "readToUnicode: function PartialEvaluator_readToUnicode(toUnicode, xref) { var cmapObj = toUnicode;",
+    "conflict": "readToUnicode: function partialEvaluatorReadToUnicode(toUnicode, xref) { var cmapObj = toUnicode;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74152,
+    "v2": "cache.push(this); callback(); }).bind(this), textLayer",
+    "resolution": "cache.push(this); callback(); }).bind(this), new TextLayerBuilder(textLayer)",
+    "conflict": "}).bind(this), new TextLayerBuilder(textLayer)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74176,
+    "v2": "function constructor(canvasCtx, objs) {",
+    "resolution": "function constructor(canvasCtx, objs, textLayer) {",
+    "conflict": "// Number of IR commands to execute before checking // if we execute longer then `kExecutionTime`. var kExecutionTimeCheck = 500;  function constructor(canvasCtx, objs, textLayer) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 74177,
+    "v2": "if (canvasCtx) { addContextCurrentTransform(canvasCtx); }",
+    "resolution": "if (canvasCtx) { addContextCurrentTransform(canvasCtx); }this.textLayer = textLayer;",
+    "conflict": "this.textLayer = textLayer;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74178,
+    "v2": "this.content.startRendering(ctx, (function pageViewDrawCallback() { this.updateStats(); if (this.onAfterDraw) this.onAfterDraw(); }).bind(this));",
+    "resolution": "this.content.startRendering(ctx, (function pageViewDrawCallback() { this.updateStats(); if (this.onAfterDraw) this.onAfterDraw(); }).bind(this), textLayer);",
+    "conflict": "this.content.startRendering(ctx, this.updateStats, textLayer);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74192,
+    "v2": "var firstChar = properties.firstChar; var glyphMap = {}; for (var i = 0, ii = charsets.length; i < ii; i++) {",
+    "resolution": "var unicodeUsed = []; var unassignedUnicodeItems = []; for (var i = 0, ii = charsets.length; i < ii; i++) {",
+    "conflict": "var unicodeUsed = []; var unassignedUnicodeItems = []; for (var i = 0; i < charsets.length; i++) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74195,
+    "v2": "var baseEncoding = pos ? Encodings.ExpertEncoding.slice() : Encodings.StandardEncoding.slice(); for (var i = 0, ii = charset.length; i < ii; i++) {",
+    "resolution": "var baseEncoding = pos ? Encodings.ExpertEncoding : Encodings.StandardEncoding; for (var i = 0, ii = charset.length; i < ii; i++) {",
+    "conflict": "var baseEncoding = pos ? Encodings.ExpertEncoding : Encodings.StandardEncoding; for (var i = 0; i < charset.length; i++) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74219,
+    "v2": "this.type = type; this.fontMatrix = properties.fontMatrix; this.defaultWidth = properties.defaultWidth; this.loadedName = getUniqueName();",
+    "resolution": "// MERGE //this.textMatrix = properties.textMatrix; this.type = type; this.fontMatrix = properties.fontMatrix; this.defaultWidth = properties.defaultWidth; this.loadedName = properties.loadedName;",
+    "conflict": "this.type = properties.type; this.textMatrix = properties.textMatrix;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74231,
+    "v2": "return function partialEvaluatorReturn(gfx) { for (var i = 0, length = argsArray.length; i < length; i++) gfx[fnArray[i]].apply(gfx, argsArray[i]);",
+    "resolution": "return { fnArray: fnArray, argsArray: argsArray",
+    "conflict": "return { fnArray: fnArray, argsArray: argsArray"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74241,
+    "v2": "// Shading shadingFill: function canvasGraphicsShadingFill(shadingName) { var xref = this.xref; var res = this.res;",
+    "resolution": "shadingFill: function canvasGraphicsShadingFill(patternIR) { var ctx = this.ctx;",
+    "conflict": "shadingFill: function(patternIR) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74288,
+    "v2": "// name ArialNarrow for example will be replaced by Helvetica. this.narrow = (name.indexOf('Narrow') != -1); this.black = (name.indexOf('Black') != -1);",
+    "resolution": "// name ArialBlack for example will be replaced by Helvetica. this.black = (name.search(/Black/g) != -1)",
+    "conflict": "// name ArialBlack for example will be replaced by Helvetica. this.black = (name.search(/Black/g) != -1)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74289,
+    "v2": "var code = encoding[index]; for (var glyph in properties.glyphs) { if (properties.glyphs[glyph] == code) break; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74290,
+    "v2": "parseScale: function(value) { if ('custom' == value) return;",
+    "resolution": "parseScale: function(value, resetAutoSettings) { if ('custom' == value) return;",
+    "conflict": "parseScale: function(value, resetAutoSettings) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74294,
+    "v2": "var FontMeasure = (function FontMeasure() { var kScalePrecision = 40;",
+    "resolution": "var FontMeasure = (function FontMeasure() { var kScalePrecision = 50;",
+    "conflict": "var Fonts = (function Fonts() { var kScalePrecision = 50; var fonts = [];"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74295,
+    "v2": "this.ctx.font = size + 'px \"' + fontName + '\"'; FontMeasure.setActive(fontObj, size);",
+    "resolution": "FontMeasure.setActive(fontObj, size);  size = (size <= kRasterizerMin) ? size * kScalePrecision : size; this.ctx.font = size + 'px \"' + fontName + '\"';",
+    "conflict": "Fonts.setActive(fontName, fontObj, size);  size = (size <= kRasterizerMin) ? size * kScalePrecision : size; this.ctx.font = size + 'px \"' + fontName + '\"';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74303,
+    "v2": "var start = range[0]; var end = range[1]; var delta = (bias - start) & 0xffff;",
+    "resolution": "var start = range[0]; var end = range[1]; var delta = (bias - start) & 0xffff;",
+    "conflict": "var start = range.start; var end = range.end; var delta = (bias - start) % 0xffff;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74315,
+    "v2": "error('Support for Type1 command ' + value + ' (' + escape + ') is not implemented in charstring: ' + charString);",
+    "resolution": "error('Support for Type1 command ' + value + ' (' + escape + ') is not implemented in charstring: ' + charString);",
+    "conflict": "error(\"Support for Type1 command \" + value + \" (\" + escape + \")\" + \" is not implemented in charstring: \" + charString);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 74320,
+    "v2": "if (glyph.glyph != '.notdef') { warn(glyph.glyph + ' does not have an entry in the glyphs unicode dictionary'); }",
+    "resolution": "if (glyph.glyph != '.notdef') { warn(glyph.glyph + ' does not have an entry in the glyphs unicode dictionary'); }",
+    "conflict": "if (glyph.glyph != \".notdef\") warn(glyph + \" has no entry in the glyphs unicode dictionary\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 74331,
+    "v2": "var checksum = 0; for (var i = 0; i < length; i += 4) checksum += int16([data[i], data[i + 1], data[i + 2], data[i + 3]]);",
+    "resolution": "var checksum = 0, n = data.length; for (var i = 0; i < n; i+=4) checksum = (checksum + int32([data[i], data[i+1], data[i+2], data[i+3]])) | 0;",
+    "conflict": "var checksum = 0, n = data.length; for (var i = 0; i < n; i+=4) checksum = (checksum + int32([data[i], data[i+1], data[i+2], data[i+3]])) | 0;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 74345,
+    "v2": "this.ctx.font = this.current.fontSize +'px \"' + fontName + '\", Symbol'; if (this.ctx.$setFont) { this.ctx.$setFont(fontName); }",
+    "resolution": "this.ctx.font = this.current.fontSize + 'px \"' + fontName + '\"'; if (this.ctx.$setFont) { this.ctx.$setFont(fontName); }",
+    "conflict": "this.ctx.font = this.current.fontSize + 'px \"' + this.current.fontName + '\"';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74371,
+    "v2": "} else if (requiredTables.lenght) { error(\"Table \" + requiredTables[0] + \" is missing from the TruType font\"); } else { this.data = aFile.getBytes();",
+    "resolution": "} else if (requiredTables.length) { error(\"Table \" + requiredTables[0] + \" is missing from the TruType font\"); } else { this.data = aFile.getBytes();",
+    "conflict": "} else if (requiredTables.length) { warn(\"Missing \" + requiredTables + \" in the TrueType font\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 74383,
+    "v2": "} else if (requiredTables.lenght) { error(\"Table \" + requiredTables[0] + \" is missing from the TruType font\"); } else { this.data = aFile.getBytes();",
+    "resolution": "} else if (requiredTables.length) { error(\"Table \" + requiredTables[0] + \" is missing from the TruType font\"); } else { this.data = aFile.getBytes();",
+    "conflict": "} else if (requiredTables.length) { warn(\"Missing \" + requiredTables + \" in the TrueType font\");"
+  }
+]
+}

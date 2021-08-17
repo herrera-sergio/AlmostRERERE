@@ -1,0 +1,850 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 2",
+    "id": 77761,
+    "v2": "",
+    "resolution": "",
+    "conflict": "RealmObjectSchema objectSchema = realm.getSchema().get(RealmAnyRealmListWithPK.CLASS_NAME); assertTrue(objectSchema.hasField(RealmAnyRealmListWithPK.FIELD_REALM_ANY)); assertEquals(RealmFieldType.MIXED_LIST, objectSchema.getFieldType(RealmAnyRealmListWithPK.FIELD_REALM_ANY)); assertTrue(objectSchema.hasPrimaryKey()); realm.close();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77768,
+    "v2": "this.query.equalTo(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value)); } else { this.query.equalToInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value));",
+    "resolution": "this.query.equalTo(realm.getSchema().getKeyPathMapping(), fieldName, value); } else { this.query.equalToInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, value);",
+    "conflict": "this.query.equalTo(fieldName, value); } else { this.query.equalToInsensitive(fieldName, value);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77769,
+    "v2": "this.query.notEqualTo(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value)); } else { this.query.notEqualToInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value));",
+    "resolution": "this.query.notEqualTo(realm.getSchema().getKeyPathMapping(), fieldName, value); } else { this.query.notEqualToInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, value);",
+    "conflict": "this.query.notEqualTo(fieldName, value); } else { this.query.notEqualToInsensitive(fieldName, value);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77770,
+    "v2": "this.query.contains(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value)); } else { this.query.containsInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value));",
+    "resolution": "this.query.contains(realm.getSchema().getKeyPathMapping(), fieldName, value); } else { this.query.containsInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, value);",
+    "conflict": "this.query.contains(fieldName, value); } else { this.query.containsInsensitive(fieldName, value);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77771,
+    "v2": "this.query.beginsWith(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value)); } else { this.query.beginsWithInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value));",
+    "resolution": "this.query.beginsWith(realm.getSchema().getKeyPathMapping(), fieldName, value); } else { this.query.beginsWithInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, value);",
+    "conflict": "this.query.beginsWith(fieldName, value); } else { this.query.beginsWithInsensitive(fieldName, value);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77772,
+    "v2": "this.query.endsWith(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value)); } else { this.query.endsWithInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value));",
+    "resolution": "this.query.endsWith(realm.getSchema().getKeyPathMapping(), fieldName, value); } else { this.query.endsWithInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, value);",
+    "conflict": "this.query.endsWith(fieldName, value); } else { this.query.endsWithInsensitive(fieldName, value);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 77773,
+    "v2": "this.query.like(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value)); } else { this.query.likeInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, Mixed.valueOf(value));",
+    "resolution": "this.query.like(realm.getSchema().getKeyPathMapping(), fieldName, value); } else { this.query.likeInsensitive(realm.getSchema().getKeyPathMapping(), fieldName, value);",
+    "conflict": "this.query.like(fieldName, value); } else { this.query.likeInsensitive(fieldName, value);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 77798,
+    "v2": "testPrimitiveListWithValues(PrimitiveListTypes.FIELD_OBJECT_ID_LIST, null, new ObjectId[0]); testPrimitiveListWithValues(PrimitiveListTypes.FIELD_DECIMAL128_LIST, null, new Decimal128[0]);",
+    "resolution": "testPrimitiveListWithValues(PrimitiveListTypes.FIELD_OBJECT_ID_LIST, null, new ObjectId[0]); testPrimitiveListWithValues(PrimitiveListTypes.FIELD_DECIMAL128_LIST, null, new Decimal128[0]);testPrimitiveListWithValues(PrimitiveListTypes.FIELD_OBJECT_ID_LIST, null, new Date[0]); testPrimitiveListWithValues(PrimitiveListTypes.FIELD_DECIMAL128_LIST, null, new Date[0]); testPrimitiveListWithValues(PrimitiveListTypes.FIELD_UUID_LIST, null, new Date[0]); testPrimitiveListWithValues(PrimitiveListTypes.FIELD_MIXED_LIST, null, new Date[0]);",
+    "conflict": "testPrimitiveListWithValues(PrimitiveListTypes.FIELD_OBJECT_ID_LIST, null, new Date[0]); testPrimitiveListWithValues(PrimitiveListTypes.FIELD_DECIMAL128_LIST, null, new Date[0]); testPrimitiveListWithValues(PrimitiveListTypes.FIELD_UUID_LIST, null, new Date[0]); testPrimitiveListWithValues(PrimitiveListTypes.FIELD_MIXED_LIST, null, new Date[0]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77871,
+    "v2": "private static native boolean nativeIsSubSetOf(long nativePtr, long otherSetNativePtr);  private static native boolean nativeContainsAllString(long nativePtr, String[] otherSet);",
+    "resolution": "private static native boolean nativeContainsAllString(long nativePtr, String[] otherSet);  private static native boolean nativeContainsAll(long nativePtr, long otherRealmSetNativePtr);",
+    "conflict": "private static native boolean nativeContainsAllString(long nativePtr, String[] otherSet);  private static native boolean nativeContainsAll(long nativePtr, long otherRealmSetNativePtr);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77885,
+    "v2": "",
+    "resolution": "public enum ExternalCollectionOperation { ADD_ALL, REMOVE_ALL, RETAIN_ALL }",
+    "conflict": "public enum ExternalCollectionOperation { ADD_ALL, REMOVE_ALL, RETAIN_ALL }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 77970,
+    "v2": "FIELD_DECIMAL128_DICTIONARY, FIELD_MIXED_DICTIONARY};",
+    "resolution": "FIELD_DECIMAL128_DICTIONARY, FIELD_MIXED_DICTIONARY, FIELD_REQUIRED_BOOLEAN_DICTIONARY, FIELD_REQUIRED_STRING_DICTIONARY, FIELD_REQUIRED_INTEGER_DICTIONARY, FIELD_REQUIRED_FLOAT_DICTIONARY, FIELD_REQUIRED_LONG_DICTIONARY, FIELD_REQUIRED_SHORT_DICTIONARY, FIELD_REQUIRED_DOUBLE_DICTIONARY, FIELD_REQUIRED_BYTE_DICTIONARY, FIELD_REQUIRED_BINARY_DICTIONARY, FIELD_REQUIRED_BOXED_BINARY_DICTIONARY, FIELD_REQUIRED_DATE_DICTIONARY, FIELD_REQUIRED_OBJECT_ID_DICTIONARY, FIELD_REQUIRED_UUID_DICTIONARY};",
+    "conflict": "FIELD_DECIMAL128_DICTIONARY, FIELD_MIXED_DICTIONARY, FIELD_REQUIRED_BOOLEAN_DICTIONARY, FIELD_REQUIRED_STRING_DICTIONARY, FIELD_REQUIRED_INTEGER_DICTIONARY, FIELD_REQUIRED_FLOAT_DICTIONARY, FIELD_REQUIRED_LONG_DICTIONARY, FIELD_REQUIRED_SHORT_DICTIONARY, FIELD_REQUIRED_DOUBLE_DICTIONARY, FIELD_REQUIRED_BYTE_DICTIONARY, FIELD_REQUIRED_BINARY_DICTIONARY, FIELD_REQUIRED_BOXED_BINARY_DICTIONARY, FIELD_REQUIRED_DATE_DICTIONARY, FIELD_REQUIRED_OBJECT_ID_DICTIONARY, FIELD_REQUIRED_UUID_DICTIONARY};"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 77989,
+    "v2": "* @param publicName the name of the property as defined in the Java/Kotlin model class. * @param internalName the internal name of the property if different from the public name, otherwise \"\". * @param type the type of the property.",
+    "resolution": "* @param publicName the name of the property as defined in the Java/Kotlin model class. * @param internalName the internal name of the property if different from the public name, otherwise \"\". * @param type the type of the property.",
+    "conflict": "* @param name         the name of the property. * @param type         the type of the property."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78023,
+    "v2": "public T put(Object key, @Nullable T value) { T original = get(key);",
+    "resolution": "public V put(Object key, @Nullable V value) { V original = get(key);",
+    "conflict": "public V put(Object key, @Nullable V value) { V original = get(key);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78025,
+    "v2": "protected T processValue(Object value) { //noinspection unchecked return (T) value;",
+    "resolution": "protected V processValue(Object value) { //noinspection unchecked return (V) value;",
+    "conflict": "protected V processValue(Object value) { //noinspection unchecked return (V) value;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78096,
+    "v2": "case CORE_TYPE_VALUE_BOOLEAN + DICTIONARY_OFFSET: case CORE_TYPE_VALUE_UUID + DICTIONARY_OFFSET:",
+    "resolution": "case CORE_TYPE_VALUE_OBJECTID + DICTIONARY_OFFSET: case CORE_TYPE_VALUE_UUID + DICTIONARY_OFFSET: case CORE_TYPE_VALUE_DECIMAL128 + DICTIONARY_OFFSET: case CORE_TYPE_VALUE_OBJECT + DICTIONARY_OFFSET:",
+    "conflict": "case CORE_TYPE_VALUE_OBJECTID + DICTIONARY_OFFSET: case CORE_TYPE_VALUE_UUID + DICTIONARY_OFFSET: case CORE_TYPE_VALUE_DECIMAL128 + DICTIONARY_OFFSET: case CORE_TYPE_VALUE_OBJECT + DICTIONARY_OFFSET:"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78136,
+    "v2": "Class<? extends RealmModel> clazz = (Class<? extends RealmModel>) classContainer.getClazz(); String className = classContainer.getClassName();  //noinspection unchecked return (T) baseRealm.get(clazz, className, realmModelKey);",
+    "resolution": "Class<? extends RealmModel> clazz = (Class<? extends RealmModel>) classContainer.getClazz(); String className = classContainer.getClassName();  //noinspection unchecked return (V) baseRealm.get(clazz, className, realmModelKey);",
+    "conflict": "return (V) baseRealm.get((Class<? extends RealmModel>) classContainer.getClazz(), classContainer.getClassName(), realmModelKey);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78139,
+    "v2": "private static native long nativeCreateAndPutEmbeddedObject(long sharedRealmPtr, long nativePtr, String key);",
+    "resolution": "private static native long nativeCreateAndPutEmbeddedObject(long sharedRealmPtr, long nativePtr, String key);private static native long nativeKeys(long nativePtr);  private static native long nativeValues(long nativePtr);  private static native long nativeFreeze(long nativePtr, long realmPtr);",
+    "conflict": "private static native long nativeKeys(long nativePtr);  private static native long nativeValues(long nativePtr);  private static native long nativeFreeze(long nativePtr, long realmPtr);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78169,
+    "v2": "case MIXED_LIST: realm.where(AllJavaTypes.class).isEmpty(AllJavaTypes.FIELD_MIXED_LIST).findAll();",
+    "resolution": "case STRING_TO_MIXED_MAP: case STRING_TO_BOOLEAN_MAP: // TODO: fix this when adding maps to AllJavaTypes realm.where(AllJavaTypes.class).isEmpty(AllJavaTypes.FIELD_UUID_LIST).findAll();case MIXED_LIST: realm.where(AllJavaTypes.class).isEmpty(AllJavaTypes.FIELD_MIXED_LIST).findAll();",
+    "conflict": "case STRING_TO_MIXED_MAP: case STRING_TO_BOOLEAN_MAP: // TODO: fix this when adding maps to AllJavaTypes realm.where(AllJavaTypes.class).isEmpty(AllJavaTypes.FIELD_UUID_LIST).findAll();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78174,
+    "v2": "MIXED_LIST(CORE_TYPE_VALUE_MIXED + LIST_OFFSET);",
+    "resolution": "MIXED_LIST(CORE_TYPE_VALUE_MIXED + LIST_OFFSET),  // TODO: add more map times ad-hoc STRING_TO_MIXED_MAP(CORE_TYPE_VALUE_MIXED + DICTIONARY_OFFSET), STRING_TO_BOOLEAN_MAP(CORE_TYPE_VALUE_BOOLEAN + DICTIONARY_OFFSET);",
+    "conflict": "// TODO: add more map times ad-hoc STRING_TO_MIXED_MAP(CORE_TYPE_VALUE_MIXED + DICTIONARY_OFFSET), STRING_TO_BOOLEAN_MAP(CORE_TYPE_VALUE_BOOLEAN + DICTIONARY_OFFSET);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 78176,
+    "v2": "case TYPE_MIXED | TYPE_ARRAY: return MIXED_LIST;",
+    "resolution": "case TYPE_MIXED | TYPE_DICTIONARY: return STRING_TO_MIXED_MAP; case TYPE_BOOL | TYPE_DICTIONARY: return STRING_TO_BOOLEAN_MAP;case TYPE_MIXED | TYPE_ARRAY: return MIXED_LIST;",
+    "conflict": "case TYPE_MIXED | TYPE_DICTIONARY: return STRING_TO_MIXED_MAP; case TYPE_BOOL | TYPE_DICTIONARY: return STRING_TO_BOOLEAN_MAP;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78254,
+    "v2": "if (proxyState.getExcludeFields$realm().contains(\"columnMixed\")) { return; }  value = ProxyUtils.copyToRealmIfNeeded(proxyState, value);",
+    "resolution": "if (proxyState.getExcludeFields$realm().contains(\"columnMixed\")) { return; }  value = ProxyUtils.copyToRealmIfNeeded(proxyState, value);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78255,
+    "v2": "proxyState.getRealm$realm().checkIfValid();  value = ProxyUtils.copyToRealmIfNeeded(proxyState, value);",
+    "resolution": "proxyState.getRealm$realm().checkIfValid();  value = ProxyUtils.copyToRealmIfNeeded(proxyState, value);",
+    "conflict": "proxyState.getRealm$realm().checkIfValid();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78271,
+    "v2": "public static native void nativeMixedSetLink(long nativeTableRefPtr, long columnKey, long rowKey, long tableKey, long targetRowKey, boolean isDefault);  public static native void nativeMixedSetUUID(long nativeTableRefPtr, long columnKey, long rowKey, String data, boolean isDefault);",
+    "resolution": "public static native void nativeMixedSetLink(long nativeTableRefPtr, long columnKey, long rowKey, long tableKey, long targetRowKey, boolean isDefault);  public static native void nativeMixedSetUUID(long nativeTableRefPtr, long columnKey, long rowKey, String data, boolean isDefault);",
+    "conflict": "public static native void nativeMixedSetUUID(long nativeTableRefPtr, long columnKey, long rowKey, String data, boolean isDefault);  public static native void nativeMixedSetLink(long nativeTableRefPtr, long columnKey, long rowKey, long value, boolean isDefault);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78285,
+    "v2": "case UUID: sb.append(proxyState.getRow$realm().isNull(columnKey) ? \"null\" : proxyState.getRow$realm().getUUID(columnKey));",
+    "resolution": "case UUID: sb.append(proxyState.getRow$realm().isNull(columnKey) ? \"null\" : proxyState.getRow$realm().getUUID(columnKey)); break;",
+    "conflict": "case MIXED: //TODO: FIX sb.append(proxyState.getRow$realm().isNull(columnKey) ? \"null\" : getMixed(columnKey));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78317,
+    "v2": "UUID_LIST(CORE_TYPE_VALUE_UUID + LIST_OFFSET);",
+    "resolution": "MIXED_LIST(CORE_TYPE_VALUE_MIXED + LIST_OFFSET), UUID_LIST(CORE_TYPE_VALUE_UUID + LIST_OFFSET),  // TODO: add more map times ad-hoc STRING_TO_MIXED_MAP(CORE_TYPE_VALUE_MIXED + DICTIONARY_OFFSET);",
+    "conflict": "MIXED_LIST(CORE_TYPE_VALUE_MIXED + LIST_OFFSET),  // TODO: add more map times ad-hoc STRING_TO_MIXED_MAP(CORE_TYPE_VALUE_MIXED + DICTIONARY_OFFSET);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78515,
+    "v2": "} else { if (!realmFileIsBeingCreated) { // Primary key problem only exists before we release sync. sharedRealm = OsSharedRealm.getInstance(configuration); Table.migratePrimaryKeyTableIfNeeded(sharedRealm); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78516,
+    "v2": "private final Map<String, ColumnDetails> indicesFromJavaFieldNames; private final Map<String, ColumnDetails> indicesFromColumnNames; private final Map<String, String> javaFieldNameToInternalNames;",
+    "resolution": "private final Map<String, ColumnDetails> columnkeysFromJavaFieldNames; private final Map<String, ColumnDetails> columnKeysFromColumnNames; private final Map<String, String> javaFieldNameToInternalNames;",
+    "conflict": "private final Map<String, ColumnDetails> columnkeysFromJavaFieldNames; private final Map<String, ColumnDetails> columnKeysFromColumnNames;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78517,
+    "v2": "this.indicesFromJavaFieldNames = new HashMap<>(mapSize); this.indicesFromColumnNames = new HashMap<>(mapSize); this.javaFieldNameToInternalNames = new HashMap<>(mapSize);",
+    "resolution": "this.columnkeysFromJavaFieldNames = new HashMap<>(mapSize); this.columnKeysFromColumnNames = new HashMap<>(mapSize); this.javaFieldNameToInternalNames = new HashMap<>(mapSize);",
+    "conflict": "this.columnkeysFromJavaFieldNames = new HashMap<>(mapSize); this.columnKeysFromColumnNames = new HashMap<>(mapSize);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78525,
+    "v2": "@SuppressFBWarnings(\"EI_EXPOSE_REP\") public long[][] getColumnIndices() { return columnIndices;",
+    "resolution": "@SuppressFBWarnings(\"EI_EXPOSE_REP\") public long[][] getColumnIndices() { return columnKeys;",
+    "conflict": "long[][] getColumnKeys() { return columnKeys;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78548,
+    "v2": "private final Set<RealmFieldElement> nullableFields = new HashSet<RealmFieldElement>(); // Set of fields which can be nullable private final Set<RealmFieldElement> nullableValueListFields = new HashSet<RealmFieldElement>(); // Set of fields whose elements can be nullable",
+    "resolution": "private final Set<RealmFieldElement> nullableFields = new HashSet<RealmFieldElement>(); // Set of fields which can be nullable private final Set<RealmFieldElement> nullableValueListFields = new HashSet<RealmFieldElement>(); // Set of fields whose elements can be nullable private final Set<VariableElement> strongReferences = new HashSet<>(); // Set of fields whose elements have strong references private String packageName; // package name for model class.",
+    "conflict": "private final Set<VariableElement> nullableFields = new HashSet<VariableElement>(); // Set of fields which can be nullable private final Set<VariableElement> nullableValueListFields = new HashSet<VariableElement>(); // Set of fields whose elements can be nullable private final Set<VariableElement> strongReferences = new HashSet<>(); // Set of fields whose elements have strong references"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78599,
+    "v2": "realm.checkIfValid();  return this;",
+    "resolution": "realm.checkIfValid();  return this;",
+    "conflict": "realm.checkIfValid();  return this;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78609,
+    "v2": "@Retention(RetentionPolicy.RUNTIME)",
+    "resolution": "/** * Interface used to mark a class that can be persisted by Realm. */ @Retention(RetentionPolicy.RUNTIME)",
+    "conflict": "/** * Interface used to mark a class that can be persisted by Realm. */ @Retention(RetentionPolicy.CLASS)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78610,
+    "v2": ".emitStatement(\"List<String> fieldNames = new ArrayList<String>(%s)\", metadata.getFields().size()); for (VariableElement field : metadata.getFields()) { writer.emitStatement(\"fieldNames.add(\\\"%s\\\")\", field.getSimpleName().toString());",
+    "resolution": ".emitStatement(\"List<String> fieldNames = new ArrayList<String>(%s)\", metadata.getFields().size()); for (RealmFieldElement field : metadata.getFields()) { writer.emitStatement(\"fieldNames.add(\\\"%s\\\")\", field.getInternalFieldName());",
+    "conflict": ".emitStatement(\"List<String> fieldNames = new ArrayList<String>()\"); for (RealmFieldElement field : metadata.getFields()) { writer.emitStatement(\"fieldNames.add(\\\"%s\\\")\", field.getInternalFieldName());"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78612,
+    "v2": "private void emitGetSimpleClassNameMethod(JavaWriter writer) throws IOException { writer.beginMethod(\"String\", \"getSimpleClassName\", EnumSet.of(Modifier.PUBLIC, Modifier.STATIC)) .emitStatement(\"return \\\"%s\\\"\", simpleClassName)",
+    "resolution": "private void emitGetSimpleClassNameMethod(JavaWriter writer) throws IOException { writer.beginMethod(\"String\", \"getSimpleClassName\", EnumSet.of(Modifier.PUBLIC, Modifier.STATIC)) .emitStatement(\"return \\\"%s\\\"\", internalClassName)",
+    "conflict": "private void emitGetTableNameMethod(JavaWriter writer) throws IOException { writer.beginMethod(\"String\", \"getTableName\", EnumSet.of(Modifier.PUBLIC, Modifier.STATIC)) .emitStatement(\"return \\\"%s%s\\\"\", Constants.TABLE_PREFIX, internalClassName)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78626,
+    "v2": ".readOnly() .sessionStopPolicy(OsRealmConfig.SyncSessionStopPolicy.IMMEDIATELY)",
+    "resolution": ".readOnly() .sessionStopPolicy(OsRealmConfig.SyncSessionStopPolicy.IMMEDIATELY)",
+    "conflict": "// FIXME: Something is seriously wrong with the Permission Realm. It doesn't seem to // exist on the server. Making it impossible to mark it read only //.readOnly()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78633,
+    "v2": "case LIST: // only for model list.",
+    "resolution": "} case LIST: {",
+    "conflict": "} case LIST: {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78635,
+    "v2": "break;  default: throw new IllegalArgumentException(\"'fieldType' \" + fieldName + \" is not handled\");",
+    "resolution": "break;  default: throw new IllegalArgumentException(\"'fieldType' \" + fieldName + \" is not handled\");",
+    "conflict": "}"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78639,
+    "v2": ".emitStatement(\"Table table = realm.getTable(%s.class)\", qualifiedClassName) .emitStatement(\"%s columnInfo = (%s) realm.getSchema().getColumnInfo(%s.class)\", columnInfoClassName(), columnInfoClassName(), qualifiedClassName) .emitStatement(\"long pkColumnIndex = %s\", fieldIndexVariableReference(metadata.getPrimaryKey()));",
+    "resolution": ".emitStatement(\"Table table = realm.getTable(%s.class)\", qualifiedJavaClassName) .emitStatement(\"%s columnInfo = (%s) realm.getSchema().getColumnInfo(%s.class)\", columnInfoClassName(), columnInfoClassName(), qualifiedClassName)",
+    "conflict": ".emitStatement(\"Table table = realm.getTable(%s.class)\", qualifiedJavaClassName) .emitStatement(\"long pkColumnIndex = table.getPrimaryKey()\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78640,
+    "v2": ".emitStatement(\"Table table = realm.getTable(%s.class)\", qualifiedClassName) .emitStatement(\"%s columnInfo = (%s) realm.getSchema().getColumnInfo(%s.class)\", columnInfoClassName(), columnInfoClassName(), qualifiedClassName) .emitStatement(\"long pkColumnIndex = %s\", fieldIndexVariableReference(metadata.getPrimaryKey()))",
+    "resolution": ".emitStatement(\"Table table = realm.getTable(%s.class)\", qualifiedJavaClassName) .emitStatement(\"%s columnInfo = (%s) realm.getSchema().getColumnInfo(%s.class)\", columnInfoClassName(), columnInfoClassName(), qualifiedClassName)",
+    "conflict": ".emitStatement(\"Table table = realm.getTable(%s.class)\", qualifiedJavaClassName) .emitStatement(\"long pkColumnIndex = table.getPrimaryKey()\")"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 78675,
+    "v2": "private void checkAddPrimaryKeyForSync() { if (realm.configuration.isSyncConfiguration()) { throw new UnsupportedOperationException(\"'addPrimaryKey' is not supported by synced Realms.\"); } }",
+    "resolution": "private void checkAddPrimaryKeyForSync() { if (realm.configuration.isSyncConfiguration()) { throw new UnsupportedOperationException(\"'addPrimaryKey' is not supported by synced Realms.\"); } }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78682,
+    "v2": "private static native long nativeCreateProperty(String name, int type, boolean isPrimary, boolean isIndexed);",
+    "resolution": "private static native long nativeCreatePersistedProperty( String name, int type, boolean isPrimary, boolean isIndexed);  private static native long nativeCreatePersistedLinkProperty(String name, int type, String linkedToName);",
+    "conflict": "private static native long nativeCreatePersistedProperty( String name, int type, boolean isPrimary, boolean isIndexed, boolean isNullable);  private static native long nativeCreatePersistedLinkProperty(String name, int type, String linkedToName);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78684,
+    "v2": "// FIXME: @Ignore(\"Disabled because it does not seem to find the generated interface file\") @Ignore(\"Disabled because it does not seem to find the generated interface file\") @Test public void compileSimpleProxyFile() throws Exception {",
+    "resolution": "@Ignore(\"Disabled because it does not seem to find the generated interface file\") @Test public void compileSimpleProxyFile() {",
+    "conflict": "// Disabled because it does not seem to find the generated interface file @Test public void compileSimpleProxyFile() {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78747,
+    "v2": "Set<RealmObjectSchema> schemas = getAll(); for (RealmObjectSchema schema : schemas) { schema.close();",
+    "resolution": "if (nativePtr != 0L) { nativeClose(nativePtr); nativePtr = 0L;",
+    "conflict": "if (nativePtr != 0L) { nativeClose(nativePtr); nativePtr = 0L;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 78761,
+    "v2": "Class syncFacadeClass = Class.forName(\"io.realm.internal.SyncObjectServerFacade\"); syncFacade = (ObjectServerFacade) syncFacadeClass.newInstance();",
+    "resolution": "Class syncFacadeClass = Class.forName(\"io.realm.internal.SyncObjectServerFacade\"); //noinspection unchecked syncFacade = (ObjectServerFacade) syncFacadeClass.getDeclaredConstructor().newInstance();",
+    "conflict": "Class syncFacadeClass = Class.forName(\"io.realm.internal.objectserver.SyncObjectServerFacade\"); //noinspection unchecked syncFacade = (ObjectServerFacade) syncFacadeClass.getDeclaredConstructor().newInstance();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78807,
+    "v2": "// Step 3: Deletes object which will make the results contain an invalid object at this moment. //         Right Event Queue: |LOCAL_COMMIT   |   Wrong Event Queue: |Posted Runnable           |  <- TOP //                            |Posted Runnable|                      |REALM_CHANGED/LOCAL_COMMIT|",
+    "resolution": "// Step 3: Deletes object which will make the results contain an invalid object at this moment //         Right Event Queue: |Reattach       |   Wrong Event Queue: |Posted Runnable       |  <- TOP //                            |Posted Runnable|                      |REALM_CHANGED/Reattach|",
+    "conflict": "// Step 3: Delete object which will make the results contain an invalid object at this moment //         Right Event Queue: |Reattach       |   Wrong Event Queue: |Posted Runnable       |  <- TOP //                            |Posted Runnable|                      |REALM_CHANGED/Reattach|"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78808,
+    "v2": "// Step 4: Deletes object which will make the results contain a invalid object at this moment. //         Right Event Queue: |LOCAL_COMMIT   |   Wrong Event Queue: |Posted Runnable           |  <- TOP //                            |Posted Runnable|                      |REALM_CHANGED/LOCAL_COMMIT|",
+    "resolution": "// Step 4: Deletes object which will make the results contain a invalid object at this moment //         Right Event Queue: |Reattach       |   Wrong Event Queue: |Posted Runnable       |  <- TOP //                            |Posted Runnable|                      |REALM_CHANGED/Reattach|",
+    "conflict": "// Step 4: Delete object which will make the results contain a invalid object at this moment //         Right Event Queue: |Reattach       |   Wrong Event Queue: |Posted Runnable       |  <- TOP //                            |Posted Runnable|                      |REALM_CHANGED/Reattach|"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78812,
+    "v2": "// Ensures we are giving developers quality messages in the logs. assertEquals(\"Could not cancel transaction, not currently in a transaction.\", testLogger.message);",
+    "resolution": "// Ensure we are giving developers quality messages in the logs. assertTrue(testLogger.message.contains( \"Exception has been thrown: Can't commit a non-existing write transaction\")); assertTrue(error instanceof IllegalStateException);",
+    "conflict": "// Ensure we are giving developers quality messages in the logs. assertTrue(testLogger.message.contains( \"Exception has been thrown: Can't commit a non-existing write transaction\")); assertTrue(error instanceof IllegalStateException);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78823,
+    "v2": "// All three results are the same object assertTrue(allResults == distinctDates); assertTrue(allResults == distinctBooleans);",
+    "resolution": "// distinct results are not the same object assertTrue(allResults != distinctDates); assertTrue(allResults != distinctBooleans);",
+    "conflict": "// distinct results are not the same object assertTrue(allResults != distinctDates); assertTrue(allResults != distinctBooleans);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78838,
+    "v2": "// Returns true if this Realm can receive notifications. boolean hasValidNotifier() { return sharedRealm.realmNotifier != null && sharedRealm.realmNotifier.isValid(); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 78859,
+    "v2": "// Query TableView. public TableQuery tableview(TableView tv) { nativeTableview(nativePtr, tv.nativePtr); return this; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 78905,
+    "v2": "protected long nativePtr; private static final long nativeFinalizerPtr = nativeGetFinalizerPtr(); private final Context context;",
+    "resolution": "private long nativePtr; private static final long nativeFinalizerPtr = nativeGetFinalizerPtr(); final Context context;",
+    "conflict": "long nativePtr; final Context context;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79003,
+    "v2": "RealmConfiguration configuration = new RealmConfiguration.Builder(context).assetFile(context, \"asset_file.realm\") .modules(new AssetFileModule())",
+    "resolution": "RealmConfiguration configuration = new RealmConfiguration .Builder(context) .modules(new AssetFileModule()) .assetFile(context, \"asset_file.realm\")",
+    "conflict": "RealmConfiguration configuration = new RealmConfiguration .Builder(context) .schema(Owner.class, Cat.class) .assetFile(context, \"asset_file.realm\")"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79036,
+    "v2": "public void testQueryingLinkHandover() throws Throwable { final CountDownLatch signalCallbackFinished = new CountDownLatch(1); final CountDownLatch signalClosedRealm = new CountDownLatch(1);",
+    "resolution": "@RunTestInLooperThread public void queryingLinkHandover() throws Throwable {",
+    "conflict": "@RunTestInLooperThread public void queryingLinkHandover() throws Throwable {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79054,
+    "v2": "public static final String FIELD_NAME = \"name\"; public static final String FIELD_AGE = \"age\"; public static final String FIELD_HEIGHT = \"height\"; public static final String FIELD_WEIGHT = \"weight\"; public static final String FIELD_BIRTHDAY = \"birthday\";",
+    "resolution": "public static final String FIELD_NAME = \"name\"; public static final String FIELD_AGE = \"age\"; public static final String FIELD_HEIGHT = \"height\"; public static final String FIELD_WEIGHT = \"weight\"; public static final String FIELD_BIRTHDAY = \"birthday\";",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79058,
+    "v2": "@Override public int hashCode() { return 37; }",
+    "resolution": "@Override public int hashCode() { return 37; }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79142,
+    "v2": "awaitOrFail(bgClosedLatch);",
+    "resolution": "awaitOrFail(bgClosedLatch);",
+    "conflict": "try { closingLatch.await(); } catch (InterruptedException e) { fail(); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79258,
+    "v2": "import java.util.logging.Level;  import io.realm.internal.log.Logger;",
+    "resolution": "import java.util.concurrent.CountDownLatch; import java.util.concurrent.TimeUnit;",
+    "conflict": "import java.util.concurrent.CountDownLatch; import java.util.concurrent.TimeUnit;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79273,
+    "v2": "petTable.setString(nameColumnIndex, rowIndex, \"Jimbo\"); petTable.setString(typeColumnIndex, rowIndex, \"dog\"); personTable.getUncheckedRow(i).getLinkList(petsIndex).add(rowIndex);",
+    "resolution": "petTable.setString(nameColumnIndex, rowIndex, \"Jimbo\"); petTable.setString(typeColumnIndex, rowIndex, \"dog\"); personTable.getUncheckedRowByIndex(i).getLinkList(petsIndex).add(rowIndex);",
+    "conflict": "petTable.setString(nameColumn, rowIndex, \"Jimbo\"); petTable.setString(typeColumn, rowIndex, \"dog\"); personTable.getUncheckedRowByIndex(i).getLinkList(petsIndex).add(rowIndex);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79278,
+    "v2": "",
+    "resolution": "}  void advanceRead(VersionID versionID) { nativeAdvanceReadToVersion(nativePtr, nativeReplicationPtr, versionID.version, versionID.index);",
+    "conflict": "}  void advanceRead(VersionID versionID) { nativeAdvanceReadToVersion(nativePtr, nativeReplicationPtr, versionID.version, versionID.index);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79279,
+    "v2": "private native void nativeAdvanceRead(long nativePtr, long native_replication_ptr); private native void nativePromoteToWrite(long nativePtr, long native_replication_ptr); private native void nativeCommitAndContinueAsRead(long nativePtr); private native void nativeRollbackAndContinueAsRead(long nativePtr, long native_replication_ptr);",
+    "resolution": "private native void nativeCommitAndContinueAsRead(long nativePtr);",
+    "conflict": "private native void nativeCommitAndContinueAsRead(long nativePtr);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79283,
+    "v2": "long rowIndex = petTable.addEmptyRow(); petTable.setString(nameColumn, rowIndex, \"Jimbo\"); petTable.setString(typeColumn, rowIndex, \"dog\"); personTable.getUncheckedRow(i).getLinkList(petsIndex).add(rowIndex);",
+    "resolution": "long rowIndex = petTable.addEmptyRow(); petTable.setString(nameColumn, rowIndex, \"Jimbo\"); petTable.setString(typeColumn, rowIndex, \"dog\"); personTable.getUncheckedRowByIndex(i).getLinkList(petsIndex).add(rowIndex);",
+    "conflict": "personTable.getUncheckedRowByIndex(i).getLinkList(petsIndex).add(petTable.add(\"Jimbo\", \"dog\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79293,
+    "v2": "",
+    "resolution": "}  void advanceRead(VersionID versionID) { nativeAdvanceReadToVersion(nativePtr, nativeReplicationPtr, versionID.version, versionID.index);",
+    "conflict": "}  void advanceRead(VersionID versionID) { nativeAdvanceReadToVersion(nativePtr, nativeReplicationPtr, versionID.version, versionID.index);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79307,
+    "v2": "import javax.annotation.processing.ProcessingEnvironment; import javax.lang.model.element.Modifier; import javax.tools.JavaFileObject;  import io.realm.annotations.RealmModule;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79314,
+    "v2": "import java.io.UnsupportedEncodingException;",
+    "resolution": "import java.io.UnsupportedEncodingException;import java.util.Date;  import io.realm.entities.AllTypes; import io.realm.entities.Dog; import io.realm.entities.NonLatinFieldNames;",
+    "conflict": "import java.util.Date;  import io.realm.entities.AllTypes; import io.realm.entities.Dog; import io.realm.entities.NonLatinFieldNames;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79316,
+    "v2": "final int nThreads = 3; final CountDownLatch latch = new CountDownLatch(nThreads);",
+    "resolution": "final int nThreads = 3; final CountDownLatch latch = new CountDownLatch(nThreads);",
+    "conflict": "final int nThreads = 5;  finished = new AtomicInteger(); finished.set(0);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79319,
+    "v2": "obj = realm.get(classSpec, ((TableView)table).getSourceRowIndex(location)); } else { obj = realm.get(classSpec, location);",
+    "resolution": "obj = realm.getByIndex(classSpec, ((TableView) table).getSourceRowIndex(location)); } else { obj = realm.getByIndex(classSpec, location);",
+    "conflict": "obj = realm.getByIndex(classSpec, ((TableView) table).getSourceRowIndex(rowIndex)); } else { obj = realm.getByIndex(classSpec, rowIndex);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79326,
+    "v2": "private native long createNativeWithImplicitTransactions(long nativeReplicationPtr, int durability, byte[] key);",
+    "resolution": "private native long createNativeWithImplicitTransactions(long nativeReplicationPtr, int durability, byte[] key);",
+    "conflict": "public long getNativePointer () { return nativePtr; }  private native long createNativeWithImplicitTransactions(long nativeReplicationPtr, byte[] key);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79342,
+    "v2": "// Maps ids to a boolean set to true if the Realm is open. This is only needed by deleteRealmFile private static final Map<String, AtomicInteger> openRealms = new ConcurrentHashMap<String, AtomicInteger>(); private static final String INCORRECT_THREAD_MESSAGE = \"Realm access from incorrect thread. Realm objects can only be accessed on the thread they were created.\";",
+    "resolution": "private static RealmConfiguration defaultConfiguration;  private static final String INCORRECT_THREAD_MESSAGE = \"Realm access from incorrect thread. Realm objects can only be accessed on the thread they were created.\";",
+    "conflict": "private static RealmConfiguration defaultConfiguration;  private static final String INCORRECT_THREAD_MESSAGE = \"Realm access from incorrect thread. Realm objects can only be accessed on the thread they where created.\";"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79343,
+    "v2": "private final List<WeakReference<RealmChangeListener>> changeListeners = new CopyOnWriteArrayList<WeakReference<RealmChangeListener>>(); private static RealmProxyMediator proxyMediator = getDefaultMediator();",
+    "resolution": "private final List<WeakReference<RealmChangeListener>> changeListeners = new CopyOnWriteArrayList<WeakReference<RealmChangeListener>>(); protected RealmProxyMediator proxyMediator;",
+    "conflict": "private final List<WeakReference<RealmChangeListener>> changeListeners = new ArrayList<WeakReference<RealmChangeListener>>(); protected RealmProxyMediator proxyMediator;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 79349,
+    "v2": "import java.nio.charset.Charset;",
+    "resolution": "import java.nio.charset.Charset;import java.util.Date;  import io.realm.entities.AllTypes; import io.realm.entities.Dog; import io.realm.entities.NonLatinFieldNames;",
+    "conflict": "import java.util.Date;  import io.realm.entities.AllTypes; import io.realm.entities.Dog; import io.realm.entities.NonLatinFieldNames;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79354,
+    "v2": "",
+    "resolution": "writer.emitStatement(\"Table table_%d = transaction.getTable(\\\"%s%s\\\")\", fieldIndex, Constants.TABLE_PREFIX, genericType); writer.beginControlFlow(\"if (!table.getLinkTarget(%s).equals(table_%d))\", staticFieldIndexVarName(field), fieldIndex); writer.emitStatement(\"throw new RealmMigrationNeededException(transaction.getPath(), \\\"Mismatching link list tables for field '%s'\\\")\", fieldName); writer.endControlFlow();",
+    "conflict": "writer.emitStatement(\"Table table_%d = transaction.getTable(\\\"%s%s\\\")\", fieldIndex, Constants.TABLE_PREFIX, genericType); writer.beginControlFlow(\"if (!table.getLinkTarget(%s).equals(table_%d))\", staticFieldIndexVarName(field), fieldIndex); writer.emitStatement(\"throw new IllegalStateException(\\\"Mismatching link list tables for column '%s'\\\")\", fieldName); writer.endControlFlow();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79355,
+    "v2": "if(table.getColumnCount() != 9) { throw new RealmMigrationNeededException(transaction.getPath(), \"Field count does not match\");",
+    "resolution": "if(table.getColumnCount() != 9) { throw new RealmMigrationNeededException(transaction.getPath(), \"Field count does not match\");",
+    "conflict": "if (table.getColumnCount() != 9) { throw new IllegalStateException(\"Column count does not match\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79357,
+    "v2": "if (table.getColumnCount() != 3) { throw new RealmMigrationNeededException(transaction.getPath(), \"Field count does not match\");",
+    "resolution": "if (table.getColumnCount() != 3) { throw new RealmMigrationNeededException(transaction.getPath(), \"Field count does not match\");",
+    "conflict": "if (table.getColumnCount() != 3) { throw new IllegalStateException(\"Column count does not match\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79358,
+    "v2": "if (table.getColumnCount() != 2) { throw new RealmMigrationNeededException(transaction.getPath(), \"Field count does not match\");",
+    "resolution": "if (table.getColumnCount() != 2) { throw new RealmMigrationNeededException(transaction.getPath(), \"Field count does not match\");",
+    "conflict": "if (table.getColumnCount() != 2) { throw new IllegalStateException(\"Column count does not match\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79360,
+    "v2": "// Maps ids to a boolean set to true if the Realm is open. This is only needed by deleteRealmFile private static final Map<String, AtomicInteger> openRealms = new ConcurrentHashMap<String, AtomicInteger>();",
+    "resolution": "private static RealmConfiguration defaultConfiguration;  private static final String APT_NOT_EXECUTED_MESSAGE = \"Annotation processor may not have been executed.\";",
+    "conflict": "private static RealmConfiguration defaultConfiguration;  private static final String APT_NOT_EXECUTED_MESSAGE = \"Annotation processor may not have been executed.\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79374,
+    "v2": "AtomicInteger counter = openRealms.get(canonicalPath); counter.decrementAndGet();",
+    "resolution": "AtomicInteger counter = openRealms.get(canonicalPath); if (counter.decrementAndGet() == 0) { openRealms.remove(canonicalPath);",
+    "conflict": "AtomicInteger counter = openRealms.get(id); if (counter.decrementAndGet() == 0) { openRealms.remove(id); };"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79377,
+    "v2": "// Create new Realm and cache it. All exception code paths must close the Realm otherwise // we risk serving faulty cache data. realm = new Realm(canonicalPath, key, autoRefresh);",
+    "resolution": "// Create new Realm and cache it. All exception code paths must close the Realm otherwise we risk serving // faulty cache data. realm = new Realm(canonicalPath, key, autoRefresh);",
+    "conflict": "// Create new Realm and cache it. All exception code paths must close the Realm otherwise we risk serving // faulty cache data. realm = new Realm(absolutePath, key, autoRefresh);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79381,
+    "v2": "List<File> filesToDelete = Arrays.asList(realmFile, new File(realmFolder, fileName + \".lock\"), new File(realmFolder, fileName + \".lock_a\"), new File(realmFolder, fileName + \".lock_b\"), new File(realmFolder, fileName + \".log\"));",
+    "resolution": "List<File> filesToDelete = Arrays.asList(new File(configuration.getAbsolutePathToRealm()), new File(configuration.getFileDir(), configuration.getFileName() + \".lock\"), new File(configuration.getFileDir(), configuration.getFileName() + \".lock_a\"), new File(configuration.getFileDir(), configuration.getFileName() + \".lock_b\"), new File(configuration.getFileDir(), configuration.getFileName() + \".log\"));",
+    "conflict": "List<File> filesToDelete = Arrays.asList(realmFile, new File(writableFolder, configuration.getFileName() + \".lock\"));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79411,
+    "v2": "public static AllTypes copyOrUpdate(Realm realm, AllTypes object, boolean update, Map<RealmObject,RealmObject> cache) { if (object.realm != null && object.realm.getId() == realm.getId()) { return object; }",
+    "resolution": "public static AllTypes copyOrUpdate(Realm realm, AllTypes object, boolean update, Map<RealmObject,RealmObjectProxy> cache) { if (object.realm != null && object.realm.getId() == realm.getId()) { return object; }",
+    "conflict": "public static AllTypes copyOrUpdate(Realm realm, AllTypes object, boolean update, Map<RealmObject,RealmObjectProxy> cache) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79412,
+    "v2": "public static Booleans copyOrUpdate(Realm realm, Booleans object, boolean update, Map<RealmObject,RealmObject> cache) { if (object.realm != null && object.realm.getId() == realm.getId()) { return object; }",
+    "resolution": "public static Booleans copyOrUpdate(Realm realm, Booleans object, boolean update, Map<RealmObject,RealmObjectProxy> cache) { if (object.realm != null && object.realm.getId() == realm.getId()) { return object; }",
+    "conflict": "public static Booleans copyOrUpdate(Realm realm, Booleans object, boolean update, Map<RealmObject,RealmObjectProxy> cache) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79413,
+    "v2": "public static Simple copyOrUpdate(Realm realm, Simple object, boolean update, Map<RealmObject,RealmObject> cache) { if (object.realm != null && object.realm.getId() == realm.getId()) { return object; }",
+    "resolution": "public static Simple copyOrUpdate(Realm realm, Simple object, boolean update, Map<RealmObject,RealmObjectProxy> cache) { if (object.realm != null && object.realm.getId() == realm.getId()) { return object; }",
+    "conflict": "public static Simple copyOrUpdate(Realm realm, Simple object, boolean update, Map<RealmObject,RealmObjectProxy> cache) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79414,
+    "v2": "checkHasPrimaryKey(object);",
+    "resolution": "checkHasPrimaryKey(object.getClass()); return copyOrUpdate(object, true); }",
+    "conflict": "checkHasPrimaryKey(object.getClass()); if (isObjectInRealm(object)) { return object; }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79424,
+    "v2": "public static AllTypes copy(Realm realm, AllTypes newObject, boolean update, Map<RealmObject,RealmObject> cache) { AllTypes realmObject = realm.createObject(AllTypes.class, newObject.getColumnString()); cache.put(newObject, realmObject);",
+    "resolution": "public static AllTypes copy(Realm realm, AllTypes newObject, boolean update, Map<RealmObject,RealmObjectProxy> cache) { AllTypes realmObject = realm.createObject(AllTypes.class, newObject.getColumnString()); cache.put(newObject, (RealmObjectProxy) realmObject);",
+    "conflict": "public static AllTypes copy(Realm realm, AllTypes newObject, boolean update, Map<RealmObject,RealmObjectProxy> cache) { AllTypes realmObject = realm.createObject(AllTypes.class); cache.put(newObject, (RealmObjectProxy) realmObject);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79473,
+    "v2": "Utils.error(e.getMessage(), classElement); } catch (UnsupportedOperationException e) { Utils.error(e.getMessage(), classElement);",
+    "resolution": "Utils.error(e.getMessage(), classElement); } catch (UnsupportedOperationException e) { Utils.error(e.getMessage(), classElement);",
+    "conflict": "error(e.getMessage(), classElement); return true;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79568,
+    "v2": "public RealmProxyClassGenerator(ProcessingEnvironment processingEnvironment, String className, String packageName, List<VariableElement> fields, Map<String, String> getters, Map<String, String> setters, List<VariableElement> fieldsToIndex) {",
+    "resolution": "public RealmProxyClassGenerator(ProcessingEnvironment processingEnvironment, String className, String packageName, List<VariableElement> fields, Map<String, String> getters, Map<String, String> setters, List<VariableElement> fieldsToIndex) {",
+    "conflict": "public RealmProxyClassGenerator(ProcessingEnvironment processingEnvironment, String className, String packageName, List<VariableElement> fields, List<VariableElement> fieldsToIndex) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79601,
+    "v2": "stringBuilder.append(\"} \");",
+    "resolution": "stringBuilder.append(\"}\"); stringBuilder.append(\",\"); stringBuilder.append(\"{object_id:\"); stringBuilder.append(getObject_id()); stringBuilder.append(\"}\");",
+    "conflict": "stringBuilder.append(\"}\"); stringBuilder.append(\",\"); stringBuilder.append(\"{object_id:\"); stringBuilder.append(getObject_id()); stringBuilder.append(\"}\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79602,
+    "v2": "String aString_0 = getName(); result = 31 * result + (aString_0 != null ? aString_0.hashCode() : 0); result = 31 * result + getAge();",
+    "resolution": "result = 31 * result + ((realmName != null) ? realmName.hashCode() : 0); result = 31 * result + ((tableName != null) ? tableName.hashCode() : 0); result = 31 * result + (int) (rowIndex ^ (rowIndex >>> 32));",
+    "conflict": "result = 31 * result + ((realmName != null) ? realmName.hashCode() : 0); result = 31 * result + ((tableName != null) ? tableName.hashCode() : 0); result = 31 * result + (int) (rowIndex ^ (rowIndex >>> 32));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79621,
+    "v2": "import java.util.*;",
+    "resolution": "import java.util.ArrayList; import java.util.Arrays; import java.util.HashSet; import java.util.List; import java.util.Set;",
+    "conflict": "import java.util.ArrayList; import java.util.Arrays; import java.util.HashSet; import java.util.List; import java.util.Set;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79646,
+    "v2": "//Alternatively can use transaction tests here... //startTransactionTests();  startSpawnTests();",
+    "resolution": "startTests();",
+    "conflict": "startTests();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79661,
+    "v2": "* Get a sorted (ascending) RealmList from an existing RealmList. * Only fields of type boolean, int, float, double, Date, and String are supported. *",
+    "resolution": "* Get a sorted (ascending) RealmList from an existing RealmList. * Only fields of type boolean, short, int, long, float, double, Date, and String are supported. *",
+    "conflict": "* Get a sorted (ascending) RealmList from an existing RealmList. Boolean, short, int, long, * float, double, Date, and String fields are supported. *"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79666,
+    "v2": "} else { throw new RealmException(\"Nested transactions are not allowed. Use commitTransactoin() after each beginTransaction.\");",
+    "resolution": "} else { throw new RealmException(\"Nested transactions are not allowed. Use commitTransaction() after each beginTransaction().\");",
+    "conflict": "} else { throw new RealmException(\"Trying to begin write transaction within a write transaction\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79668,
+    "v2": "} catch (NumberFormatException ignored) {",
+    "resolution": "} catch (NumberFormatException ignored) { Log.d(TAG, \"Age for a person invalid\"); return;",
+    "conflict": "} catch (NumberFormatException e) { Log.d(TAG, \"Age for a person invalid\"); return;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79670,
+    "v2": "/** * @hide */ Table getTable(Class<?> clazz) {",
+    "resolution": "public Table getTable(Class<?> clazz) {",
+    "conflict": "public Table getTable(Class<?> clazz) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79675,
+    "v2": "protected SoftReference<Realm> initialValue() { Realm realm = new Realm(absolutePath, key); key = null; return new SoftReference<Realm>(realm);",
+    "resolution": "protected SoftReference<Realm> initialValue() { Realm realm = new Realm(absolutePath, key); key = null; return new SoftReference<Realm>(realm);",
+    "conflict": "protected Map<String, Realm> initialValue() { return new HashMap<String, Realm>();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79696,
+    "v2": "writer.emitStatement(\"return transaction.getTable(\\\"\" + tableName + \"\\\")\"); writer.endMethod().emitEmptyLine();",
+    "resolution": "writer.emitStatement(\"return transaction.getTable(\\\"%s\\\")\", this.className); writer.endMethod(); writer.emitEmptyLine();",
+    "conflict": "writer.emitStatement(\"return transaction.getTable(\\\"%s\\\")\", this.className); writer.endMethod(); writer.emitEmptyLine();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79697,
+    "v2": "String getterStmt = \"return \" + returnCast + \"row.get\" + shortType + \"( \" + columnIndex + \" )\";  String setterStmt = \"row.set\" + shortType + \"( \" + columnIndex + \", value )\";",
+    "resolution": "String getterStmt = String.format(\"return %s row.get%s(%s)\", returnCast, shortType, columnIndex); String setterStmt = String.format(\"row.set%s(%s, value)\", shortType, columnIndex);",
+    "conflict": "String getterStmt = String.format(\"return %s row.get%s(%s)\", returnCast, shortType, field.fieldId); String setterStmt = String.format(\"row.set%s(%s, value)\", shortType, field.fieldId);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79726,
+    "v2": "public Table getSubtable(long columnIndex, long rowIndex){ return new Table(this, nativeGetSubtable(nativePtr, columnIndex, rowIndex), immutable);",
+    "resolution": "public Table getSubtable(long columnIndex, long rowIndex) { // Execute the disposal of abandoned tightdb objects each time a new tightdb object is created context.executeDelayedDisposal(); long nativeSubtablePtr = nativeGetSubtable(nativePtr, columnIndex, rowIndex); try { // Copy context reference from parent return new Table(context, this, nativeSubtablePtr, immutable);",
+    "conflict": "public Table getSubTable(long columnIndex, long rowIndex) { this.context.executeDelayedDisposal(); return new Table(this.context, this, nativeGetSubTable(nativePtr, columnIndex, rowIndex), immutable);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79749,
+    "v2": "",
+    "resolution": "",
+    "conflict": "table.add(\"user4\", 770, false); table.add(\"user5\", 564, true); table.add(\"user6\", 875, false); table.add(\"user7\", 420, true); table.add(\"user8\", 770, true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79756,
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79781,
+    "v2": "@Override public long sum(long columnIndex) { return nativeSum(nativePtr, columnIndex);",
+    "resolution": "@Override public long sumInt(long columnIndex) { return nativeSumInt(nativePtr, columnIndex);",
+    "conflict": "public long sumInt(long columnIndex) { return nativeSumInt(nativePtr, columnIndex);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79782,
+    "v2": "@Override public long maximum(long columnIndex) { return nativeMaximum(nativePtr, columnIndex);",
+    "resolution": "@Override public long maximumInt(long columnIndex) { return nativeMaximumInt(nativePtr, columnIndex);",
+    "conflict": "public long maximumInt(long columnIndex) { return nativeMaximumInt(nativePtr, columnIndex);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79783,
+    "v2": "@Override public long minimum(long columnIndex) { return nativeMinimum(nativePtr, columnIndex);",
+    "resolution": "@Override public long minimumInt(long columnIndex) { return nativeMinimumInt(nativePtr, columnIndex);",
+    "conflict": "public long minimumInt(long columnIndex) { return nativeMinimumInt(nativePtr, columnIndex);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79784,
+    "v2": "@Override public double average(long columnIndex) { return nativeAverage(nativePtr, columnIndex);",
+    "resolution": "@Override public double averageInt(long columnIndex) { return nativeAverageInt(nativePtr, columnIndex);",
+    "conflict": "public double averageInt(long columnIndex) { return nativeAverageInt(nativePtr, columnIndex);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79786,
+    "v2": "public TableView distinct(long columnIndex) { return new TableView(nativeDistinct(nativePtr, columnIndex), immutable);",
+    "resolution": "public TableView getDistinctView(long columnIndex) { return new TableView(nativeGetDistinctView(nativePtr, columnIndex), immutable);",
+    "conflict": "public TableView getDistinctView(long columnIndex) { return new TableView(nativeGetDistinctView(nativePtr, columnIndex), immutable);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79792,
+    "v2": "@Override public long sum(long columnIndex){ return nativeSum(nativePtr, columnIndex);",
+    "resolution": "@Override public long sumInt(long columnIndex){ return nativeSumInt(nativePtr, columnIndex);",
+    "conflict": "public long sumInt(long columnIndex){ return nativeSumInt(nativePtr, columnIndex);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79793,
+    "v2": "@Override public long maximum(long columnIndex){ return nativeMaximum(nativePtr, columnIndex);",
+    "resolution": "@Override public long maximumInt(long columnIndex){ return nativeMaximumInt(nativePtr, columnIndex);",
+    "conflict": "public long maximumInt(long columnIndex){ return nativeMaximumInt(nativePtr, columnIndex);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79794,
+    "v2": "@Override public long minimum(long columnIndex){ return nativeMinimum(nativePtr, columnIndex);",
+    "resolution": "@Override public long minimumInt(long columnIndex){ return nativeMinimumInt(nativePtr, columnIndex);",
+    "conflict": "public long minimumInt(long columnIndex){ return nativeMinimumInt(nativePtr, columnIndex);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79795,
+    "v2": "@Override public double average(long columnIndex) { return nativeAverage(nativePtr, columnIndex);",
+    "resolution": "@Override public double averageInt(long columnIndex) { return nativeAverageInt(nativePtr, columnIndex);",
+    "conflict": "public double averageInt(long columnIndex) { return nativeAverageInt(nativePtr, columnIndex);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79811,
+    "v2": "public TableQuery gt(long columnIndex, Date value){ nativeGreaterDateTime(nativePtr, columnIndex, value.getTime()/1000); return this; } protected native void nativeGreaterDateTime(long nativeQueryPtr, long columnIndex, long value);",
+    "resolution": "protected native void nativeGreaterDateTime(long nativeQueryPtr, long columnIndex, long value);   public TableQuery greaterThanOrEqual(long columnIndex, Date value){ nativeGreaterEqualDateTime(nativePtr, columnIndex, value.getTime()/1000);",
+    "conflict": "protected native void nativeGreaterDate(long nativeQueryPtr, long columnIndex, long value);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79812,
+    "v2": "public TableQuery gte(long columnIndex, Date value){ nativeGreaterEqualDateTime(nativePtr, columnIndex, value.getTime()/1000); return this; } protected native void nativeGreaterEqualDateTime(long nativeQueryPtr, long columnIndex, long value);",
+    "resolution": "protected native void nativeGreaterEqualDateTime(long nativeQueryPtr, long columnIndex, long value);  public TableQuery lessThan(long columnIndex, Date value){ nativeLessDateTime(nativePtr, columnIndex, value.getTime()/1000);",
+    "conflict": "protected native void nativeGreaterEqualDate(long nativeQueryPtr, long columnIndex, long value);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79813,
+    "v2": "public TableQuery lt(long columnIndex, Date value){ nativeLessDateTime(nativePtr, columnIndex, value.getTime()/1000); return this; } protected native void nativeLessDateTime(long nativeQueryPtr, long columnIndex, long value);",
+    "resolution": "protected native void nativeLessDateTime(long nativeQueryPtr, long columnIndex, long value);   public TableQuery lessThanOrEqual(long columnIndex, Date value){ nativeLessEqualDateTime(nativePtr, columnIndex, value.getTime()/1000);",
+    "conflict": "protected native void nativeLessDate(long nativeQueryPtr, long columnIndex, long value);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79814,
+    "v2": "public TableQuery lte(long columnIndex, Date value){ nativeLessEqualDateTime(nativePtr, columnIndex, value.getTime()/1000); return this; } protected native void nativeLessEqualDateTime(long nativeQueryPtr, long columnIndex, long value);",
+    "resolution": "protected native void nativeLessEqualDateTime(long nativeQueryPtr, long columnIndex, long value);  public TableQuery between(long columnIndex, Date value1, Date value2){ nativeBetweenDateTime(nativePtr, columnIndex, value1.getTime()/1000, value2.getTime()/1000);",
+    "conflict": "protected native void nativeLessEqualDate(long nativeQueryPtr, long columnIndex, long value);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79855,
+    "v2": "@SuppressWarnings(\"unused\")",
+    "resolution": "@SuppressWarnings(\"unused\")",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79905,
+    "v2": "tbl.addColumn(ColumnType.ColumnTypeString, \"name\"); tbl.addColumn(ColumnType.ColumnTypeInt, \"number\");",
+    "resolution": "TableSpec tableSpec = new TableSpec(); tableSpec.addColumn(ColumnType.STRING, \"name\"); tableSpec.addColumn(ColumnType.LONG, \"number\"); tbl.updateFromSpec(tableSpec);",
+    "conflict": "TableSpec tableSpec = new TableSpec(); tableSpec.addColumn(ColumnType.STRING, \"name\"); tableSpec.addColumn(ColumnType.LONG, \"number\"); tbl.updateFromSpec(tableSpec);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79920,
+    "v2": "for (int n = 0; n < ROUNDS; ++n) { long rowIndex = table.lookup( randomNames[ rand.nextInt(randLength) ] ); tightdbLookups += table.get(rowIndex).getAge();",
+    "resolution": "for (int n = 0; n < ROUNDS; ++n) { long rowIndex = table.lookup( randomNames[ rand.nextInt(randLength) ] ); tightdbLookups += table.get(rowIndex).getAge();",
+    "conflict": "for (int n = 0; n < ROUNDS; ++n) { long rowIndex = table.lookup( randomNames[ rand.nextInt(randLength) ] ); tightdbLookups += table.at(rowIndex).getAge();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79922,
+    "v2": "Employee p1 = employees.get(0).next(); // 2nd row Employee p2 = employees.last().previous(); // 2nd-last row Employee p3 = employees.first().after(2); // 3rd row employees.last().before(2); // 3rd-last row",
+    "resolution": "/****************************** COLUMN RETRIEVAL *****************************/",
+    "conflict": "/****************************** COLUMN RETRIEVAL *****************************/"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 79958,
+    "v2": "if (value != null) { // FIXME: maybe implement this is future? (or replace it with set( Object[][] ) method? throw new UnsupportedOperationException(); }",
+    "resolution": "if (value != null) { // FIXME: maybe implement this is future? (or replace it with set( Object[][] ) method? throw new UnsupportedOperationException(\"Set() for Subtables is not implemented yet\");",
+    "conflict": "throw new UnsupportedOperationException(\"Set() for Subtables is not implemented yet\"); // FIXME: maybe implement this is future?"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 79967,
+    "v2": "private static final String BINARIES_PATH = \"lib\" + PATH_SEP + \"../lib\" + PATH_SEP + \"tightdb-example/lib\";",
+    "resolution": "private static final String BINARIES_PATH = \"lib\" + PATH_SEP + \"../lib\";",
+    "conflict": "private static final String BINARIES_PATH = \"lib\" + PATH_SEP + \"examples/lib\";"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 79980,
+    "v2": "showLongExample();",
+    "resolution": "showLongExample();",
+    "conflict": "//showLongExample();  // Enable below to compare Tightdb performance against a Java ArrayList Performance.TestTightdb(250000); // Performance.TestJavaArray(250000);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79988,
+    "v2": "*/ public void setBinaryByteBuffer(long columnIndex, long rowIndex, ByteBuffer data) { if (data == null)",
+    "resolution": "*/ public void setBinaryByteBuffer(long columnIndex, long rowIndex, ByteBuffer data){ if(data == null)",
+    "conflict": "*/ public void setBinaryByteBuffer(long columnIndex, long rowIndex, ByteBuffer data){ if(data == null)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 79990,
+    "v2": "TightDB.print(\"Query 2a\", employees.firstName.startsWith(\"Nik\"). startGroup().lastName.contains(\"vski\").or().firstName.is(\"John\").endGroup() .findAll());",
+    "resolution": "TightDB.print(\"Query 2a\", employees.firstName.startsWith(\"Nik\").group().lastName.contains(\"vski\").or().firstName.is(\"John\").endGroup() .findAll());",
+    "conflict": "TightDB.print(\"Query 2a\", employees.firstName.startsWith(\"Nik\").group().lastName.contains(\"vski\").or().firstName.is(\"John\").endGroup() .findAll());"
+  }
+]
+}

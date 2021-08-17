@@ -1,0 +1,1116 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 56086,
+    "v2": "protected static final Map<InetAddress, RendererConfiguration> ADDRESS_ASSOCIATION = new HashMap<>();",
+    "resolution": "public static String NOTRANSCODE = \"_NOTRANSCODE_\"; protected static final Map<InetAddress, RendererConfiguration> ADDRESS_ASSOCIATION = new HashMap<>();",
+    "conflict": "protected static DeviceConfiguration streamingConf; public static String NOTRANSCODE = \"_NOTRANSCODE_\"; protected static final Map<InetAddress, RendererConfiguration> addressAssociation = new HashMap<>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56088,
+    "v2": "item.put(\"caption\", captionHTML.toString()); item.put(\"bump\", \"<span class=\\\"floatRight\\\"></span>\");",
+    "resolution": "item.put(\"caption\", captionHTML.toString()); item.put(\"actions\", \"<span class=\\\"floatRight\\\"></span>\");",
+    "conflict": "item.put(\"caption\", sb.toString()); item.put(\"actions\", \"<span class=\\\"floatRight\\\"></span>\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56090,
+    "v2": "import java.nio.charset.StandardCharsets; import java.util.ArrayList;",
+    "resolution": "import java.nio.charset.StandardCharsets; import java.util.ArrayList; import java.util.Arrays;",
+    "conflict": "import java.util.ArrayList; import java.util.Arrays;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 56095,
+    "v2": "} catch (Exception e) { }",
+    "resolution": "} catch (Exception e) { // If this last attempt fails, consume the exception to return the generic icon }",
+    "conflict": "} catch (Exception e) {} //if this last attempt fails than consume the exception //to allow to return the generic icon"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56098,
+    "v2": "InputStream is = getResourceInputStream(thumb); if (is != null) {",
+    "resolution": "InputStream is = getResourceInputStream(thumb); if (is != null) {",
+    "conflict": "if ((is = getResourceInputStream(thumb)) != null) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56099,
+    "v2": "",
+    "resolution": "if (f == null) { return false; }",
+    "conflict": "if (f == null) { return false; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56108,
+    "v2": "HashMap<String, Object> vars = new HashMap<>(); vars.put(\"serverName\", CONFIGURATION.getServerDisplayName());",
+    "resolution": "HashMap<String, Object> mustacheVars = new HashMap<>(); mustacheVars.put(\"serverName\", CONFIGURATION.getServerDisplayName());",
+    "conflict": "HashMap<String, Object> mustacheVars = new HashMap<>(); mustacheVars.put(\"serverName\", CONFIGURATION.getServerDisplayName());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56115,
+    "v2": "// LOGGER.debug(\"opensubs result page \"+page.toString()); return page.toString();",
+    "resolution": "return null;",
+    "conflict": "return null;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56128,
+    "v2": "* @param uri",
+    "resolution": "* @param uri",
+    "conflict": "* @param uri The {@link HttpMethod} containing instructions for PMS. It contains a command, *            a unique resource id and a resource name, all separated by slashes."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56129,
+    "v2": "if (score >= 0.85) { candidates.put(entry, score);",
+    "resolution": "if (score >= 0.85) { candidates.put(entry, score);",
+    "conflict": "if (score >= 0.85) { // threshold to add candidate to map candidates.put(entry, Double.valueOf(score));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56134,
+    "v2": "FileInputStream inputStream = new FileInputStream(playlistfile); return new BufferedReader(new InputStreamReader(new BOMInputStream(inputStream), charset));",
+    "resolution": "FileInputStream inputStream = new FileInputStream(playlistfile); return new BufferedReader(new InputStreamReader(new BOMInputStream(inputStream), charset));",
+    "conflict": "FileInputStream fis = new FileInputStream(playlistfile); return new BufferedReader(new InputStreamReader(new BOMInputStream(fis), charset));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56135,
+    "v2": "DLNAThumbnailInputStream inputStream = super.getThumbnailInputStream(); return inputStream;",
+    "resolution": "DLNAThumbnailInputStream inputStream = super.getThumbnailInputStream(); return inputStream;",
+    "conflict": "DLNAThumbnailInputStream dtis = super.getThumbnailInputStream(); return dtis;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56136,
+    "v2": "public InfoDb infoDb() { return infoDb; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56144,
+    "v2": "import java.nio.charset.StandardCharsets;",
+    "resolution": "import java.net.URLEncoder; import java.nio.charset.StandardCharsets;",
+    "conflict": "import java.net.URLEncoder; import java.nio.charset.Charset;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56148,
+    "v2": "MediaInfoDLL_Internal INSTANCE = Native.load(",
+    "resolution": "MediaInfoDLL_Internal INSTANCE = Native.load(",
+    "conflict": "@SuppressWarnings(\"cast\") MediaInfoDLL_Internal INSTANCE = (MediaInfoDLL_Internal) Native.load("
+  },
+  {
+    "devdecision": "Manual",
+    "id": 56179,
+    "v2": "\"TITLEVIDEOTRACK, VIDEOTRACKCOUNT, IMAGECOUNT, BITDEPTH, PIXELASPECTRATIO, SCANTYPE, SCANORDER, \" + \"IMDBID, YEAR, MOVIEORSHOWNAME, MOVIEORSHOWNAMESIMPLE, TVSEASON, TVEPISODENUMBER, TVEPISODENAME, ISTVEPISODE, EXTRAINFORMATION \" +",
+    "resolution": "\"TITLEVIDEOTRACK, VIDEOTRACKCOUNT, IMAGECOUNT, BITDEPTH, PIXELASPECTRATIO, SCANTYPE, SCANORDER, \" + \"IMDBID, YEAR, MOVIEORSHOWNAME, MOVIEORSHOWNAMESIMPLE, TVSEASON, TVEPISODENUMBER, TVEPISODENAME, ISTVEPISODE, EXTRAINFORMATION, MIMETYPE \" +",
+    "conflict": "\"TITLEVIDEOTRACK, VIDEOTRACKCOUNT, IMAGECOUNT, BITDEPTH, IMDBID, YEAR, MOVIEORSHOWNAME, \" + \"MOVIEORSHOWNAMESIMPLE, TVSEASON, TVEPISODENUMBER, TVEPISODENAME, ISTVEPISODE, EXTRAINFORMATION, MIMETYPE \" +"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56182,
+    "v2": "getMedia().postParse(getType(), input);",
+    "resolution": "getMedia().postParse(getType(), input);",
+    "conflict": "if (medias.size() == 1) { setMedia(medias.get(0));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56216,
+    "v2": "rs.updateString(\"AVCLEVEL\", left(media.getAvcLevel(), SIZE_AVC_LEVEL)); updateSerialized(rs, media.getImageInfo(), \"IMAGEINFO\");",
+    "resolution": "rs.updateString(\"VIDEOFORMATPROFILE\", left(media.getVideoFormatProfile(), SIZE_VIDEO_FORMAT_PROFILE)); updateSerialized(rs, media.getImageInfo(), \"IMAGEINFO\");",
+    "conflict": "rs.updateString(\"VIDEOFORMATPROFILE\", left(media.getVideoFormatProfile(), SIZE_VIDEO_FORMAT_PROFILE));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56229,
+    "v2": "value.equals(\"a_aac-2\")) {",
+    "resolution": "value.equals(\"a_aac-2\") ) {",
+    "conflict": "value.equals(\"a_aac-2\") ) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56235,
+    "v2": "",
+    "resolution": "import org.apache.commons.configuration.ConfigurationException; import org.apache.commons.lang3.StringUtils; import org.slf4j.Logger; import org.slf4j.LoggerFactory;",
+    "conflict": "import org.apache.commons.configuration.ConfigurationException; import org.apache.commons.lang3.StringUtils; import org.slf4j.Logger; import org.slf4j.LoggerFactory;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56244,
+    "v2": "if (webConf.exists() && configuration.getExternalNetwork()) { addWebFolder(webConf);",
+    "resolution": "if (webConf.exists() && configuration.getExternalNetwork() && !configuration.isHideWebFolder(tags)) { parseWebConf(webConf);",
+    "conflict": "if (webConf.exists() && configuration.getExternalNetwork() && !configuration.isHideWebFolder(tags)) { parseWebConf(webConf);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56250,
+    "v2": "",
+    "resolution": "",
+    "conflict": "public PluginTab getPluginsTab() { return pluginsTab; }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56253,
+    "v2": "gt.addRenderers();",
+    "resolution": "generalSettingsTab.addRenderers();",
+    "conflict": "generalSettingsTab.addRenderers(); pluginsTab.addPlugins();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 56255,
+    "v2": "private JPanel sharedPanel; private JTable sharedFolders; private SharedFoldersTableModel folderTableModel;",
+    "resolution": "private JCheckBox hideextensions; private JCheckBox hideemptyfolders; private JCheckBox hideengines;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 56271,
+    "v2": "\"TITLEVIDEOTRACK, VIDEOTRACKCOUNT, IMAGECOUNT, BITDEPTH, IMDBID, YEAR, MOVIEORSHOWNAME, \" + \"MOVIEORSHOWNAMESIMPLE, TVSEASON, TVEPISODENUMBER, TVEPISODENAME, ISTVEPISODE, EXTRAINFORMATION \" +",
+    "resolution": "\"TITLEVIDEOTRACK, VIDEOTRACKCOUNT, IMAGECOUNT, BITDEPTH, IMDBID, YEAR, MOVIEORSHOWNAME, \" + \"MOVIEORSHOWNAMESIMPLE, TVSEASON, TVEPISODENUMBER, TVEPISODENAME, ISTVEPISODE, EXTRAINFORMATION, MIMETYPE \" +",
+    "conflict": "\"TITLEVIDEOTRACK, VIDEOTRACKCOUNT, IMAGECOUNT, BITDEPTH, MIMETYPE \" +"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56375,
+    "v2": "import net.pms.dlna.DLNAThumbnail;",
+    "resolution": "import net.pms.database.TableFilesStatus; import net.pms.database.Tables;",
+    "conflict": "import net.pms.database.TableFilesStatus; import net.pms.database.Tables;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56379,
+    "v2": "sb.append(\", IMAGEINFO               OTHER\"); sb.append(\", THUMB                   OTHER\");",
+    "resolution": "sb.append(\", IMAGEINFO               OTHER\"); sb.append(\", THUMB                   OTHER\");",
+    "conflict": "sb.append(\", THUMB                   BINARY\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56392,
+    "v2": "ps.setNull(16, Types.OTHER); ps.setNull(17, Types.OTHER);",
+    "resolution": "ps.setNull(16, Types.OTHER); ps.setNull(17, Types.OTHER);",
+    "conflict": "ps.setNull(16, Types.BINARY); ps.setNull(17, Types.VARCHAR);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56401,
+    "v2": "public ImageInfo getImageInfo() { return imageInfo;",
+    "resolution": "public ImageInfo getImageInfo() { return imageInfo;",
+    "conflict": "public int getBitsPerPixel() { //TODO: (Nad) Check post merge return bitsPerPixel;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56403,
+    "v2": "import net.pms.util.UnknownFormatException;",
+    "resolution": "import net.pms.util.UnknownFormatException; import net.pms.util.OpenSubtitle;",
+    "conflict": "import net.pms.util.OpenSubtitle; import net.pms.util.ImagesUtil;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56429,
+    "v2": "import net.pms.util.ImagesUtil; import org.apache.commons.codec.binary.Base64; import org.apache.commons.imaging.ImageReadException;",
+    "resolution": "import net.pms.util.ImagesUtil; import org.apache.commons.imaging.ImageReadException;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56430,
+    "v2": "media.setThumb(new Base64().decode(value.getBytes(StandardCharsets.US_ASCII))); media.setThumbready(true);",
+    "resolution": "media.setThumb(Base64.getDecoder().decode(value.getBytes(StandardCharsets.US_ASCII))); media.setThumbready(true);",
+    "conflict": "media.setThumb(Base64.getDecoder().decode(value.getBytes(StandardCharsets.US_ASCII)));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56459,
+    "v2": "",
+    "resolution": "",
+    "conflict": "value = MI.Get(general, 0, \"Attachments\"); if (!value.isEmpty()) { media.setEmbeddedFontExists(value.toLowerCase().contains(\".ttf\")); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56470,
+    "v2": "if (!configuration.isHideRecentlyPlayedFolder()) { playerTranscoding = child.player;",
+    "resolution": "if (configuration.isShowRecentlyPlayedFolder()) { playerTranscoding = child.player;",
+    "conflict": "if (configuration.isShowRecentlyPlayedFolder()) { player = child.player;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56483,
+    "v2": "* delays are for 30/180 seconds depending on whether there * are renderers connected. It can be customized with the",
+    "resolution": "* delays are for 30/180 seconds depending on whether there * are renderers connected. It can be customized with the",
+    "conflict": "* delays are 30 seconds. It can be customized with the"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56490,
+    "v2": "alert(); } catch (InterruptedException | IOException e) { LOGGER.debug(\"Bad chromecast mediastate \" + e);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56514,
+    "v2": "LOGGER.error(\"Cache connection error: \" + se.getMessage()); PMS.get().getRootFolder(null).stopScan();",
+    "resolution": "LOGGER.error(\"Database connection error: \" + se.getMessage()); LOGGER.trace(\"\", se); PMS.get().getRootFolder(null).stopScan();",
+    "conflict": "LOGGER.error(\"Database connection error: \" + se.getMessage()); LOGGER.trace(\"\", se);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 56551,
+    "v2": "RealFile rf = (RealFile) this; displayName = FileUtil.getFileNamePrettified(displayName, rf.getFile());",
+    "resolution": "RealFile rf = (RealFile) this; File file = rf.getFile(); if (configuration.isPrettifyFilenames() && getFormat() != null && getFormat().isVideo()) { displayName = FileUtil.getFileNamePrettified(displayName, file);",
+    "conflict": "displayName = FileUtil.getFileNameWithRewriting(displayName, file);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 56559,
+    "v2": "",
+    "resolution": "",
+    "conflict": "@SuppressWarnings(\"unused\") private static final Logger LOGGER = LoggerFactory.getLogger(MediaMonitor.class); private File[] dirs;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56571,
+    "v2": "import javax.swing.event.HyperlinkListener; import javax.swing.text.html.HTMLDocument; import javax.swing.text.html.HTMLEditorKit; import javax.swing.text.html.StyleSheet;",
+    "resolution": "import javax.swing.event.HyperlinkEvent; import javax.swing.text.html.HTMLDocument; import javax.swing.text.html.HTMLEditorKit; import javax.swing.text.html.StyleSheet;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56578,
+    "v2": "import java.awt.Frame; import java.io.BufferedReader;",
+    "resolution": "import java.io.BufferedWriter; import java.awt.Frame;",
+    "conflict": "import java.io.BufferedWriter;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 56590,
+    "v2": "import java.util.concurrent.locks.ReadWriteLock; import java.util.concurrent.locks.ReentrantReadWriteLock;",
+    "resolution": "import java.util.concurrent.locks.ReadWriteLock; import java.util.concurrent.locks.ReentrantReadWriteLock;import java.util.concurrent.CountDownLatch;",
+    "conflict": "import java.util.concurrent.CountDownLatch;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 56664,
+    "v2": "context.reset();",
+    "resolution": "context.getLogger(Logger.ROOT_LOGGER_NAME).setLevel(Level.OFF);; PMS.get();",
+    "conflict": "context.getLogger(Logger.ROOT_LOGGER_NAME).setLevel(Level.OFF);; PMS.get();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 56669,
+    "v2": "try (BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream(), \"cp\" + WinUtils.getOEMCP()))) {",
+    "resolution": "BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream(), \"cp\" + WinUtils.getOEMCP()));",
+    "conflict": "BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 56676,
+    "v2": "} openZip.setEnabled(true);",
+    "resolution": "zos.close(); openZip.setEnabled(true);",
+    "conflict": "zos.close();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57074,
+    "v2": "imageCount++; } catch (ImageReadException | IOException e) {",
+    "resolution": "imageCount++; } catch (Throwable e) {",
+    "conflict": "} catch (Throwable e) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57137,
+    "v2": "new Thread(fireStartStopEvent, \"StartPlaying Event for \" + listener.name()).start();",
+    "resolution": "new Thread(fireStartStopEvent, \"StartPlaying Event for \" + listener.name()).start();",
+    "conflict": "new Thread(fireStartStopEvent, \"StopPlaying Event for \" + listener.name()).start();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57141,
+    "v2": "import java.util.*;",
+    "resolution": "import java.util.*;",
+    "conflict": "import java.util.ArrayList; import java.util.Collections;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57157,
+    "v2": "HashMap<String, T> m = get(uuid); if (m != null) { for (T i : m.values()) {",
+    "resolution": "HashMap<String, T> m = get(uuid); if (m != null) { for (T i : m.values()) {",
+    "conflict": "for (T i : get(uuid).values()) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 57165,
+    "v2": "deviceConfs = new HashMap<>(); xref = new HashMap<>();",
+    "resolution": "deviceConfs = new HashMap<String, PropertiesConfiguration>(); xref = new HashMap<String, String>();",
+    "conflict": "deviceConfs = new HashMap<String, PropertiesConfiguration>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57181,
+    "v2": "ArrayList<String> conf = new ArrayList<>(); String name = getSimpleName(r);",
+    "resolution": "ArrayList<String> conf = new ArrayList<String>(); String name = getSimpleName(r);",
+    "conflict": "ArrayList<String> conf = new ArrayList<String>(); String name = r.getRendererName().split(\"\\\\(\")[0].trim();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57189,
+    "v2": "ArrayList<String> conf = new ArrayList<>(); String name = getSimpleName(r);",
+    "resolution": "ArrayList<String> conf = new ArrayList<String>(); String name = getSimpleName(r);",
+    "conflict": "ArrayList<String> conf = new ArrayList<String>(); String name = r.getRendererName().split(\"\\\\(\")[0].trim();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57192,
+    "v2": "",
+    "resolution": "LOGGER.trace(\"The channel future completed:\"); LOGGER.trace(\"  isSuccess: \" + future.isSuccess()); LOGGER.trace(\"  isCancelled: \" + future.isCancelled()); LOGGER.trace(\"  getCause: \", future.cause());",
+    "conflict": "LOGGER.trace(\"The channel future completed:\"); LOGGER.trace(\"  isSuccess: \" + future.isSuccess()); LOGGER.trace(\"  isCancelled: \" + future.isCancelled()); LOGGER.trace(\"  getCause: \", future.cause());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57197,
+    "v2": "data = new HashMap<>(); gson = renderer.gson;",
+    "resolution": "data = new HashMap<String, String>(); gson = renderer.gson;",
+    "conflict": "data = new HashMap<String, String>(); gson = ((WebRender)renderer).gson;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57201,
+    "v2": "data = new HashMap<>(); gson = renderer.gson;",
+    "resolution": "data = new HashMap<String, String>(); gson = renderer.gson;",
+    "conflict": "data = new HashMap<String, String>(); gson = ((WebRender)renderer).gson;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57218,
+    "v2": "/** * Note: Use valueOf on Java 6 instead of casting. */",
+    "resolution": "/** * Note: Use valueOf on Java 6 instead of casting. */",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57221,
+    "v2": "/** * Note: Use getHostName() on Java 6 instead of getHostString(). */",
+    "resolution": "/** * Note: Use getHostName() on Java 6 instead of getHostString(). */",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57227,
+    "v2": "_pmsConfiguration = pmsConf; enabledRendererConfs = new TreeSet<>(rendererLoadingPriorityComparator);",
+    "resolution": "_pmsConfiguration = pmsConf; enabledRendererConfs = new TreeSet<RendererConfiguration>(rendererLoadingPriorityComparator);",
+    "conflict": "pmsConfiguration = pmsConf; enabledRendererConfs = new TreeSet<RendererConfiguration>(rendererLoadingPriorityComparator);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57228,
+    "v2": "//this.children = new ArrayList<DLNAResource>(); this.children = new DLNAList();",
+    "resolution": "//this.children = new ArrayList<DLNAResource>(); this.children = new DLNAList();",
+    "conflict": "this.children = new ArrayList<DLNAResource>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57233,
+    "v2": "List<String> sortedKeys = new ArrayList<>(data.keySet()); Collections.sort(sortedKeys, new SubSort(getDefaultRenderer()));",
+    "resolution": "List<String> sortedKeys = new ArrayList<String>(data.keySet()); Collections.sort(sortedKeys, new SubSort(getDefaultRenderer()));",
+    "conflict": "List<String> sortedKeys = new ArrayList<String>(data.keySet()); Collections.sort(sortedKeys, new SubSort(PMS.getConfiguration()));"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57234,
+    "v2": "List<String> videoBitrateOptions = new ArrayList<>(); boolean low = false;",
+    "resolution": "List<String> videoBitrateOptions = new ArrayList<String>(); boolean low = false;",
+    "conflict": "List<String> videoBitrateOptions = new ArrayList<String>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57235,
+    "v2": "List<String> cmdList = new ArrayList<>();",
+    "resolution": "List<String> cmdList = new ArrayList<String>(); boolean avisynth = avisynth();",
+    "conflict": "List<String> cmdList = new ArrayList<String>(); RendererConfiguration renderer = params.mediaRenderer;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57241,
+    "v2": "Socket sock = new Socket(addr, port); try (OutputStream out = sock.getOutputStream()) {",
+    "resolution": "Socket sock = new Socket(addr,port); OutputStream out = sock.getOutputStream();",
+    "conflict": "Socket sock = new Socket(addr,port); OutputStream out = sock.getOutputStream();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57242,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private final static List<JCheckBox> checkBoxes = new ArrayList<JCheckBox>(); private JButton selectAll = new JButton(Messages.getString(\"GeneralTab.7\")); private JButton deselectAll = new JButton(Messages.getString(\"GeneralTab.8\"));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 57268,
+    "v2": "gson = new Gson(); push = new ArrayList<>();",
+    "resolution": "gson = new Gson(); push = new ArrayList<String[]>();",
+    "conflict": "pushURL = new ArrayList<String>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57269,
+    "v2": "data = new HashMap<>(); gson = ((WebRender)renderer).gson;",
+    "resolution": "data = new HashMap<String, String>(); gson = ((WebRender)renderer).gson;",
+    "conflict": "data = new HashMap<String, String>(); gson = new Gson();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57273,
+    "v2": "",
+    "resolution": "",
+    "conflict": "private final static List<JCheckBox> checkBoxes = new ArrayList<JCheckBox>(); private JButton selectAll = new JButton(Messages.getString(\"GeneralTab.7\")); private JButton deselectAll = new JButton(Messages.getString(\"GeneralTab.8\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57302,
+    "v2": "transcodeOptions.add(\"-preset\"); transcodeOptions.add(\"superfast\"); transcodeOptions.add(\"-level\"); transcodeOptions.add(\"31\");",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57305,
+    "v2": "public synchronized List<DLNAResource> getDLNAResources(String objectId, boolean returnChildren, int start, int count, RendererConfiguration renderer, String searchStr) { ArrayList<DLNAResource> resources = new ArrayList<>();",
+    "resolution": "public synchronized List<DLNAResource> getDLNAResources(String objectId, boolean returnChildren, int start, int count, RendererConfiguration renderer, String searchStr) { ArrayList<DLNAResource> resources = new ArrayList<DLNAResource>();",
+    "conflict": "public synchronized List<DLNAResource> getDLNAResources(String objectId, boolean returnChildren, int start, int count, RendererConfiguration renderer, String searchStr) throws IOException { ArrayList<DLNAResource> resources = new ArrayList<DLNAResource>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57307,
+    "v2": "List<String> sortedKeys = new ArrayList<>(data.keySet()); Collections.sort(sortedKeys, new SubSort(getDefaultRenderer()));",
+    "resolution": "List<String> sortedKeys = new ArrayList<String>(data.keySet()); Collections.sort(sortedKeys, new SubSort(getDefaultRenderer()));",
+    "conflict": "List<String> sortedKeys = new ArrayList<String>(data.keySet()); Collections.sort(sortedKeys, new SubSort(PMS.getConfiguration()));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57316,
+    "v2": "/** * A file watchpoint. */",
+    "resolution": "/** * A file watchpoint. */",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57345,
+    "v2": "StartStopListenerDelegate startStop = new StartStopListenerDelegate(t.getRemoteAddress().getHostString()); startStop.setRenderer(render);",
+    "resolution": "StartStopListenerDelegate startStop = new StartStopListenerDelegate(t.getRemoteAddress().getHostName()); startStop.setRenderer(render);",
+    "conflict": "StartStopListenerDelegate startStop = new StartStopListenerDelegate(t.getRemoteAddress().getHostName());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57358,
+    "v2": "_pmsConfiguration = pmsConf; enabledRendererConfs = new TreeSet<>(rendererLoadingPriorityComparator);",
+    "resolution": "_pmsConfiguration = pmsConf; enabledRendererConfs = new TreeSet<RendererConfiguration>(rendererLoadingPriorityComparator);",
+    "conflict": "pmsConfiguration = pmsConf; enabledRendererConfs = new TreeSet<RendererConfiguration>(rendererLoadingPriorityComparator);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57359,
+    "v2": "//this.children = new ArrayList<DLNAResource>(); this.children = new DLNAList();",
+    "resolution": "//this.children = new ArrayList<DLNAResource>(); this.children = new DLNAList();",
+    "conflict": "this.children = new ArrayList<DLNAResource>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57363,
+    "v2": "List<String> videoBitrateOptions = new ArrayList<>(); boolean low = false;",
+    "resolution": "List<String> videoBitrateOptions = new ArrayList<String>(); boolean low = false;",
+    "conflict": "List<String> videoBitrateOptions = new ArrayList<String>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57364,
+    "v2": "List<String> cmdList = new ArrayList<>();",
+    "resolution": "List<String> cmdList = new ArrayList<String>(); boolean avisynth = avisynth();",
+    "conflict": "List<String> cmdList = new ArrayList<String>(); RendererConfiguration renderer = params.mediaRenderer;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57368,
+    "v2": "Socket sock = new Socket(addr, port); try (OutputStream out = sock.getOutputStream()) {",
+    "resolution": "Socket sock = new Socket(addr,port); OutputStream out = sock.getOutputStream();",
+    "conflict": "Socket sock = new Socket(addr,port); OutputStream out = sock.getOutputStream();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 57456,
+    "v2": "if (applyFontConfig || isEmbeddedSource || params.sid.getType() != subtitleType) { convertedSubs = new File(subsPath.getAbsolutePath() + File.separator + basename + \"_ID\" + params.sid.getId() + \"_\" + modId + \".\" + subtitleType.getExtension());",
+    "resolution": "if (applyFontConfig || isEmbeddedSource || is3D || params.sid.getType() != subtitleType) { convertedSubs = new File(subsPath.getAbsolutePath() + File.separator + basename + \"_ID\" + params.sid.getId() + \"_\" + modId + \".\" + subtitleType.getExtension());",
+    "conflict": "if (applyFontConfig || isEmbeddedSource || is3D) { convertedSubs = new File(subsPath.getAbsolutePath() + File.separator + basename + \"_ID\" + params.sid.getId() + \"_\" + modId + \".ass\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57473,
+    "v2": "",
+    "resolution": "import java.util.regex.Matcher; import java.util.regex.Pattern;",
+    "conflict": "import java.util.regex.Matcher; import java.util.regex.Pattern;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57498,
+    "v2": "public void update(List<RealFile> folders) { this.folders = (ArrayList<RealFile>) folders; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57508,
+    "v2": "try (FileInputStream fis = new FileInputStream(purge); BufferedReader in = new BufferedReader(new InputStreamReader(fis))) {",
+    "resolution": "FileInputStream fis = new FileInputStream(purge); BufferedReader in = new BufferedReader(new InputStreamReader(fis));",
+    "conflict": "FileInputStream fis = new FileInputStream(purge); BufferedReader in = new BufferedReader(new InputStreamReader(fis));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57513,
+    "v2": "try (FileInputStream fis = new FileInputStream(f); BufferedReader in = new BufferedReader(new InputStreamReader(fis))) {",
+    "resolution": "FileInputStream fis = new FileInputStream(f); BufferedReader in = new BufferedReader(new InputStreamReader(fis));",
+    "conflict": "FileInputStream fis = new FileInputStream(f); BufferedReader in = new BufferedReader(new InputStreamReader(fis));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57515,
+    "v2": "str = str.trim(); if (str.startsWith(\"UMS=\")) {",
+    "resolution": "str = str.trim(); if (str.startsWith(\"UMS=\")) {",
+    "conflict": "if (str.trim().startsWith(\"UMS=\")) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 57544,
+    "v2": "import net.pms.PMS; import org.apache.commons.lang3.StringUtils;",
+    "resolution": "import net.pms.PMS; import org.apache.commons.lang3.StringUtils;import java.util.Set;",
+    "conflict": "import java.util.Set;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57545,
+    "v2": "private static final PmsConfiguration configuration = PMS.getConfiguration(); //private boolean subsAreValidForStreaming = false;",
+    "resolution": "protected PmsConfiguration configuration = PMS.getConfiguration(); //private boolean subsAreValidForStreaming = false;",
+    "conflict": "protected PmsConfiguration configuration = PMS.getConfiguration(); private boolean subsAreValidForStreaming = false;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57549,
+    "v2": "(params.sid.getType() == subtitleType) && (params.sid.getType() == SubtitleType.SUBRIP || params.sid.getType() == SubtitleType.WEBVTT)",
+    "resolution": "(params.sid.getType() == subtitleType) && (params.sid.getType() == SubtitleType.SUBRIP || params.sid.getType() == SubtitleType.WEBVTT) && !is3D",
+    "conflict": "(params.sid.getType() == SubtitleType.SUBRIP || params.sid.getType() == SubtitleType.WEBVTT) && !is3D"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57565,
+    "v2": "",
+    "resolution": "public boolean getAutoDiscover() { return getBoolean(KEY_AUTOMATIC_DISCOVER, false); }",
+    "conflict": "public boolean getAutoDiscover() { return getBoolean(KEY_AUTOMATIC_DISCOVER, false); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57578,
+    "v2": "this.children = new ArrayList<>();",
+    "resolution": "//this.children = new ArrayList<DLNAResource>(); this.children = new DLNAList();",
+    "conflict": "//this.children = new ArrayList<DLNAResource>(); this.children = new DLNAList();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57591,
+    "v2": "sb.append(\" id=\\\"player\\\" width=\\\"720\\\" height=\\\"404\\\" controls\").append(auto).append(CRLF);",
+    "resolution": "sb.append(\" id=\\\"player\\\" width=\\\"\").append(renderer.getVideoWidth()).append(\"\\\" height=\\\"\"); sb.append(renderer.getVideoHeight()).append(\"\\\" controls\").append(auto).append(CRLF);",
+    "conflict": "sb.append(\" id=\\\"player\\\" width=\\\"\").append(renderer.getVideoWidth()).append(\"\\\" height=\\\"\"); sb.append(renderer.getVideoHeight()).append(\"\\\" controls\").append(auto).append(CRLF);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57612,
+    "v2": "} else if (child.media != null && defaultRenderer != null) { LOGGER.trace(\"Did not check for media_subtitle for \\\"{}\\\" because {} does not use MediaInfo, we will check for it soon\", child.getName(), defaultRenderer);",
+    "resolution": "} else { LOGGER.trace(\"Did not check for media_subtitle for \\\"{}\\\" because this renderer does not use MediaInfo, we will check for it soon\", child.getName());",
+    "conflict": "} else { LOGGER.trace(\"Did not check for media_subtitle for \\\"{}\\\" because this renderer does not use MediaInfo, we will check for it soon\", child.getName());"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57618,
+    "v2": "",
+    "resolution": "if (configuration.isForceExternalSubtitles()) { autoloadExternalSubtitles.setSelected(true); }",
+    "conflict": "if (configuration.isForceExternalSubtitles()) { autoloadExternalSubtitles.setSelected(true); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57620,
+    "v2": "private static TreeSet<RendererConfiguration> enabledRendererConfs; private static ArrayList<String> allRenderersNames = new ArrayList<>();",
+    "resolution": "private static TreeSet<RendererConfiguration> enabledRendererConfs; private static ArrayList<String> allRenderersNames = new ArrayList<String>();",
+    "conflict": "private static ArrayList<RendererConfiguration> enabledRendererConfs; private static ArrayList<String> allRenderersNames = new ArrayList<String>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57626,
+    "v2": "items = new LinkedHashMap<>();",
+    "resolution": "items = new LinkedHashMap<File, JCheckBox>();",
+    "conflict": "init = true; items = new LinkedHashMap<File, JCheckBox>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57658,
+    "v2": "mimes = new HashMap<>(); String mimeTypes = getString(MIME_TYPES_CHANGES, \"\");",
+    "resolution": "mimes = new HashMap<String, String>(); String mimeTypes = getString(MIME_TYPES_CHANGES, \"\");",
+    "conflict": "mimes = new HashMap<String, String>(); String mimeTypes = getString(MIME_TYPES_CHANGES, null);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57659,
+    "v2": "DLNAPN = new HashMap<>(); String DLNAPNchanges = getString(DLNA_PN_CHANGES, \"\");",
+    "resolution": "DLNAPN = new HashMap<String, String>(); String DLNAPNchanges = getString(DLNA_PN_CHANGES, \"\");",
+    "conflict": "DLNAPN = new HashMap<String, String>(); String DLNAPNchanges = getString(DLNA_PN_CHANGES, null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57669,
+    "v2": "public void update(List<RealFile> folders) { this.folders = (ArrayList<RealFile>) folders; }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57683,
+    "v2": "",
+    "resolution": "",
+    "conflict": "double rendererAspectRatio = 1.777777777777778; if (params.mediaRenderer.isMaximumResolutionSpecified()) { rendererAspectRatio = (double) params.mediaRenderer.getMaxVideoWidth() / (double) params.mediaRenderer.getMaxVideoHeight(); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57686,
+    "v2": "try (FileInputStream fis = new FileInputStream(purge); BufferedReader in = new BufferedReader(new InputStreamReader(fis))) {",
+    "resolution": "FileInputStream fis = new FileInputStream(purge); BufferedReader in = new BufferedReader(new InputStreamReader(fis));",
+    "conflict": "FileInputStream fis = new FileInputStream(purge); BufferedReader in = new BufferedReader(new InputStreamReader(fis));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57689,
+    "v2": "LOGGER.trace(\"Loading external subtitles: \" + sub); } else { LOGGER.trace(\"Not loading external subtitles because they are not external: \" + sub);",
+    "resolution": "LOGGER.trace(\"Loading external subtitles: \" + sub); } else { LOGGER.trace(\"Not loading external subtitles because they are not external: \" + sub);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57690,
+    "v2": "subtitleUrl = \"http://\" + PMS.get().getServer().getHost() + ':' + PMS.get().getServer().getPort() + \"/get/\" + id + \"/subtitle0000\" + subExtension;",
+    "resolution": "subtitleUrl = \"http://\" + PMS.get().getServer().getHost() + ':' + PMS.get().getServer().getPort() + \"/get/\" + id + \"/subtitle0000\" + subExtension;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57692,
+    "v2": "try (FileInputStream fis = new FileInputStream(f); BufferedReader in = new BufferedReader(new InputStreamReader(fis))) {",
+    "resolution": "FileInputStream fis = new FileInputStream(f); BufferedReader in = new BufferedReader(new InputStreamReader(fis));",
+    "conflict": "FileInputStream fis = new FileInputStream(f); BufferedReader in = new BufferedReader(new InputStreamReader(fis));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57716,
+    "v2": "// Web stuff web = new RemoteWeb(configuration.getWebPort());",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57718,
+    "v2": "",
+    "resolution": "import net.pms.configuration.RendererConfiguration;",
+    "conflict": "import net.pms.configuration.RendererConfiguration; import net.pms.PMS; import net.pms.dlna.DLNAMediaAudio; import net.pms.dlna.DLNAMediaInfo;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57734,
+    "v2": "getDefaultRenderer() != null && getDefaultRenderer().isKeepAspectRatio() &&",
+    "resolution": "defaultRenderer != null && defaultRenderer.isKeepAspectRatio() &&",
+    "conflict": "defaultRenderer != null && defaultRenderer.isKeepAspectRatio() &&"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57745,
+    "v2": "switch (format[i].trim()) { case \"Fontname\":",
+    "resolution": "if (\"Fontname\".equals(format[i].trim())) {",
+    "conflict": "if (\"Fontname\".equals(format[i].trim())) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57761,
+    "v2": "getMedia().generateThumbnail(inputFile, getFormat(), getType(), seekPosition, isResume());",
+    "resolution": "media.generateThumbnail(inputFile, getFormat(), getType(), seekPosition, isResume());",
+    "conflict": "media.generateThumbnail(inputFile, getFormat(), getType(), seekPosition, isResume()); media.setThumbready(true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57768,
+    "v2": "if (getAspectRatioDvdIso() != null) { double ar = Double.parseDouble(getAspectRatioDvdIso());",
+    "resolution": "if (aspectRatioDvdIso != null) { double ar = Double.parseDouble(aspectRatioDvdIso);",
+    "conflict": "if (aspectRatioDvdIso != null) { double ar = Double.parseDouble(aspectRatioDvdIso);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57772,
+    "v2": "container = codecV; } catch (ImageReadException | IOException e) {",
+    "resolution": "container = codecV; } catch (Throwable e) {",
+    "conflict": "setContainer(getCodecV()); } catch (Throwable e) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57773,
+    "v2": "thumb = out.toByteArray(); } catch (IOException | IllegalArgumentException | IllegalStateException e) {",
+    "resolution": "thumb = out.toByteArray(); } catch (Exception e) {",
+    "conflict": "setThumb(out.toByteArray()); } catch (Exception e) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57795,
+    "v2": "if (range.isTimeRange()) { resume.update((Range.Time) range, this); } params.timeseek = (long) (resume.getTimeOffset() / 1000);",
+    "resolution": "if (range.isTimeRange()) { resume.update((Range.Time) range, this); } params.timeseek = (long) (resume.getTimeOffset() / 1000);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57810,
+    "v2": "boolean isMuxableResult = getMedia() != null && getMedia().isMuxable(mediaRenderer); boolean isBravia = mediaRenderer.isBRAVIA();",
+    "resolution": "boolean isMuxableResult = getMedia() != null && getMedia().isMuxable(mediaRenderer);",
+    "conflict": "boolean isMuxableResult = getMedia().isMuxable(mediaRenderer);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57812,
+    "v2": "} else if (getMedia() != null) { for (DLNAMediaSubtitle present_sub : getMedia().getSubtitleTracksList()) {",
+    "resolution": "} else if (getMedia() != null) { for (DLNAMediaSubtitle present_sub : media.getSubtitleTracksList()) {",
+    "conflict": "} else { for (DLNAMediaSubtitle present_sub : media.getSubtitleTracksList()) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57816,
+    "v2": "res.media.setThumbready(false);",
+    "resolution": "if (res.getMedia() != null) { res.media.setThumbready(false); }",
+    "conflict": "if (res.getMedia() != null) { res.media.setThumbready(false); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57817,
+    "v2": "clone.media.setThumbready(false);",
+    "resolution": "if (clone.media != null) { clone.media.setThumbready(false); }",
+    "conflict": "if (clone.media != null) { clone.media.setThumbready(false); }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57818,
+    "v2": "boolean isMuxableResult = media.isMuxable(mediaRenderer); boolean isBravia = mediaRenderer.isBRAVIA();",
+    "resolution": "boolean isMuxableResult = getMedia().isMuxable(mediaRenderer);",
+    "conflict": "boolean isMuxableResult = getMedia().isMuxable(mediaRenderer);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57819,
+    "v2": "boolean isMuxableResult = media.isMuxable(mediaRenderer); boolean isBravia = mediaRenderer.isBRAVIA();",
+    "resolution": "boolean isMuxableResult = getMedia().isMuxable(mediaRenderer);",
+    "conflict": "boolean isMuxableResult = getMedia().isMuxable(mediaRenderer);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57821,
+    "v2": "Double seekPosition = ((Integer)configuration.getThumbnailSeekPos()).doubleValue();",
+    "resolution": "Double seekPosition = ((Integer)configuration.getThumbnailSeekPos()).doubleValue();",
+    "conflict": "getMedia().setThumbready(true);  Double seekPosition = ((Integer) configuration.getThumbnailSeekPos()).doubleValue();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57844,
+    "v2": "oldEntries = new ArrayList<>();",
+    "resolution": "oldEntries = new ArrayList<>();",
+    "conflict": "oldEntries = new ArrayList<String>(); config = PMS.getConfiguration(); config = PMS.getConfiguration();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57855,
+    "v2": "if (e.getStateChange() == ItemEvent.SELECTED) { videoremux.setSelected(false); }",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57874,
+    "v2": "",
+    "resolution": "",
+    "conflict": "if (!isDisableSubtitles(params)) { tempSubs = getSubtitles(dlna, media, params, configuration); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57875,
+    "v2": "public File getSubtitles(DLNAResource dlna, DLNAMediaInfo media, OutputParams params) throws IOException { if (media == null || params.sid.getId() == -1 || !params.sid.getType().isText()) {",
+    "resolution": "public static File getSubtitles(DLNAResource dlna, DLNAMediaInfo media, OutputParams params, PmsConfiguration configuration) throws IOException { if (media == null || params.sid.getId() == -1 || !params.sid.getType().isText()) {",
+    "conflict": "public static File getSubtitles(DLNAResource dlna, DLNAMediaInfo media, OutputParams params, PmsConfiguration configuration) throws IOException { if (media == null || params.sid.getId() == -1) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57882,
+    "v2": "if (r.getFormat().isVideo()) {",
+    "resolution": "if (r.getFormat().isVideo()) {",
+    "conflict": "if (res.get(0).getFormat().isVideo()) {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 57898,
+    "v2": "private MediaMonitor mon; private RecentlyPlayed last;",
+    "resolution": "private MediaMonitor mon; private RecentlyPlayed last;private String tag;",
+    "conflict": "private String tag;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57906,
+    "v2": "private static final Logger LOGGER = LoggerFactory.getLogger(ConfigurationReader.class); private Map<String, Object> logMap = new HashMap<>();",
+    "resolution": "private static final Logger LOGGER = LoggerFactory.getLogger(ConfigurationReader.class); private Map<String, Object> logMap = new HashMap<String, Object>();",
+    "conflict": "private static final Logger logger = LoggerFactory.getLogger(ConfigurationReader.class); private Map<String, Object> logMap = new HashMap<String, Object>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57910,
+    "v2": "List<RealFile> res = new ArrayList<>(); File[] files = PMS.get().getSharedFoldersArray(false);",
+    "resolution": "List<RealFile> res = new ArrayList<RealFile>(); File[] files = PMS.get().getSharedFoldersArray(false);",
+    "conflict": "List<RealFile> res = new ArrayList<RealFile>(); File[] files = PMS.get().getFoldersConf();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57911,
+    "v2": "List<DLNAResource> res = new ArrayList<>(); List<MapFileConfiguration> mapFileConfs = MapFileConfiguration.parseVirtualFolders();",
+    "resolution": "List<DLNAResource> res = new ArrayList<DLNAResource>(); List<MapFileConfiguration> mapFileConfs = MapFileConfiguration.parseVirtualFolders();",
+    "conflict": "List<DLNAResource> res = new ArrayList<DLNAResource>(); List<MapFileConfiguration> mapFileConfs = MapFileConfiguration.parse(configuration.getVirtualFolders());"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57912,
+    "v2": "List<String> videoFilterOptions = new ArrayList<>(); StringBuilder subsOption = new StringBuilder();",
+    "resolution": "List<String> videoFilterOptions = new ArrayList<String>(); StringBuilder subsOption = new StringBuilder();",
+    "conflict": "List<String> videoFilterOptions = new ArrayList<String>(); String subsOption = null;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57916,
+    "v2": "List<String> cmdList = new ArrayList<>(); File tempSubsFile;",
+    "resolution": "List<String> cmdList = new ArrayList<String>(); File tempSubsFile;",
+    "conflict": "List<String> cmdList = new ArrayList<String>(); File tempSubsFile = null;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57923,
+    "v2": "private JTable FList; private SharedFoldersTableModel folderTableModel;",
+    "resolution": "private JTable FList; private SharedFoldersTableModel folderTableModel;",
+    "conflict": "private JList FList; private DefaultListModel df;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57924,
+    "v2": "public SharedFoldersTableModel getDf() { return folderTableModel;",
+    "resolution": "public SharedFoldersTableModel getDf() { return folderTableModel;",
+    "conflict": "public DefaultListModel getDf() { return df;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 57925,
+    "v2": "String directory = (String) folderTableModel.getValueAt(i, 0); boolean monitored = (boolean) folderTableModel.getValueAt(i, 1);",
+    "resolution": "String directory = (String) folderTableModel.getValueAt(i, 0); boolean monitored = Boolean.TRUE.equals(folderTableModel.getValueAt(i, 1));",
+    "conflict": "String entry = (String) df.getElementAt(i);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57930,
+    "v2": "File[] folders = PMS.get().getSharedFoldersArray(false);",
+    "resolution": "File[] folders = PMS.get().getSharedFoldersArray(false);",
+    "conflict": "df = new DefaultListModel(); File[] folders = PMS.get().getFoldersConf();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 57931,
+    "v2": "",
+    "resolution": "",
+    "conflict": "FList = new JList(); FList.setModel(df);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57934,
+    "v2": "public List<String> getVideoFilterOptions(DLNAResource dlna, DLNAMediaInfo media, OutputParams params) throws IOException { List<String> videoFilterOptions = new ArrayList<>();",
+    "resolution": "public List<String> getVideoFilterOptions(DLNAResource dlna, DLNAMediaInfo media, OutputParams params) throws IOException { List<String> videoFilterOptions = new ArrayList<String>();",
+    "conflict": "public List<String> getVideoFilterOptions(DLNAResource dlna, DLNAMediaInfo media, OutputParams params, File tempSubs) throws IOException { List<String> videoFilterOptions = new ArrayList<String>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57947,
+    "v2": "private final Map<String, Integer> requestIdToRefcount = new HashMap<>(); private boolean resolved;",
+    "resolution": "private final Map<String, Integer> requestIdToRefcount = new HashMap<String, Integer>(); private boolean resolved;",
+    "conflict": "private final Map<String, Integer> requestIdToRefcount = new HashMap<String, Integer>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57948,
+    "v2": "ArrayList<DLNAResource> resources = new ArrayList<>(); DLNAResource dlna = search(objectId, count, renderer, searchStr);",
+    "resolution": "ArrayList<DLNAResource> resources = new ArrayList<DLNAResource>(); DLNAResource dlna = search(objectId, count, renderer, searchStr);",
+    "conflict": "ArrayList<DLNAResource> resources = new ArrayList<DLNAResource>(); DLNAResource resource = search(objectId, count, renderer, searchStr);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57953,
+    "v2": "public List<String> getVideoFilterOptions(DLNAResource dlna, DLNAMediaInfo media, OutputParams params, File tempSubs) throws IOException { List<String> videoFilterOptions = new ArrayList<>();",
+    "resolution": "public List<String> getVideoFilterOptions(DLNAResource dlna, DLNAMediaInfo media, OutputParams params, File tempSubs) throws IOException { List<String> videoFilterOptions = new ArrayList<String>();",
+    "conflict": "public List<String> getVideoFilterOptions(File tempSubs, RendererConfiguration renderer, DLNAMediaInfo media, OutputParams params) throws IOException { List<String> videoFilterOptions = new ArrayList<String>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57956,
+    "v2": "public List<String> getAudioBitrateOptions(DLNAResource dlna, DLNAMediaInfo media, OutputParams params) { List<String> audioBitrateOptions = new ArrayList<>();",
+    "resolution": "public List<String> getAudioBitrateOptions(DLNAResource dlna, DLNAMediaInfo media, OutputParams params) { List<String> audioBitrateOptions = new ArrayList<String>();",
+    "conflict": "public List<String> getAudioBitrateOptions(RendererConfiguration renderer, DLNAMediaInfo media) { List<String> audioBitrateOptions = new ArrayList<String>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57958,
+    "v2": "List<String> cmdList = new ArrayList<>(); final String filename = dlna.getSystemName();",
+    "resolution": "List<String> cmdList = new ArrayList<String>(); final String filename = dlna.getSystemName();",
+    "conflict": "List<String> cmdList = new ArrayList<String>();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57959,
+    "v2": "List<String> enabledEngines = configuration.getEnginesAsList(utils); ArrayList<Player> compatiblePlayers = new ArrayList<>();",
+    "resolution": "List<String> enabledEngines = configuration.getEnginesAsList(utils); ArrayList<Player> compatiblePlayers = new ArrayList<Player>();",
+    "conflict": "List<String> enabledEngines = PMS.getConfiguration().getEnginesAsList(PMS.get().getRegistry()); ArrayList<Player> compatiblePlayers = new ArrayList<Player>();"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 57960,
+    "v2": "ac3Remux = params.aid.isAC3() && configuration.isAudioRemuxAC3(); dtsRemux = configuration.isAudioEmbedDtsInPcm() && params.aid.isDTS() && params.mediaRenderer.isDTSPlayable();",
+    "resolution": "ac3Remux = lang.isAC3() && configuration.isAudioRemuxAC3(); dtsRemux = configuration.isAudioEmbedDtsInPcm() && lang.isDTS() && params.mediaRenderer.isDTSPlayable();",
+    "conflict": "ac3Remux = lang.isAC3() && configuration.isRemuxAC3(); dtsRemux = configuration.isDTSEmbedInPCM() && lang.isDTS() && params.mediaRenderer.isDTSPlayable();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 57972,
+    "v2": "df = new DefaultListModel<>(); File[] folders = PMS.get().getFoldersConf();",
+    "resolution": "df = new DefaultListModel<String>(); File[] folders = PMS.get().getFoldersConf();",
+    "conflict": "df = new DefaultListModel<String>(); File[] folders = PMS.get().getFoldersConf(false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57977,
+    "v2": "String tmp = arrs[arrs.length - i - 1]; value = Double.parseDouble(tmp.replace(\",\", \".\"));",
+    "resolution": "String tmp =  arrs[arrs.length - i - 1]; value = Double.parseDouble(tmp.replace(\",\",\".\"));",
+    "conflict": "String tmp =  arrs[arrs.length - i - 1]; value = Double.parseDouble(tmp.replace(\",\",\".\"));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 57981,
+    "v2": "});",
+    "resolution": "} });",
+    "conflict": "} });"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 57987,
+    "v2": "private JCheckBox resume;",
+    "resolution": "private JCheckBox resume;private JCheckBox newmediafolder; private JCheckBox recentlyplayedfolder;",
+    "conflict": "private JCheckBox newmediafolder; private JCheckBox recentlyplayedfolder;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58004,
+    "v2": "public List<String> getVideoFilterOptions(File tempSubs, RendererConfiguration renderer, DLNAMediaInfo media, OutputParams params) throws IOException { List<String> videoFilterOptions = new ArrayList<>();",
+    "resolution": "public List<String> getVideoFilterOptions(File tempSubs, RendererConfiguration renderer, DLNAMediaInfo media, OutputParams params) throws IOException { List<String> videoFilterOptions = new ArrayList<String>();",
+    "conflict": "public List<String> getVideoFilterOptions(RendererConfiguration renderer, DLNAMediaInfo media, OutputParams params) throws IOException { List<String> videoFilterOptions = new ArrayList<String>();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58015,
+    "v2": "import net.pms.io.OutputParams; import static org.apache.commons.io.FilenameUtils.getBaseName; import static org.apache.commons.lang3.StringUtils.*;",
+    "resolution": "import net.pms.io.OutputParams; import static org.apache.commons.io.FilenameUtils.getBaseName; import static org.apache.commons.lang3.StringUtils.*;",
+    "conflict": "import static org.apache.commons.lang3.StringUtils.isBlank;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58035,
+    "v2": "private static final String KEY_FONT = \"mencoder_font\"; // TODO (breaking change): should be renamed to e.g. font",
+    "resolution": "private static final String KEY_FONT = \"mencoder_font\"; // TODO (breaking change): should be renamed to e.g. fontprivate static final String KEY_FOLDERS = \"folders\"; private static final String KEY_FOLDERS_MONITORED = \"folders_monitored\";",
+    "conflict": "private static final String KEY_FOLDERS = \"folders\"; private static final String KEY_FOLDERS_MONITORED = \"folders_monitored\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58042,
+    "v2": "offsetTime = duration;",
+    "resolution": "offsetTime = duration - configuration.getResumeRewind();",
+    "conflict": "offsetTime = duration - configuration.getResumeRewind();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58060,
+    "v2": "public boolean getResume()  {",
+    "resolution": "public boolean getResume() {",
+    "conflict": "public boolean getResume() {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 58078,
+    "v2": "public boolean isSubSelectable() { return true;",
+    "resolution": "public String write() { return getName()+\">\"+getFile().getAbsolutePath();public boolean isSubSelectable() { return true;",
+    "conflict": "public String write() { return getName()+\">\"+getFile().getAbsolutePath();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58112,
+    "v2": "if (res.get(0).getFormat().isVideo() && !mime.equals(\"video/mp4\")) { mime = \"/video/mp4\";",
+    "resolution": "if(res.get(0).getFormat().isVideo()&&!mime.equals(\"video/mp4\")) { mime = \"video/mp4\";",
+    "conflict": "if(res.get(0).getFormat().isVideo()&&!mime.equals(\"video/mp4\")) { mime = \"video/mp4\";"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58114,
+    "v2": "private HttpsServer server; //private HttpServer server1;",
+    "resolution": "private HttpServer server;",
+    "conflict": "private HttpServer server;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58116,
+    "v2": "List<RealFile> res = new ArrayList<>(); File[] files = PMS.get().getFoldersConf();",
+    "resolution": "List<RealFile> res = new ArrayList<>(); File[] files = PMS.get().getFoldersConf(tag);",
+    "conflict": "List<RealFile> res = new ArrayList<RealFile>(); File[] files = PMS.get().getFoldersConf(tag);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 58117,
+    "v2": "List<DLNAResource> res = new ArrayList<>(); List<MapFileConfiguration> mapFileConfs = MapFileConfiguration.parse(configuration.getVirtualFolders());",
+    "resolution": "List<DLNAResource> res = new ArrayList<>(); List<MapFileConfiguration> mapFileConfs = MapFileConfiguration.parse(configuration.getVirtualFolders(tag));",
+    "conflict": "List<DLNAResource> res = new ArrayList<DLNAResource>(); List<MapFileConfiguration> mapFileConfs = MapFileConfiguration.parse(configuration.getVirtualFolders(tag));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58127,
+    "v2": "frame.setStatusCode(0, Messages.getString(\"PMS.130\"), \"icon-status-connecting.png\");",
+    "resolution": "frame.setStatusCode(0, Messages.getString(\"PMS.130\"), \"icon-status-connecting.png\");",
+    "conflict": "frame.setStatusCode(0, Messages.getString(\"PMS.130\"), \"connect_no-220.png\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58150,
+    "v2": "builder.add(table, FormLayoutUtil.flip(cc.xyw(1, 7, 9), colSpec, orientation));",
+    "resolution": "pane = new JScrollPane(table); pane.setPreferredSize(new Dimension(200,200)); builder.add(pane, FormLayoutUtil.flip(cc.xyw(1, 9, 9), colSpec, orientation));",
+    "conflict": "pane = new JScrollPane(table); pane.setPreferredSize(new Dimension(200,200)); builder.add(pane, FormLayoutUtil.flip(cc.xyw(1, 9, 9), colSpec, orientation));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 58158,
+    "v2": "if (command(tmp[0], tmp)) {",
+    "resolution": "if(command(tmp[0], str)) {",
+    "conflict": "if(command(tmp[0], str)) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 58172,
+    "v2": "ProcessBuilder pb = new ProcessBuilder(\"tasklist\",\"/FI\",\"\\\"PID eq \" + pid + \"\\\"\", \"/V\", \"/NH\", \"/FO\", \"CSV\");",
+    "resolution": "ProcessBuilder pb = new ProcessBuilder(\"tasklist\",\"/FI\",\"\\\"PID eq \" + pid + \"\\\"\", \"/V\", \"/NH\", \"/FO\", \"CSV\");",
+    "conflict": "ProcessBuilder pb = new ProcessBuilder(\"tasklist\",\"/FI\",\"\\\"PID eq \" + pid + \"\\\"\", \"/NH\", \"/FO\", \"CSV\");"
+  }
+]
+}
