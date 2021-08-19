@@ -129,14 +129,14 @@ static void executeRegexJarOnline(const char *group_id)
 
         id_array[0] = "/usr/bin/java";
         id_array[1] = "-jar";
-        id_array[2] = "/home/almost-rerere/RandomSearchReplaceTurtle.jar";
-        id_array[3] = "/home/almost-rerere/"; //config.properties path
+        id_array[2] = "RandomSearchReplaceTurtle.jar";
+        id_array[3] = "./"; //config.properties path
 
         //for (int j = 0; j < groupId_list.used; j++) {
             //id_array[j+4] = &groupId_list.array[j];
         //}
         id_array[4] = group_id;
-        id_array[5] = ">/home/almost-rerere/Almost-Rerere/outregexonline.txt";
+        id_array[5] = ">outregexonline.txt";
         id_array[length - 1] = NULL; //terminator need for execv
         printf("JAVA COMMAND:%s \n",id_array[4]);
 
@@ -209,12 +209,12 @@ static void executeRegexJar(const char *group_id,int recluster)
 
         id_array[0] = "/usr/bin/java";
         id_array[1] = "-jar";
-        id_array[2] = "/home/almost-rerere/RandomSearchReplaceTurtle.jar";
+        id_array[2] = "RandomSearchReplaceTurtle.jar";
 	if(recluster==0){
-        	id_array[3] = "/home/almost-rerere/"; //config.properties path
+        	id_array[3] = "./"; //config.properties path
 	}
 	else{
-		id_array[3] = "/home/almost-rerere/alternative/";
+		id_array[3] = "./";
 	}
         //for (int j = 0; j < groupId_list.used; j++) {
             //id_array[j+4] = &groupId_list.array[j];
@@ -1440,10 +1440,10 @@ static void regex_repalce_suggestion(char *conflict, char *resolution,int jid,ch
         close(fd);
 	if(conflict == '\0'){
 		const char* tempConflict=" ";
-        	execl("/usr/bin/java", "/usr/bin/java", "-jar", "/home/almost-rerere/RegexReplacement.jar","/home/almost-rerere/",groupId,tempConflict,(char*)0);
+        	execl("/usr/bin/java", "/usr/bin/java", "-jar", "RegexReplacement.jar","./",groupId,tempConflict,(char*)0);
         }
 	else{ 
-		execl("/usr/bin/java", "/usr/bin/java", "-jar", "/home/almost-rerere/RegexReplacement.jar","/home/almost-rerere/",groupId,conflict,(char*)0);
+		execl("/usr/bin/java", "/usr/bin/java", "-jar", "RegexReplacement.jar","./",groupId,conflict,(char*)0);
         }
     } else { //parent process
         int status;
@@ -1598,10 +1598,10 @@ static void regex_repalce_suggestion_regular(char *conflict, char *resolution)
         close(fd);
         if(conflict == '\0'){
                 const char* tempConflict=" ";
-                execl("/usr/bin/java", "/usr/bin/java", "-jar", "/home/almost-rerere/RegexReplacement.jar","/home/almost-rerere/",groupId,tempConflict,(char*)0);
+                execl("/usr/bin/java", "/usr/bin/java", "-jar", "RegexReplacement.jar","./",groupId,tempConflict,(char*)0);
         }
         else{
-                execl("/usr/bin/java", "/usr/bin/java", "-jar", "/home/almost-rerere/RegexReplacement.jar","/home/almost-rerere/",groupId,conflict,(char*)0);
+                execl("/usr/bin/java", "/usr/bin/java", "-jar", "RegexReplacement.jar","./",groupId,conflict,(char*)0);
         }
     } else { //parent process
         int status;
@@ -1714,9 +1714,19 @@ static void regex_repalce_suggestion_regular(char *conflict, char *resolution)
     printf("Exit: regex_repalce_suggestion\n");
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     printf("starting...\n");
-    struct json_object *file_json = json_object_from_file("joomla-js.json");
+    if(argc==1){
+        printf("No dataset file has been provided\n");
+	return 0;
+    }
+    if(argc>=2)
+    {
+        printf("Dataset: %s\n",argv[1]);
+    }
+
+   
+    struct json_object *file_json = json_object_from_file(argv[1]);
 
 
 

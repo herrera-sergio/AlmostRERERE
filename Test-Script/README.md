@@ -1,6 +1,47 @@
-   # Almost-RERERE Test Script
+# Almost-RERERE Test Script
 This script was used to process the datasets and validate the approach.
 
 ## Compilation and configuration instructions:
-- Step 1: Coming soon
-- Step 2:...
+- **Step 1**: Almost-RERERE uses json-c, you need to clone the repository, compile and install the library. Follow the instructions on <https://github.com/json-c/json-c>
+- **Step 2**: You will need to adjust the 'makefile' depending on your development environment, as follow:
+   macOS - line 25:
+   ```
+		$(CC) $(CFLAGS) $(LDFLAGS) -o almost-rerere main.c
+   ```
+  
+   Ubuntu - line 25:
+    ```   
+    	$(CC) $(CFLAGS)  -o almost-rerere main.c $(LDFLAGS)
+    ```
+   
+   Windows:
+   It depends on the choice of compiler, version of Make tool and IDE. Check the documentation of your development environment.
+
+- **Step 3**: This script used the same folder structure as GIT, you need to create the 2 folders in the directory, to do so execute the following commands. *Notice that the '.git' folder will be created as a hidden folder in linux enviroments.*
+   ```
+    > mkdir .git
+    > cd .git
+    > mkdir rr-cache
+   ```
+
+- **Step 4**: Adjust the paths on the 'configuration.properties' to the absolut path of your folder. For example, the current path for the conflict_file properties looks as follows:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conflict_file=`/home/almost-rerere/almost-test/`.git/rr-cache/conflict_index.json
+It should be changed to:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conflict_file=`/your/local/path/`.git/rr-cache/conflict_index.json
+The path of the 4 properties in the file should be changed.
+
+- **Step 5**:To compile Almost-RERERE execute the following command:
+   ```
+   > make almost-rerere
+   ```
+   The process will compile the code and generate a executable file.
+   
+- **Step 6**: To process a dataset file, execute the script passing the filename as an argument, as in the following example:
+   ```
+   > ./almost-rerere wro4j.json
+   ```
+   The script will output information of the progress to the console. The result of the generated resolutions is saved on the *.git/rr-cache/regex_replace.txt* in CSV format
+   The collumns of the CSV are as follows:
+    ```
+   Version 1, Cluster Id, Similarity,Regex,	Replace exp, Developer Resolution, Automatic Resolution, Version 2,	Developer Decision, Conflict ID
+    ```

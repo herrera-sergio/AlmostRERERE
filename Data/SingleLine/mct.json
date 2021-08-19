@@ -1,0 +1,39 @@
+{"conflicts":
+[
+  {
+    "devdecision": "Version 1",
+    "id": 8051,
+    "v2": "",
+    "resolution": "initialNonTimeMin = delegate.getMinNonTime(); initialNonTimeMax = delegate.getMaxNonTime();",
+    "conflict": "initialNonTimeMin = delegate.getMinNonTime(); initialNonTimeMax = delegate.getMaxNonTime();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 8054,
+    "v2": "",
+    "resolution": "import gov.nasa.arc.mct.services.component.CreateWizardUI; import gov.nasa.arc.mct.services.component.TypeInfo;",
+    "conflict": "import gov.nasa.arc.mct.services.component.CreateWizardUI; import gov.nasa.arc.mct.services.component.TypeInfo;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 8056,
+    "v2": "import gov.nasa.arc.mct.gui.ActionContext; import gov.nasa.arc.mct.gui.ContextAwareButton;",
+    "resolution": "import gov.nasa.arc.mct.gui.ActionContext; import gov.nasa.arc.mct.gui.ContextAwareButton;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8084,
+    "v2": "import gov.nasa.arc.mct.fastplot.bridge.PlotAbstraction.PlotSettings;",
+    "resolution": "import gov.nasa.arc.mct.fastplot.bridge.PlotterPlot; import gov.nasa.arc.mct.fastplot.bridge.PlotAbstraction.PlotSettings;",
+    "conflict": "import gov.nasa.arc.mct.fastplot.bridge.PlotterPlot;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 8100,
+    "v2": "Mockito.when(mockLegendEntry.getNumberRegressionPoints()).thenReturn(15);",
+    "resolution": "Mockito.when(mockLegendEntry.getNumberRegressionPoints()).thenReturn(15); Mockito.when(mockLegendEntry.getLineSettings()).thenReturn(new LineSettings());",
+    "conflict": "Mockito.when(mockLegendEntry.getLineSettings()).thenReturn(new LineSettings());"
+  }
+]
+}
