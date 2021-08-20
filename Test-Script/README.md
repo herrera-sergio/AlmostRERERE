@@ -2,7 +2,12 @@
 This script was used to process the datasets and validate the approach.
 
 ## Configuration and configuration instructions:
-- **Step 1**: Almost-RERERE uses json-c, you need to clone the repository, compile and install the library. Follow the instructions on <https://github.com/json-c/json-c>
+- **Step 1**: Almost-RERERE uses json-c, you need to clone the repository, compile and install the library. Follow the instructions on <https://github.com/json-c/json-c>.
+
+  After installing the library, depending on your distro and system configuration you might need to reboot the system for the changes to take effect, or execute a command to reload the libraries. In ubuntu/debian distros you can execute:
+  ```
+  >sudo ldconfig
+   ```
 - **Step 2**: A 'makefile' is used to compile the script code, You will need to adjust it depending on your development environment, as follow:
    
    macOS - line 25:
