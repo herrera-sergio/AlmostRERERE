@@ -3,7 +3,6 @@
 #include <string.h>
 #include <json-c/json.h>
 #include <zconf.h>
-//#include <cache.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <stdlib.h>  // rand(), srand()
@@ -55,10 +54,6 @@ static double jaro_winkler_distance(const char *s, const char *a) {
     int range = max(0, max(sl, al) / 2 - 1);
     double dw;
     
-    //if(!sl && !al){
-    //    return 1.0;
-    //}
-    //else 
     if (!sl || !al) {
         return 0.0;
     }
@@ -112,7 +107,6 @@ static double jaro_winkler_distance(const char *s, const char *a) {
     /* Jaro-Winkler distance */
     dw = dw + (l * SCALING_FACTOR * (1 - dw));
 
-    //fprintf_ln(stderr, _("jaroW: %lf\n"),dw);
     return dw;
 }
 
@@ -120,10 +114,9 @@ static void executeRegexJarOnline(const char *group_id)
 {
     time_t start;
     time_t end;
-    //if (groupId_list.used) {
+    
     if (group_id) {
 
-        //int length = 6 + groupId_list.used; //groupId_list.nr know only at runtime
         int length = 6 + 1; //groupId_list.nr know only at runtime
         const char **id_array = malloc(sizeof(*id_array) * length);
 
@@ -132,20 +125,16 @@ static void executeRegexJarOnline(const char *group_id)
         id_array[2] = "RandomSearchReplaceTurtle.jar";
         id_array[3] = "./"; //config.properties path
 
-        //for (int j = 0; j < groupId_list.used; j++) {
-            //id_array[j+4] = &groupId_list.array[j];
-        //}
         id_array[4] = group_id;
         id_array[5] = ">outregexonline.txt";
         id_array[length - 1] = NULL; //terminator need for execv
         printf("JAVA COMMAND:%s \n",id_array[4]);
 
-        //TODO adjust the path to jar file
+        
 	time(&start);
         pid_t pid = fork();
         if (pid == 0) { // child process
             /* open /dev/null for writing */
-            //printf("\n\n\nJAR PROCESS IS STARTING IN BACKGROUND!!!!!\n\n\n");
             int fd = open("/dev/null", O_WRONLY);
             dup2(fd, 1);    /* make stdout a copy of fd (> /dev/null) */
             close(fd);
@@ -178,20 +167,11 @@ static void executeRegexJarOnline(const char *group_id)
                 printf("waitpid() failed\n");
            }
 
-	    //wait(&status);
-	    //(void)waitpid(pid, &status, 0)
-            //if(status == -1){
-            //	printf("RandomSearchAndRepalce END With Error\n");
-            //} else{
-	    //	printf("Recluster ended with status:%d\n",status);
-	    //}
 	    
-            //fprintf_ln(stderr, _("\n\n\nGIT PROCESS GO ON !!!!!\n\n\n"));
-            //printf("\n\n\nGIT PROCESS GO ON !!!!!\n\n\n");
         }
         free(id_array);
     }
-    //fprintf_ln(stderr, _("LOG_EXIT: executeRegexJar"));
+    
 
 }
 
@@ -200,10 +180,9 @@ static void executeRegexJar(const char *group_id,int recluster)
 {
     time_t start;
     time_t end;
-	//if (groupId_list.used) {
+	
     if (group_id) {
 
-        //int length = 5 + groupId_list.used; //groupId_list.nr know only at runtime
         int length = 5 + 1; //groupId_list.nr know only at runtime
         const char **id_array = malloc(sizeof(*id_array) * length);
 
@@ -216,19 +195,15 @@ static void executeRegexJar(const char *group_id,int recluster)
 	else{
 		id_array[3] = "./";
 	}
-        //for (int j = 0; j < groupId_list.used; j++) {
-            //id_array[j+4] = &groupId_list.array[j];
-        //}
         id_array[4] = group_id;
         id_array[length - 1] = NULL; //terminator need for execv
 	printf("JAVA COMMAND:%s \n",id_array[4]);	
 
-        //TODO adjust the path to jar file
+        
 	time(&start);
         pid_t pid = fork();
         if (pid == 0) { // child process
             /* open /dev/null for writing */
-            //printf("\n\n\nJAR PROCESS IS STARTING IN BACKGROUND!!!!!\n\n\n");
 	    int fd = open("/dev/null", O_WRONLY);
             dup2(fd, 1);    /* make stdout a copy of fd (> /dev/null) */
             close(fd);
@@ -262,18 +237,11 @@ static void executeRegexJar(const char *group_id,int recluster)
                 printf("waitpid() failed\n");
            }
  
-            //(void)waitpid(pid, &status, 0);
-	    //    if(status == -1){
-	    //        printf("RandomSearchAndRepalce END With Error\n");
-	    //    }
-
-            //fprintf_ln(stderr, _("\n\n\nGIT PROCESS GO ON !!!!!\n\n\n"));
-            //printf("\n\n\nGIT PROCESS GO ON !!!!!\n\n\n");
+            
         }
         free(id_array);
 	
     }
-    //fprintf_ln(stderr, _("LOG_EXIT: executeRegexJar"));
 
 }
 
@@ -320,8 +288,6 @@ static double cluster_cluster_similarity( const struct json_object* val, const s
 
     }
 
-    //printf("%f, %f\n",total_similarity/(arraylen-1),(total_comparison/comparisons));
-    //return (total_similarity/(arraylen-1));
     return (total_comparison/comparisons);
 }
 
@@ -336,7 +302,6 @@ static const char* get_conflict_json_id_empty(char* conflict,char* resolution)
     }
 
     double jaroW = 0 ;
-    //size_t leve = 0 ;
     const char* groupId = NULL;
     double max_sim = similarity_th;
     double local_max_sim=0;
@@ -358,16 +323,7 @@ static const char* get_conflict_json_id_empty(char* conflict,char* resolution)
             jconf = json_object_get_string(json_object_object_get(obj, "conflict"));
             jresol = json_object_get_string(json_object_object_get(obj, "resolution"));
 
-            //if (resolution) {
-                //if (strcmp(conflict, jconf) == 0 && strcmp(resolution, jresol) == 0) {
-                    //fprintf_ln(stderr,
-                    //          _("LOG_EXIT: get_conflict_json_id : conflict and resolution already present in json file\n");
-                    //json_object_put(file_json);
-                    //return NULL;
-                //}
-            //}
-
-            //jaroW = jaro_winkler_distance(conflict,jconf);
+            
             if(strcmp(jconf,"")==0 && strcmp(jresol,"")==0){
 		jaroW = 1;
 	    }else{
@@ -387,14 +343,7 @@ static const char* get_conflict_json_id_empty(char* conflict,char* resolution)
     }
     printf("Regular Local max Similatirt: %f\n",local_max_sim);
     printf("Regular MAX Similatirt: %f\n",max_sim);
-/*
-    if (!groupId && resolution) { //if group == null and resolution != null
-        //create new group id
-        groupId = json_object_to_json_string(json_object_new_int(atoi(idCount)+1));
-    }
-    //json_object_put(file_json);
-    return groupId;
-*/
+
     char * id = malloc(sizeof(char*));
     //json_object_put(file_json);
     if (!groupId && resolution) { //if group == null and resolution != null
@@ -447,14 +396,7 @@ static const char* get_conflict_json_id_empyt_conf(char* conflict,char* resoluti
             jconf = json_object_get_string(json_object_object_get(obj, "conflict"));
             jresol = json_object_get_string(json_object_object_get(obj, "resolution"));
 
-            //if (resolution) {
-                //if (strcmp(conflict, jconf) == 0 && strcmp(resolution, jresol) == 0) {
-                    //fprintf_ln(stderr,
-                    //          _("LOG_EXIT: get_conflict_json_id : conflict and resolution already present in json file\n");
-                 //   json_object_put(file_json);
-                 //   return NULL;
-                //}
-            //}
+            
 	    if(strcmp(jconf,"")==0){
 		jaroW = jaro_winkler_distance(conflict,jresol);
 	    }
@@ -477,14 +419,7 @@ static const char* get_conflict_json_id_empyt_conf(char* conflict,char* resoluti
     }
     printf("Regular Local max Similatirt: %f\n",local_max_sim);
     printf("Regular MAX Similatirt: %f\n",max_sim);
-/*
-    if (!groupId && resolution) { //if group == null and resolution != null
-        //create new group id
-        groupId = json_object_to_json_string(json_object_new_int(atoi(idCount)+1));
-    }
-    //json_object_put(file_json);
-    return groupId;
-*/
+
     char * id = malloc(sizeof(char*));
     //json_object_put(file_json);
     if (!groupId && resolution) { //if group == null and resolution != null
@@ -726,14 +661,7 @@ static const char* get_conflict_json_id_enhanced(struct json_object* file_json, 
         
     }
     printf("ENHANCED MAX Similatirt: %f\n",max_sim);
-/*
-    if (!groupId && resolution) { //if group == null and resolution != null
-        //create new group id
-        groupId = json_object_to_json_string(json_object_new_int(atoi(idCount)+1));
-    }
-    //json_object_put(file_json);
-    return groupId;
-*/
+
     char * id = malloc(sizeof(char*));
     //json_object_put(file_json);
     if (!groupId && resolution) { //if group == null and resolution != null
@@ -927,9 +855,7 @@ static struct json_object *hierarchical_clustering2(const struct json_object* js
     
     json_object_put(jarray);
     json_object_put(schedule_delete);
-    //printf("........................................................................ file_json is null?\n");
-    //printf("new clusters final.........:\n %s\n",json_object_to_json_string_ext(cluster_result,2));
-    //printf("........................................................................ NOT NULL\n");
+    
     return cluster_result;
 }
 
@@ -1061,26 +987,11 @@ static struct json_object *hierarchical_clustering(const struct json_object* jso
             json_object_array_add(jarray,obj2);
             cluster_flags[max_sim_index]=cluster_flags[i];
         }
-        //printf("Pairs: %d - %d : %f\n",i,max_sim_index,max_sim);
+        
         i++;
     }
 
-    //printf("new clusters: %s\n",json_object_to_json_string_ext(file_json,2));
-    //printf("Indexes: \n");
-    //for(int i=0;i<cl;i++){
-    //printf("%d,",cluster_flags[i]);
-    //}
-    //printf("\n");
-    //printf("Average Intrasimilarity2: %f\n",average_intrasimilarity(file_json));
-    /*int total=0;
-    json_object_object_foreach(file_json,key,val){
-        obj1 = NULL;
-        jarray = json_object_new_array();
-        int arraylen = json_object_array_length(val);
-        //printf("cluster %d: %d \n",key,arraylen);
-        total=total+arraylen;
-    }*/
-    //printf("Conflict extraction size: %d\n",total);
+    
     return file_json;
 }
 
@@ -1100,41 +1011,7 @@ static struct json_object *recluster(const struct json_object* file_json){
             json_object_array_add(jarray,json_object_get(obj));
         }
     }
-    //printf("Conflict extraction size: %d\n",json_object_array_length(jarray));
-
-    /*FILE *fp = fopen("C:\\Users\\Sergio\\Documents\\AlmostRERERE\\intracluster\\conflict.json","w");
-    if (!fp){
-        printf("Exit: write_json_object: not open FILE conflict_index\n");
-        //return 0;
-    }
-    fprintf(fp,"%s", json_object_to_json_string_ext(jarray,2));
-    fclose(fp);
-    */
-    //printf("randomizing: \n");
-        /*int size = json_object_array_length(jarray);
-        while(size>0){
-            obj = NULL;
-            srand(time(NULL));
-            int nMax=json_object_array_length(jarray)-1;
-            int nRandonNumber = rand()%((nMax+1)-0) + 0;
-            obj2 = json_object_array_get_idx(jarray,nRandonNumber);
-
-            json_object_array_add(jarray2,json_object_get(obj2));
-
-            json_object_array_del_idx(jarray,nRandonNumber,1);
-            size= json_object_array_length(jarray);
-        }*/
-    //printf("Conflict radomization size: %d\n",json_object_array_length(jarray2));
-
-    /*FILE *fp2 = fopen("C:\\Users\\Sergio\\Documents\\AlmostRERERE\\intracluster\\conflict_random.json","w");
-    if (!fp2){
-        printf("Exit: write_json_object: not open FILE conflict_index\n");
-        //return 0;
-    }
-    fprintf(fp2,"%s", json_object_to_json_string_ext(jarray2,2));
-    fclose(fp2);*/
-    //printf("Randomization finished... \n");
-    //json_object_put(jarray);
+    
     json_object_put(jarray2);
     //return hierarchical_clustering(jarray);
     return hierarchical_clustering2(jarray);
@@ -1733,7 +1610,7 @@ int main(int argc, char *argv[]) {
 
     printf("file read...\n");
     if (!file_json){ // if file is empty
-        printf("The file is empty or something.\n");
+        printf("The file is empty, does not exist or is not a valid json file.\n");
 	return 0;
     }
     struct json_object *obj;
@@ -1745,7 +1622,7 @@ int main(int argc, char *argv[]) {
     int jid=0;
     int arraylen;
 
-    // ant_output.json: 156960
+    
     cluster_population=1;
     printf("processing...");
     json_object_object_foreach(file_json,key,val){
