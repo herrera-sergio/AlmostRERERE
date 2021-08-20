@@ -1,7 +1,7 @@
 # Almost-RERERE Test Script
 This script was used to process the datasets and validate the approach.
 
-## Configuration and configuration instructions:
+## Configuration and compilation instructions:
 - **Step 1**: Almost-RERERE uses json-c, you need to clone the repository, compile and install the library. Follow the instructions on <https://github.com/json-c/json-c>.
 
   After installing the library, depending on your distro and system configuration you might need to reboot the system for the changes to take effect, or execute a command to reload the libraries. In ubuntu/debian distros you can execute:
@@ -52,6 +52,7 @@ This script was used to process the datasets and validate the approach.
    ```
    The process will compile the code and generate a executable file.
    
+## Usage instructions:
 - **Step 7**: To process a dataset file, execute the script passing the filename as an argument. Example:
    ```
    > ./almost-rerere wro4j.json

@@ -24,7 +24,7 @@ including full documentation and Git related tools.
 
 >:warning: **Warning: Following this procedure will replace your current installation of Git, to return to the official version of Git you will have to reinstall it from the official sources**
 
-## Configuration and configuration instructions:
+## Configuration and Compilation instructions:
 - **Step 1**: Almost-RERERE uses json-c, you need to clone the repository, compile and install the library. Follow the instructions on <https://github.com/json-c/json-c>.
 
   After installing the library, depending on your distro and system configuration you might need to reboot the system for the changes to take effect, or execute a command to reload the libraries. In ubuntu/debian distros you can execute:
@@ -82,21 +82,26 @@ including full documentation and Git related tools.
    ```
 - **Step 7**: You can now compile Git following the instruction provide in the file [INSTALL][]. In most cases, you will need only to execute the following commands:
    ```
-   >sudo ldconfig
+   >make
+   >make install
+   ```
+   But please refer to the installation documentation before proceeding with this step, since your current Git installation will be overwritten.
+
+## Usage instructions:
+You need to setup Almost RERERE to start using it with your git project.
+- **Step 7**: You need to enable Git RERERE, this can be done at project level by creating the *'rr-cache'* folder under the *'.git'* folder of the project. It can be done executing the mkdir command inside the folder:
+   ```
+   ~/your_project/.git> mkdir rr-cache 
    ```
 
+- **Step 8**: Adjust the paths on the 'configuration.properties' file (on the location specified in Step 5) to the absolut path of *your project*. For example, the current path for the conflict_file property looks as follows:
 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conflict_file=`/home/almost-rerere/almost-test/`.git/rr-cache/conflict_index.json
 
- - Compile git project
- - Enable Rerere : create .git/rr-cache/ directory
- - Prepare additional java components:
-    - clone <https://github.com/manantariq/Search-and-Replace>
-    - Update the path in config.properties
-    - Update the path in rerere.c for RandomSearchReplaceTurtle.jar and RegexReplacement.jar
+   It should be changed to:
 
-[INSTALL]: INSTALL
-[Documentation/gittutorial.txt]: Documentation/gittutorial.txt
-[Documentation/giteveryday.txt]: Documentation/giteveryday.txt
-[Documentation/gitcvs-migration.txt]: Documentation/gitcvs-migration.txt
-[Documentation/SubmittingPatches]: Documentation/SubmittingPatches
-Please read the file [INSTALL][] for installation instructions.
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conflict_file=`/path/of/your/project/`.git/rr-cache/conflict_index.json
+
+   The path of the 4 properties in the file should be changed.
+
+-**Step 9**: Almost RERERE will work automatically on background when certain Git commands are executed(merge, am, rebase, commit), when a conflict emerge and a resolution can be computed, the tool will display the proposed solution on the git console.
