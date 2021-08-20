@@ -36,13 +36,18 @@ This script was used to process the datasets and validate the approach.
 
    The path of the 4 properties in the file should be changed.
 
-- **Step 5**: To compile Almost-RERERE execute the following command:
+- **Step 5**: Almost RERERE uses the zlib library, some distributions on linux include it by default, verify that the library is present in the /usr/include folder before trying to compile the script. In case the library is not present, install it before going forward. In ubuntu/debian distros it can be installed with the following command:
+   ```
+   > sudo apt-get install libz-dev
+   ```
+
+- **Step 6**: To compile Almost RERERE execute the following command:
    ```
    > make almost-rerere
    ```
    The process will compile the code and generate a executable file.
    
-- **Step 6**: To process a dataset file, execute the script passing the filename as an argument. Example:
+- **Step 7**: To process a dataset file, execute the script passing the filename as an argument. Example:
    ```
    > ./almost-rerere wro4j.json
    ```
