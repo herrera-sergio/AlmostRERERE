@@ -1,7 +1,9 @@
 [![Build Status](https://dev.azure.com/git/git/_apis/build/status/git.git)](https://dev.azure.com/git/git/_build/latest?definitionId=11)
 
+
 Git - fast, scalable, distributed revision control system
 =========================================================
+This is a clone of the Git repository<https://github.com/git/git>, that has been modified to integrate and test the Almost RERERE approach.
 
 Git is a fast, scalable, distributed revision control system with an
 unusually rich command set that provides both high-level operations
@@ -12,68 +14,33 @@ License version 2 (some parts of it are under different licenses,
 compatible with the GPLv2). It was originally written by Linus
 Torvalds with help of a group of hackers around the net.
 
-Please read the file [INSTALL][] for installation instructions.
-
 Many Git online resources are accessible from <https://git-scm.com/>
 including full documentation and Git related tools.
 
-See [Documentation/gittutorial.txt][] to get started, then see
-[Documentation/giteveryday.txt][] for a useful minimum set of commands, and
-`Documentation/git-<commandname>.txt` for documentation of each command.
-If git has been correctly installed, then the tutorial can also be
-read with `man gittutorial` or `git help tutorial`, and the
-documentation of each command with `man git-<commandname>` or `git help
-<commandname>`.
 
-CVS users may also want to read [Documentation/gitcvs-migration.txt][]
-(`man gitcvs-migration` or `git help cvs-migration` if git is
-installed).
+Please read the file [INSTALL][] for installation instructions.
 
-The user discussion and development of Git take place on the Git
-mailing list -- everyone is welcome to post bug reports, feature
-requests, comments and patches to git@vger.kernel.org (read
-[Documentation/SubmittingPatches][] for instructions on patch submission).
-To subscribe to the list, send an email with just "subscribe git" in
-the body to majordomo@vger.kernel.org. The mailing list archives are
-available at <https://public-inbox.org/git/>,
-<http://marc.info/?l=git> and other archival sites.
 
-Issues which are security relevant should be disclosed privately to
-the Git Security mailing list <git-security@googlegroups.com>.
-
-The maintainer frequently sends the "What's cooking" reports that
-list the current status of various development topics to the mailing
-list.  The discussion following them give a good reference for
-project status, development direction and remaining tasks.
-
-The name "git" was given by Linus Torvalds when he wrote the very
-first version. He described the tool as "the stupid content tracker"
-and the name as (depending on your mood):
-
- - random three-letter combination that is pronounceable, and not
-   actually used by any common UNIX command.  The fact that it is a
-   mispronunciation of "get" may or may not be relevant.
- - stupid. contemptible and despicable. simple. Take your pick from the
-   dictionary of slang.
- - "global information tracker": you're in a good mood, and it actually
-   works for you. Angels sing, and a light suddenly fills the room.
- - "goddamn idiotic truckload of sh*t": when it breaks
- 
- 
- 
- Git - Almost-Rerere
+ Git - Almost RERERE
  =========================================================
- - clone and install json-c <https://github.com/json-c/json-c>
- - Update git MakeFile like this:
+ Almost RERERE extends the capabilities of Git RERERE. Git code has been modified, the compilation and installation process of Git requires changes explained in the following.
+
+>:warning: Warning: **Following this procedure will replace your current installation of Git, to return to the official version of Git you will have to reinstall it from the official sources**
+
+## Configuration and configuration instructions:
+- **Step 1**: Almost-RERERE uses json-c, you need to clone the repository, compile and install the library. Follow the instructions on <https://github.com/json-c/json-c>
+
+- **Step 2**: Git uses a 'makefile' to compile the code, You will need to modify the file depending on your development environment, as follow:
    
-   macOS - line 1187:
+   For macOS, you will need to modify 1 block - line 1187:
    ```
    JSON_CFLAGS += $(shell pkg-config --cflags json-c)
    JSON_LDFLAGS += $(shell pkg-config --libs json-c)
    ALL_CFLAGS = $(DEVELOPER_CFLAGS) $(CPPFLAGS) $(CFLAGS) $(JSON_CFLAGS)
    ALL_LDFLAGS = $(LDFLAGS) $(JSON_LDFLAGS)
    ```   
-   linux - line 1188:
+   For linux enviroments (Ubuntu), modifications are required in 2 blocks
+   First - line 1188:
     ```   
     JSON_C_DIR=/usr/local
     CFLAGS += -I$(JSON_C_DIR)/include/json-c
@@ -83,10 +50,11 @@ and the name as (depending on your mood):
     ALL_LDFLAGS = $(LDFLAGS) $(JSON_LDFLAGS)
     ```
    
-   linux - line 1977:
+   Second - line 1977:
    ```   
    LIBS = $(filter-out %.o, $(GITLIBS)) $(EXTLIBS)  -ljson-c
    ``` 
+   
  - Compile git project
  - Enable Rerere : create .git/rr-cache/ directory
  - Prepare additional java components:
