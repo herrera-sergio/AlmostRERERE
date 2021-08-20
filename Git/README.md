@@ -65,22 +65,22 @@ including full documentation and Git related tools.
    /almost-rerere/
    ```
 
-- **Step 5**: If you select a different location that the above mention, you will have to update the path on the rerere.c file. as follows:
+- **Step 5**: If you select a different location that the above mention, you will have to update the path on the rerere.c file. Modify path as indicated in the following:
 
    Line  938:
 
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;execl("/usr/bin/java", "/usr/bin/java", "-jar", "`/almost-rerere/`RegexReplacement.jar","/almost-rerere/",groupId,conflict,(char*)0);
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;execl("/usr/bin/java", "/usr/bin/java", "-jar", "`/almost-rerere/`RegexReplacement.jar","`/almost-rerere/`",groupId,conflict,(char*)0);
 
    Line 2118:
 
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id_array[2] = "`/almost-rerere/`RandomSearchReplaceTurtle.jar";
 
    If you put the files in the above location you can omit this step.
-- **Step 6**: Almost RERERE uses the zlib library, some distributions on linux include it by default, verify that the library is present in the /usr/include folder before trying to compile the script. In case the library is not present, install it before going forward. In ubuntu/debian distros it can be installed with the following command:
+- **Step 6**: Almost RERERE uses the zlib library, some distributions on linux include it by default, verify that the library is present on the `/usr/include` folder before trying to compile the script. In case the library is not present, install it before going forward. In ubuntu/debian distros it can be installed with the following command:
    ```
    > sudo apt-get install libz-dev
    ```
-- **Step 7**: You can now compile Git following the instruction provide in the file [INSTALL][]. In most cases, you will need only to execute the following commands:
+- **Step 7**: You can now compile Git following the instruction provide in the file [INSTALL](https://github.com/herrera-sergio/AlmostRERERE/blob/main/Git/INSTALL). In most cases, you will need only to execute the following commands:
    ```
    >make
    >make install

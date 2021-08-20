@@ -8,7 +8,7 @@ This script was used to process the datasets and validate the approach.
   ```
   >sudo ldconfig
    ```
-- **Step 2**: A 'makefile' is used to compile the script code, You will need to adjust it depending on your development environment, as follow:
+- **Step 2**: A 'makefile' is used to compile the script code, You will need to adjust it depending on your development environment, as follows:
    
    macOS - line 25:
    ```
