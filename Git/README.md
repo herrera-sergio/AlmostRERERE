@@ -80,7 +80,7 @@ including full documentation and Git related tools.
    ```
    > sudo apt-get install libz-dev
    ```
-- **Step 7**: You can now compile Git following the instruction provide in the file [INSTALL](https://github.com/herrera-sergio/AlmostRERERE/blob/main/Git/INSTALL). In most cases, you will need only to execute the following commands:
+- **Step 7**: You can now compile Git following the instructions provided in the file [INSTALL](https://github.com/herrera-sergio/AlmostRERERE/blob/main/Git/INSTALL). In most cases, you will need only to execute the following commands:
    ```
    >make
    >make install
