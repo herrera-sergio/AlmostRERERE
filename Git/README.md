@@ -61,23 +61,31 @@ including full documentation and Git related tools.
    **_For Windows_**, It depends on the choice of compiler, version of Make tool and IDE. Most of the tools follow linux syntax, check the documentation of your development environment.
 
 - **Step 4**: Copy the content of the rerere-lib folder to a location in your system that is available for Git to use, and give read and execution permissions. The current location is:
-```
-/almost-rerere/
-```
+   ```
+   /almost-rerere/
+   ```
 
 - **Step 5**: If you select a different location that the above mention, you will have to update the path on the rerere.c file. as follows:
 
-Line  938:
-```
-execl("/usr/bin/java", "/usr/bin/java", "-jar", "/almost-rerere/RegexReplacement.jar","/almost-rerere/",groupId,conflict,(char*)0);
-```
+   Line  938:
 
-Line 2118:
-```
-id_array[2] = "`/almost-rerere/`RandomSearchReplaceTurtle.jar";
-```
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;execl("/usr/bin/java", "/usr/bin/java", "-jar", "`/almost-rerere/`RegexReplacement.jar","/almost-rerere/",groupId,conflict,(char*)0);
 
-If you put the files in the above location you can omit this step.
+   Line 2118:
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id_array[2] = "`/almost-rerere/`RandomSearchReplaceTurtle.jar";
+
+   If you put the files in the above location you can omit this step.
+- **Step 6**: Almost RERERE uses the zlib library, some distributions on linux include it by default, verify that the library is present in the /usr/include folder before trying to compile the script. In case the library is not present, install it before going forward. In ubuntu/debian distros it can be installed with the following command:
+   ```
+   > sudo apt-get install libz-dev
+   ```
+- **Step 7**: You can now compile Git following the instruction provide in the file [INSTALL][]. In most cases, you will need only to execute the following commands:
+   ```
+   >sudo ldconfig
+   ```
+
+
 
  - Compile git project
  - Enable Rerere : create .git/rr-cache/ directory
