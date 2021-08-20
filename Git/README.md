@@ -55,7 +55,7 @@ including full documentation and Git related tools.
 
    **_For Windows_**, It depends on the choice of compiler, version of Make tool and IDE. Most of the tools follow linux syntax, check the documentation of your development environment.
 
-- **Step 4**:
+- **Step 4**: Copy the content of the rerere-lib folder[rerere-lib][] to a location in your system that is available for Git to use, and give read and execution permissions.
 
 
  - Compile git project
