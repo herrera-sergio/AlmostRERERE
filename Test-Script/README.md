@@ -22,7 +22,7 @@ This script was used to process the datasets and validate the approach.
    
    Windows:
 
-   It depends on the choice of compiler, version of Make tool and IDE. Check the documentation of your development environment.
+   It depends on the choice of compiler, version of Make tool and IDE. Most of the tools follow linux syntax, check the documentation of your development environment.
 
 - **Step 3**: This script uses the same folder structure as GIT, you need to create the 2 folders in the directory, to do so execute the following commands. *Notice that the '.git' folder will be created as a hidden folder in linux enviroments.*
    ```
