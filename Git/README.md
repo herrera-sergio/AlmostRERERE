@@ -94,7 +94,7 @@ You need to setup Almost RERERE to start using it with your git project.
    ~/your_project/.git> mkdir rr-cache 
    ```
 
-- **Step 8**: Adjust the paths on the 'configuration.properties' file (on the location specified in Step 5) to the absolut path of *your project*. For example, the current path for the conflict_file property looks as follows:
+- **Step 8**: Adjust the paths on the 'configuration.properties' file (on the location specified in Step 5) to the absolute path of *your project*. For example, the current path for the conflict_file property looks as follows:
 
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conflict_file=`/home/almost-rerere/almost-test/`.git/rr-cache/conflict_index.json
 
@@ -104,4 +104,4 @@ You need to setup Almost RERERE to start using it with your git project.
 
    The path of the 4 properties in the file should be changed.
 
--**Step 9**: Almost RERERE will work automatically on background when certain Git commands are executed(merge, am, rebase, commit), when a conflict emerge and a resolution can be computed, the tool will display the proposed solution on the git console.
+- **Step 9**: Almost RERERE will work automatically on background when certain Git commands are executed(merge, am, rebase, commit), when a conflict emerges and a resolution can be computed the tool will display the proposed solution on the git console.
