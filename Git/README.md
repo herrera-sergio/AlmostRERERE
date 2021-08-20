@@ -1,6 +1,101 @@
-   # Almost-RERERE GIT
-This a version of git integrating almost-rerere.
+[![Build Status](https://dev.azure.com/git/git/_apis/build/status/git.git)](https://dev.azure.com/git/git/_build/latest?definitionId=11)
 
-## Compilation and configuration instructions:
-- Step 1: Coming soon
-- Step 2:...
+Git - fast, scalable, distributed revision control system
+=========================================================
+
+Git is a fast, scalable, distributed revision control system with an
+unusually rich command set that provides both high-level operations
+and full access to internals.
+
+Git is an Open Source project covered by the GNU General Public
+License version 2 (some parts of it are under different licenses,
+compatible with the GPLv2). It was originally written by Linus
+Torvalds with help of a group of hackers around the net.
+
+Please read the file [INSTALL][] for installation instructions.
+
+Many Git online resources are accessible from <https://git-scm.com/>
+including full documentation and Git related tools.
+
+See [Documentation/gittutorial.txt][] to get started, then see
+[Documentation/giteveryday.txt][] for a useful minimum set of commands, and
+`Documentation/git-<commandname>.txt` for documentation of each command.
+If git has been correctly installed, then the tutorial can also be
+read with `man gittutorial` or `git help tutorial`, and the
+documentation of each command with `man git-<commandname>` or `git help
+<commandname>`.
+
+CVS users may also want to read [Documentation/gitcvs-migration.txt][]
+(`man gitcvs-migration` or `git help cvs-migration` if git is
+installed).
+
+The user discussion and development of Git take place on the Git
+mailing list -- everyone is welcome to post bug reports, feature
+requests, comments and patches to git@vger.kernel.org (read
+[Documentation/SubmittingPatches][] for instructions on patch submission).
+To subscribe to the list, send an email with just "subscribe git" in
+the body to majordomo@vger.kernel.org. The mailing list archives are
+available at <https://public-inbox.org/git/>,
+<http://marc.info/?l=git> and other archival sites.
+
+Issues which are security relevant should be disclosed privately to
+the Git Security mailing list <git-security@googlegroups.com>.
+
+The maintainer frequently sends the "What's cooking" reports that
+list the current status of various development topics to the mailing
+list.  The discussion following them give a good reference for
+project status, development direction and remaining tasks.
+
+The name "git" was given by Linus Torvalds when he wrote the very
+first version. He described the tool as "the stupid content tracker"
+and the name as (depending on your mood):
+
+ - random three-letter combination that is pronounceable, and not
+   actually used by any common UNIX command.  The fact that it is a
+   mispronunciation of "get" may or may not be relevant.
+ - stupid. contemptible and despicable. simple. Take your pick from the
+   dictionary of slang.
+ - "global information tracker": you're in a good mood, and it actually
+   works for you. Angels sing, and a light suddenly fills the room.
+ - "goddamn idiotic truckload of sh*t": when it breaks
+ 
+ 
+ 
+ Git - Almost-Rerere
+ =========================================================
+ - clone and install json-c <https://github.com/json-c/json-c>
+ - Update git MakeFile like this:
+   
+   macOS - line 1187:
+   ```
+   JSON_CFLAGS += $(shell pkg-config --cflags json-c)
+   JSON_LDFLAGS += $(shell pkg-config --libs json-c)
+   ALL_CFLAGS = $(DEVELOPER_CFLAGS) $(CPPFLAGS) $(CFLAGS) $(JSON_CFLAGS)
+   ALL_LDFLAGS = $(LDFLAGS) $(JSON_LDFLAGS)
+   ```   
+   linux - line 1188:
+    ```   
+    JSON_C_DIR=/usr/local
+    CFLAGS += -I$(JSON_C_DIR)/include/json-c
+    LDFLAGS+= -L$(JSON_C_DIR)/lib -ljson-c
+    
+    ALL_CFLAGS = $(DEVELOPER_CFLAGS) $(CPPFLAGS) $(CFLAGS) $(JSON_CFLAGS)
+    ALL_LDFLAGS = $(LDFLAGS) $(JSON_LDFLAGS)
+    ```
+   
+   linux - line 1977:
+   ```   
+   LIBS = $(filter-out %.o, $(GITLIBS)) $(EXTLIBS)  -ljson-c
+   ``` 
+ - Compile git project
+ - Enable Rerere : create .git/rr-cache/ directory
+ - Prepare additional java components:
+    - clone <https://github.com/manantariq/Search-and-Replace>
+    - Update the path in config.properties
+    - Update the path in rerere.c for RandomSearchReplaceTurtle.jar and RegexReplacement.jar
+
+[INSTALL]: INSTALL
+[Documentation/gittutorial.txt]: Documentation/gittutorial.txt
+[Documentation/giteveryday.txt]: Documentation/giteveryday.txt
+[Documentation/gitcvs-migration.txt]: Documentation/gitcvs-migration.txt
+[Documentation/SubmittingPatches]: Documentation/SubmittingPatches
