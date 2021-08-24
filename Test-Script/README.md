@@ -1,6 +1,9 @@
 # Almost-RERERE Test Script
 This script was used to process the datasets and validate the approach.
 
+## Requirements:
+-Java 8 or later
+
 ## Configuration and compilation instructions:
 - **Step 1**: Almost-RERERE uses json-c, you need to clone the repository, compile and install the library. Follow the instructions on <https://github.com/json-c/json-c>.
 
@@ -53,9 +56,9 @@ This script was used to process the datasets and validate the approach.
    The process will compile the code and generate a executable file.
    
 ## Usage instructions:
-- **Step 7**: To process a dataset file, execute the script passing the filename as an argument. Example:
+- **Step 7**: To process a dataset file, execute the script passing the filename as an argument You can use any of the dataset files included in the [Data](https://github.com/herrera-sergio/AlmostRERERE/tree/main/Data) folder. Example:
    ```
-   > ./almost-rerere wro4j.json
+   > ./almost-rerere ../Data/SingleLine/wro4j.json
    ```
    The script will output information of the progress to the console. The result of the generated resolutions is saved on the *.git/rr-cache/regex_replace_result.txt* in CSV format.
    The columns of the CSV are as follows:
