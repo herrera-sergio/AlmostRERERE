@@ -598,7 +598,7 @@ static double average_intrasimilarity(const struct json_object *file_json) {
 
 
 static const char *get_conflict_json_id_enhanced(struct json_object *file_json, char *conflict, char *resolution) {
-    //struct json_object *file_json = json_object_from_file(".git/rr-cache/conflict_index.json");
+
     if (!file_json) { // if file is empty
         if (!resolution) { //resolution is NULL
             return NULL;
@@ -635,10 +635,6 @@ static const char *get_conflict_json_id_enhanced(struct json_object *file_json, 
 
             if (resolution) {
                 if (strcmp(conflict, jconf) == 0 && strcmp(resolution, jresol) == 0) {
-                    //fprintf_ln(stderr,
-                    //          _("LOG_EXIT: get_conflict_json_id : conflict and resolution already present in json file\n");
-                    //comments because should no be closed as pass as parameter
-                    //json_object_put(file_json);
                     return NULL;
                 }
             }
@@ -668,15 +664,8 @@ static const char *get_conflict_json_id_enhanced(struct json_object *file_json, 
         }
 
     }
-    printf("ENHANCED MAX Similatirt: %f\n", max_sim);
-/*
-    if (!groupId && resolution) { //if group == null and resolution != null
-        //create new group id
-        groupId = json_object_to_json_string(json_object_new_int(atoi(idCount)+1));
-    }
-    //json_object_put(file_json);
-    return groupId;
-*/
+    printf("ENHANCED MAX Similarity: %f\n", max_sim);
+
     char *id = malloc(sizeof(char *));
     //json_object_put(file_json);
     if (!groupId && resolution) { //if group == null and resolution != null
@@ -1269,7 +1258,6 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
         file_json = json_object_new_object();
 
     const char *group_id = get_conflict_json_id_enhanced(file_json, conflict, resolution);
-
 
     if (!group_id) {
         printf("Exit: write_json_conflict_index NO groupID------------ENHANCED------------\n");
