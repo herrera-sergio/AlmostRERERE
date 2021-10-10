@@ -324,7 +324,7 @@ static const char *get_conflict_json_id_empty(char *conflict, char *resolution) 
     }
 
     double jaroW = 0;
-    //size_t leve = 0 ;
+
     const char *groupId = NULL;
     double max_sim = similarity_th;
     double local_max_sim = 0;
@@ -419,21 +419,12 @@ static const char *get_conflict_json_id_empty_conf(char *conflict, char *resolut
             jconf = json_object_get_string(json_object_object_get(obj, "conflict"));
             jresol = json_object_get_string(json_object_object_get(obj, "resolution"));
 
-            //if (resolution) {
-            //if (strcmp(conflict, jconf) == 0 && strcmp(resolution, jresol) == 0) {
-            //fprintf_ln(stderr,
-            //          _("LOG_EXIT: get_conflict_json_id : conflict and resolution already present in json file\n");
-            //   json_object_put(file_json);
-            //   return NULL;
-            //}
-            //}
             if (strcmp(jconf, "") == 0) {
+                //TODO check if necessary
                 jaroW = jaro_winkler_distance(conflict, jresol);
             } else {
                 jaroW = 0;
             }
-
-            //jaroW = jaro_winkler_distance(conflict,jresol);
             total_similarity += jaroW;
         }
         double avg = total_similarity / arraylen;
@@ -447,15 +438,8 @@ static const char *get_conflict_json_id_empty_conf(char *conflict, char *resolut
         }
     }
     printf("Regular Local max Similatirt: %f\n", local_max_sim);
-    printf("Regular MAX Similatirt: %f\n", max_sim);
-/*
-    if (!groupId && resolution) { //if group == null and resolution != null
-        //create new group id
-        groupId = json_object_to_json_string(json_object_new_int(atoi(idCount)+1));
-    }
-    //json_object_put(file_json);
-    return groupId;
-*/
+    printf("Regular MAX Similarity: %f\n", max_sim);
+
     char *id = malloc(sizeof(char *));
     //json_object_put(file_json);
     if (!groupId && resolution) { //if group == null and resolution != null
@@ -472,9 +456,9 @@ static const char *get_conflict_json_id_empty_conf(char *conflict, char *resolut
     }
 
     return id;
-
 }
 
+//get cluster id?
 static const char *get_conflict_json_id(char *conflict, char *resolution) {
     struct json_object *file_json = json_object_from_file(".git/rr-cache/conflict_index.json");
     if (!file_json) { // if file is empty
@@ -531,7 +515,6 @@ static const char *get_conflict_json_id(char *conflict, char *resolution) {
     printf("Regular MAX Similarity: %f\n", max_sim);
 
     char *id = malloc(sizeof(char *));
-    //json_object_put(file_json);
     if (!groupId && resolution) { //if group == null and resolution != null
         //create new group id
         json_object_put(file_json);
@@ -1357,7 +1340,7 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
     return 1;
 }
 
-//static void regex_repalce_suggestion(char *conflict, char *resolution,int jid,char *jv1,char *jv2,char *jdec)
+//static void regex_replace_suggestion(char *conflict, char *resolution,int jid,char *jv1,char *jv2,char *jdec)
 static void regex_replace_suggestion(char *conflict, char *resolution, int jid, char *jv2, char *jdec) {
     printf("Enter: regex_replace_suggestion\n");
     const char *groupId = get_conflict_json_id(conflict, NULL);
@@ -1381,17 +1364,13 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
             printf("Non of the cases   ----regular---- %s\n", groupId);
         }
     }
-    //printf("groupId:%s\n",groupId);
+
     if (!groupId) {
         printf("Exit: regex_replace_suggestion: No GroupId-----------------regular--------------------\n");
         return;
     } else {
         printf("Group is , and continues   ----regular---- %s\n", groupId);
     }
-
-
-
-    //printf("Group is %s, and continues\n",groupId);SE EMPTY CONFLICT AND RESOLUTION   ----regular---- %s\n", groupId);
 
     pid_t pid = fork();
     if (pid == 0) { // child process
@@ -1422,7 +1401,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
             if (ftell(fp) == 0) {
                 printf("file is empty\n");
                 unlink(".git/rr-cache/string_replace.txt");
-                printf("Exit: regex_repalce_suggestion\n");
+                printf("Exit: regex_replace_suggestion\n");
                 return;
             }
             fseek(fp, 0, SEEK_SET);
@@ -1501,7 +1480,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                 replace1[strcspn(replace1, "\n")] = 0;
                 res1[strcspn(res1, "\n")] = 0;
                 resolution = escapeCSV(resolution);
-                //fprintf(fp,"\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n",conflict,groupId,jw1,regex1,replace1,resolution,res1,jv1,jv2,jdec,jid);
+
                 fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n", conflict,
                         groupId, jw1, regex1, replace1, resolution, res1, jv2, jdec, jid);
                 free(conflict);
@@ -1512,15 +1491,15 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
             fclose(fp);
             unlink(".git/rr-cache/string_replace.txt");
         } else {
-            printf("Exit: regex repalce jar end with error\n");
+            printf("Exit: regex replace jar end with error\n");
         }
     }
-    printf("Exit: regex_repalce_suggestion\n");
+    printf("Exit: regex_replace_suggestion\n");
 }
 
 //Old version
 static void regex_repalce_suggestion_regular(char *conflict, char *resolution) {
-    printf("Enter: regex_repalce_suggestion\n");
+    printf("Enter: regex_replace_suggestion\n");
     const char *groupId = get_conflict_json_id(conflict, NULL);
 
     if (!groupId || strcmp(groupId, "0") == 0) {
@@ -1533,24 +1512,20 @@ static void regex_repalce_suggestion_regular(char *conflict, char *resolution) {
             groupId = get_conflict_json_id_empty(conflict, NULL);
             printf("CASE EMPTY CONFLICT AND RESOLUTION   ----regular---- %s\n", groupId);
         } else if (strcmp(conflict, "") == 0 && strcmp(resolution, "") == 1) {
-            groupId = get_conflict_json_id_empyt_conf(resolution, NULL);
+            groupId = get_conflict_json_id_empty_conf(resolution, NULL);
             printf("CASE EMPTY CONFLICT AND WITH RESOLUTION   ----regular---- %s\n", groupId);
         } else {
             //nothing to do
-            printf("Non of the cases   ----regular---- %s\n", groupId);
+            printf("Non of the cases  ----regular---- %s\n", groupId);
         }
     }
-    //printf("groupId:%s\n",groupId);
+
     if (!groupId) {
-        printf("Exit: regex_repalce_suggestion: No GroupId-----------------regular--------------------\n");
+        printf("Exit: regex_replace_suggestion: No GroupId-----------------regular--------------------\n");
         return;
     } else {
         printf("Group is , and continues   ----regular---- %s\n", groupId);
     }
-
-
-
-    //printf("Group is %s, and continues\n",groupId);SE EMPTY CONFLICT AND RESOLUTION   ----regular---- %s\n", groupId);
 
     pid_t pid = fork();
     if (pid == 0) { // child process
@@ -1559,7 +1534,7 @@ static void regex_repalce_suggestion_regular(char *conflict, char *resolution) {
         dup2(fd, 1);    /* make stdout a copy of fd (> /dev/null) */
         //dup2(fd, 2);    /* ...and same with stderr */
         close(fd);
-        if (conflict == '\0') {
+        if (conflict == '\0') { //TODO check this
             const char *tempConflict = " ";
             execl("/usr/bin/java", "/usr/bin/java", "-jar", "RegexReplacement.jar", "./", groupId, tempConflict,
                   (char *) 0);
