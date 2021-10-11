@@ -3,12 +3,10 @@
 #include <string.h>
 #include <json-c/json.h>
 #include <zconf.h>
-#include <sys/types.h>
 #include <sys/wait.h>
 #include <stdlib.h>  // rand(), srand()
 #include <time.h>    // time()
 #include <errno.h>
-#include <math.h>
 
 #define SCALING_FACTOR 0.1
 #define similarity_th 0.80
@@ -111,89 +109,12 @@ static double jaro_winkler_distance(const char *s, const char *a) {
     return dw;
 }
 
-static void executeRegexJarOnline(const char *group_id) {
-    time_t start;
-    time_t end;
-    //if (groupId_list.used) {
-    if (group_id) {
-
-        //int length = 6 + groupId_list.used; //groupId_list.nr know only at runtime
-        int length = 6 + 1; //groupId_list.nr know only at runtime
-        const char **id_array = malloc(sizeof(*id_array) * length);
-
-        id_array[0] = "/usr/bin/java";
-        id_array[1] = "-jar";
-        id_array[2] = "RandomSearchReplaceTurtle.jar";
-        id_array[3] = "./"; //config.properties path
-
-        id_array[4] = group_id;
-        id_array[5] = ">outregexonline.txt";
-        id_array[length - 1] = NULL; //terminator need for execv
-        printf("JAVA COMMAND:%s \n", id_array[4]);
-
-        //TODO adjust the path to jar file
-        time(&start);
-        pid_t pid = fork();
-        if (pid == 0) { // child process
-            /* open /dev/null for writing */
-            //printf("\n\n\nJAR PROCESS IS STARTING IN BACKGROUND!!!!!\n\n\n");
-            int fd = open("/dev/null", O_WRONLY);
-            dup2(fd, 1);    /* make stdout a copy of fd (> /dev/null) */
-            close(fd);
-            execv("/usr/bin/java", (void *) id_array);
-
-        } else { //parent process
-            int status;
-            printf("Parent is waiting for the Recluster.........");
-            //sleep(1);
-            if (waitpid(pid, &status, 0) > 0) {
-
-                if (WIFEXITED(status) && !WEXITSTATUS(status)) {
-                    time(&end);
-                    printf("program execution successful!!!! in %f secs \n", difftime(end, start));
-
-                } else if (WIFEXITED(status) && WEXITSTATUS(status)) {
-                    if (WEXITSTATUS(status) == 127) {
-                        // execv failed
-                        printf("execv failed\n");
-                    } else {
-                        time(&end);
-                        printf("program terminated normally,"
-                               " but returned a non-zero status:%f \n", difftime(end, start));
-                    }
-                } else {
-                    printf("program didn't terminate normally\n");
-                }
-            } else {
-                // waitpid() failed
-                printf("waitpid() failed\n");
-            }
-
-            //wait(&status);
-            //(void)waitpid(pid, &status, 0)
-            //if(status == -1){
-            //	printf("RandomSearchAndRepalce END With Error\n");
-            //} else{
-            //	printf("Recluster ended with status:%d\n",status);
-            //}
-
-            //fprintf_ln(stderr, _("\n\n\nGIT PROCESS GO ON !!!!!\n\n\n"));
-            //printf("\n\n\nGIT PROCESS GO ON !!!!!\n\n\n");
-        }
-        free(id_array);
-    }
-    //fprintf_ln(stderr, _("LOG_EXIT: executeRegexJar"));
-
-}
-
-
 static void executeRegexJar(const char *group_id, int recluster) {
     time_t start;
     time_t end;
-    //if (groupId_list.used) {
+
     if (group_id) {
 
-        //int length = 5 + groupId_list.used; //groupId_list.nr know only at runtime
         int length = 5 + 1; //groupId_list.nr know only at runtime
         const char **id_array = malloc(sizeof(*id_array) * length);
 
@@ -205,9 +126,7 @@ static void executeRegexJar(const char *group_id, int recluster) {
         } else {
             id_array[3] = "./";
         }
-        //for (int j = 0; j < groupId_list.used; j++) {
-        //id_array[j+4] = &groupId_list.array[j];
-        //}
+
         id_array[4] = group_id;
         id_array[length - 1] = NULL; //terminator need for execv
         printf("JAVA COMMAND:%s \n", id_array[4]);
@@ -231,7 +150,7 @@ static void executeRegexJar(const char *group_id, int recluster) {
 
                 if (WIFEXITED(status) && !WEXITSTATUS(status)) {
                     time(&end);
-                    printf("Program execution successful!!!! in %f secs \n", difftime(end, start));
+                    printf("Program execution successful!!!! in %.f secs \n", difftime(end, start));
 
                 } else if (WIFEXITED(status) && WEXITSTATUS(status)) {
                     if (WEXITSTATUS(status) == 127) {
@@ -251,19 +170,10 @@ static void executeRegexJar(const char *group_id, int recluster) {
                 printf("waitpid() failed\n");
             }
 
-            //(void)waitpid(pid, &status, 0);
-            //    if(status == -1){
-            //        printf("RandomSearchAndRepalce END With Error\n");
-            //    }
-
-            //fprintf_ln(stderr, _("\n\n\nGIT PROCESS GO ON !!!!!\n\n\n"));
-            //printf("\n\n\nGIT PROCESS GO ON !!!!!\n\n\n");
         }
         free(id_array);
 
     }
-    //fprintf_ln(stderr, _("LOG_EXIT: executeRegexJar"));
-
 }
 
 static double cluster_cluster_similarity(const struct json_object *val, const struct json_object *val2) {
@@ -1253,6 +1163,7 @@ static int check_for_recluster(int conflict_number) {
 static int write_json_conflict_index(char *conflict, char *resolution, int conflict_number) {
     printf("Login: write_json_conflict_index\n");
     struct json_object *file_json = json_object_from_file(".git/rr-cache/conflict_index.json");
+    size_t cluster_size = 0;
 
     if (!file_json) // if file is empty
         file_json = json_object_new_object();
@@ -1274,17 +1185,10 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
         return 0;
     }
 
+    struct json_object * cluster_object = json_object_object_get(file_json, group_id);
 
-    /*
-    struct json_object *conflict_list = json_object_from_file(".git/rr-cache/conflict_list.json");
-
-    if (!conflict_list) // if file is empty
-        conflict_list = json_object_new_object();
-
-    if(!write_json_object(conflict_list,".git/rr-cache/conflict_list.json","conflicts_list",conflict,resolution)){ //if return 0
-        return 0;
-    }
-    */
+    if(cluster_object)
+        cluster_size = json_object_array_length(cluster_object);
 
     //printf("\n groupid: %s\n",group_id);
     //const char* ids=check_for_recluster(conflict_number);
@@ -1297,6 +1201,7 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
     //if(strcmp(ids, "0")==0){ //Check if reclustering is needed.
     if (ids == 0) {
         json_object_put(file_json);
+        printf("Starting 'executeRegexJar' with cluster of size %zu\n",  cluster_size);
         executeRegexJar(group_id, 0);
         //json_object_put(file_json);
     } else {
@@ -1328,10 +1233,11 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
     return 1;
 }
 
-//static void regex_replace_suggestion(char *conflict, char *resolution,int jid,char *jv1,char *jv2,char *jdec)
 static void regex_replace_suggestion(char *conflict, char *resolution, int jid, char *jv2, char *jdec) {
     printf("Enter: regex_replace_suggestion\n");
     const char *groupId = get_conflict_json_id(conflict, NULL);
+    time_t regex_replacement_start;
+    time_t regex_replacement_end;
 
     if (!groupId || strcmp(groupId, "0") == 0) {
         int x = (strcmp(conflict, "") == 0);
@@ -1360,6 +1266,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
         printf("Group is , and continues   ----regular---- %s\n", groupId);
     }
 
+    time(&regex_replacement_start);
     pid_t pid = fork();
     if (pid == 0) { // child process
         /* open /dev/null for writing */
@@ -1367,6 +1274,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
         dup2(fd, 1);    /* make stdout a copy of fd (> /dev/null) */
         //dup2(fd, 2);    /* ...and same with stderr */
         close(fd);
+
         if (conflict == '\0') { //TODO check
             const char *tempConflict = " ";
             execl("/usr/bin/java", "/usr/bin/java", "-jar", "RegexReplacement.jar", "./", groupId, tempConflict,
@@ -1379,7 +1287,8 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
         int status;
         (void) waitpid(pid, &status, 0);
         //printf("\nJar Process terminate with code: %d\n",status);
-
+        time(&regex_replacement_end);
+        printf("RegexReplacement executed in %.f sec\n", difftime(regex_replacement_end, regex_replacement_start));
         if (!status) {
             FILE *fp = fopen(".git/rr-cache/string_replace.txt", "r");
             if (!fp)
