@@ -109,9 +109,10 @@ static double jaro_winkler_distance(const char *s, const char *a) {
     return dw;
 }
 
-static void executeRegexJar(const char *group_id, int recluster) {
+static void executeRegexJar(const char *group_id, int recluster, size_t cluster_size) {
     time_t start;
     time_t end;
+    FILE *performance_log = fopen(".git/rr-cache/performance.txt", "a+");
 
     if (group_id) {
 
@@ -121,7 +122,7 @@ static void executeRegexJar(const char *group_id, int recluster) {
         id_array[0] = "/usr/bin/java";
         id_array[1] = "-jar";
         id_array[2] = "RandomSearchReplaceTurtle.jar";
-        if (recluster == 0) {
+        if (recluster == 0) { //TODO check
             id_array[3] = "./"; //config.properties path
         } else {
             id_array[3] = "./";
@@ -151,6 +152,8 @@ static void executeRegexJar(const char *group_id, int recluster) {
                 if (WIFEXITED(status) && !WEXITSTATUS(status)) {
                     time(&end);
                     printf("Program execution successful!!!! in %.f secs \n", difftime(end, start));
+                    fprintf(performance_log, "\"%s\",\"%zu\",\"%.f\"\n", group_id,
+                            cluster_size, difftime(end, start));
 
                 } else if (WIFEXITED(status) && WEXITSTATUS(status)) {
                     if (WEXITSTATUS(status) == 127) {
@@ -172,7 +175,7 @@ static void executeRegexJar(const char *group_id, int recluster) {
 
         }
         free(id_array);
-
+        fclose(performance_log);
     }
 }
 
@@ -1185,9 +1188,9 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
         return 0;
     }
 
-    struct json_object * cluster_object = json_object_object_get(file_json, group_id);
+    struct json_object *cluster_object = json_object_object_get(file_json, group_id);
 
-    if(cluster_object)
+    if (cluster_object)
         cluster_size = json_object_array_length(cluster_object);
 
     //printf("\n groupid: %s\n",group_id);
@@ -1201,8 +1204,8 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
     //if(strcmp(ids, "0")==0){ //Check if reclustering is needed.
     if (ids == 0) {
         json_object_put(file_json);
-        printf("Starting 'executeRegexJar' with cluster of size %zu\n",  cluster_size);
-        executeRegexJar(group_id, 0);
+        printf("Starting 'executeRegexJar' with cluster of size %zu\n", cluster_size);
+        executeRegexJar(group_id, 0, cluster_size);
         //json_object_put(file_json);
     } else {
         json_object_put(file_json);
@@ -1211,7 +1214,7 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
             //sprintf(array, "%d", l);
             char *array = malloc(sizeof(char *));
             array = (char *) json_object_to_json_string(json_object_new_int(l));
-            executeRegexJar(array, l);
+            executeRegexJar(array, l, cluster_size);
             //sleep(10);
         }
 
@@ -1394,6 +1397,12 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
     printf("Exit: regex_replace_suggestion\n");
 }
 
+static void init_performance_file() {
+    FILE *performance_log = fopen(".git/rr-cache/performance.txt", "w");
+    fprintf(performance_log, "\"%s\",\"%s\",\"%s\"\n", "Cluster", "Cluster Size", "Execution time [s]");
+    fclose(performance_log);
+}
+
 int main(int argc, char *argv[]) {
     printf("starting...\n");
     if (argc == 1) {
@@ -1423,6 +1432,7 @@ int main(int argc, char *argv[]) {
     int arraylen;
 
     cluster_population = 1;
+    init_performance_file();
     printf("processing...");
     json_object_object_foreach(file_json, key, val)
     {
