@@ -13,9 +13,34 @@
 #define intrasimilarity_th 0.90
 #define valid_cluster_th 0.77
 
+#define CONFIG_FILE_PATH "config.properties"
+
+#define CONFLICT_INDEX_FILENAME ".git/rr-cache/conflict_index.json"
+#define CONFLICT_INDEX_RECLUSTER_FILENAME ".git/rr-cache/conflict_index_recluster.json"
+#define STRING_REPLACE_FILENAME ".git/rr-cache/string_replace.txt"
+#define STRING_REPLACE_RESULT_FILENAME  ".git/rr-cache/regex_replace_result.txt"
+#define PERFORMANCE_FILENAME ".git/rr-cache/performance.txt"
+
+#define CONFLICT_INDEX 0
+#define CONFLICT_INDEX_RECLUSTER 1
+#define STRING_REPLACE 2
+#define STRING_REPLACE_RESULT 3
+#define PERFORMANCE 4
+
 char *groupId_list = NULL;
 int cluster_population = 0;
 
+char *file_names[5];
+
+//loaded from config.properties
+char *workdir_path = NULL;
+
+static char *build_filename(const char *filename) {
+    char *result = malloc(strlen(workdir_path) + strlen(filename) + 1);
+    strcpy(result, workdir_path);
+    strcat(result, filename);
+    return result;
+}
 
 static char *escapeCSV(char *in) {
     int in_len = strlen(in);
@@ -112,25 +137,27 @@ static double jaro_winkler_distance(const char *s, const char *a) {
 static void executeRegexJar(const char *group_id, int recluster, size_t cluster_size) {
     time_t start;
     time_t end;
-    FILE *performance_log = fopen(".git/rr-cache/performance.txt", "a+");
+    FILE *performance_log = fopen(file_names[PERFORMANCE], "a+");
 
     if (group_id) {
 
-        int length = 5 + 1; //groupId_list.nr know only at runtime
+        int length = 6 + 1; //groupId_list.nr know only at runtime
         const char **id_array = malloc(sizeof(*id_array) * length);
 
-        id_array[0] = "/usr/bin/java";
-        id_array[1] = "-jar";
-        id_array[2] = "RandomSearchReplaceTurtle.jar";
+        id_array[0] = "/usr/bin/java"; //TODO make configurable javagent
+        id_array[1] = "-javaagent:/home/raul/Documents/jmx_exporter/jmx_prometheus_javaagent/target/jmx_prometheus_javaagent-0.16.2-SNAPSHOT.jar=8081:/home/raul/Tesi/AlmostRERERE/Test-Script/config.yml";
+        id_array[2] = "-jar";
+        id_array[3] = "RandomSearchReplaceTurtle.jar";
         if (recluster == 0) { //TODO check
-            id_array[3] = "./"; //config.properties path
+            id_array[4] = "./"; //config.properties path
         } else {
-            id_array[3] = "./";
+            id_array[4] = "./";
         }
 
-        id_array[4] = group_id;
+        printf("%s\n", id_array[1]);
+        id_array[5] = group_id;
         id_array[length - 1] = NULL; //terminator need for execv
-        printf("JAVA COMMAND:%s \n", id_array[4]);
+        printf("JAVA COMMAND:%s \n", id_array[5]);
 
         //TODO adjust the path to jar file
         time(&start);
@@ -228,7 +255,7 @@ static double cluster_cluster_similarity(const struct json_object *val, const st
 }
 
 static const char *get_conflict_json_id_empty(char *conflict, char *resolution) {
-    struct json_object *file_json = json_object_from_file(".git/rr-cache/conflict_index.json");
+    struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
     if (!file_json) { // if file is empty
         if (!resolution) { //resolution is NULL
             return NULL;
@@ -249,8 +276,7 @@ static const char *get_conflict_json_id_empty(char *conflict, char *resolution) 
     int arraylen;
 
     double total_similarity = 0;
-    json_object_object_foreach(file_json, key, val)
-    {
+    json_object_object_foreach(file_json, key, val) {
         obj = NULL;
         arraylen = json_object_array_length(val);
         idCount += 1;
@@ -299,7 +325,7 @@ static const char *get_conflict_json_id_empty(char *conflict, char *resolution) 
 }
 
 static const char *get_conflict_json_id_empty_conf(char *conflict, char *resolution) {
-    struct json_object *file_json = json_object_from_file(".git/rr-cache/conflict_index.json");
+    struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
     if (!file_json) { // if file is empty
         if (!resolution) { //resolution is NULL
             return NULL;
@@ -320,8 +346,7 @@ static const char *get_conflict_json_id_empty_conf(char *conflict, char *resolut
     int arraylen;
 
     double total_similarity = 0;
-    json_object_object_foreach(file_json, key, val)
-    {
+    json_object_object_foreach(file_json, key, val) {
         obj = NULL;
 
         arraylen = json_object_array_length(val);
@@ -373,7 +398,7 @@ static const char *get_conflict_json_id_empty_conf(char *conflict, char *resolut
 
 //get cluster id?
 static const char *get_conflict_json_id(char *conflict, char *resolution) {
-    struct json_object *file_json = json_object_from_file(".git/rr-cache/conflict_index.json");
+    struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
     if (!file_json) { // if file is empty
         if (!resolution) { //resolution is NULL
             return NULL;
@@ -393,8 +418,7 @@ static const char *get_conflict_json_id(char *conflict, char *resolution) {
     int arraylen;
 
     double total_similarity = 0;
-    json_object_object_foreach(file_json, key, val)
-    {
+    json_object_object_foreach(file_json, key, val) {
         obj = NULL;
         arraylen = json_object_array_length(val);
         idCount += 1;
@@ -492,8 +516,7 @@ static double average_intrasimilarity(const struct json_object *file_json) {
     int there_is_valid_clusters = 0;
 
 
-    json_object_object_foreach(file_json, key, val)
-    {
+    json_object_object_foreach(file_json, key, val) {
         arraylen = json_object_array_length(val);
 
         if (arraylen > 1) {
@@ -534,8 +557,7 @@ static const char *get_conflict_json_id_enhanced(struct json_object *file_json, 
 
     double total_similarity = 0;
     double total_similarity_resol = 0;
-    json_object_object_foreach(file_json, key, val)
-    {
+    json_object_object_foreach(file_json, key, val) {
         obj = NULL;
         arraylen = json_object_array_length(val);
         idCount += 1;
@@ -750,8 +772,7 @@ static struct json_object *hierarchical_clustering2(const struct json_object *js
     struct json_object *cluster_result = json_object_new_object();
     int key_index = 1;
     int del_flag = 1;
-    json_object_object_foreach(file_json, key, val)
-    {
+    json_object_object_foreach(file_json, key, val) {
         del_flag = 1;
         for (int i = 0; i < json_object_array_length(schedule_delete); i++) {
             char *key_i = malloc(sizeof(char *));
@@ -874,8 +895,7 @@ static struct json_object *hierarchical_clustering(const struct json_object *jso
         }
 
         idCount = 0;
-        json_object_object_foreach(file_json, key, val)
-        {
+        json_object_object_foreach(file_json, key, val) {
             idCount += 1;
         }
         if (max_sim_index == -1) {//case 1 no similar conflicts
@@ -939,8 +959,7 @@ static struct json_object *recluster(const struct json_object *file_json) {
     struct json_object *jarray2 = json_object_new_array();
     int arraylen;
 
-    json_object_object_foreach(file_json, key, val)
-    {
+    json_object_object_foreach(file_json, key, val) {
         obj = NULL;
         arraylen = json_object_array_length(val);
         for (int i = 0; i < arraylen; i++) {
@@ -992,7 +1011,7 @@ static struct json_object *recluster(const struct json_object *file_json) {
 static void move_file(int b) {
     FILE *source, *target;
     char ch;
-    source = fopen(".git/rr-cache/conflict_index.json", "r");
+    source = fopen(file_names[CONFLICT_INDEX], "r");
     if (source == NULL) {
         return;
     }
@@ -1016,12 +1035,12 @@ static void move_file(int b) {
 static void move_file2() {
     FILE *source, *target;
     char ch;
-    source = fopen(".git/rr-cache/conflict_index.json", "r");
+    source = fopen(file_names[CONFLICT_INDEX], "r");
     if (source == NULL) {
         return;
     }
     char str[100];
-    sprintf(str, "%s", ".git/rr-cache/conflict_index_recluster.json");
+    sprintf(str, "%s", file_names[CONFLICT_INDEX_RECLUSTER]);
     //sprintf(str, "%s%s", str, ".json");
     target = fopen(str, "w");
     if (target == NULL) {
@@ -1040,7 +1059,7 @@ static void move_file2() {
 
 static int check_for_recluster(int conflict_number) {
     printf("Log: check if clustering is required...\n");
-    struct json_object *file_json = json_object_from_file(".git/rr-cache/conflict_index.json");
+    struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
     double intracluster_similarity = average_intrasimilarity(file_json);
     printf("Average Intrasimilarity: %f\n", intracluster_similarity);
     int id = 0;
@@ -1050,8 +1069,7 @@ static int check_for_recluster(int conflict_number) {
             int cluster_count = 0;
             int clusters_lenght_1 = 0;
             int x1 = 0;
-            json_object_object_foreach(file_json, key, val)
-            {
+            json_object_object_foreach(file_json, key, val) {
                 cluster_count += 1;
                 int arraylen1 = json_object_array_length(val);
                 x1 = x1 + arraylen1;
@@ -1083,8 +1101,8 @@ static int check_for_recluster(int conflict_number) {
                 int total = 0;
                 int number_keys = 0;
                 //char ids[256];
-                json_object_object_foreach(file_json_reclustered, key, val)
-                {//simple check for number of conflicts parity
+                json_object_object_foreach(file_json_reclustered, key,
+                                           val) {//simple check for number of conflicts parity
                     //obj1 = NULL;
                     //jarray = json_object_new_array();
                     int arraylen = json_object_array_length(val);
@@ -1099,7 +1117,7 @@ static int check_for_recluster(int conflict_number) {
                     printf("Recluster improved, applying changes...\n");
                     move_file(conflict_number);// backup the old conflict index file
 
-                    FILE *fp = fopen(".git/rr-cache/conflict_index.json", "w");//write the new recluster index file
+                    FILE *fp = fopen(file_names[CONFLICT_INDEX], "w");//write the new recluster index file
                     if (!fp) {
                         printf("Exit: write_json_object: not open FILE conflict_index\n");
                         //return 0;
@@ -1165,7 +1183,7 @@ static int check_for_recluster(int conflict_number) {
 
 static int write_json_conflict_index(char *conflict, char *resolution, int conflict_number) {
     printf("Login: write_json_conflict_index\n");
-    struct json_object *file_json = json_object_from_file(".git/rr-cache/conflict_index.json");
+    struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
     size_t cluster_size = 0;
 
     if (!file_json) // if file is empty
@@ -1181,7 +1199,7 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
         printf("Exit: write_json_conflict_index ENHANCED %s\n", group_id);
     }
 
-    if (!write_json_object(file_json, ".git/rr-cache/conflict_index.json", group_id, conflict,
+    if (!write_json_object(file_json, file_names[CONFLICT_INDEX], group_id, conflict,
                            resolution)) { //if return 0
         printf("Exit: write_json_conflict_index: write json object error\n");
         json_object_put(file_json);
@@ -1273,7 +1291,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
     pid_t pid = fork();
     if (pid == 0) { // child process
         /* open /dev/null for writing */
-        int fd = open(".git/rr-cache/string_replace.txt", O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+        int fd = open(file_names[STRING_REPLACE], O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
         dup2(fd, 1);    /* make stdout a copy of fd (> /dev/null) */
         //dup2(fd, 2);    /* ...and same with stderr */
         close(fd);
@@ -1293,14 +1311,14 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
         time(&regex_replacement_end);
         printf("RegexReplacement executed in %.f sec\n", difftime(regex_replacement_end, regex_replacement_start));
         if (!status) {
-            FILE *fp = fopen(".git/rr-cache/string_replace.txt", "r");
+            FILE *fp = fopen(file_names[STRING_REPLACE], "r");
             if (!fp)
                 return;
 
             fseek(fp, 0, SEEK_END); // goto end of file
             if (ftell(fp) == 0) {
                 printf("file is empty\n");
-                unlink(".git/rr-cache/string_replace.txt");
+                unlink(file_names[STRING_REPLACE]);
                 printf("Exit: regex_replace_suggestion\n");
                 return;
             }
@@ -1332,7 +1350,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
             }
             fclose(fp);
 
-            fp = fopen(".git/rr-cache/regex_replace_result.txt", "a+");
+            fp = fopen(file_names[STRING_REPLACE_RESULT], "a+");
             conflict = escapeCSV(conflict);
             jv2 = escapeCSV(jv2);
             //jv1= escapeCSV(jv1);
@@ -1389,7 +1407,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                 free(res1);
             }
             fclose(fp);
-            unlink(".git/rr-cache/string_replace.txt");
+            unlink(file_names[STRING_REPLACE]);
         } else {
             printf("Exit: regex replace jar end with error\n");
         }
@@ -1398,13 +1416,62 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
 }
 
 static void init_performance_file() {
-    FILE *performance_log = fopen(".git/rr-cache/performance.txt", "w");
+    FILE *performance_log = fopen(file_names[PERFORMANCE], "w");
+    if (performance_log == NULL)
+        exit(EXIT_FAILURE);
     fprintf(performance_log, "\"%s\",\"%s\",\"%s\"\n", "Cluster", "Cluster Size", "Execution time [s]");
     fclose(performance_log);
 }
 
+static char *get_property_value(char *line) {
+    char *pch;
+    char *save_ptr1;
+
+    printf("Splitting string \"%s\" into tokens:\n", line);
+    pch = strtok_r(line, "=", &save_ptr1);
+    printf("%s\n", pch);
+    pch = strtok_r(NULL, "=", &save_ptr1);
+    printf("%s\n", pch);
+
+    return pch;
+}
+
+static int init_properties() {
+
+    FILE *fp;
+    char *line = NULL;
+    size_t len = 0;
+
+    fp = fopen(CONFIG_FILE_PATH, "r");
+
+    if (fp != NULL && getline(&line, &len, fp)) {
+        line = get_property_value(line);
+        workdir_path = malloc(strlen(line));
+        strncpy(workdir_path, line, strlen(line) - 1);
+        fclose(fp);
+
+        file_names[CONFLICT_INDEX] = build_filename(CONFLICT_INDEX_FILENAME);
+        file_names[CONFLICT_INDEX_RECLUSTER] = build_filename(CONFLICT_INDEX_RECLUSTER_FILENAME);
+        file_names[STRING_REPLACE] = build_filename(STRING_REPLACE_FILENAME);
+        file_names[STRING_REPLACE_RESULT] = build_filename(STRING_REPLACE_RESULT_FILENAME);
+        file_names[PERFORMANCE] = build_filename(PERFORMANCE_FILENAME);
+
+        return 0;
+    }
+
+    fclose(fp);
+    return 1;
+}
+
 int main(int argc, char *argv[]) {
     printf("starting...\n");
+
+    if (init_properties()) {
+        printf("Something went wrong when loading properties of %s, exit...", CONFIG_FILE_PATH);
+        return 0;
+    }
+    init_performance_file();
+
     if (argc == 1) {
         printf("No dataset file has been provided\n");
         return 0;
@@ -1432,10 +1499,8 @@ int main(int argc, char *argv[]) {
     int arraylen;
 
     cluster_population = 1;
-    init_performance_file();
     printf("processing...");
-    json_object_object_foreach(file_json, key, val)
-    {
+    json_object_object_foreach(file_json, key, val) {
         obj = NULL;
         arraylen = json_object_array_length(val);
         printf("arraylen: %d\n", arraylen);
@@ -1459,5 +1524,10 @@ int main(int argc, char *argv[]) {
         }
     }
     json_object_put(file_json);
+
+    //free file name strings
+    for(int i = 0; i < 5; i++)
+        free(file_names[i]);
+
     return 0;
 }
