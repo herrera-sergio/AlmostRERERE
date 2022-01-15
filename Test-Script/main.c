@@ -1181,7 +1181,7 @@ static int check_for_recluster(int conflict_number) {
 
 }
 
-static int write_json_conflict_index(char *conflict, char *resolution, int conflict_number) {
+static int write_json_conflict_index(char *conflict, char *v2, char *resolution, int conflict_number) {
     printf("Login: write_json_conflict_index\n");
     struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
     size_t cluster_size = 0;
@@ -1200,7 +1200,8 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
     }
 
     if (!write_json_object(file_json, file_names[CONFLICT_INDEX], group_id, conflict,
-                           resolution)) { //if return 0
+                           resolution) || !write_json_object(file_json, file_names[CONFLICT_INDEX], group_id, v2,
+                                                           resolution)) { //if return 0
         printf("Exit: write_json_conflict_index: write json object error\n");
         json_object_put(file_json);
         return 0;
@@ -1520,7 +1521,7 @@ int main(int argc, char *argv[]) {
             printf("jresol: %s\n", jresol);
 
             regex_replace_suggestion(jconf, jresol, jid, jv2, jdec);
-            write_json_conflict_index(jconf, jresol, i + 1);
+            write_json_conflict_index(jconf, jv2, jresol, i + 1);
         }
     }
     json_object_put(file_json);
