@@ -1296,6 +1296,9 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
         printf("Group is , and continues   ----regular---- %s\n", groupId);
     }
 
+    struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
+    struct json_object *cluster_object = json_object_object_get(file_json, groupId);
+
     time(&regex_replacement_start);
     pid_t pid = fork();
     if (pid == 0) { // child process
@@ -1334,7 +1337,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
             fseek(fp, 0, SEEK_SET);
 
             char buffer1[500], buffer2[500], buffer3[500];
-            char *regex1 = NULL, *regex2 = NULL, *replace1 = NULL, *replace2 = NULL, *res1 = NULL, *res2 = NULL;
+            char *regex1 = NULL, *regex2 = NULL, *replace1 = NULL, *replace2 = NULL, *res1 = NULL, *res2 = NULL, *cluster = NULL;
             // read first resolution
 
             if (fgets(buffer1, 500, fp) && fgets(buffer2, 500, fp) && fgets(buffer3, 500, fp)) {
@@ -1363,7 +1366,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
             conflict = escapeCSV(conflict);
             jv2 = escapeCSV(jv2);
             //jv1= escapeCSV(jv1);
-
+            cluster = escapeCSV(json_object_get_string(cluster_object));
             if (res1 && res2) {
                 double jw1 = jaro_winkler_distance(resolution, res1);
                 double jw2 = jaro_winkler_distance(resolution, res2);
@@ -1376,12 +1379,13 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                     res1 = escapeCSV(res1);
                     resolution = escapeCSV(resolution);
                     //fprintf(fp,"\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n",conflict,groupId,jw1,regex1,replace1,resolution,res1,jv1,jv2,jdec,jid);
-                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n", conflict,
-                            groupId, jw1, regex1, replace1, resolution, res1, jv2, jdec, jid);
+                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n", conflict,
+                            groupId, jw1, regex1, replace1, resolution, res1, jv2, jdec, jid, cluster);
                     free(conflict);
                     free(regex1);
                     free(replace1);
                     free(res1);
+                    free(cluster);
                 } else {
                     regex2 = escapeCSV(regex2);
                     replace2 = escapeCSV(replace2);
@@ -1391,12 +1395,13 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                     res2[strcspn(res2, "\n")] = 0;
                     resolution = escapeCSV(resolution);
                     //fprintf(fp,"\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n",conflict,groupId,jw2,regex2,replace2,resolution,res2,jv1,jv2,jdec,jid);
-                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n", conflict,
-                            groupId, jw2, regex2, replace2, resolution, res2, jv2, jdec, jid);
+                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n", conflict,
+                            groupId, jw2, regex2, replace2, resolution, res2, jv2, jdec, jid, cluster);
                     free(conflict);
                     free(regex2);
                     free(replace2);
                     free(res2);
+                    free(cluster);
                 }
             } else {
                 double jw1 = jaro_winkler_distance(resolution, res1);
@@ -1408,19 +1413,22 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                 res1[strcspn(res1, "\n")] = 0;
                 resolution = escapeCSV(resolution);
 
-                fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n", conflict,
-                        groupId, jw1, regex1, replace1, resolution, res1, jv2, jdec, jid);
+                fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n", conflict,
+                        groupId, jw1, regex1, replace1, resolution, res1, jv2, jdec, jid, cluster);
                 free(conflict);
                 free(regex1);
                 free(replace1);
                 free(res1);
+                free(cluster);
             }
             fclose(fp);
+            json_object_put(cluster_object);
             unlink(file_names[STRING_REPLACE]);
         } else {
             printf("Exit: regex replace jar end with error %d\n", status);
         }
     }
+
     printf("Exit: regex_replace_suggestion\n");
 }
 
