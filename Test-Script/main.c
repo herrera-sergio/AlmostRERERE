@@ -1200,8 +1200,7 @@ static int write_json_conflict_index(char *conflict, char *v2, char *resolution,
     }
 
     if (!write_json_object(file_json, file_names[CONFLICT_INDEX], group_id, conflict,
-                           resolution) || !write_json_object(file_json, file_names[CONFLICT_INDEX], group_id, v2,
-                                                           resolution)) { //if return 0
+                           resolution)) { //if return 0
         printf("Exit: write_json_conflict_index: write json object error\n");
         json_object_put(file_json);
         return 0;
@@ -1522,6 +1521,8 @@ int main(int argc, char *argv[]) {
 
             regex_replace_suggestion(jconf, jresol, jid, jv2, jdec);
             write_json_conflict_index(jconf, jv2, jresol, i + 1);
+            regex_replace_suggestion(jv2, jresol, jid, jconf, jdec);
+            write_json_conflict_index(jv2, jconf, jresol, i + 1);
         }
     }
     json_object_put(file_json);
