@@ -147,7 +147,7 @@ static void executeRegexJar(const char *group_id, int recluster, size_t cluster_
         id_array[0] = "/usr/bin/java"; //TODO make configurable javagent
         id_array[1] = "-javaagent:/home/raul/Documents/jmx_exporter/jmx_prometheus_javaagent/target/jmx_prometheus_javaagent-0.16.2-SNAPSHOT.jar=8081:/home/raul/Tesi/AlmostRERERE/Test-Script/config.yml";
         id_array[2] = "-jar";
-        id_array[3] = "RandomSearchReplaceTurtle.jar";
+        id_array[3] = "RandomSearchReplaceTurtle_ukkonen_recycle_additive.jar";
         if (recluster == 0) { //TODO check
             id_array[4] = "./"; //config.properties path
         } else {
