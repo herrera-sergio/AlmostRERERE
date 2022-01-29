@@ -9,7 +9,6 @@
 #include <errno.h>
 
 #define SCALING_FACTOR 0.1
-#define similarity_th 0.80
 #define intrasimilarity_th 0.90
 #define valid_cluster_th 0.77
 
@@ -32,6 +31,7 @@
 
 char *groupId_list = NULL;
 int cluster_population = 0;
+float similarity_th = 0.80;
 
 char *file_names[5];
 
@@ -1520,8 +1520,14 @@ int main(int argc, char *argv[]) {
             printf("jconf: %s\n", jconf);
             printf("jresol: %s\n", jresol);
 
+            if (strstr(jconf, "import") != NULL) {
+                similarity_th = 0.95;
+            }
+
             regex_replace_suggestion(jconf, jresol, jid, jv2, jdec);
             write_json_conflict_index(jconf, jresol, i + 1);
+
+            similarity_th = 0.8;
         }
     }
     json_object_put(file_json);

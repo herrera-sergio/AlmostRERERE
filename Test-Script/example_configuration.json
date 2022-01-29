@@ -1,7 +1,7 @@
 {
     "initialSeed": 0, 
     "strategyParameters": {
-        "threads": "2","tournamentSize": "5", 
+        "threads": "6","tournamentSize": "5",
         "runStrategy": "it.units.inginf.male.strategy.impl.CoevolutionaryStrategyFix4"
     }, 
     "datasetName": "Replace Phone", 
