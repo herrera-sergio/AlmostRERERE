@@ -21,6 +21,8 @@
 #define STRING_REPLACE_RESULT_FILENAME  ".git/rr-cache/regex_replace_result.txt"
 #define PERFORMANCE_FILENAME ".git/rr-cache/performance.txt"
 
+#define REGEX_REPLACEMENT_JAR "RegexReplacement_v2.jar"
+
 #define CONFLICT_INDEX 0
 #define CONFLICT_INDEX_RECLUSTER 1
 #define STRING_REPLACE 2
@@ -1298,10 +1300,10 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
 
         if (conflict == '\0') { //TODO check
             const char *tempConflict = " ";
-            execl("/usr/bin/java", "/usr/bin/java", "-jar", "RegexReplacement.jar", "./", groupId, tempConflict,
+            execl("/usr/bin/java", "/usr/bin/java", "-jar", REGEX_REPLACEMENT_JAR, "./", groupId, tempConflict, resolution,
                   (char *) 0);
         } else {
-            execl("/usr/bin/java", "/usr/bin/java", "-jar", "RegexReplacement.jar", "./", groupId, conflict,
+            execl("/usr/bin/java", "/usr/bin/java", "-jar", REGEX_REPLACEMENT_JAR, "./", groupId, conflict, resolution,
                   (char *) 0);
         }
     } else { //parent process
