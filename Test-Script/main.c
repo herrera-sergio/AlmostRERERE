@@ -141,23 +141,22 @@ static void executeRegexJar(const char *group_id, int recluster, size_t cluster_
 
     if (group_id) {
 
-        int length = 6 + 1; //groupId_list.nr know only at runtime
+        int length = 5 + 1; //groupId_list.nr know only at runtime
         const char **id_array = malloc(sizeof(*id_array) * length);
 
-        id_array[0] = "/usr/bin/java"; //TODO make configurable javagent
-        id_array[1] = "-javaagent:/home/raul/Documents/jmx_exporter/jmx_prometheus_javaagent/target/jmx_prometheus_javaagent-0.16.2-SNAPSHOT.jar=8081:/home/raul/Tesi/AlmostRERERE/Test-Script/config.yml";
-        id_array[2] = "-jar";
-        id_array[3] = "RandomSearchReplaceTurtle_ukkonen_recycle_additive.jar";
+        id_array[0] = "/usr/bin/java";
+        id_array[1] = "-jar";
+        id_array[2] = "RandomSearchReplaceTurtle_ukkonen_recycle_additive.jar";
         if (recluster == 0) { //TODO check
-            id_array[4] = "./"; //config.properties path
+            id_array[3] = "./"; //config.properties path
         } else {
-            id_array[4] = "./";
+            id_array[3] = "./";
         }
 
         printf("%s\n", id_array[1]);
-        id_array[5] = group_id;
+        id_array[4] = group_id;
         id_array[length - 1] = NULL; //terminator need for execv
-        printf("JAVA COMMAND:%s \n", id_array[5]);
+        printf("JAVA COMMAND:%s \n", id_array[4]);
 
         //TODO adjust the path to jar file
         time(&start);
@@ -276,7 +275,8 @@ static const char *get_conflict_json_id_empty(char *conflict, char *resolution) 
     int arraylen;
 
     double total_similarity = 0;
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
         arraylen = json_object_array_length(val);
         idCount += 1;
@@ -346,7 +346,8 @@ static const char *get_conflict_json_id_empty_conf(char *conflict, char *resolut
     int arraylen;
 
     double total_similarity = 0;
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
 
         arraylen = json_object_array_length(val);
@@ -418,7 +419,8 @@ static const char *get_conflict_json_id(char *conflict, char *resolution) {
     int arraylen;
 
     double total_similarity = 0;
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
         arraylen = json_object_array_length(val);
         idCount += 1;
@@ -516,7 +518,8 @@ static double average_intrasimilarity(const struct json_object *file_json) {
     int there_is_valid_clusters = 0;
 
 
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         arraylen = json_object_array_length(val);
 
         if (arraylen > 1) {
@@ -557,7 +560,8 @@ static const char *get_conflict_json_id_enhanced(struct json_object *file_json, 
 
     double total_similarity = 0;
     double total_similarity_resol = 0;
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
         arraylen = json_object_array_length(val);
         idCount += 1;
@@ -772,7 +776,8 @@ static struct json_object *hierarchical_clustering2(const struct json_object *js
     struct json_object *cluster_result = json_object_new_object();
     int key_index = 1;
     int del_flag = 1;
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         del_flag = 1;
         for (int i = 0; i < json_object_array_length(schedule_delete); i++) {
             char *key_i = malloc(sizeof(char *));
@@ -895,7 +900,8 @@ static struct json_object *hierarchical_clustering(const struct json_object *jso
         }
 
         idCount = 0;
-        json_object_object_foreach(file_json, key, val) {
+        json_object_object_foreach(file_json, key, val)
+        {
             idCount += 1;
         }
         if (max_sim_index == -1) {//case 1 no similar conflicts
@@ -959,7 +965,8 @@ static struct json_object *recluster(const struct json_object *file_json) {
     struct json_object *jarray2 = json_object_new_array();
     int arraylen;
 
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
         arraylen = json_object_array_length(val);
         for (int i = 0; i < arraylen; i++) {
@@ -1069,7 +1076,8 @@ static int check_for_recluster(int conflict_number) {
             int cluster_count = 0;
             int clusters_lenght_1 = 0;
             int x1 = 0;
-            json_object_object_foreach(file_json, key, val) {
+            json_object_object_foreach(file_json, key, val)
+            {
                 cluster_count += 1;
                 int arraylen1 = json_object_array_length(val);
                 x1 = x1 + arraylen1;
@@ -1102,7 +1110,8 @@ static int check_for_recluster(int conflict_number) {
                 int number_keys = 0;
                 //char ids[256];
                 json_object_object_foreach(file_json_reclustered, key,
-                                           val) {//simple check for number of conflicts parity
+                                           val)
+                {//simple check for number of conflicts parity
                     //obj1 = NULL;
                     //jarray = json_object_new_array();
                     int arraylen = json_object_array_length(val);
@@ -1370,7 +1379,8 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                     res1 = escapeCSV(res1);
                     resolution = escapeCSV(resolution);
                     //fprintf(fp,"\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n",conflict,groupId,jw1,regex1,replace1,resolution,res1,jv1,jv2,jdec,jid);
-                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n", conflict,
+                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n",
+                            conflict,
                             groupId, jw1, regex1, replace1, resolution, res1, jv2, jdec, jid, cluster);
                     free(conflict);
                     free(regex1);
@@ -1386,7 +1396,8 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                     res2[strcspn(res2, "\n")] = 0;
                     resolution = escapeCSV(resolution);
                     //fprintf(fp,"\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n",conflict,groupId,jw2,regex2,replace2,resolution,res2,jv1,jv2,jdec,jid);
-                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n", conflict,
+                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n",
+                            conflict,
                             groupId, jw2, regex2, replace2, resolution, res2, jv2, jdec, jid, cluster);
                     free(conflict);
                     free(regex2);
@@ -1508,7 +1519,8 @@ int main(int argc, char *argv[]) {
 
     cluster_population = 1;
     printf("processing...");
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
         arraylen = json_object_array_length(val);
         printf("arraylen: %d\n", arraylen);
@@ -1536,7 +1548,7 @@ int main(int argc, char *argv[]) {
     json_object_put(file_json);
 
     //free file name strings
-    for(int i = 0; i < 5; i++)
+    for (int i = 0; i < 5; i++)
         free(file_names[i]);
 
     return 0;
