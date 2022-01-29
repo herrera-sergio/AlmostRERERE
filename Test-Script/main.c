@@ -9,7 +9,6 @@
 #include <errno.h>
 
 #define SCALING_FACTOR 0.1
-#define similarity_th 0.80
 #define intrasimilarity_th 0.90
 #define valid_cluster_th 0.77
 
@@ -29,6 +28,7 @@
 
 char *groupId_list = NULL;
 int cluster_population = 0;
+float similarity_th = 0.80;
 
 char *file_names[5];
 
@@ -141,23 +141,21 @@ static void executeRegexJar(const char *group_id, int recluster, size_t cluster_
 
     if (group_id) {
 
-        int length = 6 + 1; //groupId_list.nr know only at runtime
+        int length = 5 + 1; //groupId_list.nr know only at runtime
         const char **id_array = malloc(sizeof(*id_array) * length);
 
-        id_array[0] = "/usr/bin/java"; //TODO make configurable javagent
-        id_array[1] = "-javaagent:/home/raul/Documents/jmx_exporter/jmx_prometheus_javaagent/target/jmx_prometheus_javaagent-0.16.2-SNAPSHOT.jar=8081:/home/raul/Tesi/AlmostRERERE/Test-Script/config.yml";
-        id_array[2] = "-jar";
-        id_array[3] = "RandomSearchReplaceTurtle_ukkonen_recycle_additive.jar";
+        id_array[0] = "/usr/bin/java";
+        id_array[1] = "-jar";
+        id_array[2] = "RandomSearchReplaceTurtle_compact.jar";
         if (recluster == 0) { //TODO check
-            id_array[4] = "./"; //config.properties path
+            id_array[3] = "./"; //config.properties path
         } else {
-            id_array[4] = "./";
+            id_array[3] = "./";
         }
 
-        printf("%s\n", id_array[1]);
-        id_array[5] = group_id;
+        id_array[4] = group_id;
         id_array[length - 1] = NULL; //terminator need for execv
-        printf("JAVA COMMAND:%s \n", id_array[5]);
+        printf("JAVA COMMAND:%s \n", id_array[4]);
 
         //TODO adjust the path to jar file
         time(&start);
@@ -1527,10 +1525,16 @@ int main(int argc, char *argv[]) {
             printf("jconf: %s\n", jconf);
             printf("jresol: %s\n", jresol);
 
+            if (strstr(jconf, "import") != NULL) {
+                similarity_th = 0.95;
+            }
+
             regex_replace_suggestion(jconf, jresol, jid, jv2, jdec);
             write_json_conflict_index(jconf, jv2, jresol, i + 1);
             regex_replace_suggestion(jv2, jresol, jid, jconf, jdec);
             write_json_conflict_index(jv2, jconf, jresol, i + 1);
+
+            similarity_th = 0.8;
         }
     }
     json_object_put(file_json);
