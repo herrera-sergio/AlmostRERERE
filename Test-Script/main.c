@@ -22,6 +22,7 @@
 #define PERFORMANCE_FILENAME ".git/rr-cache/performance.txt"
 
 #define REGEX_REPLACEMENT_JAR "RegexReplacement_v2.jar"
+#define RANDOM_SEARCH_REPLACE_JAR "RandomSearchReplaceTurtle_latest.jar"
 
 #define CONFLICT_INDEX 0
 #define CONFLICT_INDEX_RECLUSTER 1
@@ -143,23 +144,21 @@ static void executeRegexJar(const char *group_id, int recluster, size_t cluster_
 
     if (group_id) {
 
-        int length = 6 + 1; //groupId_list.nr know only at runtime
+        int length = 5 + 1; //groupId_list.nr know only at runtime
         const char **id_array = malloc(sizeof(*id_array) * length);
 
         id_array[0] = "/usr/bin/java"; //TODO make configurable javagent
-        id_array[1] = "-javaagent:/home/raul/Documents/jmx_exporter/jmx_prometheus_javaagent/target/jmx_prometheus_javaagent-0.16.2-SNAPSHOT.jar=8081:/home/raul/Tesi/AlmostRERERE/Test-Script/config.yml";
-        id_array[2] = "-jar";
-        id_array[3] = "RandomSearchReplaceTurtle.jar";
+        id_array[1] = "-jar";
+        id_array[2] = RANDOM_SEARCH_REPLACE_JAR;
         if (recluster == 0) { //TODO check
-            id_array[4] = "./"; //config.properties path
+            id_array[3] = "./"; //config.properties path
         } else {
-            id_array[4] = "./";
+            id_array[3] = "./";
         }
 
-        printf("%s\n", id_array[1]);
-        id_array[5] = group_id;
+        id_array[4] = group_id;
         id_array[length - 1] = NULL; //terminator need for execv
-        printf("JAVA COMMAND:%s \n", id_array[5]);
+        printf("JAVA COMMAND:%s \n", id_array[4]);
 
         //TODO adjust the path to jar file
         time(&start);
@@ -1300,10 +1299,10 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
 
         if (conflict == '\0') { //TODO check
             const char *tempConflict = " ";
-            execl("/usr/bin/java", "/usr/bin/java", "-jar", REGEX_REPLACEMENT_JAR, "./", groupId, tempConflict, resolution,
+            execl("/usr/bin/java", "/usr/bin/java", "-jar", REGEX_REPLACEMENT_JAR, "./", groupId, tempConflict,
                   (char *) 0);
         } else {
-            execl("/usr/bin/java", "/usr/bin/java", "-jar", REGEX_REPLACEMENT_JAR, "./", groupId, conflict, resolution,
+            execl("/usr/bin/java", "/usr/bin/java", "-jar", REGEX_REPLACEMENT_JAR, "./", groupId, conflict,
                   (char *) 0);
         }
     } else { //parent process
@@ -1411,7 +1410,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
             fclose(fp);
             unlink(file_names[STRING_REPLACE]);
         } else {
-            printf("Exit: regex replace jar end with error\n");
+            printf("Exit: regex replace jar end with error %d\n", status);
         }
     }
     printf("Exit: regex_replace_suggestion\n");
