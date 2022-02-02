@@ -22,7 +22,7 @@
 #define PERFORMANCE_FILENAME ".git/rr-cache/performance.txt"
 
 #define REGEX_REPLACEMENT_JAR "RegexReplacement_v2.jar"
-#define RANDOM_SEARCH_REPLACE_JAR "RandomSearchReplaceTurtle_latest.jar"
+#define RANDOM_SEARCH_REPLACE_JAR "RandomSearchReplaceTurtle_compact.jar"
 
 #define CONFLICT_INDEX 0
 #define CONFLICT_INDEX_RECLUSTER 1
@@ -1522,6 +1522,9 @@ int main(int argc, char *argv[]) {
 
             regex_replace_suggestion(jconf, jresol, jid, jv2, jdec);
             write_json_conflict_index(jconf, jresol, i + 1);
+
+            regex_replace_suggestion(jv2, jresol, jid, jconf, jdec);
+            write_json_conflict_index(jv2, jresol, i + 1);
         }
     }
     json_object_put(file_json);
