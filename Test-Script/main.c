@@ -45,6 +45,14 @@ static char *build_filename(const char *filename) {
     return result;
 }
 
+static char *concat(const char *str1, const char *str2) {
+    char *result = malloc(strlen(str1) + strlen(str2) + 1);
+    strcpy(result, str1);
+    strcat(result, str2);
+    return result;
+}
+
+
 static char *escapeCSV(char *in) {
     int in_len = strlen(in);
     char *out_buf = malloc(in_len * 2 + 3);
@@ -1523,8 +1531,9 @@ int main(int argc, char *argv[]) {
             regex_replace_suggestion(jconf, jresol, jid, jv2, jdec);
             write_json_conflict_index(jconf, jresol, i + 1);
 
-            regex_replace_suggestion(jv2, jresol, jid, jconf, jdec);
-            write_json_conflict_index(jv2, jresol, i + 1);
+            char* v1v2 = concat(jconf, jv2);
+            regex_replace_suggestion(v1v2, jresol, jid, jv2, jdec);
+            write_json_conflict_index(v1v2, jresol, i + 1);
         }
     }
     json_object_put(file_json);
