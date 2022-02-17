@@ -79,6 +79,43 @@ static int min(int x, int y) {
     return x < y ? x : y;
 }
 
+double dice_match(const char *string1, const char *string2)
+{
+    if (((string1 != NULL) && (string1[0] == '\0')) || ((string2 != NULL) && (string2[0] == '\0')))
+        return 0;
+
+    if (string1 == string2)
+        return 1;
+
+    size_t strlen1 = strlen(string1);
+    size_t strlen2 = strlen(string2);
+
+    if (strlen1 < 2 || strlen2 < 2)
+        return 0;
+
+    size_t length1 = strlen1 - 1;
+    size_t length2 = strlen2 - 1;
+
+    double matches = 0;
+    int i = 0;
+    int j = 0;
+
+    while (i < length1 && j < length2)
+    {
+        char a[3] = { string1[i], string1[i + 1], '\0' };
+        char b[3] = { string2[j], string2[j + 1], '\0' };
+        int cmp = _strcmpi(a, b);
+
+        if (cmp == 0)
+            matches += 2;
+
+        ++i;
+        ++j;
+    }
+
+    return matches / (length1 + length2);
+}
+
 static double jaro_winkler_distance(const char *s, const char *a) {
     int i, j, l;
     int m = 0, t = 0;
@@ -245,8 +282,8 @@ static double cluster_cluster_similarity(const struct json_object *val, const st
             if (jconf2 == NULL || jresol2 == NULL) {
                 printf("Something is wrong2..........................\n");
             }
-            jaroW_conf = jaro_winkler_distance(jconf1, jconf2);
-            jaroW_resol = jaro_winkler_distance(jresol1, jresol2);
+            jaroW_conf = dice_match(jconf1, jconf2);
+            jaroW_resol = dice_match(jresol1, jresol2);
             double sim = (jaroW_conf + jaroW_resol) / 2;
             /*Varibles for the ponderated solution, evaluates higher than the direct solution*/
             subcluster_similarity += sim;
@@ -368,7 +405,7 @@ static const char *get_conflict_json_id_empty_conf(char *conflict, char *resolut
 
             if (strcmp(jconf, "") == 0) {
                 //TODO check if necessary
-                jaroW = jaro_winkler_distance(conflict, jresol);
+                jaroW = dice_match(conflict, jresol);
             } else {
                 jaroW = 0;
             }
@@ -444,7 +481,7 @@ static const char *get_conflict_json_id(char *conflict, char *resolution) {
                 }
             }
 
-            jaroW = jaro_winkler_distance(conflict, jconf);
+            jaroW = dice_match(conflict, jconf);
             total_similarity += jaroW;
         }
         double avg = total_similarity / arraylen;
@@ -500,8 +537,8 @@ static double average_similarity(const struct json_object *val) {
             obj2 = json_object_array_get_idx(val, j);
             jconf2 = json_object_get_string(json_object_object_get(obj2, "conflict"));
             jresol2 = json_object_get_string(json_object_object_get(obj2, "resolution"));
-            jaroW_conf = jaro_winkler_distance(jconf1, jconf2);
-            jaroW_resol = jaro_winkler_distance(jresol1, jresol2);
+            jaroW_conf = dice_match(jconf1, jconf2);
+            jaroW_resol = dice_match(jresol1, jresol2);
             double sim = (jaroW_conf + jaroW_resol) / 2;
             /*Varibles for the ponderated solution, evaluates higher than the direct solution*/
             subcluster_similarity += sim;
@@ -583,10 +620,10 @@ static const char *get_conflict_json_id_enhanced(struct json_object *file_json, 
                 }
             }
 
-            jaroW = jaro_winkler_distance(conflict, jconf);
+            jaroW = dice_match(conflict, jconf);
             total_similarity += jaroW;
             if (resolution) {
-                jaroW_resol = jaro_winkler_distance(resolution, jresol);
+                jaroW_resol = dice_match(resolution, jresol);
                 total_similarity_resol += jaroW_resol;
             }
         }
@@ -841,8 +878,8 @@ static struct json_object *hierarchical_clustering(const struct json_object *jso
                 obj2 = json_object_array_get_idx(json_conflict, j);
                 jconf2 = json_object_get_string(json_object_object_get(obj2, "conflict"));
                 jresol2 = json_object_get_string(json_object_object_get(obj2, "resolution"));
-                jaroW_conf = jaro_winkler_distance(jconf1, jconf2);
-                jaroW_resol = jaro_winkler_distance(jresol1, jresol2);
+                jaroW_conf = dice_match(jconf1, jconf2);
+                jaroW_resol = dice_match(jresol1, jresol2);
                 total_similarity = (jaroW_conf + jaroW_resol) / 2;
                 if (total_similarity >= max_sim) {
                     if (cluster_flags[i] == 0 && cluster_flags[j] == 0) {
@@ -862,8 +899,8 @@ static struct json_object *hierarchical_clustering(const struct json_object *jso
                             const char *resol_string = json_object_get_string(
                                     json_object_object_get(conflict, "resolution"));
                             cluster_conflict_sim =
-                                    cluster_conflict_sim + jaro_winkler_distance(jconf2, conflict_string);
-                            cluster_resol_sim = cluster_resol_sim + jaro_winkler_distance(jresol2, resol_string);
+                                    cluster_conflict_sim + dice_match(jconf2, conflict_string);
+                            cluster_resol_sim = cluster_resol_sim + dice_match(jresol2, resol_string);
                         }
                         double cluster_avg_sim = ((cluster_conflict_sim / size) + (cluster_resol_sim / size)) / 2;
                         if (cluster_avg_sim >= max_cluster_sim) {
@@ -885,8 +922,8 @@ static struct json_object *hierarchical_clustering(const struct json_object *jso
                             const char *resol_string = json_object_get_string(
                                     json_object_object_get(conflict, "resolution"));
                             cluster_conflict_sim =
-                                    cluster_conflict_sim + jaro_winkler_distance(jconf1, conflict_string);
-                            cluster_resol_sim = cluster_resol_sim + jaro_winkler_distance(jresol1, resol_string);
+                                    cluster_conflict_sim + dice_match(jconf1, conflict_string);
+                            cluster_resol_sim = cluster_resol_sim + dice_match(jresol1, resol_string);
                         }
                         double cluster_avg_sim = ((cluster_conflict_sim / size) + (cluster_resol_sim / size)) / 2;
                         if (cluster_avg_sim >= max_cluster_sim) {
@@ -1368,8 +1405,8 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
             //jv1= escapeCSV(jv1);
             cluster = escapeCSV(json_object_get_string(cluster_object));
             if (res1 && res2) {
-                double jw1 = jaro_winkler_distance(resolution, res1);
-                double jw2 = jaro_winkler_distance(resolution, res2);
+                double jw1 = dice_match(resolution, res1);
+                double jw2 = dice_match(resolution, res2);
                 if (jw1 >= jw2) {
                     regex1[strcspn(regex1, "\n")] = 0;
                     replace1[strcspn(replace1, "\n")] = 0;
@@ -1404,7 +1441,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                     free(cluster);
                 }
             } else {
-                double jw1 = jaro_winkler_distance(resolution, res1);
+                double jw1 = dice_match(resolution, res1);
                 regex1 = escapeCSV(regex1);
                 replace1 = escapeCSV(replace1);
                 res1 = escapeCSV(res1);
