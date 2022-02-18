@@ -104,7 +104,7 @@ double dice_match(const char *string1, const char *string2)
     {
         char a[3] = { string1[i], string1[i + 1], '\0' };
         char b[3] = { string2[j], string2[j + 1], '\0' };
-        int cmp = _strcmpi(a, b);
+        int cmp = strcasecmp(a, b);
 
         if (cmp == 0)
             matches += 2;
@@ -1575,10 +1575,6 @@ int main(int argc, char *argv[]) {
 
             regex_replace_suggestion(jconf, jresol, jid, jv2, jdec);
             write_json_conflict_index(jconf, jresol, i + 1);
-
-            char* v1v2 = concat(jconf, jv2);
-            regex_replace_suggestion(v1v2, jresol, jid, jv2, jdec);
-            write_json_conflict_index(v1v2, jresol, i + 1);
         }
     }
     json_object_put(file_json);
