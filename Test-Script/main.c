@@ -542,7 +542,7 @@ static double average_intrasimilarity(const struct json_object *file_json) {
 }
 
 
-static const char *get_conflict_json_id_enhanced(struct json_object *file_json, char *conflict, char *resolution) {
+static const char *get_conflict_json_id_enhanced_resol(struct json_object *file_json, char *conflict, char *resolution) {
 
     if (!file_json) { // if file is empty
         if (!resolution) { //resolution is NULL
@@ -551,7 +551,6 @@ static const char *get_conflict_json_id_enhanced(struct json_object *file_json, 
         return "1";
     }
 
-    double jaroW = 0;
     double jaroW_resol = 0;
     //size_t leve = 0 ;
     const char *groupId = NULL;
@@ -583,28 +582,15 @@ static const char *get_conflict_json_id_enhanced(struct json_object *file_json, 
                 }
             }
 
-            jaroW = jaro_winkler_distance(conflict, jconf);
-            total_similarity += jaroW;
-            if (resolution) {
-                jaroW_resol = jaro_winkler_distance(resolution, jresol);
-                total_similarity_resol += jaroW_resol;
-            }
+            jaroW_resol = jaro_winkler_distance(resolution, jresol);
+            total_similarity_resol += jaroW_resol;
         }
 
-        double avg = total_similarity / arraylen;
         double avg_resol = total_similarity_resol / arraylen;
 
-        if (resolution) {
-            if (avg >= max_sim && avg_resol >= max_sim_resol) {
-                max_sim = avg;
-                max_sim_resol = avg_resol;
-                groupId = key;
-            }
-        } else {
-            if (avg >= max_sim) {
-                max_sim = avg;
-                groupId = key;
-            }
+        if (avg_resol >= max_sim_resol) {
+            max_sim_resol = avg_resol;
+            groupId = key;
         }
 
     }
@@ -1198,7 +1184,7 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
     if (!file_json) // if file is empty
         file_json = json_object_new_object();
 
-    const char *group_id = get_conflict_json_id_enhanced(file_json, conflict, resolution);
+    const char *group_id = get_conflict_json_id_enhanced_resol(file_json, conflict, resolution);
 
     if (!group_id) {
         printf("Exit: write_json_conflict_index NO groupID------------ENHANCED------------\n");
@@ -1538,10 +1524,6 @@ int main(int argc, char *argv[]) {
 
             regex_replace_suggestion(jconf, jresol, jid, jv2, jdec);
             write_json_conflict_index(jconf, jresol, i + 1);
-
-            char* v1v2 = concat(jconf, jv2);
-            regex_replace_suggestion(v1v2, jresol, jid, jv2, jdec);
-            write_json_conflict_index(v1v2, jresol, i + 1);
         }
     }
     json_object_put(file_json);
