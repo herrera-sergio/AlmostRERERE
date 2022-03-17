@@ -31,6 +31,7 @@
 #define PERFORMANCE 4
 
 typedef struct {
+    int choice;
     const char *groupId;
     double similarity;
 } Cluster;
@@ -474,7 +475,7 @@ static Cluster *get_conflict_json_id(char *conflict, char *resolution) {
     printf("Regular Local max Similarity: %f\n", local_max_sim);
     printf("Regular MAX Similarity: %f\n", max_sim);
 
-    found_cluster -> similarity = max_sim;
+    found_cluster->similarity = max_sim;
     char *id = malloc(sizeof(char *));
     if (!groupId && resolution) { //if group == null and resolution != null
         //create new group id
@@ -488,7 +489,7 @@ static Cluster *get_conflict_json_id(char *conflict, char *resolution) {
         memcpy(id, groupId, strlen(groupId) + 1);
         json_object_put(file_json);
     }
-    found_cluster -> groupId = id;
+    found_cluster->groupId = id;
 
     return found_cluster;
 }
@@ -1362,12 +1363,14 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
 static void regex_replace_suggestion(char *conflict, char *resolution, int jid, char *jv2, char *jdec) {
     printf("Enter: regex_replace_suggestion\n");
     const Cluster *cluster_v1 = get_conflict_json_id(conflict, NULL);
-    const Cluster *cluster_v1 = get_conflict_json_id(jv2, NULL);
+    const Cluster *cluster_v2 = get_conflict_json_id(jv2, NULL);
+    const Cluster  *chosen_cluster = NULL;
+    const char *groupId;
 
     time_t regex_replacement_start;
     time_t regex_replacement_end;
 
-    if (!groupId || strcmp(groupId, "0") == 0) {
+    if (!cluster_v1->groupId || strcmp(cluster_v1->groupId, "0") == 0) {
         int x = (strcmp(conflict, "") == 0);
         int y = (strcmp(resolution, "") == 0);
 
@@ -1376,10 +1379,10 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
         printf("conflict and resolution are empty:%d,%d\n", x, y);
 
         if (strcmp(conflict, "") == 0 && strcmp(resolution, "") == 0) {
-            groupId = get_conflict_json_id_empty(conflict, NULL);
+            cluster_v1->groupId = get_conflict_json_id_empty(conflict, NULL);
             printf("CASE EMPTY CONFLICT AND RESOLUTION   ----regular---- %s\n", groupId);
         } else if (strcmp(conflict, "") == 0 && strcmp(resolution, "") == 1) {
-            groupId = get_conflict_json_id_empty_conf(resolution, NULL);
+            cluster_v1->groupId = get_conflict_json_id_empty_conf(resolution, NULL);
             printf("CASE EMPTY CONFLICT AND WITH RESOLUTION   ----regular---- %s\n", groupId);
         } else {
             //nothing to do
@@ -1387,11 +1390,37 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
         }
     }
 
-    if (!groupId) {
+    if (!cluster_v2->groupId || strcmp(cluster_v2->groupId, "0") == 0) {
+        int x = (strcmp(conflict, "") == 0);
+        int y = (strcmp(resolution, "") == 0);
+
+        printf("conf: '%s'\n", conflict);
+        printf("resol: '%s'\n", resolution);
+        printf("conflict and resolution are empty:%d,%d\n", x, y);
+
+        if (strcmp(conflict, "") == 0 && strcmp(resolution, "") == 0) {
+            cluster_v2->groupId = get_conflict_json_id_empty(conflict, NULL);
+            printf("CASE EMPTY CONFLICT AND RESOLUTION   ----regular---- %s\n", groupId);
+        } else if (strcmp(conflict, "") == 0 && strcmp(resolution, "") == 1) {
+            cluster_v2->groupId = get_conflict_json_id_empty_conf(resolution, NULL);
+            printf("CASE EMPTY CONFLICT AND WITH RESOLUTION   ----regular---- %s\n", groupId);
+        } else {
+            //nothing to do
+            printf("Non of the cases   ----regular---- %s\n", groupId);
+        }
+    }
+
+    if (!cluster_v1->groupId  && !cluster_v2->groupID) {
         printf("Exit: regex_replace_suggestion: No GroupId-----------------regular--------------------\n");
         return;
-    } else {
-        printf("Group is , and continues   ----regular---- %s\n", groupId);
+    } else if (!cluster_v1->groupId && cluster_v2->groupID) {
+        printf("No cluster found for v1, using v2 %s\n", cluster_v2->groupID);
+        groupId = cluster_v2->groupID;
+    }else if (cluster_v1->groupId && !cluster_v2->groupID) {
+        printf("No cluster found for v2, using v1 %s\n", cluster_v2->groupID);
+        groupId = cluster_v2->groupID;
+    }else{
+        groupId = cluster_v1 -> similarity >= cluster_v2->similarity ? cluster_v1->groupId : cluster_v2->groupId;
     }
 
     struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
