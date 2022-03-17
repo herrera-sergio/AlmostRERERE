@@ -30,6 +30,11 @@
 #define STRING_REPLACE_RESULT 3
 #define PERFORMANCE 4
 
+typedef struct {
+    const char *groupId;
+    double similarity;
+} Cluster;
+
 char *groupId_list = NULL;
 int cluster_population = 0;
 
@@ -132,7 +137,7 @@ static double jaro_winkler_distance(const char *s, const char *a) {
     /* Jaro distance */
     dw = (((double) m / sl) + ((double) m / al) + ((double) (m - t) / m)) / 3.0;
 
-    if(dw<=0.7){ //added based on Python implementation
+    if (dw <= 0.7) { //added based on Python implementation
         return dw;
     }
 
@@ -289,7 +294,8 @@ static const char *get_conflict_json_id_empty(char *conflict, char *resolution) 
     int arraylen;
 
     double total_similarity = 0;
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
         arraylen = json_object_array_length(val);
         idCount += 1;
@@ -359,7 +365,8 @@ static const char *get_conflict_json_id_empty_conf(char *conflict, char *resolut
     int arraylen;
 
     double total_similarity = 0;
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
 
         arraylen = json_object_array_length(val);
@@ -409,6 +416,83 @@ static const char *get_conflict_json_id_empty_conf(char *conflict, char *resolut
     return id;
 }
 
+
+static Cluster *get_conflict_json_id(char *conflict, char *resolution) {
+    Cluster *found_cluster = malloc(sizeof(Cluster));
+    struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
+
+    if (!file_json) { // if file is empty
+        if (!resolution) { //resolution is NULL
+            return NULL;
+        }
+        return "1";
+    }
+
+    double jaroW = 0;
+    const char *groupId = NULL;
+    double max_sim = similarity_th;
+    double local_max_sim = 0;
+    int idCount = 0;
+
+    struct json_object *obj;
+    const char *jconf;
+    const char *jresol;
+    int arraylen;
+
+    double total_similarity = 0;
+    json_object_object_foreach(file_json, key, val)
+    {
+        obj = NULL;
+        arraylen = json_object_array_length(val);
+        idCount += 1;
+        total_similarity = 0;
+        for (int i = 0; i < arraylen; i++) {
+            obj = json_object_array_get_idx(val, i);
+            jconf = json_object_get_string(json_object_object_get(obj, "conflict"));
+            jresol = json_object_get_string(json_object_object_get(obj, "resolution"));
+
+            if (resolution) {
+                if (strcmp(conflict, jconf) == 0 && strcmp(resolution, jresol) == 0) {
+                    json_object_put(file_json);
+                    return NULL;
+                }
+            }
+
+            jaroW = jaro_winkler_distance(conflict, jconf);
+            total_similarity += jaroW;
+        }
+        double avg = total_similarity / arraylen;
+        if (avg >= local_max_sim) {
+            local_max_sim = avg;
+        }
+
+        if (avg >= max_sim) {
+            max_sim = avg;
+            groupId = key;
+        }
+    }
+    printf("Regular Local max Similarity: %f\n", local_max_sim);
+    printf("Regular MAX Similarity: %f\n", max_sim);
+
+    found_cluster -> similarity = max_sim;
+    char *id = malloc(sizeof(char *));
+    if (!groupId && resolution) { //if group == null and resolution != null
+        //create new group id
+        json_object_put(file_json);
+        id = (char *) json_object_to_json_string(json_object_new_int(idCount + 1));
+    } else if (groupId) { //groupid != null
+        memcpy(id, groupId, strlen(groupId) + 1);
+        json_object_put(file_json);
+    } else {
+        groupId = "0";
+        memcpy(id, groupId, strlen(groupId) + 1);
+        json_object_put(file_json);
+    }
+    found_cluster -> groupId = id;
+
+    return found_cluster;
+}
+
 //get cluster id?
 static const char *get_conflict_json_id(char *conflict, char *resolution) {
     struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
@@ -431,7 +515,8 @@ static const char *get_conflict_json_id(char *conflict, char *resolution) {
     int arraylen;
 
     double total_similarity = 0;
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
         arraylen = json_object_array_length(val);
         idCount += 1;
@@ -529,7 +614,8 @@ static double average_intrasimilarity(const struct json_object *file_json) {
     int there_is_valid_clusters = 0;
 
 
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         arraylen = json_object_array_length(val);
 
         if (arraylen > 1) {
@@ -570,7 +656,8 @@ static const char *get_conflict_json_id_enhanced(struct json_object *file_json, 
 
     double total_similarity = 0;
     double total_similarity_resol = 0;
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
         arraylen = json_object_array_length(val);
         idCount += 1;
@@ -785,7 +872,8 @@ static struct json_object *hierarchical_clustering2(const struct json_object *js
     struct json_object *cluster_result = json_object_new_object();
     int key_index = 1;
     int del_flag = 1;
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         del_flag = 1;
         for (int i = 0; i < json_object_array_length(schedule_delete); i++) {
             char *key_i = malloc(sizeof(char *));
@@ -908,7 +996,8 @@ static struct json_object *hierarchical_clustering(const struct json_object *jso
         }
 
         idCount = 0;
-        json_object_object_foreach(file_json, key, val) {
+        json_object_object_foreach(file_json, key, val)
+        {
             idCount += 1;
         }
         if (max_sim_index == -1) {//case 1 no similar conflicts
@@ -972,7 +1061,8 @@ static struct json_object *recluster(const struct json_object *file_json) {
     struct json_object *jarray2 = json_object_new_array();
     int arraylen;
 
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
         arraylen = json_object_array_length(val);
         for (int i = 0; i < arraylen; i++) {
@@ -1082,7 +1172,8 @@ static int check_for_recluster(int conflict_number) {
             int cluster_count = 0;
             int clusters_lenght_1 = 0;
             int x1 = 0;
-            json_object_object_foreach(file_json, key, val) {
+            json_object_object_foreach(file_json, key, val)
+            {
                 cluster_count += 1;
                 int arraylen1 = json_object_array_length(val);
                 x1 = x1 + arraylen1;
@@ -1115,7 +1206,8 @@ static int check_for_recluster(int conflict_number) {
                 int number_keys = 0;
                 //char ids[256];
                 json_object_object_foreach(file_json_reclustered, key,
-                                           val) {//simple check for number of conflicts parity
+                                           val)
+                {//simple check for number of conflicts parity
                     //obj1 = NULL;
                     //jarray = json_object_new_array();
                     int arraylen = json_object_array_length(val);
@@ -1269,7 +1361,9 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
 
 static void regex_replace_suggestion(char *conflict, char *resolution, int jid, char *jv2, char *jdec) {
     printf("Enter: regex_replace_suggestion\n");
-    const char *groupId = get_conflict_json_id(conflict, NULL);
+    const Cluster *cluster_v1 = get_conflict_json_id(conflict, NULL);
+    const Cluster *cluster_v1 = get_conflict_json_id(jv2, NULL);
+
     time_t regex_replacement_start;
     time_t regex_replacement_end;
 
@@ -1383,7 +1477,8 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                     res1 = escapeCSV(res1);
                     resolution = escapeCSV(resolution);
                     //fprintf(fp,"\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n",conflict,groupId,jw1,regex1,replace1,resolution,res1,jv1,jv2,jdec,jid);
-                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n", conflict,
+                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n",
+                            conflict,
                             groupId, jw1, regex1, replace1, resolution, res1, jv2, jdec, jid, cluster);
                     free(conflict);
                     free(regex1);
@@ -1399,7 +1494,8 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                     res2[strcspn(res2, "\n")] = 0;
                     resolution = escapeCSV(resolution);
                     //fprintf(fp,"\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n",conflict,groupId,jw2,regex2,replace2,resolution,res2,jv1,jv2,jdec,jid);
-                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n", conflict,
+                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n",
+                            conflict,
                             groupId, jw2, regex2, replace2, resolution, res2, jv2, jdec, jid, cluster);
                     free(conflict);
                     free(regex2);
@@ -1521,7 +1617,8 @@ int main(int argc, char *argv[]) {
 
     cluster_population = 1;
     printf("processing...");
-    json_object_object_foreach(file_json, key, val) {
+    json_object_object_foreach(file_json, key, val)
+    {
         obj = NULL;
         arraylen = json_object_array_length(val);
         printf("arraylen: %d\n", arraylen);
@@ -1547,7 +1644,7 @@ int main(int argc, char *argv[]) {
     json_object_put(file_json);
 
     //free file name strings
-    for(int i = 0; i < 5; i++)
+    for (int i = 0; i < 5; i++)
         free(file_names[i]);
 
     return 0;
