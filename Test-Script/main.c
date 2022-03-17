@@ -132,6 +132,10 @@ static double jaro_winkler_distance(const char *s, const char *a) {
     /* Jaro distance */
     dw = (((double) m / sl) + ((double) m / al) + ((double) (m - t) / m)) / 3.0;
 
+    if(dw<=0.7){ //added based on Python implementation
+        return dw;
+    }
+
     /* calculate common string prefix up to 4 chars */
     l = 0;
     for (i = 0; i < min(min(sl, al), 4); i++)
@@ -1538,10 +1542,6 @@ int main(int argc, char *argv[]) {
 
             regex_replace_suggestion(jconf, jresol, jid, jv2, jdec);
             write_json_conflict_index(jconf, jresol, i + 1);
-
-            char* v1v2 = concat(jconf, jv2);
-            regex_replace_suggestion(v1v2, jresol, jid, jv2, jdec);
-            write_json_conflict_index(v1v2, jresol, i + 1);
         }
     }
     json_object_put(file_json);
