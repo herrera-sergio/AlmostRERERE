@@ -45,7 +45,7 @@ char *file_names[5];
 char *workdir_path = NULL;
 
 static char *build_filename(const char *filename) {
-    char *result = malloc(strlen(workdir_path) + strlen(filename) + 1);
+    char *result = malloc(strlen(workdir_path) + strlen(filename) + 2);
     strcpy(result, workdir_path);
     strcat(result, filename);
     return result;
@@ -424,7 +424,8 @@ static Cluster *get_conflict_json_id(char *conflict, char *resolution) {
 
     if (!file_json) { // if file is empty
         if (!resolution) { //resolution is NULL
-            return NULL;
+            found_cluster -> groupId = NULL;
+            return found_cluster;
         }
         return "1";
     }
@@ -493,78 +494,78 @@ static Cluster *get_conflict_json_id(char *conflict, char *resolution) {
 
     return found_cluster;
 }
-
-//get cluster id?
-static const char *get_conflict_json_id(char *conflict, char *resolution) {
-    struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
-    if (!file_json) { // if file is empty
-        if (!resolution) { //resolution is NULL
-            return NULL;
-        }
-        return "1";
-    }
-
-    double jaroW = 0;
-    const char *groupId = NULL;
-    double max_sim = similarity_th;
-    double local_max_sim = 0;
-    int idCount = 0;
-
-    struct json_object *obj;
-    const char *jconf;
-    const char *jresol;
-    int arraylen;
-
-    double total_similarity = 0;
-    json_object_object_foreach(file_json, key, val)
-    {
-        obj = NULL;
-        arraylen = json_object_array_length(val);
-        idCount += 1;
-        total_similarity = 0;
-        for (int i = 0; i < arraylen; i++) {
-            obj = json_object_array_get_idx(val, i);
-            jconf = json_object_get_string(json_object_object_get(obj, "conflict"));
-            jresol = json_object_get_string(json_object_object_get(obj, "resolution"));
-
-            if (resolution) {
-                if (strcmp(conflict, jconf) == 0 && strcmp(resolution, jresol) == 0) {
-                    json_object_put(file_json);
-                    return NULL;
-                }
-            }
-
-            jaroW = jaro_winkler_distance(conflict, jconf);
-            total_similarity += jaroW;
-        }
-        double avg = total_similarity / arraylen;
-        if (avg >= local_max_sim) {
-            local_max_sim = avg;
-        }
-
-        if (avg >= max_sim) {
-            max_sim = avg;
-            groupId = key;
-        }
-    }
-    printf("Regular Local max Similarity: %f\n", local_max_sim);
-    printf("Regular MAX Similarity: %f\n", max_sim);
-
-    char *id = malloc(sizeof(char *));
-    if (!groupId && resolution) { //if group == null and resolution != null
-        //create new group id
-        json_object_put(file_json);
-        id = (char *) json_object_to_json_string(json_object_new_int(idCount + 1));
-    } else if (groupId) { //groupid != null
-        memcpy(id, groupId, strlen(groupId) + 1);
-        json_object_put(file_json);
-    } else {
-        groupId = "0";
-        memcpy(id, groupId, strlen(groupId) + 1);
-        json_object_put(file_json);
-    }
-    return id;
-}
+//
+////get cluster id?
+//static const char *get_conflict_json_id(char *conflict, char *resolution) {
+//    struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
+//    if (!file_json) { // if file is empty
+//        if (!resolution) { //resolution is NULL
+//            return NULL;
+//        }
+//        return "1";
+//    }
+//
+//    double jaroW = 0;
+//    const char *groupId = NULL;
+//    double max_sim = similarity_th;
+//    double local_max_sim = 0;
+//    int idCount = 0;
+//
+//    struct json_object *obj;
+//    const char *jconf;
+//    const char *jresol;
+//    int arraylen;
+//
+//    double total_similarity = 0;
+//    json_object_object_foreach(file_json, key, val)
+//    {
+//        obj = NULL;
+//        arraylen = json_object_array_length(val);
+//        idCount += 1;
+//        total_similarity = 0;
+//        for (int i = 0; i < arraylen; i++) {
+//            obj = json_object_array_get_idx(val, i);
+//            jconf = json_object_get_string(json_object_object_get(obj, "conflict"));
+//            jresol = json_object_get_string(json_object_object_get(obj, "resolution"));
+//
+//            if (resolution) {
+//                if (strcmp(conflict, jconf) == 0 && strcmp(resolution, jresol) == 0) {
+//                    json_object_put(file_json);
+//                    return NULL;
+//                }
+//            }
+//
+//            jaroW = jaro_winkler_distance(conflict, jconf);
+//            total_similarity += jaroW;
+//        }
+//        double avg = total_similarity / arraylen;
+//        if (avg >= local_max_sim) {
+//            local_max_sim = avg;
+//        }
+//
+//        if (avg >= max_sim) {
+//            max_sim = avg;
+//            groupId = key;
+//        }
+//    }
+//    printf("Regular Local max Similarity: %f\n", local_max_sim);
+//    printf("Regular MAX Similarity: %f\n", max_sim);
+//
+//    char *id = malloc(sizeof(char *));
+//    if (!groupId && resolution) { //if group == null and resolution != null
+//        //create new group id
+//        json_object_put(file_json);
+//        id = (char *) json_object_to_json_string(json_object_new_int(idCount + 1));
+//    } else if (groupId) { //groupid != null
+//        memcpy(id, groupId, strlen(groupId) + 1);
+//        json_object_put(file_json);
+//    } else {
+//        groupId = "0";
+//        memcpy(id, groupId, strlen(groupId) + 1);
+//        json_object_put(file_json);
+//    }
+//    return id;
+//}
 
 static double average_similarity(const struct json_object *val) {
 
@@ -1287,15 +1288,25 @@ static int check_for_recluster(int conflict_number) {
 
 }
 
-static int write_json_conflict_index(char *conflict, char *resolution, int conflict_number) {
+static int
+write_json_conflict_index(char *conflict, char *v2, char *resolution, int conflict_number, Cluster *chosen_cluster) {
     printf("Login: write_json_conflict_index\n");
     struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
     size_t cluster_size = 0;
+    const char *group_id;
 
     if (!file_json) // if file is empty
         file_json = json_object_new_object();
 
-    const char *group_id = get_conflict_json_id_enhanced(file_json, conflict, resolution);
+    if (chosen_cluster == NULL) {
+        printf("No cluster has been found to solve the conflict, chose v1\n");
+        group_id = get_conflict_json_id_enhanced(file_json, conflict, resolution);
+    } else {
+        printf("Conflict has been solved with v%d\n", chosen_cluster->choice);
+        group_id = chosen_cluster->choice == 1 ? get_conflict_json_id_enhanced(file_json, conflict, resolution)
+                                               : get_conflict_json_id_enhanced(file_json, v2, resolution);
+        free(chosen_cluster);
+    }
 
     if (!group_id) {
         printf("Exit: write_json_conflict_index NO groupID------------ENHANCED------------\n");
@@ -1360,11 +1371,11 @@ static int write_json_conflict_index(char *conflict, char *resolution, int confl
     return 1;
 }
 
-static void regex_replace_suggestion(char *conflict, char *resolution, int jid, char *jv2, char *jdec) {
+static Cluster *regex_replace_suggestion(char *conflict, char *resolution, int jid, char *jv2, char *jdec) {
     printf("Enter: regex_replace_suggestion\n");
-    const Cluster *cluster_v1 = get_conflict_json_id(conflict, NULL);
-    const Cluster *cluster_v2 = get_conflict_json_id(jv2, NULL);
-    const Cluster  *chosen_cluster = NULL;
+    Cluster *cluster_v1 = get_conflict_json_id(conflict, NULL);
+    Cluster *cluster_v2 = get_conflict_json_id(jv2, NULL);
+    Cluster *chosen_cluster = NULL;
     const char *groupId;
 
     time_t regex_replacement_start;
@@ -1374,55 +1385,64 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
         int x = (strcmp(conflict, "") == 0);
         int y = (strcmp(resolution, "") == 0);
 
-        printf("conf: '%s'\n", conflict);
-        printf("resol: '%s'\n", resolution);
-        printf("conflict and resolution are empty:%d,%d\n", x, y);
+        printf("1 -- conf: '%s'\n", conflict);
+        printf("1 -- resol: '%s'\n", resolution);
+        printf("1 -- conflict and resolution are empty:%d,%d\n", x, y);
 
-        if (strcmp(conflict, "") == 0 && strcmp(resolution, "") == 0) {
+        if (strcmp(conflict, "") == 0) {
             cluster_v1->groupId = get_conflict_json_id_empty(conflict, NULL);
-            printf("CASE EMPTY CONFLICT AND RESOLUTION   ----regular---- %s\n", groupId);
-        } else if (strcmp(conflict, "") == 0 && strcmp(resolution, "") == 1) {
-            cluster_v1->groupId = get_conflict_json_id_empty_conf(resolution, NULL);
-            printf("CASE EMPTY CONFLICT AND WITH RESOLUTION   ----regular---- %s\n", groupId);
+            printf("CASE EMPTY CONFLICT ----regular---- %s\n", cluster_v1->groupId);
         } else {
             //nothing to do
-            printf("Non of the cases   ----regular---- %s\n", groupId);
+            printf("Non of the cases  ----regular---- %s\n", cluster_v1->groupId);
         }
     }
+
 
     if (!cluster_v2->groupId || strcmp(cluster_v2->groupId, "0") == 0) {
         int x = (strcmp(conflict, "") == 0);
         int y = (strcmp(resolution, "") == 0);
 
-        printf("conf: '%s'\n", conflict);
-        printf("resol: '%s'\n", resolution);
-        printf("conflict and resolution are empty:%d,%d\n", x, y);
+        printf("2 -- conf: '%s'\n", jv2);
+        printf("2 -- resol: '%s'\n", resolution);
+        printf("2 --conflict and resolution are empty:%d,%d\n", x, y);
 
-        if (strcmp(conflict, "") == 0 && strcmp(resolution, "") == 0) {
-            cluster_v2->groupId = get_conflict_json_id_empty(conflict, NULL);
-            printf("CASE EMPTY CONFLICT AND RESOLUTION   ----regular---- %s\n", groupId);
-        } else if (strcmp(conflict, "") == 0 && strcmp(resolution, "") == 1) {
-            cluster_v2->groupId = get_conflict_json_id_empty_conf(resolution, NULL);
-            printf("CASE EMPTY CONFLICT AND WITH RESOLUTION   ----regular---- %s\n", groupId);
+        if (strcmp(conflict, "") == 0) {
+            cluster_v2->groupId = get_conflict_json_id_empty(jv2, NULL);
+            printf("CASE EMPTY CONFLICT ----regular---- %s\n", cluster_v2->groupId);
         } else {
             //nothing to do
-            printf("Non of the cases   ----regular---- %s\n", groupId);
+            printf("Non of the cases  ----regular---- %s\n", cluster_v2->groupId);
         }
     }
 
-    if (!cluster_v1->groupId  && !cluster_v2->groupID) {
+    if ((!cluster_v1->groupId || strcmp(cluster_v1->groupId, "0") == 0) &&
+        (!cluster_v2->groupId || strcmp(cluster_v2->groupId, "0") == 0)) {
         printf("Exit: regex_replace_suggestion: No GroupId-----------------regular--------------------\n");
-        return;
-    } else if (!cluster_v1->groupId && cluster_v2->groupID) {
-        printf("No cluster found for v1, using v2 %s\n", cluster_v2->groupID);
-        groupId = cluster_v2->groupID;
-    }else if (cluster_v1->groupId && !cluster_v2->groupID) {
-        printf("No cluster found for v2, using v1 %s\n", cluster_v2->groupID);
-        groupId = cluster_v2->groupID;
-    }else{
-        groupId = cluster_v1 -> similarity >= cluster_v2->similarity ? cluster_v1->groupId : cluster_v2->groupId;
+        return NULL;
+    } else if ((!cluster_v1->groupId || strcmp(cluster_v1->groupId, "0") == 0) && cluster_v2->groupId &&
+               strcmp(cluster_v2->groupId, "0") != 0) {
+        printf("No cluster found for v1, using v2 --> groupId: %s\n", cluster_v2->groupId);
+        chosen_cluster = cluster_v2;
+        chosen_cluster->choice = 2;
+    } else if (cluster_v1->groupId && strcmp(cluster_v1->groupId, "0") != 0 &&
+               (!cluster_v2->groupId || strcmp(cluster_v2->groupId, "0") == 0)) {
+        printf("No cluster found for v2, using v1 --> groupId: %s\n", cluster_v1->groupId);
+        chosen_cluster = cluster_v1;
+        chosen_cluster->choice = 1;
+    } else if (cluster_v1->similarity >= cluster_v2->similarity) {
+        printf("Cluster found for v1 has greater similarity --> groupId: %s similarity %f\n", cluster_v1->groupId,
+               cluster_v1->similarity);
+        chosen_cluster = cluster_v1;
+        chosen_cluster->choice = 1;
+    } else {
+        printf("Cluster found for v2 has greater similarity --> groupId: %s similarity %f\n", cluster_v2->groupId,
+               cluster_v2->similarity);
+        chosen_cluster = cluster_v2;
+        chosen_cluster->choice = 2;
     }
 
+    groupId = chosen_cluster->groupId;
     struct json_object *file_json = json_object_from_file(file_names[CONFLICT_INDEX]);
     struct json_object *cluster_object = json_object_object_get(file_json, groupId);
 
@@ -1452,14 +1472,14 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
         if (!status) {
             FILE *fp = fopen(file_names[STRING_REPLACE], "r");
             if (!fp)
-                return;
+                return chosen_cluster;
 
             fseek(fp, 0, SEEK_END); // goto end of file
             if (ftell(fp) == 0) {
                 printf("file is empty\n");
                 unlink(file_names[STRING_REPLACE]);
                 printf("Exit: regex_replace_suggestion\n");
-                return;
+                return chosen_cluster;
             }
             fseek(fp, 0, SEEK_SET);
 
@@ -1506,9 +1526,10 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                     res1 = escapeCSV(res1);
                     resolution = escapeCSV(resolution);
                     //fprintf(fp,"\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n",conflict,groupId,jw1,regex1,replace1,resolution,res1,jv1,jv2,jdec,jid);
-                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n",
+                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%d\",\"%s\"\n",
                             conflict,
-                            groupId, jw1, regex1, replace1, resolution, res1, jv2, jdec, jid, cluster);
+                            groupId, jw1, regex1, replace1, resolution, res1, jv2, jdec, chosen_cluster->choice, jid,
+                            cluster);
                     free(conflict);
                     free(regex1);
                     free(replace1);
@@ -1523,9 +1544,10 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                     res2[strcspn(res2, "\n")] = 0;
                     resolution = escapeCSV(resolution);
                     //fprintf(fp,"\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\"\n",conflict,groupId,jw2,regex2,replace2,resolution,res2,jv1,jv2,jdec,jid);
-                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n",
+                    fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%d\",\"%s\"\n",
                             conflict,
-                            groupId, jw2, regex2, replace2, resolution, res2, jv2, jdec, jid, cluster);
+                            groupId, jw2, regex2, replace2, resolution, res2, jv2, jdec, chosen_cluster->choice, jid,
+                            cluster);
                     free(conflict);
                     free(regex2);
                     free(replace2);
@@ -1542,8 +1564,10 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
                 res1[strcspn(res1, "\n")] = 0;
                 resolution = escapeCSV(resolution);
 
-                fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%s\"\n", conflict,
-                        groupId, jw1, regex1, replace1, resolution, res1, jv2, jdec, jid, cluster);
+                fprintf(fp, "\"%s\",\"%s\",\"%f\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%d\",\"%d\",\"%s\"\n",
+                        conflict,
+                        groupId, jw1, regex1, replace1, resolution, res1, jv2, jdec, chosen_cluster->choice, jid,
+                        cluster);
                 free(conflict);
                 free(regex1);
                 free(replace1);
@@ -1559,6 +1583,7 @@ static void regex_replace_suggestion(char *conflict, char *resolution, int jid, 
     }
 
     printf("Exit: regex_replace_suggestion\n");
+    return chosen_cluster;
 }
 
 static void init_performance_file() {
@@ -1592,7 +1617,7 @@ static int init_properties() {
 
     if (fp != NULL && getline(&line, &len, fp)) {
         line = get_property_value(line);
-        workdir_path = malloc(strlen(line));
+        workdir_path = malloc(strlen(line) + 1);
         strncpy(workdir_path, line, strlen(line) - 1);
         fclose(fp);
 
@@ -1666,8 +1691,8 @@ int main(int argc, char *argv[]) {
             printf("jconf: %s\n", jconf);
             printf("jresol: %s\n", jresol);
 
-            regex_replace_suggestion(jconf, jresol, jid, jv2, jdec);
-            write_json_conflict_index(jconf, jresol, i + 1);
+            Cluster *cluster = regex_replace_suggestion(jconf, jresol, jid, jv2, jdec);
+            write_json_conflict_index(jconf, jv2, jresol, i + 1, cluster);
         }
     }
     json_object_put(file_json);
