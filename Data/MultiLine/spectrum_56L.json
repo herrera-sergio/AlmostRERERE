@@ -1,0 +1,746 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 119280,
+    "v1": "slider={slider} onClick={this.discardDraft} data-cy=\"thread-composer-overlay\"",
+    "v2": "isModal={isModal} onClick={this.closeComposer} data-cy=\"overlay\"",
+    "resolution": "isModal={isModal} onClick={this.discardDraft} data-cy=\"overlay\"",
+    "conflict": "slider={slider} onClick={this.discardDraft} data-cy=\"thread-composer-overlay\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119302,
+    "v1": "body: message.messageType === messageTypeObj.media ? '' : body,",
+    "v2": "body: message.messageType === messageTypeObj.media ? '' : message.content.body,",
+    "resolution": "body: message.messageType === messageTypeObj.media ? '' : body,",
+    "conflict": "body: message.messageType === messageTypeObj.media ? '' : body,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119303,
+    "v1": ": processMessageContent(messageTypeObj.draftjs, body),",
+    "v2": ": processMessageContent( messageTypeObj.text, message.content.body ),",
+    "resolution": ": processMessageContent(messageTypeObj.draftjs, body),",
+    "conflict": ": processMessageContent(messageTypeObj.draftjs, body),"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119304,
+    "v1": "",
+    "v2": "const { isLoading } = this.state;  const loginUrl = community.brandedLogin.isEnabled ? `/${community.slug}/login?r=${CLIENT_URL}${getThreadLink(thread)}` : `/login?r=${CLIENT_URL}${getThreadLink(thread)}`;",
+    "resolution": "const { isLoading } = this.state;  const loginUrl = community.brandedLogin.isEnabled ? `/${community.slug}/login?r=${CLIENT_URL}${getThreadLink(thread)}` : `/login?r=${CLIENT_URL}${getThreadLink(thread)}`;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119305,
+    "v1": "divider: '#F6F7F8', border: '#EBECED', inactive: '#DFE7EF',",
+    "v2": "border: '#EBECED', inactive: '#F6F7F8',",
+    "resolution": "divider: '#F6F7F8', border: '#EBECED', inactive: '#DFE7EF',",
+    "conflict": "divider: '#F6F7F8', border: '#EBECED', inactive: '#DFE7EF',"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119307,
+    "v1": "// if a post was published in this session, // clear redux so that the next composer open will start fresh if (postWasPublished) return this.closeComposer('clear');",
+    "v2": "// if a post was published, in this session, clear redux so that the next // composer open will start fresh if (postWasPublished) return;",
+    "resolution": "// if a post was published, in this session, clear redux so that the next // composer open will start fresh if (postWasPublished) return;",
+    "conflict": "// if a post was published in this session, // clear redux so that the next composer open will start fresh if (postWasPublished) return this.closeComposer('clear');"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119311,
+    "v1": "<TextButton hoverColor=\"warn.alt\" onClick={this.discardDraft}>",
+    "v2": "<TextButton data-cy=\"composer-cancel-button\" hoverColor=\"warn.alt\" onClick={this.closeComposer} >",
+    "resolution": "<TextButton data-cy=\"composer-cancel-button\" hoverColor=\"warn.alt\" onClick={this.discardDraft} >",
+    "conflict": "<TextButton hoverColor=\"warn.alt\" onClick={this.discardDraft}>"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119312,
+    "v1": "if (esc && sliderOpen && !composerHasContent) { return this.props.dispatch(closeComposer()); }",
+    "v2": "handleKeyPress = e => { const cmdEnter = e.keyCode === ENTER && e.metaKey;",
+    "resolution": "if (esc && sliderOpen && !composerHasContent) { return this.props.dispatch(closeComposer()); }",
+    "conflict": "if (esc && sliderOpen && !composerHasContent) { return this.props.dispatch(closeComposer()); }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119313,
+    "v1": "body?: any, editedBody?: any, title?: string,",
+    "v2": "body: string, title: string,",
+    "resolution": "body: string, title: string,",
+    "conflict": "body?: any, editedBody?: any, title?: string,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119315,
+    "v1": "body: toState(JSON.parse(thread.content.body)), editedBody: toState(JSON.parse(thread.content.body)),",
+    "v2": "body: stateToMarkdown(convertFromRaw(parsedBody), { gfm: true, }),",
+    "resolution": "body: stateToMarkdown(convertFromRaw(parsedBody), { gfm: true, }),",
+    "conflict": "body: toState(JSON.parse(thread.content.body)), editedBody: toState(JSON.parse(thread.content.body)),"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119319,
+    "v1": "",
+    "v2": "import processThreadContent from 'shared/draft-utils/process-thread-content'; import { ThreadHeading } from 'src/views/thread/style'; import { SegmentedControl, Segment } from 'src/components/segmentedControl'; import getThreadLink from 'src/helpers/get-thread-link'; import ThreadRenderer from '../threadRenderer';",
+    "resolution": "import processThreadContent from 'shared/draft-utils/process-thread-content'; import { ThreadHeading } from 'src/views/thread/style'; import { SegmentedControl, Segment } from 'src/components/segmentedControl'; import getThreadLink from 'src/helpers/get-thread-link'; import ThreadRenderer from '../threadRenderer';",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119323,
+    "v1": "const ids = getSpectrumThreadIds( toPlainText(toState(JSON.parse(message.content.body))) ); const uniqueIds = ids.filter((x, i, a) => a.indexOf(x) === i);",
+    "v2": "const parsed = JSON.parse(message.content.body);",
+    "resolution": "const parsed = JSON.parse(message.content.body); const ids = getSpectrumThreadIds( toPlainText(toState(parsed)) );",
+    "conflict": "const ids = getSpectrumThreadIds( toPlainText(toState(JSON.parse(message.content.body))) ); const uniqueIds = ids.filter((x, i, a) => a.indexOf(x) === i);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119352,
+    "v1": "to = to.filter(toType => { return toType.email.substr(to.length - 7) !== '@qq.com'; });",
+    "v2": "if (to.substr(to.length - 7) === '@qq.com') { return Promise.resolve(); }",
+    "resolution": "to = to.filter(toType => { return toType.email.substr(to.length - 7) !== '@qq.com'; });",
+    "conflict": "to = to.filter(toType => { return toType.email.substr(to.length - 7) !== '@qq.com'; });"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119385,
+    "v1": "max: process.env.SENTRY_NAME === 'api' || process.env.SENTRY_NAME === 'hyperion' ? 20 : 1, // Maximum number of connections, default is 1000",
+    "v2": "max: 60, // Maximum number of connections, default is 1000",
+    "resolution": "max: process.env.SENTRY_NAME === 'api' || process.env.SENTRY_NAME === 'hyperion' ? 60 : 1, // Maximum number of connections, default is 1000",
+    "conflict": "max: process.env.SENTRY_NAME === 'api' || process.env.SENTRY_NAME === 'hyperion' ? 20 : 1, // Maximum number of connections, default is 1000"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119394,
+    "v1": "<Link to={'/' + getThreadLink(thread)}> &nbsp;{`· ${timestamp}`}",
+    "v2": "<Link to={`/thread/${id}`}> &nbsp; {`· ${timestamp}`}",
+    "resolution": "<Link to={'/' + getThreadLink(thread)}> &nbsp;{`· ${timestamp}`}",
+    "conflict": "<Link to={'/' + getThreadLink(thread)}> &nbsp;{`· ${timestamp}`}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119395,
+    "v1": "const map = (state: *): * => ({ currentUser: state.users.currentUser }); // $FlowIssue export default compose(",
+    "v2": "const map = state => ({ currentUser: state.users.currentUser }); export default compose( // $FlowIssue",
+    "resolution": "const map = (state: *): * => ({ currentUser: state.users.currentUser }); // $FlowIssue export default compose(",
+    "conflict": "const map = (state: *): * => ({ currentUser: state.users.currentUser }); // $FlowIssue export default compose("
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119422,
+    "v1": "PricingLink, SupportLink, FeaturesLink, AppsLink, ExploreLink,",
+    "v2": "DropdownLink,",
+    "resolution": "SupportLink, FeaturesLink, AppsLink, ExploreLink,",
+    "conflict": "PricingLink, SupportLink, FeaturesLink, AppsLink, ExploreLink,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119441,
+    "v1": "addSecurityMiddleware(app, { enableNonce: false, enableCSP: false });",
+    "v2": "addSecurityMiddleware(app); if (process.env.NODE_ENV === 'production' && !process.env.FORCE_DEV) { app.use(csrf); }",
+    "resolution": "addSecurityMiddleware(app, { enableNonce: false, enableCSP: false }); if (process.env.NODE_ENV === 'production' && !process.env.FORCE_DEV) { app.use(csrf); }",
+    "conflict": "addSecurityMiddleware(app, { enableNonce: false, enableCSP: false });"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119474,
+    "v1": "}),  incrementReactionCount(threadReaction.threadId) ])",
+    "v2": "}); }",
+    "resolution": "}), sendReactionNotification, incrementReactionCount(threadReaction.threadId) ])",
+    "conflict": "}),  incrementReactionCount(threadReaction.threadId) ])"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119481,
+    "v1": "</ThreadSubtitle>  <ThreadSubtitle> <Link to={getThreadLink(thread)}>",
+    "v2": "<span>&nbsp;·&nbsp;</span> <Link to={`/thread/${thread.id}`}>",
+    "resolution": "<span>&nbsp;·&nbsp;</span> <Link to={getThreadLink(thread)}>",
+    "conflict": "</ThreadSubtitle>  <ThreadSubtitle> <Link to={getThreadLink(thread)}>"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119492,
+    "v1": "data: { thread: ThreadInfoType, },",
+    "v2": "data: { thread: GetThreadMessageConnectionType }, thread: GetThreadType, currentUser: ?Object,",
+    "resolution": "data: { thread: GetThreadMessageConnectionType }, thread: GetThreadType, currentUser: ?Object,",
+    "conflict": "data: { thread: ThreadInfoType, },"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119498,
+    "v1": "border-left: 0; border-right: 0; padding: 6px 32px 6px 38px;",
+    "v2": "border-radius: 6px; padding: 6px;",
+    "resolution": "border-left: 0; border-right: 0; padding: 6px 32px;",
+    "conflict": "border-left: 0; border-right: 0; padding: 6px 32px 6px 38px;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119506,
+    "v1": "if ( process.env.NODE_ENV === 'development' && module.hot && module.hot.accept ) {",
+    "v2": "if (module.hot && typeof module.hot.accept === 'function') {",
+    "resolution": "if ( process.env.NODE_ENV === 'development' && module.hot && typeof module.hot.accept === 'function'",
+    "conflict": "if ( process.env.NODE_ENV === 'development' && module.hot && module.hot.accept ) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119511,
+    "v1": "PricingLink, SupportLink, FeaturesLink, AppsLink, ExploreLink,",
+    "v2": "DropdownLink,",
+    "resolution": "PricingLink, SupportLink, FeaturesLink, AppsLink, ExploreLink,",
+    "conflict": "PricingLink, SupportLink, FeaturesLink, AppsLink, ExploreLink,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119557,
+    "v1": "import styled from 'styled-components/native'; import { TouchableOpacity } from 'react-native';",
+    "v2": "import styled, { css } from 'styled-components/native'; import { Stylesheet } from 'react-native'; import Avatar from '../Avatar';",
+    "resolution": "import styled, { css } from 'styled-components/native'; import { TouchableOpacity } from 'react-native'; import { Stylesheet } from 'react-native'; import Avatar from '../Avatar';",
+    "conflict": "import styled from 'styled-components/native'; import { TouchableOpacity } from 'react-native';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119604,
+    "v1": "onClick={() => { track(events.NAVIGATION_MESSAGES_CLICKED); this.markAllAsSeen(); }}",
+    "v2": "onClick={this.markAllAsSeen} data-cy=\"navbar-messages\"",
+    "resolution": "onClick={() => { track(events.NAVIGATION_MESSAGES_CLICKED); this.markAllAsSeen(); }}",
+    "conflict": "onClick={() => { track(events.NAVIGATION_MESSAGES_CLICKED); this.markAllAsSeen(); }}"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119637,
+    "v1": "<Section innerRef={component => (this.ownedCommunitiesSection = component)} data-e2e-id=\"pricing-page-owned-communities-list\" >",
+    "v2": "<Section data-cy=\"pricing-page-owned-communities-list\">",
+    "resolution": "<Section innerRef={component => (this.ownedCommunitiesSection = component)} data-cy=\"pricing-page-owned-communities-list\" >",
+    "conflict": "<Section innerRef={component => (this.ownedCommunitiesSection = component)} data-e2e-id=\"pricing-page-owned-communities-list\" >"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119653,
+    "v1": "import archiveChannel from './archiveChannel'; import restoreChannel from './restoreChannel';",
+    "v2": "import joinChannelWithToken from './joinChannelWithToken'; import enableChannelTokenJoin from './enableChannelTokenJoin'; import disableChannelTokenJoin from './disableChannelTokenJoin'; import resetChannelJoinToken from './resetChannelJoinToken';",
+    "resolution": "import joinChannelWithToken from './joinChannelWithToken'; import enableChannelTokenJoin from './enableChannelTokenJoin'; import disableChannelTokenJoin from './disableChannelTokenJoin'; import resetChannelJoinToken from './resetChannelJoinToken'; import archiveChannel from './archiveChannel'; import restoreChannel from './restoreChannel';",
+    "conflict": "import archiveChannel from './archiveChannel'; import restoreChannel from './restoreChannel';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119654,
+    "v1": "archiveChannel, restoreChannel,",
+    "v2": "joinChannelWithToken, enableChannelTokenJoin, disableChannelTokenJoin, resetChannelJoinToken,",
+    "resolution": "joinChannelWithToken, enableChannelTokenJoin, disableChannelTokenJoin, resetChannelJoinToken, archiveChannel, restoreChannel,",
+    "conflict": "archiveChannel, restoreChannel,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119658,
+    "v1": "archiveChannel(input: ArchiveChannelInput!): Channel restoreChannel(input: RestoreChannelInput!): Channel",
+    "v2": "enableChannelTokenJoin(input: EnableChannelTokenJoinInput!): Channel disableChannelTokenJoin(input: DisableChannelTokenJoinInput!): Channel resetChannelJoinToken(input: ResetChannelJoinTokenInput!): Channel",
+    "resolution": "enableChannelTokenJoin(input: EnableChannelTokenJoinInput!): Channel disableChannelTokenJoin(input: DisableChannelTokenJoinInput!): Channel resetChannelJoinToken(input: ResetChannelJoinTokenInput!): Channel",
+    "conflict": "archiveChannel(input: ArchiveChannelInput!): Channel restoreChannel(input: RestoreChannelInput!): Channel"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119662,
+    "v1": "blacklist: [ 'flow-typed/**/*.js', 'public/**/*.js', 'iris/migrations/**/*.js', ],",
+    "v2": "blacklist: ['flow-typed/**/*.js', 'public/**/*.js', 'cypress/**/*.js'],",
+    "resolution": "blacklist: [ 'flow-typed/**/*.js', 'public/**/*.js', 'iris/migrations/**/*.js', 'cypress/**/*.js', ],",
+    "conflict": "blacklist: [ 'flow-typed/**/*.js', 'public/**/*.js', 'iris/migrations/**/*.js', ],"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119717,
+    "v1": "// $FlowIssue server.listen(PORT, 'localhost', () => {",
+    "v2": "// NOTE(@mxstbr): 511 is the default value, have to add that so flow // doesn't complain. Ref: https://nodejs.org/api/net.html#net_server_listen_port_host_backlog_callback server.listen(PORT, 'localhost', 511, () => {",
+    "resolution": "// NOTE(@mxstbr): 511 is the default value, have to add that so flow // doesn't complain. Ref: https://nodejs.org/api/net.html#net_server_listen_port_host_backlog_callback server.listen(PORT, 'localhost', 511, () => {",
+    "conflict": "// $FlowIssue server.listen(PORT, 'localhost', () => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119734,
+    "v1": "// @flow import gql from 'graphql-tag'; import communityInfoFragment from '../community/communityInfo';",
+    "v2": "import gql from 'graphql-tag';  import { communityInfoFragment } from '../community/communityInfo.js';",
+    "resolution": "// @flow import gql from 'graphql-tag'; import communityInfoFragment from '../community/communityInfo';",
+    "conflict": "// @flow import gql from 'graphql-tag'; import communityInfoFragment from '../community/communityInfo';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119736,
+    "v1": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';",
+    "v2": "import gql from 'graphql-tag';  import { threadInfoFragment } from '../thread/threadInfo';",
+    "resolution": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';",
+    "conflict": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119738,
+    "v1": "// @flow import gql from 'graphql-tag'; import userInfoFragment from '../user/userInfo';",
+    "v2": "import gql from 'graphql-tag';  import { userInfoFragment } from '../user/userInfo';",
+    "resolution": "// @flow import gql from 'graphql-tag'; import userInfoFragment from '../user/userInfo';",
+    "conflict": "// @flow import gql from 'graphql-tag'; import userInfoFragment from '../user/userInfo';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119740,
+    "v1": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';",
+    "v2": "import gql from 'graphql-tag';  import { threadInfoFragment } from '../thread/threadInfo';",
+    "resolution": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';",
+    "conflict": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119743,
+    "v1": "// @flow import gql from 'graphql-tag'; import userInfoFragment from '../user/userInfo';",
+    "v2": "import gql from 'graphql-tag';  import { userInfoFragment } from '../user/userInfo';",
+    "resolution": "// @flow import gql from 'graphql-tag'; import userInfoFragment from '../user/userInfo';",
+    "conflict": "// @flow import gql from 'graphql-tag'; import userInfoFragment from '../user/userInfo';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119747,
+    "v1": "// @flow import gql from 'graphql-tag'; import messageInfoFragment from '../message/messageInfo';",
+    "v2": "import gql from 'graphql-tag';  import { messageInfoFragment } from '../message/messageInfo';",
+    "resolution": "// @flow import gql from 'graphql-tag'; import messageInfoFragment from '../message/messageInfo';",
+    "conflict": "// @flow import gql from 'graphql-tag'; import messageInfoFragment from '../message/messageInfo';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119748,
+    "v1": "// @flow import gql from 'graphql-tag'; import channelInfoFragment from '../channel/channelInfo';",
+    "v2": "import gql from 'graphql-tag';  import { channelInfoFragment } from '../channel/channelInfo';",
+    "resolution": "// @flow import gql from 'graphql-tag'; import channelInfoFragment from '../channel/channelInfo';",
+    "conflict": "// @flow import gql from 'graphql-tag'; import channelInfoFragment from '../channel/channelInfo';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119749,
+    "v1": "// @flow import gql from 'graphql-tag'; import communityInfoFragment from '../community/communityInfo';",
+    "v2": "import gql from 'graphql-tag';  import { communityInfoFragment } from '../community/communityInfo';",
+    "resolution": "// @flow import gql from 'graphql-tag'; import communityInfoFragment from '../community/communityInfo';",
+    "conflict": "// @flow import gql from 'graphql-tag'; import communityInfoFragment from '../community/communityInfo';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119750,
+    "v1": "// @flow import gql from 'graphql-tag'; import directMessageThreadInfoFragment from '../directMessageThread/directMessageThreadInfo';",
+    "v2": "import gql from 'graphql-tag';  import { directMessageThreadInfoFragment } from '../directMessageThread/directMessageThreadInfo';",
+    "resolution": "// @flow import gql from 'graphql-tag'; import directMessageThreadInfoFragment from '../directMessageThread/directMessageThreadInfo';",
+    "conflict": "// @flow import gql from 'graphql-tag'; import directMessageThreadInfoFragment from '../directMessageThread/directMessageThreadInfo';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119751,
+    "v1": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';",
+    "v2": "import gql from 'graphql-tag';  import { threadInfoFragment } from '../thread/threadInfo';",
+    "resolution": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';",
+    "conflict": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119754,
+    "v1": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';",
+    "v2": "import gql from 'graphql-tag';  import { threadInfoFragment } from '../thread/threadInfo';",
+    "resolution": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';",
+    "conflict": "// @flow import gql from 'graphql-tag'; import threadInfoFragment from '../thread/threadInfo';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119760,
+    "v1": "import { graphql, gql } from 'react-apollo'; import messageInfoFragment from 'shared/graphql/fragments/message/messageInfo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo';",
+    "v2": "import { graphql } from 'react-apollo'; import { messageInfoFragment } from './fragments/message/messageInfo'; import { userInfoFragment } from './fragments/user/userInfo';",
+    "resolution": "import { graphql } from 'react-apollo'; import messageInfoFragment from 'shared/graphql/fragments/message/messageInfo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo';",
+    "conflict": "import { graphql, gql } from 'react-apollo'; import messageInfoFragment from 'shared/graphql/fragments/message/messageInfo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119761,
+    "v1": "import { graphql, gql } from 'react-apollo'; import notificationInfoFragment from 'shared/graphql/fragments/notification/notificationInfo';",
+    "v2": "import gql from 'graphql-tag';  import { graphql } from 'react-apollo'; import { notificationInfoFragment } from './fragments/notification/notificationInfo';",
+    "resolution": "import gql from 'graphql-tag'; import { graphql } from 'react-apollo'; import notificationInfoFragment from 'shared/graphql/fragments/notification/notificationInfo';",
+    "conflict": "import { graphql, gql } from 'react-apollo'; import notificationInfoFragment from 'shared/graphql/fragments/notification/notificationInfo';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119783,
+    "v1": "import { graphql, gql } from 'react-apollo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo'; import userSettingsFragment from 'shared/graphql/fragments/user/userSettings';",
+    "v2": "import { graphql } from 'react-apollo'; import { userInfoFragment } from '../../api/fragments/user/userInfo'; import { userSettingsFragment } from '../../api/fragments/user/userSettings';",
+    "resolution": "import { graphql } from 'react-apollo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo'; import userSettingsFragment from 'shared/graphql/fragments/user/userSettings';",
+    "conflict": "import { graphql, gql } from 'react-apollo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo'; import userSettingsFragment from 'shared/graphql/fragments/user/userSettings';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119793,
+    "v1": "// Update thread.currentUserLastSeen for the last thread when we switch away from it this.updateThreadLastSeen(prevProps.threadId); this.forceScrollToTop();",
+    "v2": "this.forceScrollToTop(); // Update thread.currentUserLastSeen for the last thread when we switch away from it this.updateThreadLastSeen(prevProps.threadId);",
+    "resolution": "// Update thread.currentUserLastSeen for the last thread when we switch away from it this.updateThreadLastSeen(prevProps.threadId); this.forceScrollToTop();",
+    "conflict": "// Update thread.currentUserLastSeen for the last thread when we switch away from it this.updateThreadLastSeen(prevProps.threadId); this.forceScrollToTop();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119817,
+    "v1": "if (!lastSeen) return true; return ( Date.parse(parsed.timestamp) > Date.parse(lastSeen.toString()) );",
+    "v2": "// $FlowFixMe return Date.parse(parsed.timestamp) > Date.parse(lastSeen);",
+    "resolution": "if (!lastSeen) return true; // $FlowFixMe return Date.parse(parsed.timestamp) > Date.parse(lastSeen); });",
+    "conflict": "if (!lastSeen) return true; return ( Date.parse(parsed.timestamp) > Date.parse(lastSeen.toString()) );"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119842,
+    "v1": "export const SEARCH_THREADS_QUERY = gql` query searchThreads($queryString: String!, $filter: SearchThreadsFilter) { searchThreads(queryString: $queryString, filter: $filter) {",
+    "v2": "const MOVE_THREAD_MUTATION = gql` mutation moveThread($threadId: ID!, $channelId: ID!) { moveThread(threadId: $threadId, channelId: $channelId) {",
+    "resolution": "export const SEARCH_THREADS_QUERY = gql` query searchThreads($queryString: String!, $filter: SearchThreadsFilter) { searchThreads(queryString: $queryString, filter: $filter) { ...threadInfo } } ${threadInfoFragment} `;  const MOVE_THREAD_MUTATION = gql` mutation moveThread($threadId: ID!, $channelId: ID!) { moveThread(threadId: $threadId, channelId: $channelId) { ...threadInfo } }",
+    "conflict": "export const SEARCH_THREADS_QUERY = gql` query searchThreads($queryString: String!, $filter: SearchThreadsFilter) { searchThreads(queryString: $queryString, filter: $filter) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119861,
+    "v1": "const { thread: { channel, community, id, watercooler }, currentUser, hide, } = this.props;",
+    "v2": "const { thread: { channel, community }, currentUser, hide } = this.props;",
+    "resolution": "const { thread: { channel, community, id, watercooler }, currentUser, hide, } = this.props;",
+    "conflict": "const { thread: { channel, community, id, watercooler }, currentUser, hide, } = this.props;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119881,
+    "v1": "import React from 'react'; import styled from 'styled-components'; import { Gradient, zIndex, Transition, Tooltip, monoStack } from '../globals';",
+    "v2": "import styled from 'styled-components'; import { Gradient, zIndex, Transition, Tooltip } from '../globals';",
+    "resolution": "import React from 'react'; import styled from 'styled-components'; import { Gradient, zIndex, Transition, Tooltip, monoStack } from '../globals';",
+    "conflict": "import React from 'react'; import styled from 'styled-components'; import { Gradient, zIndex, Transition, Tooltip, monoStack } from '../globals';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119886,
+    "v1": "// history, data: { community }, location, // dispatch,",
+    "v2": "data: { community }, location,",
+    "resolution": "data: { community }, location,",
+    "conflict": "// history, data: { community }, location, // dispatch,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119887,
+    "v1": "const { // communities, // already joined by the user activeCommunity, } = this.props;",
+    "v2": "const { activeCommunity } = this.props;",
+    "resolution": "const { activeCommunity } = this.props;",
+    "conflict": "const { // communities, // already joined by the user activeCommunity, } = this.props;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119909,
+    "v1": "title={ !community.isPro ? 'Upgrade your community' : 'Manage your subscription' }",
+    "v2": "title={null}",
+    "resolution": "title={null}",
+    "conflict": "title={ !community.isPro ? 'Upgrade your community' : 'Manage your subscription' }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119940,
+    "v1": "{loggedInUser && hasRights && !isFrozen && (",
+    "v2": "{isLoggedIn && canSendMessages && !isLocked && (",
+    "resolution": "{isLoggedIn && canSendMessages && !isLocked && (",
+    "conflict": "{loggedInUser && hasRights && !isFrozen && ("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119941,
+    "v1": "currentUser={loggedInUser} forceScrollToBottom={this.forceScrollToBottom} autoFocus={isParticipantOrCreator}",
+    "v2": "currentUser={isLoggedIn} forceScrollToBottom={this.forceScrollToBottom}",
+    "resolution": "currentUser={isLoggedIn} forceScrollToBottom={this.forceScrollToBottom}",
+    "conflict": "currentUser={loggedInUser} forceScrollToBottom={this.forceScrollToBottom} autoFocus={isParticipantOrCreator}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120037,
+    "v1": "hasRights && channel.isPrivate && !channel.community.isPro &&",
+    "v2": "hasRights && !channel.community.isPro && (",
+    "resolution": "hasRights && channel.isPrivate && !channel.community.isPro &&",
+    "conflict": "hasRights && channel.isPrivate && !channel.community.isPro &&"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120038,
+    "v1": "hasRights && ((channel.isPrivate && channel.community.isPro) || !channel.isPrivate) &&",
+    "v2": "hasRights && channel.community.isPro && (",
+    "resolution": "hasRights && ((channel.isPrivate && channel.community.isPro) || !channel.isPrivate) &&",
+    "conflict": "hasRights && ((channel.isPrivate && channel.community.isPro) || !channel.isPrivate) &&"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120042,
+    "v1": "env(path.resolve(__dirname, '../.env'), { raise: false });",
+    "v2": "if (!IS_PROD) { env(path.resolve(__dirname, '../.env'), { raise: false }); }",
+    "resolution": "env(path.resolve(__dirname, '../.env'), { raise: false });",
+    "conflict": "env(path.resolve(__dirname, '../.env'), { raise: false });"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120085,
+    "v1": "import { FetchMoreButton } from '../../components/threadFeed/style'; import { FlexCol, FlexRow } from '../../components/globals'; import { Card } from '../../components/card'; import { Button, IconButton } from '../../components/buttons';",
+    "v2": "import { FlexCol } from '../../components/globals';",
+    "resolution": "import { FlexCol, FlexRow } from '../../components/globals'; import { Button } from '../../components/buttons';",
+    "conflict": "import { FetchMoreButton } from '../../components/threadFeed/style'; import { FlexCol, FlexRow } from '../../components/globals'; import { Card } from '../../components/card'; import { Button, IconButton } from '../../components/buttons';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120100,
+    "v1": "const user = this.props.data.user; const communities = this.props.data.user && this.props.data.user.communityConnection.edges; const isNewUser = (user && communities.length <= 0) || (user && !user.username);",
+    "v2": "",
+    "resolution": "",
+    "conflict": "const user = this.props.data.user; const communities = this.props.data.user && this.props.data.user.communityConnection.edges; const isNewUser = (user && communities.length <= 0) || (user && !user.username);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120105,
+    "v1": "data-active={match.url === `/users/${currentUser.username}`} to={ currentUser.username ? `/users/${currentUser.username}` : '/' }",
+    "v2": "data-active={match.url === `/users/${loggedInUser.username}`} to={`/users/${loggedInUser.username}`}",
+    "resolution": "data-active={match.url === `/users/${loggedInUser.username}`} to={`/users/${loggedInUser.username}`}",
+    "conflict": "data-active={match.url === `/users/${currentUser.username}`} to={ currentUser.username ? `/users/${currentUser.username}` : '/' }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120113,
+    "v1": "const { data: { error, messages, hasNextPage, fetchMore }, data, } = this.props;",
+    "v2": "const { data: { error, loading, messages }, data } = this.props;",
+    "resolution": "const { data: { error, loading, messages, hasNextPage, fetchMore, networkStatus }, } = this.props; const { subscription } = this.state;",
+    "conflict": "const { data: { error, messages, hasNextPage, fetchMore }, data, } = this.props;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120117,
+    "v1": "const { match, currentUser, data } = this.props; const width = window.innerWidth; const isMobile = width < 768;",
+    "v2": "const { match, history, currentUser, data } = this.props; const isMobile = window.innerWidth < 768;",
+    "resolution": "const { match, history, currentUser, data } = this.props; const isMobile = window.innerWidth < 768;",
+    "conflict": "const { match, currentUser, data } = this.props; const width = window.innerWidth; const isMobile = width < 768;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120121,
+    "v1": "getNotificationsForNavbar, markNotificationsSeenMutation, markNotificationsReadMutation, markDirectMessageNotificationsSeenMutation,",
+    "v2": "setUserLastSeenMutation,",
+    "resolution": "setUserLastSeenMutation, getNotificationsForNavbar, markNotificationsSeenMutation, markNotificationsReadMutation, markDirectMessageNotificationsSeenMutation,",
+    "conflict": "getNotificationsForNavbar, markNotificationsSeenMutation, markNotificationsReadMutation, markDirectMessageNotificationsSeenMutation,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120128,
+    "v1": "export const deleteThread = (threadId: string): Promise<Boolean> => {",
+    "v2": "const setThreadLastActive = (threadId: string, value: Date) => db.table('threads').get(threadId).update({ lastActive: value }).run();  const deleteThread = (threadId: string): Promise<Boolean> => {",
+    "resolution": "export const setThreadLastActive = (threadId: string, value: Date) => db.table('threads').get(threadId).update({ lastActive: value }).run();  export const deleteThread = (threadId: string): Promise<Boolean> => {",
+    "conflict": "export const deleteThread = (threadId: string): Promise<Boolean> => {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120134,
+    "v1": "<Button icon=\"twitter\" onClick={() => window.location.href = `${SERVER_URL}/auth/twitter`} >",
+    "v2": "<Button icon=\"twitter\" onClick={login}>",
+    "resolution": "<Button icon=\"twitter\" onClick={login}>",
+    "conflict": "<Button icon=\"twitter\" onClick={() => window.location.href = `${SERVER_URL}/auth/twitter`} >"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120150,
+    "v1": "import { UserError } from 'graphql-errors'; // $FlowFixMe const Queue = require('bull'); const channelNotificationQueue = new Queue('channel notification');",
+    "v2": "import UserError from '../utils/UserError';",
+    "resolution": "// $FlowFixMe const Queue = require('bull'); const channelNotificationQueue = new Queue('channel notification'); import UserError from '../utils/UserError';",
+    "conflict": "import { UserError } from 'graphql-errors'; // $FlowFixMe const Queue = require('bull'); const channelNotificationQueue = new Queue('channel notification');"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120151,
+    "v1": "senderId: userId,",
+    "v2": "senderId: user.id, content: { body: sanitize(message.content.body), },",
+    "resolution": "senderId: user.id, content: { body: sanitize(message.content.body), },",
+    "conflict": "senderId: userId,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120164,
+    "v1": "",
+    "v2": "console.log('rendering viewBody', viewBody); console.log('rendering editBody', editBody);  let f = this.state.editBody;",
+    "resolution": "console.log('rendering viewBody', viewBody); console.log('rendering editBody', editBody);  let f = this.state.editBody;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120179,
+    "v1": "",
+    "v2": "<Titlebar title={'Community Not Found'} provideBack={true} backRoute={`/`} />",
+    "resolution": "<Titlebar title={'Community Not Found'} provideBack={true} backRoute={`/`} />",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120185,
+    "v1": "import { Notice } from '../../components/listCard/style';",
+    "v2": "import { Button, TextButton } from '../buttons'; import { NullCard } from '../upsell'; import { Input, UnderlineInput, TextArea, Checkbox } from '../formElements';",
+    "resolution": "import { Notice } from '../listCard/style'; import { Button, TextButton } from '../buttons'; import { NullCard } from '../upsell'; import { Input, UnderlineInput, TextArea, Checkbox } from '../formElements';",
+    "conflict": "import { Notice } from '../../components/listCard/style';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120188,
+    "v1": "currentUser,",
+    "v2": "}: { channel: Object, community: string, isPending: boolean, subscribe: Function,",
+    "resolution": "currentUser, }: { channel: Object, community: string, isPending: boolean, subscribe: Function,",
+    "conflict": "currentUser,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120192,
+    "v1": "channel && ((channel.isPrivate && channel.isMember) || !channel.isPrivate)",
+    "v2": "channel && ((channel.isPrivate && channel.channelPermissions.isMember) || channel.community.communityPermissions.isOwner || !channel.isPrivate)",
+    "resolution": "channel && ((channel.isPrivate && channel.channelPermissions.isMember) || channel.community.communityPermissions.isOwner || !channel.isPrivate)",
+    "conflict": "channel && ((channel.isPrivate && channel.isMember) || !channel.isPrivate)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120203,
+    "v1": "import { ListCardItem } from '../../../components/listCardItem'; import { TextButton } from '../../../components/buttons';",
+    "v2": "// import { displayLoadingCard } from '../../../components/loading'; import { ListCardItem } from '../../../components/listCard'; import { IconButton, TextButton, Button } from '../../../components/buttons';",
+    "resolution": "import { ListCardItem } from '../../../components/listCard'; import { IconButton, TextButton, Button } from '../../../components/buttons';",
+    "conflict": "import { ListCardItem } from '../../../components/listCardItem'; import { TextButton } from '../../../components/buttons';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120231,
+    "v1": "//$FlowFixMe import branch from 'recompose/branch'; //$FlowFixMe import renderComponent from 'recompose/renderComponent';",
+    "v2": "import AppViewWrapper from '../../components/appViewWrapper';",
+    "resolution": "//$FlowFixMe import branch from 'recompose/branch'; //$FlowFixMe import renderComponent from 'recompose/renderComponent';",
+    "conflict": "//$FlowFixMe import branch from 'recompose/branch'; //$FlowFixMe import renderComponent from 'recompose/renderComponent';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120242,
+    "v1": "messageAdded: (_, { storyId }) => ({ [channels.MESSAGE_ADDED]: { filter: message => message.story === storyId,",
+    "v2": "messageAdded: (_, { location, thread }) => ({ messageAdded: { filter: message => message.thread === thread,",
+    "resolution": "messageAdded: (_, { thread }) => ({ [channels.MESSAGE_ADDED]: { filter: message => message.thread === thread,",
+    "conflict": "messageAdded: (_, { storyId }) => ({ [channels.MESSAGE_ADDED]: { filter: message => message.story === storyId,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120269,
+    "v1": "const isEverything = activeFrequency === 'everything'; const isNotifications = activeFrequency === 'notifications'; const isMessages = activeFrequency === 'messages';",
+    "v2": "const isEverything = active === 'everything'; const isNotifications = active === 'notifications';",
+    "resolution": "const isEverything = active === 'everything'; const isNotifications = active === 'notifications'; const isMessages = active === 'messages'; const hidden = !role && isPrivate;",
+    "conflict": "const isEverything = activeFrequency === 'everything'; const isNotifications = activeFrequency === 'notifications'; const isMessages = activeFrequency === 'messages';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120284,
+    "v1": "<b id={story.creator.uid} onClick={this.openUserProfileModal}> {story.creator.displayName} </b> · Posted {timestamp}",
+    "v2": "{story.creator.displayName} · Posted {timestamp} {story.edited && <span> (edited {editDate})</span>}",
+    "resolution": "<b id={story.creator.uid} onClick={this.openUserProfileModal}> {story.creator.displayName} </b>",
+    "conflict": "<b id={story.creator.uid} onClick={this.openUserProfileModal}> {story.creator.displayName} </b> · Posted {timestamp}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120285,
+    "v1": ": currentFrequency && `${activeCommunity}/~${currentFrequency.slug}`;  returnUrl = active === 'explore' ? 'explore' : currentFrequency && `${activeCommunity}/~${currentFrequency.slug}`;",
+    "v2": ": currentFrequency && currentFrequency.slug;",
+    "resolution": ": currentFrequency && `${activeCommunity}/~${currentFrequency.slug}`;  returnUrl = active === 'explore' ? 'explore' : currentFrequency && `${activeCommunity}/~${currentFrequency.slug}`;",
+    "conflict": ": currentFrequency && `${activeCommunity}/~${currentFrequency.slug}`;  returnUrl = active === 'explore' ? 'explore' : currentFrequency && `${activeCommunity}/~${currentFrequency.slug}`;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120286,
+    "v1": "const community = frequency && communities.find(community => community.id === frequency.communityId);",
+    "v2": "const editDate = story.edited ? timeDifference(Date.now(), story.edited) : '';",
+    "resolution": "const editDate = story.edited ? timeDifference(Date.now(), story.edited) : ''; const community = frequency && communities.find(community => community.id === frequency.communityId);",
+    "conflict": "const community = frequency && communities.find(community => community.id === frequency.communityId);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120287,
+    "v1": ": currentFrequency && `${activeCommunity}/~${currentFrequency.slug}`;",
+    "v2": ": currentFrequency && currentFrequency.slug;  returnUrl = active === 'explore' ? 'explore' : currentFrequency && currentFrequency.slug;",
+    "resolution": ": currentFrequency && `${activeCommunity}/~${currentFrequency.slug}`;  returnUrl = active === 'explore' ? 'explore' : currentFrequency && `${activeCommunity}/~${currentFrequency.slug}`;",
+    "conflict": ": currentFrequency && `${activeCommunity}/~${currentFrequency.slug}`;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120310,
+    "v1": "unread, frequencies, communities, activeFrequency, loaded,",
+    "v2": "",
+    "resolution": "frequencies, communities, activeFrequency, loaded,",
+    "conflict": "unread, frequencies, communities, activeFrequency, loaded,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120327,
+    "v1": "<Photo stayActive color={this.state.mediaUploading ? 'inactive' : 'brand'} />",
+    "v2": "<Icon icon=\"photo\" />",
+    "resolution": "<MediaLabel htmlFor=\"file\"> <Icon icon=\"photo\" /> </MediaLabel>",
+    "conflict": "<Photo stayActive color={this.state.mediaUploading ? 'inactive' : 'brand'} />"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120328,
+    "v1": "<Photo stayActive color={this.state.mediaUploading ? 'inactive' : 'brand'} />",
+    "v2": "<Icon icon=\"photo\" />",
+    "resolution": "<Icon icon=\"photo\" />",
+    "conflict": "<Photo stayActive color={this.state.mediaUploading ? 'inactive' : 'brand'} />"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120333,
+    "v1": "position: absolute; display: inline; left: ${props => props.everything ? '8px' : '16px'}; top: ${props => props.everything ? '0' : '8px'};",
+    "v2": "display: flex; align-items: center;",
+    "resolution": "position: absolute; display: inline; left: ${props => props.everything ? '-4px' : '8px'}; top: ${props => props.everything ? '3px' : '10px'};",
+    "conflict": "position: absolute; display: inline; left: ${props => props.everything ? '8px' : '16px'}; top: ${props => props.everything ? '0' : '8px'};"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120334,
+    "v1": "dispatch({ type: 'UPDATE_STORY', story, }); if (!story.messages) return;",
+    "v2": "if (!story || !story.messages) return;",
+    "resolution": "dispatch({ type: 'UPDATE_STORY', story, });  if (!story || !story.messages) return;",
+    "conflict": "dispatch({ type: 'UPDATE_STORY', story, }); if (!story.messages) return;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120336,
+    "v1": "let usersCount = Object.keys(frequency.users).length; let storiesCount = 0; if (frequency.stories) { storiesCount = Object.keys(frequency.stories).length; }",
+    "v2": "",
+    "resolution": "let usersCount = Object.keys(frequency.users).length; let storiesCount = 0; if (frequency.stories) { storiesCount = Object.keys(frequency.stories).length; }",
+    "conflict": "let usersCount = Object.keys(frequency.users).length; let storiesCount = 0; if (frequency.stories) { storiesCount = Object.keys(frequency.stories).length; }"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120337,
+    "v1": "MiniGallery, MiniImageContainer, Image, Delete,",
+    "v2": "EmbedInput,",
+    "resolution": "EmbedInput, MiniGallery, MiniImageContainer, Image, Delete,",
+    "conflict": "MiniGallery, MiniImageContainer, Image, Delete,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120351,
+    "v1": "box-shadow: ${Shadow.high} ${props.selected ? `, inset -32px 0 0 -16px ${props.theme.brand.default}` : ``};",
+    "v2": "box-shadow: ${Shadow.high}, inset ${props.selected ? `-24px 0 0 -8px ${props.theme.brand.default}` : `-16px 0 0 -8px ${props.theme.border.default}`};",
+    "resolution": "box-shadow: ${Shadow.high} ${props.selected ? `, inset -32px 0 0 -16px ${props.theme.brand.default}` : ``};",
+    "conflict": "box-shadow: ${Shadow.high} ${props.selected ? `, inset -32px 0 0 -16px ${props.theme.brand.default}` : ``};"
+  },
+  {
+    "devdecision": "None",
+    "id": 120385,
+    "v1": "<Header> <Button>➕</Button> </Header>",
+    "v2": "<ActionHeader />",
+    "resolution": "",
+    "conflict": "<Header> <Button>➕</Button> </Header>"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120389,
+    "v1": "<p>This is just a post with an image. Nothing super fancy or anything...</p> <PostImg src=\"/img/media.png\" role=\"presentation\"/>",
+    "v2": "<p>{this.props.data.content}</p> {/*<p className=\"mt2 h5 color-primary\"></p> <PostImg src=\"/img/media.png\" role=\"presentation\"/> */}",
+    "resolution": "<p>{this.props.data.content}</p> <PostImg src=\"/img/media.png\" role=\"presentation\"/>",
+    "conflict": "<p>This is just a post with an image. Nothing super fancy or anything...</p> <PostImg src=\"/img/media.png\" role=\"presentation\"/>"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120393,
+    "v1": "import StoryMaster from './components/StoryMaster'; import DetailView from './components/DetailView';",
+    "v2": "import { Provider } from 'react-redux' import { initStore } from '../store' import PostList from './components/PostList'; import Chat from './components/Chat';",
+    "resolution": "import StoryMaster from './components/StoryMaster'; import DetailView from './components/DetailView'; import { Provider } from 'react-redux' import { initStore } from '../store'",
+    "conflict": "import StoryMaster from './components/StoryMaster'; import DetailView from './components/DetailView';"
+  }
+]}

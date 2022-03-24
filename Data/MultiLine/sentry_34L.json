@@ -1,0 +1,778 @@
+{"conflicts":[
+  {
+    "devdecision": "Manual",
+    "id": 101631,
+    "v1": "",
+    "v2": "def test_prefers_org_member(self): org = self.create_organization()",
+    "resolution": "def test_prefers_org_member(self):",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 101640,
+    "v1": "default_manager.add(\"organizations:webauthn-login\", OrganizationFeature, True) default_manager.add(\"organizations:webauthn-register\", OrganizationFeature, True)",
+    "v2": "default_manager.add(\"organizations:weekly-report-debugging\", OrganizationFeature, True) default_manager.add(\"organizations:widget-library\", OrganizationFeature, True)",
+    "resolution": "default_manager.add(\"organizations:weekly-report-debugging\", OrganizationFeature, True) default_manager.add(\"organizations:widget-library\", OrganizationFeature, True) default_manager.add(\"organizations:webauthn-login\", OrganizationFeature, True) default_manager.add(\"organizations:webauthn-register\", OrganizationFeature, True)",
+    "conflict": "default_manager.add(\"organizations:webauthn-login\", OrganizationFeature, True) default_manager.add(\"organizations:webauthn-register\", OrganizationFeature, True)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101661,
+    "v1": "approve_member_invitation( member,",
+    "v2": "member.approve_member_invitation(",
+    "resolution": "member.approve_member_invitation(",
+    "conflict": "approve_member_invitation( member,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101667,
+    "v1": "functions_acl: Optional[List[str]] = None, limit: int = 50,",
+    "v2": "limit: Optional[int] = 50,",
+    "resolution": "functions_acl: Optional[List[str]] = None, limit: Optional[int] = 50,",
+    "conflict": "functions_acl: Optional[List[str]] = None, limit: int = 50,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101712,
+    "v1": "percentage_keys={\"percentage\", \"failure_rate\"}, text_operator_keys={SEMVER_ALIAS},",
+    "v2": "percentage_keys={\"percentage\"}, text_operator_keys={SEMVER_ALIAS, SEMVER_BUILD_ALIAS},",
+    "resolution": "percentage_keys={\"percentage\", \"failure_rate\"}, text_operator_keys={SEMVER_ALIAS, SEMVER_BUILD_ALIAS},",
+    "conflict": "percentage_keys={\"percentage\", \"failure_rate\"}, text_operator_keys={SEMVER_ALIAS},"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101717,
+    "v1": "from sentry.api.endpoints.group_hashes_split import _get_group_filters",
+    "v2": "from sentry.api.endpoints.group_hashes_split import _construct_arraymax, _get_group_filters from sentry.api.exceptions import SentryAPIException, status",
+    "resolution": "from sentry.api.endpoints.group_hashes_split import _get_group_filters from sentry.api.exceptions import SentryAPIException, status",
+    "conflict": "from sentry.api.endpoints.group_hashes_split import _get_group_filters"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101730,
+    "v1": "self.url = reverse(\"sentry-api-0-organization-key-transactions\", args=[self.org.slug]) self.features = [\"organizations:team-key-transactions\"]",
+    "v2": "self.base_features = [\"organizations:performance-view\"] self.features = self.base_features + [\"organizations:team-key-transactions\"]",
+    "resolution": "self.url = reverse(\"sentry-api-0-organization-key-transactions\", args=[self.org.slug]) self.features = [\"organizations:team-key-transactions\"]",
+    "conflict": "self.url = reverse(\"sentry-api-0-organization-key-transactions\", args=[self.org.slug]) self.features = [\"organizations:team-key-transactions\"]"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101732,
+    "v1": "print(response.data) assert response.status_code == 400",
+    "v2": "assert response.status_code == 400, response.content",
+    "resolution": "assert response.status_code == 400, response.content",
+    "conflict": "print(response.data) assert response.status_code == 400"
+  },
+  {
+    "devdecision": "None",
+    "id": 101738,
+    "v1": "FEATURE_NAMES = [ \"organizations:trace-view-summary\", ]",
+    "v2": "FEATURE_NAMES = [\"organizations:performance-view\"]",
+    "resolution": "",
+    "conflict": "FEATURE_NAMES = [ \"organizations:trace-view-summary\", ]"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101814,
+    "v1": "[\"avgOrNull\", \"transaction.duration\", \"avg_transaction_duration\"],",
+    "v2": "[\"avg\", \"transaction.duration\", \"avg_transaction_duration\"], [\"stddevSamp\", \"transaction.duration\", \"stddev_transaction_duration\"],",
+    "resolution": "[\"avgOrNull\", \"transaction.duration\", \"avg_transaction_duration\"], [\"stddevSamp\", \"transaction.duration\", \"stddev_transaction_duration\"],",
+    "conflict": "[\"avgOrNull\", \"transaction.duration\", \"avg_transaction_duration\"],"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 101824,
+    "v1": "# Set this to True if running CDC and you need Postgres WAL replication in dev DEVSERVICES_WAL_REPLICATION = False",
+    "v2": "# adds an extra JS to HTML template INJECTED_SCRIPT_ASSETS = []",
+    "resolution": "# adds an extra JS to HTML template INJECTED_SCRIPT_ASSETS = [] # Set this to True if running CDC and you need Postgres WAL replication in dev DEVSERVICES_WAL_REPLICATION = False",
+    "conflict": "# Set this to True if running CDC and you need Postgres WAL replication in dev DEVSERVICES_WAL_REPLICATION = False"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101834,
+    "v1": "# Return unhandled information on the issue level \"organizations:unhandled-issue-flag\": False, # Enable SnQL SDK for Snuba queries. \"organizations:snql\": False,",
+    "v2": "",
+    "resolution": "# Enable SnQL SDK for Snuba queries. \"organizations:snql\": False,",
+    "conflict": "# Return unhandled information on the issue level \"organizations:unhandled-issue-flag\": False, # Enable SnQL SDK for Snuba queries. \"organizations:snql\": False,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101835,
+    "v1": "# Enable \"owner\"/\"suggested assignee\" features. \"organizations:workflow-owners\": False, # Enable SnQL SDK for Snuba queries. \"organizations:snql\": False,",
+    "v2": "",
+    "resolution": "# Enable SnQL SDK for Snuba queries. \"organizations:snql\": False,",
+    "conflict": "# Enable \"owner\"/\"suggested assignee\" features. \"organizations:workflow-owners\": False, # Enable SnQL SDK for Snuba queries. \"organizations:snql\": False,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101837,
+    "v1": "def finish_reprocessing(project_id, group_id, new_group_id): from sentry.models import Group, GroupRedirect, Activity, GroupInboxReason, add_group_to_inbox",
+    "v2": "def finish_reprocessing(project_id, group_id): from sentry.models import Group, GroupRedirect, Activity",
+    "resolution": "def finish_reprocessing(project_id, group_id): from sentry.models import Group, GroupRedirect, Activity, GroupInboxReason, add_group_to_inbox",
+    "conflict": "def finish_reprocessing(project_id, group_id, new_group_id): from sentry.models import Group, GroupRedirect, Activity, GroupInboxReason, add_group_to_inbox"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 101851,
+    "v1": "default_manager.add('projects:similarity-view', ProjectFeature)  # NOQA",
+    "v2": "default_manager.add('organizations:group-unmerge', OrganizationFeature)  # NOQA default_manager.add('organizations:bitbucket-repos', OrganizationFeature)  # NOQA",
+    "resolution": "default_manager.add('projects:similarity-view', ProjectFeature)  # NOQA default_manager.add('organizations:group-unmerge', OrganizationFeature)  # NOQA default_manager.add('organizations:bitbucket-repos', OrganizationFeature)  # NOQA",
+    "conflict": "default_manager.add('projects:similarity-view', ProjectFeature)  # NOQA"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101854,
+    "v1": "from sentry.models import ProjectKey, User, Project from sentry.utils import json",
+    "v2": "from sentry.models import ProjectKey from sentry.utils import auth, json",
+    "resolution": "from sentry.models import ProjectKey, User, Project from sentry.utils import auth, json",
+    "conflict": "from sentry.models import ProjectKey, User, Project from sentry.utils import json"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101855,
+    "v1": "from sentry import features from sentry import search",
+    "v2": "from sentry import features, search",
+    "resolution": "from sentry import features, search",
+    "conflict": "from sentry import features from sentry import search"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101867,
+    "v1": "if session is None: session = build_session()",
+    "v2": "session = SafeSession()",
+    "resolution": "session = SafeSession()",
+    "conflict": "if session is None: session = build_session()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101881,
+    "v1": "if self.sym is not None: self.sym.close() self.sym = None",
+    "v2": "self.sym.close()",
+    "resolution": "if self.sym is not None: self.sym.close() self.sym = None",
+    "conflict": "if self.sym is not None: self.sym.close() self.sym = None"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 101926,
+    "v1": "from sentry.models import ApiKey, ProjectKey from sentry.models.apikey import SYSTEM_KEY",
+    "v2": "from sentry.models import ApiKey",
+    "resolution": "from sentry.models import ApiKey from sentry.models.apikey import SYSTEM_KEY",
+    "conflict": "from sentry.models import ApiKey, ProjectKey from sentry.models.apikey import SYSTEM_KEY"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101927,
+    "v1": "if self.is_project_key(request): return False if request.auth is SYSTEM_KEY: return True",
+    "v2": "",
+    "resolution": "if request.auth is SYSTEM_KEY: return True",
+    "conflict": "if self.is_project_key(request): return False if request.auth is SYSTEM_KEY: return True"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101928,
+    "v1": "if self.is_project_key(request): return request.auth.project_id == project.id if request.auth is SYSTEM_KEY: return True",
+    "v2": "",
+    "resolution": "if request.auth is SYSTEM_KEY: return True",
+    "conflict": "if self.is_project_key(request): return request.auth.project_id == project.id if request.auth is SYSTEM_KEY: return True"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101929,
+    "v1": "if self.is_project_key(request): return False if request.auth is SYSTEM_KEY: return True",
+    "v2": "",
+    "resolution": "if request.auth is SYSTEM_KEY: return True",
+    "conflict": "if self.is_project_key(request): return False if request.auth is SYSTEM_KEY: return True"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101930,
+    "v1": "from sentry.models import ProjectKey from sentry.models.apikey import SYSTEM_KEY",
+    "v2": "",
+    "resolution": "from sentry.models.apikey import SYSTEM_KEY",
+    "conflict": "from sentry.models import ProjectKey from sentry.models.apikey import SYSTEM_KEY"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101942,
+    "v1": "if not values.value: metrics.incr('buffer.revoked', tags={'reason': 'empty'})",
+    "v2": "if not values:",
+    "resolution": "if not values: metrics.incr('buffer.revoked', tags={'reason': 'empty'})",
+    "conflict": "if not values.value: metrics.incr('buffer.revoked', tags={'reason': 'empty'})"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101948,
+    "v1": "if not values: self.logger.info('Skipped process on %s; no values found', key)",
+    "v2": "if not values.value:",
+    "resolution": "if not values.value: self.logger.info('Skipped process on %s; no values found', key)",
+    "conflict": "if not values: self.logger.info('Skipped process on %s; no values found', key)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101956,
+    "v1": "if '~' in filename: filename = '~' + abs_path.split('/~/', 1)[-1]",
+    "v2": "if '/~/' in filename: filename = '~/' + abs_path.split('/~/', 1)[-1]",
+    "resolution": "if '/~/' in filename: filename = '~/' + abs_path.split('/~/', 1)[-1]",
+    "conflict": "if '~' in filename: filename = '~' + abs_path.split('/~/', 1)[-1]"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101957,
+    "v1": "frame.module = generate_module(state.src)",
+    "v2": "if abs_path.startswith(('http:', 'https:')): frame.module = generate_module(abs_path)",
+    "resolution": "if abs_path.startswith(('http:', 'https:')): frame.module = generate_module(abs_path)",
+    "conflict": "frame.module = generate_module(state.src)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101961,
+    "v1": "",
+    "v2": "from sentry.permissions import ( can_remove_project_key, can_add_project_key, can_edit_project_key )",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 101963,
+    "v1": "Project, Group, GroupMeta, Event",
+    "v2": "Project, Group, GroupMeta, Event, EventError, Activity, EventMapping, TagKey, GroupSeen",
+    "resolution": "Project, Group, GroupMeta, Event, EventError",
+    "conflict": "Project, Group, GroupMeta, Event"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101990,
+    "v1": "if tag_key.key.startswith('sentry:'): key = tag_key.key.split('sentry:', 1)[-1] else: key = tag_key.key",
+    "v2": "",
+    "resolution": "if tag_key.key.startswith('sentry:'): key = tag_key.key.split('sentry:', 1)[-1] else: key = tag_key.key",
+    "conflict": "if tag_key.key.startswith('sentry:'): key = tag_key.key.split('sentry:', 1)[-1] else: key = tag_key.key"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101991,
+    "v1": "context['pendingAccessRequests'] = OrganizationAccessRequest.objects.filter( team__organization=organization, ).count()",
+    "v2": "",
+    "resolution": "context['pendingAccessRequests'] = OrganizationAccessRequest.objects.filter( team__organization=organization, ).count()",
+    "conflict": "context['pendingAccessRequests'] = OrganizationAccessRequest.objects.filter( team__organization=organization, ).count()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101994,
+    "v1": "",
+    "v2": "url(r'^(?P<organization_slug>[\\w_-]+)/(?P<project_id>[\\w_-]+)/get-started/$', sentry.web.frontend.projects.general.get_started, name='sentry-get-started'),",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101997,
+    "v1": "from rest_framework.test import APIClient as DefaultAPIClient",
+    "v2": "from django.core.urlresolvers import resolve from rest_framework.test import APIRequestFactory, force_authenticate",
+    "resolution": "from django.core.urlresolvers import resolve from rest_framework.test import APIRequestFactory, force_authenticate",
+    "conflict": "from rest_framework.test import APIClient as DefaultAPIClient"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101999,
+    "v1": "# TODO(dcramer): we should ensure we create Release objects tags.append(('sentry:release', release))",
+    "v2": "",
+    "resolution": "",
+    "conflict": "# TODO(dcramer): we should ensure we create Release objects tags.append(('sentry:release', release))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102036,
+    "v1": "'stats': { '24h': hourly_stats, '30d': daily_stats, }",
+    "v2": "",
+    "resolution": "'stats': { '24h': hourly_stats, '30d': daily_stats, }",
+    "conflict": "'stats': { '24h': hourly_stats, '30d': daily_stats, }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102041,
+    "v1": "if not self.conn.setnx(lock_key, '1'): self.logger.info('Skipped process on %s; unable to get lock', key)",
+    "v2": "if not self.conn.set(lock_key, '1', nx=True, ex=10):",
+    "resolution": "if not self.conn.set(lock_key, '1', nx=True, ex=10): self.logger.info('Skipped process on %s; unable to get lock', key)",
+    "conflict": "if not self.conn.setnx(lock_key, '1'): self.logger.info('Skipped process on %s; unable to get lock', key)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102042,
+    "v1": "",
+    "v2": "def get_display_name(self): return self.first_name or self.email or self.username",
+    "resolution": "obj.update(user=to_user) for obj in UserOption.objects.filter(user=from_user): obj.update(user=to_user)",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102060,
+    "v1": "# Configure celery import djcelery djcelery.setup_loader()",
+    "v2": "",
+    "resolution": "# Delay (in ms) to induce on API responses SENTRY_API_RESPONSE_DELAY = 0",
+    "conflict": "# Configure celery import djcelery djcelery.setup_loader()"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102061,
+    "v1": "",
+    "v2": "def get_display_name(self): return self.first_name or self.email",
+    "resolution": "obj.update(user=to_user) for obj in UserOption.objects.filter(user=from_user): obj.update(user=to_user)",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102081,
+    "v1": "'django-celery>=3.1.6,<3.2.0', 'django-crispy-forms>=1.2.3,<1.3.0',",
+    "v2": "'django-celery>=3.0.11,<3.1.0', 'django-crispy-forms>=1.4.0,<1.5.0',",
+    "resolution": "'django-celery>=3.1.6,<3.2.0', 'django-crispy-forms>=1.4.0,<1.5.0',",
+    "conflict": "'django-celery>=3.1.6,<3.2.0', 'django-crispy-forms>=1.2.3,<1.3.0',"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102083,
+    "v1": "'email': obj.email or obj.user.email, 'roleName': obj.get_type_display(),",
+    "v2": "'email': obj.get_email(), 'access': obj.get_type_display(),",
+    "resolution": "'email': obj.get_email(), 'roleName': obj.get_type_display(),",
+    "conflict": "'email': obj.email or obj.user.email, 'roleName': obj.get_type_display(),"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102092,
+    "v1": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "v2": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "resolution": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "conflict": "'organization_slug': project.organization.slug, 'project_slug': project.slug"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102094,
+    "v1": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "v2": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "resolution": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "conflict": "'organization_slug': project.organization.slug, 'project_slug': project.slug"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102095,
+    "v1": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "v2": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "resolution": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "conflict": "'organization_slug': project.organization.slug, 'project_slug': project.slug"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102096,
+    "v1": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "v2": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "resolution": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "conflict": "'organization_slug': project.organization.slug, 'project_slug': project.slug"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102097,
+    "v1": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "v2": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "resolution": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "conflict": "'organization_slug': project.organization.slug, 'project_slug': project.slug"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102098,
+    "v1": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "v2": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "resolution": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "conflict": "'organization_slug': project.organization.slug, 'project_slug': project.slug"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102099,
+    "v1": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "v2": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "resolution": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug,",
+    "conflict": "'organization_slug': project.organization.slug, 'project_slug': project.slug"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102106,
+    "v1": "'selectedGroup': serialize(group, request.user), 'can_admin_event': can_admin_group(request.user, group), 'can_remove_event': can_remove_group(request.user, group),",
+    "v2": "",
+    "resolution": "'selectedGroup': serialize(group, request.user), })",
+    "conflict": "'selectedGroup': serialize(group, request.user), 'can_admin_event': can_admin_group(request.user, group), 'can_remove_event': can_remove_group(request.user, group),"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102117,
+    "v1": "def convert_args(self, request, organization_slug, project_slug, *args, **kwargs):",
+    "v2": "permission_classes = (ProjectPermission,)  def convert_args(self, request, project_id, *args, **kwargs):",
+    "resolution": "permission_classes = (ProjectPermission,) def convert_args(self, request, organization_slug, project_slug, *args, **kwargs):",
+    "conflict": "def convert_args(self, request, organization_slug, project_slug, *args, **kwargs):"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102118,
+    "v1": "from sentry.api.base import DocSection, Endpoint from sentry.api.permissions import assert_perm",
+    "v2": "from sentry.api.bases.group import GroupEndpoint",
+    "resolution": "from sentry.api.base import DocSection from sentry.api.bases.group import GroupEndpoint",
+    "conflict": "from sentry.api.base import DocSection, Endpoint from sentry.api.permissions import assert_perm"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102162,
+    "v1": "class ProjectTagKeyDetailsEndpoint(Endpoint): def delete(self, request, organization_slug, project_slug, key):",
+    "v2": "class ProjectTagKeyDetailsEndpoint(ProjectEndpoint): def delete(self, request, project, key):",
+    "resolution": "class ProjectTagKeyDetailsEndpoint(ProjectEndpoint): def delete(self, request, project, key):",
+    "conflict": "class ProjectTagKeyDetailsEndpoint(Endpoint): def delete(self, request, organization_slug, project_slug, key):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102165,
+    "v1": "def test_global_status_update(self): project = self.project",
+    "v2": "def test_global_resolve(self):",
+    "resolution": "def test_global_resolve(self):",
+    "conflict": "def test_global_status_update(self): project = self.project"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102173,
+    "v1": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "v2": "'project_id': self.project.id,",
+    "resolution": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "conflict": "'organization_slug': project.organization.slug, 'project_slug': project.slug"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102174,
+    "v1": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "v2": "'project_id': self.project.id,",
+    "resolution": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "conflict": "'organization_slug': project.organization.slug, 'project_slug': project.slug"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102175,
+    "v1": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "v2": "'project_id': self.project.id,",
+    "resolution": "'organization_slug': project.organization.slug, 'project_slug': project.slug",
+    "conflict": "'organization_slug': project.organization.slug, 'project_slug': project.slug"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102197,
+    "v1": "from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, Http404",
+    "v2": "from django.http import ( HttpResponse, HttpResponsePermanentRedirect, HttpResponseRedirect, Http404 )",
+    "resolution": "from django.http import ( Http404, HttpResponse, HttpResponsePermanentRedirect, HttpResponseRedirect, HttpRequest )",
+    "conflict": "from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, Http404"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102221,
+    "v1": "def _get_entries(self, request, event): # XXX(dcramer): These are called entries for future-proofing is_public = group_is_public(event.group, request.user)",
+    "v2": "",
+    "resolution": "",
+    "conflict": "def _get_entries(self, request, event): # XXX(dcramer): These are called entries for future-proofing is_public = group_is_public(event.group, request.user)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102227,
+    "v1": "from sentry.models import Project, ProjectStatus",
+    "v2": "from sentry.models import ( AuditLogEntry, AuditLogEntryEvent, Project, ProjectStatus )",
+    "resolution": "from sentry.models import ( AuditLogEntry, AuditLogEntryEvent, Project, ProjectStatus )",
+    "conflict": "from sentry.models import Project, ProjectStatus"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102242,
+    "v1": "'edit': attrs['access_type'] == MEMBER_OWNER or user.is_superuser,",
+    "v2": "'owner': attrs['access_type'] <= OrganizationMemberType.OWNER, 'admin': attrs['access_type'] <= OrganizationMemberType.ADMIN,",
+    "resolution": "'owner': attrs['access_type'] <= OrganizationMemberType.OWNER, 'admin': attrs['access_type'] <= OrganizationMemberType.ADMIN,",
+    "conflict": "'edit': attrs['access_type'] == MEMBER_OWNER or user.is_superuser,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102245,
+    "v1": "'edit': attrs['access_type'] == MEMBER_OWNER or user.is_superuser, 'admin': obj.owner_id == user.id or user.is_superuser,",
+    "v2": "'owner': attrs['access_type'] <= OrganizationMemberType.OWNER, 'admin': attrs['access_type'] <= OrganizationMemberType.ADMIN,",
+    "resolution": "'owner': attrs['access_type'] <= OrganizationMemberType.OWNER, 'admin': attrs['access_type'] <= OrganizationMemberType.ADMIN,",
+    "conflict": "'edit': attrs['access_type'] == MEMBER_OWNER or user.is_superuser, 'admin': obj.owner_id == user.id or user.is_superuser,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102252,
+    "v1": "from sentry.constants import ( PLATFORM_TITLES, PLATFORM_LIST )",
+    "v2": "from sentry.constants import PLATFORM_TITLES, PLATFORM_LIST",
+    "resolution": "from sentry.constants import PLATFORM_TITLES, PLATFORM_LIST",
+    "conflict": "from sentry.constants import ( PLATFORM_TITLES, PLATFORM_LIST )"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102254,
+    "v1": "(ProjectStatus.VISIBLE, _('Visible')), (ProjectStatus.HIDDEN, _('Hidden')),",
+    "v2": "(ProjectStatus.VISIBLE, _('Active')),",
+    "resolution": "(ProjectStatus.VISIBLE, _('Active')),",
+    "conflict": "(ProjectStatus.VISIBLE, _('Visible')), (ProjectStatus.HIDDEN, _('Hidden')),"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102256,
+    "v1": "team, _ = Team.objects.get_or_create( name='sentry',",
+    "v2": "org, _ = Organization.objects.get_or_create( name='Sentry',",
+    "resolution": "org, _ = Organization.objects.get_or_create( name='Sentry',",
+    "conflict": "team, _ = Team.objects.get_or_create( name='sentry',"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102258,
+    "v1": "owner=user, team=team,",
+    "v2": "team=team, organization=team.organization,",
+    "resolution": "team=team, organization=team.organization,",
+    "conflict": "owner=user, team=team,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102334,
+    "v1": "Group, GroupStatus, GroupTagValue, Project, TagValue, Activity, User)",
+    "v2": "Group, GroupBookmark, GroupStatus, GroupTagValue, Project, TagValue, Activity, User )",
+    "resolution": "Group, GroupStatus, GroupTagValue, Project, TagValue, Activity, User)",
+    "conflict": "Group, GroupStatus, GroupTagValue, Project, TagValue, Activity, User)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102345,
+    "v1": "admin, teams, users, explore, explore_code)",
+    "v2": "admin, users, explore, explore_code, )",
+    "resolution": "admin, users, explore, explore_code, )",
+    "conflict": "admin, teams, users, explore, explore_code)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102347,
+    "v1": "url(r'^(?P<team_slug>[\\w_-]+)/(?P<project_id>[\\w_-]+)/keys/$',",
+    "v2": "url(r'^(?P<organization_slug>[\\w_-]+)/(?P<project_id>[\\w_-]+)/keys/$',",
+    "resolution": "url(r'^(?P<organization_slug>[\\w_-]+)/(?P<project_id>[\\w_-]+)/keys/$',",
+    "conflict": "url(r'^(?P<team_slug>[\\w_-]+)/(?P<project_id>[\\w_-]+)/keys/$',"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102349,
+    "v1": "response = self.client.delete(url, format='json')",
+    "v2": "with self.settings(CELERY_ALWAYS_EAGER=True): response = self.client.delete(url, format='json')",
+    "resolution": "with self.settings(CELERY_ALWAYS_EAGER=True): response = self.client.delete(url, format='json')",
+    "conflict": "response = self.client.delete(url, format='json')"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102351,
+    "v1": "@patch('sentry.api.endpoints.project_details.delete_project') def test_simple(self, delete_project):",
+    "v2": "@mock.patch('sentry.api.endpoints.project_details.delete_project') def test_simple(self, mock_delete_project):",
+    "resolution": "@mock.patch('sentry.api.endpoints.project_details.delete_project') def test_simple(self, mock_delete_project):",
+    "conflict": "@patch('sentry.api.endpoints.project_details.delete_project') def test_simple(self, delete_project):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102354,
+    "v1": "response = self.client.delete(url, format='json')",
+    "v2": "with self.settings(CELERY_ALWAYS_EAGER=True): response = self.client.delete(url, format='json')",
+    "resolution": "with self.settings(CELERY_ALWAYS_EAGER=True): response = self.client.delete(url, format='json')",
+    "conflict": "response = self.client.delete(url, format='json')"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102355,
+    "v1": "from sentry.models import Project, ProjectKey, Team, User",
+    "v2": "from sentry.models import ( Organization, Project, ProjectKey, Team, User )",
+    "resolution": "from sentry.models import ( Organization, Project, ProjectKey, Team, User )",
+    "conflict": "from sentry.models import Project, ProjectKey, Team, User"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102359,
+    "v1": "from sentry.models import ( Project, ProjectKey, ProjectOption, ProjectStatus, TagKey )",
+    "v2": "from sentry.models import ProjectKey, ProjectOption, TagKey",
+    "resolution": "from sentry.models import ProjectKey, ProjectOption, TagKey",
+    "conflict": "from sentry.models import ( Project, ProjectKey, ProjectOption, ProjectStatus, TagKey )"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102362,
+    "v1": "'system_quota': app.quotas.get_system_quota(), 'team_quota': app.quotas.get_team_quota(project.team),",
+    "v2": "'system_quota': int(app.quotas.get_system_quota()), 'team_quota': int(app.quotas.get_team_quota(team)),",
+    "resolution": "'system_quota': int(app.quotas.get_system_quota()), 'team_quota': int(app.quotas.get_team_quota(project.team)),",
+    "conflict": "'system_quota': app.quotas.get_system_quota(), 'team_quota': app.quotas.get_team_quota(project.team),"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102363,
+    "v1": "GroupBookmark, OrganizationMember, ProjectKey, Team, UserOption)",
+    "v2": "GroupBookmark, ProjectKey, Team, TeamMember, UserOption )",
+    "resolution": "GroupBookmark, OrganizationMember, ProjectKey, Team, UserOption)",
+    "conflict": "GroupBookmark, OrganizationMember, ProjectKey, Team, UserOption)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102364,
+    "v1": "redirect = request.META.get('HTTP_REFERER') or reverse('sentry', kwargs={ 'organization_slug': organization.slug,",
+    "v2": "redirect = request.META.get('HTTP_REFERER') or reverse('sentry-stream', kwargs={ 'team_slug': team.slug,",
+    "resolution": "redirect = request.META.get('HTTP_REFERER') or reverse('sentry-stream', kwargs={ 'organization_slug': organization.slug,",
+    "conflict": "redirect = request.META.get('HTTP_REFERER') or reverse('sentry', kwargs={ 'organization_slug': organization.slug,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102365,
+    "v1": "with self.settings(CELERY_ALWAYS_EAGER=True): event = manager.save(1)",
+    "v2": "event = manager.save(1)",
+    "resolution": "with self.settings(CELERY_ALWAYS_EAGER=True): event = manager.save(1)",
+    "conflict": "with self.settings(CELERY_ALWAYS_EAGER=True): event = manager.save(1)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102374,
+    "v1": "owner=self.organization.owner)",
+    "v2": "owner=self.user, )",
+    "resolution": "owner=self.organization.owner, )",
+    "conflict": "owner=self.organization.owner)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102378,
+    "v1": "self.project = self.create_project(slug='bar')",
+    "v2": "self.user = User.objects.create(username='coreapi') self.team = self.create_team(owner=self.user) self.project = self.create_project(team=self.team)",
+    "resolution": "self.user = self.create_user('coreapi@example.com') self.team = self.create_team(owner=self.user) self.project = self.create_project(team=self.team)",
+    "conflict": "self.project = self.create_project(slug='bar')"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102382,
+    "v1": "self.project = self.create_project(slug='bar')",
+    "v2": "self.user = User.objects.create(username='coreapi') self.team = self.create_team(name='Foo', owner=self.user) self.project = self.create_project(name='Foo', slug='bar', team=self.team)",
+    "resolution": "self.user = self.create_user('coreapi@example.com') self.team = self.create_team(name='Foo', owner=self.user) self.project = self.create_project(team=self.team)",
+    "conflict": "self.project = self.create_project(slug='bar')"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102386,
+    "v1": "project = self.create_project(name='Test', slug='test') project.team.member_set.get_or_create(user=user) project.team.member_set.get_or_create(user=user2)",
+    "v2": "team = self.create_team(owner=user)",
+    "resolution": "team = self.create_team(owner=user)",
+    "conflict": "project = self.create_project(name='Test', slug='test') project.team.member_set.get_or_create(user=user) project.team.member_set.get_or_create(user=user2)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102394,
+    "v1": "",
+    "v2": "from __future__ import absolute_import  from django.conf import settings",
+    "resolution": "from __future__ import absolute_import",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102457,
+    "v1": "value = unicode(value) if len(value) > MAX_TAG_VALUE_LENGTH:",
+    "v2": "value = six.text_type(value) if len(value) > MAX_TAG_LENGTH:",
+    "resolution": "value = six.text_type(value) if len(value) > MAX_TAG_VALUE_LENGTH:",
+    "conflict": "value = unicode(value) if len(value) > MAX_TAG_VALUE_LENGTH:"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102458,
+    "v1": "import logging  from django.conf import settings",
+    "v2": "",
+    "resolution": "from django.conf import settings",
+    "conflict": "import logging  from django.conf import settings"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102470,
+    "v1": "nodestore = get_instance( settings.SENTRY_NODESTORE, settings.SENTRY_NODESTORE_OPTIONS) env = State()",
+    "v2": "search = get_instance(settings.SENTRY_SEARCH, settings.SENTRY_SEARCH_OPTIONS)",
+    "resolution": "nodestore = get_instance( settings.SENTRY_NODESTORE, settings.SENTRY_NODESTORE_OPTIONS) search = get_instance(settings.SENTRY_SEARCH, settings.SENTRY_SEARCH_OPTIONS)",
+    "conflict": "nodestore = get_instance( settings.SENTRY_NODESTORE, settings.SENTRY_NODESTORE_OPTIONS) env = State()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102472,
+    "v1": "# Node storage backend SENTRY_NODESTORE = 'sentry.nodestore.django.DjangoNodeStorage' SENTRY_NODESTORE_OPTIONS = {}",
+    "v2": "",
+    "resolution": "",
+    "conflict": "# Node storage backend SENTRY_NODESTORE = 'sentry.nodestore.django.DjangoNodeStorage' SENTRY_NODESTORE_OPTIONS = {}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102473,
+    "v1": "NodeField, update, sane_repr)",
+    "v2": "update, sane_repr )",
+    "resolution": "NodeField, update, sane_repr)",
+    "conflict": "NodeField, update, sane_repr)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102477,
+    "v1": "RAVEN_JS_URL = 'd3nslu0hdya83q.cloudfront.net/dist/1.0/raven.min.js'",
+    "v2": "ENDPOINT = None PUBLIC_ENDPOINT = None",
+    "resolution": "RAVEN_JS_URL = 'd3nslu0hdya83q.cloudfront.net/dist/1.0/raven.min.js' ENDPOINT = None PUBLIC_ENDPOINT = None",
+    "conflict": "RAVEN_JS_URL = 'd3nslu0hdya83q.cloudfront.net/dist/1.0/raven.min.js'"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102529,
+    "v1": "from sentry.utils.javascript import to_json from sentry.utils.http import is_same_domain, is_valid_origin, apply_access_control_headers",
+    "v2": "from sentry.utils.http import is_same_domain, is_valid_origin, apply_access_control_headers, \\ get_origins",
+    "resolution": "from sentry.utils.javascript import to_json from sentry.utils.http import is_same_domain, is_valid_origin, apply_access_control_headers, \\ get_origins",
+    "conflict": "from sentry.utils.javascript import to_json from sentry.utils.http import is_same_domain, is_valid_origin, apply_access_control_headers"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102611,
+    "v1": "'gunicorn>=0.13.4,<0.14.0', 'logan>=0.3.1',",
+    "v2": "'gunicorn>=0.13.4', 'logan>=0.3.0',",
+    "resolution": "'gunicorn>=0.13.4', 'logan>=0.3.1',",
+    "conflict": "'gunicorn>=0.13.4,<0.14.0', 'logan>=0.3.1',"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102612,
+    "v1": "from django.core.mail import EmailMultiAlternatives",
+    "v2": "from django.core.mail import send_mail from django.core.validators import email_re, ValidationError",
+    "resolution": "from django.core.mail import EmailMultiAlternatives from django.core.validators import email_re, ValidationError",
+    "conflict": "from django.core.mail import EmailMultiAlternatives"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 102613,
+    "v1": "import pynliner  NOTSET = object()",
+    "v2": "split_re = re.compile(r'\\s*,\\s*|\\s+')",
+    "resolution": "split_re = re.compile(r'\\s*,\\s*|\\s+') import pynliner  NOTSET = object()",
+    "conflict": "import pynliner  NOTSET = object()"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102615,
+    "v1": "def mail_admins(self, group, event, fail_silently=False):",
+    "v2": "def mail_members(self, group, event, fail_silently=True): interfaces = event.interfaces",
+    "resolution": "def mail_members(self, group, event, fail_silently=True): project = group.project",
+    "conflict": "def mail_admins(self, group, event, fail_silently=False):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102619,
+    "v1": "from sentry.utils.auth import get_auth_header from sentry.services.udp import SentryUDPServer",
+    "v2": "from sentry import processors",
+    "resolution": "from sentry.utils.auth import get_auth_header from sentry.services.udp import SentryUDPServer",
+    "conflict": "from sentry.utils.auth import get_auth_header from sentry.services.udp import SentryUDPServer"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102642,
+    "v1": "'Django>=1.2,<1.4', 'django-bitfield',",
+    "v2": "'Django>=1.2',",
+    "resolution": "'Django>=1.2,<1.4', 'django-bitfield',",
+    "conflict": "'Django>=1.2,<1.4', 'django-bitfield',"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102651,
+    "v1": "from sentry.utils import json, transform, MockDjangoRequest from sentry.utils.auth import get_signature, get_auth_header",
+    "v2": "from sentry.utils import transform, MockDjangoRequest",
+    "resolution": "from sentry.utils import transform, MockDjangoRequest",
+    "conflict": "from sentry.utils import json, transform, MockDjangoRequest from sentry.utils.auth import get_signature, get_auth_header"
+  }
+]}

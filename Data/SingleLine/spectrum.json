@@ -1,0 +1,994 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 119279,
+    "v1": "this.discardDraft();",
+    "v2": "this.closeComposer();",
+    "resolution": "this.discardDraft();",
+    "conflict": "this.discardDraft();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119282,
+    "v1": "<TextButton dataCy=\"edit-message-cancel\" onClick={cancelEdit}>",
+    "v2": "<TextButton data-cy=\"edit-message-cancel\" onClick={props.cancelEdit}>",
+    "resolution": "<TextButton dataCy=\"edit-message-cancel\" onClick={cancelEdit}>",
+    "conflict": "<TextButton dataCy=\"edit-message-cancel\" onClick={cancelEdit}>"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119283,
+    "v1": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');",
+    "v2": "cy.get('[data-cy=\"thread-notifications-toggle\"]').should('be.visible');",
+    "resolution": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');",
+    "conflict": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119284,
+    "v1": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');",
+    "v2": "cy.get('[data-cy=\"thread-notifications-toggle\"]').should('be.visible');",
+    "resolution": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');",
+    "conflict": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119285,
+    "v1": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');",
+    "v2": "cy.get('[data-cy=\"thread-notifications-toggle\"]').should('be.visible');",
+    "resolution": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');",
+    "conflict": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119286,
+    "v1": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');",
+    "v2": "cy.get('[data-cy=\"thread-notifications-toggle\"]').should('be.visible');",
+    "resolution": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');",
+    "conflict": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119287,
+    "v1": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');",
+    "v2": "cy.get('[data-cy=\"thread-notifications-toggle\"]').should('be.visible');",
+    "resolution": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');",
+    "conflict": "cy.get('[data-cy=\"thread-dropdown-notifications\"]').should('be.visible');"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119291,
+    "v1": "withRouter,",
+    "v2": "setCommunityLastSeenMutation,",
+    "resolution": "setCommunityLastSeenMutation,   withRouter,",
+    "conflict": "withRouter,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119298,
+    "v1": "background-color: ${theme.bg.wash};",
+    "v2": "background-color: ${theme.bg.default};",
+    "resolution": "background-color: ${theme.bg.wash};",
+    "conflict": "background-color: ${theme.bg.wash};"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119316,
+    "v1": "const jsonBody = toJSON(editedBody);",
+    "v2": "",
+    "resolution": "",
+    "conflict": "const jsonBody = toJSON(editedBody);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119317,
+    "v1": "editedBody: state,",
+    "v2": "body: evt.target.value,",
+    "resolution": "body: evt.target.value,",
+    "conflict": "editedBody: state,"
+  },
+  {
+    "devdecision": "None",
+    "id": 119390,
+    "v1": "import { removeItemFromStorage, storeItem } from 'src/helpers/localStorage';",
+    "v2": "import Raven from 'raven-js';",
+    "resolution": "import { setUser, unsetUser } from 'src/helpers/analytics';",
+    "conflict": "import { removeItemFromStorage, storeItem } from 'src/helpers/localStorage';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119410,
+    "v1": "component={RedirectOldThreadRoute}",
+    "v2": "component={FullscreenThreadView}",
+    "resolution": "component={RedirectOldThreadRoute}",
+    "conflict": "component={RedirectOldThreadRoute}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119414,
+    "v1": "</ExploreLink>",
+    "v2": "</DropdownLink>",
+    "resolution": "</ExploreLink>",
+    "conflict": "</ExploreLink>"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119418,
+    "v1": "<<<<<<<headdisplay: grid;",
+    "v2": "display: grid;",
+    "resolution": "display: grid;",
+    "conflict": "<<<<<<<headdisplay: grid;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119425,
+    "v1": "grid-template-areas: 'logo . features apps pricing support auth';",
+    "v2": "grid-template-areas: 'logo . features support auth';",
+    "resolution": "grid-template-areas: 'logo . features apps support auth';",
+    "conflict": "grid-template-areas: 'logo . features apps pricing support auth';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119429,
+    "v1": "if (!(await canAdministerCommunity(currentUser.id, id, loaders))) {",
+    "v2": "if (!(await canModerateCommunity(currentUser.id, id, loaders))) {",
+    "resolution": "if (!(await canModerateCommunity(currentUser.id, id, loaders))) {",
+    "conflict": "if (!(await canAdministerCommunity(currentUser.id, id, loaders))) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119430,
+    "v1": "if (!(await canAdministerCommunity(currentUser.id, id, loaders))) {",
+    "v2": "if (!(await canModerateCommunity(currentUser.id, id, loaders))) {",
+    "resolution": "if (!(await canModerateCommunity(currentUser.id, id, loaders))) {",
+    "conflict": "if (!(await canAdministerCommunity(currentUser.id, id, loaders))) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119431,
+    "v1": "if (!(await canAdministerCommunity(currentUser.id, id, loaders))) {",
+    "v2": "if (!(await canModerateCommunity(currentUser.id, id, loaders))) {",
+    "resolution": "if (!(await canModerateCommunity(currentUser.id, id, loaders))) {",
+    "conflict": "if (!(await canAdministerCommunity(currentUser.id, id, loaders))) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119446,
+    "v1": "export const canViewThread = async (",
+    "v2": "export const canViewDMThread = async (",
+    "resolution": "export const canViewThread = async (",
+    "conflict": "export const canViewThread = async ("
+  },
+  {
+    "devdecision": "None",
+    "id": 119468,
+    "v1": "__createCommunityRecurringPaymentsLoader,",
+    "v2": "__createCommunityMemberCountLoader,",
+    "resolution": "__createCommunityChannelCountLoader,",
+    "conflict": "__createCommunityRecurringPaymentsLoader,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119471,
+    "v1": "import { incrementReactionCount, decrementReactionCount } from './thread';",
+    "v2": "import { getThreadById } from './thread';",
+    "resolution": "import { getThreadById } from './thread'; import { incrementReactionCount, decrementReactionCount } from './thread';",
+    "conflict": "import { incrementReactionCount, decrementReactionCount } from './thread';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119482,
+    "v1": "import slugg from 'slugg';",
+    "v2": "import idx from 'idx';",
+    "resolution": "import idx from 'idx';",
+    "conflict": "import slugg from 'slugg';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119541,
+    "v1": "currentUserId,",
+    "v2": "message,",
+    "resolution": "message,   currentUserId,",
+    "conflict": "currentUserId,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119543,
+    "v1": "id: string,",
+    "v2": "...$Exact<FlatListProps>,",
+    "resolution": "...$Exact<FlatListProps>,   id: string,",
+    "conflict": "id: string,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119561,
+    "v1": "import JoinTokenSettings from './components/joinTokenSettings';",
+    "v2": "import type { Dispatch } from 'redux';",
+    "resolution": "import type { Dispatch } from 'redux'; import JoinTokenSettings from './components/joinTokenSettings';",
+    "conflict": "import JoinTokenSettings from './components/joinTokenSettings';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119605,
+    "v1": "onClick={() => this.trackNavigationClick('logo')}",
+    "v2": "data-cy=\"navbar-logo\"",
+    "resolution": "data-cy=\"navbar-logo\"             onClick={() => this.trackNavigationClick('logo')}",
+    "conflict": "onClick={() => this.trackNavigationClick('logo')}"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119606,
+    "v1": "onClick={() => this.trackNavigationClick('home')}",
+    "v2": "data-cy=\"navbar-home\"",
+    "resolution": "data-cy=\"navbar-home\"             onClick={() => this.trackNavigationClick('home')}",
+    "conflict": "onClick={() => this.trackNavigationClick('home')}"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119607,
+    "v1": "onClick={() => this.trackNavigationClick('explore')}",
+    "v2": "data-cy=\"navbar-explore\"",
+    "resolution": "data-cy=\"navbar-explore\"             onClick={() => this.trackNavigationClick('explore')}",
+    "conflict": "onClick={() => this.trackNavigationClick('explore')}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119608,
+    "v1": "type: isAndroid() ? 'TEXT' : 'DRAFTJS',",
+    "v2": "type: isAndroid() ? 'DRAFTJS' : 'TEXT',",
+    "resolution": "type: isAndroid() ? 'TEXT' : 'DRAFTJS',",
+    "conflict": "type: isAndroid() ? 'TEXT' : 'DRAFTJS',"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119609,
+    "v1": "type: 'DRAFTJS',",
+    "v2": "type: isAndroid() ? 'TEXT' : 'DRAFTJS',",
+    "resolution": "type: isAndroid() ? 'TEXT' : 'DRAFTJS',",
+    "conflict": "type: 'DRAFTJS',"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119619,
+    "v1": "import axios from 'axios'; import addQueue from '../utils/addQueue';",
+    "v2": "",
+    "resolution": "import axios from 'axios'; import addQueue from '../utils/addQueue';",
+    "conflict": "import axios from 'axios'; import addQueue from '../utils/addQueue';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119640,
+    "v1": "`node -e \"const setup = require('./shared/testing/teardown.js')().then(() => process.exit())\"`",
+    "v2": "`node -e \"const teardown = require('./shared/testing/teardown.js')().then(() => process.exit())\"`",
+    "resolution": "`node -e \"const teardown = require('./shared/testing/teardown.js')().then(() => process.exit())\"`",
+    "conflict": "`node -e \"const setup = require('./shared/testing/teardown.js')().then(() => process.exit())\"`"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119644,
+    "v1": "dataCy?: string,",
+    "v2": "'e2e-id'?: string,",
+    "resolution": "dataCy?: string,",
+    "conflict": "dataCy?: string,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119645,
+    "v1": "data-cy={props.dataCy}",
+    "v2": "data-e2e-id={props['e2e-id']}",
+    "resolution": "data-cy={props.dataCy}",
+    "conflict": "data-cy={props.dataCy}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119646,
+    "v1": "data-cy={`${props.dataCy}-${props.checked ? 'checked' : 'unchecked'}`}",
+    "v2": "data-e2e-id={props['e2e-id']}",
+    "resolution": "data-cy={`${props.dataCy}-${props.checked ? 'checked' : 'unchecked'}`}",
+    "conflict": "data-cy={`${props.dataCy}-${props.checked ? 'checked' : 'unchecked'}`}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119647,
+    "v1": "data-cy={props.dataCy}",
+    "v2": "data-e2e-id={props['e2e-id']}",
+    "resolution": "data-cy={props.dataCy}",
+    "conflict": "data-cy={props.dataCy}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119648,
+    "v1": "data-cy={this.props.dataCy}",
+    "v2": "data-e2e-id={this.props['e2e-id']}",
+    "resolution": "data-cy={this.props.dataCy}",
+    "conflict": "data-cy={this.props.dataCy}"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119651,
+    "v1": "<Wrapper data-cy=\"splash-page\">",
+    "v2": "<Wrapper data-e2e-id=\"home-page\">",
+    "resolution": "<Wrapper data-cy=\"home-page\">",
+    "conflict": "<Wrapper data-cy=\"splash-page\">"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119655,
+    "v1": "import isArchived from './isArchived';",
+    "v2": "import joinSettings from './joinSettings';",
+    "resolution": "import joinSettings from './joinSettings'; import isArchived from './isArchived';",
+    "conflict": "import isArchived from './isArchived';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119656,
+    "v1": "isArchived,",
+    "v2": "joinSettings,",
+    "resolution": "joinSettings,     isArchived,",
+    "conflict": "isArchived,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119730,
+    "v1": "type EdgeType = {",
+    "v2": "type CommunityType = {",
+    "resolution": "type CommunityType = {",
+    "conflict": "type EdgeType = {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119731,
+    "v1": "edges: Array<?EdgeType>,",
+    "v2": "edges: Array<?CommunityType>,",
+    "resolution": "edges: Array<?CommunityType>,",
+    "conflict": "edges: Array<?EdgeType>,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119770,
+    "v1": "${communityThreadConnectionFragment}",
+    "v2": "${communityThreadsFragment}",
+    "resolution": "${communityThreadConnectionFragment}",
+    "conflict": "${communityThreadConnectionFragment}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119781,
+    "v1": "${userThreadConnectionFragment}",
+    "v2": "${userThreadsFragment}",
+    "resolution": "${userThreadConnectionFragment}",
+    "conflict": "${userThreadConnectionFragment}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119782,
+    "v1": "${userCommunityConnectionFragment}",
+    "v2": "${userCommunitiesFragment}",
+    "resolution": "${userCommunityConnectionFragment}",
+    "conflict": "${userCommunityConnectionFragment}"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119833,
+    "v1": "// 2017/01/01",
+    "v2": "// 2017 / 01 / 01;",
+    "resolution": "// 2017 / 01 / 01;",
+    "conflict": "// 2017/01/01"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119841,
+    "v1": "",
+    "v2": "updateThreadWithImages,   moveThread,",
+    "resolution": "moveThread,",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119847,
+    "v1": "return user;",
+    "v2": "return null;",
+    "resolution": "return user;",
+    "conflict": "return user;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119848,
+    "v1": "return user;",
+    "v2": "return null;",
+    "resolution": "return user;",
+    "conflict": "return user;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119849,
+    "v1": "return user;",
+    "v2": "return null;",
+    "resolution": "return user;",
+    "conflict": "return user;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119850,
+    "v1": "return user;",
+    "v2": "return null;",
+    "resolution": "return user;",
+    "conflict": "return user;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119853,
+    "v1": "localStorage.removeItem(key);",
+    "v2": "return localStorage.removeItem(key);",
+    "resolution": "return localStorage.removeItem(key);",
+    "conflict": "localStorage.removeItem(key);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119856,
+    "v1": "removeItem: () => {},",
+    "v2": "removeItem: () => null,",
+    "resolution": "removeItem: () => {},",
+    "conflict": "removeItem: () => {},"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119860,
+    "v1": "import { threadInfoFragment } from '../../api/fragments/thread/threadInfo'; import { userInfoFragment } from '../../api/fragments/user/userInfo';",
+    "v2": "",
+    "resolution": "import { threadInfoFragment } from '../../api/fragments/thread/threadInfo'; import { userInfoFragment } from '../../api/fragments/user/userInfo';",
+    "conflict": "import { threadInfoFragment } from '../../api/fragments/thread/threadInfo'; import { userInfoFragment } from '../../api/fragments/user/userInfo';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119869,
+    "v1": "DEFAULT_SESSIONS,",
+    "v2": "DEFAULT_MESSAGES,",
+    "resolution": "DEFAULT_MESSAGES,   DEFAULT_SESSIONS,",
+    "conflict": "DEFAULT_SESSIONS,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119870,
+    "v1": "DEFAULT_SESSIONS,",
+    "v2": "DEFAULT_MESSAGES,",
+    "resolution": "DEFAULT_MESSAGES,   DEFAULT_SESSIONS,",
+    "conflict": "DEFAULT_SESSIONS,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119871,
+    "v1": "sessions: DEFAULT_SESSIONS,",
+    "v2": "messages: DEFAULT_MESSAGES,",
+    "resolution": "messages: DEFAULT_MESSAGES,   sessions: DEFAULT_SESSIONS,",
+    "conflict": "sessions: DEFAULT_SESSIONS,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119872,
+    "v1": "border-radius: ${props => (props.community ? `4px` : '100%')};",
+    "v2": "border-radius: ${props => (props.community ? `25%` : '100%')};",
+    "resolution": "border-radius: ${props => (props.community ? `25%` : '100%')};",
+    "conflict": "border-radius: ${props => (props.community ? `4px` : '100%')};"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119873,
+    "v1": "__createUserPermissionsInChannelLoader,",
+    "v2": "__createUserThreadNotificationStatusLoader,",
+    "resolution": "__createUserThreadNotificationStatusLoader,   __createUserPermissionsInChannelLoader,",
+    "conflict": "__createUserPermissionsInChannelLoader,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119874,
+    "v1": "import { getUsersPermissionsInChannels } from '../models/usersChannels';",
+    "v2": "import { getThreadsNotificationStatusForUsers } from '../models/usersThreads';",
+    "resolution": "import { getThreadsNotificationStatusForUsers } from '../models/usersThreads'; import { getUsersPermissionsInChannels } from '../models/usersChannels';",
+    "conflict": "import { getUsersPermissionsInChannels } from '../models/usersChannels';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119876,
+    "v1": "title={`iframe-${data.src}`}",
+    "v2": "title={data.src}",
+    "resolution": "title={`iframe-${data.src}`}",
+    "conflict": "title={`iframe-${data.src}`}"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119880,
+    "v1": "// hash,       // link,",
+    "v2": "",
+    "resolution": "",
+    "conflict": "// hash,       // link,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119884,
+    "v1": "<span role=\"img\" aria-label=\"sparkle\">",
+    "v2": "<span role=\"img\" aria-label=\"twinkle emoji\">",
+    "resolution": "<span role=\"img\" aria-label=\"twinkle emoji\">",
+    "conflict": "<span role=\"img\" aria-label=\"sparkle\">"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119889,
+    "v1": "getUserByEmail,",
+    "v2": "getUserByUsername,",
+    "resolution": "getUserByUsername,   getUserByEmail,",
+    "conflict": "getUserByEmail,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119895,
+    "v1": ")}</script><div id=\"root\">${content}</div>${scriptTags}`",
+    "v2": ")}</script><div id=\"root\">${content}</div>${sentry}`",
+    "resolution": ")}</script><div id=\"root\">${content}</div>${sentry}${scriptTags}`",
+    "conflict": ")}</script><div id=\"root\">${content}</div>${scriptTags}`"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119910,
+    "v1": "import commitHash from /* preval */ 'shared/get-commit-hash';",
+    "v2": "",
+    "resolution": "",
+    "conflict": "import commitHash from /* preval */ 'shared/get-commit-hash';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119919,
+    "v1": "user.contextPermissions.reputation &&                   user.contextPermissions.reputation > 0 &&",
+    "v2": "",
+    "resolution": "user.contextPermissions.reputation &&                  user.contextPermissions.reputation > 0 &&",
+    "conflict": "user.contextPermissions.reputation &&                   user.contextPermissions.reputation > 0 &&"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119963,
+    "v1": "truncateNumber,   draftOnlyContainsEmoji,",
+    "v2": "",
+    "resolution": "draftOnlyContainsEmoji,",
+    "conflict": "truncateNumber,   draftOnlyContainsEmoji,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119964,
+    "v1": "border-top: 2px solid ${props => props.theme.border.default};",
+    "v2": "border-top: 2px solid ${props => props.theme.bg.border};",
+    "resolution": "border-top: 2px solid ${props => props.theme.bg.border};",
+    "conflict": "border-top: 2px solid ${props => props.theme.border.default};"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119965,
+    "v1": "border-top: 2px solid ${props => props.theme.border.default};",
+    "v2": "border-top: 2px solid ${props => props.theme.bg.border};",
+    "resolution": "border-top: 2px solid ${props => props.theme.bg.border};",
+    "conflict": "border-top: 2px solid ${props => props.theme.border.default};"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119971,
+    "v1": "draftOnlyContainsEmoji,",
+    "v2": "truncateNumber,",
+    "resolution": "draftOnlyContainsEmoji,   truncateNumber,",
+    "conflict": "draftOnlyContainsEmoji,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120049,
+    "v1": "import queryString from 'query-string';",
+    "v2": "//$FlowFixMe",
+    "resolution": "//$FlowFixMe",
+    "conflict": "import queryString from 'query-string';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120055,
+    "v1": "import redraft from 'redraft';",
+    "v2": "import Icon from '../../components/icons';",
+    "resolution": "import redraft from 'redraft'; import Icon from '../../components/icons';",
+    "conflict": "import redraft from 'redraft';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120073,
+    "v1": "z-index: 1001;",
+    "v2": "z-index: 1008;",
+    "resolution": "z-index: 1008;",
+    "conflict": "z-index: 1001;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120076,
+    "v1": "const featureNotes = `Frontend News is a community for sharing your favorite resources for frontend engineering. It's been super active since its inception last week and we think news aggregation a really interesting use of Spectrum. Check it out and share your favorite resources!`;",
+    "v2": "const featureNotes = `Frontend News is a channel for sharing your favorite resources about frontend engineering. It's been super active since its inception last week and we think news aggregation a really interesting use of Spectrum. Check it out and share your favorite resources!`;",
+    "resolution": "const featureNotes = `Frontend News is a community for sharing your favorite resources for frontend engineering. It's been super active since its inception last week and we think news aggregation a really interesting use of Spectrum. Check it out and share your favorite resources!`;",
+    "conflict": "const featureNotes = `Frontend News is a community for sharing your favorite resources for frontend engineering. It's been super active since its inception last week and we think news aggregation a really interesting use of Spectrum. Check it out and share your favorite resources!`;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120077,
+    "v1": "import startSendUserWelcomeEmailWorker from './queues/send-user-welcome-email';",
+    "v2": "import startSendNewCommunityWelcomeEmailWorker from './queues/send-new-community-welcome-email';",
+    "resolution": "import startSendNewCommunityWelcomeEmailWorker from './queues/send-new-community-welcome-email'; import startSendUserWelcomeEmailWorker from './queues/send-user-welcome-email';",
+    "conflict": "import startSendUserWelcomeEmailWorker from './queues/send-user-welcome-email';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120083,
+    "v1": ": theme.warn.alt};;",
+    "v2": ": theme.warn.alt};",
+    "resolution": ": theme.warn.alt};",
+    "conflict": ": theme.warn.alt};;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120086,
+    "v1": "'Email me when people reply to my conversations (including direct messages).',",
+    "v2": "\"Email me when people respond in the threads and private conversations where I'm active - this includes direct messages.\",",
+    "resolution": "\"Email me when people respond in the threads and private conversations where I'm active - this includes direct messages.\",",
+    "conflict": "'Email me when people reply to my conversations (including direct messages).',"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120099,
+    "v1": "history,",
+    "v2": "networkStatus,",
+    "resolution": "networkStatus,     history,",
+    "conflict": "history,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120107,
+    "v1": "display: ${props => (props.hideOnMobile ? 'none' : 'flex')};",
+    "v2": "display: flex;",
+    "resolution": "display: flex;",
+    "conflict": "display: ${props => (props.hideOnMobile ? 'none' : 'flex')};"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120108,
+    "v1": "${props => props.withCount && css`",
+    "v2": "${/* ${props => props.withCount && css`",
+    "resolution": "${/* ${props => props.withCount && css`",
+    "conflict": "${props => props.withCount && css`"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120114,
+    "v1": "color: ${({ theme }) => theme.brand.default};",
+    "v2": "color: ${({ theme }) => theme.space.soft};",
+    "resolution": "color: ${({ theme }) => theme.brand.default};",
+    "conflict": "color: ${({ theme }) => theme.brand.default};"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120120,
+    "v1": "<ProfileDropdown user={currentUser} width={'200px'} />",
+    "v2": "<ProfileDropdown logout={this.logout} user={currentUser} />",
+    "resolution": "<ProfileDropdown logout={this.logout} user={currentUser} />",
+    "conflict": "<ProfileDropdown user={currentUser} width={'200px'} />"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120123,
+    "v1": "",
+    "v2": "import Card from '../../components/card'; import { Avatar } from '../../components/avatar';",
+    "resolution": "import Card from '../../components/card'; import { Avatar } from '../../components/avatar';",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120125,
+    "v1": "",
+    "v2": "const { storeMessageNotification } = require('./notification'); const { setThreadLastActive } = require('./thread');",
+    "resolution": "const { storeMessageNotification } = require('./notification'); const { setThreadLastActive } = require('./thread');",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120126,
+    "v1": "",
+    "v2": "setThreadLastActive(message.threadId, message.timestamp);",
+    "resolution": "setThreadLastActive(message.threadId, message.timestamp);",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120140,
+    "v1": "console.log('error: ', error);       const isUserError = error.originalError[IsUserError];",
+    "v2": "",
+    "resolution": "",
+    "conflict": "console.log('error: ', error);       const isUserError = error.originalError[IsUserError];"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120141,
+    "v1": "flex: 1 1 ${props => (props.left ? '50%' : '50%')};",
+    "v2": "flex: 1 1 ${props => (props.left ? '75%' : '25%')};",
+    "resolution": "flex: 1 1 ${props => (props.left ? '75%' : '25%')};",
+    "conflict": "flex: 1 1 ${props => (props.left ? '50%' : '50%')};"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120144,
+    "v1": "receiveNotifications: boolean,",
+    "v2": "isSavingEdit: boolean,",
+    "resolution": "isSavingEdit: boolean,     receiveNotifications: boolean,",
+    "conflict": "receiveNotifications: boolean,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120145,
+    "v1": "receiveNotifications: thread.receiveNotifications,",
+    "v2": "isSavingEdit: false,",
+    "resolution": "isSavingEdit: false,       receiveNotifications: thread.receiveNotifications,",
+    "conflict": "receiveNotifications: thread.receiveNotifications,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120162,
+    "v1": "",
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120163,
+    "v1": "input File {",
+    "v2": "input File {",
+    "resolution": "input File {",
+    "conflict": "input File {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120167,
+    "v1": "const { execute, subscribe } = require('graphql');",
+    "v2": "//$FlowFixMe",
+    "resolution": "//$FlowFixMe const { execute, subscribe } = require('graphql');",
+    "conflict": "const { execute, subscribe } = require('graphql');"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120173,
+    "v1": "import { ListCardItem } from '../../../components/listCard';",
+    "v2": "import { BillingListItem } from '../../../components/listItems';",
+    "resolution": "import { BillingListItem } from '../../../components/listItems';",
+    "conflict": "import { ListCardItem } from '../../../components/listCard';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120181,
+    "v1": "//$FlowFixMe",
+    "v2": "// $FlowFixMe",
+    "resolution": "//$FlowFixMe",
+    "conflict": "//$FlowFixMe"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120182,
+    "v1": "const UserSettings = compose(pure)(UserWithData);",
+    "v2": "const UserSettings = compose(editUserMutation, connect(), pure)(UserWithData);",
+    "resolution": "const UserSettings = compose(editUserMutation, connect(), pure)(UserWithData);",
+    "conflict": "const UserSettings = compose(pure)(UserWithData);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120205,
+    "v1": "import { openModal } from '../../actions/modals'; import { initNewThreadWithUser } from '../../actions/directMessageThreads';",
+    "v2": "",
+    "resolution": "import { openModal } from '../../actions/modals'; import { initNewThreadWithUser } from '../../actions/directMessageThreads';",
+    "conflict": "import { openModal } from '../../actions/modals'; import { initNewThreadWithUser } from '../../actions/directMessageThreads';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120208,
+    "v1": "icon=\"minus-fill\"",
+    "v2": "icon=\"minus\"",
+    "resolution": "icon=\"minus\"",
+    "conflict": "icon=\"minus-fill\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120219,
+    "v1": "Take me back",
+    "v2": "Take Me Back",
+    "resolution": "Take me back",
+    "conflict": "Take me back"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120220,
+    "v1": "Take me home",
+    "v2": "Take Me Home",
+    "resolution": "Take me home",
+    "conflict": "Take me home"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120221,
+    "v1": "Take me home",
+    "v2": "Take Me Home",
+    "resolution": "Take me home",
+    "conflict": "Take me home"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120229,
+    "v1": "export const displayLoadingStateAsCard = branch(",
+    "v2": "export const displayLoadingCard = branch(",
+    "resolution": "export const displayLoadingCard = branch(",
+    "conflict": "export const displayLoadingStateAsCard = branch("
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120238,
+    "v1": "const Notification = require('./types/Notification');",
+    "v2": "const DirectMessageGroup = require('./types/DirectMessageGroup');",
+    "resolution": "const Notification = require('./types/Notification'); const DirectMessageGroup = require('./types/DirectMessageGroup');",
+    "conflict": "const Notification = require('./types/Notification');"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120240,
+    "v1": "Notification,",
+    "v2": "DirectMessageGroup,",
+    "resolution": "Notification,     DirectMessageGroup,",
+    "conflict": "Notification,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120246,
+    "v1": "import { UserError } from 'graphql-errors';",
+    "v2": "import { createFrequency } from './frequency';",
+    "resolution": "import { createFrequency } from './frequency'; import { UserError } from 'graphql-errors';",
+    "conflict": "import { UserError } from 'graphql-errors';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120255,
+    "v1": "</List>",
+    "v2": "</FreqList>",
+    "resolution": "</List>",
+    "conflict": "</List>"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120268,
+    "v1": "",
+    "v2": "communities: { active },       // allStories,",
+    "resolution": "communities: { active },",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120270,
+    "v1": "messageComposer: state.messageComposer,",
+    "v2": "communities: state.communities,",
+    "resolution": "communities: state.communities,     messageComposer: state.messageComposer,",
+    "conflict": "messageComposer: state.messageComposer,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120274,
+    "v1": "import { getMessageGroup, listenToNewMessages } from './db/messageGroups';",
+    "v2": "import { getCommunity } from './db/communities';",
+    "resolution": "import { getCommunity } from './db/communities'; import { getMessageGroup, listenToNewMessages } from './db/messageGroups';",
+    "conflict": "import { getMessageGroup, listenToNewMessages } from './db/messageGroups';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120290,
+    "v1": "import history from './helpers/history';",
+    "v2": "import Raven from 'raven-js';",
+    "resolution": "import Raven from 'raven-js'; import history from './helpers/history';",
+    "conflict": "import history from './helpers/history';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120291,
+    "v1": "import { getCommunity } from '../db/communities';",
+    "v2": "import { throwError } from './errors';",
+    "resolution": "import { throwError } from './errors'; import { getCommunity } from '../db/communities';",
+    "conflict": "import { getCommunity } from '../db/communities';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120293,
+    "v1": "import communities from './communities';",
+    "v2": "import errors from './errors';",
+    "resolution": "import errors from './errors'; import communities from './communities';",
+    "conflict": "import communities from './communities';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120294,
+    "v1": "import history from '../helpers/history';",
+    "v2": "import { throwError } from './errors';",
+    "resolution": "import { throwError } from './errors'; import history from '../helpers/history';",
+    "conflict": "import history from '../helpers/history';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120296,
+    "v1": "messageGroups,",
+    "v2": "errors,",
+    "resolution": "errors,   messageGroups,",
+    "conflict": "messageGroups,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120301,
+    "v1": "import MessageComposer from './MessageComposer';",
+    "v2": "import Explore from './Explore';",
+    "resolution": "import Explore from './Explore'; import MessageComposer from './MessageComposer';",
+    "conflict": "import MessageComposer from './MessageComposer';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120320,
+    "v1": "frequencies,       allStories,",
+    "v2": "",
+    "resolution": "frequencies,      allStories,",
+    "conflict": "frequencies,       allStories,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120321,
+    "v1": "",
+    "v2": "console.log(user);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120352,
+    "v1": "import helpers from '../../../helpers'",
+    "v2": "import actions from '../../../actions';",
+    "resolution": "import actions from '../../../actions'; import helpers from '../../../helpers'",
+    "conflict": "import helpers from '../../../helpers'"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120359,
+    "v1": "import { Column, Header, ScrollBody, JoinBtn, LoginWrapper, LoginText, LoginButton, HiddenInput } from './style'",
+    "v2": "import { Column, Header, ScrollBody, JoinBtn, LoginWrapper, LoginText, LoginButton, FrequencyName } from './style'",
+    "resolution": "import { Column, Header, ScrollBody, JoinBtn, LoginWrapper, LoginText, LoginButton, HiddenInput, FrequencyName } from './style'",
+    "conflict": "import { Column, Header, ScrollBody, JoinBtn, LoginWrapper, LoginText, LoginButton, HiddenInput } from './style'"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120368,
+    "v1": "import { RouteWrapper } from './style'",
+    "v2": "import { Body } from './App/style'",
+    "resolution": "import { Body } from './App/style'",
+    "conflict": "import { RouteWrapper } from './style'"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120375,
+    "v1": "import { Column, Avatar, Header, MetaWrapper, Form, Input, Button, Name, MetaLink, FreqList, FreqActive, Freq, FreqLabel, FreqIcon, Footer, FooterLogo, FooterMeta } from './style';",
+    "v2": "import { Column, Avatar, Header, MetaWrapper, Name, Logout } from './style';",
+    "resolution": "import { Column, Avatar, Header, MetaWrapper, Form, Input, Button, Name, MetaLink, FreqList, FreqActive, Freq, FreqLabel, FreqIcon, Footer, FooterLogo, FooterMeta } from './style';",
+    "conflict": "import { Column, Avatar, Header, MetaWrapper, Form, Input, Button, Name, MetaLink, FreqList, FreqActive, Freq, FreqLabel, FreqIcon, Footer, FooterLogo, FooterMeta } from './style';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120391,
+    "v1": "export default class StoryMaster extends Component{",
+    "v2": "class PostList extends Component{",
+    "resolution": "class StoryMaster extends Component{",
+    "conflict": "export default class StoryMaster extends Component{"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120396,
+    "v1": "<AvatarMask />",
+    "v2": "<IncludeAvatarMask />",
+    "resolution": "<AvatarMask />",
+    "conflict": "<AvatarMask />"
+  }
+]}

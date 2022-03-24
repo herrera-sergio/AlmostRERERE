@@ -1,0 +1,1299 @@
+{"conflicts":[
+  {
+    "devdecision": "Manual",
+    "id": 167847,
+    "v1": "asyncWebAssembly: options.experiments.asyncWebAssembly",
+    "v2": "asyncWebAssembly: options.experiments.asyncWebAssembly, css: options.experiments.css, futureDefaults",
+    "resolution": "asyncWebAssembly: options.experiments.asyncWebAssembly, css: options.experiments.css",
+    "conflict": "asyncWebAssembly: options.experiments.asyncWebAssembly"
+  },
+  {
+    "devdecision": "None",
+    "id": 167974,
+    "v1": "const schema = require(\"../schemas/plugins/SourceMapDevToolPlugin.json\");",
+    "v2": "/** @typedef {import(\"source-map\").RawSourceMap} SourceMap */",
+    "resolution": "/** @typedef {import(\"webpack-sources\").Source} Source */",
+    "conflict": "const schema = require(\"../schemas/plugins/SourceMapDevToolPlugin.json\");"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 167979,
+    "v1": "\"dependencies/WebpackIsIncludedDependency\": () => require(\"../dependencies/WebpackIsIncludedDependency\"),",
+    "v2": "\"dependencies/WorkerDependency\": () => require(\"../dependencies/WorkerDependency\"),",
+    "resolution": "\"dependencies/WorkerDependency\": () => require(\"../dependencies/WorkerDependency\"), \"dependencies/WebpackIsIncludedDependency\": () => require(\"../dependencies/WebpackIsIncludedDependency\"),",
+    "conflict": "\"dependencies/WebpackIsIncludedDependency\": () => require(\"../dependencies/WebpackIsIncludedDependency\"),"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 167980,
+    "v1": "\"chunkLoadingGlobal = chunkLoadingGlobal.slice();\", \"for(var i = 0; i < chunkLoadingGlobal.length; i++) webpackJsonpCallback(chunkLoadingGlobal[i]);\", \"parentChunkLoadingFunction = preChunkLoadingFunction;\",",
+    "v2": "\"for(var i = 0; i < chunkLoadingGlobal.length; i++) webpackJsonpCallback(0, chunkLoadingGlobal[i]);\",",
+    "resolution": "\"for(var i = 0; i < chunkLoadingGlobal.length; i++) webpackJsonpCallback(0, chunkLoadingGlobal[i]);\",",
+    "conflict": "\"chunkLoadingGlobal = chunkLoadingGlobal.slice();\", \"for(var i = 0; i < chunkLoadingGlobal.length; i++) webpackJsonpCallback(chunkLoadingGlobal[i]);\", \"parentChunkLoadingFunction = preChunkLoadingFunction;\","
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168201,
+    "v1": "`var init = ${runtimeTemplate.basicFunction(\"shareScope\", [ `if (!${RuntimeGlobals.shareScopeMap}) return;`,",
+    "v2": "`var init = ${runtimeTemplate.basicFunction(\"shareScope, initScope\", [",
+    "resolution": "`var init = ${runtimeTemplate.basicFunction(\"shareScope, initScope\", [ `if (!${RuntimeGlobals.shareScopeMap}) return;`,",
+    "conflict": "`var init = ${runtimeTemplate.basicFunction(\"shareScope\", [ `if (!${RuntimeGlobals.shareScopeMap}) return;`,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168223,
+    "v1": "baseURI: output.baseURI, chunkCallbackName: output.chunkCallbackName,",
+    "v2": "charset: output.charset,",
+    "resolution": "baseURI: output.baseURI, charset: output.charset,",
+    "conflict": "baseURI: output.baseURI, chunkCallbackName: output.chunkCallbackName,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168227,
+    "v1": "\"baseURI\": undefined, \"chunkCallbackName\": \"webpackChunkwebpack\",",
+    "v2": "\"charset\": true,",
+    "resolution": "\"baseURI\": undefined, \"charset\": true,",
+    "conflict": "\"baseURI\": undefined, \"chunkCallbackName\": \"webpackChunkwebpack\","
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168232,
+    "v1": "\"assetModuleFilename\": \"[hash][ext]\", \"baseURI\": undefined,",
+    "v2": "\"assetModuleFilename\": \"[hash][ext][query]\",",
+    "resolution": "\"assetModuleFilename\": \"[hash][ext][query]\", \"baseURI\": undefined,",
+    "conflict": "\"assetModuleFilename\": \"[hash][ext]\", \"baseURI\": undefined,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 168247,
+    "v1": "/** @type {ResolveOptionsWithDependencyType} */ const RESOLVE_OPTIONS = { dependencyType: \"esm\" };",
+    "v2": "/** @typedef {Map<string, { config: ProvideOptions, version: (string|number)[] | undefined | false }>} ResolvedProvideMap */",
+    "resolution": "/** @typedef {Map<string, { config: ProvideOptions, version: (string|number)[] | undefined | false }>} ResolvedProvideMap */",
+    "conflict": "/** @type {ResolveOptionsWithDependencyType} */ const RESOLVE_OPTIONS = { dependencyType: \"esm\" };"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168261,
+    "v1": "const exportsInfo = moduleGraph.getExportsInfo(module); exportInfoToModuleMap.set(exportsInfo, module); exportsInfo.setHasUseInfo();",
+    "v2": "if (!module.used) module.used = false;",
+    "resolution": "const exportsInfo = moduleGraph.getExportsInfo(module); exportInfoToModuleMap.set(exportsInfo, module); exportsInfo.setHasUseInfo();",
+    "conflict": "const exportsInfo = moduleGraph.getExportsInfo(module); exportInfoToModuleMap.set(exportsInfo, module); exportsInfo.setHasUseInfo();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168267,
+    "v1": "ids",
+    "v2": "id: dep._id, module: importModule",
+    "resolution": "ids",
+    "conflict": "ids"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168268,
+    "v1": "ids: []",
+    "v2": "id: true, module: importModule",
+    "resolution": "ids: []",
+    "conflict": "ids: []"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168289,
+    "v1": "const WebpackOptionsDefaulter = require(\"../lib/WebpackOptionsDefaulter\"); const { createFsFromVolume, Volume } = require(\"memfs\");",
+    "v2": "const MemoryFs = require(\"memory-fs\");",
+    "resolution": "const { createFsFromVolume, Volume } = require(\"memfs\");",
+    "conflict": "const WebpackOptionsDefaulter = require(\"../lib/WebpackOptionsDefaulter\"); const { createFsFromVolume, Volume } = require(\"memfs\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168300,
+    "v1": "modules, cacheIdent, cacheETag",
+    "v2": "modules",
+    "resolution": "modules, cacheIdent, cacheETag",
+    "conflict": "modules, cacheIdent, cacheETag"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168500,
+    "v1": "/** @typedef {import(\"../../declarations/plugins/JsonModulesPluginParser\").JsonModulesPluginParserOptions} JsonModulesPluginParserOptions */ /** @typedef {import(\"../NormalModule\").ParserState} ParserState */",
+    "v2": "/** @typedef {import(\"../Parser\").ParserState} ParserState */ /** @typedef {import(\"../Parser\").PreparsedAst} PreparsedAst */",
+    "resolution": "/** @typedef {import(\"../../declarations/plugins/JsonModulesPluginParser\").JsonModulesPluginParserOptions} JsonModulesPluginParserOptions */ /** @typedef {import(\"../Parser\").ParserState} ParserState */ /** @typedef {import(\"../Parser\").PreparsedAst} PreparsedAst */",
+    "conflict": "/** @typedef {import(\"../../declarations/plugins/JsonModulesPluginParser\").JsonModulesPluginParserOptions} JsonModulesPluginParserOptions */ /** @typedef {import(\"../NormalModule\").ParserState} ParserState */"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168520,
+    "v1": "- configuration should be an object: object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }\"",
+    "v2": "- configuration should be an object.\"",
+    "resolution": "- configuration should be an object: object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }\"",
+    "conflict": "- configuration should be an object: object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168521,
+    "v1": "- configuration should be an object: object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }\"",
+    "v2": "- configuration should be an object.\"",
+    "resolution": "- configuration should be an object: object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }\"",
+    "conflict": "- configuration should be an object: object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168535,
+    "v1": "- configuration[1] should be an object: object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }\"",
+    "v2": "- configuration should be an object.\"",
+    "resolution": "- configuration[1] should be an object: object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }\"",
+    "conflict": "- configuration[1] should be an object: object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }\""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168563,
+    "v1": "files.forEach((file, idx) => { const asset = compilation.assets[file];",
+    "v2": "files.forEach(({ file, chunk }, idx) => { const asset = compilation.getAsset(file).source;",
+    "resolution": "files.forEach((file, idx) => { const asset = compilation.getAsset(file).source;",
+    "conflict": "files.forEach((file, idx) => { const asset = compilation.assets[file];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168572,
+    "v1": "const assetFilter = this.assetFilter || excludeSourceMap;",
+    "v2": "const assetFilter = this.assetFilter || ((name, source, info) => !info.development);",
+    "resolution": "const assetFilter = this.assetFilter || excludeSourceMap;",
+    "conflict": "const assetFilter = this.assetFilter || excludeSourceMap;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 168573,
+    "v1": "* @param {ChunkGroup} entrypoint the entrypoint * @returns {number} its calculated size",
+    "v2": "* @param {Entrypoint} entrypoint an entrypoint * @returns {number} the size of the entrypoint",
+    "resolution": "* @param {Entrypoint} entrypoint an entrypoint * @returns {number} the size of the entrypoint",
+    "conflict": "* @param {ChunkGroup} entrypoint the entrypoint * @returns {number} its calculated size"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168627,
+    "v1": "if (queueConnect.size > 0) { logger.time(\"visitModules: calculating available modules\");",
+    "v2": "while (queueConnect.size > 0) { logger.time(\"calculating available modules\");",
+    "resolution": "while (queueConnect.size > 0) { logger.time(\"visitModules: calculating available modules\");",
+    "conflict": "if (queueConnect.size > 0) { logger.time(\"visitModules: calculating available modules\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 168637,
+    "v1": "* @param {Chunk} newChunk new chunk that will be replaced * @returns {boolean} returns true if the chunk has been replaced",
+    "v2": "* @param {Chunk} newChunk New chunk that will be replaced with * @returns {boolean} returns true if the replacement was successful",
+    "resolution": "* @param {Chunk} newChunk New chunk that will be replaced with * @returns {boolean} returns true if the replacement was successful",
+    "conflict": "* @param {Chunk} newChunk new chunk that will be replaced * @returns {boolean} returns true if the chunk has been replaced"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168638,
+    "v1": "setModulePreOrderIndex(module, index) { this._modulePreOrderIndices.set(module, index);",
+    "v2": "setModuleIndex(module, index) { this._moduleIndices.set(module, index);",
+    "resolution": "setModulePreOrderIndex(module, index) { this._modulePreOrderIndices.set(module, index);",
+    "conflict": "setModulePreOrderIndex(module, index) { this._modulePreOrderIndices.set(module, index);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168639,
+    "v1": "getModulePreOrderIndex(module) { return this._modulePreOrderIndices.get(module);",
+    "v2": "getModuleIndex(module) { return this._moduleIndices.get(module);",
+    "resolution": "getModulePreOrderIndex(module) { return this._modulePreOrderIndices.get(module);",
+    "conflict": "getModulePreOrderIndex(module) { return this._modulePreOrderIndices.get(module);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168640,
+    "v1": "setModulePostOrderIndex(module, index) { this._modulePostOrderIndices.set(module, index);",
+    "v2": "setModuleIndex2(module, index) { this._moduleIndices2.set(module, index);",
+    "resolution": "setModulePostOrderIndex(module, index) { this._modulePostOrderIndices.set(module, index);",
+    "conflict": "setModulePostOrderIndex(module, index) { this._modulePostOrderIndices.set(module, index);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168641,
+    "v1": "getModulePostOrderIndex(module) { return this._modulePostOrderIndices.get(module);",
+    "v2": "getModuleIndex2(module) { return this._moduleIndices2.get(module);",
+    "resolution": "getModulePostOrderIndex(module) { return this._modulePostOrderIndices.get(module);",
+    "conflict": "getModulePostOrderIndex(module) { return this._modulePostOrderIndices.get(module);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 168642,
+    "v1": "* @param {Chunk} newChunk new chunk that will be replaced * @returns {boolean} returns true if the chunk has been replaced",
+    "v2": "* @param {Chunk} newChunk New chunk that will be replaced with * @returns {boolean} returns true if the replacement was successful",
+    "resolution": "* @param {Chunk} newChunk New chunk that will be replaced with * @returns {boolean} returns true if the replacement was successful",
+    "conflict": "* @param {Chunk} newChunk new chunk that will be replaced * @returns {boolean} returns true if the chunk has been replaced"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168793,
+    "v1": "/** @type {AsyncSeriesHook<[Compilation]>} */",
+    "v2": "/** @type {AsyncSeriesHook<string, Buffer>} */ assetEmitted: new AsyncSeriesHook([\"file\", \"content\"]), /** @type {AsyncSeriesHook<Compilation>} */",
+    "resolution": "/** @type {AsyncSeriesHook<[string, Buffer]>} */ assetEmitted: new AsyncSeriesHook([\"file\", \"content\"]), /** @type {AsyncSeriesHook<[Compilation]>} */ afterEmit: new AsyncSeriesHook([\"compilation\"]),",
+    "conflict": "/** @type {AsyncSeriesHook<[Compilation]>} */"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168794,
+    "v1": "/** @type {SyncBailHook<[string, string, any[]], true>} */ infrastructurelog: new SyncBailHook([\"origin\", \"type\", \"args\"]),",
+    "v2": "/** @type {SyncBailHook<string, string, any[]>} */ infrastructureLog: new SyncBailHook([\"origin\", \"type\", \"args\"]),",
+    "resolution": "/** @type {SyncBailHook<[string, string, any[]], true>} */ infrastructureLog: new SyncBailHook([\"origin\", \"type\", \"args\"]),",
+    "conflict": "/** @type {SyncBailHook<[string, string, any[]], true>} */ infrastructurelog: new SyncBailHook([\"origin\", \"type\", \"args\"]),"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168806,
+    "v1": "const NodeWatchFileSystem = require(\"./NodeWatchFileSystem\");  /** @typedef {import(\"../Compiler\")} Compiler */",
+    "v2": "const nodeConsole = require(\"./nodeConsole\");",
+    "resolution": "const NodeWatchFileSystem = require(\"./NodeWatchFileSystem\"); const nodeConsole = require(\"./nodeConsole\");  /** @typedef {import(\"../Compiler\")} Compiler */",
+    "conflict": "const NodeWatchFileSystem = require(\"./NodeWatchFileSystem\");  /** @typedef {import(\"../Compiler\")} Compiler */"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168904,
+    "v1": "let source; /** @type {SourceMap} */ let sourceMap;",
+    "v2": "let source, sourceMap;",
+    "resolution": "let source; /** @type {SourceMap} */ let sourceMap;",
+    "conflict": "let source; /** @type {SourceMap} */ let sourceMap;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168918,
+    "v1": "new ModuleWarning(warning, { from: requestShortener.shorten(currentLoader.loader)",
+    "v2": "new ModuleWarning(this, warning, { from: getCurrentLoaderName()",
+    "resolution": "new ModuleWarning(warning, { from: getCurrentLoaderName()",
+    "conflict": "new ModuleWarning(warning, { from: requestShortener.shorten(currentLoader.loader)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168935,
+    "v1": "const parser = new JavascriptParser(); parser.hooks.call.tap(\"require\", \"JavascriptParserTest\", expr => {",
+    "v2": "const parser = new Parser(); parser.hooks.call.for(\"require\").tap(\"ParserTest\", expr => {",
+    "resolution": "const parser = new JavascriptParser(); parser.hooks.call.for(\"require\").tap(\"JavascriptParserTest\", expr => {",
+    "conflict": "const parser = new JavascriptParser(); parser.hooks.call.tap(\"require\", \"JavascriptParserTest\", expr => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168947,
+    "v1": "/** @type {Map<string, ResolverCache>} */ this.cache = new Map();",
+    "v2": "this.cache2 = new Map();",
+    "resolution": "/** @type {Map<string, ResolverCache>} */ this.cache = new Map();",
+    "conflict": "/** @type {Map<string, ResolverCache>} */ this.cache = new Map();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 168957,
+    "v1": "* @param {Compiler} compiler webpack compiler",
+    "v2": "* Apply compiler * @param {Compiler} compiler compiler instance",
+    "resolution": "* Apply compiler * @param {Compiler} compiler compiler instance",
+    "conflict": "* @param {Compiler} compiler webpack compiler"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168966,
+    "v1": "* @param {object} obj - any object type that works with Object.entries() * @returns {Map<string, any>} an ES6 Map of KV pairs",
+    "v2": "* @param {object} obj any object type that works with Object.keys() * @returns {Map<TODO, TODO>} an ES6 Map of KV pairs",
+    "resolution": "* @param {object} obj any object type that works with Object.entries() * @returns {Map<string, any>} an ES6 Map of KV pairs",
+    "conflict": "* @param {object} obj - any object type that works with Object.entries() * @returns {Map<string, any>} an ES6 Map of KV pairs"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168974,
+    "v1": "/** @type {SyncHook<Stats>} */ afterDone: new SyncHook([\"stats\"]), /** @type {AsyncSeriesHook<>} */",
+    "v2": "/** @type {AsyncSeriesHook<[]>} */",
+    "resolution": "/** @type {SyncHook<[Stats]>} */ afterDone: new SyncHook([\"stats\"]), /** @type {AsyncSeriesHook<[]>} */",
+    "conflict": "/** @type {SyncHook<Stats>} */ afterDone: new SyncHook([\"stats\"]), /** @type {AsyncSeriesHook<>} */"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 168977,
+    "v1": "runtimeRequirements.add(RuntimeGlobals.module); const providedExports = moduleGraph.getProvidedExports(module);",
+    "v2": "let finalJson;",
+    "resolution": "let finalJson; runtimeRequirements.add(RuntimeGlobals.module); const providedExports = moduleGraph.getProvidedExports(module);",
+    "conflict": "runtimeRequirements.add(RuntimeGlobals.module); const providedExports = moduleGraph.getProvidedExports(module);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168988,
+    "v1": "this.set(\"optimization.splitChunks.automaticNameDelimiter\", \"-\");",
+    "v2": "this.set(\"optimization.splitChunks.automaticNameDelimiter\", \"~\"); this.set(\"optimization.splitChunks.automaticNameMaxLength\", 109);",
+    "resolution": "this.set(\"optimization.splitChunks.automaticNameDelimiter\", \"-\");",
+    "conflict": "this.set(\"optimization.splitChunks.automaticNameDelimiter\", \"-\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168996,
+    "v1": "require: _require.bind(null, path.dirname(p), options),",
+    "v2": "require: _require.bind(null, path.dirname(p)), importScripts: _require.bind(null, path.dirname(p)),",
+    "resolution": "require: _require.bind(null, path.dirname(p), options), importScripts: _require.bind(",
+    "conflict": "require: _require.bind(null, path.dirname(p), options),"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 169006,
+    "v1": "const wasTopLevel = this.scope.topLevelScope; this.scope.topLevelScope = wasTopLevel ? \"arrow\" : false; this.inScope(expression.params, () => {",
+    "v2": "this.inFunctionScope(false, expression.params, () => {",
+    "resolution": "const wasTopLevel = this.scope.topLevelScope; this.scope.topLevelScope = wasTopLevel ? \"arrow\" : false; this.inFunctionScope(false, expression.params, () => {",
+    "conflict": "const wasTopLevel = this.scope.topLevelScope; this.scope.topLevelScope = wasTopLevel ? \"arrow\" : false; this.inScope(expression.params, () => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169023,
+    "v1": "`var ${info.interopDefaultAccessName} = /*#__PURE__*/${ RuntimeGlobals.compatGetDefaultExport }(${info.name});`",
+    "v2": "`var ${info.interopDefaultAccessName} = /*#__PURE__*/__webpack_require__.n(${info.name});`",
+    "resolution": "`var ${info.interopDefaultAccessName} = /*#__PURE__*/${ RuntimeGlobals.compatGetDefaultExport }(${info.name});`",
+    "conflict": "`var ${info.interopDefaultAccessName} = /*#__PURE__*/${ RuntimeGlobals.compatGetDefaultExport }(${info.name});`"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 169088,
+    "v1": "id: dep.id",
+    "v2": "id: dep._id, module: importModule",
+    "resolution": "id",
+    "conflict": "id: dep.id"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 169123,
+    "v1": "moduleGraph.getParentModule(this).buildMeta.strictHarmonyModule && this.id !== \"default\"",
+    "v2": "this.originModule.buildMeta.strictHarmonyModule && this._id !== \"default\"",
+    "resolution": "moduleGraph.getParentModule(this).buildMeta.strictHarmonyModule && id !== \"default\"",
+    "conflict": "moduleGraph.getParentModule(this).buildMeta.strictHarmonyModule && this.id !== \"default\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169544,
+    "v1": "",
+    "v2": "// @ts-ignore process.exitCode = 0;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169796,
+    "v1": "if (moduleGraph.getExportsInfo(this).otherExportsInfo.used !== false) {",
+    "v2": "const usedExports = this.rootModule.usedExports; if (usedExports === true || usedExports === null) {",
+    "resolution": "if (moduleGraph.getExportsInfo(this).otherExportsInfo.used !== false) {",
+    "conflict": "if (moduleGraph.getExportsInfo(this).otherExportsInfo.used !== false) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169802,
+    "v1": "// Syntax: https://developer.mozilla.org/en/SpiderMonkey/Parser_API  const parser = Parser.extend(require(\"acorn-dynamic-import\").default);",
+    "v2": "const acornParser = acorn.Parser.extend(acornDynamicImport);",
+    "resolution": "// Syntax: https://developer.mozilla.org/en/SpiderMonkey/Parser_API  const parser = Parser.extend(require(\"acorn-dynamic-import\").default);",
+    "conflict": "// Syntax: https://developer.mozilla.org/en/SpiderMonkey/Parser_API  const parser = Parser.extend(require(\"acorn-dynamic-import\").default);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169972,
+    "v1": "module.exports = class ResolverFactory {",
+    "v2": "/** @typedef {import(\"enhanced-resolve\").Resolver} Resolver */  module.exports = class ResolverFactory extends Tapable {",
+    "resolution": "module.exports = class ResolverFactory {",
+    "conflict": "module.exports = class ResolverFactory {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 169973,
+    "v1": "for (const chunk of Array.from(compilation.chunks)) { const { minSize, maxSize, automaticNameDelimiter } =",
+    "v2": "for (const chunk of compilation.chunks.slice()) { const { minSize, maxSize, automaticNameDelimiter, keys } =",
+    "resolution": "for (const chunk of Array.from(compilation.chunks)) { const chunkConfig = maxSizeQueueMap.get(chunk); const { minSize, maxSize, automaticNameDelimiter } =",
+    "conflict": "for (const chunk of Array.from(compilation.chunks)) { const { minSize, maxSize, automaticNameDelimiter } ="
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169981,
+    "v1": "* @param {ChunkGroup} chunkGroup the chunkGroup the chunk is being removed from * @returns {boolean} returns true if chunk does exist in chunkGroup and is removed",
+    "v2": "* @param {Chunk} newChunk the new chunk that will be split out of the current chunk * @returns {void}",
+    "resolution": "* @param {ChunkGroup} chunkGroup the chunkGroup the chunk is being removed from * @returns {boolean} returns true if chunk does exist in chunkGroup and is removed",
+    "conflict": "* @param {ChunkGroup} chunkGroup the chunkGroup the chunk is being removed from * @returns {boolean} returns true if chunk does exist in chunkGroup and is removed"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169984,
+    "v1": "moduleIds: \"size\", chunkIds: \"size\",",
+    "v2": "namedModules: false, hashedModuleIds: false,",
+    "resolution": "moduleIds: \"size\", chunkIds: \"size\",",
+    "conflict": "moduleIds: \"size\", chunkIds: \"size\","
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170002,
+    "v1": "",
+    "v2": "beforeChunks: \"chunk graph\", afterChunks: \"after chunk graph\", optimizeDependenciesBasic: \"basic dependencies optimization\",",
+    "resolution": "beforeChunks: \"chunk graph\", afterChunks: \"after chunk graph\", optimizeDependencies: \"dependencies optimization\",",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170026,
+    "v1": "/** @type {Map<string, FileSystemInfoEntry>} */",
+    "v2": "this.removedFiles = new Set(); /** @type {Map<string, number>} */",
+    "resolution": "this.removedFiles = new Set(); /** @type {Map<string, FileSystemInfoEntry>} */",
+    "conflict": "/** @type {Map<string, FileSystemInfoEntry>} */"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170027,
+    "v1": "",
+    "v2": "this.watchMode = true; this.fileTimestamps = new Map(); this.contextTimestamps = new Map(); this.removedFiles = new Set();",
+    "resolution": "this.watchMode = true;",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 170228,
+    "v1": "/** @typedef {import(\"./Compiler\")} Compiler */",
+    "v2": "/** @typedef {import(\"../declarations/plugins/BannerPlugin\").BannerPluginArgument} BannerPluginArgument */ /** @typedef {import(\"../declarations/plugins/BannerPlugin\").BannerPluginOptions} BannerPluginOptions */",
+    "resolution": "/** @typedef {import(\"./Compiler\")} Compiler */ /** @typedef {import(\"../declarations/plugins/BannerPlugin\").BannerPluginArgument} BannerPluginArgument */ /** @typedef {import(\"../declarations/plugins/BannerPlugin\").BannerPluginOptions} BannerPluginOptions */",
+    "conflict": "/** @typedef {import(\"./Compiler\")} Compiler */"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170240,
+    "v1": "/** @typedef {import(\"webpack-sources\").Source} Source */ /** @typedef {import(\"./Chunk\")} Chunk */",
+    "v2": "/** @typedef {import(\"../declarations/WebpackOptions\").LibraryCustomUmdObject} LibraryCustomUmdObject */",
+    "resolution": "/** @typedef {import(\"webpack-sources\").Source} Source */ /** @typedef {import(\"../declarations/WebpackOptions\").LibraryCustomUmdObject} LibraryCustomUmdObject */ /** @typedef {import(\"./Chunk\")} Chunk */",
+    "conflict": "/** @typedef {import(\"webpack-sources\").Source} Source */ /** @typedef {import(\"./Chunk\")} Chunk */"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170358,
+    "v1": "if (typeof dep === \"undefined\") hot._selfDeclined = true; else if (typeof dep === \"object\" && dep !== null)",
+    "v2": "if (dep === undefined) hot._selfDeclined = true; else if (typeof dep === \"object\")",
+    "resolution": "if (dep === undefined) hot._selfDeclined = true; else if (typeof dep === \"object\" && dep !== null)",
+    "conflict": "if (typeof dep === \"undefined\") hot._selfDeclined = true; else if (typeof dep === \"object\" && dep !== null)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170367,
+    "v1": "/** @typedef {{id: number}} HasId */ /** @typedef {{module: Module, loc: DependencyLocation, request: string}} OriginRecord */",
+    "v2": "/** @typedef {{module: Module, loc: TODO, request: string}} OriginRecord */",
+    "resolution": "/** @typedef {{id: number}} HasId */ /** @typedef {{module: Module, loc: DependencyLocation, request: string}} OriginRecord */",
+    "conflict": "/** @typedef {{id: number}} HasId */ /** @typedef {{module: Module, loc: DependencyLocation, request: string}} OriginRecord */"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170371,
+    "v1": "* @param {Module} module module for which the code should be generated * @param {DependencyTemplates} dependencyTemplates mapping from dependencies to templates",
+    "v2": "* @param {NormalModule} module module for which the code should be generated * @param {Map<Function, DependencyTemplate>} dependencyTemplates mapping from dependencies to templates",
+    "resolution": "* @param {NormalModule} module module for which the code should be generated * @param {DependencyTemplates} dependencyTemplates mapping from dependencies to templates",
+    "conflict": "* @param {Module} module module for which the code should be generated * @param {DependencyTemplates} dependencyTemplates mapping from dependencies to templates"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 170375,
+    "v1": "/** @typedef {import(\"../DependencyTemplates\")} DependencyTemplates */ /** @typedef {import(\"../RuntimeTemplate\")} RuntimeTemplate */ /** @typedef {import(\"webpack-sources\").Source} Source */",
+    "v2": "/** @typedef {import(\"../util/createHash\").Hash} Hash */",
+    "resolution": "/** @typedef {import(\"../util/createHash\").Hash} Hash */ /** @typedef {import(\"../DependencyTemplates\")} DependencyTemplates */ /** @typedef {import(\"../RuntimeTemplate\")} RuntimeTemplate */ /** @typedef {import(\"webpack-sources\").Source} Source */",
+    "conflict": "/** @typedef {import(\"../DependencyTemplates\")} DependencyTemplates */ /** @typedef {import(\"../RuntimeTemplate\")} RuntimeTemplate */ /** @typedef {import(\"webpack-sources\").Source} Source */"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170380,
+    "v1": "moduleIds: \"size\", chunkIds: \"size\",",
+    "v2": "moduleIds: \"natural\", chunkIds: \"total-size\",",
+    "resolution": "moduleIds: \"size\", chunkIds: \"size\",",
+    "conflict": "moduleIds: \"size\", chunkIds: \"size\","
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170417,
+    "v1": "",
+    "v2": "const hotInitCode = Template.getFunctionContent( require(\"./HotModuleReplacement.runtime\") );",
+    "resolution": ");",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170438,
+    "v1": "/** @typedef {import(\"./Entrypoint\")} Entrypoint */ /** @typedef {import(\"./ModuleReason.js\")} ModuleReason */",
+    "v2": "/** @typedef {import(\"./ModuleReason\")} ModuleReason */",
+    "resolution": "/** @typedef {import(\"./Entrypoint\")} Entrypoint */ /** @typedef {import(\"./ModuleReason\")} ModuleReason */",
+    "conflict": "/** @typedef {import(\"./Entrypoint\")} Entrypoint */ /** @typedef {import(\"./ModuleReason.js\")} ModuleReason */"
+  },
+  {
+    "devdecision": "None",
+    "id": 170446,
+    "v1": "const path = require(\"path\");",
+    "v2": "const util = require(\"util\");",
+    "resolution": "const { OriginalSource, RawSource } = require(\"webpack-sources\");",
+    "conflict": "const path = require(\"path\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170481,
+    "v1": "* @param {null|undefined|RegExp|Function|Object} code Code to evaluate * @param {Parser} parser Parser",
+    "v2": "* @param {CodeValue} code Code to evaluate",
+    "resolution": "* @param {CodeValue} code Code to evaluate * @param {Parser} parser Parser",
+    "conflict": "* @param {null|undefined|RegExp|Function|Object} code Code to evaluate * @param {Parser} parser Parser"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170482,
+    "v1": "* Apply the plugin * @param {Compiler} compiler Webpack compiler",
+    "v2": "* @param {Compiler} compiler Webpack Compiler",
+    "resolution": "* Apply the plugin * @param {Compiler} compiler Webpack compiler",
+    "conflict": "* Apply the plugin * @param {Compiler} compiler Webpack compiler"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 170503,
+    "v1": "/** @typedef {import(\"./dependencies/DependencyReference\")} DependencyReference */ /** @typedef {import(\"./Dependency\")} Dependency */",
+    "v2": "/** @typedef {import(\"./DependenciesBlock\")} DependenciesBlock */ /** @typedef {import(\"./AsyncDependenciesBlock\")} AsyncDependenciesBlock */",
+    "resolution": "/** @typedef {import(\"./DependenciesBlock\")} DependenciesBlock */ /** @typedef {import(\"./AsyncDependenciesBlock\")} AsyncDependenciesBlock */ /** @typedef {import(\"./dependencies/DependencyReference\")} DependencyReference */ /** @typedef {import(\"./Dependency\")} Dependency */",
+    "conflict": "/** @typedef {import(\"./dependencies/DependencyReference\")} DependencyReference */ /** @typedef {import(\"./Dependency\")} Dependency */"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170516,
+    "v1": "/** @typedef {import(\"./AsyncDependenciesBlock\")} AsyncDependenciesBlock */ /** @typedef {import(\"./DependenciesBlockVariable\")} DependenciesBlockVariable */ /** @typedef {(d: Dependency) => boolean} DependencyFilterFunction */ /** @typedef {import(\"crypto\").Hash} Hash */",
+    "v2": "",
+    "resolution": "/** @typedef {import(\"./AsyncDependenciesBlock\")} AsyncDependenciesBlock */ /** @typedef {import(\"./DependenciesBlockVariable\")} DependenciesBlockVariable */ /** @typedef {(d: Dependency) => boolean} DependencyFilterFunction */ /** @typedef {import(\"crypto\").Hash} Hash */",
+    "conflict": "/** @typedef {import(\"./AsyncDependenciesBlock\")} AsyncDependenciesBlock */ /** @typedef {import(\"./DependenciesBlockVariable\")} DependenciesBlockVariable */ /** @typedef {(d: Dependency) => boolean} DependencyFilterFunction */ /** @typedef {import(\"crypto\").Hash} Hash */"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170549,
+    "v1": "",
+    "v2": "/** * Creates an instance of WebpackError. * @param {string=} message error message */",
+    "resolution": "/** * Creates an instance of WebpackError. * @param {string=} message error message */",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170627,
+    "v1": "* @param {any} thisCallback the callback * @returns {any} returns the callback function with results",
+    "v2": "* @param {TODO} thisCallback the callback * @returns {TODO} returns the callback function with results",
+    "resolution": "* @param {TODO} thisCallback the callback * @returns {TODO} returns the callback function with results",
+    "conflict": "* @param {any} thisCallback the callback * @returns {any} returns the callback function with results"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170643,
+    "v1": "/** @typedef {typeof import(\"./Chunk\")} Chunk */ /** @typedef {typeof import(\"./RequestShortener\")} RequestShortener */",
+    "v2": "/** @typedef {import(\"./Chunk\")} Chunk */ /** @typedef {import(\"./RequestShortener\")} RequestShortener */",
+    "resolution": "/** @typedef {import(\"./Chunk\")} Chunk */ /** @typedef {import(\"./RequestShortener\")} RequestShortener */",
+    "conflict": "/** @typedef {typeof import(\"./Chunk\")} Chunk */ /** @typedef {typeof import(\"./RequestShortener\")} RequestShortener */"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170649,
+    "v1": "global.document = new FakeDocument(); global.location = {origin: \"https://example.com\"};",
+    "v2": "global.document = new FakeDocument(undefined, false); global.window = {};",
+    "resolution": "global.document = new FakeDocument(undefined, false); global.window = {};",
+    "conflict": "global.document = new FakeDocument(); global.location = {origin: \"https://example.com\"};"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170664,
+    "v1": "* @param {Module} module the module to compare against * @return {boolean} return true if module.id is equal to type \"number\"",
+    "v2": "* @param {HasId} module the module to compare against * @returns {boolean} return true if module.id is equal to type \"number\"",
+    "resolution": "* @param {Module} module the module to compare against * @return {boolean} return true if module.id is equal to type \"number\"",
+    "conflict": "* @param {Module} module the module to compare against * @return {boolean} return true if module.id is equal to type \"number\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170665,
+    "v1": "* @param {string[] | string} str string to convert to identity * @return {string} converted identity",
+    "v2": "* @param {string | string[]} str string to convert to identity * @returns {string} converted identity",
+    "resolution": "* @param {string | string[]} str string to convert to identity * @returns {string} converted identity",
+    "conflict": "* @param {string[] | string} str string to convert to identity * @return {string} converted identity"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170666,
+    "v1": "* @param {Module[]} modules a collection of modules to get array bounds for * @return {[number, number] | false} returns the upper and lower array bounds",
+    "v2": "* @param {HasId[]} modules - a collection of modules to get array bounds for * @returns {[number, number] | false} returns the upper and lower array bounds",
+    "resolution": "* @param {Module[]} modules a collection of modules to get array bounds for * @return {[number, number] | false} returns the upper and lower array bounds",
+    "conflict": "* @param {Module[]} modules a collection of modules to get array bounds for * @return {[number, number] | false} returns the upper and lower array bounds"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170730,
+    "v1": "writeFile: function(name, content, callback) { files[name] = content.toString(\"utf8\");",
+    "v2": "writeFile(name, content, callback) { files[name] = content.toString(\"utf-8\");",
+    "resolution": "writeFile(name, content, callback) { files[name] = content.toString(\"utf-8\");",
+    "conflict": "writeFile: function(name, content, callback) { files[name] = content.toString(\"utf8\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170773,
+    "v1": "beforeEach(() => { eventBindings = applyPluginWithOptions(",
+    "v2": "beforeEach(() => (eventBindings = applyPluginWithOptions(",
+    "resolution": "beforeEach(() => { eventBindings = applyPluginWithOptions(",
+    "conflict": "beforeEach(() => { eventBindings = applyPluginWithOptions("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170774,
+    "v1": "); });",
+    "v2": ")));",
+    "resolution": "); });",
+    "conflict": "); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170775,
+    "v1": "beforeEach(() => { eventBindings = applyPluginWithOptions(",
+    "v2": "beforeEach(() => (eventBindings = applyPluginWithOptions(",
+    "resolution": "beforeEach(() => { eventBindings = applyPluginWithOptions(",
+    "conflict": "beforeEach(() => { eventBindings = applyPluginWithOptions("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170776,
+    "v1": "); });",
+    "v2": ")));",
+    "resolution": "); });",
+    "conflict": "); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170777,
+    "v1": "beforeEach(() => { eventBindings = applyPluginWithOptions(",
+    "v2": "beforeEach(() => (eventBindings = applyPluginWithOptions(",
+    "resolution": "beforeEach(() => { eventBindings = applyPluginWithOptions(",
+    "conflict": "beforeEach(() => { eventBindings = applyPluginWithOptions("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170778,
+    "v1": "); });",
+    "v2": ")));",
+    "resolution": "); });",
+    "conflict": "); });"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 170847,
+    "v1": "this.fileTimestamps = undefined; this.contextTimestamps = undefined;",
+    "v2": "this.compilationDependencies = undefined;",
+    "resolution": "this.compilationDependencies = undefined; this.fileTimestamps = undefined; this.contextTimestamps = undefined;",
+    "conflict": "this.fileTimestamps = undefined; this.contextTimestamps = undefined;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170859,
+    "v1": "describe(\"given an optinal check is set\", () => { it(\"ads a check for the existance of the variable before looking it up\", () => {",
+    "v2": "describe(\"given an optional check is set\", function() { it(\"ads a check for the existence of the variable before looking it up\", function() {",
+    "resolution": "describe(\"given an optional check is set\", function() { it(\"ads a check for the existence of the variable before looking it up\", () => {",
+    "conflict": "describe(\"given an optinal check is set\", () => { it(\"ads a check for the existance of the variable before looking it up\", () => {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170860,
+    "v1": "describe(\"given an optinal check is requested\", () => { it(\"checks for the existance of the request setting it\", () => {",
+    "v2": "describe(\"given an optional check is requested\", function() { it(\"checks for the existence of the request setting it\", function() {",
+    "resolution": "describe(\"given an optional check is requested\", function() { it(\"checks for the existence of the request setting it\", () => {",
+    "conflict": "describe(\"given an optinal check is requested\", () => { it(\"checks for the existance of the request setting it\", () => {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170862,
+    "v1": "it(\"should have additionalProperties set to some value when descriping properties\", () => { expect(item.additionalProperties).toBeDefined();",
+    "v2": "it(\"should have additionalProperties set to some value when describing properties\", () => { item.should.be.property(\"additionalProperties\");",
+    "resolution": "it(\"should have additionalProperties set to some value when describing properties\", () => { expect(item. additionalProperties).toBeDefined();",
+    "conflict": "it(\"should have additionalProperties set to some value when descriping properties\", () => { expect(item.additionalProperties).toBeDefined();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170885,
+    "v1": "} else if(typeof err.message === \"string\" && err.message) { message = err.message;",
+    "v2": "} else if (typeof err.message === \"string\" && err.message) { this.message += err.message;",
+    "resolution": "} else if(typeof err.message === \"string\" && err.message) { message = err.message;",
+    "conflict": "} else if(typeof err.message === \"string\" && err.message) { message = err.message;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170893,
+    "v1": "while (true) { // eslint-disable-line",
+    "v2": "// eslint-disable-next-line while (true) {",
+    "resolution": "// eslint-disable-next-line while (true) {",
+    "conflict": "while (true) { // eslint-disable-line"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170894,
+    "v1": "function hotCreateRequire(moduleId) { // eslint-disable-line no-unused-vars",
+    "v2": "// eslint-disable-next-line no-unused-vars function hotCreateRequire(moduleId) {",
+    "resolution": "// eslint-disable-next-line no-unused-vars function hotCreateRequire(moduleId) { // eslint-disable-line no-unused-vars",
+    "conflict": "function hotCreateRequire(moduleId) { // eslint-disable-line no-unused-vars"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170895,
+    "v1": "function hotCreateModule(moduleId) { // eslint-disable-line no-unused-vars",
+    "v2": "// eslint-disable-next-line no-unused-vars function hotCreateModule(moduleId) {",
+    "resolution": "// eslint-disable-next-line no-unused-vars function hotCreateModule(moduleId) { // eslint-disable-line no-unused-vars",
+    "conflict": "function hotCreateModule(moduleId) { // eslint-disable-line no-unused-vars"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170896,
+    "v1": "function hotAddUpdateChunk(chunkId, moreModules) { // eslint-disable-line no-unused-vars",
+    "v2": "// eslint-disable-next-line no-unused-vars function hotAddUpdateChunk(chunkId, moreModules) {",
+    "resolution": "// eslint-disable-next-line no-unused-vars function hotAddUpdateChunk(chunkId, moreModules) { // eslint-disable-line no-unused-vars",
+    "conflict": "function hotAddUpdateChunk(chunkId, moreModules) { // eslint-disable-line no-unused-vars"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170897,
+    "v1": "while (true) { // eslint-disable-line",
+    "v2": "// eslint-disable-next-line no-constant-condition while (true) {",
+    "resolution": "// eslint-disable-next-line no-constant-condition while (true) {",
+    "conflict": "while (true) { // eslint-disable-line"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170898,
+    "v1": "compiler.hooks.done.tap(\"MultiCompiler\", stats => { // eslint-disable-line no-loop-func",
+    "v2": "// eslint-disable-next-line no-loop-func compiler.hooks.done.tap(\"MultiCompiler\", stats => {",
+    "resolution": "// eslint-disable-next-line no-loop-func compiler.hooks.done.tap(\"MultiCompiler\", stats => {",
+    "conflict": "compiler.hooks.done.tap(\"MultiCompiler\", stats => { // eslint-disable-line no-loop-func"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170899,
+    "v1": "compiler.hooks.invalid.tap(\"MultiCompiler\", () => { // eslint-disable-line no-loop-func",
+    "v2": "// eslint-disable-next-line no-loop-func compiler.hooks.invalid.tap(\"MultiCompiler\", () => {",
+    "resolution": "// eslint-disable-next-line no-loop-func compiler.hooks.invalid.tap(\"MultiCompiler\", () => {",
+    "conflict": "compiler.hooks.invalid.tap(\"MultiCompiler\", () => { // eslint-disable-line no-loop-func"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170900,
+    "v1": "} catch (e) {}",
+    "v2": "} catch (e) { threw = true; }",
+    "resolution": "} catch (e) { threw = true; }",
+    "conflict": "} catch (e) {}"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170905,
+    "v1": "beforeEach(() => { env.plugin = new CachePlugin(); });",
+    "v2": "beforeEach(() => (env.plugin = new CachePlugin()));",
+    "resolution": "beforeEach(() => (env.plugin = new CachePlugin()));",
+    "conflict": "beforeEach(() => { env.plugin = new CachePlugin(); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170910,
+    "v1": ").toBe(10); });",
+    "v2": ").be.exactly(10));",
+    "resolution": ").toBe(10); });",
+    "conflict": ").toBe(10); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170914,
+    "v1": "expect(stats.assets[0].name).toBe(\"bundle.js\"); expect(stats.assets[0].emitted).toBe(true);",
+    "v2": "stats.assets[0].name.should.be.exactly(\"bundle.js\"); stats.assets[0].emitted.should.be.exactly(true);",
+    "resolution": "expect(stats.assets[0].name).toBe(\"bundle.js\"); expect(stats.assets[0].emitted).toBe(true);",
+    "conflict": "expect(stats.assets[0].name).toBe(\"bundle.js\"); expect(stats.assets[0].emitted).toBe(true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170923,
+    "v1": "describe(testName, () => {",
+    "v2": "const suite = describe(testName, () => {}); it(testName + \" should compile\", function(done) {",
+    "resolution": "describe(testName, () => {",
+    "conflict": "describe(testName, () => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170927,
+    "v1": "expect(err).toBeInstanceOf(Error); expect(res).toBeFalsy();",
+    "v2": "err.should.be.an.Error(); (!!res).should.be.false();",
+    "resolution": "expect(err).toBeInstanceOf(Error); expect(res).toBeFalsy();",
+    "conflict": "expect(err).toBeInstanceOf(Error); expect(res).toBeFalsy();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170929,
+    "v1": "const applyMock = sandbox.spy();",
+    "v2": "let dependencyTemplates, applyMock;  before(() => (applyMock = sandbox.spy()));",
+    "resolution": "const applyMock = sandbox.spy();",
+    "conflict": "const applyMock = sandbox.spy();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170935,
+    "v1": "expect(errors).toHaveLength(0); expect(warnings).toHaveLength(0);",
+    "v2": "errors.length.should.be.eql(0); warnings.length.should.be.eql(0);",
+    "resolution": "expect(errors).toHaveLength(0); expect(warnings).toHaveLength(0);",
+    "conflict": "expect(errors).toHaveLength(0); expect(warnings).toHaveLength(0);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170947,
+    "v1": "describe(\"Integration\", () => { jest.setTimeout(5000);",
+    "v2": "describe(\"Integration\", function() { this.timeout(5000);",
+    "resolution": "describe(\"Integration\", () => { jest.setTimeout(5000);",
+    "conflict": "describe(\"Integration\", () => { jest.setTimeout(5000);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170948,
+    "v1": "expect(stats.hasErrors()).toBe(false); expect(stats.hasWarnings()).toBe(false);",
+    "v2": "stats.hasErrors().should.be.not.ok(); stats.hasWarnings().should.be.not.ok();",
+    "resolution": "expect(stats.hasErrors()).toBe(false); expect(stats.hasWarnings()).toBe(false);",
+    "conflict": "expect(stats.hasErrors()).toBe(false); expect(stats.hasWarnings()).toBe(false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170950,
+    "v1": "expect(stats.hasErrors()).toBe(false); expect(stats.hasWarnings()).toBe(false);",
+    "v2": "stats.hasErrors().should.be.not.ok(); stats.hasWarnings().should.be.not.ok();",
+    "resolution": "expect(stats.hasErrors()).toBe(false); expect(stats.hasWarnings()).toBe(false);",
+    "conflict": "expect(stats.hasErrors()).toBe(false); expect(stats.hasWarnings()).toBe(false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170956,
+    "v1": "afterEach(() => { packageJSON.version = packageVersion; });",
+    "v2": "afterEach(() => (packageJSON.version = packageVersion));",
+    "resolution": "afterEach(() => { packageJSON.version = packageVersion; });",
+    "conflict": "afterEach(() => { packageJSON.version = packageVersion; });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170997,
+    "v1": "match(loader, \"style.css\"); }).toThrow(/Unexcepted property invalid in condition/);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]); }, /Unexcepted property invalid in condition/);",
+    "resolution": "match(loader, \"style.css\"); }).toThrow(/Unexcepted property invalid in condition/);",
+    "conflict": "match(loader, \"style.css\"); }).toThrow(/Unexcepted property invalid in condition/);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171004,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css\"]); expect(match(loader, \"scripts.js\")).toEqual([\"css\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]); match(loader, \"scripts.js\").should.eql([\"css\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css\"]); expect(match(loader, \"scripts.js\")).toEqual([\"css\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css\"]); expect(match(loader, \"scripts.js\")).toEqual([\"css\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171009,
+    "v1": "match(loader, \"style.css\"); }).toThrow(/No loader specified/);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]); }, /No loader specified/);",
+    "resolution": "match(loader, \"style.css\"); }).toThrow(/No loader specified/);",
+    "conflict": "match(loader, \"style.css\"); }).toThrow(/No loader specified/);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171018,
+    "v1": "match(loader, \"style.css\"); }).toThrow(/options\\/query cannot be used with loaders/);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]); }, /options\\/query cannot be used with loaders/);",
+    "resolution": "match(loader, \"style.css\"); }).toThrow(/options\\/query cannot be used with loaders/);",
+    "conflict": "match(loader, \"style.css\"); }).toThrow(/options\\/query cannot be used with loaders/);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171023,
+    "v1": "match(loader, \"style.css\"); }).toThrow(/No loader specified/);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]); }, /No loader specified/);",
+    "resolution": "match(loader, \"style.css\"); }).toThrow(/No loader specified/);",
+    "conflict": "match(loader, \"style.css\"); }).toThrow(/No loader specified/);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171038,
+    "v1": "expect( stats.toString({",
+    "v2": "stats .toString({",
+    "resolution": "expect( stats.toString({",
+    "conflict": "expect( stats.toString({"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171055,
+    "v1": "describe(`time between changes ${changeTimeout}ms`, () => {",
+    "v2": "describe(\"time between changes \" + changeTimeout + \"ms\", function() { this.timeout(10000);",
+    "resolution": "describe(`time between changes ${changeTimeout}ms`, () => {",
+    "conflict": "describe(`time between changes ${changeTimeout}ms`, () => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171058,
+    "v1": "`${testName}-${Math.random() .toPrecision(21) .slice(2)}`",
+    "v2": "testName",
+    "resolution": "`${testName}-${Math.random() .toPrecision(21) .slice(2)}`",
+    "conflict": "`${testName}-${Math.random() .toPrecision(21) .slice(2)}`"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171061,
+    "v1": "it(\"should emit 'watch-close' when using single-compiler mode and the compiler is not running\", done => {",
+    "v2": "it(\"should emit 'watch-close' when using single-compiler mode and the compiler is not running\", function( done ) {",
+    "resolution": "it(\"should emit 'watch-close' when using single-compiler mode and the compiler is not running\", done => {",
+    "conflict": "it(\"should emit 'watch-close' when using single-compiler mode and the compiler is not running\", done => {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171077,
+    "v1": "const asyncLib = require(\"async\");",
+    "v2": "const asyncLib = require(\"neo-async\"); var Test = require(\"mocha/lib/test\");",
+    "resolution": "const asyncLib = require(\"neo-async\");",
+    "conflict": "const asyncLib = require(\"async\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171083,
+    "v1": "); expect(normalModule.libIdent({",
+    "v2": "}); normalModule.libIdent({",
+    "resolution": "}); expect(normalModule.libIdent({",
+    "conflict": "); expect(normalModule.libIdent({"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171089,
+    "v1": "var source = JSON.parse(fs.readFileSync(path.join(__dirname, \"events.json\"), \"utf-8\").toString() + \"{}]\"); expect(source[0].id).toEqual(1);",
+    "v2": "var source = JSON.parse(fs.readFileSync(path.join(os.tmpdir(), \"events.json\"), \"utf-8\").toString() + \"{}]\"); source[0].id.should.eql(1);",
+    "resolution": "var source = JSON.parse(fs.readFileSync(path.join(__dirname, \"events.json\"), \"utf-8\").toString() + \"{}]\"); expect(source[0].id).toEqual(1);",
+    "conflict": "var source = JSON.parse(fs.readFileSync(path.join(__dirname, \"events.json\"), \"utf-8\").toString() + \"{}]\"); expect(source[0].id).toEqual(1);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171091,
+    "v1": "const manifestChunk = STATS_JSON.chunks.find((chunk) => chunk.names.indexOf(\"main-runtime\") !== -1); expect(manifestChunk).toBeDefined();",
+    "v2": "const manifestChunk = STATS_JSON.chunks.find((chunk) => chunk.names.indexOf(\"runtime~main\") !== -1); (!manifestChunk).should.be.false(\"Main chunk not found\");",
+    "resolution": "const manifestChunk = STATS_JSON.chunks.find((chunk) => chunk.names.indexOf(\"runtime~main\") !== -1); expect(!manifestChunk).toBe(false);",
+    "conflict": "const manifestChunk = STATS_JSON.chunks.find((chunk) => chunk.names.indexOf(\"main-runtime\") !== -1); expect(manifestChunk).toBeDefined();"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171366,
+    "v1": "if(chunk.getNumberOfChunks() > 0) {",
+    "v2": "const chunkMaps = chunk.getChunkMaps(); // Check if there are non initial chunks which need to be imported using require-ensure if(Object.keys(chunkMaps.hash).length) {",
+    "resolution": "const chunkMaps = chunk.getChunkMaps(); // Check if there are non initial chunks which need to be imported using require-ensure if(Object.keys(chunkMaps.hash).length) {",
+    "conflict": "if(chunk.getNumberOfChunks() > 0) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171374,
+    "v1": "this.set(\"output.hotUpdateFunction\", \"make\", options => { return Template.toIdentifier(\"webpackHotUpdate\" + options.output.library);",
+    "v2": "this.set(\"output.hotUpdateFunction\", \"make\", (options) => { return Template.toIdentifier(\"webpackHotUpdate\" + Template.toIdentifier(options.output.library));",
+    "resolution": "this.set(\"output.hotUpdateFunction\", \"make\", options => { return Template.toIdentifier(\"webpackHotUpdate\" + Template.toIdentifier(options.output.library));",
+    "conflict": "this.set(\"output.hotUpdateFunction\", \"make\", options => { return Template.toIdentifier(\"webpackHotUpdate\" + options.output.library);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171408,
+    "v1": "buf.push(Template.asString(this.hooks.startup.call(\"\", chunk, hash))); let source = this.hooks.render.call(new OriginalSource(Template.prefix(buf, \" \") + \"\", `webpack/bootstrap ${hash}`), chunk, hash, moduleTemplate, dependencyTemplates);",
+    "v2": "buf.push(this.asString(this.hooks.startup.call(\"\", chunk, hash))); let source = this.hooks.render.call(new OriginalSource(this.prefix(buf, \" \") + \"\", \"webpack/bootstrap\"), chunk, hash, moduleTemplate, dependencyTemplates);",
+    "resolution": "buf.push(Template.asString(this.hooks.startup.call(\"\", chunk, hash))); let source = this.hooks.render.call(new OriginalSource(Template.prefix(buf, \" \") + \"\", \"webpack/bootstrap\"), chunk, hash, moduleTemplate, dependencyTemplates);",
+    "conflict": "buf.push(Template.asString(this.hooks.startup.call(\"\", chunk, hash))); let source = this.hooks.render.call(new OriginalSource(Template.prefix(buf, \" \") + \"\", `webpack/bootstrap ${hash}`), chunk, hash, moduleTemplate, dependencyTemplates);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171421,
+    "v1": "}).filter(Boolean).join(\" \"); const hash = createHash(\"md5\");",
+    "v2": "} const hash = crypto.createHash(\"md5\");",
+    "resolution": "} const hash = createHash(\"md5\");",
+    "conflict": "}).filter(Boolean).join(\" \"); const hash = createHash(\"md5\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171494,
+    "v1": "const isStrictHarmony = parser.state.module.type === \"javascript/esm\"; const isHarmony = isStrictHarmony || ast.body.some(statement => {",
+    "v2": "const isHarmony = ast.body.some(statement => {",
+    "resolution": "const isStrictHarmony = parser.state.module.type === \"javascript/esm\"; const isHarmony = isStrictHarmony || ast.body.some(statement => {",
+    "conflict": "const isStrictHarmony = parser.state.module.type === \"javascript/esm\"; const isHarmony = isStrictHarmony || ast.body.some(statement => {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171499,
+    "v1": "\"   object { enforce?, exclude?, include?, issuer?, loader?, loaders?, oneOf?, options?, parser?, query?, type?, resource?, resourceQuery?, compiler?, rules?, test?, use? }\"",
+    "v2": "\"   object { enforce?, exclude?, include?, issuer?, loader?, loaders?, oneOf?, options?, parser?, query?, resource?, resourceQuery?, compiler?, rules?, test?, use? }\", \"   -> A rule\"",
+    "resolution": "\"   object { enforce?, exclude?, include?, issuer?, loader?, loaders?, oneOf?, options?, parser?, query?, type?, resource?, resourceQuery?, compiler?, rules?, test?, use? }\", \"   -> A rule\"",
+    "conflict": "\"   object { enforce?, exclude?, include?, issuer?, loader?, loaders?, oneOf?, options?, parser?, query?, type?, resource?, resourceQuery?, compiler?, rules?, test?, use? }\""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171504,
+    "v1": "params.compilationDependencies.add(manifest); compiler.inputFileSystem.readFile(manifest, function(err, result) {",
+    "v2": "params.compilationDependencies.push(manifest); compiler.inputFileSystem.readFile(manifest, (err, result) => {",
+    "resolution": "params.compilationDependencies.add(manifest); compiler.inputFileSystem.readFile(manifest, (err, result) => {",
+    "conflict": "params.compilationDependencies.add(manifest); compiler.inputFileSystem.readFile(manifest, function(err, result) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171520,
+    "v1": "getAffectedChunks(compilation, allChunks, targetChunk, targetChunks, currentIndex, selectedChunks, asyncOption, deepChildrenOption, children) { const asyncOrNoSelectedChunk = children || asyncOption;",
+    "v2": "getAffectedChunks(compilation, allChunks, targetChunk, targetChunks, currentIndex, selectedChunks, asyncOption, childrenOption, deepChildrenOption) { const asyncOrNoSelectedChunk = childrenOption || asyncOption;",
+    "resolution": "getAffectedChunks(compilation, allChunks, targetChunk, targetChunks, currentIndex, selectedChunks, asyncOption, childrenOption, deepChildrenOption) { const asyncOrNoSelectedChunk = childrenOption || asyncOption;",
+    "conflict": "getAffectedChunks(compilation, allChunks, targetChunk, targetChunks, currentIndex, selectedChunks, asyncOption, deepChildrenOption, children) { const asyncOrNoSelectedChunk = children || asyncOption;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171527,
+    "v1": "const otherImportedModule = otherStarExport.module; if(Array.isArray(otherImportedModule.providedExports)) {",
+    "v2": "const otherImportedModule = otherStarExport.importDependency.module; if(otherImportedModule && Array.isArray(otherImportedModule.providedExports)) {",
+    "resolution": "const otherImportedModule = otherStarExport.module; if(otherImportedModule && Array.isArray(otherImportedModule.providedExports)) {",
+    "conflict": "const otherImportedModule = otherStarExport.module; if(Array.isArray(otherImportedModule.providedExports)) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171534,
+    "v1": "const settings = parser.state.harmonySpecifier.get(id); dep = new HarmonyExportImportedSpecifierDependency(settings.source, parser.state.module, settings.sourceOrder, parser.state.harmonyParserScope, settings.id, name);",
+    "v2": "const settings = parser.state.harmonySpecifier[`$${id}`]; dep = new HarmonyExportImportedSpecifierDependency(parser.state.module, settings[0], settings[1], settings[2], name, harmonyNamedExports, null);",
+    "resolution": "const settings = parser.state.harmonySpecifier.get(id); dep = new HarmonyExportImportedSpecifierDependency(settings.source, parser.state.module, settings.sourceOrder, parser.state.harmonyParserScope, settings.id, name, harmonyNamedExports, null);",
+    "conflict": "const settings = parser.state.harmonySpecifier.get(id); dep = new HarmonyExportImportedSpecifierDependency(settings.source, parser.state.module, settings.sourceOrder, parser.state.harmonyParserScope, settings.id, name);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171544,
+    "v1": "const active = HarmonyModulesHelpers.isActive(dep.originModule, dep); if(!active) return []; const importModule = dep.module;",
+    "v2": "const importModule = dep.importDependency.module;",
+    "resolution": "const importModule = dep.module;",
+    "conflict": "const active = HarmonyModulesHelpers.isActive(dep.originModule, dep); if(!active) return []; const importModule = dep.module;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171547,
+    "v1": "if(chunk.getChunks().size > 0) { var jsonpFunction = this.outputOptions.jsonpFunction;",
+    "v2": "if(needChunkLoadingCode(chunk)) {",
+    "resolution": "if(needChunkLoadingCode(chunk)) { var jsonpFunction = this.outputOptions.jsonpFunction;",
+    "conflict": "if(chunk.getChunks().size > 0) { var jsonpFunction = this.outputOptions.jsonpFunction;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171577,
+    "v1": "if(!module.meta || !module.meta.harmonyModule) { setBailoutReason(module, \"Module is not an ECMAScript module\");",
+    "v2": "if(!module.meta || !module.meta.harmonyModule || !module.dependencies.some(d => d instanceof HarmonyCompatibilityDependency)) {",
+    "resolution": "if(!module.meta || !module.meta.harmonyModule || !module.dependencies.some(d => d instanceof HarmonyCompatibilityDependency)) { setBailoutReason(module, \"Module is not an ECMAScript module\");",
+    "conflict": "if(!module.meta || !module.meta.harmonyModule) { setBailoutReason(module, \"Module is not an ECMAScript module\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171599,
+    "v1": "let expression = expr.argument; let exprName = [];",
+    "v2": "var expression = expr.argument; var exprName = [];",
+    "resolution": "let expression = expr.argument; let exprName = [];",
+    "conflict": "let expression = expr.argument; let exprName = [];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171607,
+    "v1": "let arg1 = this.evaluateExpression(expr.arguments[0]); let arg2 = this.evaluateExpression(expr.arguments[1]);",
+    "v2": "var arg1 = this.evaluateExpression(expr.arguments[0]); var arg2 = this.evaluateExpression(expr.arguments[1]);",
+    "resolution": "let arg1 = this.evaluateExpression(expr.arguments[0]); let arg2 = this.evaluateExpression(expr.arguments[1]);",
+    "conflict": "let arg1 = this.evaluateExpression(expr.arguments[0]); let arg2 = this.evaluateExpression(expr.arguments[1]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171628,
+    "v1": "for(let index = 0, len = switchCases.length; index < len; index++) { const switchCase = switchCases[index];",
+    "v2": "for(var index = 0, len = switchCases.length; index < len; index++) { var switchCase = switchCases[index];",
+    "resolution": "for(let index = 0, len = switchCases.length; index < len; index++) { const switchCase = switchCases[index];",
+    "conflict": "for(let index = 0, len = switchCases.length; index < len; index++) { const switchCase = switchCases[index];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171630,
+    "v1": "for(let i = 0, len = pattern.properties.length; i < len; i++) { const prop = pattern.properties[i];",
+    "v2": "for(var i = 0, len = pattern.properties.length; i < len; i++) { var prop = pattern.properties[i];",
+    "resolution": "for(let i = 0, len = pattern.properties.length; i < len; i++) { const prop = pattern.properties[i];",
+    "conflict": "for(let i = 0, len = pattern.properties.length; i < len; i++) { const prop = pattern.properties[i];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171631,
+    "v1": "for(let i = 0, len = pattern.elements.length; i < len; i++) { const element = pattern.elements[i];",
+    "v2": "for(var i = 0, len = pattern.elements.length; i < len; i++) { var element = pattern.elements[i];",
+    "resolution": "for(let i = 0, len = pattern.elements.length; i < len; i++) { const element = pattern.elements[i];",
+    "conflict": "for(let i = 0, len = pattern.elements.length; i < len; i++) { const element = pattern.elements[i];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171632,
+    "v1": "for(let expressionsIndex = 0, len = expressions.length; expressionsIndex < len; expressionsIndex++) { const expression = expressions[expressionsIndex];",
+    "v2": "for(var expressionsIndex = 0, len = expressions.length; expressionsIndex < len; expressionsIndex++) { var expression = expressions[expressionsIndex];",
+    "resolution": "for(let expressionsIndex = 0, len = expressions.length; expressionsIndex < len; expressionsIndex++) { const expression = expressions[expressionsIndex];",
+    "conflict": "for(let expressionsIndex = 0, len = expressions.length; expressionsIndex < len; expressionsIndex++) { const expression = expressions[expressionsIndex];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171634,
+    "v1": "for(let propIndex = 0, len = expression.properties.length; propIndex < len; propIndex++) { const prop = expression.properties[propIndex];",
+    "v2": "for(var propIndex = 0, len = expression.properties.length; propIndex < len; propIndex++) { var prop = expression.properties[propIndex];",
+    "resolution": "for(let propIndex = 0, len = expression.properties.length; propIndex < len; propIndex++) { const prop = expression.properties[propIndex];",
+    "conflict": "for(let propIndex = 0, len = expression.properties.length; propIndex < len; propIndex++) { const prop = expression.properties[propIndex];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171638,
+    "v1": "for(let i = 0; i < args.length; i++) { const param = args[i];",
+    "v2": "for(var i = 0; i < args.length; i++) { var param = args[i];",
+    "resolution": "for(let i = 0; i < args.length; i++) { const param = args[i];",
+    "conflict": "for(let i = 0; i < args.length; i++) { const param = args[i];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171643,
+    "v1": "const oldScope = this.scope; const oldState = this.state;",
+    "v2": "var oldScope = this.scope; var oldState = this.state;",
+    "resolution": "const oldScope = this.scope; const oldState = this.state;",
+    "conflict": "const oldScope = this.scope; const oldState = this.state;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171654,
+    "v1": "const showVersion = (typeof options.version === \"undefined\") ? jsons.every(j => j.version) : options.version !== false; const showHash = (typeof options.hash === \"undefined\") ? jsons.every(j => j.hash) : options.hash !== false;",
+    "v2": "const showVersion = typeof options.version === \"undefined\" ? jsons.every(j => j.version) : options.version !== false; const showHash = typeof options.hash === \"undefined\" ? jsons.every(j => j.hash) : options.hash !== false;",
+    "resolution": "const showVersion = typeof options.version === \"undefined\" ? jsons.every(j => j.version) : options.version !== false; const showHash = typeof options.hash === \"undefined\" ? jsons.every(j => j.hash) : options.hash !== false;",
+    "conflict": "const showVersion = (typeof options.version === \"undefined\") ? jsons.every(j => j.version) : options.version !== false; const showHash = (typeof options.hash === \"undefined\") ? jsons.every(j => j.hash) : options.hash !== false;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171660,
+    "v1": "\"what\", \"what\" + sep + \"the\",",
+    "v2": "\"/what\", \"/what/the\",",
+    "resolution": "\"/what\", \"/what/the\",",
+    "conflict": "\"what\", \"what\" + sep + \"the\","
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171666,
+    "v1": "",
+    "v2": "this.module = module; this.error = err; Error.captureStackTrace(this, ModuleParseError);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171670,
+    "v1": "afterEach(() => { packageJSON.version = packageVersion; });",
+    "v2": "afterEach(() => packageJSON.version = packageVersion);",
+    "resolution": "afterEach(() => packageJSON.version = packageVersion);",
+    "conflict": "afterEach(() => { packageJSON.version = packageVersion; });"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171671,
+    "v1": "it(\"creates a hash string\", () => { myMultiStats.hash.should.be.exactly(\"abc123xyz890\"); });",
+    "v2": "it(\"creates a hash string\", () => myMultiStats.hash.should.be.exactly(\"abc123xyz890\"));",
+    "resolution": "it(\"creates a hash string\", () => myMultiStats.hash.should.be.exactly(\"abc123xyz890\"));",
+    "conflict": "it(\"creates a hash string\", () => { myMultiStats.hash.should.be.exactly(\"abc123xyz890\"); });"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171672,
+    "v1": "it(\"returns true\", () => { myMultiStats.hasErrors().should.be.exactly(true); });",
+    "v2": "it(\"returns true\", () => myMultiStats.hasErrors().should.be.exactly(true));",
+    "resolution": "it(\"returns true\", () => myMultiStats.hasErrors().should.be.exactly(true));",
+    "conflict": "it(\"returns true\", () => { myMultiStats.hasErrors().should.be.exactly(true); });"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171673,
+    "v1": "it(\"returns true\", () => { myMultiStats.hasErrors().should.be.exactly(true); });",
+    "v2": "it(\"returns true\", () => myMultiStats.hasErrors().should.be.exactly(true));",
+    "resolution": "it(\"returns true\", () => myMultiStats.hasErrors().should.be.exactly(true));",
+    "conflict": "it(\"returns true\", () => { myMultiStats.hasErrors().should.be.exactly(true); });"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171674,
+    "v1": "it(\"returns false\", () => { myMultiStats.hasErrors().should.be.exactly(false); });",
+    "v2": "it(\"returns false\", () => myMultiStats.hasErrors().should.be.exactly(false));",
+    "resolution": "it(\"returns false\", () => myMultiStats.hasErrors().should.be.exactly(false));",
+    "conflict": "it(\"returns false\", () => { myMultiStats.hasErrors().should.be.exactly(false); });"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171675,
+    "v1": "it(\"returns true\", () => { myMultiStats.hasWarnings().should.be.exactly(true); });",
+    "v2": "it(\"returns true\", () => myMultiStats.hasWarnings().should.be.exactly(true));",
+    "resolution": "it(\"returns true\", () => myMultiStats.hasWarnings().should.be.exactly(true));",
+    "conflict": "it(\"returns true\", () => { myMultiStats.hasWarnings().should.be.exactly(true); });"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171676,
+    "v1": "it(\"returns true\", () => { myMultiStats.hasWarnings().should.be.exactly(true); });",
+    "v2": "it(\"returns true\", () => myMultiStats.hasWarnings().should.be.exactly(true));",
+    "resolution": "it(\"returns true\", () => myMultiStats.hasWarnings().should.be.exactly(true));",
+    "conflict": "it(\"returns true\", () => { myMultiStats.hasWarnings().should.be.exactly(true); });"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171677,
+    "v1": "it(\"returns false\", () => { myMultiStats.hasWarnings().should.be.exactly(false); });",
+    "v2": "it(\"returns false\", () => myMultiStats.hasWarnings().should.be.exactly(false));",
+    "resolution": "it(\"returns false\", () => myMultiStats.hasWarnings().should.be.exactly(false));",
+    "conflict": "it(\"returns false\", () => { myMultiStats.hasWarnings().should.be.exactly(false); });"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171697,
+    "v1": ".string(\"config\").alias(\"config\", \"c\").describe(\"config\") .string(\"env\").describe(\"env\", \"Enviroment passed to the config, when it is a function\")",
+    "v2": ".string(\"config\").describe(\"config\")",
+    "resolution": ".string(\"config\").describe(\"config\") .string(\"env\").describe(\"env\", \"Enviroment passed to the config, when it is a function\")",
+    "conflict": ".string(\"config\").alias(\"config\", \"c\").describe(\"config\") .string(\"env\").describe(\"env\", \"Enviroment passed to the config, when it is a function\")"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171702,
+    "v1": "this.resolveRequestArray.bind(this, context, noPostAutoLoaders ? [] : this.postLoaders.match(resourcePath), this.resolvers.loader), this.resolveRequestArray.bind(this, context, this.preLoaders.match(resourcePath), this.resolvers.loader)",
+    "v2": "_this.resolveRequestArray.bind(_this, context, noPostAutoLoaders ? [] : _this.postLoaders.match(resource), _this.resolvers.loader), _this.resolveRequestArray.bind(_this, context, _this.preLoaders.match(resource), _this.resolvers.loader)",
+    "resolution": "_this.resolveRequestArray.bind(_this, context, noPostAutoLoaders ? [] : _this.postLoaders.match(resourcePath), _this.resolvers.loader), _this.resolveRequestArray.bind(_this, context, _this.preLoaders.match(resourcePath), _this.resolvers.loader)",
+    "conflict": "this.resolveRequestArray.bind(this, context, noPostAutoLoaders ? [] : this.postLoaders.match(resourcePath), this.resolvers.loader), this.resolveRequestArray.bind(this, context, this.preLoaders.match(resourcePath), this.resolvers.loader)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171707,
+    "v1": ".string(\"config\").describe(\"config\") .string(\"env\").describe(\"env\", \"Enviroment passed to the config, when it is a function\")",
+    "v2": ".string(\"config\").alias(\"config\", \"c\").describe(\"config\")",
+    "resolution": ".string(\"config\").alias(\"config\", \"c\").describe(\"config\") .string(\"env\").describe(\"env\", \"Enviroment passed to the config, when it is a function\")",
+    "conflict": ".string(\"config\").describe(\"config\") .string(\"env\").describe(\"env\", \"Enviroment passed to the config, when it is a function\")"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171719,
+    "v1": "return (module.entry); })) {",
+    "v2": "return module.id === 0; })) {",
+    "resolution": "return module.entry;",
+    "conflict": "return (module.entry); })) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171728,
+    "v1": "return (module.entry); })) {",
+    "v2": "return module.id === 0; })) {",
+    "resolution": "return module.entry; })) {",
+    "conflict": "return (module.entry); })) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171733,
+    "v1": "var usedIds = {};",
+    "v2": "var usedIds = { 0: true };",
+    "resolution": "var usedIds = {};",
+    "conflict": "var usedIds = {};"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171736,
+    "v1": "}).reduce(function(a, b) { return a + b; }, 0) + m.chunks.length + (m.entry ? 1 : 0);",
+    "v2": "}).reduce(function(a, b) { return a + b; }, 0) + m.chunks.length;",
+    "resolution": "}).reduce(function(a, b) { return a + b; }, 0) + m.chunks.length + (m.entry ? 1 : 0);",
+    "conflict": "}).reduce(function(a, b) { return a + b; }, 0) + m.chunks.length + (m.entry ? 1 : 0);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171754,
+    "v1": "this.compiler.compile(function onCompiled(err, compilation) {",
+    "v2": "if(err) return this._done(err); this.compiler.compile(function(err, compilation) {",
+    "resolution": "if(err) return this._done(err); this.compiler.compile(function onCompiled(err, compilation) {",
+    "conflict": "this.compiler.compile(function onCompiled(err, compilation) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171769,
+    "v1": "if(typeof options === \"function\") { options = options(argv.env, argv); }",
+    "v2": "",
+    "resolution": "if(typeof options === \"function\") { options = options(argv.env, argv); }",
+    "conflict": "if(typeof options === \"function\") { options = options(argv.env, argv); }"
+  }
+]
+}

@@ -1,0 +1,2538 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 104948,
+    "v1": "version = \"1.7.0.dev0\"",
+    "v2": "version = \"1.6.6.dev0\"",
+    "resolution": "version = \"1.7.0.dev0\"",
+    "conflict": "version = \"1.7.0.dev0\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 104969,
+    "v1": "version = \"1.7.0.dev0\"",
+    "v2": "version = \"1.6.5.dev0\"",
+    "resolution": "version = \"1.7.0.dev0\"",
+    "conflict": "version = \"1.7.0.dev0\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 104978,
+    "v1": "version = \"1.7.0.dev0\"",
+    "v2": "version = \"1.6.4.dev0\"",
+    "resolution": "version = \"1.7.0.dev0\"",
+    "conflict": "version = \"1.7.0.dev0\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 104986,
+    "v1": "version = \"1.7.0.dev0\"",
+    "v2": "version = \"1.6.3.dev0\"",
+    "resolution": "version = \"1.7.0.dev0\"",
+    "conflict": "version = \"1.7.0.dev0\""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 104995,
+    "v1": "# - add read support for non-linear DataAxis defined by 'axis' vector",
+    "v2": "# - move metadata.Signal.binned attribute to axes.is_binned parameter",
+    "resolution": "# - move metadata.Signal.binned attribute to axes.is_binned parameter # - add read support for non-linear DataAxis defined by 'axis' vector",
+    "conflict": "# - add read support for non-linear DataAxis defined by 'axis' vector"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105000,
+    "v1": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False}",
+    "v2": "'axis-0': {'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "resolution": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "conflict": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False}"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105001,
+    "v1": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False}",
+    "v2": "'axis-0': {'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "resolution": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "conflict": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False}"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105005,
+    "v1": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False}",
+    "v2": "'axis-0': {'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "resolution": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "conflict": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False}"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105007,
+    "v1": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.0098868, 'offset': -0.0363437, 'size': 2048, 'units': 'keV', 'navigate': False}",
+    "v2": "'axis-0': {'name': 'Energy', 'scale': 0.0098868, 'offset': -0.0363437, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "resolution": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.0098868, 'offset': -0.0363437, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "conflict": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'Energy', 'scale': 0.0098868, 'offset': -0.0363437, 'size': 2048, 'units': 'keV', 'navigate': False}"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105018,
+    "v1": "if value is not self.is_on() and self.ax is not None:",
+    "v2": "if value is not self.is_on and self.ax is not None:",
+    "resolution": "if value is not self.is_on and self.ax is not None:",
+    "conflict": "if value is not self.is_on() and self.ax is not None:"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105031,
+    "v1": "ax = self.axis",
+    "v2": "ax = copy.deepcopy(self.axis)",
+    "resolution": "ax = copy.deepcopy(self.axis)",
+    "conflict": "ax = self.axis"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105036,
+    "v1": "class TestDataAxis:",
+    "v2": "class TestDataAxisValueRangeToIndices:",
+    "resolution": "class TestDataAxisValueRangeToIndices:",
+    "conflict": "class TestDataAxis:"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105078,
+    "v1": "version = \"1.7.0.dev0\"",
+    "v2": "version = \"1.6.2.dev0\"",
+    "resolution": "version = \"1.7.0.dev0\"",
+    "conflict": "version = \"1.7.0.dev0\""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105114,
+    "v1": "version = \"1.7.0.dev\"",
+    "v2": "version = \"1.6.1.dev0\"",
+    "resolution": "version = \"1.7.0.dev0\"",
+    "conflict": "version = \"1.7.0.dev\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105118,
+    "v1": "# update extent:         self._set_extent()",
+    "v2": "",
+    "resolution": "",
+    "conflict": "# update extent:         self._set_extent()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105127,
+    "v1": "matrix, self.s.learning_results.unmixing_matrix, atol=1e-4",
+    "v2": "matrix, self.s.learning_results.unmixing_matrix, atol=1e-5",
+    "resolution": "matrix, self.s.learning_results.unmixing_matrix, atol=1e-5",
+    "conflict": "matrix, self.s.learning_results.unmixing_matrix, atol=1e-4"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105147,
+    "v1": "def get_core_loss_eels_model(add_powerlaw=False, add_noise=True):",
+    "v2": "def get_core_loss_eels_model(add_powerlaw=False, random_state=None):",
+    "resolution": "def get_core_loss_eels_model(add_powerlaw=False, add_noise=True, random_state=None):",
+    "conflict": "def get_core_loss_eels_model(add_powerlaw=False, add_noise=True):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105171,
+    "v1": "from hyperspy import components1d, signals",
+    "v2": "from hyperspy import signals, components1d, datasets",
+    "resolution": "from hyperspy import signals, components1d, datasets",
+    "conflict": "from hyperspy import components1d, signals"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105180,
+    "v1": "def get_core_loss_eels_line_scan_signal(add_powerlaw=False, add_noise=True):",
+    "v2": "def get_core_loss_eels_line_scan_signal(add_powerlaw=False):",
+    "resolution": "def get_core_loss_eels_line_scan_signal(add_powerlaw=False, add_noise=True):",
+    "conflict": "def get_core_loss_eels_line_scan_signal(add_powerlaw=False, add_noise=True):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105182,
+    "v1": ":py:class:`~hyperspy.models.eelsmodel.EELSModel`",
+    "v2": "artificial_core_loss_model : :py:class:`~hyperspy.models.eelsmodel.EELSModel`",
+    "resolution": ":py:class:`~hyperspy.models.eelsmodel.EELSModel`",
+    "conflict": ":py:class:`~hyperspy.models.eelsmodel.EELSModel`"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105183,
+    "v1": ":py:class:`~hyperspy._signals.signal2d.Signal2D`",
+    "v2": "artificial_tem_image : :py:class:`~hyperspy._signals.signal2d.Signal2D`",
+    "resolution": ":py:class:`~hyperspy._signals.signal2d.Signal2D`",
+    "conflict": ":py:class:`~hyperspy._signals.signal2d.Signal2D`"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105187,
+    "v1": "from hyperspy import signals, model, datasets",
+    "v2": "from hyperspy import signals",
+    "resolution": "from hyperspy import signals, datasets",
+    "conflict": "from hyperspy import signals, model, datasets"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105190,
+    "v1": "title=\"Instructions\"),",
+    "v2": "title=\"Instructions\")",
+    "resolution": "title=\"Instructions\"),",
+    "conflict": "title=\"Instructions\"),"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105208,
+    "v1": "from hyperspy._components.polynomial import Polynomial from hyperspy.misc.test_utils import check_closing_plot",
+    "v2": "",
+    "resolution": "from hyperspy.misc.test_utils import check_closing_plot",
+    "conflict": "from hyperspy._components.polynomial import Polynomial from hyperspy.misc.test_utils import check_closing_plot"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105218,
+    "v1": "",
+    "v2": "RTOL = 1E-6",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105219,
+    "v1": "from hyperspy.utils.model_selection import AIC, AICc, BIC from hyperspy.signals import Signal1D",
+    "v2": "",
+    "resolution": "",
+    "conflict": "from hyperspy.utils.model_selection import AIC, AICc, BIC from hyperspy.signals import Signal1D"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105220,
+    "v1": "np.testing.assert_allclose(_bic1, 75.687402101349420)",
+    "v2": "np.testing.assert_allclose(_bic1, 75.68740210134942)",
+    "resolution": "np.testing.assert_allclose(_bic1, 75.687402101349420)",
+    "conflict": "np.testing.assert_allclose(_bic1, 75.687402101349420)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105228,
+    "v1": "",
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105250,
+    "v1": "Possible components: Gaussian, Lorentzian, Offset, Polynomial,",
+    "v2": "Possible components:  Gaussian, Lorentzian, Offset, Polynomial,",
+    "resolution": "Possible components: Doniach, Gaussian, Lorentzian, Offset, Polynomial,",
+    "conflict": "Possible components: Gaussian, Lorentzian, Offset, Polynomial,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105278,
+    "v1": "v = (isinstance(candidate, Iterable) and",
+    "v2": "v = (isinstance(candidate, collections.abc.Iterable) and",
+    "resolution": "v = (isinstance(candidate, Iterable) and",
+    "conflict": "v = (isinstance(candidate, Iterable) and"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105279,
+    "v1": "while (isinstance(to_suppress, Iterable) and",
+    "v2": "while (isinstance(to_suppress, collections.abc.Iterable) and",
+    "resolution": "while isinstance(to_suppress, Iterable) and len(to_suppress) == 1:",
+    "conflict": "while (isinstance(to_suppress, Iterable) and"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105280,
+    "v1": "elif isinstance(to_suppress, Iterable):",
+    "v2": "elif isinstance(to_suppress, collections.abc.Iterable):",
+    "resolution": "elif isinstance(to_suppress, Iterable):",
+    "conflict": "elif isinstance(to_suppress, Iterable):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105281,
+    "v1": "return isinstance(obj, Iterable)",
+    "v2": "return isinstance(obj, collections.abc.Iterable)",
+    "resolution": "return isinstance(obj, Iterable)",
+    "conflict": "return isinstance(obj, Iterable)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105295,
+    "v1": "def _estimate_elbow_position(self, curve_values, log=True):",
+    "v2": "Only valid if calling ``s.decomposition(..., copy=True)``.",
+    "resolution": "Only valid if calling ``s.decomposition(..., copy=True)``.",
+    "conflict": "def _estimate_elbow_position(self, curve_values, log=True):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105304,
+    "v1": "PowerLaw, SkewNormal, Voigt.",
+    "v2": "PowerLaw, Exponential, SkewNormal, Voigt.",
+    "resolution": "PowerLaw, Exponential, SkewNormal, Voigt.",
+    "conflict": "PowerLaw, SkewNormal, Voigt."
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105330,
+    "v1": "from sympy.utilities.lambdify import lambdify",
+    "v2": "import itertools",
+    "resolution": "import itertools from sympy.utilities.lambdify import lambdify",
+    "conflict": "from sympy.utilities.lambdify import lambdify"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105332,
+    "v1": "",
+    "v2": "import logging import itertools",
+    "resolution": "import itertools",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105335,
+    "v1": "def test_background_remove_voigt_full_fit(self):",
+    "v2": "def test_background_remove_skewnormal_full_fit(self):",
+    "resolution": "def test_background_remove_voigt_full_fit(self):",
+    "conflict": "def test_background_remove_voigt_full_fit(self):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105339,
+    "v1": "self.axis = self._function(x=self.x.axis, **kwargs)",
+    "v2": "self.axis = self.function(x=np.arange(self.size), **kwargs)",
+    "resolution": "self.axis = self._function(x=self.x.axis, **kwargs)",
+    "conflict": "self.axis = self._function(x=self.x.axis, **kwargs)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105372,
+    "v1": "Lorentzian, Voigt.",
+    "v2": "Lorentzian, SkewNormal.",
+    "resolution": "Lorentzian, SkewNormal, Voigt.",
+    "conflict": "Lorentzian, Voigt."
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105374,
+    "v1": "'Voigt',",
+    "v2": "'SkewNormal',",
+    "resolution": "'SkewNormal',         'Voigt',",
+    "conflict": "'Voigt',"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105386,
+    "v1": "acf.data = acf.data/(1.0 - np.exp(-(acf.data)))",
+    "v2": "acf.data = acf.data/(1.0 - np.exp(-(x.data)))",
+    "resolution": "acf.data = acf.data/(1.0 - np.exp(-(acf.data)))",
+    "conflict": "acf.data = acf.data/(1.0 - np.exp(-(acf.data)))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105387,
+    "v1": "absorption_correction=None):",
+    "v2": "absorption_correction):",
+    "resolution": "absorption_correction=None):",
+    "conflict": "absorption_correction=None):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105388,
+    "v1": "",
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105389,
+    "v1": "acf.data = acf.data/(1.0 - np.exp(-(acf.data)))",
+    "v2": "acf.data = acf.data/(1.0 - np.exp(-(x.data)))",
+    "resolution": "acf.data = acf.data/(1.0 - np.exp(-(acf.data)))",
+    "conflict": "acf.data = acf.data/(1.0 - np.exp(-(acf.data)))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105394,
+    "v1": "from hyperspy.axes import AxesManager, LinearDataAxis",
+    "v2": "from hyperspy.axes import AxesManager, DataAxis",
+    "resolution": "from hyperspy.axes import AxesManager, LinearDataAxis",
+    "conflict": "from hyperspy.axes import AxesManager, LinearDataAxis"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105395,
+    "v1": "version = \"1.6.dev\"",
+    "v2": "version = \"1.5.3.dev\"",
+    "resolution": "version = \"1.6.dev\"",
+    "conflict": "version = \"1.6.dev\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105399,
+    "v1": "version = \"1.3+dev\"",
+    "v2": "version = \"1.5.dev\"",
+    "resolution": "version = \"1.5.dev\"",
+    "conflict": "version = \"1.3+dev\""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105406,
+    "v1": "from hyperspy.misc.test_utils import assert_warns",
+    "v2": "from hyperspy.misc import utils",
+    "resolution": "from hyperspy.misc import utils from hyperspy.misc.test_utils import assert_warns",
+    "conflict": "from hyperspy.misc.test_utils import assert_warns"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105411,
+    "v1": "from hyperspy.axes import LinearDataAxis",
+    "v2": "",
+    "resolution": "",
+    "conflict": "from hyperspy.axes import LinearDataAxis"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105412,
+    "v1": "gamma=1.0,",
+    "v2": "min_aspect=0.1,",
+    "resolution": "gamma=1.0,                     min_aspect=0.1,",
+    "conflict": "gamma=1.0,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105413,
+    "v1": "version = \"1.5.dev\"",
+    "v2": "version = \"1.4.3.dev\"",
+    "resolution": "version = \"1.5.dev\"",
+    "conflict": "version = \"1.5.dev\""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105414,
+    "v1": "rename_pars={}, **kwargs):",
+    "v2": "compute_gradients=True, **kwargs):",
+    "resolution": "rename_pars={}, compute_gradients=True, **kwargs):",
+    "conflict": "rename_pars={}, **kwargs):"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105416,
+    "v1": "self._rename_pars = rename_pars",
+    "v2": "self._compute_gradients = compute_gradients",
+    "resolution": "self._compute_gradients = compute_gradients         self._rename_pars = rename_pars",
+    "conflict": "self._rename_pars = rename_pars"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105417,
+    "v1": "self._whitelist['rename_pars'] = ('init', rename_pars)",
+    "v2": "self._whitelist['compute_gradients'] = ('init', compute_gradients)",
+    "resolution": "self._whitelist['compute_gradients'] = ('init', compute_gradients)             self._whitelist['rename_pars'] = ('init', rename_pars)",
+    "conflict": "self._whitelist['rename_pars'] = ('init', rename_pars)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105421,
+    "v1": "\"tests\": [\"pytest>=3.6\", \"pytest-mpl\", \"matplotlib>=3.0.0\"],  # for testing",
+    "v2": "\"tests\": [\"pytest>=3.6\", \"pytest-mpl\", \"matplotlib>=3.1\"],  # for testing",
+    "resolution": "\"tests\": [\"pytest>=3.6\", \"pytest-mpl\", \"matplotlib>=3.1\"],  # for testing",
+    "conflict": "\"tests\": [\"pytest>=3.6\", \"pytest-mpl\", \"matplotlib>=3.0.0\"],  # for testing"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105423,
+    "v1": "xray_lines = [intensity.metadata.Sample.xray_lines[0] for intensity in intensities]",
+    "v2": "",
+    "resolution": "",
+    "conflict": "xray_lines = [intensity.metadata.Sample.xray_lines[0] for intensity in intensities]"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105436,
+    "v1": "version = \"1.3.2\"",
+    "v2": "version = \"1.4.2.dev\"",
+    "resolution": "version = \"1.4.2.dev\"",
+    "conflict": "version = \"1.3.2\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105441,
+    "v1": "version = \"2.0.dev\"",
+    "v2": "version = \"1.5.dev\"",
+    "resolution": "version = \"2.0.dev\"",
+    "conflict": "version = \"2.0.dev\""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105445,
+    "v1": "def fft(self, shifted=False, apodization=False, **kwargs):",
+    "v2": "def fft(self, shift=False, **kwargs):",
+    "resolution": "def fft(self, shift=False, apodization=False, **kwargs):",
+    "conflict": "def fft(self, shifted=False, apodization=False, **kwargs):"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105447,
+    "v1": ">>> np.log(im.fft(shifted=True, apodization=True).amplitude).plot()",
+    "v2": ">>> im.fft().plot()",
+    "resolution": ">>> im.fft(shift=True, apodization=True).plot(power_spectrum=True)",
+    "conflict": ">>> np.log(im.fft(shifted=True, apodization=True).amplitude).plot()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105453,
+    "v1": "def _estimate_elbow_position(self, curve_values):",
+    "v2": "def _estimate_elbow_position(self, error_estimate):",
+    "resolution": "def _estimate_elbow_position(self, curve_values):",
+    "conflict": "def _estimate_elbow_position(self, curve_values):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105459,
+    "v1": "_logger.info(\"Independent component {} reversed based on the \"                              \"{}\".format(i, reverse_component_criterion))",
+    "v2": "",
+    "resolution": "_logger.info(\"Independent component {} reversed based on the \"                             \"{}\".format(i, reverse_component_criterion))",
+    "conflict": "_logger.info(\"Independent component {} reversed based on the \"                              \"{}\".format(i, reverse_component_criterion))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105476,
+    "v1": "return (real_time * beam_current * 1e-9) / (constants.e * area)",
+    "v2": "return (live_time * beam_current * 1e-9) / (constants.e * area)",
+    "resolution": "return (live_time * beam_current * 1e-9) / (constants.e * area)",
+    "conflict": "return (real_time * beam_current * 1e-9) / (constants.e * area)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105480,
+    "v1": "version = \"1.5.dev\"",
+    "v2": "version = \"1.4.2.dev\"",
+    "resolution": "version = \"1.5.dev\"",
+    "conflict": "version = \"1.5.dev\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105484,
+    "v1": "fast=True, module=\"numpy\", show_progressbar=None):",
+    "v2": "fast=True, plot_remainder=True, zero_fill=False, show_progressbar=None):",
+    "resolution": "fast=True, plot_remainder=True, zero_fill=False, show_progressbar=None):",
+    "conflict": "fast=True, module=\"numpy\", show_progressbar=None):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105486,
+    "v1": "module=self.module,",
+    "v2": "zero_fill=self.zero_fill,",
+    "resolution": "zero_fill=self.zero_fill,",
+    "conflict": "module=self.module,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105491,
+    "v1": "zero_fill=False,",
+    "v2": "plot_remainder=True,",
+    "resolution": "zero_fill=False,, plot_remainder=True,",
+    "conflict": "zero_fill=False,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105495,
+    "v1": "fast=True, show_progressbar=None, zero_fill=False):",
+    "v2": "fast=True, plot_remainder=True, show_progressbar=None):",
+    "resolution": "fast=True, plot_remainder=True, zero_fill=False, show_progressbar=None):",
+    "conflict": "fast=True, show_progressbar=None, zero_fill=False):"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105496,
+    "v1": "self.zero_fill = zero_fill",
+    "v2": "self.rm_line = None",
+    "resolution": "self.zero_fill = zero_fill self.show_progressbar = show_progressbar self.bg_line = None self.rm_line = None",
+    "conflict": "self.zero_fill = zero_fill"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105499,
+    "v1": "\"\"\"Fetch the parameter values from the output of the optimiser `self.p0`",
+    "v2": "\"\"\"Fetch the parameter values from the output of the optimizer `self.p0`",
+    "resolution": "\"\"\"Fetch the parameter values from the output of the optimizer `self.p0`",
+    "conflict": "\"\"\"Fetch the parameter values from the output of the optimiser `self.p0`"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105500,
+    "v1": "'matplotlib': ('http://matplotlib.org', None)}",
+    "v2": "'matplotlib':  ('https://matplotlib.org', None)}",
+    "resolution": "'matplotlib':  ('https://matplotlib.org', None)}",
+    "conflict": "'matplotlib': ('http://matplotlib.org', None)}"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105507,
+    "v1": "version = \"1.4.dev\"",
+    "v2": "version = \"1.3.2\"",
+    "resolution": "version = \"1.3.2\"",
+    "conflict": "version = \"1.4.dev\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105510,
+    "v1": "'matplotlib>=2.0.0, !=2.1.0, !=2.1.1',",
+    "v2": "'matplotlib>=2.2.3',",
+    "resolution": "'matplotlib>=2.2.3',",
+    "conflict": "'matplotlib>=2.0.0, !=2.1.0, !=2.1.1',"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105517,
+    "v1": "version = \"1.4.dev\"",
+    "v2": "version = \"1.3.2\"",
+    "resolution": "version = \"1.4.dev\"",
+    "conflict": "version = \"1.4.dev\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105522,
+    "v1": "'dask[array]>=0.16.1',",
+    "v2": "'dask[array]>=0.18',",
+    "resolution": "'dask[array]>=0.18',",
+    "conflict": "'dask[array]>=0.16.1',"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105532,
+    "v1": "np.allclose(integrated_signal.data, 20)",
+    "v2": "assert np.allclose(integrated_signal.data, 20,)",
+    "resolution": "assert np.allclose(integrated_signal.data, 20,)",
+    "conflict": "np.allclose(integrated_signal.data, 20)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105533,
+    "v1": "version = \"1.4.dev\"",
+    "v2": "version = \"1.3.1\"",
+    "resolution": "version = \"1.4.dev\"",
+    "conflict": "version = \"1.4.dev\""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105544,
+    "v1": "'tests/drawing/plot_model1d/*.png',",
+    "v2": "'tests/drawing/plot_model/*.png',",
+    "resolution": "'tests/drawing/plot_model/*.png',                 'tests/drawing/plot_model1d/*.png',",
+    "conflict": "'tests/drawing/plot_model1d/*.png',"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105573,
+    "v1": "d[t.tag]['#text'] = interpret(text)",
+    "v2": "d[t.tag]['#text'] = interpret(text)",
+    "resolution": "d[t.tag]['#text'] = interpret(text)",
+    "conflict": "d[t.tag]['#text'] = interpret(text)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105585,
+    "v1": "",
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105593,
+    "v1": "import numpy.testing as nt",
+    "v2": "from numpy.testing import assert_allclose",
+    "resolution": "from numpy.testing import assert_allclose",
+    "conflict": "import numpy.testing as nt"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105610,
+    "v1": "wfactor = 1.1",
+    "v2": "wfactor = 1.0 + plt.rcParams['font.size'] / 100",
+    "resolution": "wfactor = 1.0 + plt.rcParams['font.size'] / 100",
+    "conflict": "wfactor = 1.1"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105615,
+    "v1": "kwds['auto_convert_units'] = auto_convert_units",
+    "v2": "",
+    "resolution": "kwds['auto_convert_units'] = auto_convert_units",
+    "conflict": "kwds['auto_convert_units'] = auto_convert_units"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105617,
+    "v1": "auto_convert_units=True, **kwargs):",
+    "v2": "plot_markers=True, **kwargs):",
+    "resolution": "auto_convert_units=True, plot_markers=True, **kwargs):",
+    "conflict": "auto_convert_units=True, **kwargs):"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105621,
+    "v1": "version = \"2.0+dev\"",
+    "v2": "version = \"1.4.dev\"",
+    "resolution": "version = \"2.0.dev\"",
+    "conflict": "version = \"2.0+dev\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105623,
+    "v1": "# Guess on what is x, y, z, tilt_a and tilt_b...",
+    "v2": "# Guess on what is x, y, z, tilt_alpha and tilt_beta...",
+    "resolution": "# Guess on what is x, y, z, tilt_alpha and tilt_beta...",
+    "conflict": "# Guess on what is x, y, z, tilt_a and tilt_b..."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105632,
+    "v1": "",
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105634,
+    "v1": "version = \"1.3\"",
+    "v2": "version = \"1.3.dev",
+    "resolution": "version = \"1.3\"",
+    "conflict": "version = \"1.3\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105647,
+    "v1": "if self.ax.figure and self.figure.axes:",
+    "v2": "if self.ax.figure and self._background:",
+    "resolution": "if self.ax.figure and self.figure.axes:",
+    "conflict": "if self.ax.figure and self.figure.axes:"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105671,
+    "v1": "",
+    "v2": "load_from_dictionary(self, dic)",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105677,
+    "v1": "version = \"2.0+dev\"",
+    "v2": "version = \"1.3+dev\"",
+    "resolution": "version = \"2.0+dev\"",
+    "conflict": "version = \"2.0+dev\""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105682,
+    "v1": "sub_pixel_factor=1):",
+    "v2": "return_maxval=True):",
+    "resolution": "sub_pixel_factor=1, return_maxval=True):",
+    "conflict": "sub_pixel_factor=1):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105683,
+    "v1": "",
+    "v2": "ref, image = da.compute(ref, image)",
+    "resolution": "ref, image = da.compute(ref, image)",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105686,
+    "v1": "",
+    "v2": "parallel : {None, bool}",
+    "resolution": "parallel : {None, bool}",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105687,
+    "v1": "sub_pixel_factor=sub_pixel_factor)",
+    "v2": "show_progressbar=show_progressbar)",
+    "resolution": "sub_pixel_factor=sub_pixel_factor, show_progressbar=show_progressbar)",
+    "conflict": "sub_pixel_factor=sub_pixel_factor)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105691,
+    "v1": "plot_markers=False, **kwargs):",
+    "v2": "plot_markers=False, **kwargs):",
+    "resolution": "plot_markers=False, **kwargs):",
+    "conflict": "plot_markers=False, **kwargs):"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105694,
+    "v1": "test_require=[\"pytest>=3.0.2\"],",
+    "v2": "extras_require=extras_require,",
+    "resolution": "extras_require=extras_require,         test_require=[\"pytest>=3.0.2\"],",
+    "conflict": "test_require=[\"pytest>=3.0.2\"],"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105720,
+    "v1": "s.map(np.tile, reps=(2, 1, 1, 1, 1), ragged=self.ragged)",
+    "v2": "s.map(np.tile, reps=(2, 1, 1, 1, 1), parallel=parallel)",
+    "resolution": "s.map(np.tile, reps=(2, 1, 1, 1, 1), parallel=parallel, ragged=self.ragged)",
+    "conflict": "s.map(np.tile, reps=(2, 1, 1, 1, 1), ragged=self.ragged)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105722,
+    "v1": "s.map(np.tile, reps=(2, 1, 1, 1, 1), ragged=self.ragged)",
+    "v2": "s.map(np.tile, reps=(2, 1, 1, 1, 1), parallel=parallel)",
+    "resolution": "s.map(np.tile, reps=(2, 1, 1, 1, 1), parallel=parallel, ragged=self.ragged)",
+    "conflict": "s.map(np.tile, reps=(2, 1, 1, 1, 1), ragged=self.ragged)"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105729,
+    "v1": "import dask.array as da",
+    "v2": "import pytest",
+    "resolution": "import pytest import dask.array as da",
+    "conflict": "import dask.array as da"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105740,
+    "v1": "np.testing.assert_allclose(data, self.s.data)",
+    "v2": "assert np.allclose(data, self.s.data)",
+    "resolution": "np.testing.assert_allclose(data, self.s.data)",
+    "conflict": "np.testing.assert_allclose(data, self.s.data)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105797,
+    "v1": "assert self.pgc.start_datetime == datetime_gas_cell()[2]",
+    "v2": "nt.assert_equal(self.pgc.start_datetime, datetime_gas_cell[2])",
+    "resolution": "assert self.pgc.start_datetime == datetime_gas_cell[2]",
+    "conflict": "assert self.pgc.start_datetime == datetime_gas_cell()[2]"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105808,
+    "v1": "imf.plot()",
+    "v2": "imf.plot(**kwds)",
+    "resolution": "imf.plot(**kwds)",
+    "conflict": "imf.plot()"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105810,
+    "v1": "'dask']",
+    "v2": "'scikit-image']",
+    "resolution": "'dask', 'scikit-image']",
+    "conflict": "'dask']"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105812,
+    "v1": "'pytz']",
+    "v2": "'scikit-image']",
+    "resolution": "'pytz', 'scikit-image']",
+    "conflict": "'pytz']"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105813,
+    "v1": "version = \"2.0+dev\"",
+    "v2": "version = \"1.2+dev\"",
+    "resolution": "version = \"1.2+dev\"",
+    "conflict": "version = \"2.0+dev\""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105815,
+    "v1": "init : None | 'qr' | 'rand' | np.ndarray",
+    "v2": "init : {None, 'qr', 'rand'}",
+    "resolution": "init : {None, 'qr', 'rand', np.ndarray}",
+    "conflict": "init : None | 'qr' | 'rand' | np.ndarray"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105817,
+    "v1": "updates the parameters in the workers",
+    "v2": "updates various worker parameters",
+    "resolution": "updates various worker parameters",
+    "conflict": "updates the parameters in the workers"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105822,
+    "v1": "data = np.asanyarray(self.s.data.copy())",
+    "v2": "data = self.s.data.astype('float')",
+    "resolution": "data = np.asanyarray(self.s.data, dtype='float')",
+    "conflict": "data = np.asanyarray(self.s.data.copy())"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105823,
+    "v1": "data = np.asanyarray(self.s.data.copy())",
+    "v2": "data = self.s.data.astype('float')",
+    "resolution": "data = np.asanyarray(self.s.data, dtype='float')",
+    "conflict": "data = np.asanyarray(self.s.data.copy())"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105825,
+    "v1": "self._map_all(function, **kwargs)",
+    "v2": "res = self._map_all(function, inplace=inplace, **kwargs)",
+    "resolution": "res = self._map_all(function, inplace=inplace, **kwargs)",
+    "conflict": "self._map_all(function, **kwargs)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105830,
+    "v1": "threaded=t)",
+    "v2": "parallel=t)",
+    "resolution": "parallel=t)",
+    "conflict": "threaded=t)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105833,
+    "v1": "version = \"1.2+dev\"",
+    "v2": "version = \"1.1.2+dev\"",
+    "resolution": "version = \"1.2+dev\"",
+    "conflict": "version = \"1.2+dev\""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105839,
+    "v1": "import dask.array as da import warnings",
+    "v2": "",
+    "resolution": "import dask.array as da",
+    "conflict": "import dask.array as da import warnings"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105842,
+    "v1": "from hyperspy.misc.test_utils import assert_warns from hyperspy.decorators import lazifyTestClass",
+    "v2": "",
+    "resolution": "from hyperspy.decorators import lazifyTestClass",
+    "conflict": "from hyperspy.misc.test_utils import assert_warns from hyperspy.decorators import lazifyTestClass"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105851,
+    "v1": "version = \"2.0+dev\"",
+    "v2": "version = \"1.2+dev\"",
+    "resolution": "version = \"2.0+dev\"",
+    "conflict": "version = \"2.0+dev\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105857,
+    "v1": "class EDS_mixin:",
+    "v2": "class EDSSpectrum(Signal1D):",
+    "resolution": "class EDS_mixin:",
+    "conflict": "class EDS_mixin:"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105858,
+    "v1": "class EDSSEM_mixin:",
+    "v2": "class EDSSEMSpectrum(EDSSpectrum):",
+    "resolution": "class EDSSEM_mixin:",
+    "conflict": "class EDSSEM_mixin:"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105862,
+    "v1": "_lazy = False",
+    "v2": "_alias_signal_types = []",
+    "resolution": "_alias_signal_types = []     _lazy = False",
+    "conflict": "_lazy = False"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105864,
+    "v1": "version = \"2.0+dev\"",
+    "v2": "version = \"1.1+dev\"",
+    "resolution": "version = \"2.0+dev\"",
+    "conflict": "version = \"2.0+dev\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105865,
+    "v1": "version = \"1.1+dev\"",
+    "v2": "version = \"1.0.2+dev\"",
+    "resolution": "version = \"1.1+dev\"",
+    "conflict": "version = \"1.1+dev\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105866,
+    "v1": "'is not a valid input for representation (use \"cartesian\" or \"polar\")!')",
+    "v2": "'is not a valid input for representation (use \"cartesian\" or \"polar\")!')",
+    "resolution": "'is not a valid input for representation (use \"cartesian\" or \"polar\")!')",
+    "conflict": "'is not a valid input for representation (use \"cartesian\" or \"polar\")!')"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105867,
+    "v1": "# if np.issubdtype(data.dtype, complex):         #     data = np.log(np.abs(data))",
+    "v2": "",
+    "resolution": "",
+    "conflict": "# if np.issubdtype(data.dtype, complex):         #     data = np.log(np.abs(data))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105868,
+    "v1": "# if np.issubdtype(data.dtype, complex):         #     data = np.log(np.abs(data))",
+    "v2": "",
+    "resolution": "",
+    "conflict": "# if np.issubdtype(data.dtype, complex):         #     data = np.log(np.abs(data))"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105874,
+    "v1": "from hyperspy.decorators import auto_replot from hyperspy.misc.utils import stack",
+    "v2": "",
+    "resolution": "from hyperspy.misc.utils import stack",
+    "conflict": "from hyperspy.decorators import auto_replot from hyperspy.misc.utils import stack"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105886,
+    "v1": "_signal_origin = \"\" _lazy = False",
+    "v2": "",
+    "resolution": "_signal_type = \"\" _lazy = False",
+    "conflict": "_signal_origin = \"\" _lazy = False"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105914,
+    "v1": "from hyperspy.learn.rpca import rpca_godec, orpca from hyperspy.decorators import do_not_replot",
+    "v2": "",
+    "resolution": "from hyperspy.learn.rpca import rpca_godec, orpca from hyperspy.decorators import do_not_replot",
+    "conflict": "from hyperspy.learn.rpca import rpca_godec, orpca from hyperspy.decorators import do_not_replot"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105935,
+    "v1": "im.axes_manager.set_signal_dimension(2)",
+    "v2": "im.metadata.Signal.record_by = \"image\"",
+    "resolution": "im.axes_manager.set_signal_dimension(2)",
+    "conflict": "im.axes_manager.set_signal_dimension(2)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105939,
+    "v1": "",
+    "v2": "if any([not a.navigate for a in axes]):                 self._update_metadata_after_signal_axes_removal(roi)",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105988,
+    "v1": "",
+    "v2": "from distutils.extension import Extension",
+    "resolution": "from distutils.extension import Extension",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105996,
+    "v1": "",
+    "v2": "from distutils.extension import Extension",
+    "resolution": "from distutils.extension import Extension",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106000,
+    "v1": "",
+    "v2": "from distutils.extension import Extension",
+    "resolution": "from distutils.extension import Extension",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 106003,
+    "v1": "['data/*.ico',",
+    "v2": "['ipython_profile/*',",
+    "resolution": "[",
+    "conflict": "['data/*.ico',"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 106005,
+    "v1": "['data/*.ico',",
+    "v2": "['ipython_profile/*',",
+    "resolution": "[",
+    "conflict": "['data/*.ico',"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106014,
+    "v1": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "v2": "nt.assert_almost_equal(result, expected, places=5)",
+    "resolution": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "conflict": "np.testing.assert_almost_equal(result, expected, decimal=5)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106015,
+    "v1": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "v2": "nt.assert_almost_equal(result, expected, places=5)",
+    "resolution": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "conflict": "np.testing.assert_almost_equal(result, expected, decimal=5)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106016,
+    "v1": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "v2": "nt.assert_almost_equal(result, expected, places=5)",
+    "resolution": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "conflict": "np.testing.assert_almost_equal(result, expected, decimal=5)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106017,
+    "v1": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "v2": "nt.assert_almost_equal(result, expected, places=5)",
+    "resolution": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "conflict": "np.testing.assert_almost_equal(result, expected, decimal=5)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106018,
+    "v1": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "v2": "nt.assert_almost_equal(result, expected, places=5)",
+    "resolution": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "conflict": "np.testing.assert_almost_equal(result, expected, decimal=5)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106019,
+    "v1": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "v2": "nt.assert_almost_equal(result, expected, places=5)",
+    "resolution": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "conflict": "np.testing.assert_almost_equal(result, expected, decimal=5)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106020,
+    "v1": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "v2": "nt.assert_almost_equal(result, expected, places=5)",
+    "resolution": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "conflict": "np.testing.assert_almost_equal(result, expected, decimal=5)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106021,
+    "v1": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "v2": "nt.assert_almost_equal(result, expected, places=5)",
+    "resolution": "np.testing.assert_almost_equal(result, expected, decimal=5)",
+    "conflict": "np.testing.assert_almost_equal(result, expected, decimal=5)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106023,
+    "v1": "np.testing.assert_almost_equal(self.m.chisq.data, 78.35015229)",
+    "v2": "nt.assert_almost_equals(self.m.chisq.data, 78.35015229)",
+    "resolution": "np.testing.assert_almost_equal(self.m.chisq.data, 78.35015229)",
+    "conflict": "np.testing.assert_almost_equal(self.m.chisq.data, 78.35015229)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106024,
+    "v1": "np.testing.assert_almost_equal(self.m.chisq.data, 78.35015229)",
+    "v2": "nt.assert_almost_equals(self.m.chisq.data, 78.35015229)",
+    "resolution": "np.testing.assert_almost_equal(self.m.chisq.data, 78.35015229)",
+    "conflict": "np.testing.assert_almost_equal(self.m.chisq.data, 78.35015229)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106025,
+    "v1": "np.testing.assert_almost_equal(self.m.red_chisq.data, 0.79949135)",
+    "v2": "nt.assert_almost_equals(self.m.red_chisq.data, 0.79949135)",
+    "resolution": "np.testing.assert_almost_equal(self.m.red_chisq.data, 0.79949135)",
+    "conflict": "np.testing.assert_almost_equal(self.m.red_chisq.data, 0.79949135)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106026,
+    "v1": "np.testing.assert_almost_equal(self.m.red_chisq.data, 0.79949135)",
+    "v2": "nt.assert_almost_equals(self.m.red_chisq.data, 0.79949135)",
+    "resolution": "np.testing.assert_almost_equal(self.m.red_chisq.data, 0.79949135)",
+    "conflict": "np.testing.assert_almost_equal(self.m.red_chisq.data, 0.79949135)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106027,
+    "v1": "np.testing.assert_almost_equal(self.m.red_chisq.data, 0.86206965)",
+    "v2": "nt.assert_almost_equals(self.m.red_chisq.data, 0.86206965)",
+    "resolution": "np.testing.assert_almost_equal(self.m.red_chisq.data, 0.86206965)",
+    "conflict": "np.testing.assert_almost_equal(self.m.red_chisq.data, 0.86206965)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106032,
+    "v1": "#    28    v61|v7 # chars in range record | 255",
+    "v2": "# 28    v61|v7 # chars in range record | 255",
+    "resolution": "#    28    v61|v7 # chars in range record | 255",
+    "conflict": "#    28    v61|v7 # chars in range record | 255"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106033,
+    "v1": "#    64    v61:0 | v7: # blocks in (this) picture label (incl extn)",
+    "v2": "# 64    v61:0 | v7: # blocks in (this) picture label (incl extn)",
+    "resolution": "#    64    v61:0 | v7: # blocks in (this) picture label (incl extn)",
+    "conflict": "#    64    v61:0 | v7: # blocks in (this) picture label (incl extn)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106034,
+    "v1": "#   100    # chars in title",
+    "v2": "# 100    # chars in title",
+    "resolution": "#   100    # chars in title",
+    "conflict": "#   100    # chars in title"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106039,
+    "v1": "self._log.debug('Created '+str(self))",
+    "v2": "self._log.debug('Created ' + str(self))",
+    "resolution": "self._log.debug('Created '+str(self))",
+    "conflict": "self._log.debug('Created '+str(self))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106047,
+    "v1": "Semper file format object containing the loaded information.",
+    "v2": "SEMPER file format object containing the loaded information.",
+    "resolution": "SEMPER file format object containing the loaded information.",
+    "conflict": "Semper file format object containing the loaded information."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106063,
+    "v1": "np.testing.assert_equal(signal.metadata.General.title, 'This is a test!')",
+    "v2": "np.testing.assert_equal(signal.metadata.General.title, test_title)",
+    "resolution": "np.testing.assert_equal(signal.metadata.General.title, test_title)",
+    "conflict": "np.testing.assert_equal(signal.metadata.General.title, 'This is a test!')"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 106075,
+    "v1": "'requests']",
+    "v2": "'sympy']",
+    "resolution": "'requests', 'sympy']",
+    "conflict": "'requests']"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106087,
+    "v1": "version = \"0.9+dev\"",
+    "v2": "version = \"0.8.2\"",
+    "resolution": "version = \"0.9+dev\"",
+    "conflict": "version = \"0.9+dev\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106088,
+    "v1": "version = \"0.9+dev\"",
+    "v2": "version = \"0.8.1\"",
+    "resolution": "version = \"0.9+dev\"",
+    "conflict": "version = \"0.9+dev\""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106101,
+    "v1": "from hyperspy.datasets import example_signals",
+    "v2": "from hyperspy.misc.hspy_warnings import VisibleDeprecationWarning",
+    "resolution": "from hyperspy.misc.hspy_warnings import VisibleDeprecationWarning from hyperspy.datasets import example_signals",
+    "conflict": "from hyperspy.datasets import example_signals"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106105,
+    "v1": "signal_range=None,",
+    "v2": "show_progressbar=None,",
+    "resolution": "show_progressbar=None,             signal_range=None,",
+    "conflict": "signal_range=None,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 106109,
+    "v1": "estimate_background=True):",
+    "v2": "show_progressbar=None):",
+    "resolution": "estimate_background=True, show_progressbar=None):",
+    "conflict": "estimate_background=True):"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106129,
+    "v1": "import warnings",
+    "v2": "from hyperspy.defaults_parser import preferences",
+    "resolution": "from hyperspy.defaults_parser import preferences import warnings",
+    "conflict": "import warnings"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106130,
+    "v1": "'_list_' + str(len(value)) + '_' + key),",
+    "v2": "'_list_' + str(len(value)) + '_' + key),",
+    "resolution": "'_list_' + str(len(value)) + '_' + key),",
+    "conflict": "'_list_' + str(len(value)) + '_' + key),"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106131,
+    "v1": "(2 * self.sigma.value ** 2)) * self.A.value) / (sqrt2pi * self.sigma.value ** 3)",
+    "v2": "(2 * self.sigma.value ** 2)) * self.A.value) / (sqrt2pi * self.sigma.value ** 3)",
+    "resolution": "(2 * self.sigma.value ** 2)) * self.A.value) / (sqrt2pi * self.sigma.value ** 3)",
+    "conflict": "(2 * self.sigma.value ** 2)) * self.A.value) / (sqrt2pi * self.sigma.value ** 3)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106139,
+    "v1": "if not (np.isnan(self.ss_right_value) or np.isnan(self.ss_left_value)):",
+    "v2": "if not np.isnan(self.ss_left_value):",
+    "resolution": "if not (np.isnan(self.ss_right_value) or np.isnan(self.ss_left_value)):",
+    "conflict": "if not (np.isnan(self.ss_right_value) or np.isnan(self.ss_left_value)):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106155,
+    "v1": "nt.assert_true((diff.data == diff_data).all())",
+    "v2": "assert_true((diff.data == diff_data).all())",
+    "resolution": "nt.assert_true((diff.data == diff_data).all())",
+    "conflict": "nt.assert_true((diff.data == diff_data).all())"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106156,
+    "v1": "nt.assert_equal(",
+    "v2": "assert_equal(",
+    "resolution": "nt.assert_equal(",
+    "conflict": "nt.assert_equal("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106167,
+    "v1": "-------",
+    "v2": "------",
+    "resolution": "-------",
+    "conflict": "-------"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106179,
+    "v1": "background_windows=None,",
+    "v2": "integration_windows=None,",
+    "resolution": "integration_windows=None,              background_windows=None,",
+    "conflict": "background_windows=None,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106187,
+    "v1": "from matplotlib import pyplot as plt",
+    "v2": "",
+    "resolution": "from matplotlib import pyplot as plt",
+    "conflict": "from matplotlib import pyplot as plt"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106195,
+    "v1": "from nose.tools import assert_true",
+    "v2": "import nose.tools",
+    "resolution": "import nose.tools from nose.tools import assert_true",
+    "conflict": "from nose.tools import assert_true"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106197,
+    "v1": "self.ax_markers = list()",
+    "v2": "self.perc = 0.01",
+    "resolution": "self.perc = 0.01         self.ax_markers = list()",
+    "conflict": "self.ax_markers = list()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106198,
+    "v1": "self.lines = list()         self.ax_markers = list()",
+    "v2": "",
+    "resolution": "self.lines = list()        self.ax_markers = list()",
+    "conflict": "self.lines = list()         self.ax_markers = list()"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106200,
+    "v1": "from matplotlib import pyplot as plt",
+    "v2": "import warnings",
+    "resolution": "import warnings from matplotlib import pyplot as plt",
+    "conflict": "from matplotlib import pyplot as plt"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106201,
+    "v1": "self.ax_markers = list()",
+    "v2": "self.perc = 0.01",
+    "resolution": "self.perc = 0.01         self.ax_markers = list()",
+    "conflict": "self.ax_markers = list()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106202,
+    "v1": "self.lines = list()         self.ax_markers = list()",
+    "v2": "",
+    "resolution": "self.lines = list()        self.ax_markers = list()",
+    "conflict": "self.lines = list()         self.ax_markers = list()"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106203,
+    "v1": "import warnings",
+    "v2": "from matplotlib import pyplot as plt",
+    "resolution": "from matplotlib import pyplot as plt import warnings",
+    "conflict": "import warnings"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106205,
+    "v1": "self.perc = 0.01",
+    "v2": "self.ax_markers = list()",
+    "resolution": "self.ax_markers = list()         self.perc = 0.01",
+    "conflict": "self.perc = 0.01"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106206,
+    "v1": "",
+    "v2": "self.lines = list()         self.ax_markers = list()",
+    "resolution": "self.lines = list()        self.ax_markers = list()",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106207,
+    "v1": "self.events.axes_changed.connect(self._replot)",
+    "v2": "self.events.data_changed.connect(self.update_plot)",
+    "resolution": "self.events.data_changed.connect(self.update_plot)         self.events.axes_changed.connect(self._replot)",
+    "conflict": "self.events.axes_changed.connect(self._replot)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106212,
+    "v1": "[2, 2, 2, 0]],",
+    "v2": "[2, 2, 2, 0]],",
+    "resolution": "[2, 2, 2, 0]],",
+    "conflict": "[2, 2, 2, 0]],"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106213,
+    "v1": "[2, 2, 2, 0]],",
+    "v2": "[2, 2, 2, 0]],",
+    "resolution": "[2, 2, 2, 0]],",
+    "conflict": "[2, 2, 2, 0]],"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106217,
+    "v1": "[2, 2, 2, 0]],",
+    "v2": "[2, 2, 2, 0]],",
+    "resolution": "[2, 2, 2, 0]],",
+    "conflict": "[2, 2, 2, 0]],"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106218,
+    "v1": "[2, 2, 2, 0]],",
+    "v2": "[2, 2, 2, 0]],",
+    "resolution": "[2, 2, 2, 0]],",
+    "conflict": "[2, 2, 2, 0]],"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106236,
+    "v1": "s.mapped_parameters.title = \"Simple arctan fit\"",
+    "v2": "s.metadata.General.title = \"Simple arctan fit\"",
+    "resolution": "s.metadata.General.title = \"Simple arctan fit\"",
+    "conflict": "s.mapped_parameters.title = \"Simple arctan fit\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106238,
+    "v1": "s.metadata.title = self.name.replace(",
+    "v2": "s.metadata.General.title = self.name.replace(",
+    "resolution": "s.metadata.General.title = self.name.replace(",
+    "conflict": "s.metadata.title = self.name.replace("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106239,
+    "v1": "def estimate_parameters(self, signal, E1, E2, only_current=False):",
+    "v2": "def estimate_parameters(self, signal, x1, x2, only_current=False):",
+    "resolution": "def estimate_parameters(self, signal, x1, x2, only_current=False):",
+    "conflict": "def estimate_parameters(self, signal, E1, E2, only_current=False):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106244,
+    "v1": "",
+    "v2": "if binned is True:                 self.coefficients.map[\"values\"] /= axis.scale",
+    "resolution": "if binned is True:                self.coefficients.map[\"values\"] /= axis.scale",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106246,
+    "v1": "A = k * I2 / (x2 ** k - E3 ** k)",
+    "v2": "A = k * I2 / (x2 ** k - x3 ** k)",
+    "resolution": "A = k * I2 / (x2 ** k - x3 ** k)",
+    "conflict": "A = k * I2 / (x2 ** k - E3 ** k)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106247,
+    "v1": "'plasmon_linewidth'])",
+    "v2": "'fwhm'])",
+    "resolution": "'fwhm'])",
+    "conflict": "'plasmon_linewidth'])"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106251,
+    "v1": "from hyperspy.misc.eds.elements import elements as elements_db",
+    "v2": "from hyperspy.misc.elements import elements as elements_db",
+    "resolution": "from hyperspy.misc.elements import elements as elements_db",
+    "conflict": "from hyperspy.misc.eds.elements import elements as elements_db"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106256,
+    "v1": "`metadata.Sample.Xray_lines`",
+    "v2": "`metadata.Sample.xray_lines`",
+    "resolution": "`metadata.Sample.xray_lines`",
+    "conflict": "`metadata.Sample.Xray_lines`"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106258,
+    "v1": "if (elements_db[element]['Xray_energy'][subshell] >",
+    "v2": "if (elements_db[element]['Atomic_properties']['Xray_lines'][subshell]['energy (keV)'] >",
+    "resolution": "if (elements_db[element]['Atomic_properties']['Xray_lines'][subshell]['energy (keV)'] >",
+    "conflict": "if (elements_db[element]['Xray_energy'][subshell] >"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106261,
+    "v1": "if (elements_db[element]['Xray_energy'][subshell] <",
+    "v2": "if (elements_db[element]['Atomic_properties']['Xray_lines'][subshell]['energy (keV)'] <",
+    "resolution": "if (elements_db[element]['Atomic_properties']['Xray_lines'][subshell]['energy (keV)'] <",
+    "conflict": "if (elements_db[element]['Xray_energy'][subshell] <"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106268,
+    "v1": "self.metadata.title))",
+    "v2": "self.metadata.General.title))",
+    "resolution": "self.metadata.General.title))",
+    "conflict": "self.metadata.title))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106269,
+    "v1": "'SEM.EDS.azimuth_angle' and 'SEM.EDS.elevation_angle'",
+    "v2": "'Acquisition_instrument.SEM.Detector.EDS.azimuth_angle' and 'SEM.Detector.EDS.elevation_angle'",
+    "resolution": "'Acquisition_instrument.SEM.Detector.EDS.azimuth_angle' and 'SEM.Detector.EDS.elevation_angle'",
+    "conflict": "'SEM.EDS.azimuth_angle' and 'SEM.EDS.elevation_angle'"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106276,
+    "v1": "mp_mic = self.metadata.SEM",
+    "v2": "md = self.metadata",
+    "resolution": "md = self.metadata",
+    "conflict": "mp_mic = self.metadata.SEM"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106283,
+    "v1": "mp_mic = self.metadata.TEM",
+    "v2": "md = self.metadata",
+    "resolution": "md = self.metadata",
+    "conflict": "mp_mic = self.metadata.TEM"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106291,
+    "v1": "I0 = self.isig[:threshold].integrate_simpson(-1)",
+    "v2": "I0 = self.isig[:threshold].integrate1D(-1)",
+    "resolution": "I0 = self.isig[:threshold].integrate1D(-1)",
+    "conflict": "I0 = self.isig[:threshold].integrate_simpson(-1)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106294,
+    "v1": "I0 = zlp.integrate_simpson(axis.index_in_array).data",
+    "v2": "I0 = zlp.integrate1D(axis.index_in_array).data",
+    "resolution": "I0 = zlp.integrate1D(axis.index_in_array).data",
+    "conflict": "I0 = zlp.integrate_simpson(axis.index_in_array).data"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106298,
+    "v1": "ds.metadata.title += (",
+    "v2": "ds.metadata.General.title += (",
+    "resolution": "ds.metadata.General.title += (",
+    "conflict": "ds.metadata.title += ("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106305,
+    "v1": "s.metadata.title += (",
+    "v2": "s.metadata.General.title += (",
+    "resolution": "s.metadata.General.title += (",
+    "conflict": "s.metadata.title += ("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106306,
+    "v1": "e0 = s.metadata.TEM.beam_energy",
+    "v2": "e0 = s.metadata.Acquisition_instrument.TEM.beam_energy",
+    "resolution": "e0 = s.metadata.Acquisition_instrument.TEM.beam_energy",
+    "conflict": "e0 = s.metadata.TEM.beam_energy"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106307,
+    "v1": "beta = s.metadata.TEM.EELS.collection_angle",
+    "v2": "beta = s.metadata.Acquisition_instrument.TEM.Detector.EELS.collection_angle",
+    "resolution": "beta = s.metadata.Acquisition_instrument.TEM.Detector.EELS.collection_angle",
+    "conflict": "beta = s.metadata.TEM.EELS.collection_angle"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106308,
+    "v1": "i0 = zlp.data.sum(axis.index_in_array)",
+    "v2": "i0 = zlp.integrate1D(axis.index_in_axes_manager).data",
+    "resolution": "i0 = zlp.integrate1D(axis.index_in_axes_manager).data",
+    "conflict": "i0 = zlp.data.sum(axis.index_in_array)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106309,
+    "v1": "sp.metadata.title += (",
+    "v2": "sp.metadata.General.title += (",
+    "resolution": "sp.metadata.General.title += (",
+    "conflict": "sp.metadata.title += ("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106314,
+    "v1": "im.metadata.record_by = \"image\"",
+    "v2": "im.metadata.Signal.record_by = \"image\"",
+    "resolution": "im.metadata.Signal.record_by = \"image\"",
+    "conflict": "im.metadata.record_by = \"image\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106316,
+    "v1": "s.metadata.title = self.name",
+    "v2": "s.metadata.General.title = self.name",
+    "resolution": "s.metadata.General.title = self.name",
+    "conflict": "s.metadata.title = self.name"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106322,
+    "v1": "im.metadata.title = spectra.metadata.title",
+    "v2": "im.metadata.General.title = spectra.metadata.General.title",
+    "resolution": "im.metadata.General.title = spectra.metadata.General.title",
+    "conflict": "im.metadata.title = spectra.metadata.title"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106323,
+    "v1": "the spectra can have diffent size and axes.",
+    "v2": "the spectra can have different size and axes.",
+    "resolution": "the spectra can have different size and axes.",
+    "conflict": "the spectra can have diffent size and axes."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106324,
+    "v1": "displayed. If 'auto', the title of each spectra (metadata.title)",
+    "v2": "displayed. If 'auto', the title of each spectra (metadata.General.title)",
+    "resolution": "displayed. If 'auto', the title of each spectra (metadata.General.title)",
+    "conflict": "displayed. If 'auto', the title of each spectra (metadata.title)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106326,
+    "v1": "legend = [spec.metadata.title for spec in spectra]",
+    "v2": "legend = [spec.metadata.General.title for spec in spectra]",
+    "resolution": "legend = [spec.metadata.General.title for spec in spectra]",
+    "conflict": "legend = [spec.metadata.title for spec in spectra]"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106327,
+    "v1": "(metadata.title) is used.",
+    "v2": "(metadata.General.title) is used.",
+    "resolution": "(metadata.General.title) is used.",
+    "conflict": "(metadata.title) is used."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106330,
+    "v1": "color=np.array(self.line_color.Get()) / 255.,",
+    "v2": "color=np.array(self.line_color_rgb) / 255.,",
+    "resolution": "color=np.array(self.line_color_rgb) / 255.,",
+    "conflict": "color=np.array(self.line_color.Get()) / 255.,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106331,
+    "v1": "color=np.array(self.line_color.Get()) / 255.,",
+    "v2": "color=np.array(self.line_color_rgb) / 255.,",
+    "resolution": "color=np.array(self.line_color_rgb) / 255.,",
+    "conflict": "color=np.array(self.line_color.Get()) / 255.,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106333,
+    "v1": "signal.metadata.title = \\",
+    "v2": "signal.metadata.General.title = \\",
+    "resolution": "signal.metadata.General.title = \\",
+    "conflict": "signal.metadata.title = \\"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106337,
+    "v1": "mp['original_filename'] = os.path.split(filename)[1]",
+    "v2": "mp['General']['original_filename'] = os.path.split(filename)[1]",
+    "resolution": "mp['General']['original_filename'] = os.path.split(filename)[1]",
+    "conflict": "mp['original_filename'] = os.path.split(filename)[1]"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106342,
+    "v1": "version = \"1.1\"",
+    "v2": "version = \"1.2\"",
+    "resolution": "version = \"1.2\"",
+    "conflict": "version = \"1.1\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106345,
+    "v1": "global latest_file_version",
+    "v2": "global default_version",
+    "resolution": "global default_version",
+    "conflict": "global latest_file_version"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106349,
+    "v1": "if isinstance(value, np.string_):",
+    "v2": "if isinstance(value, (np.string_, str)):",
+    "resolution": "if isinstance(value, (np.string_, str)):",
+    "conflict": "if isinstance(value, np.string_):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106355,
+    "v1": "'TITLE': {'dtype': unicode, 'mapped_to': 'title'},",
+    "v2": "'TITLE': {'dtype': unicode, 'mapped_to': 'General.title'},",
+    "resolution": "'TITLE': {'dtype': unicode, 'mapped_to': 'General.title'},",
+    "conflict": "'TITLE': {'dtype': unicode, 'mapped_to': 'title'},"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106356,
+    "v1": "'signal_type'},",
+    "v2": "'Signal.signal_type'},",
+    "resolution": "'Signal.signal_type'},",
+    "conflict": "'signal_type'},"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106358,
+    "v1": "'TEM.convergence_angle'},",
+    "v2": "'Acquisition_instrument.TEM.convergence_angle'},",
+    "resolution": "'Acquisition_instrument.TEM.convergence_angle'},",
+    "conflict": "'TEM.convergence_angle'},"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106359,
+    "v1": "'TEM.tilt_stage'},",
+    "v2": "'Acquisition_instrument.TEM.tilt_stage'},",
+    "resolution": "'Acquisition_instrument.TEM.tilt_stage'},",
+    "conflict": "'TEM.tilt_stage'},"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106362,
+    "v1": "'TEM.EDS.EDS_det'},",
+    "v2": "'Acquisition_instrument.TEM.Detector.EDS.EDS_det'},",
+    "resolution": "'Acquisition_instrument.TEM.Detector.EDS.EDS_det'},",
+    "conflict": "'TEM.EDS.EDS_det'},"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106364,
+    "v1": "if hasattr(signal.metadata, \"date\"):",
+    "v2": "if signal.metadata.has_item(\"General.date\"):",
+    "resolution": "if signal.metadata.has_item(\"General.date\"):",
+    "conflict": "if hasattr(signal.metadata, \"date\"):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106365,
+    "v1": "'SIGNALTYPE': signal.metadata.signal_type,",
+    "v2": "'SIGNALTYPE': signal.metadata.Signal.signal_type,",
+    "resolution": "'SIGNALTYPE': signal.metadata.Signal.signal_type,",
+    "conflict": "'SIGNALTYPE': signal.metadata.signal_type,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106366,
+    "v1": "if 'SEM' in signal.metadata.signal_type:",
+    "v2": "if 'SEM' in signal.metadata.Signal.signal_type:",
+    "resolution": "if 'SEM' in signal.metadata.Signal.signal_type:",
+    "conflict": "if 'SEM' in signal.metadata.signal_type:"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106374,
+    "v1": "def file_writer(filename, signal, **kwds):",
+    "v2": "def file_writer(filename, signal, _rescale=True, **kwds):",
+    "resolution": "def file_writer(filename, signal, **kwds):",
+    "conflict": "def file_writer(filename, signal, **kwds):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106377,
+    "v1": "self.metadata._internal_parameters.folding",
+    "v2": "self.metadata._HyperSpy.Folding",
+    "resolution": "self.metadata._HyperSpy.Folding",
+    "conflict": "self.metadata._internal_parameters.folding"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106378,
+    "v1": "sc.metadata.title += signal_name",
+    "v2": "sc.metadata.General.title += signal_name",
+    "resolution": "sc.metadata.General.title += signal_name",
+    "conflict": "sc.metadata.title += signal_name"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106379,
+    "v1": "rec.residual = rec.copy()         rec.residual.data = self.data - rec.data",
+    "v2": "",
+    "resolution": "",
+    "conflict": "rec.residual = rec.copy()         rec.residual.data = self.data - rec.data"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106380,
+    "v1": "s.metadata.title = self.metadata.title + \\",
+    "v2": "s.metadata.General.title = self.metadata.General.title + \\",
+    "resolution": "s.metadata.General.title = self.metadata.General.title + \\",
+    "conflict": "s.metadata.title = self.metadata.title + \\"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106381,
+    "v1": "from hyperspy.misc.eds.elements import elements as elements_db",
+    "v2": "from hyperspy.misc.elements import elements as elements_db",
+    "resolution": "from hyperspy.misc.elements import elements as elements_db",
+    "conflict": "from hyperspy.misc.eds.elements import elements as elements_db"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106385,
+    "v1": "elif subshell not in elements[element]['subshells']:",
+    "v2": "elif subshell not in elements[element]['Atomic_properties']['Binding_energies']:",
+    "resolution": "elif subshell not in elements[element]['Atomic_properties']['Binding_energies']:",
+    "conflict": "elif subshell not in elements[element]['subshells']:"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106386,
+    "v1": "str(elements[element]['subshells'].keys()))",
+    "v2": "str(elements[element]['Atomic_properties']['subshells'].keys()))",
+    "resolution": "str(elements[element]['Atomic_properties']['subshells'].keys()))",
+    "conflict": "str(elements[element]['subshells'].keys()))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106387,
+    "v1": "elements[element]['subshells'][subshell]['filename'])",
+    "v2": "elements[element]['Atomic_properties']['Binding_energies'][subshell]['filename'])",
+    "resolution": "elements[element]['Atomic_properties']['Binding_energies'][subshell]['filename'])",
+    "conflict": "elements[element]['subshells'][subshell]['filename'])"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106392,
+    "v1": "e0 = s.metadata.TEM.beam_energy",
+    "v2": "e0 = s.metadata.Acquisition_instrument.TEM.beam_energy",
+    "resolution": "e0 = s.metadata.Acquisition_instrument.TEM.beam_energy",
+    "conflict": "e0 = s.metadata.TEM.beam_energy"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106393,
+    "v1": "beta = s.metadata.TEM.EELS.collection_angle",
+    "v2": "beta = s.metadata.Acquisition_instrument.TEM.Detector.EELS.collection_angle",
+    "resolution": "beta = s.metadata.Acquisition_instrument.TEM.Detector.EELS.collection_angle",
+    "conflict": "beta = s.metadata.TEM.EELS.collection_angle"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106394,
+    "v1": "k.metadata.title = \"EELS proportionality constant K\"",
+    "v2": "k.metadata.General.title = \"EELS proportionality constant K\"",
+    "resolution": "k.metadata.General.title = \"EELS proportionality constant K\"",
+    "conflict": "k.metadata.title = \"EELS proportionality constant K\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106402,
+    "v1": "offset = self.cz_lsm_info['offset_'+name]",
+    "v2": "offset = self.cz_lsm_info[\"offset_\" + name]",
+    "resolution": "offset = self.cz_lsm_info['offset_'+name]",
+    "conflict": "offset = self.cz_lsm_info['offset_'+name]"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106403,
+    "v1": "setattr(self, 'cz_lsm_'+name, reader(fh, byteorder))",
+    "v2": "setattr(self, \"cz_lsm_\" + name, reader(fd, byte_order))",
+    "resolution": "setattr(self, 'cz_lsm_'+name, reader(fh, byteorder))",
+    "conflict": "setattr(self, 'cz_lsm_'+name, reader(fh, byteorder))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106411,
+    "v1": "fmt = '%s%i%s' % (byteorder, count*int(dtype[0]), dtype[1])",
+    "v2": "fmt = '%s%i%s' % (byte_order, count * int(dtype[0]), dtype[1])",
+    "resolution": "fmt = '%s%i%s' % (byteorder, count*int(dtype[0]), dtype[1])",
+    "conflict": "fmt = '%s%i%s' % (byteorder, count*int(dtype[0]), dtype[1])"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106414,
+    "v1": "return numpy_fromfile(fh, byteorder+dtype[-1], count).tostring()",
+    "v2": "return numpy.fromfile(fd, byte_order + dtype[-1], count).tostring()",
+    "resolution": "return numpy_fromfile(fh, byteorder+dtype[-1], count).tostring()",
+    "conflict": "return numpy_fromfile(fh, byteorder+dtype[-1], count).tostring()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106416,
+    "v1": "return numpy_fromfile(fh, byteorder+'8f8', 1)[0]",
+    "v2": "return numpy.fromfile(fd, byte_order + '8f8', 1)[0]",
+    "resolution": "return numpy_fromfile(fh, byteorder+'8f8', 1)[0]",
+    "conflict": "return numpy_fromfile(fh, byteorder+'8f8', 1)[0]"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106418,
+    "v1": "values = numpy_fromfile(fh, byteorder+'I', 6*count)",
+    "v2": "values = numpy.fromfile(fd, byte_order + 'I', 6 * count)",
+    "resolution": "values = numpy_fromfile(fh, byteorder+'I', 6*count)",
+    "conflict": "values = numpy_fromfile(fh, byteorder+'I', 6*count)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106419,
+    "v1": "t = numpy_fromfile(fh, byteorder+'I', 2*count)",
+    "v2": "t = numpy.fromfile(fd, byte_order + 'I', 2 * count)",
+    "resolution": "t = numpy_fromfile(fh, byteorder+'I', 2*count)",
+    "conflict": "t = numpy_fromfile(fh, byteorder+'I', 2*count)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106420,
+    "v1": "t = struct.unpack(byteorder + 'hI'*count, fh.read(6*count))",
+    "v2": "t = struct.unpack(byte_order + 'hI' * count, fd.read(6 * count))",
+    "resolution": "t = struct.unpack(byteorder + 'hI'*count, fh.read(6*count))",
+    "conflict": "t = struct.unpack(byteorder + 'hI'*count, fh.read(6*count))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106423,
+    "v1": "if 0x10000000 != struct.unpack(byteorder+\"I\", fh.read(4))[0]:",
+    "v2": "if 0x10000000 != struct.unpack(byte_order + \"I\", fd.read(4))[0]:",
+    "resolution": "if 0x10000000 != struct.unpack(byteorder+\"I\", fh.read(4))[0]:",
+    "conflict": "if 0x10000000 != struct.unpack(byteorder+\"I\", fh.read(4))[0]:"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106424,
+    "v1": "entry, dtype, size = unpack(byteorder+\"III\", fh.read(12))",
+    "v2": "entry, dtype, size = unpack(byte_order + \"III\", fd.read(12))",
+    "resolution": "entry, dtype, size = unpack(byteorder+\"III\", fh.read(12))",
+    "conflict": "entry, dtype, size = unpack(byteorder+\"III\", fh.read(12))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106433,
+    "v1": "",
+    "v2": "# 37510: ('user_comment', None, None, None, None),     33432: ('copyright', None, 1, None, None),",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106437,
+    "v1": "",
+    "v2": "axis_input = copy.deepcopy(axis)",
+    "resolution": "axis_input = copy.deepcopy(axis)",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106448,
+    "v1": "return sum_",
+    "v2": "to_return = sum_",
+    "resolution": "to_return = sum_",
+    "conflict": "return sum_"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106459,
+    "v1": "\"If you require boundinig please select one of the \"",
+    "v2": "\"If you require bounding please select one of the \"",
+    "resolution": "\"If you require bounding please select one of the \"",
+    "conflict": "\"If you require boundinig please select one of the \""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106463,
+    "v1": "return(spectra)",
+    "v2": "return spectra",
+    "resolution": "return spectra",
+    "conflict": "return(spectra)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106475,
+    "v1": "signal.set_signal_origin(self.metadata.signal_origin)",
+    "v2": "signal.set_signal_origin(self.metadata.Signal.signal_origin)",
+    "resolution": "signal.set_signal_origin(self.metadata.Signal.signal_origin)",
+    "conflict": "signal.set_signal_origin(self.metadata.signal_origin)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106491,
+    "v1": "folding = self.metadata._internal_parameters.folding",
+    "v2": "folding = self.metadata._HyperSpy.Folding",
+    "resolution": "folding = self.metadata._HyperSpy.Folding",
+    "conflict": "folding = self.metadata._internal_parameters.folding"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106492,
+    "v1": "folding = self.metadata._internal_parameters.folding",
+    "v2": "folding = self.metadata._HyperSpy.Folding",
+    "resolution": "folding = self.metadata._HyperSpy.Folding",
+    "conflict": "folding = self.metadata._internal_parameters.folding"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106493,
+    "v1": "self.metadata.record_by = self._record_by",
+    "v2": "self.metadata.Signal.record_by = self._record_by",
+    "resolution": "self.metadata.Signal.record_by = self._record_by",
+    "conflict": "self.metadata.record_by = self._record_by"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106499,
+    "v1": "sp.metadata.record_by = \"spectrum\"",
+    "v2": "sp.metadata.Signal.record_by = \"spectrum\"",
+    "resolution": "sp.metadata.Signal.record_by = \"spectrum\"",
+    "conflict": "sp.metadata.record_by = \"spectrum\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106500,
+    "v1": "im.metadata.record_by = \"image\"",
+    "v2": "im.metadata.Signal.record_by = \"image\"",
+    "resolution": "im.metadata.Signal.record_by = \"image\"",
+    "conflict": "im.metadata.record_by = \"image\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106502,
+    "v1": "self.metadata.signal_type = signal_type",
+    "v2": "self.metadata.Signal.signal_type = signal_type",
+    "resolution": "self.metadata.Signal.signal_type = signal_type",
+    "conflict": "self.metadata.signal_type = signal_type"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106503,
+    "v1": "self.metadata.signal_origin = origin",
+    "v2": "self.metadata.Signal.signal_origin = origin",
+    "resolution": "self.metadata.Signal.signal_origin = origin",
+    "conflict": "self.metadata.signal_origin = origin"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106509,
+    "v1": "assert_equal(mp.SEM.EDS.energy_resolution_MnKa,",
+    "v2": "assert_equal(mp.Acquisition_instrument.SEM.Detector.EDS.energy_resolution_MnKa,",
+    "resolution": "assert_equal(mp.Acquisition_instrument.SEM.Detector.EDS.energy_resolution_MnKa,",
+    "conflict": "assert_equal(mp.SEM.EDS.energy_resolution_MnKa,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106513,
+    "v1": "s.metadata.SEM.beam_energy = 5.0",
+    "v2": "s.metadata.Acquisition_instrument.SEM.beam_energy = 5.0",
+    "resolution": "s.metadata.Acquisition_instrument.SEM.beam_energy = 5.0",
+    "conflict": "s.metadata.SEM.beam_energy = 5.0"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106519,
+    "v1": "assert_equal(mp.TEM.EDS.energy_resolution_MnKa,",
+    "v2": "assert_equal(mp.Acquisition_instrument.TEM.Detector.EDS.energy_resolution_MnKa,",
+    "resolution": "assert_equal(mp.Acquisition_instrument.TEM.Detector.EDS.energy_resolution_MnKa,",
+    "conflict": "assert_equal(mp.TEM.EDS.energy_resolution_MnKa,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106521,
+    "v1": "self.signal = signals.Signal(",
+    "v2": "self.signal = signals.Spectrum(",
+    "resolution": "self.signal = signals.Spectrum(",
+    "conflict": "self.signal = signals.Signal("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106522,
+    "v1": "assert_equal(s.metadata.signal_type, \"EELS\")",
+    "v2": "assert_equal(s.metadata.Signal.signal_type, \"EELS\")",
+    "resolution": "assert_equal(s.metadata.Signal.signal_type, \"EELS\")",
+    "conflict": "assert_equal(s.metadata.signal_type, \"EELS\")"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106531,
+    "v1": "(options stored in 'metadata.stacking_history'",
+    "v2": "(options stored in 'metadata._HyperSpy.Stacking_history'",
+    "resolution": "(options stored in 'metadata._HyperSpy.Stacking_history'",
+    "conflict": "(options stored in 'metadata.stacking_history'"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106544,
+    "v1": "is raised.",
+    "v2": "is raised. The component can be specified by name, index or itself.",
+    "resolution": "is raised. The component can be specified by name, index or itself.",
+    "conflict": "is raised."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106545,
+    "v1": "",
+    "v2": "component = self._get_component(component)",
+    "resolution": "component = self._get_component(component)",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106558,
+    "v1": "if (elements_db[element]['Xray_lines'][subshell]['energy'] >",
+    "v2": "if (elements_db[element]['Xray_energy'][subshell] >",
+    "resolution": "if (elements_db[element]['Xray_lines'][subshell]['energy'] >",
+    "conflict": "if (elements_db[element]['Xray_lines'][subshell]['energy'] >"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106559,
+    "v1": "if (elements_db[element]['Xray_lines'][subshell]['energy'] <",
+    "v2": "if (elements_db[element]['Xray_energy'][subshell] <",
+    "resolution": "if (elements_db[element]['Xray_lines'][subshell]['energy'] <",
+    "conflict": "if (elements_db[element]['Xray_lines'][subshell]['energy'] <"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106564,
+    "v1": "",
+    "v2": "# m.ax.figure.canvas.draw()             self.ax.hspy_fig._draw_animated()",
+    "resolution": "# m.ax.figure.canvas.draw()            self.ax.hspy_fig._draw_animated()",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106570,
+    "v1": "dimension, knot_position)",
+    "v2": "dimension, knot_position)",
+    "resolution": "dimension, knot_position)",
+    "conflict": "dimension, knot_position)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106574,
+    "v1": "param._bounds))",
+    "v2": "param._bounds))",
+    "resolution": "param._bounds))",
+    "conflict": "param._bounds))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106576,
+    "v1": "def __call__(self, non_convolved=False, onlyactive=False) :",
+    "v2": "def __call__(self, non_convolved=False, onlyactive=False):",
+    "resolution": "def __call__(self, non_convolved=False, onlyactive=False) :",
+    "conflict": "def __call__(self, non_convolved=False, onlyactive=False) :"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106581,
+    "v1": "return [0, self._jacobian(p,y).T]",
+    "v2": "return [0, self._jacobian(p, y).T]",
+    "resolution": "return [0, self._jacobian(p,y).T]",
+    "conflict": "return [0, self._jacobian(p,y).T]"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106593,
+    "v1": "def load_parameters_from_file(self,filename):",
+    "v2": "def load_parameters_from_file(self, filename):",
+    "resolution": "def load_parameters_from_file(self,filename):",
+    "conflict": "def load_parameters_from_file(self,filename):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106594,
+    "v1": "self._disconnect_parameters2update_plot)",
+    "v2": "self._disconnect_parameters2update_plot)",
+    "resolution": "self._disconnect_parameters2update_plot)",
+    "conflict": "self._disconnect_parameters2update_plot)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106595,
+    "v1": "self.disable_plot_components)",
+    "v2": "self.disable_plot_components)",
+    "resolution": "self.disable_plot_components)",
+    "conflict": "self.disable_plot_components)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106597,
+    "v1": "def plot_results(self, only_free=True, only_active = True):",
+    "v2": "def plot_results(self, only_free=True, only_active=True):",
+    "resolution": "def plot_results(self, only_free=True, only_active = True):",
+    "conflict": "def plot_results(self, only_free=True, only_active = True):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106598,
+    "v1": "self._plot.is_active() is False):",
+    "v2": "self._plot.is_active() is False):",
+    "resolution": "self._plot.is_active() is False):",
+    "conflict": "self._plot.is_active() is False):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106600,
+    "v1": "\"\"\"",
+    "v2": "",
+    "resolution": "",
+    "conflict": "\"\"\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106612,
+    "v1": "bins : int or list or str, optional",
+    "v2": "bins : int or list or str, optional.",
+    "resolution": "bins : int or list or str, optional",
+    "conflict": "bins : int or list or str, optional"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106613,
+    "v1": "range_bins : tuple or None, optional",
+    "v2": "range_bins : tuple or None, optional.",
+    "resolution": "range_bins : tuple or None, optional.",
+    "conflict": "range_bins : tuple or None, optional"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106619,
+    "v1": "",
+    "v2": "if legend_picking is True:                 animate_legend(figure=fig)",
+    "resolution": "if legend_picking is True:                animate_legend(figure=fig)",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106620,
+    "v1": "",
+    "v2": "if legend_picking is True:                 animate_legend(figure=fig)",
+    "resolution": "if legend_picking is True:                animate_legend(figure=fig)",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106623,
+    "v1": "\"\"\"Rough estimation of the elastic scattering intensity by",
+    "v2": "\"\"\"Rough estimation of the elastic scattering intensity by",
+    "resolution": "\"\"\"Rough estimation of the elastic scattering intensity by",
+    "conflict": "\"\"\"Rough estimation of the elastic scattering intensity by"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106624,
+    "v1": "",
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106637,
+    "v1": "def _spikes_diagnosis(self, signal_mask=None,",
+    "v2": "def _spikes_diagnosis(self, signal_mask=None,",
+    "resolution": "def _spikes_diagnosis(self, signal_mask=None,",
+    "conflict": "def _spikes_diagnosis(self, signal_mask=None,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106640,
+    "v1": "",
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106646,
+    "v1": "self.data = file_data_dict['data']",
+    "v2": "self.data = np.asanyarray(file_data_dict['data'])",
+    "resolution": "self.data = np.asanyarray(file_data_dict['data'])",
+    "conflict": "self.data = file_data_dict['data']"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106709,
+    "v1": "from hyperspy.misc import rgb_tools",
+    "v2": "from hyperspy.drawing.figure import BlittedFigure",
+    "resolution": "from hyperspy.drawing.figure import BlittedFigure from hyperspy.misc import rgb_tools",
+    "conflict": "from hyperspy.misc import rgb_tools"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106717,
+    "v1": "info.object.image.update_image(auto_contrast=True)",
+    "v2": "info.object.image.update(auto_contrast=True)",
+    "resolution": "info.object.image.update(auto_contrast=True)",
+    "conflict": "info.object.image.update_image(auto_contrast=True)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106718,
+    "v1": "self.image.update_image(auto_contrast=False)",
+    "v2": "self.image.update(auto_contrast=False)",
+    "resolution": "self.image.update(auto_contrast=False)",
+    "conflict": "self.image.update_image(auto_contrast=False)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106719,
+    "v1": "self.image.update_image(auto_contrast=False)",
+    "v2": "self.image.update(auto_contrast=False)",
+    "resolution": "self.image.update(auto_contrast=False)",
+    "conflict": "self.image.update_image(auto_contrast=False)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106720,
+    "v1": "",
+    "v2": "f.attrs['file_format'] = \"Hyperspy\"         f.attrs['file_format_version'] = version",
+    "resolution": "f.attrs['file_format'] = \"Hyperspy\"        f.attrs['file_format_version'] = version",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106722,
+    "v1": "raise ImportError",
+    "v2": "no_netcdf = True",
+    "resolution": "no_netcdf = True",
+    "conflict": "raise ImportError"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106747,
+    "v1": "if nav_dim == 2:",
+    "v2": "if nav_dim >= 2:",
+    "resolution": "if nav_dim >= 2:",
+    "conflict": "if nav_dim == 2:"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106751,
+    "v1": "self._close_pointer)",
+    "v2": "self._disconnect)",
+    "resolution": "self._disconnect)",
+    "conflict": "self._close_pointer)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106752,
+    "v1": "self._close_pointer()",
+    "v2": "self._disconnect()",
+    "resolution": "self._disconnect()",
+    "conflict": "self._close_pointer()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106755,
+    "v1": "self._close_pointer()",
+    "v2": "self._disconnect()",
+    "resolution": "self._disconnect()",
+    "conflict": "self._close_pointer()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106762,
+    "v1": "'key_press_event', self.key2switch_right_pointer)",
+    "v2": "'key_press_event', self.key2switch_right_pointer)",
+    "resolution": "'key_press_event', self.key2switch_right_pointer)",
+    "conflict": "'key_press_event', self.key2switch_right_pointer)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106784,
+    "v1": "cslice = [slice(None),] * len(self.axes)",
+    "v2": "cslice = [slice(None),] * len(self._axes)",
+    "resolution": "cslice = [slice(None),] * len(self._axes)",
+    "conflict": "cslice = [slice(None),] * len(self.axes)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106785,
+    "v1": "cslice = [slice(None),] * len(self.axes)",
+    "v2": "cslice = [slice,] * len(self._axes)",
+    "resolution": "cslice = [slice(None),] * len(self.axes)",
+    "conflict": "cslice = [slice(None),] * len(self.axes)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106786,
+    "v1": "# Create a line in the left axis with the default coordinates",
+    "v2": "# Create a line to the left axis with the default indices",
+    "resolution": "# Create a line to the left axis with the default indices",
+    "conflict": "# Create a line in the left axis with the default coordinates"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 106796,
+    "v1": "coordinates = np.array(self.axes_manager.coordinates)",
+    "v2": "coordinates = np.array(self.axes_manager.coordinates[::-1])[:2]",
+    "resolution": "coordinates = np.array(self.axes_manager.coordinates[:2])",
+    "conflict": "coordinates = np.array(self.axes_manager.coordinates)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106813,
+    "v1": "self._plot.navigator_data_function = get_explorer_wrapper_3D",
+    "v2": "self._plot.navigator_data_function = get_explorer_wrapper_3D",
+    "resolution": "self._plot.navigator_data_function = get_explorer_wrapper_3D",
+    "conflict": "self._plot.navigator_data_function = get_explorer_wrapper_3D"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106815,
+    "v1": "def plot(self, axes_manager=None, navigator=None):",
+    "v2": "def plot(self, axes_manager=None, navigator=\"auto\"):",
+    "resolution": "def plot(self, axes_manager=None, navigator=\"auto\"):",
+    "conflict": "def plot(self, axes_manager=None, navigator=None):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106824,
+    "v1": "",
+    "v2": "",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106853,
+    "v1": "return load_with_reader(filename, reader, **kwds)",
+    "v2": "return load_with_reader(filename, reader, record_by, **kwds)",
+    "resolution": "return load_with_reader(filename, reader, record_by, **kwds)",
+    "conflict": "return load_with_reader(filename, reader, **kwds)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106872,
+    "v1": "data.ravel().tofile(filename)",
+    "v2": "data_cube.ravel().tofile(filename)",
+    "resolution": "data.ravel().tofile(filename)",
+    "conflict": "data.ravel().tofile(filename)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106879,
+    "v1": "# tmpdata =  np.ndarray( (self.imbytes/4, ), 'float32',         #                        fmap.read(self.imbytes), order='C')",
+    "v2": "",
+    "resolution": "",
+    "conflict": "# tmpdata =  np.ndarray( (self.imbytes/4, ), 'float32',         #                        fmap.read(self.imbytes), order='C')"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 106883,
+    "v1": "version = '0.2.11'",
+    "v2": "version = '0.3.0a'",
+    "resolution": "version = '0.3.0a'",
+    "conflict": "version = '0.2.11'"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106884,
+    "v1": "def file_reader(filename, data_type=None, data_id=1, old=False):",
+    "v2": "def file_reader(filename, data_type=None, data_id=1, old = False):",
+    "resolution": "def file_reader(filename, data_type=None, data_id=1, old=False):",
+    "conflict": "def file_reader(filename, data_type=None, data_id=1, old=False):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106891,
+    "v1": "version = '0.3.0a'",
+    "v2": "version = '0.2.10'",
+    "resolution": "version = '0.3.0a'",
+    "conflict": "version = '0.3.0a'"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106893,
+    "v1": "version = '0.3.0a'",
+    "v2": "version = '0.2.9'",
+    "resolution": "version = '0.3.0a'",
+    "conflict": "version = '0.3.0a'"
+  }
+]}

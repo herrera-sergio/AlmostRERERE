@@ -1,0 +1,1554 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 2",
+    "id": 104957,
+    "v1": "The color for the widget. Any format that matplotlib uses should be ok. This will not change the color fo any widget passed with the 'widget' argument.",
+    "v2": "The color for the widget. Any format that matplotlib uses should be ok. This will not change the color for any widget passed with the 'widget' argument.",
+    "resolution": "The color for the widget. Any format that matplotlib uses should be ok. This will not change the color for any widget passed with the 'widget' argument.",
+    "conflict": "The color for the widget. Any format that matplotlib uses should be ok. This will not change the color fo any widget passed with the 'widget' argument."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 104959,
+    "v1": "the center of the circle are stored in the 'cx' and 'cy' parameters and the radius in the `r` parameter. If an internal radius is defined using the `r_inner` parameter, then an annular region is selected instead.",
+    "v2": "the center of the circle are stored in the 'cx' and 'cy' attributes. The radious in the `r` attribute. If an internal radius is defined using the `r_inner` attribute, then an annular region is selected instead.",
+    "resolution": "the center of the circle are stored in the 'cx' and 'cy' attributes. The radious in the `r` attribute. If an internal radius is defined using the `r_inner` attribute, then an annular region is selected instead.",
+    "conflict": "the center of the circle are stored in the 'cx' and 'cy' parameters and the radius in the `r` parameter. If an internal radius is defined using the `r_inner` parameter, then an annular region is selected instead."
+  },
+  {
+    "devdecision": "Combination",
+    "id": 104966,
+    "v1": "from hyperspy.misc.utils import is_binned # remove in v2.0  from distutils.version import LooseVersion",
+    "v2": "from packaging.version import Version import sympy",
+    "resolution": "from hyperspy.misc.utils import is_binned # remove in v2.0",
+    "conflict": "from hyperspy.misc.utils import is_binned # remove in v2.0  from distutils.version import LooseVersion"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 104991,
+    "v1": "**kwargs): super(BaseDataAxis, self).__init__()",
+    "v2": "is_binned=False): super().__init__()",
+    "resolution": "is_binned=False, **kwargs): super(BaseDataAxis, self).__init__()",
+    "conflict": "**kwargs): super(BaseDataAxis, self).__init__()"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105002,
+    "v1": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'y', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-1': {'_type': 'UniformDataAxis', 'name': 'x', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-2': {'_type': 'UniformDataAxis', 'name': 'X-ray energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False}",
+    "v2": "'axis-0': {'name': 'y', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-1': {'name': 'x', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-2': {'name': 'X-ray energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "resolution": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'y', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-1': {'_type': 'UniformDataAxis', 'name': 'x', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-2': {'_type': 'UniformDataAxis', 'name': 'X-ray energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "conflict": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'y', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-1': {'_type': 'UniformDataAxis', 'name': 'x', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-2': {'_type': 'UniformDataAxis', 'name': 'X-ray energy', 'scale': 0.00988676802994421, 'offset': -0.03634370080990722, 'size': 2048, 'units': 'keV', 'navigate': False}"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105004,
+    "v1": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'y', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-1': {'_type': 'UniformDataAxis', 'name': 'x', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-2': {'_type': 'UniformDataAxis', 'name': 'X-ray energy', 'scale': 0.009886797201840245, 'offset': -0.04478043655810262, 'size': 2048, 'units': 'keV', 'navigate': False}",
+    "v2": "'axis-0': {'name': 'y', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-1': {'name': 'x', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-2': {'name': 'X-ray energy', 'scale': 0.009886797201840245, 'offset': -0.04478043655810262, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "resolution": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'y', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-1': {'_type': 'UniformDataAxis', 'name': 'x', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-2': {'_type': 'UniformDataAxis', 'name': 'X-ray energy', 'scale': 0.009886797201840245, 'offset': -0.04478043655810262, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "conflict": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'y', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-1': {'_type': 'UniformDataAxis', 'name': 'x', 'scale': 1.2197240748650153, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-2': {'_type': 'UniformDataAxis', 'name': 'X-ray energy', 'scale': 0.009886797201840245, 'offset': -0.04478043655810262, 'size': 2048, 'units': 'keV', 'navigate': False}"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105009,
+    "v1": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'y', 'scale': 2.0301055702162967, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-1': {'_type': 'UniformDataAxis', 'name': 'x', 'scale': 2.0301055702162967, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-2': {'_type': 'UniformDataAxis', 'name': 'X-ray energy', 'scale': 0.009886797201840245, 'offset': -0.04478043655810262, 'size': 2048, 'units': 'keV', 'navigate': False}",
+    "v2": "'axis-0': {'name': 'y', 'scale': 2.0301055702162967, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-1': {'name': 'x', 'scale': 2.0301055702162967, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-2': {'name': 'X-ray energy', 'scale': 0.009886797201840245, 'offset': -0.04478043655810262, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "resolution": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'y', 'scale': 2.0301055702162967, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-1': {'_type': 'UniformDataAxis', 'name': 'x', 'scale': 2.0301055702162967, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True, 'is_binned': False}, 'axis-2': {'_type': 'UniformDataAxis', 'name': 'X-ray energy', 'scale': 0.009886797201840245, 'offset': -0.04478043655810262, 'size': 2048, 'units': 'keV', 'navigate': False, 'is_binned': True}",
+    "conflict": "'axis-0': {'_type': 'UniformDataAxis', 'name': 'y', 'scale': 2.0301055702162967, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-1': {'_type': 'UniformDataAxis', 'name': 'x', 'scale': 2.0301055702162967, 'offset': 0.0, 'size': 16, 'units': 'µm', 'navigate': True}, 'axis-2': {'_type': 'UniformDataAxis', 'name': 'X-ray energy', 'scale': 0.009886797201840245, 'offset': -0.04478043655810262, 'size': 2048, 'units': 'keV', 'navigate': False}"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105017,
+    "v1": "from hyperspy.axes import (DataAxis, UniformDataAxis, AxesManager, UnitConversion, _ureg) from hyperspy.misc.test_utils import assert_deep_almost_equal, assert_warns",
+    "v2": "from hyperspy.axes import AxesManager, DataAxis, UnitConversion, _ureg from hyperspy.misc.test_utils import assert_deep_almost_equal",
+    "resolution": "from hyperspy.axes import (DataAxis, UniformDataAxis, AxesManager, UnitConversion, _ureg) from hyperspy.misc.test_utils import assert_deep_almost_equal",
+    "conflict": "from hyperspy.axes import (DataAxis, UniformDataAxis, AxesManager, UnitConversion, _ureg) from hyperspy.misc.test_utils import assert_deep_almost_equal, assert_warns"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105019,
+    "v1": "self.draw_patch()",
+    "v2": "try: self.ax.figure.canvas.draw_idle() except BaseException:  # pragma: no cover # figure does not exist pass",
+    "resolution": "self.draw_patch()",
+    "conflict": "self.draw_patch()"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105023,
+    "v1": "return (np.argmax(np.correlate(ref, data, 'full')) - len(ref) + 1).astype(float)",
+    "v2": "# Normalise the data before the cross correlation ref = ref - ref.mean() data = data - data.mean() return np.argmax(np.correlate(ref, data, 'full')) - len(ref) + 1",
+    "resolution": "# Normalise the data before the cross correlation ref = ref - ref.mean() data = data - data.mean() return (np.argmax(np.correlate(ref, data, 'full')) - len(ref) + 1).astype(float)",
+    "conflict": "return (np.argmax(np.correlate(ref, data, 'full')) - len(ref) + 1).astype(float)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105029,
+    "v1": "assert self.axis.is_uniform assert ( self.axis.value_range_to_indices( 10.1, 10.8) == (1, 8))",
+    "v2": "assert self.axis.value_range_to_indices(10.1, 10.8) == (1, 8)",
+    "resolution": "assert self.axis.is_uniform assert ( self.axis.value_range_to_indices( 10.1, 10.8) == (1, 8))",
+    "conflict": "assert self.axis.is_uniform assert ( self.axis.value_range_to_indices( 10.1, 10.8) == (1, 8))"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105058,
+    "v1": "if (self.axes_manager.navigation_dimension > 1 and np.any(np.array([not axis.is_uniform for axis in self.axes_manager.navigation_axes]))): navigator = \"slider\"",
+    "v2": "if self.navigator is not None: navigator = self.navigator",
+    "resolution": "elif (self.axes_manager.navigation_dimension > 1 and np.any(np.array([not axis.is_uniform for axis in self.axes_manager.navigation_axes]))): navigator = \"slider\"",
+    "conflict": "if (self.axes_manager.navigation_dimension > 1 and np.any(np.array([not axis.is_uniform for axis in self.axes_manager.navigation_axes]))): navigator = \"slider\""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105084,
+    "v1": "ignore_non_uniform_dims= ignore_non_uniform_dims, **kwds)",
+    "v2": "ignore_non_linear_dims= ignore_non_linear_dims, lazy=lazy, **kwds)",
+    "resolution": "ignore_non_uniform_dims= ignore_non_uniform_dims, lazy=lazy, **kwds)",
+    "conflict": "ignore_non_uniform_dims= ignore_non_uniform_dims, **kwds)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105085,
+    "v1": "ignore_non_uniform_dims= ignore_non_uniform_dims, **kwds)",
+    "v2": "ignore_non_linear_dims= ignore_non_linear_dims, lazy=lazy, **kwds)",
+    "resolution": "ignore_non_uniform_dims= ignore_non_uniform_dims, lazy=lazy, **kwds)",
+    "conflict": "ignore_non_uniform_dims= ignore_non_uniform_dims, **kwds)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105090,
+    "v1": "import hyperspy.api as hs",
+    "v2": "from pathlib import Path  from hyperspy import signals, datasets",
+    "resolution": "from pathlib import Path  import hyperspy.api as hs",
+    "conflict": "import hyperspy.api as hs"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105100,
+    "v1": "edges = get_edges_near_energy(energy, width=width)",
+    "v2": "if edges is None and energy is not None: edges = get_edges_near_energy(energy=energy, width=width, only_major=only_major, order=order) elif edges is None and energy is None: raise ValueError('Either energy or edges should be provided.')",
+    "resolution": "if edges is None and energy is not None: edges = get_edges_near_energy(energy=energy, width=width, only_major=only_major, order=order) elif edges is None and energy is None: raise ValueError('Either energy or edges should be provided.')",
+    "conflict": "edges = get_edges_near_energy(energy, width=width)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105106,
+    "v1": "show_progressbar=None, out=None, **kwargs): \"\"\"Returns a recreation of the dataset using the model. The spectral range that is not fitted is filled with nans.",
+    "v2": "show_progressbar=None, out=None, parallel=None, max_workers=None): \"\"\"Returns a recreation of the dataset using the model. By default, the signal range outside of the fitted range is filled with nans.",
+    "resolution": "show_progressbar=None, out=None, **kwargs): \"\"\"Returns a recreation of the dataset using the model.  By default, the signal range outside of the fitted range is filled with nans.",
+    "conflict": "show_progressbar=None, out=None, **kwargs): \"\"\"Returns a recreation of the dataset using the model. The spectral range that is not fitted is filled with nans."
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105121,
+    "v1": "sig.axes_manager._append_axis(size=sig_shape[-ind], navigate=False) sig.get_dimensions_from_data()",
+    "v2": "sig.axes_manager._append_axis(sig_shape[-ind], navigate=False) if not ragged: sig.get_dimensions_from_data()",
+    "resolution": "sig.axes_manager._append_axis(size=sig_shape[-ind], navigate=False) if not ragged: sig.get_dimensions_from_data()",
+    "conflict": "sig.axes_manager._append_axis(size=sig_shape[-ind], navigate=False) sig.get_dimensions_from_data()"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105124,
+    "v1": "from hyperspy.axes import (DataAxis, UniformDataAxis, AxesManager, UnitConversion, _ureg) from hyperspy.misc.test_utils import assert_warns, assert_deep_almost_equal",
+    "v2": "from hyperspy.axes import AxesManager, DataAxis, UnitConversion, _ureg from hyperspy.misc.test_utils import assert_deep_almost_equal, assert_warns",
+    "resolution": "from hyperspy.axes import (DataAxis, UniformDataAxis, AxesManager, UnitConversion, _ureg) from hyperspy.misc.test_utils import assert_deep_almost_equal, assert_warns",
+    "conflict": "from hyperspy.axes import (DataAxis, UniformDataAxis, AxesManager, UnitConversion, _ureg) from hyperspy.misc.test_utils import assert_warns, assert_deep_almost_equal"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105125,
+    "v1": "",
+    "v2": "import matplotlib.pyplot as plt import numpy as np import pytest import scipy.misc",
+    "resolution": "import matplotlib.pyplot as plt import numpy as np import pytest import scipy.misc",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105128,
+    "v1": "nt.assert_allclose(der.data[4:-4], np.sin( der.axes_manager[0].axis[4:-4]), atol=1e-2)",
+    "v2": "np.testing.assert_allclose( der.data, np.sin(der.axes_manager[0].axis), atol=1e-2 )",
+    "resolution": "np.testing.assert_allclose(der.data[4:-4], np.sin( der.axes_manager[0].axis[4:-4]), atol=1e-2)",
+    "conflict": "nt.assert_allclose(der.data[4:-4], np.sin( der.axes_manager[0].axis[4:-4]), atol=1e-2)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105139,
+    "v1": "%s %s",
+    "v2": "add_powerlaw : bool, default False If True, adds a powerlaw background to the spectrum. random_state : None or int or RandomState instance, default None Random seed used to generate the data.",
+    "resolution": "%s %s",
+    "conflict": "%s %s"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105145,
+    "v1": "%s %s",
+    "v2": "add_powerlaw : bool, default False If True, adds a powerlaw background to the spectrum. random_state : None or int or RandomState instance, default None Random seed used to generate the data.",
+    "resolution": "%s %s",
+    "conflict": "%s %s"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105148,
+    "v1": "%s %s",
+    "v2": "add_powerlaw : bool, default False If True, adds a powerlaw background to the spectrum. random_state : None or int or RandomState instance, default None Random seed used to generate the data.",
+    "resolution": "%s %s",
+    "conflict": "%s %s"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105162,
+    "v1": "saturated_pixels: {None, scalar or list of scalar}, optional, default: 0 If list of scalar, the length should match the number of images to show. If provided in the list, set the value to 0. The percentage of pixels that are left out of the bounds.  For example, the low and high bounds of a value of 1 are the 0.5% and 99.5% percentiles. It must be in the [0, 100] range.",
+    "v2": "",
+    "resolution": "",
+    "conflict": "saturated_pixels: {None, scalar or list of scalar}, optional, default: 0 If list of scalar, the length should match the number of images to show. If provided in the list, set the value to 0. The percentage of pixels that are left out of the bounds.  For example, the low and high bounds of a value of 1 are the 0.5% and 99.5% percentiles. It must be in the [0, 100] range."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105167,
+    "v1": "if update_span: # Restore the span selector at the correct position after updating # the range of the histogram self.span_selector._set_span_x( self.ax.transData.inverted().transform(span_x_coord)[0])",
+    "v2": "",
+    "resolution": "",
+    "conflict": "if update_span: # Restore the span selector at the correct position after updating # the range of the histogram self.span_selector._set_span_x( self.ax.transData.inverted().transform(span_x_coord)[0])"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105170,
+    "v1": "import matplotlib.pyplot as plt import numpy as np import pytest import scipy.misc",
+    "v2": "",
+    "resolution": "import matplotlib.pyplot as plt import numpy as np import pytest import scipy.misc",
+    "conflict": "import matplotlib.pyplot as plt import numpy as np import pytest import scipy.misc"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105176,
+    "v1": "from hyperspy.docstrings.plot import (BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, PLOT2D_DOCSTRING, PLOT2D_KWARGS_DOCSTRING)",
+    "v2": "from hyperspy.signal_tools import PeaksFinder2D from hyperspy.docstrings.plot import ( BASE_PLOT_DOCSTRING, PLOT2D_DOCSTRING, KWARGS_DOCSTRING)",
+    "resolution": "from hyperspy.signal_tools import PeaksFinder2D from hyperspy.docstrings.plot import ( BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, PLOT2D_DOCSTRING, PLOT2D_KWARGS_DOCSTRING)",
+    "conflict": "from hyperspy.docstrings.plot import (BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, PLOT2D_DOCSTRING, PLOT2D_KWARGS_DOCSTRING)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105192,
+    "v1": "return variance  def _calculate_chisq(self): variance = self._get_variance()",
+    "v2": "",
+    "resolution": "return variance  def _calculate_chisq(self): variance = self._get_variance()",
+    "conflict": "return variance  def _calculate_chisq(self): variance = self._get_variance()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105195,
+    "v1": "@pytest.mark.filterwarnings(\"ignore:The API of the `Voigt`\") @pytest.mark.filterwarnings(\"ignore:The API of the `Polynomial`\")",
+    "v2": "@pytest.mark.filterwarnings(\"ignore:invalid value encountered in true_divide:RuntimeWarning\") @pytest.mark.filterwarnings(\"ignore:divide by zero encountered in true_divide:RuntimeWarning\") @pytest.mark.filterwarnings(\"ignore:invalid value encountered in cos:RuntimeWarning\") @pytest.mark.filterwarnings(\"ignore:The API of the\")",
+    "resolution": "@pytest.mark.filterwarnings(\"ignore:invalid value encountered in true_divide:RuntimeWarning\") @pytest.mark.filterwarnings(\"ignore:divide by zero encountered in true_divide:RuntimeWarning\") @pytest.mark.filterwarnings(\"ignore:invalid value encountered in cos:RuntimeWarning\") @pytest.mark.filterwarnings(\"ignore:The API of the\")",
+    "conflict": "@pytest.mark.filterwarnings(\"ignore:The API of the `Voigt`\") @pytest.mark.filterwarnings(\"ignore:The API of the `Polynomial`\")"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105199,
+    "v1": "",
+    "v2": "import matplotlib.pyplot as plt import numpy as np import pytest import scipy.misc",
+    "resolution": "import matplotlib.pyplot as plt import numpy as np import pytest import scipy.misc",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105205,
+    "v1": "from hyperspy.misc.utils import slugify, parse_quantity,is_hyperspy_signal from hyperspy import roi from hyperspy import signals import numpy as np",
+    "v2": "from hyperspy.misc.utils import parse_quantity, slugify",
+    "resolution": "from hyperspy.misc.utils import slugify, parse_quantity, is_hyperspy_signal from hyperspy import signals import numpy as np",
+    "conflict": "from hyperspy.misc.utils import slugify, parse_quantity,is_hyperspy_signal from hyperspy import roi from hyperspy import signals import numpy as np"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105211,
+    "v1": "",
+    "v2": "import matplotlib.pyplot as plt import numpy as np import pytest import scipy.misc",
+    "resolution": "import matplotlib.pyplot as plt import numpy as np import pytest import scipy.misc",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105214,
+    "v1": "from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG from hyperspy.ui_registry import DISPLAY_DT, TOOLKIT_DT from hyperspy.utils.peakfinders2D import ( find_peaks_max, find_peaks_minmax, find_peaks_zaefferer, find_peaks_stat, find_peaks_log, find_peaks_dog, find_peaks_xc)",
+    "v2": "from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG, MAX_WORKERS_ARG",
+    "resolution": "from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG, MAX_WORKERS_ARG from hyperspy.ui_registry import DISPLAY_DT, TOOLKIT_DT from hyperspy.utils.peakfinders2D import ( find_peaks_max, find_peaks_minmax, find_peaks_zaefferer, find_peaks_stat, find_peaks_log, find_peaks_dog, find_peaks_xc)",
+    "conflict": "from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG from hyperspy.ui_registry import DISPLAY_DT, TOOLKIT_DT from hyperspy.utils.peakfinders2D import ( find_peaks_max, find_peaks_minmax, find_peaks_zaefferer, find_peaks_stat, find_peaks_log, find_peaks_dog, find_peaks_xc)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105223,
+    "v1": "raise ValueError(\"line_style must be None, a valid matplotlib\" \" line_style string, or a list of valid matplotlib\" \" line_styles.\")",
+    "v2": "raise ValueError(\"line_style must be None, a valid matplotlib \" \"line_style string or a list of valid matplotlib \" \"line_style.\")",
+    "resolution": "raise ValueError(\"line_style must be None, a valid matplotlib \" \"line_style string or a list of valid matplotlib \" \"line_style.\")",
+    "conflict": "raise ValueError(\"line_style must be None, a valid matplotlib\" \" line_style string, or a list of valid matplotlib\" \" line_styles.\")"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105244,
+    "v1": "vmin=f\"{preferences.Plot.vmin}th\", vmax=f\"{preferences.Plot.vmax}th\", *args,",
+    "v2": "vmin=None, vmax=None,",
+    "resolution": "vmin=None, vmax=None,",
+    "conflict": "vmin=f\"{preferences.Plot.vmin}th\", vmax=f\"{preferences.Plot.vmax}th\", *args,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105259,
+    "v1": "Explained variation ratio.  See Also --------",
+    "v2": "Explained variance ratio.",
+    "resolution": "Explained variance ratio.",
+    "conflict": "Explained variation ratio.  See Also --------"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105261,
+    "v1": "References ---------- .. [*] M. Keenan and P. Kotula, \"Accounting for Poisson noise in the multivariate analysis of ToF-SIMS spectrum images\", Surf. Interface Anal 36(3) (2004): 203-212.",
+    "v2": "",
+    "resolution": "",
+    "conflict": "References ---------- .. [*] M. Keenan and P. Kotula, \"Accounting for Poisson noise in the multivariate analysis of ToF-SIMS spectrum images\", Surf. Interface Anal 36(3) (2004): 203-212."
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105265,
+    "v1": "if any([not axs.is_linear for axs in self.axes_manager[axes]]): raise NonLinearAxisError()",
+    "v2": "use_real_fft = real_fft_only and (self.data.dtype.kind != 'c')",
+    "resolution": "if any([not axs.is_linear for axs in self.axes_manager[axes]]): raise NonLinearAxisError()  use_real_fft = real_fft_only and (self.data.dtype.kind != 'c')",
+    "conflict": "if any([not axs.is_linear for axs in self.axes_manager[axes]]): raise NonLinearAxisError()"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105269,
+    "v1": "BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, COMPLEX_DOCSTRING, PLOT2D_KWARGS_DOCSTRING) from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG",
+    "v2": "BASE_PLOT_DOCSTRING, PLOT1D_DOCSTRING, COMPLEX_DOCSTRING, KWARGS_DOCSTRING) from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG, MAX_WORKERS_ARG",
+    "resolution": "BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, COMPLEX_DOCSTRING, PLOT2D_KWARGS_DOCSTRING) from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG, MAX_WORKERS_ARG",
+    "conflict": "BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, COMPLEX_DOCSTRING, PLOT2D_KWARGS_DOCSTRING) from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105272,
+    "v1": "from hyperspy.docstrings.plot import (BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, PLOT2D_DOCSTRING, PLOT2D_KWARGS_DOCSTRING) from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG",
+    "v2": "from hyperspy.docstrings.plot import ( BASE_PLOT_DOCSTRING, PLOT2D_DOCSTRING, KWARGS_DOCSTRING) from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG, MAX_WORKERS_ARG",
+    "resolution": "from hyperspy.docstrings.plot import (BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, PLOT2D_DOCSTRING, PLOT2D_KWARGS_DOCSTRING) from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG, MAX_WORKERS_ARG",
+    "conflict": "from hyperspy.docstrings.plot import (BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, PLOT2D_DOCSTRING, PLOT2D_KWARGS_DOCSTRING) from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_ARG"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105274,
+    "v1": "RECHUNK_ARG, SHOW_PROGRESSBAR_ARG, PARALLEL_ARG) from hyperspy.docstrings.plot import (BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, PLOT1D_DOCSTRING, PLOT2D_KWARGS_DOCSTRING)",
+    "v2": "RECHUNK_ARG, SHOW_PROGRESSBAR_ARG, PARALLEL_ARG, MAX_WORKERS_ARG) from hyperspy.docstrings.plot import (BASE_PLOT_DOCSTRING, PLOT1D_DOCSTRING, KWARGS_DOCSTRING)",
+    "resolution": "RECHUNK_ARG, SHOW_PROGRESSBAR_ARG, PARALLEL_ARG, MAX_WORKERS_ARG) from hyperspy.docstrings.plot import (BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, PLOT1D_DOCSTRING, PLOT2D_KWARGS_DOCSTRING)",
+    "conflict": "RECHUNK_ARG, SHOW_PROGRESSBAR_ARG, PARALLEL_ARG) from hyperspy.docstrings.plot import (BASE_PLOT_DOCSTRING, BASE_PLOT_DOCSTRING_PARAMETERS, PLOT1D_DOCSTRING, PLOT2D_KWARGS_DOCSTRING)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105286,
+    "v1": "import inspect import numpy as np",
+    "v2": "import types import warnings",
+    "resolution": "import types import warnings import inspect import dask.array as da import matplotlib.pyplot as plt import numpy as np",
+    "conflict": "import inspect import numpy as np"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105314,
+    "v1": "from hyperspy.io_plugins import hspy io_plugins.append(hspy) from hyperspy.io_plugins import emd io_plugins.append(emd) from hyperspy.io_plugins import nexus io_plugins.append(nexus)",
+    "v2": "",
+    "resolution": "from hyperspy.io_plugins import usid_hdf5 io_plugins.append(usid_hdf5)",
+    "conflict": "from hyperspy.io_plugins import hspy io_plugins.append(hspy) from hyperspy.io_plugins import emd io_plugins.append(emd) from hyperspy.io_plugins import nexus io_plugins.append(nexus)"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105320,
+    "v1": "if self.model is not None and len(self.model) == 0: self.model.append(self.background_estimator)",
+    "v2": "elif self.background_type == 'Voigt': with ignore_warning(message=\"The API of the `Voigt` component\"): self.background_estimator = components1d.Voigt(legacy=False) self.bg_line_range = 'full'",
+    "resolution": "if self.model is not None and len(self.model) == 0: self.model.append(self.background_estimator) elif self.background_type == 'Voigt': with ignore_warning(message=\"The API of the `Voigt` component\"): self.background_estimator = components1d.Voigt(legacy=False) self.bg_line_range = 'full'",
+    "conflict": "if self.model is not None and len(self.model) == 0: self.model.append(self.background_estimator)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105329,
+    "v1": "self.component_list = model if component_list == None else component_list self.model_type = str(self.model.__class__).split(\"'\")[1].split('.')[-1]",
+    "v2": "self.component_list = model if component_list is None else component_list self.model_type = str(self.model.__class__).split(\"'\")[ 1].split('.')[-1]",
+    "resolution": "self.component_list = model if component_list == None else component_list self.model_type = str(self.model.__class__).split(\"'\")[1].split('.')[-1]",
+    "conflict": "self.component_list = model if component_list == None else component_list self.model_type = str(self.model.__class__).split(\"'\")[1].split('.')[-1]"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105348,
+    "v1": "mask = self.s._get_signal_signal(dtype=\"bool\") mask.data[:] = False mask.unfold() mask.isig[5] = True mask.fold()",
+    "v2": "",
+    "resolution": "",
+    "conflict": "mask = self.s._get_signal_signal(dtype=\"bool\") mask.data[:] = False mask.unfold() mask.isig[5] = True mask.fold()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105349,
+    "v1": "",
+    "v2": "3, diff_order=0, fun=\"exp\", on_loadings=False, factors=factors.diff(axis=\"x\", order=1), mask=self.mask_sig.diff(axis=\"x\", order=1)) matrix = self.s.learning_results.unmixing_matrix.copy() self.s.blind_source_separation(",
+    "resolution": "3, diff_order=0, fun=\"exp\", on_loadings=False, factors=factors.diff(axis=\"x\", order=1), mask=self.mask_sig.diff(axis=\"x\", order=1)) matrix = self.s.learning_results.unmixing_matrix.copy() self.s.blind_source_separation(",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105352,
+    "v1": "class ORNMF: \"\"\"This class performs Online Robust NMF with missing or corrupted data.",
+    "v2": "class ONMF: \"\"\"This class performs Online Robust NMF with missing or corrupted data.",
+    "resolution": "class ORNMF: \"\"\"This class performs Online Robust NMF with missing or corrupted data.",
+    "conflict": "class ORNMF: \"\"\"This class performs Online Robust NMF with missing or corrupted data."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105359,
+    "v1": "np.testing.assert_almost_equal(self.axis.scale, 12E-6) assert self.axis.units == 'um' np.testing.assert_almost_equal(self.axis.offset, 0.005)",
+    "v2": "nt.assert_almost_equal(self.axis.scale, 12E-6) assert self.axis.units == 'µm' nt.assert_almost_equal(self.axis.offset, 0.005)",
+    "resolution": "nt.assert_almost_equal(self.axis.scale, 12E-6) assert self.axis.units == 'µm' nt.assert_almost_equal(self.axis.offset, 0.005)",
+    "conflict": "np.testing.assert_almost_equal(self.axis.scale, 12E-6) assert self.axis.units == 'um' np.testing.assert_almost_equal(self.axis.offset, 0.005)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105361,
+    "v1": "np.testing.assert_almost_equal(self.am['y'].scale, 0.5E-3) assert self.am['y'].units == 'um' np.testing.assert_almost_equal(self.am['energy'].scale, 5E3)",
+    "v2": "nt.assert_almost_equal(self.am['y'].scale, 0.5E-3) assert self.am['y'].units == 'µm' nt.assert_almost_equal(self.am['energy'].scale, 5E3)",
+    "resolution": "nt.assert_almost_equal(self.am['y'].scale, 0.5E-3) assert self.am['y'].units == 'µm' nt.assert_almost_equal(self.am['energy'].scale, 5E3)",
+    "conflict": "np.testing.assert_almost_equal(self.am['y'].scale, 0.5E-3) assert self.am['y'].units == 'um' np.testing.assert_almost_equal(self.am['energy'].scale, 5E3)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105362,
+    "v1": "np.testing.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'um' np.testing.assert_almost_equal(self.am2['energy'].scale,",
+    "v2": "nt.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'µm' nt.assert_almost_equal(self.am2['energy'].scale,",
+    "resolution": "nt.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'µm' nt.assert_almost_equal(self.am2['energy'].scale,",
+    "conflict": "np.testing.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'um' np.testing.assert_almost_equal(self.am2['energy'].scale,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105363,
+    "v1": "np.testing.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'um' np.testing.assert_almost_equal(self.am2['energy'].scale, 2500)",
+    "v2": "nt.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'µm' nt.assert_almost_equal(self.am2['energy'].scale, 2500)",
+    "resolution": "nt.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'µm' nt.assert_almost_equal(self.am2['energy'].scale, 2500)",
+    "conflict": "np.testing.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'um' np.testing.assert_almost_equal(self.am2['energy'].scale, 2500)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105367,
+    "v1": "np.testing.assert_almost_equal(self.axis.scale, 12E-6) assert self.axis.units == 'um' np.testing.assert_almost_equal(self.axis.offset, 0.005)",
+    "v2": "nt.assert_almost_equal(self.axis.scale, 12E-6) assert self.axis.units == 'µm' nt.assert_almost_equal(self.axis.offset, 0.005)",
+    "resolution": "nt.assert_almost_equal(self.axis.scale, 12E-6) assert self.axis.units == 'µm' nt.assert_almost_equal(self.axis.offset, 0.005)",
+    "conflict": "np.testing.assert_almost_equal(self.axis.scale, 12E-6) assert self.axis.units == 'um' np.testing.assert_almost_equal(self.axis.offset, 0.005)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105369,
+    "v1": "np.testing.assert_almost_equal(self.am['y'].scale, 0.5E-3) assert self.am['y'].units == 'um' np.testing.assert_almost_equal(self.am['energy'].scale, 5E3)",
+    "v2": "nt.assert_almost_equal(self.am['y'].scale, 0.5E-3) assert self.am['y'].units == 'µm' nt.assert_almost_equal(self.am['energy'].scale, 5E3)",
+    "resolution": "nt.assert_almost_equal(self.am['y'].scale, 0.5E-3) assert self.am['y'].units == 'µm' nt.assert_almost_equal(self.am['energy'].scale, 5E3)",
+    "conflict": "np.testing.assert_almost_equal(self.am['y'].scale, 0.5E-3) assert self.am['y'].units == 'um' np.testing.assert_almost_equal(self.am['energy'].scale, 5E3)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105370,
+    "v1": "np.testing.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'um' np.testing.assert_almost_equal(self.am2['energy'].scale,",
+    "v2": "nt.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'µm' nt.assert_almost_equal(self.am2['energy'].scale,",
+    "resolution": "nt.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'µm' nt.assert_almost_equal(self.am2['energy'].scale,",
+    "conflict": "np.testing.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'um' np.testing.assert_almost_equal(self.am2['energy'].scale,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105371,
+    "v1": "np.testing.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'um' np.testing.assert_almost_equal(self.am2['energy'].scale, 2500)",
+    "v2": "nt.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'µm' nt.assert_almost_equal(self.am2['energy'].scale, 2500)",
+    "resolution": "nt.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'µm' nt.assert_almost_equal(self.am2['energy'].scale, 2500)",
+    "conflict": "np.testing.assert_almost_equal(self.am2['x'].scale, 0.0015) assert self.am2['x'].units == 'um' np.testing.assert_almost_equal(self.am2['energy'].scale, 2500)"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105373,
+    "v1": "elif background_type == 'Voigt': with ignore_warning(message=\"The API of the `Voigt` component\"): background_estimator = components1d.Voigt(legacy=False)",
+    "v2": "elif background_type in ('SkewNormal', 'Skew Normal'): background_estimator = components1d.SkewNormal()",
+    "resolution": "elif background_type in ('SkewNormal', 'Skew Normal'): background_estimator = components1d.SkewNormal() elif background_type == 'Voigt': with ignore_warning(message=\"The API of the `Voigt` component\"): background_estimator = components1d.Voigt(legacy=False)",
+    "conflict": "elif background_type == 'Voigt': with ignore_warning(message=\"The API of the `Voigt` component\"): background_estimator = components1d.Voigt(legacy=False)"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105375,
+    "v1": "elif self.background_type == 'Voigt': with ignore_warning(message=\"The API of the `Voigt` component\"): self.background_estimator = components1d.Voigt()",
+    "v2": "elif self.background_type == 'SkewNormal': self.background_estimator = components1d.SkewNormal()",
+    "resolution": "elif self.background_type == 'SkewNormal': self.background_estimator = components1d.SkewNormal() elif self.background_type == 'Voigt': with ignore_warning(message=\"The API of the `Voigt` component\"): self.background_estimator = components1d.Voigt()",
+    "conflict": "elif self.background_type == 'Voigt': with ignore_warning(message=\"The API of the `Voigt` component\"): self.background_estimator = components1d.Voigt()"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105385,
+    "v1": "zfactors, dose, absorption_correction=None):",
+    "v2": "zfactors, dose, absorption_correction):",
+    "resolution": "zfactors, dose, absorption_correction=None):",
+    "conflict": "zfactors, dose, absorption_correction=None):"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105393,
+    "v1": "if xaxis.is_linear and yaxis.is_linear: self._aspect = np.abs(factor * xaxis.scale / yaxis.scale) else: self._aspect = 1.0 # print(self._aspect)",
+    "v2": "self._aspect = np.abs(factor * xaxis.scale / yaxis.scale)",
+    "resolution": "if xaxis.is_linear and yaxis.is_linear: self._aspect = np.abs(factor * xaxis.scale / yaxis.scale) else: self._aspect = 1.0",
+    "conflict": "if xaxis.is_linear and yaxis.is_linear: self._aspect = np.abs(factor * xaxis.scale / yaxis.scale) else: self._aspect = 1.0 # print(self._aspect)"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105397,
+    "v1": "from hyperspy.misc.test_utils import ignore_warning",
+    "v2": "from hyperspy.drawing.figure import BlittedFigure from hyperspy.misc.array_tools import calculate_bins_histogram, numba_histogram from hyperspy.defaults_parser import preferences",
+    "resolution": "from hyperspy.drawing.figure import BlittedFigure from hyperspy.misc.array_tools import calculate_bins_histogram, numba_histogram from hyperspy.defaults_parser import preferences  from hyperspy.misc.test_utils import ignore_warning",
+    "conflict": "from hyperspy.misc.test_utils import ignore_warning"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105442,
+    "v1": "from hyperspy.misc.model_tools import current_model_values from IPython.display import display_pretty, display",
+    "v2": "from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_INT_ARG",
+    "resolution": "from hyperspy.docstrings.signal import SHOW_PROGRESSBAR_ARG, PARALLEL_INT_ARG   from hyperspy.misc.model_tools import current_model_values from IPython.display import display_pretty, display",
+    "conflict": "from hyperspy.misc.model_tools import current_model_values from IPython.display import display_pretty, display"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105452,
+    "v1": "num_significant_components = \\ self._estimate_elbow_position( explained_variance_ratio)+ 1",
+    "v2": "no_significant_components = \\ self._estimate_elbow_position(explained_variance_ratio) + 1",
+    "resolution": "num_significant_components = \\ self._estimate_elbow_position( explained_variance_ratio)+ 1",
+    "conflict": "num_significant_components = \\ self._estimate_elbow_position( explained_variance_ratio)+ 1"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105456,
+    "v1": "s.learning_results.explained_variance_ratio = \\ np.asarray([10e-1, 5e-2, 9e-3, 1e-3, 9e-5, 5e-5, 3.0e-5, 2.2e-5, 1.9e-5, 1.8e-5, 1.7e-5, 1.6e-5])",
+    "v2": "s.learning_results.explained_variance_ratio = np.asarray([10e-1, 5e-2, 9e-3, 1e-3, 9e-5, 5e-5, 3.0e-5, 2.2e-5, 1.9e-5, 1.8e-5, 1.7e-5, 1.6e-5])",
+    "resolution": "s.learning_results.explained_variance_ratio = \\ np.asarray([10e-1, 5e-2, 9e-3, 1e-3, 9e-5, 5e-5, 3.0e-5, 2.2e-5, 1.9e-5, 1.8e-5, 1.7e-5, 1.6e-5])",
+    "conflict": "s.learning_results.explained_variance_ratio = \\ np.asarray([10e-1, 5e-2, 9e-3, 1e-3, 9e-5, 5e-5, 3.0e-5, 2.2e-5, 1.9e-5, 1.8e-5, 1.7e-5, 1.6e-5])"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105466,
+    "v1": "if binned is True: for para, estim in zip(self.parameters, estimation): para.value = estim / axis.scale",
+    "v2": "if self.binned: self.coefficients.value = estimation / axis.scale",
+    "resolution": "if self.binned: for para, estim in zip(self.parameters, estimation): para.value = estim / axis.scale",
+    "conflict": "if binned is True: for para, estim in zip(self.parameters, estimation): para.value = estim / axis.scale"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105478,
+    "v1": "zfactors, dose, absorption_correction):",
+    "v2": "zfactors, dose):",
+    "resolution": "zfactors, dose, absorption_correction):",
+    "conflict": "zfactors, dose, absorption_correction):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105519,
+    "v1": "# in case of single image if isinstance(images, list) or len(images) > 1: label_list = [x.metadata.General.title for x in images] else: label_list = [images.metadata.General.title]",
+    "v2": "label_list = [x.metadata.General.title for x in images]",
+    "resolution": "label_list = [x.metadata.General.title for x in images]",
+    "conflict": "# in case of single image if isinstance(images, list) or len(images) > 1: label_list = [x.metadata.General.title for x in images] else: label_list = [images.metadata.General.title]"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105524,
+    "v1": "current_data = self._lazy_data(axis=axes, rechunk=rechunk)",
+    "v2": "# For reduce operations the actual signal and navigation # axes configuration does not matter. Hence we leave # dask guess the chunks current_data = self._lazy_data(rechunk=\"dask_auto\") # Apply reducing function",
+    "resolution": "# For reduce operations the actual signal and navigation # axes configuration does not matter. Hence we leave # dask guess the chunks if rechunk is True: rechunk = \"dask_auto\" current_data = self._lazy_data(rechunk=rechunk)",
+    "conflict": "current_data = self._lazy_data(axis=axes, rechunk=rechunk)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105529,
+    "v1": "Supported formats: hspy (HDF5), msa, Gatan dm3, Ripple (rpl+raw), Bruker bcf, FEI ser and emi, SEMPER unf, Berkeley and FEI emd, EDAX spd/spc, tif and a number of image formats.",
+    "v2": "Supported formats: hspy (HDF5), msa, Gatan dm3, Ripple (rpl+raw), Bruker bcf and spx, FEI ser and emi, SEMPER unf, EMD, EDAX spd/spc, tif, and a number of image formats.",
+    "resolution": "Supported formats: hspy (HDF5), msa, Gatan dm3, Ripple (rpl+raw), Bruker bcf and spx, FEI ser and emi, SEMPER unf, EMD, EDAX spd/spc, tif, and a number of image formats.",
+    "conflict": "Supported formats: hspy (HDF5), msa, Gatan dm3, Ripple (rpl+raw), Bruker bcf, FEI ser and emi, SEMPER unf, Berkeley and FEI emd, EDAX spd/spc, tif and a number of image formats."
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105543,
+    "v1": "if self.get_complex: # Add real plot yreal = self._get_data(force_real=True)",
+    "v2": "if self._plot_imag: yreal = self.data_function(axes_manager=self.axes_manager).real",
+    "resolution": "if self._plot_imag: # Add real plot yreal = self._get_data(real_part=True)",
+    "conflict": "if self.get_complex: # Add real plot yreal = self._get_data(force_real=True)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105547,
+    "v1": "pixel_size, offsets, original_units = streams.get_pixelsize_offset_unit() dispersion, offset, unit = self._get_dispersion_offset(original_metadata)",
+    "v2": "pixel_size, offsets, original_units = \\ streams[0].get_pixelsize_offset_unit() dispersion, offset = self._get_dispersion_offset(original_metadata)",
+    "resolution": "pixel_size, offsets, original_units = \\ streams[0].get_pixelsize_offset_unit() dispersion, offset, unit = self._get_dispersion_offset(original_metadata)",
+    "conflict": "pixel_size, offsets, original_units = streams.get_pixelsize_offset_unit() dispersion, offset, unit = self._get_dispersion_offset(original_metadata)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105551,
+    "v1": "pixel_size, offsets, original_units = streams.get_pixelsize_offset_unit() dispersion, offset, unit = self._get_dispersion_offset(original_metadata)",
+    "v2": "pixel_size, offsets, original_units = \\ streams[0].get_pixelsize_offset_unit() dispersion, offset = self._get_dispersion_offset(original_metadata)",
+    "resolution": "pixel_size, offsets, original_units = \\ streams[0].get_pixelsize_offset_unit() dispersion, offset = self._get_dispersion_offset(original_metadata)",
+    "conflict": "pixel_size, offsets, original_units = streams.get_pixelsize_offset_unit() dispersion, offset, unit = self._get_dispersion_offset(original_metadata)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105559,
+    "v1": "raw = codecs.decode( (img.find('./Data').text).encode('ascii'), 'base64') array1 = np.frombuffer(raw, dtype=np.uint16)",
+    "v2": "raw = codecs.decode((img.find('./Data').text).encode('ascii'),'base64') array1 = np.frombuffer(raw, dtype=image.dtype)",
+    "resolution": "raw = codecs.decode((img.find('./Data').text).encode('ascii'),'base64') array1 = np.frombuffer(raw, dtype=image.dtype)",
+    "conflict": "raw = codecs.decode( (img.find('./Data').text).encode('ascii'), 'base64') array1 = np.frombuffer(raw, dtype=np.uint16)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105586,
+    "v1": "array and the data is made contiguous for efficient iteration over spectra.",
+    "v2": "array and the data is made contiguous for efficient iteration over spectra. By default ensures the data is stored optimally, hence often making a copy of the data. See `transpose` for a more general method with more options.",
+    "resolution": "array and the data is made contiguous for efficient iteration over spectra. By default ensures the data is stored optimally, hence often making a copy of the data. See `transpose` for a more general method with more options.",
+    "conflict": "array and the data is made contiguous for efficient iteration over spectra."
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105590,
+    "v1": "return load_with_reader(filename, reader, **kwds) except:",
+    "v2": "return load_with_reader(filename, reader, signal_type=signal_type, **kwds) except BaseException:",
+    "resolution": "return load_with_reader(filename, reader, signal_type=signal_type, **kwds) except BaseException:",
+    "conflict": "return load_with_reader(filename, reader, **kwds) except:"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105598,
+    "v1": "img = xml_node.find(\"./Plane\" + str(i)) raw = codecs.decode((img.find('./Data').text).encode('ascii'),'base64') array1 = np.fromstring(raw, dtype=np.uint16)",
+    "v2": "img = xml_node.xpath(\"Plane\" + str(i))[0] raw = codecs.decode((img.Data.text).encode('ascii'), 'base64') array1 = np.frombuffer(raw, dtype=np.uint16)",
+    "resolution": "img = xml_node.find(\"./Plane\" + str(i)) raw = codecs.decode((img.find('./Data').text).encode('ascii'),'base64') array1 = np.frombuffer(raw, dtype=np.uint16)",
+    "conflict": "img = xml_node.find(\"./Plane\" + str(i)) raw = codecs.decode((img.find('./Data').text).encode('ascii'),'base64') array1 = np.fromstring(raw, dtype=np.uint16)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105641,
+    "v1": "'dask[array]>=0.14.3', 'scikit-image']",
+    "v2": "'dask[array]>=0.13, !=0.14', 'scikit-image>=0.13', 'pint>0.7']",
+    "resolution": "'dask[array]>=0.14.3', 'scikit-image>=0.13', 'pint>0.7']",
+    "conflict": "'dask[array]>=0.14.3', 'scikit-image']"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105644,
+    "v1": "stage = self.original_metadata[ 'tvips_metadata']['tem_stage_position'] # Guess on what is x, y, z, tilt_a and tilt_b...",
+    "v2": "stage = self.original_metadata['tvips_metadata']['tem_stage_position'] # Guess on what is x, y, z, tilt_alpha and tilt_beta...",
+    "resolution": "stage = self.original_metadata['tvips_metadata']['tem_stage_position'] # Guess on what is x, y, z, tilt_alpha and tilt_beta...",
+    "conflict": "stage = self.original_metadata[ 'tvips_metadata']['tem_stage_position'] # Guess on what is x, y, z, tilt_a and tilt_b..."
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105661,
+    "v1": "",
+    "v2": "# Obtain the spectrum dimension from the images # TODO: need to find a way to reshape the data when acquisition have # been stoped during a frame acquisition #        data = data.reshape((self.image_shape, self.stream.bin_count))",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105662,
+    "v1": "'offset': float(offsets['x'])*10**9, 'scale': float(pix_scale['width'])*10**9, 'size': data.shape[1],",
+    "v2": "'offset': self._convert_scale_units(offsets['x'])[0], 'scale': self._convert_scale_units(offsets['x'])[1], 'size': data.shape[0],",
+    "resolution": "'offset': float(offsets['x'])*10**9, 'scale': float(pix_scale['width'])*10**9, 'size': data.shape[1],",
+    "conflict": "'offset': float(offsets['x'])*10**9, 'scale': float(pix_scale['width'])*10**9, 'size': data.shape[1],"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105663,
+    "v1": "'offset': float(offsets['y'])*10**9, 'scale': float(pix_scale['height'])*10**9, 'size': data.shape[0],",
+    "v2": "'offset': self._convert_scale_units(offsets['y'])[0], 'scale': self._convert_scale_units(offsets['y'])[1], 'size': data.shape[1],",
+    "resolution": "'offset': float(offsets['y'])*10**9, 'scale': float(pix_scale['height'])*10**9, 'size': data.shape[0],",
+    "conflict": "'offset': float(offsets['y'])*10**9, 'scale': float(pix_scale['height'])*10**9, 'size': data.shape[0],"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105664,
+    "v1": "#print(stream_index//shape[1], stream_index%shape[0], channel) spectrum_stack[stream_index//shape[0], stream_index%shape[1], channel] += 1",
+    "v2": "#print(stream_index//shape[0], stream_index%shape[0], channel) spectrum_stack[stream_index // shape[0], stream_index % shape[0], channel] += 1",
+    "resolution": "#print(stream_index//shape[1], stream_index%shape[0], channel) spectrum_stack[stream_index//shape[0], stream_index%shape[1], channel] += 1",
+    "conflict": "#print(stream_index//shape[1], stream_index%shape[0], channel) spectrum_stack[stream_index//shape[0], stream_index%shape[1], channel] += 1"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105669,
+    "v1": "@pytest.mark.mpl_image_compare( baseline_dir=baseline_dir, tolerance=default_tol) def test_plot_spectra_sync(self, figure):",
+    "v2": "@pytest.mark.mpl_image_compare(baseline_dir=baseline_dir, tolerance=default_tol) def test_plot_spectra_sync(self, mpl_cleanup, figure):",
+    "resolution": "@pytest.mark.mpl_image_compare(baseline_dir=baseline_dir, tolerance=default_tol) def test_plot_spectra_sync(self, mpl_cleanup, figure):",
+    "conflict": "@pytest.mark.mpl_image_compare( baseline_dir=baseline_dir, tolerance=default_tol) def test_plot_spectra_sync(self, figure):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105670,
+    "v1": "@pytest.mark.mpl_image_compare( baseline_dir=baseline_dir, tolerance=default_tol) def test_plot_two_cursors(ndim, plot_type):",
+    "v2": "@pytest.mark.mpl_image_compare(baseline_dir=baseline_dir, tolerance=default_tol) def test_plot_two_cursors(mpl_cleanup, ndim, plot_type):",
+    "resolution": "@pytest.mark.mpl_image_compare(baseline_dir=baseline_dir, tolerance=default_tol) def test_plot_two_cursors(mpl_cleanup, ndim, plot_type):",
+    "conflict": "@pytest.mark.mpl_image_compare( baseline_dir=baseline_dir, tolerance=default_tol) def test_plot_two_cursors(ndim, plot_type):"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105673,
+    "v1": "'dask[array]>=0.13', 'scikit-image' 'numba']",
+    "v2": "'dask[array]>=0.13, !=0.14', 'scikit-image']",
+    "resolution": "'dask[array]>=0.13' !=0.14, 'scikit-image' 'numba']",
+    "conflict": "'dask[array]>=0.13', 'scikit-image' 'numba']"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105681,
+    "v1": "fsize = 2 ** np.ceil(np.log2(size)) fprod = fftn(in1, fsize) fprod *= fftn(in2, fsize).conjugate()",
+    "v2": "fsize = (2 ** np.ceil(np.log2(size))).astype(\"int\") IN1 = fftn(in1, fsize) IN1 *= fftn(in2, fsize).conjugate()",
+    "resolution": "fsize = (2 ** np.ceil(np.log2(size))).astype(\"int\") fprod = fftn(in1, fsize) fprod *= fftn(in2, fsize).conjugate()",
+    "conflict": "fsize = 2 ** np.ceil(np.log2(size)) fprod = fftn(in1, fsize) fprod *= fftn(in2, fsize).conjugate()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105684,
+    "v1": "return -shifts, max_val",
+    "v2": "if return_maxval: return -np.array((shift0, shift1)), max_val else: return -np.array((shift0, shift1))",
+    "resolution": "if return_maxval: return -np.array((shift0, shift1)), max_val else: return -np.array((shift0, shift1))",
+    "conflict": "return -shifts, max_val"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105690,
+    "v1": "self._log.warning( 'HyperSpy could not load the data in {}, ' 'skipping it'.format(name))",
+    "v2": "self._log.warning('HyperSpy could not load the data in {}, ' 'skipping it'.format(name))",
+    "resolution": "self._log.warning( 'HyperSpy could not load the data in {}, ' 'skipping it'.format(name))",
+    "conflict": "self._log.warning( 'HyperSpy could not load the data in {}, ' 'skipping it'.format(name))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105693,
+    "v1": "\"Navigation shape of the marker must be 0 or the \" \"same navigation shape as this signal.\") if (not marker.signal is None) and (not marker.signal is self):",
+    "v2": "\"Navigation shape of the marker must be 0 or the \" \"same navigation shape as this signal.\") if (marker.signal is not None) and (marker.signal is not self):",
+    "resolution": "\"Navigation shape of the marker must be 0 or the \" \"same navigation shape as this signal.\") if (marker.signal is not None) and (marker.signal is not self):",
+    "conflict": "\"Navigation shape of the marker must be 0 or the \" \"same navigation shape as this signal.\") if (not marker.signal is None) and (not marker.signal is self):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105703,
+    "v1": "self._log.warning('HyperSpy could not load the data in {}, ' 'skipping it'.format(name))",
+    "v2": "self._log.warning( 'HyperSpy could not load the data in {}, ' 'skipping it'.format(name))",
+    "resolution": "self._log.warning('HyperSpy could not load the data in {}, ' 'skipping it'.format(name))",
+    "conflict": "self._log.warning('HyperSpy could not load the data in {}, ' 'skipping it'.format(name))"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105709,
+    "v1": "rtol=1e-6) np.testing.assert_allclose(self.m[0].sigma.value, 1.98380707614)",
+    "v2": "atol=1E-6) np.testing.assert_allclose(self.m[0].sigma.value, 1.98380707614, atol=1E-6)",
+    "resolution": "np.testing.assert_allclose(self.m[0].sigma.value, 1.98380707614)",
+    "conflict": "rtol=1e-6) np.testing.assert_allclose(self.m[0].sigma.value, 1.98380707614)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105710,
+    "v1": "show_progressbar=None) np.testing.assert_allclose(self.s.data, data, rtol=self.rtol, atol=self.atol)",
+    "v2": "show_progressbar=None, parallel=parallel) assert np.allclose(data, self.s.data)",
+    "resolution": "show_progressbar=None, parallel=parallel) np.testing.assert_allclose(self.s.data, data, rtol=self.rtol, atol=self.atol)",
+    "conflict": "show_progressbar=None) np.testing.assert_allclose(self.s.data, data, rtol=self.rtol, atol=self.atol)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105711,
+    "v1": "show_progressbar=None) np.testing.assert_allclose(data, self.s.data, rtol=self.rtol, atol=self.atol)",
+    "v2": "show_progressbar=None, parallel=parallel) assert np.allclose(data, self.s.data)",
+    "resolution": "show_progressbar=None, parallel=parallel) np.testing.assert_allclose(data, self.s.data, rtol=self.rtol, atol=self.atol)",
+    "conflict": "show_progressbar=None) np.testing.assert_allclose(data, self.s.data, rtol=self.rtol, atol=self.atol)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105736,
+    "v1": "nt.assert_true(np.isnan(width.data).all()) nt.assert_true(np.isnan(left.data).all()) nt.assert_true(np.isnan(right.data).all())",
+    "v2": "assert width == np.nan assert left == np.nan assert right == np.nan",
+    "resolution": "assert np.isnan(width.data).all() assert np.isnan(left.data).all() assert np.isnan(right.data).all()",
+    "conflict": "nt.assert_true(np.isnan(width.data).all()) nt.assert_true(np.isnan(left.data).all()) nt.assert_true(np.isnan(right.data).all())"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105737,
+    "v1": "nt.assert_true(np.isnan(width.data).all()) nt.assert_true(np.isnan(left.data).all()) nt.assert_true(np.isnan(right.data).all())",
+    "v2": "assert width == np.nan assert left == np.nan assert right == np.nan",
+    "resolution": "assert np.isnan(width.data).all() assert np.isnan(left.data).all() assert np.isnan(right.data).all()",
+    "conflict": "nt.assert_true(np.isnan(width.data).all()) nt.assert_true(np.isnan(left.data).all()) nt.assert_true(np.isnan(right.data).all())"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105768,
+    "v1": "from numpy.testing import assert_array_equal import nose.tools as nt from nose.plugins.skip import SkipTest",
+    "v2": "from numpy.testing import assert_array_equal, assert_allclose  import pytest",
+    "resolution": "from numpy.testing import assert_array_equal, assert_allclose  import pytest",
+    "conflict": "from numpy.testing import assert_array_equal import nose.tools as nt from nose.plugins.skip import SkipTest"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105769,
+    "v1": "nt.assert_true(isinstance(result, signals.Signal1D)) np.testing.assert_equal(result.data, np.array([17, 16, 17])) nt.assert_true(result.metadata.Signal.binned)",
+    "v2": "assert isinstance(result, signals.Signal1D) assert_array_equal(result.data, np.array([17, 16, 17])) assert result.metadata.Signal.binned",
+    "resolution": "assert isinstance(result, signals.Signal1D) assert_array_equal(result.data, np.array([17, 16, 17])) assert result.metadata.Signal.binned",
+    "conflict": "nt.assert_true(isinstance(result, signals.Signal1D)) np.testing.assert_equal(result.data, np.array([17, 16, 17])) nt.assert_true(result.metadata.Signal.binned)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105771,
+    "v1": "# if s._lazy: #     nt.assert_in(data, [v for v in ns.data.dask.values()]) # else: nt.assert_is(ns.data, data)",
+    "v2": "assert ns.data is data",
+    "resolution": "assert ns.data is data",
+    "conflict": "# if s._lazy: #     nt.assert_in(data, [v for v in ns.data.dask.values()]) # else: nt.assert_is(ns.data, data)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105777,
+    "v1": "s = BaseSignal(data, axes=self.axes_manager._get_navigation_axes_dicts())",
+    "v2": "s = BaseSignal( np.zeros(self.axes_manager._navigation_shape_in_array, dtype=self.data.dtype), axes=self.axes_manager._get_navigation_axes_dicts())",
+    "resolution": "s = BaseSignal(data, axes=self.axes_manager._get_navigation_axes_dicts())",
+    "conflict": "s = BaseSignal(data, axes=self.axes_manager._get_navigation_axes_dicts())"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105820,
+    "v1": "self.rworker, samfire.metadata.gt_dump)",
+    "v2": "self.rworker, samfire.metadata._gt_dump) direct_view.apply(lambda worker, ts: worker.set_parameter_boundaries(ts), self.rworker, boundaries)",
+    "resolution": "self.rworker, samfire.metadata._gt_dump) direct_view.apply(lambda worker, ts: worker.set_parameter_boundaries(ts), self.rworker, boundaries)",
+    "conflict": "self.rworker, samfire.metadata.gt_dump)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105840,
+    "v1": "getitem = [0] * len(data.shape) for axis in axes: getitem[axis] = slice(None) # so that we get a reference even with no signal dimensions getitem[unfolded_axis] = i if len(axes) else slice(i, i + 1)",
+    "v2": "getitem[unfolded_axis] = i",
+    "resolution": "getitem[unfolded_axis] = i",
+    "conflict": "getitem = [0] * len(data.shape) for axis in axes: getitem[axis] = slice(None) # so that we get a reference even with no signal dimensions getitem[unfolded_axis] = i if len(axes) else slice(i, i + 1)"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 105848,
+    "v1": "'tests/baseline_images/test_plot_signal1d/*.png', 'tests/baseline_images/test_plot_signal2d/*.png', 'tests/baseline_images/test_plot_markers/*.png',",
+    "v2": "'tests/io/protochips_data/*.npy', 'tests/io/protochips_data/*.csv',",
+    "resolution": "'tests/io/protochips_data/*.npy', 'tests/io/protochips_data/*.csv', 'tests/baseline_images/test_plot_signal1d/*.png', 'tests/baseline_images/test_plot_signal2d/*.png', 'tests/baseline_images/test_plot_markers/*.png',",
+    "conflict": "'tests/baseline_images/test_plot_signal1d/*.png', 'tests/baseline_images/test_plot_signal2d/*.png', 'tests/baseline_images/test_plot_markers/*.png',"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105861,
+    "v1": "record_by: {\"spectrum\", \"image\", \"\"} signal_type : {\"EELS\", \"EDS\", \"EDS_TEM\", \"\", str} lazy: bool",
+    "v2": "signal_dimension: int signal_type : {\"EELS\", \"EDS\", \"EDS_SEM\", \"EDS_TEM\", \"DielectricFunction\", \"\", str}",
+    "resolution": "signal_dimension: int signal_type : {\"EELS\", \"EDS\", \"EDS_SEM\", \"EDS_TEM\", \"DielectricFunction\", \"\", str} lazy: bool",
+    "conflict": "record_by: {\"spectrum\", \"image\", \"\"} signal_type : {\"EELS\", \"EDS\", \"EDS_TEM\", \"\", str} lazy: bool"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105863,
+    "v1": "else self._signal_type, lazy=mp.Signal.lazy if \"Signal.lazy\" in mp else self._lazy)",
+    "v2": "else self._signal_type) if self._alias_signal_types:  # In case legacy types exist: mp.Signal.signal_type = self._signal_type  # set to default!",
+    "resolution": "else self._signal_type, lazy=mp.Signal.lazy if \"Signal.lazy\" in mp else self._lazy) if self._alias_signal_types:  # In case legacy types exist: mp.Signal.signal_type = self._signal_type  # set to default!",
+    "conflict": "else self._signal_type, lazy=mp.Signal.lazy if \"Signal.lazy\" in mp else self._lazy)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105875,
+    "v1": "from hyperspy import components from hyperspy._signals.lazy import LazySignal  _logger = logging.getLogger(__name__)",
+    "v2": "from hyperspy import components1d",
+    "resolution": "from hyperspy import components1d from hyperspy._signals.lazy import LazySignal  _logger = logging.getLogger(__name__)",
+    "conflict": "from hyperspy import components from hyperspy._signals.lazy import LazySignal  _logger = logging.getLogger(__name__)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 105877,
+    "v1": "self.map(gaussian_filter1d, sigma=FWHM / 2.35482)",
+    "v2": "self.data = gaussian_filter1d( self.data, axis=axis.index_in_array, sigma=FWHM / 2.35482) self.events.data_changed.trigger(obj=self)",
+    "resolution": "self.map(gaussian_filter1d, sigma=FWHM / 2.35482)",
+    "conflict": "self.map(gaussian_filter1d, sigma=FWHM / 2.35482)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105912,
+    "v1": "nose.tools.assert_true((self.s.get_explained_variance_ratio().data == self.s.learning_results.explained_variance_ratio).all())",
+    "v2": "self.s.learning_results.explained_variance_ratio = np.asarray([2, 4]) np.testing.assert_array_equal( self.s.get_explained_variance_ratio().data, np.asarray([2, 4]))",
+    "resolution": "self.s.learning_results.explained_variance_ratio = np.asarray([2, 4]) np.testing.assert_array_equal( self.s.get_explained_variance_ratio().data, np.asarray([2, 4]))",
+    "conflict": "nose.tools.assert_true((self.s.get_explained_variance_ratio().data == self.s.learning_results.explained_variance_ratio).all())"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105956,
+    "v1": "",
+    "v2": "try: from statsmodels.nonparametric.smoothers_lowess import lowess statsmodels_installed = True except: statsmodels_installed = False from skimage.feature import peak_local_max",
+    "resolution": "try: from statsmodels.nonparametric.smoothers_lowess import lowess statsmodels_installed = True except: statsmodels_installed = False from skimage.feature import peak_local_max",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 105959,
+    "v1": "import sys from unittest import mock import nose",
+    "v2": "import mock import numpy as np",
+    "resolution": "import mock import numpy as np import nose.tools as nt",
+    "conflict": "import sys from unittest import mock import nose"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105966,
+    "v1": "from distutils.core import setup import distutils.dir_util",
+    "v2": "from setuptools import setup, Extension, Command  import warnings",
+    "resolution": "from setuptools import setup, Extension, Command  import warnings",
+    "conflict": "from distutils.core import setup import distutils.dir_util"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 105972,
+    "v1": "",
+    "v2": "try: from statsmodels.nonparametric.smoothers_lowess import lowess statsmodels_installed = True except: statsmodels_installed = False from skimage.feature import peak_local_max",
+    "resolution": "try: from statsmodels.nonparametric.smoothers_lowess import lowess statsmodels_installed = True except: statsmodels_installed = False from skimage.feature import peak_local_max",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105987,
+    "v1": "tiff, semper_unf, blockfile, dens, emd) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, emd]",
+    "v2": "tiff, semper_unf, blockfile, dens, bcf) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, bcf]",
+    "resolution": "tiff, semper_unf, blockfile, dens, bcf) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, bcf]",
+    "conflict": "tiff, semper_unf, blockfile, dens, emd) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, emd]"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105995,
+    "v1": "tiff, semper_unf, blockfile, dens, emd) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, emd]",
+    "v2": "tiff, semper_unf, blockfile, dens, bcf) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, bcf]",
+    "resolution": "tiff, semper_unf, blockfile, dens, bcf) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, bcf]",
+    "conflict": "tiff, semper_unf, blockfile, dens, emd) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, emd]"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 105999,
+    "v1": "tiff, semper_unf, blockfile, dens, emd) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, emd]",
+    "v2": "tiff, semper_unf, blockfile, dens, bcf) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, bcf]",
+    "resolution": "tiff, semper_unf, blockfile, dens, bcf) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, bcf]",
+    "conflict": "tiff, semper_unf, blockfile, dens, emd) io_plugins = [msa, digital_micrograph, fei, mrc, ripple, tiff, semper_unf, blockfile, dens, emd]"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106002,
+    "v1": "",
+    "v2": "def are_we_building4windows(): for arg in sys.argv: if 'wininst' in arg: return True  scripts = ['bin/hyperspy', ]",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106004,
+    "v1": "",
+    "v2": "def are_we_building4windows(): for arg in sys.argv: if 'wininst' in arg: return True  scripts = ['bin/hyperspy', ]",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106013,
+    "v1": "np.testing.assert_almost_equal(self.m[0].A.value, 9991.65422046, 4) np.testing.assert_almost_equal(self.m[0].centre.value, 0.5) np.testing.assert_almost_equal(self.m[0].sigma.value, 2.08398236966)",
+    "v2": "nt.assert_almost_equal(self.m[0].A.value, 9991.65422046, 4) nt.assert_almost_equal(self.m[0].centre.value, 0.5) nt.assert_almost_equal(self.m[0].sigma.value, 2.08398236966)",
+    "resolution": "np.testing.assert_almost_equal(self.m[0].A.value, 9991.65422046, 4) np.testing.assert_almost_equal(self.m[0].centre.value, 0.5) np.testing.assert_almost_equal(self.m[0].sigma.value, 2.08398236966)",
+    "conflict": "np.testing.assert_almost_equal(self.m[0].A.value, 9991.65422046, 4) np.testing.assert_almost_equal(self.m[0].centre.value, 0.5) np.testing.assert_almost_equal(self.m[0].sigma.value, 2.08398236966)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106036,
+    "v1": "\"\"\"Class for importing and exporting Semper `.unf`-files.  The :class:`~.SemperFormat` class represents a Semper binary file format with a header, which",
+    "v2": "\"\"\"Class for importing and exporting SEMPER `.unf`-files.  The :class:`~.SemperFormat` class represents a SEMPER binary file format with a header, which",
+    "resolution": "\"\"\"Class for importing and exporting SEMPER `.unf`-files.  The :class:`~.SemperFormat` class represents a SEMPER binary file format with a header, which",
+    "conflict": "\"\"\"Class for importing and exporting Semper `.unf`-files.  The :class:`~.SemperFormat` class represents a Semper binary file format with a header, which"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106046,
+    "v1": "raise TypeError('Data type not understood ({}))!'.format(data.dtype.name))",
+    "v2": "supported_formats = [np.dtype(i).name for i in cls.IFORM_DICT.values()] msg = 'The SEMPER file format does not support {} data type. '.format(data.dtype.name) msg += 'Supported data types are: ' + ', '.join(supported_formats) raise IOError(msg)",
+    "resolution": "supported_formats = [np.dtype(i).name for i in cls.IFORM_DICT.values()] msg = 'The SEMPER file format does not support {} data type. '.format(data.dtype.name) msg += 'Supported data types are: ' + ', '.join(supported_formats) raise IOError(msg)",
+    "conflict": "raise TypeError('Data type not understood ({}))!'.format(data.dtype.name))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106054,
+    "v1": "assert len(data.shape) <= 3, 'Only up to 3-dimensional datasets can be handled!' scales, offsets, units = [1.]*3, [0.]*3, [Undefined]*3  # Defaults!",
+    "v2": "assert len( data.shape) <= 3, 'Only up to 3-dimensional datasets can be handled!' scales, offsets, units = [1.] * 3, [0.] * \\ 3, [Undefined] * 3  # Defaults!",
+    "resolution": "assert len( data.shape) <= 3, 'Only up to 3-dimensional datasets can be handled!' scales, offsets, units = [1.] * 3, [0.] * \\ 3, [Undefined] * 3  # Defaults!",
+    "conflict": "assert len(data.shape) <= 3, 'Only up to 3-dimensional datasets can be handled!' scales, offsets, units = [1.]*3, [0.]*3, [Undefined]*3  # Defaults!"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106057,
+    "v1": "'ICCOLN': data.shape[2]//2 + 1, 'ICROWN': data.shape[1]//2 + 1, 'ICLAYN': data.shape[0]//2 + 1})",
+    "v2": "'ICCOLN': data.shape[2] // 2 + 1, 'ICROWN': data.shape[1] // 2 + 1, 'ICLAYN': data.shape[0] // 2 + 1})",
+    "resolution": "'ICCOLN': data.shape[2]//2 + 1, 'ICROWN': data.shape[1]//2 + 1, 'ICLAYN': data.shape[0]//2 + 1})",
+    "conflict": "'ICCOLN': data.shape[2]//2 + 1, 'ICROWN': data.shape[1]//2 + 1, 'ICLAYN': data.shape[0]//2 + 1})"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106059,
+    "v1": "signal = load(os.path.join(my_path, 'unf_files', 'example_spectrum_1d.unf'))",
+    "v2": "signal = load( os.path.join( my_path, 'unf_files', 'example_spectrum_1d.unf'))",
+    "resolution": "signal = load(os.path.join(my_path, 'unf_files', 'example_spectrum_1d.unf'))",
+    "conflict": "signal = load(os.path.join(my_path, 'unf_files', 'example_spectrum_1d.unf'))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106061,
+    "v1": "signal = load(os.path.join(my_path, 'unf_files', 'example_image_int32.unf'))",
+    "v2": "signal = load( os.path.join( my_path, 'unf_files', 'example_image_int32.unf'))",
+    "resolution": "signal = load(os.path.join(my_path, 'unf_files', 'example_image_int32.unf'))",
+    "conflict": "signal = load(os.path.join(my_path, 'unf_files', 'example_image_int32.unf'))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106062,
+    "v1": "signal = load(os.path.join(my_path, 'unf_files', 'example_image_complex.unf'))",
+    "v2": "signal = load( os.path.join( my_path, 'unf_files', 'example_image_complex.unf'))",
+    "resolution": "signal = load(os.path.join(my_path, 'unf_files', 'example_image_complex.unf'))",
+    "conflict": "signal = load(os.path.join(my_path, 'unf_files', 'example_image_complex.unf'))"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 106085,
+    "v1": "number_of_iterations=it,) nt.assert_true(np.allclose(data, self.s.data))",
+    "v2": "number_of_iterations=it, show_progressbar=None) nose.tools.assert_true(np.allclose(data, self.s.data))",
+    "resolution": "number_of_iterations=it, show_progressbar=None) nt.assert_true(np.allclose(data, self.s.data))",
+    "conflict": "number_of_iterations=it,) nt.assert_true(np.allclose(data, self.s.data))"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 106086,
+    "v1": "self.s.smooth_tv(smoothing_parameter=weight,) nt.assert_true(np.allclose(data, self.s.data))",
+    "v2": "self.s.smooth_tv(smoothing_parameter=weight, show_progressbar=None) nose.tools.assert_true(np.allclose(data, self.s.data))",
+    "resolution": "self.s.smooth_tv(smoothing_parameter=weight, show_progressbar=None) nt.assert_true(np.allclose(data, self.s.data))",
+    "conflict": "self.s.smooth_tv(smoothing_parameter=weight,) nt.assert_true(np.allclose(data, self.s.data))"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 106096,
+    "v1": "from hyperspy.misc.utils import unfold_if_multidim from hyperspy.misc.image_tools import (contrast_stretching, MPL_DIVERGING_COLORMAPS, centre_colormap_values)",
+    "v2": "from hyperspy.misc.image_tools import contrast_stretching",
+    "resolution": "from hyperspy.misc.image_tools import (contrast_stretching, MPL_DIVERGING_COLORMAPS, centre_colormap_values)",
+    "conflict": "from hyperspy.misc.utils import unfold_if_multidim from hyperspy.misc.image_tools import (contrast_stretching, MPL_DIVERGING_COLORMAPS, centre_colormap_values)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106115,
+    "v1": "dict2hdfgroup(dict(zip( [unicode(i) for i in xrange(len(value))], value)), group.create_group( '_list_' + str(len(value)) + '_' + key), compression=compression)",
+    "v2": "parse_structure(key, group, value, '_list_', compression)",
+    "resolution": "parse_structure(key, group, value, '_list_', compression)",
+    "conflict": "dict2hdfgroup(dict(zip( [unicode(i) for i in xrange(len(value))], value)), group.create_group( '_list_' + str(len(value)) + '_' + key), compression=compression)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106116,
+    "v1": "dict2hdfgroup(dict(zip( [unicode(i) for i in xrange(len(value))], value)), group.create_group( '_list_' + str(len(value)) + '_' + key), compression=compression)",
+    "v2": "parse_structure(key, group, value, '_list_', compression)",
+    "resolution": "parse_structure(key, group, value, '_list_', compression)",
+    "conflict": "dict2hdfgroup(dict(zip( [unicode(i) for i in xrange(len(value))], value)), group.create_group( '_list_' + str(len(value)) + '_' + key), compression=compression)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106118,
+    "v1": "dict2hdfgroup(dict(zip( [unicode(i) for i in xrange(len(value))], value)), group.create_group( '_list_' + str(len(value)) + '_' + key), compression=compression)",
+    "v2": "parse_structure(key, group, value, '_list_', compression)",
+    "resolution": "parse_structure(key, group, value, '_list_', compression)",
+    "conflict": "dict2hdfgroup(dict(zip( [unicode(i) for i in xrange(len(value))], value)), group.create_group( '_list_' + str(len(value)) + '_' + key), compression=compression)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106121,
+    "v1": "parse_structure(key, group, value, '_list_', compression)",
+    "v2": "dict2hdfgroup(dict(zip( [unicode(i) for i in xrange(len(value))], value)), group.create_group( '_list_' + str(len(value)) + '_' + key), compression=compression)",
+    "resolution": "parse_structure(key, group, value, '_list_', compression)",
+    "conflict": "parse_structure(key, group, value, '_list_', compression)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106126,
+    "v1": "dict2hdfgroup(dict(zip( [unicode(i) for i in xrange(len(value))], value)), group.create_group( '_list_' + str(len(value)) + '_' + key), compression=compression)",
+    "v2": "parse_structure(key, group, value, '_list_', compression)",
+    "resolution": "parse_structure(key, group, value, '_list_', compression)",
+    "conflict": "dict2hdfgroup(dict(zip( [unicode(i) for i in xrange(len(value))], value)), group.create_group( '_list_' + str(len(value)) + '_' + key), compression=compression)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106127,
+    "v1": "list.__delitem__(self, thing) thing.model = None",
+    "v2": "thing = self.__getitem__(thing) thing.model = None list.__delitem__(self, self.index(thing))",
+    "resolution": "thing = self.__getitem__(thing) thing.model = None list.__delitem__(self, self.index(thing))",
+    "conflict": "list.__delitem__(self, thing) thing.model = None"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106145,
+    "v1": "def test_background_remove_gaussian_full_fit(self): s1 = self.signal.remove_background( signal_range=(None, None), background_type='Gaussian', estimate_background=False) assert_true(np.allclose(s1.data, np.zeros(len(s1.data))))",
+    "v2": "",
+    "resolution": "def test_background_remove_gaussian_full_fit(self): s1 = self.signal.remove_background( signal_range=(None, None), background_type='Gaussian', estimate_background=False) assert_true(np.allclose(s1.data, np.zeros(len(s1.data))))",
+    "conflict": "def test_background_remove_gaussian_full_fit(self): s1 = self.signal.remove_background( signal_range=(None, None), background_type='Gaussian', estimate_background=False) assert_true(np.allclose(s1.data, np.zeros(len(s1.data))))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106147,
+    "v1": "",
+    "v2": "def test_unfold_image_returns_true(self): s = self.signal s.axes_manager.set_signal_dimension(2) nt.assert_true(s.unfold())",
+    "resolution": "def test_unfold_image_returns_true(self): s = self.signal s.axes_manager.set_signal_dimension(2) nt.assert_true(s.unfold())",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106150,
+    "v1": "def test_unfold_spectrum_returns_true(self): nt.assert_true(self.s.unfold())  def test_unfold_spectrum_signal_returns_false(self): nt.assert_false(self.s.unfold_signal_space())",
+    "v2": "",
+    "resolution": "def test_unfold_spectrum_returns_true(self): nt.assert_true(self.s.unfold())  def test_unfold_spectrum_signal_returns_false(self): nt.assert_false(self.s.unfold_signal_space())",
+    "conflict": "def test_unfold_spectrum_returns_true(self): nt.assert_true(self.s.unfold())  def test_unfold_spectrum_signal_returns_false(self): nt.assert_false(self.s.unfold_signal_space())"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106211,
+    "v1": "s.axes_manager[-1].offset = 1.0 sC = s.get_lines_intensity([\"C_Ka\"], plot_result=False) nose.tools.assert_equal(len(sC), 0)",
+    "v2": "nose.tools.assert_true(sAl.metadata.Sample.elements, [\"Al\"]) nose.tools.assert_true(sAl.metadata.Sample.xray_lines, [\"Al_Ka\"])",
+    "resolution": "nose.tools.assert_true(sAl.metadata.Sample.elements, [\"Al\"]) nose.tools.assert_true(sAl.metadata.Sample.xray_lines, [\"Al_Ka\"]) s.axes_manager[-1].offset = 1.0 sC = s.get_lines_intensity([\"C_Ka\"], plot_result=False) nose.tools.assert_equal(len(sC), 0)",
+    "conflict": "s.axes_manager[-1].offset = 1.0 sC = s.get_lines_intensity([\"C_Ka\"], plot_result=False) nose.tools.assert_equal(len(sC), 0)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106220,
+    "v1": "if is_ft==False: is_ft = \"\"",
+    "v2": "",
+    "resolution": "",
+    "conflict": "if is_ft==False: is_ft = \"\""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106242,
+    "v1": "energy2index = axis._get_index i1 = energy2index(x1) if energy2index(x1) else 0 i2 = energy2index(x2) if energy2index(x2) else len(axis.axis) - 1",
+    "v2": "binned = signal.metadata.Signal.binned i1, i2 = axis.value_range_to_indices(x1, x2)",
+    "resolution": "binned = signal.metadata.Signal.binned i1, i2 = axis.value_range_to_indices(x1, x2)",
+    "conflict": "energy2index = axis._get_index i1 = energy2index(x1) if energy2index(x1) else 0 i2 = energy2index(x2) if energy2index(x2) else len(axis.axis) - 1"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106250,
+    "v1": "+ plasmon_linewidth ** 2) + plasmon_energy ** 4) / (x ** 4 + x ** 2 * (plasmon_linewidth ** 2 - 2 * plasmon_energy ** 2) + plasmon_energy ** 4) ** 2) * intensity, 0)",
+    "v2": "+ fwhm ** 2) + plasmon_energy ** 4) / (x ** 4 + x ** 2 * (fwhm ** 2 - 2 * plasmon_energy ** 2) + plasmon_energy ** 4) ** 2) * intensity, 0)",
+    "resolution": "+ fwhm ** 2) + plasmon_energy ** 4) / (x ** 4 + x ** 2 * (fwhm ** 2 - 2 * plasmon_energy ** 2) + plasmon_energy ** 4) ** 2) * intensity, 0)",
+    "conflict": "+ plasmon_linewidth ** 2) + plasmon_energy ** 4) / (x ** 4 + x ** 2 * (plasmon_linewidth ** 2 - 2 * plasmon_energy ** 2) + plasmon_energy ** 4) ** 2) * intensity, 0)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106299,
+    "v1": "'TEM.convergence_angle', 'TEM.beam_energy', 'TEM.EELS.collection_angle',)",
+    "v2": "'Acquisition_instrument.TEM.convergence_angle', 'Acquisition_instrument.TEM.beam_energy', 'Acquisition_instrument.TEM.Detector.EELS.collection_angle',)",
+    "resolution": "'Acquisition_instrument.TEM.convergence_angle', 'Acquisition_instrument.TEM.beam_energy', 'Acquisition_instrument.TEM.Detector.EELS.collection_angle',)",
+    "conflict": "'TEM.convergence_angle', 'TEM.beam_energy', 'TEM.EELS.collection_angle',)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106300,
+    "v1": "def set_microscope_parameters(self, beam_energy=None, convergence_angle=None, collection_angle=None):",
+    "v2": "def set_microscope_parameters(self, beam_energy=None, convergence_angle=None, collection_angle=None):",
+    "resolution": "def set_microscope_parameters(self, beam_energy=None, convergence_angle=None, collection_angle=None):",
+    "conflict": "def set_microscope_parameters(self, beam_energy=None, convergence_angle=None, collection_angle=None):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106301,
+    "v1": "if self.metadata.has_item('TEM') is False: self.metadata.add_node('TEM') if self.metadata.has_item('TEM.EELS') is False: self.metadata.TEM.add_node('EELS')",
+    "v2": "",
+    "resolution": "",
+    "conflict": "if self.metadata.has_item('TEM') is False: self.metadata.add_node('TEM') if self.metadata.has_item('TEM.EELS') is False: self.metadata.TEM.add_node('EELS')"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106310,
+    "v1": "eps.metadata.title = (self.metadata.title + 'dielectric function ' '(from Kramers-Kronig analysis)')",
+    "v2": "eps.metadata.General.title = (self.metadata.General.title + 'dielectric function ' '(from Kramers-Kronig analysis)')",
+    "resolution": "eps.metadata.General.title = (self.metadata.General.title + 'dielectric function ' '(from Kramers-Kronig analysis)')",
+    "conflict": "eps.metadata.title = (self.metadata.title + 'dielectric function ' '(from Kramers-Kronig analysis)')"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106312,
+    "v1": "if self.metadata.signal_type == 'EDS_SEM': microscope = 'SEM' elif self.metadata.signal_type == 'EDS_TEM':",
+    "v2": "if self.metadata.Signal.signal_type == 'EDS_SEM': microscope = 'SEM' elif self.metadata.Signal.signal_type == 'EDS_TEM':",
+    "resolution": "if self.metadata.Signal.signal_type == 'EDS_SEM': microscope = 'SEM' elif self.metadata.Signal.signal_type == 'EDS_TEM':",
+    "conflict": "if self.metadata.signal_type == 'EDS_SEM': microscope = 'SEM' elif self.metadata.signal_type == 'EDS_TEM':"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106313,
+    "v1": "# if self.metadata.signal_type == 'EDS_SEM': #microscope = 'SEM' # elif self.metadata.signal_type == 'EDS_TEM':",
+    "v2": "# if self.metadata.Signal.signal_type == 'EDS_SEM': #microscope = 'SEM' # elif self.metadata.Signal.signal_type == 'EDS_TEM':",
+    "resolution": "# if self.metadata.Signal.signal_type == 'EDS_SEM': #microscope = 'SEM' # elif self.metadata.Signal.signal_type == 'EDS_TEM':",
+    "conflict": "# if self.metadata.signal_type == 'EDS_SEM': #microscope = 'SEM' # elif self.metadata.signal_type == 'EDS_TEM':"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106328,
+    "v1": "",
+    "v2": "to_return = bg_array  if self.signal.metadata.Signal.binned is True: to_return *= self.axis.scale return to_return",
+    "resolution": "to_return = bg_array  if self.signal.metadata.Signal.binned is True: to_return *= self.axis.scale return to_return",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106338,
+    "v1": "",
+    "v2": "if len(axes) != len(dc.shape): dc = dc.squeeze() if len(axes) != len(dc.shape): raise IOError(\"Please report this issue to the HyperSpy developers.\")",
+    "resolution": "if len(axes) != len(dc.shape): dc = dc.squeeze() if len(axes) != len(dc.shape): raise IOError(\"Please report this issue to the HyperSpy developers.\")",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106346,
+    "v1": "if '__unnamed__' == exp['metadata']['title']: exp['metadata']['title'] = ''",
+    "v2": "if \"General\" in exp[\"metadata\"] and \"title\" in exp[\"metadata\"][\"General\"]: if '__unnamed__' == exp['metadata']['General']['title']: exp['metadata'][\"General\"]['title'] = ''",
+    "resolution": "if \"General\" in exp[\"metadata\"] and \"title\" in exp[\"metadata\"][\"General\"]: if '__unnamed__' == exp['metadata']['General']['title']: exp['metadata'][\"General\"]['title'] = ''",
+    "conflict": "if '__unnamed__' == exp['metadata']['title']: exp['metadata']['title'] = ''"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106351,
+    "v1": "def file_writer(filename, signal, compression='gzip', *args, **kwds):",
+    "v2": "def file_writer(filename, signal, compression='gzip', *args, **kwds):",
+    "resolution": "def file_writer(filename, signal, compression='gzip', *args, **kwds):",
+    "conflict": "def file_writer(filename, signal, compression='gzip', *args, **kwds):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106367,
+    "v1": "original_metadata = {'record_by': ncfile.type, 'calibration': calibration_dict, 'acquisition': acquisition_dict, 'treatments': treatments_dict}",
+    "v2": "original_metadata = {'record_by': ncfile.type, 'calibration': calibration_dict, 'acquisition': acquisition_dict, 'treatments': treatments_dict}",
+    "resolution": "original_metadata = {'record_by': ncfile.type, 'calibration': calibration_dict, 'acquisition': acquisition_dict, 'treatments': treatments_dict}",
+    "conflict": "original_metadata = {'record_by': ncfile.type, 'calibration': calibration_dict, 'acquisition': acquisition_dict, 'treatments': treatments_dict}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106408,
+    "v1": "if self.predictor == 'horizontal': numpy.cumsum(tile, axis=-2, dtype=dtype, out=tile) result[0, pl, tl:tl+tile_length, tw:tw+tile_width, :] = tile",
+    "v2": "result[0, pl, tl:tl + tile_length, tw:tw + tile_width, :] = tile",
+    "resolution": "if self.predictor == 'horizontal': numpy.cumsum(tile, axis=-2, dtype=dtype, out=tile) result[0, pl, tl:tl+tile_length, tw:tw+tile_width, :] = tile",
+    "conflict": "if self.predictor == 'horizontal': numpy.cumsum(tile, axis=-2, dtype=dtype, out=tile) result[0, pl, tl:tl+tile_length, tw:tw+tile_width, :] = tile"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106425,
+    "v1": "value = unpack(byteorder+\"i\", fh.read(4))[0] elif dtype == 5: value = unpack(byteorder+\"d\", fh.read(8))[0]",
+    "v2": "value = unpack(byte_order + \"i\", fd.read(4))[0] elif dtype == 5: value = unpack(byte_order + \"d\", fd.read(8))[0]",
+    "resolution": "value = unpack(byteorder+\"i\", fh.read(4))[0] elif dtype == 5: value = unpack(byteorder+\"d\", fh.read(8))[0]",
+    "conflict": "value = unpack(byteorder+\"i\", fh.read(4))[0] elif dtype == 5: value = unpack(byteorder+\"d\", fh.read(8))[0]"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106427,
+    "v1": "code = unpack('>I', s + b'\\x00'*(4-len(s)))[0] code <<= bitcount % 8 code &= mask",
+    "v2": "code = unpack('>I', s + b'\\x00' * (4 - len(s)))[0] code = code << (bitcount % 8) code = code & mask",
+    "resolution": "code = unpack('>I', s + b'\\x00'*(4-len(s)))[0] code <<= bitcount % 8 code &= mask",
+    "conflict": "code = unpack('>I', s + b'\\x00'*(4-len(s)))[0] code <<= bitcount % 8 code &= mask"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106428,
+    "v1": "code = unpack(dtypestr, s + b'\\x00'*(itembytes-len(s)))[0] code <<= bitcount % 8 code &= bitmask",
+    "v2": "code = unpack(dtypestr, s + b'\\x00' * (itembytes - len(s)))[0] code = code << (bitcount % 8) code = code & bitmask",
+    "resolution": "code = unpack(dtypestr, s + b'\\x00'*(itembytes-len(s)))[0] code <<= bitcount % 8 code &= bitmask",
+    "conflict": "code = unpack(dtypestr, s + b'\\x00'*(itembytes-len(s)))[0] code <<= bitcount % 8 code &= bitmask"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106429,
+    "v1": "print(\"%s, %s %s, %s, %.0f ms\" % ( str(tif), str(img.shape), img.dtype, tif[0].compression, (time.time()-t0) * 1e3))",
+    "v2": "print(\"%s, %s %s, %s, %.0f ms\" % (str(tif), str(img.shape), img.dtype, tif[0].compression, (time.time() - t0) * 1e3))",
+    "resolution": "print(\"%s, %s %s, %s, %.0f ms\" % ( str(tif), str(img.shape), img.dtype, tif[0].compression, (time.time()-t0) * 1e3))",
+    "conflict": "print(\"%s, %s %s, %s, %.0f ms\" % ( str(tif), str(img.shape), img.dtype, tif[0].compression, (time.time()-t0) * 1e3))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106431,
+    "v1": "65: 'blue_max_scale_info', #66: 'overlay_plane_color' }",
+    "v2": "65: 'blue_max_scale_info'} # 66: 'overlay_plane_color',",
+    "resolution": "65: 'blue_max_scale_info', #66: 'overlay_plane_color' }",
+    "conflict": "65: 'blue_max_scale_info', #66: 'overlay_plane_color' }"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106441,
+    "v1": "",
+    "v2": "from hyperspy.signal import Signal  weights_deprecation_warning = ( 'The `weights` argument is deprecated and will be removed ' 'in the next release. ')",
+    "resolution": "from hyperspy.signal import Signal  weights_deprecation_warning = ( 'The `weights` argument is deprecated and will be removed ' 'in the next release. ')",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106442,
+    "v1": "",
+    "v2": "chisq : A Signal of floats Chi-squared of the signal (or np.nan if not yet fit) dof : A Signal of integers Degrees of freedom of the signal (0 if not yet fit) red_chisq",
+    "resolution": "chisq : A Signal of floats Chi-squared of the signal (or np.nan if not yet fit) dof : A Signal of integers Degrees of freedom of the signal (0 if not yet fit) red_chisq",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106445,
+    "v1": "spectrum.metadata.title = ( self.spectrum.metadata.title + \" from fitted model\")",
+    "v2": "spectrum.metadata.General.title = ( self.spectrum.metadata.General.title + \" from fitted model\") spectrum.metadata.Signal.binned = self.spectrum.metadata.Signal.binned",
+    "resolution": "spectrum.metadata.General.title = ( self.spectrum.metadata.General.title + \" from fitted model\") spectrum.metadata.Signal.binned = self.spectrum.metadata.Signal.binned",
+    "conflict": "spectrum.metadata.title = ( self.spectrum.metadata.title + \" from fitted model\")"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106460,
+    "v1": "E0=self.spectrum.metadata.TEM.beam_energy, alpha=self.spectrum.metadata.TEM.convergence_angle, beta=self.spectrum.metadata.TEM.EELS.collection_angle,",
+    "v2": "E0=self.spectrum.metadata.Acquisition_instrument.TEM.beam_energy, alpha=self.spectrum.metadata.Acquisition_instrument.TEM.convergence_angle, beta=self.spectrum.metadata.Acquisition_instrument.TEM.Detector.EELS.collection_angle,",
+    "resolution": "E0=self.spectrum.metadata.Acquisition_instrument.TEM.beam_energy, alpha=self.spectrum.metadata.Acquisition_instrument.TEM.convergence_angle, beta=self.spectrum.metadata.Acquisition_instrument.TEM.Detector.EELS.collection_angle,",
+    "conflict": "E0=self.spectrum.metadata.TEM.beam_energy, alpha=self.spectrum.metadata.TEM.convergence_angle, beta=self.spectrum.metadata.TEM.EELS.collection_angle,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106467,
+    "v1": "'title': '%s from %s' % ( factor_prefix, self.metadata.title), })",
+    "v2": "\"General\": {'title': '%s from %s' % ( factor_prefix, self.metadata.General.title), }})",
+    "resolution": "\"General\": {'title': '%s from %s' % ( factor_prefix, self.metadata.General.title), }})",
+    "conflict": "'title': '%s from %s' % ( factor_prefix, self.metadata.title), })"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106482,
+    "v1": "string += \", title: %s\" % self.metadata.title string += \", dimensions: %s\" % (",
+    "v2": "string += \", title: %s\" % self.metadata.General.title string += \", %sdimensions: %s\" % ( unfolded,",
+    "resolution": "string += \", title: %s\" % self.metadata.General.title string += \", %sdimensions: %s\" % ( unfolded,",
+    "conflict": "string += \", title: %s\" % self.metadata.title string += \", dimensions: %s\" % ("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106506,
+    "v1": "assert_equal(sSum.metadata.SEM.EDS.live_time, 3.1 * 2)",
+    "v2": "assert_equal( sSum.metadata.Acquisition_instrument.SEM.Detector.EDS.live_time, 3.1 * 2)",
+    "resolution": "assert_equal( sSum.metadata.Acquisition_instrument.SEM.Detector.EDS.live_time, 3.1 * 2)",
+    "conflict": "assert_equal(sSum.metadata.SEM.EDS.live_time, 3.1 * 2)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106507,
+    "v1": "assert_equal(s.metadata.SEM.EDS.live_time, 3.1 * 2 * 2)",
+    "v2": "assert_equal( s.metadata.Acquisition_instrument.SEM.Detector.EDS.live_time, 3.1 * 2 * 2)",
+    "resolution": "assert_equal( s.metadata.Acquisition_instrument.SEM.Detector.EDS.live_time, 3.1 * 2 * 2)",
+    "conflict": "assert_equal(s.metadata.SEM.EDS.live_time, 3.1 * 2 * 2)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106514,
+    "v1": "mp.SEM.beam_energy, density='auto', tilt=mp.SEM.tilt_stage)",
+    "v2": "mp.Acquisition_instrument.SEM.beam_energy, density='auto', tilt=mp.Acquisition_instrument.SEM.tilt_stage)",
+    "resolution": "mp.Acquisition_instrument.SEM.beam_energy, density='auto', tilt=mp.Acquisition_instrument.SEM.tilt_stage)",
+    "conflict": "mp.SEM.beam_energy, density='auto', tilt=mp.SEM.tilt_stage)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106517,
+    "v1": "assert_equal(sSum.metadata.TEM.EDS.live_time, 3.1 * 2)",
+    "v2": "assert_equal( sSum.metadata.Acquisition_instrument.TEM.Detector.EDS.live_time, 3.1 * 2)",
+    "resolution": "assert_equal( sSum.metadata.Acquisition_instrument.TEM.Detector.EDS.live_time, 3.1 * 2)",
+    "conflict": "assert_equal(sSum.metadata.TEM.EDS.live_time, 3.1 * 2)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106518,
+    "v1": "assert_equal(s.metadata.TEM.EDS.live_time, 3.1 * 2 * 2)",
+    "v2": "assert_equal( s.metadata.Acquisition_instrument.TEM.Detector.EDS.live_time, 3.1 * 2 * 2)",
+    "resolution": "assert_equal( s.metadata.Acquisition_instrument.TEM.Detector.EDS.live_time, 3.1 * 2 * 2)",
+    "conflict": "assert_equal(s.metadata.TEM.EDS.live_time, 3.1 * 2 * 2)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106523,
+    "v1": "assert_equal(im.metadata.signal_type, \"EELS\") s = im.as_spectrum((0)) assert_equal(s.metadata.signal_type, \"EELS\")",
+    "v2": "assert_equal(im.metadata.Signal.signal_type, \"EELS\") s = im.as_spectrum((0)) assert_equal(s.metadata.Signal.signal_type, \"EELS\")",
+    "resolution": "assert_equal(im.metadata.Signal.signal_type, \"EELS\") s = im.as_spectrum((0)) assert_equal(s.metadata.Signal.signal_type, \"EELS\")",
+    "conflict": "assert_equal(im.metadata.signal_type, \"EELS\") s = im.as_spectrum((0)) assert_equal(s.metadata.signal_type, \"EELS\")"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106525,
+    "v1": "assert_true(len(result) == 2) assert_true((result[0].data == self.data[:2, :]).all()) assert_true((result[1].data == self.data[2:4, :]).all())",
+    "v2": "assert_true(len(result) == 5) assert_true((result[0].data == self.data[0]).all())",
+    "resolution": "assert_true(len(result) == 5) assert_true((result[0].data == self.data[0]).all())",
+    "conflict": "assert_true(len(result) == 2) assert_true((result[0].data == self.data[:2, :]).all()) assert_true((result[1].data == self.data[2:4, :]).all())"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106561,
+    "v1": "element, line = utils_eds._get_element_and_line(Xray_line) line_energy = elements_db[element]['Xray_lines'][line]['energy'] line_FWHM = utils_eds.get_FWHM_at_Energy(FWHM_MnKa,line_energy)",
+    "v2": "element, line = utils_eds._get_element_and_line(Xray_line) line_energy = elements_db[element]['Xray_energy'][line] line_FWHM = utils_eds.get_FWHM_at_Energy(FWHM_MnKa, line_energy)",
+    "resolution": "element, line = utils_eds._get_element_and_line(Xray_line) line_energy = elements_db[element]['Xray_lines'][line]['energy'] line_FWHM = utils_eds.get_FWHM_at_Energy(FWHM_MnKa,line_energy)",
+    "conflict": "element, line = utils_eds._get_element_and_line(Xray_line) line_energy = elements_db[element]['Xray_lines'][line]['energy'] line_FWHM = utils_eds.get_FWHM_at_Energy(FWHM_MnKa,line_energy)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106580,
+    "v1": "def _gradient_ls(self,param, y, weights=None): gls =(2*self._errfunc(param, y, weights) * self._jacobian(param, y)).sum(1)",
+    "v2": "def _gradient_ls(self, param, y, weights=None): gls = (2 * self._errfunc(param, y, weights) * self._jacobian(param, y)).sum(1)",
+    "resolution": "def _gradient_ls(self,param, y, weights=None): gls =(2*self._errfunc(param, y, weights) * self._jacobian(param, y)).sum(1)",
+    "conflict": "def _gradient_ls(self,param, y, weights=None): gls =(2*self._errfunc(param, y, weights) * self._jacobian(param, y)).sum(1)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106582,
+    "v1": "self.channel_switches] args = (self.spectrum()[self.channel_switches], weights)",
+    "v2": "self.channel_switches] args = (self.spectrum()[self.channel_switches], weights)",
+    "resolution": "self.channel_switches] args = (self.spectrum()[self.channel_switches], weights)",
+    "conflict": "self.channel_switches] args = (self.spectrum()[self.channel_switches], weights)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106588,
+    "v1": "self.p0 = fmin_tnc(tominimize, self.p0, fprime = fprime, args = args, bounds = self.free_parameters_boundaries, approx_grad = approx_grad, **kwargs)[0]",
+    "v2": "self.p0 = fmin_tnc(tominimize, self.p0, fprime=fprime, args=args, bounds=self.free_parameters_boundaries, approx_grad=approx_grad, **kwargs)[0]",
+    "resolution": "self.p0 = fmin_tnc(tominimize, self.p0, fprime = fprime, args = args, bounds = self.free_parameters_boundaries, approx_grad = approx_grad, **kwargs)[0]",
+    "conflict": "self.p0 = fmin_tnc(tominimize, self.p0, fprime = fprime, args = args, bounds = self.free_parameters_boundaries, approx_grad = approx_grad, **kwargs)[0]"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106589,
+    "v1": "fprime=fprime, args=args, bounds=self.free_parameters_boundaries, approx_grad = approx_grad, **kwargs)[0]",
+    "v2": "fprime=fprime, args=args, bounds=self.free_parameters_boundaries, approx_grad=approx_grad, **kwargs)[0]",
+    "resolution": "fprime=fprime, args=args, bounds=self.free_parameters_boundaries, approx_grad = approx_grad, **kwargs)[0]",
+    "conflict": "fprime=fprime, args=args, bounds=self.free_parameters_boundaries, approx_grad = approx_grad, **kwargs)[0]"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106596,
+    "v1": "parameter.set_current_value_to(mask = mask)  def _enable_ext_bounding(self,components = None):",
+    "v2": "parameter.set_current_value_to(mask=mask)  def _enable_ext_bounding(self, components=None):",
+    "resolution": "parameter.set_current_value_to(mask = mask)  def _enable_ext_bounding(self,components = None):",
+    "conflict": "parameter.set_current_value_to(mask = mask)  def _enable_ext_bounding(self,components = None):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106602,
+    "v1": ">>> specImg.get_lines_intensity([\"C_Ka\", \"Ta_Ma\"])",
+    "v2": ">>> specImg.plot_intensity_map([\"C_Ka\", \"Ta_Ma\"])",
+    "resolution": ">>> specImg.get_lines_intensity([\"C_Ka\", \"Ta_Ma\"])",
+    "conflict": ">>> specImg.get_lines_intensity([\"C_Ka\", \"Ta_Ma\"])"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106606,
+    "v1": "assert_true(len(result) == 5) assert_true((result[0].data == self.data[0]).all())",
+    "v2": "assert_true(len(result) == 2) assert_true((result[0].data == self.data[:2, :]).all()) assert_true((result[1].data == self.data[2:4, :]).all())",
+    "resolution": "assert_true(len(result) == 5) assert_true((result[0].data == self.data[0]).all())",
+    "conflict": "assert_true(len(result) == 5) assert_true((result[0].data == self.data[0]).all())"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106723,
+    "v1": "messages.warning_exit(no_netcdf_message)",
+    "v2": "raise ImportError(\"No netCDF library installed. \" \"To read EELSLab netcdf files install \" \"one of the following packages:\" \"netCDF4, netCDF3, netcdf, scientific\")",
+    "resolution": "raise ImportError(\"No netCDF library installed. \" \"To read EELSLab netcdf files install \" \"one of the following packages:\" \"netCDF4, netCDF3, netcdf, scientific\")",
+    "conflict": "messages.warning_exit(no_netcdf_message)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 106737,
+    "v1": "#from hyperspy.signals.eds import EDSSpectrum from hyperspy.signals.eds_sem import EDSSEMSpectrum from hyperspy.signals.eds_tem import EDSTEMSpectrum",
+    "v2": "from hyperspy.signals.simulation import Simulation from hyperspy.signals.image_simulation import ImageSimulation",
+    "resolution": "from hyperspy.signals.eds_sem import EDSSpectrum from hyperspy.signals.eds_sem import EDSSEMSpectrum from hyperspy.signals.eds_tem import EDSTEMSpectrum from hyperspy.signals.simulation import Simulation from hyperspy.signals.image_simulation import ImageSimulation",
+    "conflict": "#from hyperspy.signals.eds import EDSSpectrum from hyperspy.signals.eds_sem import EDSSEMSpectrum from hyperspy.signals.eds_tem import EDSTEMSpectrum"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106753,
+    "v1": "rl.autoscale = True rl.data_function = self.signal_data_function rl.set_line_properties(color=self.right_pointer.color, type='step')",
+    "v2": "rl.data_function = self.signal_data_function rl.line_properties_helper(self.right_pointer.color, 'step')",
+    "resolution": "rl.autoscale = True rl.data_function = self.signal_data_function rl.set_line_properties(color=self.right_pointer.color, type='step')",
+    "conflict": "rl.autoscale = True rl.data_function = self.signal_data_function rl.set_line_properties(color=self.right_pointer.color, type='step')"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106772,
+    "v1": "from hyperspy.signals.image import Image from hyperspy.signals.spectrum import Spectrum from hyperspy.signals.eels import EELSSpectrum from hyperspy.signals.eds_sem import EDSSEMSpectrum from hyperspy.signals.eds_tem import EDSTEMSpectrum",
+    "v2": "",
+    "resolution": "",
+    "conflict": "from hyperspy.signals.image import Image from hyperspy.signals.spectrum import Spectrum from hyperspy.signals.eels import EELSSpectrum from hyperspy.signals.eds_sem import EDSSEMSpectrum from hyperspy.signals.eds_tem import EDSTEMSpectrum"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 106791,
+    "v1": "getitem_tuple.append(axis.slice) signal_axes.append(axis) self.signal_axes = tuple(signal_axes[::-1]) self.navigation_axes = tuple(navigation_axes[::-1])",
+    "v2": "getitem_tuple += axis.slice, self.signal_axes.append(axis)",
+    "resolution": "getitem_tuple += axis.slice, self.signal_axes.append(axis)  self.signal_axes = tuple(self.signal_axes[::-]) self.navigation_axes = tuple(self.navigation_axes[::-])",
+    "conflict": "getitem_tuple.append(axis.slice) signal_axes.append(axis) self.signal_axes = tuple(signal_axes[::-1]) self.navigation_axes = tuple(navigation_axes[::-1])"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 106798,
+    "v1": "if self.axes_manager.indices[1] != wyindex: try: self.axes_manager.navigation_axes[1].index = wyindex",
+    "v2": "if self.axes_manager.coordinates[-2] != wyindex: try: yaxis.index = wyindex",
+    "resolution": "if self.axes_manager.indices[1] != wyindex: try: yaxis.index = wyindex",
+    "conflict": "if self.axes_manager.indices[1] != wyindex: try: self.axes_manager.navigation_axes[1].index = wyindex"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 106799,
+    "v1": "if  self.axes_manager.indices[0] != wxindex: try: self.axes_manager.navigation_axes[0].index = wxindex",
+    "v2": "if  self.axes_manager.coordinates[-1] != wxindex: try: xaxis.index = wxindex",
+    "resolution": "if  self.axes_manager.indices[0] != wxindex: try: xaxis.index = wxindex",
+    "conflict": "if  self.axes_manager.indices[0] != wxindex: try: self.axes_manager.navigation_axes[0].index = wxindex"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106821,
+    "v1": "if self.axes_manager.indices[1] != wyindex: try: self.axes_manager.navigation_axes[1].index = wyindex",
+    "v2": "if self.axes_manager.coordinates[1] != wyindex: try: self.axes_manager.navigation_axes[1].index = wxindex",
+    "resolution": "if self.axes_manager.indices[1] != wyindex: try: self.axes_manager.navigation_axes[1].index = wyindex",
+    "conflict": "if self.axes_manager.indices[1] != wyindex: try: self.axes_manager.navigation_axes[1].index = wyindex"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106822,
+    "v1": "if  self.axes_manager.indices[0] != wxindex: try: self.axes_manager.navigation_axes[0].index = wxindex",
+    "v2": "if  self.axes_manager.coordinates[0] != wxindex: try: self.axes_manager.navigation_axes[0].index = wyindex",
+    "resolution": "if  self.axes_manager.indices[0] != wxindex: try: self.axes_manager.navigation_axes[0].index = wxindex",
+    "conflict": "if  self.axes_manager.indices[0] != wxindex: try: self.axes_manager.navigation_axes[0].index = wxindex"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 106836,
+    "v1": "self.patch = ax.axvline(self.axes_manager._values[0], color=self.color, picker=5)",
+    "v2": "self.patch = ax.axvline(self.axes_manager.coordinates[0], color=self.color, picker=5, animated=self.blit)",
+    "resolution": "self.patch = ax.axvline(self.axes_manager.coordinates[0], color=self.color, picker=5)",
+    "conflict": "self.patch = ax.axvline(self.axes_manager._values[0], color=self.color, picker=5)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 106841,
+    "v1": "for i, (slice_len,j) in enumerate(zip(self._signal.data.shape, self.idx)):",
+    "v2": "for i, (slice_len,j) in enumerate(zip(self._signal.data.shape, self.index)):",
+    "resolution": "for i, (slice_len,j) in enumerate(zip(self._signal.data.shape, self.index)):",
+    "conflict": "for i, (slice_len,j) in enumerate(zip(self._signal.data.shape, self.idx)):"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106847,
+    "v1": "recmatrix=None, plot=True, pc=None, on_peaks=False, per_row=3, scoremap=True, save_figs=False, directory=None):",
+    "v2": "recmatrix=None, plot=True, pc=None, on_peaks=False, save_figs=False):",
+    "resolution": "recmatrix=None, plot=True, pc=None, on_peaks=False, per_row=3, scoremap=True, save_figs=False, directory=None):",
+    "conflict": "recmatrix=None, plot=True, pc=None, on_peaks=False, per_row=3, scoremap=True, save_figs=False, directory=None):"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 106866,
+    "v1": "def __init__(self, *args, **kw): super(Image,self).__init__(*args, **kw)",
+    "v2": "def __init__(self, *args, **kwargs): Signal.__init__(self, *args, **kwargs) self.axes_manager.set_view('image')",
+    "resolution": "def __init__(self, *args, **kw): super(Image,self).__init__(*args, **kw) self.axes_manager.set_view('image')",
+    "conflict": "def __init__(self, *args, **kw): super(Image,self).__init__(*args, **kw)"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 106885,
+    "v1": "fei_header = None",
+    "v2": "scales=np.ones(3) units_list=np.array(['undefined']*3) names=['x','y','z']",
+    "resolution": "scales=np.ones(3) units_list=np.array(['undefined']*3) names=['x','y','z']  fei_header = None",
+    "conflict": "fei_header = None"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 106890,
+    "v1": "packages = ['silib', 'silib.components', 'silib.io', 'silib.drawing', 'silib.mva', 'silib.signals','silib.bss','silib.gui', 'silib.test'],",
+    "v2": "packages = ['silib', 'silib.components', 'silib.io', 'silib.drawing', 'silib.gui'],",
+    "resolution": "packages = ['silib', 'silib.components', 'silib.io', 'silib.drawing', 'silib.mva', 'silib.signals','silib.bss','silib.gui', 'silib.test'],",
+    "conflict": "packages = ['silib', 'silib.components', 'silib.io', 'silib.drawing', 'silib.mva', 'silib.signals','silib.bss','silib.gui', 'silib.test'],"
+  }
+]}

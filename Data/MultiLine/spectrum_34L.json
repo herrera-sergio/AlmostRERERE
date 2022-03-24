@@ -1,0 +1,1010 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 1",
+    "id": 119281,
+    "v1": "hoverColor=\"warn.alt\" onClick={this.discardDraft}",
+    "v2": "onClick={this.closeComposer}",
+    "resolution": "hoverColor=\"warn.alt\" onClick={this.discardDraft}",
+    "conflict": "hoverColor=\"warn.alt\" onClick={this.discardDraft}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119295,
+    "v1": "",
+    "v2": "const ids = getSpectrumThreadIds( parsed.blocks.map(block => block.text).join('\\n') ); const uniqueIds = ids.filter((x, i, a) => a.indexOf(x) === i);",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119309,
+    "v1": "onCancelClick = async () => { this.discardDraft(); };",
+    "v2": "",
+    "resolution": "onCancelClick = async () => { this.discardDraft(); };",
+    "conflict": "onCancelClick = async () => { this.discardDraft(); };"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119310,
+    "v1": "isOpen={isOpen} onClick={this.discardDraft}",
+    "v2": "slider={slider} onClick={this.closeComposer}",
+    "resolution": "slider={slider} onClick={this.discardDraft}",
+    "conflict": "isOpen={isOpen} onClick={this.discardDraft}"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119314,
+    "v1": "body: null, editedBody: null,",
+    "v2": "parsedBody: null, body: '',",
+    "resolution": "parsedBody: null, body: '',",
+    "conflict": "body: null, editedBody: null,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119321,
+    "v1": "history: History, location: Location,",
+    "v2": "location: Location, history: History,",
+    "resolution": "location: Location, history: History,",
+    "conflict": "history: History, location: Location,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119322,
+    "v1": "import ThreadAttachment from './ThreadAttachment'; import { messageRenderer } from 'shared/clients/draft-js/message/renderer.web'; import { toPlainText, toState } from 'shared/draft-utils';",
+    "v2": "import { messageRenderer } from 'shared/clients/draft-js/message/renderer';",
+    "resolution": "import ThreadAttachment from './ThreadAttachment'; import { messageRenderer } from 'shared/clients/draft-js/message/renderer.web'; import { toPlainText, toState } from 'shared/draft-utils';",
+    "conflict": "import ThreadAttachment from './ThreadAttachment'; import { messageRenderer } from 'shared/clients/draft-js/message/renderer.web'; import { toPlainText, toState } from 'shared/draft-utils';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119336,
+    "v1": "// used to pre-populate the @mention suggestions with participants and the author of the thread participants: Array<?Object>,",
+    "v2": "onFocus: ?Function, onBlur: ?Function,",
+    "resolution": "onFocus: ?Function, onBlur: ?Function, // used to pre-populate the @mention suggestions with participants and the author of the thread participants: Array<?Object>,",
+    "conflict": "// used to pre-populate the @mention suggestions with participants and the author of the thread participants: Array<?Object>,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119351,
+    "v1": "const sendEmail = (options: Options): Promise<any> => { let { templateId, to, dynamic_template_data, userId } = options;",
+    "v2": "const sendEmail = (options: Options): Promise<void> => { const { templateId, to, dynamic_template_data, userId } = options;",
+    "resolution": "const sendEmail = (options: Options): Promise<void> => { let { templateId, to, dynamic_template_data, userId } = options;",
+    "conflict": "const sendEmail = (options: Options): Promise<any> => { let { templateId, to, dynamic_template_data, userId } = options;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119409,
+    "v1": "import Thread from './views/thread'; import RedirectOldThreadRoute from './views/thread/redirect-old-route';",
+    "v2": "import { FullscreenThreadView } from './views/thread';",
+    "resolution": "import RedirectOldThreadRoute from './views/thread/redirect-old-route'; import { FullscreenThreadView } from './views/thread';",
+    "conflict": "import Thread from './views/thread'; import RedirectOldThreadRoute from './views/thread/redirect-old-route';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119413,
+    "v1": "</SupportLink> <ExploreLink",
+    "v2": "</DropdownLink> <DropdownLink",
+    "resolution": "</SupportLink> <ExploreLink",
+    "conflict": "</SupportLink> <ExploreLink"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119416,
+    "v1": "<Icon glyph=\"checkmark\" /> Features <Icon glyph=\"enter\" />",
+    "v2": "<Icon glyph=\"checkmark\" />Features<Icon glyph=\"enter\" />",
+    "resolution": "<Icon glyph=\"checkmark\" /> Features <Icon glyph=\"enter\" />",
+    "conflict": "<Icon glyph=\"checkmark\" /> Features <Icon glyph=\"enter\" />"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119420,
+    "v1": "cy.get('[data-cy=\"navbar-splash-apps\"]').should('be.visible');  cy.get('[data-cy=\"navbar-splash-pricing\"]').should('be.visible');",
+    "v2": "",
+    "resolution": "cy.get('[data-cy=\"navbar-splash-apps\"]').should('be.visible');",
+    "conflict": "cy.get('[data-cy=\"navbar-splash-apps\"]').should('be.visible');  cy.get('[data-cy=\"navbar-splash-pricing\"]').should('be.visible');"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119444,
+    "v1": "function securityMiddleware(server, { enableNonce, enableCSP }) {",
+    "v2": "// $FlowFixMe function securityMiddleware(server) {",
+    "resolution": "function securityMiddleware(server, { enableNonce, enableCSP }) {",
+    "conflict": "function securityMiddleware(server, { enableNonce, enableCSP }) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119459,
+    "v1": "const dbUser = await getUserByUsername(args.input.username);",
+    "v2": "const dbUser = await getUser({ username: args.input.username });",
+    "resolution": "const dbUser = await getUserByUsername(args.input.username);",
+    "conflict": "const dbUser = await getUserByUsername(args.input.username);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119489,
+    "v1": "import { NoThreads } from '../style';",
+    "v2": "import { ErrorBoundary } from 'src/components/error'; import type { GetDirectMessageThreadType } from 'shared/graphql/queries/directMessageThread/getDirectMessageThread';",
+    "resolution": "import { ErrorBoundary } from 'src/components/error'; import type { GetDirectMessageThreadType } from 'shared/graphql/queries/directMessageThread/getDirectMessageThread'; import { NoThreads } from '../style';",
+    "conflict": "import { NoThreads } from '../style';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119508,
+    "v1": "fetchMore={props.fetchMore}",
+    "v2": "fetchMore={props.data.fetchMore} refetch={props.data.refetch} refetching={props.data.refetching}",
+    "resolution": "fetchMore={props.fetchMore} refetch={props.data.refetch} refetching={props.data.refetching}",
+    "conflict": "fetchMore={props.fetchMore}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119515,
+    "v1": "import { ListItemView } from './style';",
+    "v2": "import TouchableOpacity from '../TouchableOpacity'; import { ListItemView, ListItemBackgroundWrapper } from './style';",
+    "resolution": "import { ListItemView } from './style';",
+    "conflict": "import { ListItemView } from './style';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119517,
+    "v1": "headerTitle: navigation.state.params.title || 'Thread', headerRight: <NavigateToThreadDetails navigation={navigation} />,",
+    "v2": "headerTitle: navigation.getParam('title', null), tabBarVisible: false,",
+    "resolution": "headerTitle: navigation.getParam('title', null),",
+    "conflict": "headerTitle: navigation.state.params.title || 'Thread', headerRight: <NavigateToThreadDetails navigation={navigation} />,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119518,
+    "v1": "headerTitle: idx(navigation, _ => _.state.params.title) || '',",
+    "v2": "headerTitle: navigation.getParam('title', null), tabBarVisible: false,",
+    "resolution": "headerTitle: navigation.getParam('title', null),",
+    "conflict": "headerTitle: idx(navigation, _ => _.state.params.title) || '',"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119520,
+    "v1": "headerTitle: navigation.state.params.title || 'Thread', headerRight: <NavigateToThreadDetails navigation={navigation} />,",
+    "v2": "headerTitle: navigation.state.params.title || null, tabBarVisible: false,",
+    "resolution": "headerTitle: navigation.state.params.title || 'Thread', headerRight: <NavigateToThreadDetails navigation={navigation} />,",
+    "conflict": "headerTitle: navigation.state.params.title || 'Thread', headerRight: <NavigateToThreadDetails navigation={navigation} />,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119544,
+    "v1": "import RequestToJoinCommunity from './components/requestToJoinCommunity'; import CommunityLogin from 'src/views/communityLogin'; import Login from 'src/views/login';",
+    "v2": "import { ErrorBoundary } from 'src/components/error';",
+    "resolution": "import { ErrorBoundary } from 'src/components/error'; import RequestToJoinCommunity from './components/requestToJoinCommunity'; import CommunityLogin from 'src/views/communityLogin'; import Login from 'src/views/login';",
+    "conflict": "import RequestToJoinCommunity from './components/requestToJoinCommunity'; import CommunityLogin from 'src/views/communityLogin'; import Login from 'src/views/login';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119546,
+    "v1": "import { MiniPrivateCommunityRequestSent } from './privateCommunityRequestSentNotification'; import { MiniPrivateCommunityRequestApproved } from './privateCommunityRequestApprovedNotification';",
+    "v2": "import { ErrorBoundary } from 'src/components/error';",
+    "resolution": "import { MiniPrivateCommunityRequestSent } from './privateCommunityRequestSentNotification'; import { MiniPrivateCommunityRequestApproved } from './privateCommunityRequestApprovedNotification';",
+    "conflict": "import { MiniPrivateCommunityRequestSent } from './privateCommunityRequestSentNotification'; import { MiniPrivateCommunityRequestApproved } from './privateCommunityRequestApprovedNotification';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119548,
+    "v1": "avatar: boolean,",
+    "v2": "navigation: Navigation, onPress?: Function,",
+    "resolution": "navigation: Navigation, onPress?: Function, avatar: boolean,",
+    "conflict": "avatar: boolean,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119552,
+    "v1": "// TODO: Sentry console.error(err);",
+    "v2": "Sentry.captureException(err);",
+    "resolution": "Sentry.captureException(err);",
+    "conflict": "// TODO: Sentry console.error(err);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119553,
+    "v1": "onPress?: Function, |};",
+    "v2": "style?: Object, };",
+    "resolution": "onPress?: Function, style?: Object, |};",
+    "conflict": "onPress?: Function, |};"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119555,
+    "v1": "<Avatar",
+    "v2": "<StackedAvatar key={participant.id}",
+    "resolution": "<StackedAvatar key={participant.id}",
+    "conflict": "<Avatar"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119559,
+    "v1": "// TODO: Sentry console.error(err);",
+    "v2": "Sentry.captureException(err);",
+    "resolution": "Sentry.captureException(err);",
+    "conflict": "// TODO: Sentry console.error(err);"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119560,
+    "v1": "approvePendingCommunityMember: Function, blockPendingCommunityMember: Function, dispatch: Function,",
+    "v2": "dispatch: Dispatch<Object>,",
+    "resolution": "dispatch: Dispatch<Object>, approvePendingCommunityMember: Function, blockPendingCommunityMember: Function, dispatch: Function,",
+    "conflict": "approvePendingCommunityMember: Function, blockPendingCommunityMember: Function, dispatch: Function,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119594,
+    "v1": "import { track, events } from 'src/helpers/analytics';",
+    "v2": "import type { UserInfoType } from 'shared/graphql/fragments/user/userInfo'; import type { CommunityInfoType } from 'shared/graphql/fragments/community/communityInfo';",
+    "resolution": "import type { UserInfoType } from 'shared/graphql/fragments/user/userInfo'; import type { CommunityInfoType } from 'shared/graphql/fragments/community/communityInfo'; import { track, events } from 'src/helpers/analytics';",
+    "conflict": "import { track, events } from 'src/helpers/analytics';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119596,
+    "v1": "import Icon from 'src/components/icons'; import { track, events } from 'src/helpers/analytics';",
+    "v2": "import { IconButton } from 'src/components/buttons'; import { Logo } from 'src/components/logo';",
+    "resolution": "import { IconButton } from 'src/components/buttons'; import { Logo } from 'src/components/logo'; import { track, events } from 'src/helpers/analytics';",
+    "conflict": "import Icon from 'src/components/icons'; import { track, events } from 'src/helpers/analytics';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119610,
+    "v1": "import * as events from 'shared/analytics/event-types'; import { track } from 'src/helpers/events';",
+    "v2": "import { isViewingMarketingPage } from 'src/helpers/is-viewing-marketing-page';",
+    "resolution": "import { isViewingMarketingPage } from 'src/helpers/is-viewing-marketing-page'; import * as events from 'shared/analytics/event-types'; import { track } from 'src/helpers/events';",
+    "conflict": "import * as events from 'shared/analytics/event-types'; import { track } from 'src/helpers/events';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119617,
+    "v1": "forcePersist(state, threadType);",
+    "v2": "forcePersist(state); this.removeQuotedMessage();",
+    "resolution": "forcePersist(state, threadType); this.removeQuotedMessage();",
+    "conflict": "forcePersist(state, threadType);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119621,
+    "v1": "import { uploadImage } from '../../utils/s3'; import { storeMessage, getMessage } from '../../models/message';",
+    "v2": "import { uploadImage } from '../../utils/file-storage'; import { storeMessage } from '../../models/message';",
+    "resolution": "import { uploadImage } from '../../utils/file-storage'; import { storeMessage, getMessage } from '../../models/message';",
+    "conflict": "import { uploadImage } from '../../utils/s3'; import { storeMessage, getMessage } from '../../models/message';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119625,
+    "v1": "updateUserEmail(email: String!): User deleteCurrentUser: Boolean",
+    "v2": "updateUserEmail(email: LowercaseString!): User",
+    "resolution": "deleteCurrentUser: Boolean updateUserEmail(email: LowercaseString!): User",
+    "conflict": "updateUserEmail(email: String!): User deleteCurrentUser: Boolean"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119639,
+    "v1": "it('should render the splash page', () => { cy.get('[data-cy=\"splash-page\"]').should('be.visible');",
+    "v2": "it('should render the home page', () => { cy.get('[data-e2e-id=\"home-page\"]').should('be.visible');",
+    "resolution": "it('should render the home page', () => { cy.get('[data-cy=\"home-page\"]').should('be.visible');",
+    "conflict": "it('should render the splash page', () => { cy.get('[data-cy=\"splash-page\"]').should('be.visible');"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119649,
+    "v1": "export const Error = (props: Object) => { return <StyledError data-cy={props.dataCy}>{props.children}</StyledError>;",
+    "v2": "export const Error = ({ children, ...rest }) => { return <StyledError {...rest}>{children}</StyledError>;",
+    "resolution": "export const Error = (props: Object) => { return <StyledError data-cy={props.dataCy}>{props.children}</StyledError>;",
+    "conflict": "export const Error = (props: Object) => { return <StyledError data-cy={props.dataCy}>{props.children}</StyledError>;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119660,
+    "v1": "import ArchiveForm from './archiveForm'; // import { ChannelInvitationForm } from '../../../components/emailInvitationForm';",
+    "v2": "import LoginTokenSettings from './loginTokenSettings';",
+    "resolution": "import ArchiveForm from './archiveForm'; import LoginTokenSettings from './loginTokenSettings';",
+    "conflict": "import ArchiveForm from './archiveForm'; // import { ChannelInvitationForm } from '../../../components/emailInvitationForm';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119661,
+    "v1": "<ArchiveForm channel={channel} />",
+    "v2": "{channel.isPrivate && ( <LoginTokenSettings id={channel.id} channel={channel} /> )}",
+    "resolution": "{channel.isPrivate && ( <LoginTokenSettings id={channel.id} channel={channel} /> )} <ArchiveForm channel={channel} />",
+    "conflict": "<ArchiveForm channel={channel} />"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119668,
+    "v1": "import billingSettings from './billingSettings'; import hasChargeableSource from './hasChargeableSource'; import hasFeatures from './hasFeatures';",
+    "v2": "import brandedLogin from './brandedLogin';",
+    "resolution": "import brandedLogin from './brandedLogin'; import billingSettings from './billingSettings'; import hasChargeableSource from './hasChargeableSource'; import hasFeatures from './hasFeatures';",
+    "conflict": "import billingSettings from './billingSettings'; import hasChargeableSource from './hasChargeableSource'; import hasFeatures from './hasFeatures';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119669,
+    "v1": "billingSettings, hasChargeableSource, hasFeatures,",
+    "v2": "brandedLogin,",
+    "resolution": "brandedLogin, billingSettings, hasChargeableSource, hasFeatures,",
+    "conflict": "billingSettings, hasChargeableSource, hasFeatures,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119673,
+    "v1": "import UpgradeAnalyticsModal from './UpgradeAnalyticsModal'; import UpgradeModeratorSeatModal from './UpgradeModeratorSeatModal'; import RestoreChannelModal from './RestoreChannelModal';",
+    "v2": "import ChatInputLoginModal from './ChatInputLoginModal';",
+    "resolution": "import ChatInputLoginModal from './ChatInputLoginModal'; import UpgradeAnalyticsModal from './UpgradeAnalyticsModal'; import UpgradeModeratorSeatModal from './UpgradeModeratorSeatModal'; import RestoreChannelModal from './RestoreChannelModal';",
+    "conflict": "import UpgradeAnalyticsModal from './UpgradeAnalyticsModal'; import UpgradeModeratorSeatModal from './UpgradeModeratorSeatModal'; import RestoreChannelModal from './RestoreChannelModal';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119674,
+    "v1": "UPGRADE_ANALYTICS_MODAL: UpgradeAnalyticsModal, UPGRADE_MODERATOR_SEAT_MODAL: UpgradeModeratorSeatModal, RESTORE_CHANNEL_MODAL: RestoreChannelModal,",
+    "v2": "CHAT_INPUT_LOGIN_MODAL: ChatInputLoginModal,",
+    "resolution": "CHAT_INPUT_LOGIN_MODAL: ChatInputLoginModal, UPGRADE_ANALYTICS_MODAL: UpgradeAnalyticsModal, UPGRADE_MODERATOR_SEAT_MODAL: UpgradeModeratorSeatModal, RESTORE_CHANNEL_MODAL: RestoreChannelModal,",
+    "conflict": "UPGRADE_ANALYTICS_MODAL: UpgradeAnalyticsModal, UPGRADE_MODERATOR_SEAT_MODAL: UpgradeModeratorSeatModal, RESTORE_CHANNEL_MODAL: RestoreChannelModal,"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119677,
+    "v1": "isChannelModerator || isCommunityModerator) && (",
+    "v2": "thread.isAuthor) && (",
+    "resolution": "isChannelModerator || isCommunityModerator || (thread.isAuthor && (",
+    "conflict": "isChannelModerator || isCommunityModerator) && ("
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119716,
+    "v1": "import { subscribeToNewMessages } from '../../subscriptions';",
+    "v2": "import { btoa } from 'abab'; import { subscribeToNewMessages } from 'shared/graphql/subscriptions';",
+    "resolution": "import { btoa } from 'abab'; import { subscribeToNewMessages } from '../../subscriptions';",
+    "conflict": "import { subscribeToNewMessages } from '../../subscriptions';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119722,
+    "v1": "color: ${props => props.theme.text.alt}; padding: 0 16px 16px;",
+    "v2": "color: ${props => props.theme.text.default}; padding: 0 16px 20px;",
+    "resolution": "color: ${props => props.theme.text.alt}; padding: 0 16px 16px;",
+    "conflict": "color: ${props => props.theme.text.alt}; padding: 0 16px 16px;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119726,
+    "v1": "import { addQueue } from '../../utils/workerQueue'; import isEmail from 'validator/lib/isEmail';",
+    "v2": "import { sendEmailValidationEmailQueue } from 'shared/bull/queues';",
+    "resolution": "import isEmail from 'validator/lib/isEmail'; import { sendEmailValidationEmailQueue } from 'shared/bull/queues';",
+    "conflict": "import { addQueue } from '../../utils/workerQueue'; import isEmail from 'validator/lib/isEmail';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119727,
+    "v1": "require('css.escape');",
+    "v2": "// This needs to be imported before everything else import './helpers/consolidate-streamed-styles';",
+    "resolution": "require('css.escape'); // This needs to be imported before everything else import './helpers/consolidate-streamed-styles';",
+    "conflict": "require('css.escape');"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119728,
+    "v1": "queryString,",
+    "v2": "queryString: string, type: 'USERS',",
+    "resolution": "queryString, type: 'USERS',",
+    "conflict": "queryString,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119729,
+    "v1": "options: { fetchPolicy: 'cache-and-network', }, // $FlowFixMe",
+    "v2": "",
+    "resolution": "options: { fetchPolicy: 'cache-and-network', }, // $FlowFixMe",
+    "conflict": "options: { fetchPolicy: 'cache-and-network', }, // $FlowFixMe"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119762,
+    "v1": "import { graphql, gql } from 'react-apollo'; import threadInfoFragment from 'shared/graphql/fragments/thread/threadInfo';",
+    "v2": "import { graphql } from 'react-apollo'; import { threadInfoFragment } from './fragments/thread/threadInfo';",
+    "resolution": "import { graphql } from 'react-apollo'; import threadInfoFragment from 'shared/graphql/fragments/thread/threadInfo';",
+    "conflict": "import { graphql, gql } from 'react-apollo'; import threadInfoFragment from 'shared/graphql/fragments/thread/threadInfo';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119764,
+    "v1": "import { graphql, gql } from 'react-apollo'; import threadInfoFragment from 'shared/graphql/fragments/thread/threadInfo';",
+    "v2": "import { graphql } from 'react-apollo'; import { threadInfoFragment } from '../../api/fragments/thread/threadInfo';",
+    "resolution": "import { graphql } from 'react-apollo'; import threadInfoFragment from 'shared/graphql/fragments/thread/threadInfo';",
+    "conflict": "import { graphql, gql } from 'react-apollo'; import threadInfoFragment from 'shared/graphql/fragments/thread/threadInfo';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119765,
+    "v1": "import { graphql, gql } from 'react-apollo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo';",
+    "v2": "import { graphql } from 'react-apollo'; import { userInfoFragment } from '../../api/fragments/user/userInfo';",
+    "resolution": "import { graphql } from 'react-apollo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo';",
+    "conflict": "import { graphql, gql } from 'react-apollo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119766,
+    "v1": "import { graphql, gql } from 'react-apollo'; import threadInfoFragment from 'shared/graphql/fragments/thread/threadInfo';",
+    "v2": "import { graphql } from 'react-apollo'; import { threadInfoFragment } from '../../api/fragments/thread/threadInfo';",
+    "resolution": "import { graphql } from 'react-apollo'; import threadInfoFragment from 'shared/graphql/fragments/thread/threadInfo';",
+    "conflict": "import { graphql, gql } from 'react-apollo'; import threadInfoFragment from 'shared/graphql/fragments/thread/threadInfo';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119767,
+    "v1": "import { graphql, gql } from 'react-apollo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo';",
+    "v2": "import { graphql } from 'react-apollo'; import { userInfoFragment } from '../../api/fragments/user/userInfo';",
+    "resolution": "import { graphql } from 'react-apollo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo';",
+    "conflict": "import { graphql, gql } from 'react-apollo'; import userInfoFragment from 'shared/graphql/fragments/user/userInfo';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119776,
+    "v1": "import { graphql, gql } from 'react-apollo'; import messageInfoFragment from 'shared/graphql/fragments/message/messageInfo';",
+    "v2": "import { graphql } from 'react-apollo'; import { messageInfoFragment } from '../../api/fragments/message/messageInfo';",
+    "resolution": "import { graphql } from 'react-apollo'; import messageInfoFragment from 'shared/graphql/fragments/message/messageInfo';",
+    "conflict": "import { graphql, gql } from 'react-apollo'; import messageInfoFragment from 'shared/graphql/fragments/message/messageInfo';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119778,
+    "v1": "import { graphql, gql } from 'react-apollo'; import communityInfoFragment from 'shared/graphql/fragments/community/communityInfo';",
+    "v2": "import { graphql } from 'react-apollo'; import { communityInfoFragment } from '../../api/fragments/community/communityInfo';",
+    "resolution": "import { graphql } from 'react-apollo'; import communityInfoFragment from 'shared/graphql/fragments/community/communityInfo';",
+    "conflict": "import { graphql, gql } from 'react-apollo'; import communityInfoFragment from 'shared/graphql/fragments/community/communityInfo';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119779,
+    "v1": "import { graphql, gql } from 'react-apollo'; import messageInfoFragment from 'shared/graphql/fragments/message/messageInfo';",
+    "v2": "import { graphql } from 'react-apollo'; import { messageInfoFragment } from '../../api/fragments/message/messageInfo';",
+    "resolution": "import { graphql } from 'react-apollo'; import messageInfoFragment from 'shared/graphql/fragments/message/messageInfo';",
+    "conflict": "import { graphql, gql } from 'react-apollo'; import messageInfoFragment from 'shared/graphql/fragments/message/messageInfo';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119819,
+    "v1": "}: EditChannelInput): DBChannel => { return db",
+    "v2": "}: EditChannelArguments): Promise<DBChannel> => { const channelRecord = await db",
+    "resolution": "}: EditChannelInput): Promise<DBChannel> => { const channelRecord = await db",
+    "conflict": "}: EditChannelInput): DBChannel => { return db"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119846,
+    "v1": "checkMessageToxicity(message); addQueue('message notification', { message });",
+    "v2": "addQueue('process admin toxic message', { message }); addQueue('message notification', { message, userId });",
+    "resolution": "addQueue('message notification', { message }); addQueue('process admin toxic message', { message });",
+    "conflict": "checkMessageToxicity(message); addQueue('message notification', { message });"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 119865,
+    "v1": "import { toState, toPlainText } from 'shared/draft-utils'; import { getMentions } from '../utils/getMentions'; import addQueue from '../utils/addQueue';",
+    "v2": "import Raven from '../../shared/raven';",
+    "resolution": "import Raven from '../../shared/raven'; import { toState, toPlainText } from 'shared/draft-utils'; import { getMentions } from '../utils/getMentions'; import addQueue from '../utils/addQueue';",
+    "conflict": "import { toState, toPlainText } from 'shared/draft-utils'; import { getMentions } from '../utils/getMentions'; import addQueue from '../utils/addQueue';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119867,
+    "v1": "const { message, openGallery, pending, type, me } = props; console.log('message component', message);",
+    "v2": "const { message, openGallery, pending, type, me, selected } = props;",
+    "resolution": "const { message, openGallery, pending, type, me, selected } = props;",
+    "conflict": "const { message, openGallery, pending, type, me } = props; console.log('message component', message);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119882,
+    "v1": "import redraft from 'redraft';",
+    "v2": "import { renderLinks } from '../../helpers/utils'; import { toPlainText, toState } from 'shared/draft-utils';",
+    "resolution": "import redraft from 'redraft';",
+    "conflict": "import redraft from 'redraft';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 119885,
+    "v1": "import CommunitySettings from './views/communitySettings'; // import CommunityAnalytics from './views/communityAnalytics'; import ChannelSettings from './views/channelSettings';",
+    "v2": "",
+    "resolution": "import CommunityAnalytics from './views/communityAnalytics';",
+    "conflict": "import CommunitySettings from './views/communitySettings'; // import CommunityAnalytics from './views/communityAnalytics'; import ChannelSettings from './views/channelSettings';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119901,
+    "v1": "",
+    "v2": "const faker = require('faker'); const { fromPlainText, toJSON } = require('shared/draft-utils');",
+    "resolution": "const { fromPlainText, toJSON } = require('shared/draft-utils');",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119907,
+    "v1": "import Avatar from '../../components/avatar'; import Markdown from '../../components/markdown';",
+    "v2": "import { Avatar } from '../../components/avatar';",
+    "resolution": "import Avatar from '../../components/avatar';",
+    "conflict": "import Avatar from '../../components/avatar'; import Markdown from '../../components/markdown';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 119931,
+    "v1": "import Composer from '../../components/composer'; import AppViewWrapper from '../../components/appViewWrapper';",
+    "v2": "import ThreadComposer from '../../components/threadComposer';",
+    "resolution": "import Composer from '../../components/composer'; import AppViewWrapper from '../../components/appViewWrapper';",
+    "conflict": "import Composer from '../../components/composer'; import AppViewWrapper from '../../components/appViewWrapper';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119932,
+    "v1": "import Icon from '../../components/icons'; import { Button } from '../../components/buttons'; import Composer from '../../components/composer'; import { Link } from 'react-router-dom';",
+    "v2": "",
+    "resolution": "import Composer from '../../components/composer';",
+    "conflict": "import Icon from '../../components/icons'; import { Button } from '../../components/buttons'; import Composer from '../../components/composer'; import { Link } from 'react-router-dom';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 119970,
+    "v1": "import { FlexRow, Transition } from '../globals'; import Editor from '../../components/draftjs-editor';",
+    "v2": "import { FlexRow, Transition, zIndex } from '../globals'; import Editor from '../../components/editor';",
+    "resolution": "import { FlexRow, Transition, zIndex } from '../globals'; import Editor from '../../components/draftjs-editor';",
+    "conflict": "import { FlexRow, Transition } from '../globals'; import Editor from '../../components/draftjs-editor';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 119972,
+    "v1": "import Editor from './components/draftjs-editor';  const About = () =>",
+    "v2": "const About = () => (",
+    "resolution": "const About = () => (",
+    "conflict": "import Editor from './components/draftjs-editor';  const About = () =>"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120031,
+    "v1": "<Subtitle> {community.metaData.members.toLocaleString()} members </Subtitle>",
+    "v2": "<Subtitle>{community.metaData.members} members</Subtitle>",
+    "resolution": "<Subtitle> {community.metaData.members.toLocaleString()} members </Subtitle>",
+    "conflict": "<Subtitle> {community.metaData.members.toLocaleString()} members </Subtitle>"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120043,
+    "v1": "import { PUBLIC_STRIPE_KEY } from '../../api/constants'; import { payInvoiceMutation } from '../../api/invoice';",
+    "v2": "import { PUBLIC_STRIPE_KEY } from '../../api';",
+    "resolution": "import { PUBLIC_STRIPE_KEY } from '../../api/constants';",
+    "conflict": "import { PUBLIC_STRIPE_KEY } from '../../api/constants'; import { payInvoiceMutation } from '../../api/invoice';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120044,
+    "v1": "'PushManager' in window && <NotificationSettings largeOnly />}",
+    "v2": "'PushManager' in window && <NotificationSettings largeOnly />} <Invoices />",
+    "resolution": "'PushManager' in window && <NotificationSettings largeOnly />} <Invoices />",
+    "conflict": "'PushManager' in window && <NotificationSettings largeOnly />}"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120062,
+    "v1": "import { UpsellCreateCommunity } from '../../components/upsell';",
+    "v2": "import RecentCommunityList from './components/recentCommunities'; import { UpsellCreateCommunity, UpsellSignIn } from '../../components/upsell';",
+    "resolution": "import { UpsellCreateCommunity, UpsellSignIn } from '../../components/upsell';",
+    "conflict": "import { UpsellCreateCommunity } from '../../components/upsell';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120064,
+    "v1": "data: { error, messages, hasNextPage, fetchMore, networkStatus },",
+    "v2": "threadType, data: { error, loading, messages, hasNextPage, fetchMore, networkStatus },",
+    "resolution": "data: { error, messages, hasNextPage, fetchMore, networkStatus },",
+    "conflict": "data: { error, messages, hasNextPage, fetchMore, networkStatus },"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120065,
+    "v1": "import { createNewUsersSettings } from './usersSettings';",
+    "v2": "const createQueue = require('../../shared/bull/create-queue'); const sendUserWelcomeEmailQueue = createQueue('send new user welcome email');",
+    "resolution": "const createQueue = require('../../shared/bull/create-queue'); const sendUserWelcomeEmailQueue = createQueue('send new user welcome email'); import { createNewUsersSettings } from './usersSettings';",
+    "conflict": "import { createNewUsersSettings } from './usersSettings';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120067,
+    "v1": "",
+    "v2": "import processQueue from '../../shared/bull/process-queue'; import createQueue from '../../shared/bull/create-queue'; import { THREAD_NOTIFICATION } from './constants';",
+    "resolution": "import createQueue from '../../shared/bull/create-queue';",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120078,
+    "v1": "startSendUserWelcomeEmailWorker();",
+    "v2": "startSendNewCommunityWelcomeEmailWorker();",
+    "resolution": "startSendNewCommunityWelcomeEmailWorker(); startSendUserWelcomeEmailWorker();",
+    "conflict": "startSendUserWelcomeEmailWorker();"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120079,
+    "v1": "export const SEND_NEW_USER_WELCOME_EMAIL = 'send new user welcome email';",
+    "v2": "export const SEND_NEW_COMMUNITY_WELCOME_EMAIL = 'send new community welcome email';",
+    "resolution": "export const SEND_NEW_USER_WELCOME_EMAIL = 'send new user welcome email'; export const SEND_NEW_COMMUNITY_WELCOME_EMAIL = 'send new community welcome email';",
+    "conflict": "export const SEND_NEW_USER_WELCOME_EMAIL = 'send new user welcome email';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120090,
+    "v1": "",
+    "v2": "CommunityInviteNotification, } from './components/communityInviteNotification'; import {",
+    "resolution": "import { CommunityInviteNotification } from './components/communityInviteNotification';",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120098,
+    "v1": "// log the user in and return them to this page return (window.location.href = `${SERVER_URL}/auth/twitter?r=${window.location.href}`);",
+    "v2": "this.props.dispatch(openModal('LOGIN'));",
+    "resolution": "this.props.dispatch(openModal('LOGIN'));",
+    "conflict": "// log the user in and return them to this page return (window.location.href = `${SERVER_URL}/auth/twitter?r=${window.location.href}`);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120103,
+    "v1": "this.props.dispatch(openModal('LOGIN'));",
+    "v2": "// log the user in and return them to this page return (window.location.href = `${SERVER_URL}/auth/twitter?r=${window.location.href}`);",
+    "resolution": "this.props.dispatch(openModal('LOGIN'));",
+    "conflict": "this.props.dispatch(openModal('LOGIN'));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120106,
+    "v1": "data-active={match.url === `/users/${currentUser.username}`} to={currentUser.username ? `/users/${currentUser.username}` : '/'}",
+    "v2": "data-active={match.url === `/users/${loggedInUser.username}`} to={`/users/${loggedInUser.username}`}",
+    "resolution": "data-active={match.url === `/users/${loggedInUser.username}`} to={`/users/${loggedInUser.username}`}",
+    "conflict": "data-active={match.url === `/users/${currentUser.username}`} to={currentUser.username ? `/users/${currentUser.username}` : '/'}"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120112,
+    "v1": "export const COMMUNITY_INVITE_NOTIFICATION = 'community invite notification'; export const SEND_COMMUNITY_INVITE_EMAIL = 'community invite email'; export const SLACK_IMPORT = 'slack import';",
+    "v2": "export const SEND_NEW_MESSAGE_EMAIL = 'send new message email';",
+    "resolution": "export const SEND_NEW_MESSAGE_EMAIL = 'send new message email'; export const COMMUNITY_INVITE_NOTIFICATION = 'community invite notification'; export const SEND_COMMUNITY_INVITE_EMAIL = 'community invite email'; export const SLACK_IMPORT = 'slack import';",
+    "conflict": "export const COMMUNITY_INVITE_NOTIFICATION = 'community invite notification'; export const SEND_COMMUNITY_INVITE_EMAIL = 'community invite email'; export const SLACK_IMPORT = 'slack import';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120132,
+    "v1": "MediaInput, MediaLabel,",
+    "v2": "EmojiToggle,",
+    "resolution": "MediaLabel,",
+    "conflict": "MediaInput, MediaLabel,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120146,
+    "v1": "let f = this.state.editBody;  const isChannelMember = thread.channel.channelPermissions.isMember;",
+    "v2": "",
+    "resolution": "const isChannelMember = thread.channel.channelPermissions.isMember;",
+    "conflict": "let f = this.state.editBody;  const isChannelMember = thread.channel.channelPermissions.isMember;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120154,
+    "v1": "<Section right> <IconDrop onMouseLeave={this.markAllNotificationsSeen}>",
+    "v2": "<Section right> {/* <IconDrop>",
+    "resolution": "<Section right> <IconDrop onMouseLeave={this.markAllNotificationsSeen}>",
+    "conflict": "<Section right> <IconDrop onMouseLeave={this.markAllNotificationsSeen}>"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120165,
+    "v1": "<ChatInput threadType=\"story\" thread={thread.id} />}",
+    "v2": "<ChatInputWrapper> <ChatInput thread={thread.id} /> </ChatInputWrapper>}",
+    "resolution": "<ChatInputWrapper> <ChatInput threadType=\"story\" thread={thread.id} /> </ChatInputWrapper>",
+    "conflict": "<ChatInput threadType=\"story\" thread={thread.id} />}"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120170,
+    "v1": "import { displayLoadingNavbar } from '../../components/loading'; import { TextButton } from '../../components/buttons';",
+    "v2": "import { Button } from '../../components/buttons'; import { displayLoadingCard } from '../../components/loading';",
+    "resolution": "import { displayLoadingNavbar } from '../../components/loading'; import { TextButton } from '../../components/buttons';",
+    "conflict": "import { displayLoadingNavbar } from '../../components/loading'; import { TextButton } from '../../components/buttons';"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120172,
+    "v1": "import { displayLoadingNavbar } from '../../components/loading'; import { TextButton } from '../../components/buttons';",
+    "v2": "import { Button } from '../../components/buttons'; import { displayLoadingCard } from '../../components/loading';",
+    "resolution": "import { displayLoadingNavbar } from '../../components/loading'; import { TextButton } from '../../components/buttons'; import { displayLoadingCard } from '../../components/loading';",
+    "conflict": "import { displayLoadingNavbar } from '../../components/loading'; import { TextButton } from '../../components/buttons';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120174,
+    "v1": "import { ThreadTitle, ThreadDescription } from '../style'; // $FlowFixMe import Textarea from 'react-textarea-autosize';",
+    "v2": "import Titlebar from '../../titlebar';",
+    "resolution": "import { ThreadTitle, ThreadDescription } from '../style'; // $FlowFixMe import Textarea from 'react-textarea-autosize';",
+    "conflict": "import { ThreadTitle, ThreadDescription } from '../style'; // $FlowFixMe import Textarea from 'react-textarea-autosize';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120196,
+    "v1": "((channel.isPrivate && channel.channelPermissions.isMember) || channel.community.communityPermissions.isOwner || !channel.isPrivate)",
+    "v2": "((channel.isPrivate && channel.isMember) || !channel.isPrivate)",
+    "resolution": "((channel.isPrivate && channel.channelPermissions.isMember) || channel.community.communityPermissions.isOwner || !channel.isPrivate)",
+    "conflict": "((channel.isPrivate && channel.channelPermissions.isMember) || channel.community.communityPermissions.isOwner || !channel.isPrivate)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120210,
+    "v1": "failureRedirect: IS_PROD ? '/' : 'http://localhost:3000/', successRedirect: IS_PROD ? '/home' : 'http://localhost:3000/home',",
+    "v2": "failureRedirect: APP_URL, successRedirect: APP_URL + '/home',",
+    "resolution": "failureRedirect: IS_PROD ? '/' : 'http://localhost:3000/', successRedirect: IS_PROD ? '/home' : 'http://localhost:3000/home',",
+    "conflict": "failureRedirect: IS_PROD ? '/' : 'http://localhost:3000/', successRedirect: IS_PROD ? '/home' : 'http://localhost:3000/home',"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120211,
+    "v1": "<LinkButton href={`${SERVER_URL}/auth/twitter`}> <Icon icon=\"twitter\" reverse static />",
+    "v2": "<LinkButton href=\"http://localhost:3001/auth/twitter\"> <Icon glyph=\"twitter\" />",
+    "resolution": "<LinkButton href={`${SERVER_URL}/auth/twitter`}> <Icon glyph=\"twitter\" />",
+    "conflict": "<LinkButton href={`${SERVER_URL}/auth/twitter`}> <Icon icon=\"twitter\" reverse static />"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120212,
+    "v1": "<LinkButton href={`${SERVER_URL}/auth/twitter`}> <Icon icon=\"twitter\" color=\"brand.default\" static />",
+    "v2": "<LinkButton href=\"http://localhost:3001/auth/twitter\"> <Icon glyph=\"twitter\" />",
+    "resolution": "<LinkButton href={`${SERVER_URL}/auth/twitter`}> <Icon glyph=\"twitter\" />",
+    "conflict": "<LinkButton href={`${SERVER_URL}/auth/twitter`}> <Icon icon=\"twitter\" color=\"brand.default\" static />"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120217,
+    "v1": "import Textarea from 'react-textarea-autosize'; import { IconButton } from '../../components/buttons'; import { FlexCol, FlexRow, H1, Transition } from '../../components/globals';",
+    "v2": "import { FlexCol, H1 } from '../../components/globals';",
+    "resolution": "import { IconButton } from '../../components/buttons'; import { FlexCol, FlexRow, H1, Transition } from '../../components/globals';",
+    "conflict": "import Textarea from 'react-textarea-autosize'; import { IconButton } from '../../components/buttons'; import { FlexCol, FlexRow, H1, Transition } from '../../components/globals';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120218,
+    "v1": "transition: all 0.2s ease-in-out; align-self: center; margin: auto;",
+    "v2": "",
+    "resolution": "transition: ${Transition.hover.on}; align-self: center; margin: auto;",
+    "conflict": "transition: all 0.2s ease-in-out; align-self: center; margin: auto;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120225,
+    "v1": "failureRedirect: '/', successRedirect: `/home`,",
+    "v2": "failureRedirect: APP_URL, successRedirect: APP_URL,",
+    "resolution": "failureRedirect: '/', successRedirect: '/',",
+    "conflict": "failureRedirect: '/', successRedirect: `/home`,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120226,
+    "v1": "getAllStories, uploadPhoto,",
+    "v2": "getEverything,",
+    "resolution": "uploadPhoto, getEverything,",
+    "conflict": "getAllStories, uploadPhoto,"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120234,
+    "v1": "r.tableDrop('notifications').run(conn),",
+    "v2": "r.tableDrop('direct_message_groups').run(conn), r.tableDrop('reactions').run(conn),",
+    "resolution": "r.tableDrop('notifications').run(conn), r.tableDrop('direct_message_groups').run(conn), r.tableDrop('reactions').run(conn),",
+    "conflict": "r.tableDrop('notifications').run(conn),"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120237,
+    "v1": "getStoryByFrequency, listenToNewStories,",
+    "v2": "getStoriesByFrequency,",
+    "resolution": "listenToNewStories, getStoriesByFrequency,",
+    "conflict": "getStoryByFrequency, listenToNewStories,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120248,
+    "v1": "//$FlowFixMe import renderComponent from 'recompose/renderComponent'; //$FlowFixMe import branch from 'recompose/branch';",
+    "v2": "",
+    "resolution": "//$FlowFixMe import renderComponent from 'recompose/renderComponent'; //$FlowFixMe import branch from 'recompose/branch';",
+    "conflict": "//$FlowFixMe import renderComponent from 'recompose/renderComponent'; //$FlowFixMe import branch from 'recompose/branch';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120250,
+    "v1": "width: ${props => (props.size ? `${props.size}px` : '32px')}; height: ${props => (props.size ? `${props.size}px` : '32px')};",
+    "v2": "width: 2rem; height: 2rem;",
+    "resolution": "width: ${props => (props.size ? `${props.size}px` : '2rem')}; height: ${props => (props.size ? `${props.size}px` : '2rem')};",
+    "conflict": "width: ${props => (props.size ? `${props.size}px` : '32px')}; height: ${props => (props.size ? `${props.size}px` : '32px')};"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120272,
+    "v1": "messageComposer: state.messageComposer, messageGroups: state.messageGroups,",
+    "v2": "activeCommunity: state.communities.active,",
+    "resolution": "activeCommunity: state.communities.active, messageComposer: state.messageComposer, messageGroups: state.messageGroups,",
+    "conflict": "messageComposer: state.messageComposer, messageGroups: state.messageGroups,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120280,
+    "v1": "import MainRouter from './MainRouter'; import Root from './Root';",
+    "v2": "import { Body } from './App/style'; // import Root from './Root';",
+    "resolution": "import MainRouter from './MainRouter';",
+    "conflict": "import MainRouter from './MainRouter'; import Root from './Root';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120288,
+    "v1": "const isEverything = activeCommunity === 'everything'; const isNotifications = activeCommunity === 'notifications';",
+    "v2": "const isEverything = frequencies.active === 'everything'; const isExplore = frequencies.active === 'explore';",
+    "resolution": "const isEverything = activeCommunity === 'everything'; const isNotifications = activeCommunity === 'notifications'; const isExplore = activeCommunity === 'explore';",
+    "conflict": "const isEverything = activeCommunity === 'everything'; const isNotifications = activeCommunity === 'notifications';"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120289,
+    "v1": "if (user.uid && isNotifications && unread >= 0) { sortedStories.unshift(<NuxJoinCard />); }",
+    "v2": "",
+    "resolution": "",
+    "conflict": "if (user.uid && isNotifications && unread >= 0) { sortedStories.unshift(<NuxJoinCard />); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120298,
+    "v1": "import { getFileUrlFromStory, getMediaFromStory } from '../db/stories';",
+    "v2": "import { getFileUrl, getStoryMedia } from '../db/stories'; import { throwError } from './errors';",
+    "resolution": "import { getFileUrlFromStory, getMediaFromStory } from '../db/stories'; import { throwError } from './errors';",
+    "conflict": "import { getFileUrlFromStory, getMediaFromStory } from '../db/stories';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120304,
+    "v1": "const community = communities.find( community => community.id === freq.communityId, );",
+    "v2": "",
+    "resolution": "const community = communities.find( community => community.id === freq.communityId, );",
+    "conflict": "const community = communities.find( community => community.id === freq.communityId, );"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120306,
+    "v1": "activeCommunity,",
+    "v2": "metadata, frequencies: { active }, story,",
+    "resolution": "metadata, frequencies: { active }, story, activeCommunity,",
+    "conflict": "activeCommunity,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120307,
+    "v1": "Object.keys(participants).length >= 3 && activeCommunity !== 'everything'",
+    "v2": "Object.keys(participants).length >= 0 && active !== 'everything'",
+    "resolution": "Object.keys(participants).length >= 0 && activeCommunity !== 'everything'",
+    "conflict": "Object.keys(participants).length >= 3 && activeCommunity !== 'everything'"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120311,
+    "v1": "? <Link to={`/${community.slug}/~${freq.slug}`}> <JoinedButton id={freq.slug} width={'100%'}>",
+    "v2": "? <Link to={`/~${freq.slug}`}> <JoinedButton width={'100%'}>",
+    "resolution": "? <Link to={`/${community.slug}/~${freq.slug}`}> <JoinedButton width={'100%'}>",
+    "conflict": "? <Link to={`/${community.slug}/~${freq.slug}`}> <JoinedButton id={freq.slug} width={'100%'}>"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120316,
+    "v1": "export const SectionOneWrapper = styled.div` display: flex;",
+    "v2": "export const SectionContent = styled(FlexRow)`",
+    "resolution": "export const SectionContent = styled(FlexRow)`",
+    "conflict": "export const SectionOneWrapper = styled.div` display: flex;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120322,
+    "v1": "transition: all 0.1s ease-in 0.1s;",
+    "v2": "transition: all 0.2s ease-in 0.2s; }",
+    "resolution": "transition: all 0.1s ease-in 0.1s; }",
+    "conflict": "transition: all 0.1s ease-in 0.1s;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120330,
+    "v1": "import Markdown from 'react-remarkable'; import { Freeze, Delete, Back, Share } from '../../../shared/Icons';",
+    "v2": "import Markdown from '../../../shared/Markdown'; import { Freeze, Delete, Back } from '../../../shared/Icons';",
+    "resolution": "import { Freeze, Delete, Back, Share } from '../../../shared/Icons'; import Markdown from '../../../shared/Markdown';",
+    "conflict": "import Markdown from 'react-remarkable'; import { Freeze, Delete, Back, Share } from '../../../shared/Icons';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120332,
+    "v1": "",
+    "v2": "<MenuButton onClick={this.toggleNav}> <Menu stayActive color={'brand'} /> </MenuButton>",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120335,
+    "v1": "import { createNotifications } from './notifications'; import { ACTIVITY_TYPES, OBJECT_TYPES } from './types';",
+    "v2": "import { getPublicUserInfo } from './users'; import { flattenArray } from '../helpers/utils';",
+    "resolution": "import { getPublicUserInfo } from './users'; import { flattenArray } from '../helpers/utils'; import { createNotifications } from './notifications'; import { ACTIVITY_TYPES, OBJECT_TYPES } from './types';",
+    "conflict": "import { createNotifications } from './notifications'; import { ACTIVITY_TYPES, OBJECT_TYPES } from './types';"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 120341,
+    "v1": "placeholder: '+ Embed', embedUrl: '',",
+    "v2": "creating: true,",
+    "resolution": "creating: true, placeholder: '+ Embed', embedUrl: '',",
+    "conflict": "placeholder: '+ Embed', embedUrl: '',"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120348,
+    "v1": "display: flex; flex-direction: row;",
+    "v2": "display: ${props => props.visible ? 'flex' : 'none'}; flex-direction: row-reverse;",
+    "resolution": "flex-direction: row; display: ${props => props.visible ? 'flex' : 'none'};",
+    "conflict": "display: flex; flex-direction: row;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120357,
+    "v1": "<FreqGlyph>~</FreqGlyph> <FreqLabel>{ frequency.name }</FreqLabel>",
+    "v2": "<FreqIcon src=\"/img/freq-icon.svg\"/> <FreqLabel title={frequency.name}>{ frequency.name }</FreqLabel>",
+    "resolution": "<FreqGlyph>~</FreqGlyph> <FreqLabel>{ frequency.name }</FreqLabel>",
+    "conflict": "<FreqGlyph>~</FreqGlyph> <FreqLabel>{ frequency.name }</FreqLabel>"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120358,
+    "v1": "padding: 8px 0;",
+    "v2": "max-width: 11vw; overflow: hidden;",
+    "resolution": "padding: 8px 0; overflow: hidden;",
+    "conflict": "padding: 8px 0;"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 120373,
+    "v1": "import { ScrollBody, Bubble, BubbleGroup, FromName } from './style';",
+    "v2": "// eslint-disable-next-line import ChatMessage from '../ChatMessage'; import { ScrollBody } from './style';",
+    "resolution": "import { ScrollBody, Bubble, BubbleGroup, FromName } from './style'; import ChatMessage from '../ChatMessage';",
+    "conflict": "import { ScrollBody, Bubble, BubbleGroup, FromName } from './style';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120379,
+    "v1": "updatedData[\"frequencies/\" + newFrequencyKey] = newFrequencyData;",
+    "v2": "function updateFrequencies() { database.ref(`/users/${uid}/frequencies`).once('value').then(function(snapshot) { // we need to see what frequencies the user has already let existingFrequencies = snapshot.val(); // this is a users existing frequencies",
+    "resolution": "updatedData[\"frequencies/\" + newFrequencyKey] = newFrequencyData;",
+    "conflict": "updatedData[\"frequencies/\" + newFrequencyKey] = newFrequencyData;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 120384,
+    "v1": "// eslint-disable-next-line import { Column, Avatar, UserHeader, UserMeta, Name, Username, TopicSearch } from './style';",
+    "v2": "import { Column, Avatar, Header, MetaWrapper, Name, Logout, TopicSearch } from './style';",
+    "resolution": "import { Column, Avatar, Header, MetaWrapper, Name, Logout, TopicSearch } from './style';",
+    "conflict": "// eslint-disable-next-line import { Column, Avatar, UserHeader, UserMeta, Name, Username, TopicSearch } from './style';"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 120388,
+    "v1": "import { PostWrapper, PostBody, PostImg, PostHeader, Avatar, UserMeta, Name, Meta, UpvoteWrapper, UpvoteButton } from './style';",
+    "v2": "import { PostWrapper, PostBody } from './style'; import UserHeader from '../UserHeader'",
+    "resolution": "import { PostWrapper, PostBody, PostImg, PostHeader, Avatar, UserMeta, Name, Meta, UpvoteWrapper, UpvoteButton } from './style';",
+    "conflict": "import { PostWrapper, PostBody, PostImg, PostHeader, Avatar, UserMeta, Name, Meta, UpvoteWrapper, UpvoteButton } from './style';"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 120390,
+    "v1": "import { Column, Header, ScrollBody, Button } from './style';",
+    "v2": "import { connect } from 'react-redux' import { setPosts, createPost } from '../../../actions/posts' import { Column, ActionHeader, ScrollBody } from './style';",
+    "resolution": "import { connect } from 'react-redux' import { setPosts, createPost } from '../../../actions/posts' import { Column, ActionHeader, ScrollBody, Button } from './style';",
+    "conflict": "import { Column, Header, ScrollBody, Button } from './style';"
+  }
+]}

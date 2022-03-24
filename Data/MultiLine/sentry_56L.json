@@ -1,0 +1,578 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 101625,
+    "v1": "raise AmbiguousUserResolution([ue.user for ue in candidates])  @abc.abstractmethod def get_steps(self) -> Iterable[Callable]: raise NotImplementedError",
+    "v2": "raise AmbiguousUserFromEmail(self.email, [ue.user for ue in candidates])",
+    "resolution": "raise AmbiguousUserFromEmail(self.email, [ue.user for ue in candidates])  @abc.abstractmethod def get_steps(self) -> Iterable[Callable]:",
+    "conflict": "raise AmbiguousUserResolution([ue.user for ue in candidates])  @abc.abstractmethod def get_steps(self) -> Iterable[Callable]: raise NotImplementedError"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 101633,
+    "v1": "from dataclasses import dataclass from typing import Iterable, Optional, Sequence  import sentry_sdk",
+    "v2": "from typing import Optional, Sequence, Tuple",
+    "resolution": "from dataclasses import dataclass from typing import Iterable, Optional, Sequence, Tuple",
+    "conflict": "from dataclasses import dataclass from typing import Iterable, Optional, Sequence  import sentry_sdk"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101637,
+    "v1": "from drf_spectacular.utils import OpenApiExample, extend_schema, inline_serializer from rest_framework import serializers from rest_framework.exceptions import PermissionDenied",
+    "v2": "from rest_framework.exceptions import PermissionDenied from rest_framework.request import Request",
+    "resolution": "from drf_spectacular.utils import OpenApiExample, extend_schema, inline_serializer from rest_framework import serializers from rest_framework.exceptions import PermissionDenied",
+    "conflict": "from drf_spectacular.utils import OpenApiExample, extend_schema, inline_serializer from rest_framework import serializers from rest_framework.exceptions import PermissionDenied"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101646,
+    "v1": "\"organizations:team-insights\": False, # Enable login with WebAuthn \"organizations:webauthn-login\": False, # Enable registering new key with WebAuthn \"organizations:webauthn-register\": False,",
+    "v2": "\"organizations:team-insights\": True,",
+    "resolution": "\"organizations:team-insights\": True, # Enable login with WebAuthn \"organizations:webauthn-login\": False, # Enable registering new key with WebAuthn \"organizations:webauthn-register\": False,",
+    "conflict": "\"organizations:team-insights\": False, # Enable login with WebAuthn \"organizations:webauthn-login\": False, # Enable registering new key with WebAuthn \"organizations:webauthn-register\": False,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101660,
+    "v1": "# will raise validation errors validate_invitation(member, organization, request.user, allowed_roles)",
+    "v2": "try: member.validate_invitation(request.user, allowed_roles) except UnableToAcceptMemberInvitationException as err: raise serializers.ValidationError(str(err))",
+    "resolution": "try: member.validate_invitation(request.user, allowed_roles) except UnableToAcceptMemberInvitationException as err: raise serializers.ValidationError(str(err))",
+    "conflict": "# will raise validation errors validate_invitation(member, organization, request.user, allowed_roles)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101690,
+    "v1": "config[\"appconnectPrivateKey\"] = {\"_hidden-secret\": True} config[\"itunesPassword\"] = {\"_hidden-secret\": True}  # TODO: Just return the ID instead of the entire config return Response(config, status=200)",
+    "v2": "return Response({\"id\": validated_config.id}, status=200)",
+    "resolution": "return Response({\"id\": validated_config.id}, status=200)",
+    "conflict": "config[\"appconnectPrivateKey\"] = {\"_hidden-secret\": True} config[\"itunesPassword\"] = {\"_hidden-secret\": True}  # TODO: Just return the ID instead of the entire config return Response(config, status=200)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101693,
+    "v1": "symbol_source_config.appconnectPrivateKey = {\"_hidden-secret\": True} symbol_source_config.itunesPassword = {\"_hidden-secret\": True}  return Response(symbol_source_config.to_json(), status=200)",
+    "v2": "return Response(symbol_source_config.to_redacted_json(), status=200)",
+    "resolution": "return Response(symbol_source_config.to_redacted_json(), status=200)",
+    "conflict": "symbol_source_config.appconnectPrivateKey = {\"_hidden-secret\": True} symbol_source_config.itunesPassword = {\"_hidden-secret\": True}  return Response(symbol_source_config.to_json(), status=200)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 101711,
+    "v1": "# the release in which this regressed in, if there was a release release = FlexibleForeignKey(\"sentry.Release\", null=True)",
+    "v2": "# the release in which this regressed in release = FlexibleForeignKey(\"sentry.Release\", db_index=True)",
+    "resolution": "# the release in which this regressed in, if there was a release release = FlexibleForeignKey(\"sentry.Release\", db_index=True, null=True)",
+    "conflict": "# the release in which this regressed in, if there was a release release = FlexibleForeignKey(\"sentry.Release\", null=True)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101724,
+    "v1": "data={ \"destination_id\": destination_id, **args.replacement.get_activity_args(unmerge_key), },",
+    "v2": "data={\"destination_id\": destination_id, **args.replacement.get_activity_args()},",
+    "resolution": "data={ \"destination_id\": destination_id, **args.replacement.get_activity_args(unmerge_key), },",
+    "conflict": "data={ \"destination_id\": destination_id, **args.replacement.get_activity_args(unmerge_key), },"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101727,
+    "v1": "\"\"\" Get the Key Transactions for a user \"\"\"",
+    "v2": "\"\"\"Get the Key Transactions for a user\"\"\" if not self.has_feature(request, organization): return Response(status=404)",
+    "resolution": "\"\"\" Get the Key Transactions for a user \"\"\"",
+    "conflict": "\"\"\" Get the Key Transactions for a user \"\"\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101728,
+    "v1": "\"\"\" Create a Key Transaction \"\"\"",
+    "v2": "\"\"\"Create a Key Transaction\"\"\" if not self.has_feature(request, organization): return Response(status=404)",
+    "resolution": "\"\"\" Create a Key Transaction \"\"\"",
+    "conflict": "\"\"\" Create a Key Transaction \"\"\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101729,
+    "v1": "\"\"\" Remove a Key transaction for a user \"\"\"",
+    "v2": "\"\"\"Remove a Key transaction for a user\"\"\" if not self.has_feature(request, organization): return Response(status=404)",
+    "resolution": "\"\"\" Remove a Key transaction for a user \"\"\"",
+    "conflict": "\"\"\" Remove a Key transaction for a user \"\"\""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 101733,
+    "v1": "# Store release bundles as zip files instead of single files \"organizations:release-archives\": False,",
+    "v2": "# Enable the project level transaction thresholds \"organizations:project-transaction-threshold\": False, # Enable percent displays in issue stream \"organizations:issue-percent-display\": False,",
+    "resolution": "# Enable the project level transaction thresholds \"organizations:project-transaction-threshold\": False, # Enable percent displays in issue stream \"organizations:issue-percent-display\": False, # Store release bundles as zip files instead of single files \"organizations:release-archives\": False,",
+    "conflict": "# Store release bundles as zip files instead of single files \"organizations:release-archives\": False,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101735,
+    "v1": "\"organizations:alert-wizard\": False, # Store release bundles as zip files instead of single files \"organizations:release-archives\": False,",
+    "v2": "\"organizations:alert-wizard\": True, # Enable the adoption chart in the releases page \"organizations:release-adoption-chart\": False,",
+    "resolution": "\"organizations:alert-wizard\": True, # Enable the adoption chart in the releases page \"organizations:release-adoption-chart\": False, # Store release bundles as zip files instead of single files \"organizations:release-archives\": False,",
+    "conflict": "\"organizations:alert-wizard\": False, # Store release bundles as zip files instead of single files \"organizations:release-archives\": False,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101737,
+    "v1": "get_integration_link, has_integrations, has_alert_integration,",
+    "v2": "has_integration_installed, has_integrations,",
+    "resolution": "get_integration_link, has_integrations, has_alert_integration,",
+    "conflict": "get_integration_link, has_integrations, has_alert_integration,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101789,
+    "v1": "ProjectMetricDetailsEndpoint, ProjectMetricsDataEndpoint, ProjectMetricsEndpoint, ProjectMetricsTagDetailsEndpoint,",
+    "v2": "ProjectMetricsDataEndpoint, ProjectMetricsEndpoint,",
+    "resolution": "ProjectMetricDetailsEndpoint, ProjectMetricsDataEndpoint, ProjectMetricsEndpoint, ProjectMetricsTagDetailsEndpoint,",
+    "conflict": "ProjectMetricDetailsEndpoint, ProjectMetricsDataEndpoint, ProjectMetricsEndpoint, ProjectMetricsTagDetailsEndpoint,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101791,
+    "v1": "r\"^(?P<organization_slug>[^/]+)/(?P<project_slug>[^/]+)/metrics/meta/(?P<metric_name>[^/]+)/$\", ProjectMetricDetailsEndpoint.as_view(), name=\"sentry-api-0-project-metric-details\", ), url(",
+    "v2": "",
+    "resolution": "r\"^(?P<organization_slug>[^/]+)/(?P<project_slug>[^/]+)/metrics/meta/(?P<metric_name>[^/]+)/$\", ProjectMetricDetailsEndpoint.as_view(), name=\"sentry-api-0-project-metric-details\", ), url(",
+    "conflict": "r\"^(?P<organization_slug>[^/]+)/(?P<project_slug>[^/]+)/metrics/meta/(?P<metric_name>[^/]+)/$\", ProjectMetricDetailsEndpoint.as_view(), name=\"sentry-api-0-project-metric-details\", ), url("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101793,
+    "v1": "r\"^(?P<organization_slug>[^/]+)/(?P<project_slug>[^/]+)/metrics/tags/(?P<tag_name>[^/]+)/$\", ProjectMetricsTagDetailsEndpoint.as_view(), name=\"sentry-api-0-project-metrics-tag-details\", ), url(",
+    "v2": "",
+    "resolution": "r\"^(?P<organization_slug>[^/]+)/(?P<project_slug>[^/]+)/metrics/tags/(?P<tag_name>[^/]+)/$\", ProjectMetricsTagDetailsEndpoint.as_view(), name=\"sentry-api-0-project-metrics-tag-details\", ), url(",
+    "conflict": "r\"^(?P<organization_slug>[^/]+)/(?P<project_slug>[^/]+)/metrics/tags/(?P<tag_name>[^/]+)/$\", ProjectMetricsTagDetailsEndpoint.as_view(), name=\"sentry-api-0-project-metrics-tag-details\", ), url("
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101794,
+    "v1": "ProjectMetricsDataEndpoint, ProjectMetricsEndpoint,",
+    "v2": "ProjectMetricDetailsEndpoint, ProjectMetricsDataEndpoint, ProjectMetricsEndpoint, ProjectMetricsTagDetailsEndpoint,",
+    "resolution": "ProjectMetricDetailsEndpoint, ProjectMetricsDataEndpoint, ProjectMetricsEndpoint, ProjectMetricsTagDetailsEndpoint,",
+    "conflict": "ProjectMetricsDataEndpoint, ProjectMetricsEndpoint,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101796,
+    "v1": "",
+    "v2": "r\"^(?P<organization_slug>[^/]+)/(?P<project_slug>[^/]+)/metrics/meta/(?P<metric_name>[^/]+)/$\", ProjectMetricDetailsEndpoint.as_view(), name=\"sentry-api-0-project-metric-details\", ), url(",
+    "resolution": "r\"^(?P<organization_slug>[^/]+)/(?P<project_slug>[^/]+)/metrics/meta/(?P<metric_name>[^/]+)/$\", ProjectMetricDetailsEndpoint.as_view(), name=\"sentry-api-0-project-metric-details\", ), url(",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101798,
+    "v1": "",
+    "v2": "r\"^(?P<organization_slug>[^/]+)/(?P<project_slug>[^/]+)/metrics/tags/(?P<tag_name>[^/]+)/$\", ProjectMetricsTagDetailsEndpoint.as_view(), name=\"sentry-api-0-project-metrics-tag-details\", ), url(",
+    "resolution": "r\"^(?P<organization_slug>[^/]+)/(?P<project_slug>[^/]+)/metrics/tags/(?P<tag_name>[^/]+)/$\", ProjectMetricsTagDetailsEndpoint.as_view(), name=\"sentry-api-0-project-metrics-tag-details\", ), url(",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101815,
+    "v1": "[\"avgOrNull\", \"duration\", \"avg_transaction_duration\"], [\"maxOrNull\", \"timestamp\", \"max_timestamp\"],",
+    "v2": "[\"avg\", \"duration\", \"avg_transaction_duration\"], [\"stddevSamp\", \"duration\", \"stddev_transaction_duration\"], [\"max\", \"timestamp\", \"max_timestamp\"],",
+    "resolution": "[\"avgOrNull\", \"duration\", \"avg_transaction_duration\"], [\"maxOrNull\", \"timestamp\", \"max_timestamp\"], [\"stddevSamp\", \"duration\", \"stddev_transaction_duration\"],",
+    "conflict": "[\"avgOrNull\", \"duration\", \"avg_transaction_duration\"], [\"maxOrNull\", \"timestamp\", \"max_timestamp\"],"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101816,
+    "v1": "[\"avgOrNull\", \"duration\", \"avg_transaction_duration\"], [\"maxOrNull\", \"timestamp\", \"max_timestamp\"],",
+    "v2": "[\"avg\", \"duration\", \"avg_transaction_duration\"], [\"stddevSamp\", \"duration\", \"stddev_transaction_duration\"], [\"max\", \"timestamp\", \"max_timestamp\"],",
+    "resolution": "[\"avgOrNull\", \"duration\", \"avg_transaction_duration\"], [\"maxOrNull\", \"timestamp\", \"max_timestamp\"], [\"stddevSamp\", \"duration\", \"stddev_transaction_duration\"],",
+    "conflict": "[\"avgOrNull\", \"duration\", \"avg_transaction_duration\"], [\"maxOrNull\", \"timestamp\", \"max_timestamp\"],"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101846,
+    "v1": "return [x for x in get_files_for_list(file_list) if x.endswith(('.js', '.jsx'))]",
+    "v2": "return [ x for x in get_files_for_list(file_list) if x.endswith(('.js', '.jsx')) ] return file_list",
+    "resolution": "return [x for x in get_files_for_list(file_list) if x.endswith(('.js', '.jsx'))]",
+    "conflict": "return [x for x in get_files_for_list(file_list) if x.endswith(('.js', '.jsx'))]"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101850,
+    "v1": "'organizations:callsigns': False, 'organizations:release-commits': False, 'projects:similarity-view': True,",
+    "v2": "'organizations:callsigns': True, 'organizations:group-unmerge': False,",
+    "resolution": "'organizations:callsigns': True, 'organizations:group-unmerge': False, 'projects:similarity-view': True,",
+    "conflict": "'organizations:callsigns': False, 'organizations:release-commits': False, 'projects:similarity-view': True,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 101875,
+    "v1": "if not self._is_frame_from_app_bundle(frame, img): return self.symbolize_system_frame(frame, img, sdk_info)",
+    "v2": "if not self._is_app_bundled_frame(frame, img): return self.symbolize_system_frame(frame, img, sdk_info, symbolize_inlined)",
+    "resolution": "if not self._is_frame_from_app_bundle(frame, img): return self.symbolize_system_frame(frame, img, sdk_info, symbolize_inlined)",
+    "conflict": "if not self._is_frame_from_app_bundle(frame, img): return self.symbolize_system_frame(frame, img, sdk_info)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101877,
+    "v1": "# Column might be missing here 'column': new_frame.get('colno'), # Line might be missing here 'row': new_frame.get('lineno'),",
+    "v2": "'column': new_frame['colno'], 'row': new_frame['lineno'],",
+    "resolution": "# Column might be missing here 'column': new_frame.get('colno'), # Line might be missing here 'row': new_frame.get('lineno'),",
+    "conflict": "# Column might be missing here 'column': new_frame.get('colno'), # Line might be missing here 'row': new_frame.get('lineno'),"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101885,
+    "v1": "",
+    "v2": "@property def is_fatal(self): \"\"\"If this is true then a processing issues has to be reported.\"\"\" return self.type in FATAL_ERRORS",
+    "resolution": "@property def is_fatal(self): \"\"\"If this is true then a processing issues has to be reported.\"\"\" return self.type in FATAL_ERRORS",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 101946,
+    "v1": "url(r'^projects/(?P<organization_slug>[^\\/]+)/(?P<project_slug>[^\\/]+)/events/$', ProjectEventsEndpoint.as_view(), name='sentry-api-0-project-events'),",
+    "v2": "url(r'^projects/(?P<organization_slug>[^\\/]+)/(?P<project_slug>[^\\/]+)/events/(?P<event_id>[\\w-]+)/$', ProjectEventDetailsEndpoint.as_view(), name='sentry-api-0-project-event-details'),",
+    "resolution": "url(r'^projects/(?P<organization_slug>[^\\/]+)/(?P<project_slug>[^\\/]+)/events/(?P<event_id>[\\w-]+)/$', ProjectEventDetailsEndpoint.as_view(), name='sentry-api-0-project-event-details'), url(r'^projects/(?P<organization_slug>[^\\/]+)/(?P<project_slug>[^\\/]+)/events/$', ProjectEventsEndpoint.as_view(), name='sentry-api-0-project-events'),",
+    "conflict": "url(r'^projects/(?P<organization_slug>[^\\/]+)/(?P<project_slug>[^\\/]+)/events/$', ProjectEventsEndpoint.as_view(), name='sentry-api-0-project-events'),"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 101955,
+    "v1": "# Enable the Sentry Debugger (Beta) SENTRY_DEBUGGER = False",
+    "v2": "SENTRY_FILTERS = ( 'sentry.filters.StatusFilter', )",
+    "resolution": "# Enable the Sentry Debugger (Beta) SENTRY_DEBUGGER = False",
+    "conflict": "# Enable the Sentry Debugger (Beta) SENTRY_DEBUGGER = False"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101964,
+    "v1": "obj.update(user=to_user)",
+    "v2": "with transaction.atomic(): try: obj.update(user=to_user) except IntegrityError: pass",
+    "resolution": "with transaction.atomic(): try: obj.update(user=to_user) except IntegrityError: pass",
+    "conflict": "obj.update(user=to_user)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101973,
+    "v1": "author = self.user.first_name or self.user.username",
+    "v2": "if self.user: author = self.user.first_name or self.user.username else: author = None",
+    "resolution": "if self.user: author = self.user.first_name or self.user.username else: author = None",
+    "conflict": "author = self.user.first_name or self.user.username"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 101975,
+    "v1": "'release_link': absolute_uri(reverse('sentry-release-details', kwargs={ 'organization_slug': org.slug, 'project_id': project.slug, 'version': self.data['version'], })),",
+    "v2": "",
+    "resolution": "'release_link': absolute_uri(reverse('sentry-release-details', kwargs={ 'organization_slug': org.slug, 'project_id': project.slug, 'version': self.data['version'], })),",
+    "conflict": "'release_link': absolute_uri(reverse('sentry-release-details', kwargs={ 'organization_slug': org.slug, 'project_id': project.slug, 'version': self.data['version'], })),"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 101981,
+    "v1": "class CatchallEndpoint(View):",
+    "v2": "class CatchallEndpoint(Endpoint): permission_classes = ()",
+    "resolution": "class CatchallEndpoint(Endpoint): permission_classes = ()",
+    "conflict": "class CatchallEndpoint(View):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102004,
+    "v1": "event_id = raven.get_ident(raven.captureException(request=request))",
+    "v2": "event = raven.captureException(request=request) if event: event_id = raven.get_ident(event) else: event_id = None",
+    "resolution": "event = raven.captureException(request=request) if event: event_id = raven.get_ident(event) else: event_id = None",
+    "conflict": "event_id = raven.get_ident(raven.captureException(request=request))"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102123,
+    "v1": "# we treat user as a special contextual item if key == 'sentry.interfaces.User': continue",
+    "v2": "if key == 'user': continue",
+    "resolution": "# we treat user as a special contextual item if key == 'sentry.interfaces.User': continue",
+    "conflict": "# we treat user as a special contextual item if key == 'sentry.interfaces.User': continue"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102143,
+    "v1": "def safe_urlopen(url, params=None, data=None, headers=None, allow_redirects=False, timeout=30):",
+    "v2": "def safe_urlopen(url, method=None, params=None, data=None, json=None, headers=None, allow_redirects=False, timeout=30, verify_ssl=True, user_agent=None):",
+    "resolution": "def safe_urlopen(url, method=None, params=None, data=None, json=None, headers=None, allow_redirects=False, timeout=30, verify_ssl=True, user_agent=None):",
+    "conflict": "def safe_urlopen(url, params=None, data=None, headers=None, allow_redirects=False, timeout=30):"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102148,
+    "v1": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )",
+    "v2": "",
+    "resolution": "",
+    "conflict": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102150,
+    "v1": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )",
+    "v2": "",
+    "resolution": "",
+    "conflict": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102152,
+    "v1": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )",
+    "v2": "",
+    "resolution": "",
+    "conflict": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102154,
+    "v1": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )",
+    "v2": "",
+    "resolution": "",
+    "conflict": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102156,
+    "v1": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )",
+    "v2": "",
+    "resolution": "",
+    "conflict": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102158,
+    "v1": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )",
+    "v2": "",
+    "resolution": "",
+    "conflict": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102160,
+    "v1": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )",
+    "v2": "",
+    "resolution": "",
+    "conflict": "project = Project.objects.get( organization__slug=organization_slug, slug=project_slug, )"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102166,
+    "v1": "'organization_slug': project.organization.slug, 'project_slug': project.slug }) response = self.client.put(url, data={",
+    "v2": "'project_id': self.project.id}) response = self.client.put(url + '?status=unresolved', data={",
+    "resolution": "'organization_slug': self.project.organization.slug, 'project_slug': self.project.slug })",
+    "conflict": "'organization_slug': project.organization.slug, 'project_slug': project.slug }) response = self.client.put(url, data={"
+  },
+  {
+    "devdecision": "None",
+    "id": 102185,
+    "v1": "from sentry.web.frontend.help_index import HelpIndexView from sentry.web.frontend.help_page import HelpPageView from sentry.web.frontend.help_platform_details import HelpPlatformDetailsView from sentry.web.frontend.help_platform_index import HelpPlatformIndexView",
+    "v2": "import sentry.web.frontend.projects.general",
+    "resolution": "import sentry.web.frontend.projects.keys",
+    "conflict": "from sentry.web.frontend.help_index import HelpIndexView from sentry.web.frontend.help_page import HelpPageView from sentry.web.frontend.help_platform_details import HelpPlatformDetailsView from sentry.web.frontend.help_platform_index import HelpPlatformIndexView"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102214,
+    "v1": "'sdist': CustomSdist, 'develop': CustomDevelop,",
+    "v2": "'build_static': BuildStatic, 'develop': DevelopWithBuildStatic, 'sdist': SdistWithBuildStatic,",
+    "resolution": "'build_static': BuildStatic, 'develop': DevelopWithBuildStatic, 'sdist': SdistWithBuildStatic,",
+    "conflict": "'sdist': CustomSdist, 'develop': CustomDevelop,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102215,
+    "v1": "from sentry.models import Broadcast, Project, Team, TeamMember, User, HelpPage",
+    "v2": "from sentry.models import ( AuditLogEntry, Broadcast, HelpPage, Organization, OrganizationMember, Project, Team, User )",
+    "resolution": "from sentry.models import ( AuditLogEntry, Broadcast, HelpPage, Organization, OrganizationMember, Project, Team, User )",
+    "conflict": "from sentry.models import Broadcast, Project, Team, TeamMember, User, HelpPage"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102247,
+    "v1": "",
+    "v2": "# Project ID for recording frontend (javascript) exceptions SENTRY_FRONTEND_PROJECT = None  SENTRY_CACHE_BACKEND = 'default'",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102248,
+    "v1": "STATUS_CHOICES = { 'resolved': STATUS_RESOLVED, 'unresolved': STATUS_UNRESOLVED, 'muted': STATUS_MUTED, }",
+    "v2": "",
+    "resolution": "",
+    "conflict": "STATUS_CHOICES = { 'resolved': STATUS_RESOLVED, 'unresolved': STATUS_UNRESOLVED, 'muted': STATUS_MUTED, }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102331,
+    "v1": "from sentry.api.serializers import serialize as serialize_func from sentry.constants import EVENTS_PER_PAGE, MEMBER_OWNER from sentry.models import Team",
+    "v2": "from sentry.constants import EVENTS_PER_PAGE from sentry.models import Organization",
+    "resolution": "from sentry.api.serializers import serialize as serialize_func from sentry.constants import EVENTS_PER_PAGE from sentry.models import Organization",
+    "conflict": "from sentry.api.serializers import serialize as serialize_func from sentry.constants import EVENTS_PER_PAGE, MEMBER_OWNER from sentry.models import Team"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102342,
+    "v1": "from sentry.api.serializers.base import serialize from sentry.constants import EVENTS_PER_PAGE from sentry.models import Project, Team, Option, ProjectOption",
+    "v2": "from sentry.constants import EVENTS_PER_PAGE from sentry.models import Project, Team, ProjectOption",
+    "resolution": "from sentry.api.serializers.base import serialize from sentry.constants import EVENTS_PER_PAGE from sentry.models import Project, Team, ProjectOption",
+    "conflict": "from sentry.api.serializers.base import serialize from sentry.constants import EVENTS_PER_PAGE from sentry.models import Project, Team, Option, ProjectOption"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102350,
+    "v1": "from django.core.urlresolvers import reverse from mock import patch",
+    "v2": "import mock  from django.core.urlresolvers import reverse",
+    "resolution": "import mock  from django.core.urlresolvers import reverse",
+    "conflict": "from django.core.urlresolvers import reverse from mock import patch"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102361,
+    "v1": "def setUp(self): super(BaseTestCase, self).setUp()",
+    "v2": "@before def setup_session(self):",
+    "resolution": "@before def setup_session(self):",
+    "conflict": "def setUp(self): super(BaseTestCase, self).setUp()"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102379,
+    "v1": "project1 = self.create_project(name='foo') project2 = self.create_project(name='bar')",
+    "v2": "team = self.create_team(owner=self.user) project1 = self.create_project(team=team, name='foo') project2 = self.create_project(team=team, name='bar')",
+    "resolution": "team = self.create_team(owner=self.user) project1 = self.create_project(team=team, name='foo') project2 = self.create_project(team=team, name='bar')",
+    "conflict": "project1 = self.create_project(name='foo') project2 = self.create_project(name='bar')"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102380,
+    "v1": "project1 = self.create_project(name='foo') project2 = self.create_project(name='bar')",
+    "v2": "team = self.create_team(owner=self.user)  project1 = self.create_project(team=team, name='foo') project2 = self.create_project(team=team, name='bar')",
+    "resolution": "team = self.create_team(owner=self.user)  project1 = self.create_project(team=team, name='foo') project2 = self.create_project(team=team, name='bar')",
+    "conflict": "project1 = self.create_project(name='foo') project2 = self.create_project(name='bar')"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102385,
+    "v1": "user = self.user user2 = User.objects.create(username='baz', email='baz@example.com', is_active=True) user3 = User.objects.create(username='baz2', email='bar@example.com', is_active=True)",
+    "v2": "user = self.create_user(email='foo@example.com', is_active=True) user2 = self.create_user(email='baz@example.com', is_active=True) user3 = self.create_user(email='baz2@example.com', is_active=True)",
+    "resolution": "user = self.create_user(email='foo@example.com', is_active=True) user2 = self.create_user(email='baz@example.com', is_active=True) user3 = self.create_user(email='baz2@example.com', is_active=True)",
+    "conflict": "user = self.user user2 = User.objects.create(username='baz', email='baz@example.com', is_active=True) user3 = User.objects.create(username='baz2', email='bar@example.com', is_active=True)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102392,
+    "v1": "from django.http import HttpResponse from django.views.generic import View",
+    "v2": "from __future__ import absolute_import  from rest_framework.response import Response",
+    "resolution": "from __future__ import absolute_import from django.http import HttpResponse from django.views.generic import View",
+    "conflict": "from django.http import HttpResponse from django.views.generic import View"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102393,
+    "v1": "from __future__ import absolute_import, print_function  from django.utils import timezone from rest_framework import serializers",
+    "v2": "from __future__ import absolute_import",
+    "resolution": "from __future__ import absolute_import, print_function  from django.utils import timezone from rest_framework import serializers",
+    "conflict": "from __future__ import absolute_import, print_function  from django.utils import timezone from rest_framework import serializers"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102397,
+    "v1": "\"\"\" sentry.api.paginator ~~~~~~~~~~~~~~~~~~~~",
+    "v2": "from __future__ import absolute_import  import datetime",
+    "resolution": "\"\"\" sentry.api.paginator ~~~~~~~~~~~~~~~~~~~~",
+    "conflict": "\"\"\" sentry.api.paginator ~~~~~~~~~~~~~~~~~~~~"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102400,
+    "v1": "from sentry.api.paginator import Paginator from sentry.search.base import SearchBackend",
+    "v2": "from django.db.models import Q  from sentry.search.base import SearchBackend, SearchResult",
+    "resolution": "from django.db.models import Q from sentry.api.paginator import Paginator from sentry.search.base import SearchBackend",
+    "conflict": "from sentry.api.paginator import Paginator from sentry.search.base import SearchBackend"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 102414,
+    "v1": "url(r'^projects/(?P<project_id>\\d+)/members/$', ProjectMemberIndexEndpoint.as_view(), name='sentry-api-0-project-member-index'),",
+    "v2": "url(r'^projects/(?P<project_id>\\d+)/releases/$', ProjectReleasesEndpoint.as_view(), name='sentry-api-0-project-releases'),",
+    "resolution": "url(r'^projects/(?P<project_id>\\d+)/releases/$', ProjectReleasesEndpoint.as_view(), name='sentry-api-0-project-releases'), url(r'^projects/(?P<project_id>\\d+)/members/$', ProjectMemberIndexEndpoint.as_view(), name='sentry-api-0-project-member-index'),",
+    "conflict": "url(r'^projects/(?P<project_id>\\d+)/members/$', ProjectMemberIndexEndpoint.as_view(), name='sentry-api-0-project-member-index'),"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102416,
+    "v1": "from sentry.api.serializers import serialize as serialize_func",
+    "v2": "import six from six.moves import range  from sentry import options",
+    "resolution": "from sentry.api.serializers import serialize as serialize_func",
+    "conflict": "from sentry.api.serializers import serialize as serialize_func"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102455,
+    "v1": "STATUS_RESOLVED, STATUS_UNRESOLVED, MINUTE_NORMALIZATION, LOG_LEVELS, DEFAULT_LOGGER_NAME, MAX_CULPRIT_LENGTH, MAX_TAG_VALUE_LENGTH)",
+    "v2": "STATUS_RESOLVED, STATUS_UNRESOLVED, LOG_LEVELS, DEFAULT_LOGGER_NAME, MAX_CULPRIT_LENGTH, MEMBER_USER )",
+    "resolution": "STATUS_RESOLVED, STATUS_UNRESOLVED, MEMBER_USER, LOG_LEVELS, DEFAULT_LOGGER_NAME, MAX_CULPRIT_LENGTH, MAX_TAG_VALUE_LENGTH )",
+    "conflict": "STATUS_RESOLVED, STATUS_UNRESOLVED, MINUTE_NORMALIZATION, LOG_LEVELS, DEFAULT_LOGGER_NAME, MAX_CULPRIT_LENGTH, MAX_TAG_VALUE_LENGTH)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102462,
+    "v1": "@property def url_without_fragment(self): scheme, netloc, path, query, _ = urlparse.urlsplit(self.url) return urlparse.urlunsplit((scheme, netloc, path, query, None))",
+    "v2": "",
+    "resolution": "",
+    "conflict": "@property def url_without_fragment(self): scheme, netloc, path, query, _ = urlparse.urlsplit(self.url) return urlparse.urlunsplit((scheme, netloc, path, query, None))"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 102463,
+    "v1": "",
+    "v2": "app.tsdb.incr_multi([ (TSDBModel.group, group.id), (TSDBModel.project, project.id), ])",
+    "resolution": "app.tsdb.incr_multi([ (TSDBModel.group, group.id), (TSDBModel.project, project.id), ])",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102469,
+    "v1": "from sentry.constants import STATUS_RESOLVED, STATUS_MUTED from sentry.models import Group, GroupBookmark, GroupTagKey, GroupSeen",
+    "v2": "from sentry.constants import STATUS_RESOLVED, TAG_LABELS from sentry.models import ( Group, GroupBookmark, GroupTagKey, GroupSeen, ProjectOption )",
+    "resolution": "from sentry.constants import STATUS_RESOLVED, STATUS_MUTED, TAG_LABELS from sentry.models import ( Group, GroupBookmark, GroupTagKey, GroupSeen, ProjectOption )",
+    "conflict": "from sentry.constants import STATUS_RESOLVED, STATUS_MUTED from sentry.models import Group, GroupBookmark, GroupTagKey, GroupSeen"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102476,
+    "v1": "'Django>=1.4.5,<1.5', 'django-paging>=0.2.5,<0.3.0',",
+    "v2": "'Django>=1.4.5,<1.6', 'django-indexer>=0.3.0,<0.4.0', 'django-paging>=0.2.4,<0.3.0',",
+    "resolution": "'Django>=1.4.5,<1.6', 'django-paging>=0.2.5,<0.3.0',",
+    "conflict": "'Django>=1.4.5,<1.5', 'django-paging>=0.2.5,<0.3.0',"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102531,
+    "v1": "def test_status_mail(self): self.client.login(username='admin', password='admin') resp = self.client.get(reverse('sentry-admin-mail-status'), follow=True)",
+    "v2": "def test_status_queue(self): self.client.login(username=self.user.username, password='password') resp = self.client.get(reverse('sentry-admin-queue-status'), follow=True)",
+    "resolution": "def test_status_mail(self): self.client.login(username='admin', password='admin') resp = self.client.get(reverse('sentry-admin-mail-status'), follow=True)",
+    "conflict": "def test_status_mail(self): self.client.login(username='admin', password='admin') resp = self.client.get(reverse('sentry-admin-mail-status'), follow=True)"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 102607,
+    "v1": "from sentry.models import Group, GroupBookmark, Project, ProjectCountByMinute, \\ View, MEMBER_USER from sentry.templatetags.sentry_helpers import as_bookmarks",
+    "v2": "from sentry.exceptions import InvalidData from sentry.models import Group, GroupBookmark, Project, View from sentry.templatetags.sentry_helpers import with_metadata",
+    "resolution": "from sentry.models import Group, GroupBookmark, Project, ProjectCountByMinute, \\ View from sentry.exceptions import InvalidData from sentry.templatetags.sentry_helpers import with_metadata",
+    "conflict": "from sentry.models import Group, GroupBookmark, Project, ProjectCountByMinute, \\ View, MEMBER_USER from sentry.templatetags.sentry_helpers import as_bookmarks"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 102618,
+    "v1": "if is_new: regression_signal.send(sender=self.model, instance=group)",
+    "v2": "if settings.USE_SEARCH: SearchDocument.objects.index(event)  regression_signal.send(sender=self.model, instance=group)",
+    "resolution": "if settings.USE_SEARCH: SearchDocument.objects.index(event)  if is_new: regression_signal.send(sender=self.model, instance=group)",
+    "conflict": "if is_new: regression_signal.send(sender=self.model, instance=group)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 102628,
+    "v1": "if not contextual: context_instance = RequestContext(request) paging = mark_safe(render_to_string('sentry/partial/_pager.html', result, context_instance))  result = dict(objects=result['paginator'].get('objects', []), paging=paging)",
+    "v2": "",
+    "resolution": "if not contextual: context_instance = RequestContext(request) paging = mark_safe(render_to_string('sentry/partial/_pager.html', result, context_instance))  result = dict(objects=result['paginator'].get('objects', []), paging=paging)",
+    "conflict": "if not contextual: context_instance = RequestContext(request) paging = mark_safe(render_to_string('sentry/partial/_pager.html', result, context_instance))  result = dict(objects=result['paginator'].get('objects', []), paging=paging)"
+  }
+]}

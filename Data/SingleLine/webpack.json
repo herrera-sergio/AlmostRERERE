@@ -1,0 +1,1450 @@
+{"conflicts":[
+  {
+    "devdecision": "Combination",
+    "id": 167848,
+    "v1": "",
+    "v2": "* @param {boolean} options.css is css enabled  * @param {boolean} options.futureDefaults is future defaults enabled",
+    "resolution": "* @param {boolean} options.css is css enabled",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 167849,
+    "v1": "{ cache, syncWebAssembly, asyncWebAssembly }",
+    "v2": "{ cache, syncWebAssembly, asyncWebAssembly, css, futureDefaults }",
+    "resolution": "{ cache, syncWebAssembly, asyncWebAssembly, css }",
+    "conflict": "{ cache, syncWebAssembly, asyncWebAssembly }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 167909,
+    "v1": "/\\\\^\\\\(\\\\.\\\\+\\\\?\\\\[\\\\\\\\\\\\\\\\/\\\\]node_modules\\\\[\\\\\\\\\\\\\\\\/\\\\]\\\\)/,",
+    "v2": "\"<cwd>/node_modules/\",",
+    "resolution": "/\\\\^\\\\(\\\\.\\\\+\\\\?\\\\[\\\\\\\\\\\\\\\\/\\\\]node_modules\\\\[\\\\\\\\\\\\\\\\/\\\\]\\\\)/,",
+    "conflict": "/\\\\^\\\\(\\\\.\\\\+\\\\?\\\\[\\\\\\\\\\\\\\\\/\\\\]node_modules\\\\[\\\\\\\\\\\\\\\\/\\\\]\\\\)/,"
+  },
+  {
+    "devdecision": "None",
+    "id": 167954,
+    "v1": "return compiler;",
+    "v2": "done();",
+    "resolution": "bail: true",
+    "conflict": "return compiler;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 167981,
+    "v1": "\"if (parentChunkLoadingFunction) parentChunkLoadingFunction(data);\",",
+    "v2": "\"if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);\",",
+    "resolution": "\"if (parentChunkLoadingFunction) parentChunkLoadingFunction(data);\",",
+    "conflict": "\"if (parentChunkLoadingFunction) parentChunkLoadingFunction(data);\","
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168260,
+    "v1": ".tap(\"ConstPlugin\", expr => {",
+    "v2": ".tap(\"ConstPlugin\", () => {",
+    "resolution": ".tap(\"ConstPlugin\", expr => {",
+    "conflict": ".tap(\"ConstPlugin\", expr => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168276,
+    "v1": "if (info.type === \"concatenated\" && info.namespaceObjectSource) {",
+    "v2": "if (info.namespaceObjectSource) {",
+    "resolution": "if (info.type === \"concatenated\" && info.namespaceObjectSource) {",
+    "conflict": "if (info.type === \"concatenated\" && info.namespaceObjectSource) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168458,
+    "v1": "const { compareModulesByIdentifier } = require(\"../util/comparators\"); const memorize = require(\"../util/memorize\");",
+    "v2": "",
+    "resolution": "const { compareModulesByIdentifier } = require(\"../util/comparators\"); const memorize = require(\"../util/memorize\");",
+    "conflict": "const { compareModulesByIdentifier } = require(\"../util/comparators\"); const memorize = require(\"../util/memorize\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 168517,
+    "v1": "* @param {Compiler} compiler webpack compiler",
+    "v2": "* @param {Compiler} compiler the webpack compiler",
+    "resolution": "* @param {Compiler} compiler the webpack compiler",
+    "conflict": "* @param {Compiler} compiler webpack compiler"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168522,
+    "v1": "-> Set the inner regular expression for partial dynamic dependencies.\"",
+    "v2": "-> Set the inner regular expression for partial dynamic dependencies\"",
+    "resolution": "-> Set the inner regular expression for partial dynamic dependencies.\"",
+    "conflict": "-> Set the inner regular expression for partial dynamic dependencies.\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168525,
+    "v1": "object { compiler?, enforce?, exclude?, include?, issuer?, loader?, oneOf?, options?, parser?, realResource?, resolve?, resource?, resourceQuery?, rules?, sideEffects?, test?, type?, use? }",
+    "v2": "object { compiler?, enforce?, exclude?, include?, issuer?, loader?, loaders?, oneOf?, options?, parser?, query?, realResource?, resolve?, resource?, resourceQuery?, rules?, sideEffects?, test?, type?, use? }",
+    "resolution": "object { compiler?, enforce?, exclude?, include?, issuer?, loader?, oneOf?, options?, parser?, realResource?, resolve?, resource?, resourceQuery?, rules?, sideEffects?, test?, type?, use? }",
+    "conflict": "object { compiler?, enforce?, exclude?, include?, issuer?, loader?, oneOf?, options?, parser?, realResource?, resolve?, resource?, resourceQuery?, rules?, sideEffects?, test?, type?, use? }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168526,
+    "v1": "object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }",
+    "v2": "object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }",
+    "resolution": "object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }",
+    "conflict": "object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168527,
+    "v1": "* configuration.devtool should be false.\"",
+    "v2": "* configuration.devtool should be false\"",
+    "resolution": "* configuration.devtool should be false.\"",
+    "conflict": "* configuration.devtool should be false.\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168532,
+    "v1": "- configuration.plugins[0] misses the property 'apply'. Should be:",
+    "v2": "- configuration.plugins[0] misses the property 'apply'.",
+    "resolution": "- configuration.plugins[0] misses the property 'apply'. Should be:",
+    "conflict": "- configuration.plugins[0] misses the property 'apply'. Should be:"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168575,
+    "v1": "isOverSizeLimitSet.add(entry);",
+    "v2": "/** @type {any} */ (entry).isOverSizeLimit = true;",
+    "resolution": "isOverSizeLimitSet.add(entry);",
+    "conflict": "isOverSizeLimitSet.add(entry);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168789,
+    "v1": "process.stderr.columns = 35;",
+    "v2": "process.stderr.columns = 31;",
+    "resolution": "process.stderr.columns = 36;",
+    "conflict": "process.stderr.columns = 35;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168811,
+    "v1": "\" 10% building ...tries ...dules 0 active\",",
+    "v2": "\"77% ...timization ...nksPlugin\",",
+    "resolution": "\"75% ...optimization ...ChunksPlugin\",",
+    "conflict": "\" 10% building ...tries ...dules 0 active\","
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168901,
+    "v1": "for (const chunk of chunkGraph.getModuleChunksIterable(d.module)) {",
+    "v2": "for (const chunk of d.module.chunksIterable) {",
+    "resolution": "for (const chunk of chunkGraph.getModuleChunksIterable(d.module)) {",
+    "conflict": "for (const chunk of chunkGraph.getModuleChunksIterable(d.module)) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168905,
+    "v1": "if (cachedFile !== file) chunk.files.add(cachedFile);",
+    "v2": "if (cachedFile !== file) chunk.files.push(cachedFile);",
+    "resolution": "if (cachedFile !== file) chunk.files.add(cachedFile);",
+    "conflict": "if (cachedFile !== file) chunk.files.add(cachedFile);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168915,
+    "v1": "",
+    "v2": "const ConcurrentCompilationError = require(\"./ConcurrentCompilationError\"); const { Logger } = require(\"./logging/Logger\");",
+    "resolution": "const { Logger } = require(\"./logging/Logger\");",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168930,
+    "v1": "testParser.hooks.call.tap(\"cde.abc\", \"JavascriptParserTest\", expr => {",
+    "v2": "testParser.hooks.call.for(\"cde.abc\").tap(\"ParserTest\", expr => {",
+    "resolution": "testParser.hooks.call.for(\"cde.abc\").tap(\"JavascriptParserTest\", expr => {",
+    "conflict": "testParser.hooks.call.tap(\"cde.abc\", \"JavascriptParserTest\", expr => {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168931,
+    "v1": "testParser.hooks.call.tap(\"cde.ddd.abc\", \"JavascriptParserTest\", expr => {",
+    "v2": "testParser.hooks.call.for(\"cde.ddd.abc\").tap(\"ParserTest\", expr => {",
+    "resolution": "testParser.hooks.call.for(\"cde.ddd.abc\").tap(\"JavascriptParserTest\", expr => {",
+    "conflict": "testParser.hooks.call.tap(\"cde.ddd.abc\", \"JavascriptParserTest\", expr => {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168932,
+    "v1": "testParser.hooks.expression.tap(\"fgh\", \"JavascriptParserTest\", expr => {",
+    "v2": "testParser.hooks.expression.for(\"fgh\").tap(\"ParserTest\", expr => {",
+    "resolution": "testParser.hooks.expression.for(\"fgh\").tap(\"JavascriptParserTest\", expr => {",
+    "conflict": "testParser.hooks.expression.tap(\"fgh\", \"JavascriptParserTest\", expr => {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168939,
+    "v1": "object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }",
+    "v2": "object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }",
+    "resolution": "object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, infrastructureLogging?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }",
+    "conflict": "object { amd?, bail?, cache?, context?, dependencies?, devServer?, devtool?, entry?, experiments?, externals?, loader?, mode?, module?, name?, node?, optimization?, output?, parallelism?, performance?, plugins?, profile?, recordsInputPath?, recordsOutputPath?, recordsPath?, resolve?, resolveLoader?, serve?, stats?, target?, watch?, watchOptions? }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168952,
+    "v1": "this.buildInfo.hash = hash.digest(\"hex\");",
+    "v2": "this._buildHash = /** @type {string} */ (hash.digest(\"hex\"));",
+    "resolution": "this.buildInfo.hash = /** @type {string} */ (hash.digest(\"hex\"));",
+    "conflict": "this.buildInfo.hash = hash.digest(\"hex\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168984,
+    "v1": "object { compiler?, enforce?, exclude?, include?, issuer?, loader?, oneOf?, options?, parser?, realResource?, resolve?, resource?, resourceQuery?, rules?, sideEffects?, test?, type?, use? }",
+    "v2": "object { compiler?, enforce?, exclude?, include?, issuer?, loader?, loaders?, oneOf?, options?, parser?, query?, realResource?, resolve?, resource?, resourceQuery?, rules?, sideEffects?, test?, type?, use? }",
+    "resolution": "object { compiler?, enforce?, exclude?, include?, issuer?, loader?, oneOf?, options?, parser?, realResource?, resolve?, resource?, resourceQuery?, rules?, sideEffects?, test?, type?, use? }",
+    "conflict": "object { compiler?, enforce?, exclude?, include?, issuer?, loader?, oneOf?, options?, parser?, realResource?, resolve?, resource?, resourceQuery?, rules?, sideEffects?, test?, type?, use? }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 169114,
+    "v1": "",
+    "v2": "const ConstPlugin = require(\"./ConstPlugin\"); const CommonJsStuffPlugin = require(\"./CommonJsStuffPlugin\");",
+    "resolution": "const CommonJsStuffPlugin = require(\"./CommonJsStuffPlugin\");const CompatibilityPlugin = require(\"./CompatibilityPlugin\");const ConstPlugin = require(\"./ConstPlugin\");",
+    "conflict": ""
+  },
+  {
+    "devdecision": "None",
+    "id": 169120,
+    "v1": "const NodeStuffPlugin = require(\"./NodeStuffPlugin\");",
+    "v2": "const CompatibilityPlugin = require(\"./CompatibilityPlugin\");",
+    "resolution": "const CompatibilityPlugin = require(\"./CompatibilityPlugin\");",
+    "conflict": "const NodeStuffPlugin = require(\"./NodeStuffPlugin\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 169124,
+    "v1": "if (moduleGraph.isExportProvided(importedModule, this.id) !== false) {",
+    "v2": "if (importedModule.isProvided(this._id) !== false) {",
+    "resolution": "if (moduleGraph.isExportProvided(importedModule, id) !== false) {",
+    "conflict": "if (moduleGraph.isExportProvided(importedModule, this.id) !== false) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169174,
+    "v1": "return;",
+    "v2": "return;",
+    "resolution": "return;",
+    "conflict": "return;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 169430,
+    "v1": "const chunksInLimit = usedChunks.filter(chunk => {",
+    "v2": "validChunks = validChunks.filter(chunk => {",
+    "resolution": "validChunks = validChunks.filter(chunk => {",
+    "conflict": "const chunksInLimit = usedChunks.filter(chunk => {"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 169434,
+    "v1": "const results = [];",
+    "v2": "if (testConfig.beforeExecute) testConfig.beforeExecute();",
+    "resolution": "const results = []; if (testConfig.beforeExecute) testConfig.beforeExecute();",
+    "conflict": "const results = [];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169799,
+    "v1": "",
+    "v2": "const { Source } = require(\"webpack-sources\"); const util = require(\"util\");",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169803,
+    "v1": "ast = parser.parse(code, parserOptions);",
+    "v2": "ast = acornParser.parse(code, parserOptions);",
+    "resolution": "ast = parser.parse(code, parserOptions);",
+    "conflict": "ast = parser.parse(code, parserOptions);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169804,
+    "v1": "ast = parser.parse(code, parserOptions);",
+    "v2": "ast = acornParser.parse(code, parserOptions);",
+    "resolution": "ast = parser.parse(code, parserOptions);",
+    "conflict": "ast = parser.parse(code, parserOptions);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170013,
+    "v1": "this.hooks.addEntry.call(entry, name);",
+    "v2": "this.hooks.addEntry.call(entry);",
+    "resolution": "this.hooks.addEntry.call(entry, name);",
+    "conflict": "this.hooks.addEntry.call(entry, name);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170014,
+    "v1": "this.hooks.buildEntry.call(entry, name);",
+    "v2": "this.hooks.buildEntry.call(module);",
+    "resolution": "this.hooks.buildEntry.call(entry, name);",
+    "conflict": "this.hooks.buildEntry.call(entry, name);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170015,
+    "v1": "this.hooks.failedEntry.call(entry, name, err);",
+    "v2": "this.hooks.failedEntry.call(module, err);",
+    "resolution": "this.hooks.failedEntry.call(entry, name, err);",
+    "conflict": "this.hooks.failedEntry.call(entry, name, err);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170016,
+    "v1": "this.hooks.succeedEntry.call(entry, name, module);",
+    "v2": "this.hooks.succeedEntry.call(module);",
+    "resolution": "this.hooks.succeedEntry.call(entry, name, module);",
+    "conflict": "this.hooks.succeedEntry.call(entry, name, module);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170018,
+    "v1": "const { modulesCount } = this;",
+    "v2": "const { mode, modulesCount } = this;",
+    "resolution": "const { modulesCount } = this;",
+    "conflict": "const { modulesCount } = this;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170235,
+    "v1": "* @returns {Promise<void>} returns the promise resolving the Compilation#addEntry function",
+    "v2": "* @returns {Promise<EntryStatic>} returns the promise resolving the Compilation#addEntry function",
+    "resolution": "* @returns {Promise<EntryStatic>} returns the promise resolving the Compilation#addEntry function",
+    "conflict": "* @returns {Promise<void>} returns the promise resolving the Compilation#addEntry function"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170258,
+    "v1": "constructor(range, rangeStatement) {",
+    "v2": "constructor(originModule, range, rangeStatement, prefix) {",
+    "resolution": "constructor(range, rangeStatement, prefix) {",
+    "conflict": "constructor(range, rangeStatement) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170339,
+    "v1": "fs.readFileSync(join(__dirname, path), \"utf8\").replace(/\\r\\n?/g, \"\\n\")",
+    "v2": "fs.readFileSync(join(__dirname, path), \"utf8\").replace(/\\r\\n/g, \"\\n\")",
+    "resolution": "fs.readFileSync(join(__dirname, path), \"utf8\").replace(/\\r\\n?/g, \"\\n\")",
+    "conflict": "fs.readFileSync(join(__dirname, path), \"utf8\").replace(/\\r\\n?/g, \"\\n\")"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170340,
+    "v1": "",
+    "v2": "const { editWithAST, addWithAST } = require(\"@webassemblyjs/wasm-edit\"); const { decode } = require(\"@webassemblyjs/wasm-parser\");",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170365,
+    "v1": "",
+    "v2": "const Entrypoint = require(\"./Entrypoint\");",
+    "resolution": "const Entrypoint = require(\"./Entrypoint\");",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 170370,
+    "v1": "/** @typedef {import(\"./DependencyTemplates\")} DependencyTemplates */",
+    "v2": "/** @typedef {import(\"./Dependency\").DependencyTemplate} DependencyTemplate */",
+    "resolution": "/** @typedef {import(\"./Dependency\").DependencyTemplate} DependencyTemplate */ /** @typedef {import(\"./DependencyTemplates\")} DependencyTemplates */",
+    "conflict": "/** @typedef {import(\"./DependencyTemplates\")} DependencyTemplates */"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 170374,
+    "v1": "/** @typedef {import(\"./DependencyTemplates\")} DependencyTemplates */",
+    "v2": "/** @typedef {import(\"./util/createHash\").Hash} Hash */",
+    "resolution": "/** @typedef {import(\"./util/createHash\").Hash} Hash */ /** @typedef {import(\"./DependencyTemplates\")} DependencyTemplates */",
+    "conflict": "/** @typedef {import(\"./DependencyTemplates\")} DependencyTemplates */"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170377,
+    "v1": "let moduleIds = options.optimization.moduleIds;",
+    "v2": "const moduleIds = options.optimization.moduleIds;",
+    "resolution": "const moduleIds = options.optimization.moduleIds;",
+    "conflict": "let moduleIds = options.optimization.moduleIds;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170378,
+    "v1": "let chunkIds = options.optimization.chunkIds;",
+    "v2": "const chunkIds = options.optimization.chunkIds;",
+    "resolution": "const chunkIds = options.optimization.chunkIds;",
+    "conflict": "let chunkIds = options.optimization.chunkIds;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170416,
+    "v1": "",
+    "v2": "// TODO remove dep.getReference existence check in webpack 5 if (typeof dependency.getReference !== \"function\") return null;",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170418,
+    "v1": "this.set(\"optimization.splitChunks.cacheGroups.defaultVendors\", {",
+    "v2": "this.set(\"optimization.splitChunks.cacheGroups.vendors\", {",
+    "resolution": "this.set(\"optimization.splitChunks.cacheGroups.defaultVendors\", {",
+    "conflict": "this.set(\"optimization.splitChunks.cacheGroups.defaultVendors\", {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170500,
+    "v1": "/** @type {Map<DependenciesBlock, {modules: Set<Module>, blocks: AsyncDependenciesBlock[]}>} */",
+    "v2": "/** @type {Map<DependenciesBlock, { modules: Module[], blocks: AsyncDependenciesBlock[]}>} */",
+    "resolution": "/** @type {Map<DependenciesBlock, { modules: Module[], blocks: AsyncDependenciesBlock[]}>} */",
+    "conflict": "/** @type {Map<DependenciesBlock, {modules: Set<Module>, blocks: AsyncDependenciesBlock[]}>} */"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170515,
+    "v1": "const dep = this.delegatedSourceDependency;",
+    "v2": "const dep = /** @type {DelegatedSourceDependency} */ (this.dependencies[0]);",
+    "resolution": "const dep = /** @type {DelegatedSourceDependency} */ (this.dependencies[0]);",
+    "conflict": "const dep = this.delegatedSourceDependency;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170537,
+    "v1": "message = stack;",
+    "v2": "message += stack;",
+    "resolution": "message += stack;",
+    "conflict": "message = stack;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170613,
+    "v1": "const data = JSON.parse(source.replace(/^\\ufeff/, \"\"));",
+    "v2": "const data = parseJson(source);",
+    "resolution": "const data = parseJson(source.replace(/^\\ufeff/, \"\"));",
+    "conflict": "const data = JSON.parse(source.replace(/^\\ufeff/, \"\"));"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170617,
+    "v1": "* @returns {Record<string, Array<Set<TODO>>>} a record object of names to lists of child ids(?)",
+    "v2": "* @returns {Record<string, Set<TODO>[]>} a record object of names to lists of child ids(?)",
+    "resolution": "* @returns {Record<string, Set<TODO>[]>} a record object of names to lists of child ids(?)",
+    "conflict": "* @returns {Record<string, Array<Set<TODO>>>} a record object of names to lists of child ids(?)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170619,
+    "v1": "const SingleEntryDependency = require(\"./dependencies/SingleEntryDependency\");",
+    "v2": "const ModuleDependency = require(\"./dependencies/ModuleDependency\");",
+    "resolution": "const ModuleDependency = require(\"./dependencies/ModuleDependency\");",
+    "conflict": "const SingleEntryDependency = require(\"./dependencies/SingleEntryDependency\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170620,
+    "v1": "/** @typedef {SingleEntryDependency|MultiEntryDependency|DllEntryDependency} PossibleEntryDependencies */",
+    "v2": "// TODO use @callback",
+    "resolution": "// TODO use @callback",
+    "conflict": "/** @typedef {SingleEntryDependency|MultiEntryDependency|DllEntryDependency} PossibleEntryDependencies */"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170621,
+    "v1": "/** @typedef {(err?: Error|null) => void} CompilationSealCallback */",
+    "v2": "/** @typedef {(err?: Error|null) => void} Callback */",
+    "resolution": "/** @typedef {(err?: Error|null) => void} Callback */",
+    "conflict": "/** @typedef {(err?: Error|null) => void} CompilationSealCallback */"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170622,
+    "v1": "/** @type {SyncHook<string, Module>} */",
+    "v2": "/** @type {SyncHook<object, Module>} */",
+    "resolution": "/** @type {SyncHook<object, Module>} */",
+    "conflict": "/** @type {SyncHook<string, Module>} */"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170623,
+    "v1": "/** @type {Set<number>} */",
+    "v2": "/** @type {Set<number|string>} */",
+    "resolution": "/** @type {Set<number|string>} */",
+    "conflict": "/** @type {Set<number>} */"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170626,
+    "v1": "* @param {any} callback the callback function",
+    "v2": "* @param {Callback} callback the callback function",
+    "resolution": "* @param {Callback} callback the callback function",
+    "conflict": "* @param {any} callback the callback function"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170628,
+    "v1": "* @param {any} cacheGroup optional cacheGroup",
+    "v2": "* @param {TODO} cacheGroup optional cacheGroup",
+    "resolution": "* @param {TODO} cacheGroup optional cacheGroup",
+    "conflict": "* @param {any} cacheGroup optional cacheGroup"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170629,
+    "v1": "* @returns {void|never} will throw if dependency instance is not a valid Dependency",
+    "v2": "* @returns {void} will throw if dependency instance is not a valid Dependency",
+    "resolution": "* @returns {void} will throw if dependency instance is not a valid Dependency",
+    "conflict": "* @returns {void|never} will throw if dependency instance is not a valid Dependency"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170630,
+    "v1": "* @param {PossibleEntryDependencies} entry entry dependency being created",
+    "v2": "* @param {Dependency} entry entry dependency being created",
+    "resolution": "* @param {Dependency} entry entry dependency being created",
+    "conflict": "* @param {PossibleEntryDependencies} entry entry dependency being created"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170631,
+    "v1": "if (entry instanceof SingleEntryDependency) {",
+    "v2": "if (entry instanceof ModuleDependency) {",
+    "resolution": "if (entry instanceof ModuleDependency) {",
+    "conflict": "if (entry instanceof SingleEntryDependency) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170632,
+    "v1": "* @param {PossibleEntryDependencies} dependency dep used to create module",
+    "v2": "* @param {Dependency} dependency dep used to create module",
+    "resolution": "* @param {Dependency} dependency dep used to create module",
+    "conflict": "* @param {PossibleEntryDependencies} dependency dep used to create module"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170633,
+    "v1": "* @param {CompilationSealCallback} callback signals when the seal method is finishes",
+    "v2": "* @param {Callback} callback signals when the seal method is finishes",
+    "resolution": "* @param {Callback} callback signals when the seal method is finishes",
+    "conflict": "* @param {CompilationSealCallback} callback signals when the seal method is finishes"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170634,
+    "v1": "* @param {any} groupOptions options provided for group",
+    "v2": "* @param {TODO} groupOptions options provided for group",
+    "resolution": "* @param {TODO} groupOptions options provided for group",
+    "conflict": "* @param {any} groupOptions options provided for group"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170636,
+    "v1": "/** @type {Set<number|string>} */",
+    "v2": "/** @type {Set<number>} */",
+    "resolution": "/** @type {Set<number>} */",
+    "conflict": "/** @type {Set<number|string>} */"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170637,
+    "v1": "* @param {TODO} update //TODO (update hash function?)",
+    "v2": "* @param {string} update extra information",
+    "resolution": "* @param {string} update extra information",
+    "conflict": "* @param {TODO} update //TODO (update hash function?)"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170638,
+    "v1": "* @returns {TODO} figure out this return type",
+    "v2": "* @returns {string} interpolated path",
+    "resolution": "* @returns {string} interpolated path",
+    "conflict": "* @returns {TODO} figure out this return type"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170644,
+    "v1": "/** @type {any} */",
+    "v2": "/** @type {TODO} */",
+    "resolution": "/** @type {TODO} */",
+    "conflict": "/** @type {any} */"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170645,
+    "v1": "* @return {MultiEntryDependency} returns a constructed Dependency",
+    "v2": "* @returns {MultiEntryDependency} returns a constructed Dependency",
+    "resolution": "* @returns {MultiEntryDependency} returns a constructed Dependency",
+    "conflict": "* @return {MultiEntryDependency} returns a constructed Dependency"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170648,
+    "v1": "/** @type {(() => void)[]} */",
+    "v2": "/** @type {(function(): void)[]} */",
+    "resolution": "/** @type {(function(): void)[]} */",
+    "conflict": "/** @type {(() => void)[]} */"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 170650,
+    "v1": "delete global.location;",
+    "v2": "delete global.window;",
+    "resolution": "delete global.location; delete global.window;",
+    "conflict": "delete global.location;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170830,
+    "v1": "it(\"should emit 'watch-close' when using single-compiler mode and the compiler is not running\", done => {",
+    "v2": "it(\"should emit 'watch-close' when using single-compiler mode and the compiler is not running\", function(done) {",
+    "resolution": "it(\"should emit 'watch-close' when using single-compiler mode and the compiler is not running\", done => {",
+    "conflict": "it(\"should emit 'watch-close' when using single-compiler mode and the compiler is not running\", done => {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170851,
+    "v1": "* @returns {{trace: ?,counter: number, profiler: Profiler, fsStream: WriteStream}} The trace object",
+    "v2": "* @returns {{trace: ?,counter: number, profiler: Profiler, end: Function}} The trace object",
+    "resolution": "* @returns {{trace: ?,counter: number, profiler: Profiler, end: Function}} The trace object",
+    "conflict": "* @returns {{trace: ?,counter: number, profiler: Profiler, fsStream: WriteStream}} The trace object"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170852,
+    "v1": "fsStream",
+    "v2": "end: callback => fsStream.end(callback)",
+    "resolution": "end: callback => fsStream.end(callback)",
+    "conflict": "fsStream"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170853,
+    "v1": "tracer.fsStream.end(callback);",
+    "v2": "tracer.end(callback);",
+    "resolution": "tracer.end(callback);",
+    "conflict": "tracer.fsStream.end(callback);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170854,
+    "v1": "tracer.fsStream.end(callback);",
+    "v2": "tracer.end(callback);",
+    "resolution": "tracer.end(callback);",
+    "conflict": "tracer.fsStream.end(callback);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170864,
+    "v1": "expect(result).toEqual({ default: { named: \"named\", default: \"default\" } });",
+    "v2": "result.should.be.eql({ named: \"named\", default: { named: \"named\", default: \"default\" } });",
+    "resolution": "expect(result).toEqual({ named: \"named\", default: { named: \"named\", default: \"default\" } });",
+    "conflict": "expect(result).toEqual({ default: { named: \"named\", default: \"default\" } });"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170867,
+    "v1": "const createPosition = overides => {",
+    "v2": "const createPosition = function(overrides) {",
+    "resolution": "const createPosition = overrides => {",
+    "conflict": "const createPosition = overides => {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170901,
+    "v1": "/[\\-\\[\\]\\/\\{\\}\\(\\)\\*\\+\\?\\.\\\\\\^\\$\\|]/g,",
+    "v2": "/[-[\\]{}()*+?.\\\\^$|]/g,",
+    "resolution": "/[-[\\]{}()*+?.\\\\^$|]/g,",
+    "conflict": "/[\\-\\[\\]\\/\\{\\}\\(\\)\\*\\+\\?\\.\\\\\\^\\$\\|]/g,"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170903,
+    "v1": "} catch (e) {}",
+    "v2": "} catch (e) {} // eslint-disable-line no-empty",
+    "resolution": "} catch (e) {} // eslint-disable-line no-empty",
+    "conflict": "} catch (e) {}"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170906,
+    "v1": "const createModule = (identifier, numberOfReasons) => {",
+    "v2": "const createModule = function(identifier, numberOfReasons) {",
+    "resolution": "const createModule = function(identifier, numberOfReasons) {",
+    "conflict": "const createModule = (identifier, numberOfReasons) => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170911,
+    "v1": "expect(typeof stats).toBe(\"object\");",
+    "v2": "should.strictEqual(typeof stats, \"object\");",
+    "resolution": "expect(typeof stats).toBe(\"object\");",
+    "conflict": "expect(typeof stats).toBe(\"object\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170919,
+    "v1": "expect(typeof stats).toBe(\"object\");",
+    "v2": "should.strictEqual(typeof stats, \"object\");",
+    "resolution": "expect(typeof stats).toBe(\"object\");",
+    "conflict": "expect(typeof stats).toBe(\"object\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170921,
+    "v1": "expect(stats.logs.mkdirp).toEqual([\"/what\", \"/what/the\"]);",
+    "v2": "stats.logs.mkdirp.should.eql([\"/what\", \"/what/the\"]);",
+    "resolution": "expect(stats.logs.mkdirp).toEqual([\"/what\", \"/what/the\"]);",
+    "conflict": "expect(stats.logs.mkdirp).toEqual([\"/what\", \"/what/the\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170930,
+    "v1": "expect(typeof stats).toBe(\"object\");",
+    "v2": "should.strictEqual(typeof stats, \"object\");",
+    "resolution": "expect(typeof stats).toBe(\"object\");",
+    "conflict": "expect(typeof stats).toBe(\"object\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170964,
+    "v1": "expect(result).toEqual({",
+    "v2": "result.should.deepEqual({",
+    "resolution": "expect(result).toEqual({",
+    "conflict": "expect(result).toEqual({"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170965,
+    "v1": "expect(result).toEqual({",
+    "v2": "result.should.deepEqual({",
+    "resolution": "expect(result).toEqual({",
+    "conflict": "expect(result).toEqual({"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170966,
+    "v1": "path: path.join(__dirname, \"js\", \"NodeTemplatePlugin\"),",
+    "v2": "path: path.join(__dirname, \"js\"),",
+    "resolution": "path: path.join(__dirname, \"js\", \"NodeTemplatePlugin\"),",
+    "conflict": "path: path.join(__dirname, \"js\", \"NodeTemplatePlugin\"),"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170968,
+    "v1": "path: path.join(__dirname, \"js\", \"NodeTemplatePluginSingle\"),",
+    "v2": "path: path.join(__dirname, \"js\"),",
+    "resolution": "path: path.join(__dirname, \"js\", \"NodeTemplatePluginSingle\"),",
+    "conflict": "path: path.join(__dirname, \"js\", \"NodeTemplatePluginSingle\"),"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170975,
+    "v1": "it('calls hash function with \"null\"', () => {",
+    "v2": "it('calls hash function with \"null\"', function() {",
+    "resolution": "it('calls hash function with \"null\"', () => {",
+    "conflict": "it('calls hash function with \"null\"', () => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170982,
+    "v1": "beforeEach(() => {",
+    "v2": "beforeEach(function() {",
+    "resolution": "beforeEach(() => {",
+    "conflict": "beforeEach(() => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170988,
+    "v1": "expect(evalExprToString(evalExpr)).toBe(",
+    "v2": "evalExprToString(evalExpr).should.be.eql(",
+    "resolution": "expect(evalExprToString(evalExpr)).toBe(",
+    "conflict": "expect(evalExprToString(evalExpr)).toBe("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170991,
+    "v1": "expect(hashFoo).not.toBe(hashBar);",
+    "v2": "hashFoo.should.not.equal(hashBar);",
+    "resolution": "expect(hashFoo).not.toBe(hashBar);",
+    "conflict": "expect(hashFoo).not.toBe(hashBar);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170993,
+    "v1": "expect(match(loader, \"something\")).toEqual([]);",
+    "v2": "match(loader, \"something\").should.eql([]);",
+    "resolution": "expect(match(loader, \"something\")).toEqual([]);",
+    "conflict": "expect(match(loader, \"something\")).toEqual([]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170994,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170995,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170998,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170999,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171000,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([]);",
+    "v2": "match(loader, \"style.css\").should.eql([]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171001,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171002,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([]);",
+    "v2": "match(loader, \"style.css\").should.eql([]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171003,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171005,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171006,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171007,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171010,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css?modules=1\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css?modules=1\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css?modules=1\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css?modules=1\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171011,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css?modules=1\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css?modules=1\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css?modules=1\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css?modules=1\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171012,
+    "v1": "expect(match(loader, \"style.css\")).toEqual(['css?{\"modules\":1}']);",
+    "v2": "match(loader, \"style.css\").should.eql(['css?{\"modules\":1}']);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual(['css?{\"modules\":1}']);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual(['css?{\"modules\":1}']);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171014,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"css?modules=1\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"css?modules=1\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"css?modules=1\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"css?modules=1\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171015,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([",
+    "v2": "match(loader, \"style.css\").should.eql([",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual(["
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171016,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([",
+    "v2": "match(loader, \"style.css\").should.eql([",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual(["
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171017,
+    "v1": "expect(() => {",
+    "v2": "should.throws(() => {",
+    "resolution": "expect(() => {",
+    "conflict": "expect(() => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171019,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"style-loader\", \"css-loader\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"style-loader\", \"css-loader\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"style-loader\", \"css-loader\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"style-loader\", \"css-loader\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171020,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"style-loader\", \"css-loader\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"style-loader\", \"css-loader\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"style-loader\", \"css-loader\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"style-loader\", \"css-loader\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171021,
+    "v1": "expect(match(loader, \"style.css\")).toEqual([\"style-loader\", \"css-loader\"]);",
+    "v2": "match(loader, \"style.css\").should.eql([\"style-loader\", \"css-loader\"]);",
+    "resolution": "expect(match(loader, \"style.css\")).toEqual([\"style-loader\", \"css-loader\"]);",
+    "conflict": "expect(match(loader, \"style.css\")).toEqual([\"style-loader\", \"css-loader\"]);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171024,
+    "v1": "return (",
+    "v2": "if (",
+    "resolution": "return (",
+    "conflict": "return ("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171028,
+    "v1": "try {",
+    "v2": "should.throws(() => {",
+    "resolution": "try {",
+    "conflict": "try {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171034,
+    "v1": "expect(SizeFormatHelpers.formatSize(1.2 * 1024 * 1024 * 1024)).toBe(",
+    "v2": "should(SizeFormatHelpers.formatSize(1.2 * 1024 * 1024 * 1024)).be.eql(",
+    "resolution": "expect(SizeFormatHelpers.formatSize(1.2 * 1024 * 1024 * 1024)).toBe(",
+    "conflict": "expect(SizeFormatHelpers.formatSize(1.2 * 1024 * 1024 * 1024)).toBe("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171041,
+    "v1": "expect(mockStats.hasErrors()).toBe(true);",
+    "v2": "mockStats.hasErrors().should.be.ok();",
+    "resolution": "expect(mockStats.hasErrors()).toBe(true);",
+    "conflict": "expect(mockStats.hasErrors()).toBe(true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171042,
+    "v1": "expect(mockStats.hasWarnings()).toBe(true);",
+    "v2": "mockStats.hasWarnings().should.be.ok();",
+    "resolution": "expect(mockStats.hasWarnings()).toBe(true);",
+    "conflict": "expect(mockStats.hasWarnings()).toBe(true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171043,
+    "v1": "expect(mockStats.hasErrors()).toBe(false);",
+    "v2": "mockStats.hasErrors().should.not.be.ok();",
+    "resolution": "expect(mockStats.hasErrors()).toBe(false);",
+    "conflict": "expect(mockStats.hasErrors()).toBe(false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171045,
+    "v1": "expect(obj.errors[0]).toEqual(\"firstError\");",
+    "v2": "obj.errors[0].should.be.equal(\"firstError\");",
+    "resolution": "expect(obj.errors[0]).toEqual(\"firstError\");",
+    "conflict": "expect(obj.errors[0]).toEqual(\"firstError\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171046,
+    "v1": "expect(result).toEqual({",
+    "v2": "result.should.deepEqual({",
+    "resolution": "expect(result).toEqual({",
+    "conflict": "expect(result).toEqual({"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171049,
+    "v1": "expect(stats.hasErrors()).toBe(true);",
+    "v2": "stats.hasErrors().should.be.equal(true);",
+    "resolution": "expect(stats.hasErrors()).toBe(true);",
+    "conflict": "expect(stats.hasErrors()).toBe(true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171050,
+    "v1": "expect(typeof actual).toBe(\"string\");",
+    "v2": "(typeof actual).should.be.eql(\"string\");",
+    "resolution": "expect(typeof actual).toBe(\"string\");",
+    "conflict": "expect(typeof actual).toBe(\"string\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171057,
+    "v1": "beforeAll(() => {",
+    "v2": "before(() => {",
+    "resolution": "beforeAll(() => {",
+    "conflict": "beforeAll(() => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171060,
+    "v1": "describe(\"WatcherEvents\", () => {",
+    "v2": "describe(\"WatcherEvents\", function() {",
+    "resolution": "describe(\"WatcherEvents\", () => {",
+    "conflict": "describe(\"WatcherEvents\", () => {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171064,
+    "v1": "expect(errorMessage).toBe(",
+    "v2": "should(errorMessage).be.eql(",
+    "resolution": "expect(errorMessage).toBe(",
+    "conflict": "expect(errorMessage).toBe("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171065,
+    "v1": "expect(errorMessage).toBe(",
+    "v2": "should(errorMessage).be.eql(",
+    "resolution": "expect(errorMessage).toBe(",
+    "conflict": "expect(errorMessage).toBe("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171066,
+    "v1": "expect(errorMessage).toBe(",
+    "v2": "should(errorMessage).be.eql(",
+    "resolution": "expect(errorMessage).toBe(",
+    "conflict": "expect(errorMessage).toBe("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171067,
+    "v1": "const createPosition = overides => {",
+    "v2": "const createPosition = function(overides) {",
+    "resolution": "const createPosition = overides => {",
+    "conflict": "const createPosition = overides => {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171078,
+    "v1": "expect(env.plugin.FS_ACCURENCY).toBe(1);",
+    "v2": "env.plugin.FS_ACCURACY.should.be.exactly(1);",
+    "resolution": "env.plugin.applyMtime(1483819067001);expect(env.plugin.FS_ACCURACY).toBe(1);",
+    "conflict": "expect(env.plugin.FS_ACCURENCY).toBe(1);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171079,
+    "v1": "expect(env.plugin.FS_ACCURENCY).toBe(10);",
+    "v2": "env.plugin.FS_ACCURACY.should.be.exactly(10);",
+    "resolution": "env.plugin.applyMtime(1483819067004);expect(env.plugin.FS_ACCURACY).toBe(10);",
+    "conflict": "expect(env.plugin.FS_ACCURENCY).toBe(10);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171080,
+    "v1": "expect(env.plugin.FS_ACCURENCY).toBe(100);",
+    "v2": "env.plugin.FS_ACCURACY.should.be.exactly(100);",
+    "resolution": "env.plugin.applyMtime(1483819067040);expect(env.plugin.FS_ACCURACY).toBe(100);",
+    "conflict": "expect(env.plugin.FS_ACCURENCY).toBe(100);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171081,
+    "v1": "expect(env.plugin.FS_ACCURENCY).toBe(1000);",
+    "v2": "env.plugin.FS_ACCURACY.should.be.exactly(1000);",
+    "resolution": "env.plugin.applyMtime(1483819067400);expect(env.plugin.FS_ACCURACY).toBe(1000);",
+    "conflict": "expect(env.plugin.FS_ACCURENCY).toBe(1000);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171086,
+    "v1": "expect(plugin.outPath).toBe(\"invest_in_doge_coin\");",
+    "v2": "plugin.outputPath.should.equal(\"invest_in_doge_coin\");",
+    "resolution": "expect(plugin.outputPath).toBe(\"invest_in_doge_coin\");",
+    "conflict": "expect(plugin.outPath).toBe(\"invest_in_doge_coin\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171087,
+    "v1": "expect(plugin.outPath).toBe(\"events.json\");",
+    "v2": "plugin.outputPath.should.equal(\"events.json\");",
+    "resolution": "expect(plugin.outputPath).toBe(\"events.json\");",
+    "conflict": "expect(plugin.outPath).toBe(\"events.json\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171090,
+    "v1": "outPath: path.join(testPath, \"events.json\")",
+    "v2": "outputPath: path.join(os.tmpdir(), \"events.json\")",
+    "resolution": "outputPath: path.join(testPath, \"events.json\")",
+    "conflict": "outPath: path.join(testPath, \"events.json\")"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171428,
+    "v1": "parser.apply(...args);",
+    "v2": "parser.apply.apply(parser, args);",
+    "resolution": "parser.apply(...args);",
+    "conflict": "parser.apply(...args);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171516,
+    "v1": "const affectedChunks = this.getAffectedChunks(compilation, chunks, targetChunk, targetChunks, idx, this.selectedChunks, this.async, this.deepChildren, this.children);",
+    "v2": "const affectedChunks = this.getAffectedChunks(compilation, chunks, targetChunk, targetChunks, idx, this.selectedChunks, this.async, this.children, this.deepChildren);",
+    "resolution": "const affectedChunks = this.getAffectedChunks(compilation, chunks, targetChunk, targetChunks, idx, this.selectedChunks, this.async, this.children, this.deepChildren);",
+    "conflict": "const affectedChunks = this.getAffectedChunks(compilation, chunks, targetChunk, targetChunks, idx, this.selectedChunks, this.async, this.deepChildren, this.children);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171518,
+    "v1": "if(asyncOption || chunk.getParents().every((parentChunk) => parentChunk === targetChunk || affectedChunks.has(parentChunk))) {",
+    "v2": "if(asyncOption || chunk.parents.every((parentChunk) => parentChunk === rootChunk || affectedChunks.has(parentChunk))) {",
+    "resolution": "if(asyncOption || chunk.getParents().every((parentChunk) => parentChunk === rootChunk || affectedChunks.has(parentChunk))) {",
+    "conflict": "if(asyncOption || chunk.getParents().every((parentChunk) => parentChunk === targetChunk || affectedChunks.has(parentChunk))) {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171519,
+    "v1": "this.getAffectedUnnamedChunks(affectedChunks, chunk, asyncOption, deepChildrenOption);",
+    "v2": "this.getAffectedUnnamedChunks(affectedChunks, chunk, rootChunk, asyncOption, deepChildrenOption);",
+    "resolution": "this.getAffectedUnnamedChunks(affectedChunks, chunk, rootChunk, asyncOption, deepChildrenOption);",
+    "conflict": "this.getAffectedUnnamedChunks(affectedChunks, chunk, asyncOption, deepChildrenOption);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171521,
+    "v1": "this.getAffectedUnnamedChunks(affectedChunks, targetChunk, asyncOption, deepChildrenOption);",
+    "v2": "this.getAffectedUnnamedChunks(affectedChunks, targetChunk, targetChunk, asyncOption, deepChildrenOption);",
+    "resolution": "this.getAffectedUnnamedChunks(affectedChunks, targetChunk, targetChunk, asyncOption, deepChildrenOption);",
+    "conflict": "this.getAffectedUnnamedChunks(affectedChunks, targetChunk, asyncOption, deepChildrenOption);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171546,
+    "v1": "if(chunk.getChunks().size > 0) {",
+    "v2": "if(needChunkLoadingCode(chunk)) {",
+    "resolution": "if(needChunkLoadingCode(chunk)) {",
+    "conflict": "if(chunk.getChunks().size > 0) {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171571,
+    "v1": "return fn.toString().replace(/^function\\s?\\(\\)\\s?\\{\\r?\\n?|\\r?\\n?\\}$/g, \"\").replace(/^\/mg, \"\").replace(/\\r?\\n/g, \"\\n\");",
+    "v2": "return fn.toString().replace(FUNCTION_CONTENT_REGEX, \"\").replace(INDENT_MULTILINE_REGEX, \"\");",
+    "resolution": "return fn.toString().replace(FUNCTION_CONTENT_REGEX, \"\").replace(INDENT_MULTILINE_REGEX, \"\").replace(LINE_SEPARATOR_REGEX, \"\\n\");",
+    "conflict": "return fn.toString().replace(/^function\\s?\\(\\)\\s?\\{\\r?\\n?|\\r?\\n?\\}$/g, \"\").replace(/^\/mg, \"\").replace(/\\r?\\n/g, \"\\n\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171573,
+    "v1": "template.toIdentifier(\"0abc-def9\").should.equal(\"_0abc_def9\"));",
+    "v2": "Template.toIdentifier(\"0abc-def9\").should.equal(\"_abc_def9\"));",
+    "resolution": "Template.toIdentifier(\"0abc-def9\").should.equal(\"_0abc_def9\"));",
+    "conflict": "template.toIdentifier(\"0abc-def9\").should.equal(\"_0abc_def9\"));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171583,
+    "v1": "source.add(\"/*! unknown exports provided */\");",
+    "v2": "source.add(\"/* no static exports found */\");",
+    "resolution": "source.add(\"/*! no static exports found */\");",
+    "conflict": "source.add(\"/*! unknown exports provided */\");"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171586,
+    "v1": "if(module.isInChunk(chunk)) return [chunk];",
+    "v2": "if(chunk.containsModule(module)) return [chunk];",
+    "resolution": "if(chunk.containsModule(module)) return [chunk];",
+    "conflict": "if(module.isInChunk(chunk)) return [chunk];"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 171588,
+    "v1": "this.callbacks = [];",
+    "v2": "this.closed = false;",
+    "resolution": "this.closed = false; this.callbacks = [];",
+    "conflict": "this.callbacks = [];"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171600,
+    "v1": "const arg = this.evaluateExpression(expr.argument);",
+    "v2": "var arg = this.evaluateExpression(expr.argument);",
+    "resolution": "const arg = this.evaluateExpression(expr.argument);",
+    "conflict": "const arg = this.evaluateExpression(expr.argument);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171601,
+    "v1": "const argument = this.evaluateExpression(expr.argument);",
+    "v2": "var argument = this.evaluateExpression(expr.argument);",
+    "resolution": "const argument = this.evaluateExpression(expr.argument);",
+    "conflict": "const argument = this.evaluateExpression(expr.argument);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171604,
+    "v1": "const name = this.scope.renames[\"$\" + expr.name] || expr.name;",
+    "v2": "var name = this.scope.renames[\"$\" + expr.name] || expr.name;",
+    "resolution": "const name = this.scope.renames[\"$\" + expr.name] || expr.name;",
+    "conflict": "const name = this.scope.renames[\"$\" + expr.name] || expr.name;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171605,
+    "v1": "const result = this.applyPluginsBailResult1(\"evaluate Identifier \" + exprName, expression);",
+    "v2": "var result = this.applyPluginsBailResult1(\"evaluate Identifier \" + exprName, expression);",
+    "resolution": "const result = this.applyPluginsBailResult1(\"evaluate Identifier \" + exprName, expression);",
+    "conflict": "const result = this.applyPluginsBailResult1(\"evaluate Identifier \" + exprName, expression);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171611,
+    "v1": "const parts = getSimplifiedTemplateResult.call(this, \"cooked\", node.quasis, node.expressions);",
+    "v2": "var parts = getSimplifiedTemplateResult.call(this, \"cooked\", node.quasis, node.expressions);",
+    "resolution": "const parts = getSimplifiedTemplateResult.call(this, \"cooked\", node.quasis, node.expressions);",
+    "conflict": "const parts = getSimplifiedTemplateResult.call(this, \"cooked\", node.quasis, node.expressions);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171614,
+    "v1": "const items = expr.elements.map(function(element) {",
+    "v2": "var items = expr.elements.map(function(element) {",
+    "resolution": "const items = expr.elements.map(function(element) {",
+    "conflict": "const items = expr.elements.map(function(element) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171615,
+    "v1": "const result = this.evaluateExpression(expr);",
+    "v2": "var result = this.evaluateExpression(expr);",
+    "resolution": "const result = this.evaluateExpression(expr);",
+    "conflict": "const result = this.evaluateExpression(expr);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171618,
+    "v1": "const result = this.applyPluginsBailResult1(\"statement if\", statement);",
+    "v2": "var result = this.applyPluginsBailResult1(\"statement if\", statement);",
+    "resolution": "const result = this.applyPluginsBailResult1(\"statement if\", statement);",
+    "conflict": "const result = this.applyPluginsBailResult1(\"statement if\", statement);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171627,
+    "v1": "const source = statement.source.value;",
+    "v2": "var source = statement.source.value;",
+    "resolution": "const source = statement.source.value;",
+    "conflict": "const source = statement.source.value;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171633,
+    "v1": "const argument = expression.argument;",
+    "v2": "var argument = expression.argument;",
+    "resolution": "const argument = expression.argument;",
+    "conflict": "const argument = expression.argument;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171640,
+    "v1": "let result = this.applyPluginsBailResult1(\"expression \" + exprName.join(\".\"), expression);",
+    "v2": "var result = this.applyPluginsBailResult1(\"expression \" + exprName.join(\".\"), expression);",
+    "resolution": "let result = this.applyPluginsBailResult1(\"expression \" + exprName.join(\".\"), expression);",
+    "conflict": "let result = this.applyPluginsBailResult1(\"expression \" + exprName.join(\".\"), expression);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171644,
+    "v1": "const state = this.state = initialState || {};",
+    "v2": "var state = this.state = initialState || {};",
+    "resolution": "const state = this.state = initialState || {};",
+    "conflict": "const state = this.state = initialState || {};"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171645,
+    "v1": "const ast = acorn.parse(\"(\" + source + \")\", {",
+    "v2": "var ast = acorn.parse(\"(\" + source + \")\", {",
+    "resolution": "const ast = acorn.parse(\"(\" + source + \")\", {",
+    "conflict": "const ast = acorn.parse(\"(\" + source + \")\", {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171652,
+    "v1": "const d = (v, def) => v === undefined ? def : v;",
+    "v2": "const optionOrFallback = (optionValue, fallbackValue) => optionValue !== undefined ? optionValue : fallbackValue;",
+    "resolution": "const optionOrFallback = (optionValue, fallbackValue) => optionValue !== undefined ? optionValue : fallbackValue;",
+    "conflict": "const d = (v, def) => v === undefined ? def : v;"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171656,
+    "v1": "const useColors = d(options.colors, false);",
+    "v2": "const useColors = optionOrFallback(options.colors, false);",
+    "resolution": "const useColors = optionOrFallback(options.colors, false);",
+    "conflict": "const useColors = d(options.colors, false);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171669,
+    "v1": "const createStat = overides => {",
+    "v2": "const createStat = function(overides) {",
+    "resolution": "const createStat = overides => {",
+    "conflict": "const createStat = overides => {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171691,
+    "v1": "require('ajv-keywords')(ajv); var validate = ajv.compile(webpackOptionsSchema);",
+    "v2": "",
+    "resolution": "require('ajv-keywords')(ajv);",
+    "conflict": "require('ajv-keywords')(ajv); var validate = ajv.compile(webpackOptionsSchema);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171705,
+    "v1": "this.async = false; this.Class = ContextDependency;",
+    "v2": "",
+    "resolution": "this.async = false;",
+    "conflict": "this.async = false; this.Class = ContextDependency;"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171729,
+    "v1": "return (module.entry);",
+    "v2": "return module.id === 0;",
+    "resolution": "return module.entry;",
+    "conflict": "return (module.entry);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171746,
+    "v1": "console.log(\"Config did not export an object or a function returning an object.\");",
+    "v2": "console.log(\"Config did not export an object.\");",
+    "resolution": "console.log(\"Config did not export an object or a function returning an object.\");",
+    "conflict": "console.log(\"Config did not export an object or a function returning an object.\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171755,
+    "v1": "var dep = new ConstDependency(code, expr.range);",
+    "v2": "var dep = new ConstDependency(\"(\" + code + \")\", expr.range);",
+    "resolution": "var dep = new ConstDependency(code, expr.range);",
+    "conflict": "var dep = new ConstDependency(code, expr.range);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171756,
+    "v1": "var dep = new ConstDependency(code, expr.range);",
+    "v2": "var dep = new ConstDependency(\"(\" + code + \")\", expr.range);",
+    "resolution": "var dep = new ConstDependency(code, expr.range);",
+    "conflict": "var dep = new ConstDependency(code, expr.range);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171758,
+    "v1": "var ast = acorn.parse(\"(\"+source+\")\", {ranges: true, locations: true, ecmaVersion: 6, sourceType: \"module\"});",
+    "v2": "var ast = esprima.parse(\"(\" + source + \")\", {range: true, loc: true, raw: true});",
+    "resolution": "var ast = acorn.parse(\"(\"+source+\")\", {ranges: true, locations: true, ecmaVersion: 6, sourceType: \"module\"});",
+    "conflict": "var ast = acorn.parse(\"(\"+source+\")\", {ranges: true, locations: true, ecmaVersion: 6, sourceType: \"module\"});"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171775,
+    "v1": "var acorn = require(\"acorn\");",
+    "v2": "var esprima = require(\"esprima-fb\");",
+    "resolution": "var acorn = require(\"acorn\");",
+    "conflict": "var acorn = require(\"acorn\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171776,
+    "v1": "var ast = acorn.parse(source, {ranges: true, locations: true});",
+    "v2": "var ast = esprima.parse(source, {range: true, loc: true, raw: true, sourceType: \"module\"});",
+    "resolution": "var ast = acorn.parse(source, {ranges: true, locations: true});",
+    "conflict": "var ast = acorn.parse(source, {ranges: true, locations: true});"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171779,
+    "v1": "\"})(this, function(\" + externalsArguments() + \") {return \", \"webpack/universalModuleDefinition\"), source, \"})\");",
+    "v2": "\"})(this, function(\" + externalsArguments + \") {return \", \"webpack/universalModuleDefinition\"), source, \"});\");",
+    "resolution": "\"})(this, function(\" + externalsArguments() + \") {return \", \"webpack/universalModuleDefinition\"), source, \"});\");",
+    "conflict": "\"})(this, function(\" + externalsArguments() + \") {return \", \"webpack/universalModuleDefinition\"), source, \"})\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171782,
+    "v1": "callback(new Error(\"File \\\"\" + request + \"\\\" parsing failed: \" + e), extraResults);",
+    "v2": "callback(new Error(\"File \\\"\" + filenameWithLoaders + \"\\\" parsing failed: \" + e.stack), extraResults);",
+    "resolution": "callback(new Error(\"File \\\"\" + request + \"\\\" parsing failed: \" + e.stack), extraResults);",
+    "conflict": "callback(new Error(\"File \\\"\" + request + \"\\\" parsing failed: \" + e), extraResults);"
+  }
+]}

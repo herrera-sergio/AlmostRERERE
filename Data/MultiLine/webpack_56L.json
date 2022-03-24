@@ -1,0 +1,874 @@
+{"conflicts":[
+  {
+    "devdecision": "Version 2",
+    "id": 167924,
+    "v1": "hash.update(`${this.identifier}`); hash.update(`${this.range}`); hash.update(`${this.expression}`);",
+    "v2": "if (this._hashUpdate === undefined) this._hashUpdate = \"\" + this.identifier + this.range + this.expression; hash.update(this._hashUpdate);",
+    "resolution": "if (this._hashUpdate === undefined) this._hashUpdate = \"\" + this.identifier + this.range + this.expression; hash.update(this._hashUpdate);",
+    "conflict": "hash.update(`${this.identifier}`); hash.update(`${this.range}`); hash.update(`${this.expression}`);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 167959,
+    "v1": "const { it: _it, getNumberOfTests } = createLazyTestEnv(10000);",
+    "v2": "const { it: _it, getNumberOfTests } = createLazyTestEnv( jasmine.getEnv(), testConfig.timeout || 10000 );",
+    "resolution": "const { it: _it, getNumberOfTests } = createLazyTestEnv( testConfig.timeout || 10000",
+    "conflict": "const { it: _it, getNumberOfTests } = createLazyTestEnv(10000);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168271,
+    "v1": "const used = /** @type {string | false } */ (this.rootModule.getUsedName( moduleGraph, dep.name ));",
+    "v2": "const used = this.rootModule.isUsed(dep.name);",
+    "resolution": "const used = /** @type {string | false } */ (this.rootModule.getUsedName( moduleGraph, dep.name ));",
+    "conflict": "const used = /** @type {string | false } */ (this.rootModule.getUsedName( moduleGraph, dep.name ));"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168274,
+    "v1": "if ( moduleGraph.getExportsInfo(this).otherExportsInfo.used !== UsageState.Unused ) {",
+    "v2": "const usedExports = this.rootModule.usedExports; if (usedExports === true || usedExports === null) {",
+    "resolution": "if ( moduleGraph.getExportsInfo(this).otherExportsInfo.used !== UsageState.Unused ) {",
+    "conflict": "if ( moduleGraph.getExportsInfo(this).otherExportsInfo.used !== UsageState.Unused ) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168291,
+    "v1": "return toConstantDependency(parser, strCode)(expr);",
+    "v2": "return ParserHelpers.toConstantDependency( parser, strCode )(expr);",
+    "resolution": "return toConstantDependency(parser, strCode)(expr);",
+    "conflict": "return toConstantDependency(parser, strCode)(expr);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168292,
+    "v1": "return toConstantDependency(parser, strCode)(expr);",
+    "v2": "return ParserHelpers.toConstantDependency( parser, strCode )(expr);",
+    "resolution": "return toConstantDependency(parser, strCode)(expr);",
+    "conflict": "return toConstantDependency(parser, strCode)(expr);"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 168456,
+    "v1": "",
+    "v2": "// populate blocks for (const d of m.blocks) { this.blocks.push(d); }",
+    "resolution": "// populate blocks for (const d of m.blocks) { this.blocks.push(d); }",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168459,
+    "v1": "const WebAssemblyParser = getWebAssemblyParser();",
+    "v2": "if (WebAssemblyParser === undefined) { WebAssemblyParser = require(\"./WebAssemblyParser\"); }",
+    "resolution": "const WebAssemblyParser = getWebAssemblyParser();",
+    "conflict": "const WebAssemblyParser = getWebAssemblyParser();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168514,
+    "v1": "* @param {ChunkGroup} chunkGroup the chunkGroup the chunk is being removed from * @returns {boolean} returns true if chunk does exist in chunkGroup and is removed",
+    "v2": "* * @param {Chunk} otherChunk the chunk to integrate with * @param {string} reason reason why the module is being integrated * @returns {boolean} returns true or false if integration succeeds or fails",
+    "resolution": "* @param {ChunkGroup} chunkGroup the chunkGroup the chunk is being removed from * @returns {boolean} returns true if chunk does exist in chunkGroup and is removed",
+    "conflict": "* @param {ChunkGroup} chunkGroup the chunkGroup the chunk is being removed from * @returns {boolean} returns true if chunk does exist in chunkGroup and is removed"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168516,
+    "v1": "const { STAGE_ADVANCED } = require(\"../OptimizationStages\"); const { compareChunks } = require(\"../util/comparators\");  /** @typedef {import(\"../Chunk\")} Chunk */ /** @typedef {import(\"../Compiler\")} Compiler */",
+    "v2": "const LazyBucketSortedSet = require(\"../util/LazyBucketSortedSet\");",
+    "resolution": "const { STAGE_ADVANCED } = require(\"../OptimizationStages\"); const LazyBucketSortedSet = require(\"../util/LazyBucketSortedSet\"); const { compareChunks } = require(\"../util/comparators\");  /** @typedef {import(\"../Chunk\")} Chunk */ /** @typedef {import(\"../Compiler\")} Compiler */",
+    "conflict": "const { STAGE_ADVANCED } = require(\"../OptimizationStages\"); const { compareChunks } = require(\"../util/comparators\");  /** @typedef {import(\"../Chunk\")} Chunk */ /** @typedef {import(\"../Compiler\")} Compiler */"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168537,
+    "v1": "/** @private @type {Map<string, GenerateSourceResult & CachedSourceEntry>} */",
+    "v2": "this._sourceSize = null; this._buildHash = \"\"; this.buildTimestamp = undefined; /** @private @type {Map<string, CachedSourceEntry>} */",
+    "resolution": "/** @private @type {Map<string, number>} **/ this._sourceSizes = new Map(); /** @private @type {Map<string, GenerateSourceResult & CachedSourceEntry>} */",
+    "conflict": "/** @private @type {Map<string, GenerateSourceResult & CachedSourceEntry>} */"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168551,
+    "v1": "/** @type {Map<string, EntryDependency[]>} */ this.entryDependencies = new Map();",
+    "v2": "this.entries = []; /** @private @type {{name: string, request: string, module: Module}[]} */ this._preparedEntrypoints = [];",
+    "resolution": "/** @type {Map<string, EntryDependency[]>} */ this.entryDependencies = new Map();",
+    "conflict": "/** @type {Map<string, EntryDependency[]>} */ this.entryDependencies = new Map();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168552,
+    "v1": "this.moduleGraph.removeAllModuleAttributes();",
+    "v2": "this.assetsInfo.clear(); for (const module of this.modules) { module.unseal(); }",
+    "resolution": "this.assetsInfo.clear(); this.moduleGraph.removeAllModuleAttributes();",
+    "conflict": "this.moduleGraph.removeAllModuleAttributes();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168790,
+    "v1": "expect(logs).toContain(\"92% after chunk asset optimization\");",
+    "v2": "expect(logs).toContain( \"10% building ...dules 1 active\", \"omit arguments when no space\" ); expect(logs).toContain(\"93% ...hunk asset optimization\");",
+    "resolution": "expect(logs).toContain(\"92% after chunk asset optimization\");",
+    "conflict": "expect(logs).toContain(\"92% after chunk asset optimization\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 168812,
+    "v1": "const webpack = require(\"..\");",
+    "v2": "const Stats = require(\"../lib/Stats\"); const captureStdio = require(\"./helpers/captureStdio\");  let webpack;",
+    "resolution": "const captureStdio = require(\"./helpers/captureStdio\");  let webpack;",
+    "conflict": "const webpack = require(\"..\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168936,
+    "v1": ".replace(/[0-9]+(\\s?ms)/g, \"X$1\");",
+    "v2": ".replace(/[.0-9]+(\\s?ms)/g, \"X$1\") .replace( /^(\\s*Built at:) (.*)$/gm, \"$1 Thu Jan 01 1970 00:00:00 GMT\" );",
+    "resolution": ".replace(/\\u001b\\[[0-9;]*m/g, \"\") .replace(/[.0-9]+(\\s?ms)/g, \"X$1\");",
+    "conflict": ".replace(/[0-9]+(\\s?ms)/g, \"X$1\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 168937,
+    "v1": ".replace(/[0-9]+(<\\/CLR>)?(\\s?ms)/g, \"X$1$2\");",
+    "v2": ".replace(/[.0-9]+(<\\/CLR>)?(\\s?ms)/g, \"X$1$2\") .replace( /^(\\s*Built at:) (.*)$/gm, \"$1 Thu Jan 01 1970 <CLR=BOLD>00:00:00</CLR> GMT\" );",
+    "resolution": ".replace(/[.0-9]+(<\\/CLR>)?(\\s?ms)/g, \"X$1$2\");",
+    "conflict": ".replace(/[0-9]+(<\\/CLR>)?(\\s?ms)/g, \"X$1$2\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168968,
+    "v1": "expect(a).toBe(\"ok-normal-ok2\"); var b = require(\"./b\"); expect(b).toBe(\"ok-normal-ok2-yes\");",
+    "v2": "expect(a).toBe(\"ok-normal-wrong2\"); var b = require(\"./b\"); expect(b).toBe(\"ok-normal-wrong2-yes\");",
+    "resolution": "expect(a).toBe(\"ok-normal-ok2\"); var b = require(\"./b\"); expect(b).toBe(\"ok-normal-ok2-yes\");",
+    "conflict": "expect(a).toBe(\"ok-normal-ok2\"); var b = require(\"./b\"); expect(b).toBe(\"ok-normal-ok2-yes\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 168975,
+    "v1": "const { Parser } = require(\"acorn\"); const { SyncBailHook, HookMap } = require(\"tapable\");",
+    "v2": "const acorn = require(\"acorn\"); const { Tapable, SyncBailHook, HookMap } = require(\"tapable\"); const util = require(\"util\");",
+    "resolution": "const { Parser } = require(\"acorn\"); const { SyncBailHook, HookMap } = require(\"tapable\");",
+    "conflict": "const { Parser } = require(\"acorn\"); const { SyncBailHook, HookMap } = require(\"tapable\");"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169014,
+    "v1": "`Compilation error while processing magic comment(-s): /*${ comment.value }*/: ${e.message}`,",
+    "v2": "`Compilation error while processing magic comment(-s): /*${comment.value}*/: ${e.message}`, parser.state.module,",
+    "resolution": "`Compilation error while processing magic comment(-s): /*${ comment.value }*/: ${e.message}`,",
+    "conflict": "`Compilation error while processing magic comment(-s): /*${ comment.value }*/: ${e.message}`,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169015,
+    "v1": "`\\`webpackIgnore\\` expected a boolean, but received: ${ importOptions.webpackIgnore }.`,",
+    "v2": "parser.state.module, `\\`webpackIgnore\\` expected a boolean, but received: ${importOptions.webpackIgnore}.`,",
+    "resolution": "`\\`webpackIgnore\\` expected a boolean, but received: ${ importOptions.webpackIgnore }.`,",
+    "conflict": "`\\`webpackIgnore\\` expected a boolean, but received: ${ importOptions.webpackIgnore }.`,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169016,
+    "v1": "`\\`webpackChunkName\\` expected a string, but received: ${ importOptions.webpackChunkName }.`,",
+    "v2": "parser.state.module, `\\`webpackChunkName\\` expected a string, but received: ${importOptions.webpackChunkName}.`,",
+    "resolution": "`\\`webpackChunkName\\` expected a string, but received: ${ importOptions.webpackChunkName }.`,",
+    "conflict": "`\\`webpackChunkName\\` expected a string, but received: ${ importOptions.webpackChunkName }.`,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169017,
+    "v1": "`\\`webpackMode\\` expected a string, but received: ${ importOptions.webpackMode }.`,",
+    "v2": "parser.state.module, `\\`webpackMode\\` expected a string, but received: ${importOptions.webpackMode}.`,",
+    "resolution": "`\\`webpackMode\\` expected a string, but received: ${ importOptions.webpackMode }.`,",
+    "conflict": "`\\`webpackMode\\` expected a string, but received: ${ importOptions.webpackMode }.`,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169018,
+    "v1": "`\\`webpackPrefetch\\` expected true or a number, but received: ${ importOptions.webpackPrefetch }.`,",
+    "v2": "parser.state.module, `\\`webpackPrefetch\\` expected true or a number, but received: ${importOptions.webpackPrefetch}.`,",
+    "resolution": "`\\`webpackPrefetch\\` expected true or a number, but received: ${ importOptions.webpackPrefetch }.`,",
+    "conflict": "`\\`webpackPrefetch\\` expected true or a number, but received: ${ importOptions.webpackPrefetch }.`,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169019,
+    "v1": "`\\`webpackPreload\\` expected true or a number, but received: ${ importOptions.webpackPreload }.`,",
+    "v2": "parser.state.module, `\\`webpackPreload\\` expected true or a number, but received: ${importOptions.webpackPreload}.`,",
+    "resolution": "`\\`webpackPreload\\` expected true or a number, but received: ${ importOptions.webpackPreload }.`,",
+    "conflict": "`\\`webpackPreload\\` expected true or a number, but received: ${ importOptions.webpackPreload }.`,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169020,
+    "v1": "`\\`webpackInclude\\` expected a regular expression, but received: ${ importOptions.webpackInclude }.`,",
+    "v2": "parser.state.module, `\\`webpackInclude\\` expected a regular expression, but received: ${importOptions.webpackInclude}.`,",
+    "resolution": "`\\`webpackInclude\\` expected a regular expression, but received: ${ importOptions.webpackInclude }.`,",
+    "conflict": "`\\`webpackInclude\\` expected a regular expression, but received: ${ importOptions.webpackInclude }.`,"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169021,
+    "v1": "`\\`webpackExclude\\` expected a regular expression, but received: ${ importOptions.webpackExclude }.`,",
+    "v2": "parser.state.module, `\\`webpackExclude\\` expected a regular expression, but received: ${importOptions.webpackExclude}.`,",
+    "resolution": "`\\`webpackExclude\\` expected a regular expression, but received: ${ importOptions.webpackExclude }.`,",
+    "conflict": "`\\`webpackExclude\\` expected a regular expression, but received: ${ importOptions.webpackExclude }.`,"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 169062,
+    "v1": "/Can't import the namespace object \\(reexported as 'ns'\\) from non EcmaScript module \\(only default export is available\\)/ ], [ /Can't import the named export 'data' \\(reexported as 'data'\\) from non EcmaScript module \\(only default export is available\\)/",
+    "v2": "/Can't reexport the named export 'data' from non EcmaScript module \\(only default export is available\\)/",
+    "resolution": "/Can't import the named export 'data' \\(reexported as 'data'\\) from non EcmaScript module \\(only default export is available\\)/",
+    "conflict": "/Can't import the namespace object \\(reexported as 'ns'\\) from non EcmaScript module \\(only default export is available\\)/ ], [ /Can't import the named export 'data' \\(reexported as 'data'\\) from non EcmaScript module \\(only default export is available\\)/"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169420,
+    "v1": "disconnectFromGroups() { for (const chunkGroup of this._groups) { chunkGroup.removeChunk(this); }",
+    "v2": "size(options = {}) { return this.addMultiplierAndOverhead(this.modulesSize(), options);",
+    "resolution": "disconnectFromGroups() { for (const chunkGroup of this._groups) { chunkGroup.removeChunk(this); }",
+    "conflict": "disconnectFromGroups() { for (const chunkGroup of this._groups) { chunkGroup.removeChunk(this); }"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 169539,
+    "v1": "const makeSerializable = require(\"./util/makeSerializable\");  /** @typedef {import(\"./Chunk\")} Chunk */ /** @typedef {import(\"./Dependency\").DependencyLocation} DependencyLocation */",
+    "v2": "const inspect = require(\"util\").inspect.custom;",
+    "resolution": "const makeSerializable = require(\"./util/makeSerializable\");  /** @typedef {import(\"./Chunk\")} Chunk */ /** @typedef {import(\"./Dependency\").DependencyLocation} DependencyLocation */ const inspect = require(\"util\").inspect.custom;",
+    "conflict": "const makeSerializable = require(\"./util/makeSerializable\");  /** @typedef {import(\"./Chunk\")} Chunk */ /** @typedef {import(\"./Dependency\").DependencyLocation} DependencyLocation */"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169548,
+    "v1": "\"(skipped side-effect-free modules)\"",
+    "v2": "reason.explanation ? reason.explanation + \" (skipped side-effect-free modules)\" : \"(skipped side-effect-free modules)\"",
+    "resolution": "\"(skipped side-effect-free modules)\"",
+    "conflict": "\"(skipped side-effect-free modules)\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169550,
+    "v1": "return Array.from(this.map.entries(), extractPair);",
+    "v2": "return Array.from(this.map.entries(), pair => /** @type {[TODO, TODO]} */ (pair[1] === UNDEFINED_MARKER ? [pair[0], undefined] : pair) );",
+    "resolution": "return Array.from(this.map.entries(), extractPair);",
+    "conflict": "return Array.from(this.map.entries(), extractPair);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169798,
+    "v1": "/** @type {Set<string>} */ this.fileDependencies = new Set(); /** @type {Set<string>} */ this.contextDependencies = new Set(); /** @type {Set<string>} */ this.missingDependencies = new Set();",
+    "v2": "",
+    "resolution": "/** @type {Set<string>} */ this.fileDependencies = new Set(); /** @type {Set<string>} */ this.contextDependencies = new Set(); /** @type {Set<string>} */ this.missingDependencies = new Set();",
+    "conflict": "/** @type {Set<string>} */ this.fileDependencies = new Set(); /** @type {Set<string>} */ this.contextDependencies = new Set(); /** @type {Set<string>} */ this.missingDependencies = new Set();"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 169801,
+    "v1": "const { Parser } = require(\"acorn\"); const { SyncBailHook, HookMap } = require(\"tapable\");",
+    "v2": "const acorn = require(\"acorn\"); const acornDynamicImport = require(\"acorn-dynamic-import\").default; const { Tapable, SyncBailHook, HookMap } = require(\"tapable\"); const util = require(\"util\");",
+    "resolution": "const { Parser } = require(\"acorn\"); const { SyncBailHook, HookMap } = require(\"tapable\");",
+    "conflict": "const { Parser } = require(\"acorn\"); const { SyncBailHook, HookMap } = require(\"tapable\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170004,
+    "v1": "const currentChunk = find( compilation.chunks, chunk => chunk.id === chunkId",
+    "v2": "const currentChunk = compilation.chunks.find( chunk => `${chunk.id}` === key",
+    "resolution": "const currentChunk = find( compilation.chunks, chunk => `${chunk.id}` === key",
+    "conflict": "const currentChunk = find( compilation.chunks, chunk => chunk.id === chunkId"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170019,
+    "v1": "let lastModulesCount = 0; let lastEntriesCount = 0; let moduleCount = modulesCount; let entriesCount = 0;",
+    "v2": "let lastCount = 0; let count = mode === \"modules\" ? modulesCount : 0;",
+    "resolution": "let lastModulesCount = 0; let lastEntriesCount = 0; let moduleCount = modulesCount; let entriesCount = 0;",
+    "conflict": "let lastModulesCount = 0; let lastEntriesCount = 0; let moduleCount = modulesCount; let entriesCount = 0;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170064,
+    "v1": "const diff3 = compareChunksWithGraph(a[2], b[2]); if (diff3 !== 0) return diff3; return compareChunksWithGraph(a[3], b[3]);",
+    "v2": "const diff3 = a[2].compareTo(b[2]); if (diff3 !== 0) return diff3; return a[3].compareTo(b[3]);",
+    "resolution": "const diff3 = compareChunksWithGraph(a[2], b[2]); if (diff3 !== 0) return diff3; return compareChunksWithGraph(a[3], b[3]);",
+    "conflict": "const diff3 = compareChunksWithGraph(a[2], b[2]); if (diff3 !== 0) return diff3; return compareChunksWithGraph(a[3], b[3]);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170138,
+    "v1": "const moduleGraph = this.moduleGraph;  /** @typedef {{block: AsyncDependenciesBlock, chunkGroup: ChunkGroup}} ChunkGroupDep */  /** @type {Map<ChunkGroup, ChunkGroupDep[]>} */",
+    "v2": "/** @type {Map<ChunkGroup, {block: AsyncDependenciesBlock, chunkGroup: ChunkGroup, couldBeFiltered: boolean}[]>} */",
+    "resolution": "const moduleGraph = this.moduleGraph; /** @typedef {{block: AsyncDependenciesBlock, chunkGroup: ChunkGroup, couldBeFiltered: boolean}} ChunkGroupDep */ /** @type {Map<ChunkGroup, ChunkGroupDep[]>} */",
+    "conflict": "const moduleGraph = this.moduleGraph;  /** @typedef {{block: AsyncDependenciesBlock, chunkGroup: ChunkGroup}} ChunkGroupDep */  /** @type {Map<ChunkGroup, ChunkGroupDep[]>} */"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170140,
+    "v1": "return getSourceForGlobalVariableExternal( runtimeTemplate.outputOptions.globalObject, this.externalType",
+    "v2": "return this.getSourceForGlobalVariableExternal( request, runtime.outputOptions.globalObject",
+    "resolution": "return getSourceForGlobalVariableExternal( request, runtimeTemplate.outputOptions.globalObject",
+    "conflict": "return getSourceForGlobalVariableExternal( runtimeTemplate.outputOptions.globalObject, this.externalType"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170359,
+    "v1": "if ( typeof parserOptions.requireJs === \"undefined\" || !parserOptions.requireJs ) {",
+    "v2": "if (parserOptions.requireJs !== undefined && !parserOptions.requireJs)",
+    "resolution": "if ( parserOptions.requireJs === undefined || !parserOptions.requireJs",
+    "conflict": "if ( typeof parserOptions.requireJs === \"undefined\" || !parserOptions.requireJs ) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170414,
+    "v1": "return a.group.compareTo(b.group);",
+    "v2": "// TODO webpack 5 remove this check of compareTo if (a.group.compareTo) { return a.group.compareTo(b.group); } return 0;",
+    "resolution": "return a.group.compareTo(b.group);",
+    "conflict": "return a.group.compareTo(b.group);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170415,
+    "v1": "return a.group.compareTo(b.group);",
+    "v2": "// TODO webpack 5 remove this check of compareTo if (a.group.compareTo) { return a.group.compareTo(b.group); } return 0;",
+    "resolution": "return a.group.compareTo(b.group);",
+    "conflict": "return a.group.compareTo(b.group);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170442,
+    "v1": "class Compilation {",
+    "v2": "class Compilation extends Tapable { /** * Creates an instance of Compilation. * @param {Compiler} compiler the compiler which created the compilation */",
+    "resolution": "class Compilation { /** * Creates an instance of Compilation. * @param {Compiler} compiler the compiler which created the compilation */",
+    "conflict": "class Compilation {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170447,
+    "v1": "",
+    "v2": "getName: SplitChunksPlugin.normalizeName({ name: options.name, automaticNameDelimiter: options.automaticNameDelimiter }) || (() => {}), hidePathInfo: options.hidePathInfo || false,",
+    "resolution": "hidePathInfo: options.hidePathInfo || false,",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170450,
+    "v1": "const code = stringifyObj(obj); parser.hooks.canRename.for(key).tap(\"DefinePlugin\", approve);",
+    "v2": "parser.hooks.canRename .for(key) .tap(\"DefinePlugin\", ParserHelpers.approve);",
+    "resolution": "parser.hooks.canRename.for(key).tap(\"DefinePlugin\", approve);",
+    "conflict": "const code = stringifyObj(obj); parser.hooks.canRename.for(key).tap(\"DefinePlugin\", approve);"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170496,
+    "v1": "/** @type {number=} */ this.nextFreeModuleIndex = undefined; /** @type {number=} */ this.nextFreeModuleIndex2 = undefined; /** @type {string[]} */",
+    "v2": "",
+    "resolution": "/** @type {string[]} */",
+    "conflict": "/** @type {number=} */ this.nextFreeModuleIndex = undefined; /** @type {number=} */ this.nextFreeModuleIndex2 = undefined; /** @type {string[]} */"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170513,
+    "v1": "/** @private */ this._groups = new SortableSet(undefined, sortById); /** @type {string[]} */",
+    "v2": "/** @private @type {SortableSet<ChunkGroup>} */ this._groups = new SortableSet(undefined, sortChunkGroupById); /** @type {Source[]} */",
+    "resolution": "/** @private */ this._groups = new SortableSet(undefined, sortById); /** @private @type {SortableSet<ChunkGroup>} */ this._groups = new SortableSet(undefined, sortChunkGroupById); /** @type {Source[]} */",
+    "conflict": "/** @private */ this._groups = new SortableSet(undefined, sortById); /** @type {string[]} */"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170535,
+    "v1": "if (options.optimization.hashedModuleIds) new HashedModuleIdsPlugin().apply(compiler); if (options.optimization.namedChunks)",
+    "v2": "} if (options.optimization.namedChunks) {",
+    "resolution": "if (options.optimization.hashedModuleIds) { new HashedModuleIdsPlugin().apply(compiler); } if (options.optimization.namedChunks) {",
+    "conflict": "if (options.optimization.hashedModuleIds) new HashedModuleIdsPlugin().apply(compiler); if (options.optimization.namedChunks)"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170543,
+    "v1": "const jsIncompatibleExports = (state.module.buildMeta.jsIncompatibleExports = []);  t.traverse(module, {",
+    "v2": "const importedGlobals = []; t.traverse(ast, {",
+    "resolution": "const jsIncompatibleExports = (state.module.buildMeta.jsIncompatibleExports = []);  const importedGlobals = []; t.traverse(module, {",
+    "conflict": "const jsIncompatibleExports = (state.module.buildMeta.jsIncompatibleExports = []);  t.traverse(module, {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 170553,
+    "v1": "* @param {t.Index} state.nextFuncIndex index of the next function * @param {t.Index} state.nextTypeIndex index of the next type",
+    "v2": "* @param {t.Instruction[]} state.additionalInitCode list of addition instructions for the init function * @param {t.IndexLiteral} state.nextFuncIndex index of the next function * @param {t.IndexLiteral} state.nextTypeIndex index of the next type",
+    "resolution": "* @param {t.Instruction[]} state.additionalInitCode list of addition instructions for the init function * @param {t.Index} state.nextFuncIndex index of the next function * @param {t.Index} state.nextTypeIndex index of the next type",
+    "conflict": "* @param {t.Index} state.nextFuncIndex index of the next function * @param {t.Index} state.nextTypeIndex index of the next type"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170771,
+    "v1": "beforeEach(() => { ChunkInstance = new Chunk(\"chunk-test\", \"module-test\", \"loc-test\"); });",
+    "v2": "beforeEach(() => (ChunkInstance = new Chunk(\"chunk-test\", \"module-test\", \"loc-test\")));",
+    "resolution": "beforeEach(() => { ChunkInstance = new Chunk(\"chunk-test\", \"module-test\", \"loc-test\"); });",
+    "conflict": "beforeEach(() => { ChunkInstance = new Chunk(\"chunk-test\", \"module-test\", \"loc-test\"); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170831,
+    "v1": "// \"Parse require in new(...) should work\" expect(new(require(\"./constructor\"))(1234).value).toBe(1234); // \"Parse require in new(...) should work, with spaces\" expect(new ( require ( \"./constructor\" ) ) ( 1234 ) .value).toBe(1234);",
+    "v2": "should.strictEqual(new(require(\"./constructor\"))(1234).value, 1234, \"Parse require in new(…) should work\"); should.strictEqual(new ( require ( \"./constructor\" ) ) ( 1234 ) .value, 1234, \"Parse require in new(…) should work, with spaces\");",
+    "resolution": "// \"Parse require in new(...) should work\" expect(new(require(\"./constructor\"))(1234).value).toBe(1234); // \"Parse require in new(...) should work, with spaces\" expect(new ( require ( \"./constructor\" ) ) ( 1234 ) .value).toBe(1234);",
+    "conflict": "// \"Parse require in new(...) should work\" expect(new(require(\"./constructor\"))(1234).value).toBe(1234); // \"Parse require in new(...) should work, with spaces\" expect(new ( require ( \"./constructor\" ) ) ( 1234 ) .value).toBe(1234);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170846,
+    "v1": "if(filter) { return this.dependencies.some(filter);",
+    "v2": "if (filter) { if (this.dependencies.some(filter)) return true; } else { if (this.dependencies.length > 0) return true;",
+    "resolution": "if(filter) { return this.dependencies.some(filter);",
+    "conflict": "if(filter) { return this.dependencies.some(filter);"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170856,
+    "v1": "it(\"aplies information inside dependency templates\", () => { const dependencyTemplates = { get() {",
+    "v2": "it(\"applies information inside dependency templates\", () => { dependencyTemplates = { get: function() {",
+    "resolution": "it(\"applies information inside dependency templates\", () => { dependencyTemplates = { get: function() {",
+    "conflict": "it(\"aplies information inside dependency templates\", () => { const dependencyTemplates = { get() {"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 170857,
+    "v1": "it(\"aplies information inside dependency templates\", () => { const dependencyTemplates = { get() {",
+    "v2": "it(\"applies information inside dependency templates\", () => { dependencyTemplates = { get: function() {",
+    "resolution": "it(\"applies information inside dependency templates\", () => { dependencyTemplates = { get: function() {",
+    "conflict": "it(\"aplies information inside dependency templates\", () => { const dependencyTemplates = { get() {"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 170863,
+    "v1": "WebEnvironmentPluginInstance.apply(compileSpy);  it(\"should set compiler.outputFileSystem information with the same as setted in WebEnvironmentPlugin\", () => { expect(compileSpy.outputFileSystem).toBe(",
+    "v2": "it(\"should set compiler.outputFileSystem information with the same as set in WebEnvironmentPlugin\", () => should(compileSpy.outputFileSystem).be.eql(",
+    "resolution": "WebEnvironmentPluginInstance.apply(compileSpy);  it(\"should set compiler.outputFileSystem information with the same as set in WebEnvironmentPlugin\", () => { expect(compileSpy.outputFileSystem).toBe(",
+    "conflict": "WebEnvironmentPluginInstance.apply(compileSpy);  it(\"should set compiler.outputFileSystem information with the same as setted in WebEnvironmentPlugin\", () => { expect(compileSpy.outputFileSystem).toBe("
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170926,
+    "v1": "expect(err).toBeFalsy(); expect(Array.isArray(res)).toBe(true); expect(res.length).toBe(0);",
+    "v2": "(!!err).should.be.false(); res.should.be.an.Array(); res.length.should.be.exactly(0);",
+    "resolution": "expect(err).toBeFalsy(); expect(Array.isArray(res)).toBe(true); expect(res.length).toBe(0);",
+    "conflict": "expect(err).toBeFalsy(); expect(Array.isArray(res)).toBe(true); expect(res.length).toBe(0);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170941,
+    "v1": "expect(lastHash1).toBe(oldHash1); // hash shouldn't change when bundle stay equal",
+    "v2": "lastHash1.should.be.eql( oldHash1, \"hash shouldn't change when bundle stay equal\" );",
+    "resolution": "expect(lastHash1).toBe(oldHash1); // hash shouldn't change when bundle stay equal",
+    "conflict": "expect(lastHash1).toBe(oldHash1); // hash shouldn't change when bundle stay equal"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170942,
+    "v1": "expect(lastHash2).not.toBe(lastHash1); // hash should change when bundle changes",
+    "v2": "lastHash2.should.not.be.eql( lastHash1, \"hash should change when bundle changes\" );",
+    "resolution": "expect(lastHash2).not.toBe(lastHash1); // hash should change when bundle changes",
+    "conflict": "expect(lastHash2).not.toBe(lastHash1); // hash should change when bundle changes"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170943,
+    "v1": "expect(currentHash1).not.toBe(lastHash1); // hash shouldn't change to the first hash if bundle changed back to first bundle",
+    "v2": "currentHash1.should.not.be.eql( lastHash1, \"hash shouldn't change to the first hash if bundle changed back to first bundle\" );",
+    "resolution": "expect(currentHash1).not.toBe(lastHash1); // hash shouldn't change to the first hash if bundle changed back to first bundle",
+    "conflict": "expect(currentHash1).not.toBe(lastHash1); // hash shouldn't change to the first hash if bundle changed back to first bundle"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170952,
+    "v1": "expect( LocalModulesHelpers.getLocalModule(state, \"local_module_sample\") ).toBe(null);",
+    "v2": "should( LocalModulesHelpers.getLocalModule(state, \"local_module_sample\") ).be.eql(null);",
+    "resolution": "expect( LocalModulesHelpers.getLocalModule(state, \"local_module_sample\") ).toBe(null);",
+    "conflict": "expect( LocalModulesHelpers.getLocalModule(state, \"local_module_sample\") ).toBe(null);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170953,
+    "v1": "beforeEach(() => { env = {}; });",
+    "v2": "beforeEach(() => (env = {}));  it(\"is a function\", () => ModuleDependencyError.should.be.a.Function());",
+    "resolution": "beforeEach(() => { env = {}; });",
+    "conflict": "beforeEach(() => { env = {}; });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170955,
+    "v1": "it(\"returns false when chunk is not present\", () => { expect(myModuleReason.hasChunk(myChunk)).toBe(false); });",
+    "v2": "it(\"returns false when chunk is not present\", () => should(myModuleReason.hasChunk(myChunk)).be.false());",
+    "resolution": "it(\"returns false when chunk is not present\", () => { expect(myModuleReason.hasChunk(myChunk)).toBe(false); });",
+    "conflict": "it(\"returns false when chunk is not present\", () => { expect(myModuleReason.hasChunk(myChunk)).toBe(false); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170957,
+    "v1": "it(\"creates a hash string\", () => { expect(myMultiStats.hash).toBe(\"abc123xyz890\"); });",
+    "v2": "it(\"creates a hash string\", () => myMultiStats.hash.should.be.exactly(\"abc123xyz890\"));",
+    "resolution": "it(\"creates a hash string\", () => { expect(myMultiStats.hash).toBe(\"abc123xyz890\"); });",
+    "conflict": "it(\"creates a hash string\", () => { expect(myMultiStats.hash).toBe(\"abc123xyz890\"); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170958,
+    "v1": "it(\"returns true\", () => { expect(myMultiStats.hasErrors()).toBe(true); });",
+    "v2": "it(\"returns true\", () => myMultiStats.hasErrors().should.be.exactly(true));",
+    "resolution": "it(\"returns true\", () => { expect(myMultiStats.hasErrors()).toBe(true); });",
+    "conflict": "it(\"returns true\", () => { expect(myMultiStats.hasErrors()).toBe(true); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170959,
+    "v1": "it(\"returns true\", () => { expect(myMultiStats.hasErrors()).toBe(true); });",
+    "v2": "it(\"returns true\", () => myMultiStats.hasErrors().should.be.exactly(true));",
+    "resolution": "it(\"returns true\", () => { expect(myMultiStats.hasErrors()).toBe(true); });",
+    "conflict": "it(\"returns true\", () => { expect(myMultiStats.hasErrors()).toBe(true); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170960,
+    "v1": "it(\"returns false\", () => { expect(myMultiStats.hasErrors()).toBe(false); });",
+    "v2": "it(\"returns false\", () => myMultiStats.hasErrors().should.be.exactly(false));",
+    "resolution": "it(\"returns false\", () => { expect(myMultiStats.hasErrors()).toBe(false); });",
+    "conflict": "it(\"returns false\", () => { expect(myMultiStats.hasErrors()).toBe(false); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170961,
+    "v1": "it(\"returns true\", () => { expect(myMultiStats.hasWarnings()).toBe(true); });",
+    "v2": "it(\"returns true\", () => myMultiStats.hasWarnings().should.be.exactly(true));",
+    "resolution": "it(\"returns true\", () => { expect(myMultiStats.hasWarnings()).toBe(true); });",
+    "conflict": "it(\"returns true\", () => { expect(myMultiStats.hasWarnings()).toBe(true); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170962,
+    "v1": "it(\"returns true\", () => { expect(myMultiStats.hasWarnings()).toBe(true); });",
+    "v2": "it(\"returns true\", () => myMultiStats.hasWarnings().should.be.exactly(true));",
+    "resolution": "it(\"returns true\", () => { expect(myMultiStats.hasWarnings()).toBe(true); });",
+    "conflict": "it(\"returns true\", () => { expect(myMultiStats.hasWarnings()).toBe(true); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170963,
+    "v1": "it(\"returns false\", () => { expect(myMultiStats.hasWarnings()).toBe(false); });",
+    "v2": "it(\"returns false\", () => myMultiStats.hasWarnings().should.be.exactly(false));",
+    "resolution": "it(\"returns false\", () => { expect(myMultiStats.hasWarnings()).toBe(false); });",
+    "conflict": "it(\"returns false\", () => { expect(myMultiStats.hasWarnings()).toBe(false); });"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 170987,
+    "v1": "\"`start${obj}mid${obj2}end`\": \"template=[start string=start],[mid string=mid],[end string=end]\", // eslint-disable-line no-template-curly-in-string",
+    "v2": "// eslint-disable-next-line no-template-curly-in-string \"`start${obj}mid${obj2}end`\": \"template=[start string=start],[mid string=mid],[end string=end]\", // eslint-disable-next-line no-template-curly-in-string",
+    "resolution": "\"`start${obj}mid${obj2}end`\": \"template=[start string=start],[mid string=mid],[end string=end]\", // eslint-disable-line no-template-curly-in-string",
+    "conflict": "\"`start${obj}mid${obj2}end`\": \"template=[start string=start],[mid string=mid],[end string=end]\", // eslint-disable-line no-template-curly-in-string"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171030,
+    "v1": "expect(fileContent.replace(/\\r\\n?/g, \"\\n\")).toBe( JSON.stringify(content, 0, 2) + \"\\n\" );",
+    "v2": "fileContent .replace(/\\r\\n?/g, \"\\n\") .should.be.eql(JSON.stringify(content, 0, 2) + \"\\n\");",
+    "resolution": "expect(fileContent.replace(/\\r\\n?/g, \"\\n\")).toBe( JSON.stringify(content, 0, 2) + \"\\n\" );",
+    "conflict": "expect(fileContent.replace(/\\r\\n?/g, \"\\n\")).toBe( JSON.stringify(content, 0, 2) + \"\\n\" );"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171039,
+    "v1": ").toBe('Environment (--env): \"production\"'); expect( stats.toString({",
+    "v2": ".should.be.eql('Environment (--env): \"production\"'); stats .toString({",
+    "resolution": ").toBe('Environment (--env): \"production\"'); expect( stats.toString({",
+    "conflict": ").toBe('Environment (--env): \"production\"'); expect( stats.toString({"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171063,
+    "v1": "",
+    "v2": "it(\"should set compiler.outputFileSystem information with the same as setted in WebEnvironmentPlugin\", () => should(compileSpy.outputFileSystem).be.eql( WebEnvironmentPluginInstance.outputFileSystem ));",
+    "resolution": "",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171069,
+    "v1": "expect(identifierUtil.makePathsRelative(context, pathConstruct)).toBe( expected );",
+    "v2": "should( identifierUtil.makePathsRelative(context, pathConstruct) ).be.exactly(expected);",
+    "resolution": "expect(identifierUtil.makePathsRelative(context, pathConstruct)).toBe( expected );",
+    "conflict": "expect(identifierUtil.makePathsRelative(context, pathConstruct)).toBe( expected );"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171356,
+    "v1": "for(const chunk of compilation.chunks) { records.chunkModuleIds[chunk.id] = chunk.mapModules(m => m.id); }",
+    "v2": "compilation.chunks.forEach(chunk => { records.chunkModuleIds[chunk.id] = Array.from(chunk.modulesIterable, m => m.id); });",
+    "resolution": "for(const chunk of compilation.chunks) { records.chunkModuleIds[chunk.id] = Array.from(chunk.modulesIterable, m => m.id); }",
+    "conflict": "for(const chunk of compilation.chunks) { records.chunkModuleIds[chunk.id] = chunk.mapModules(m => m.id); }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171359,
+    "v1": "for(const path of ignoredDirs) { dirTimestamps[path] = 1; }",
+    "v2": "ignoredDirs.forEach(path => { dirTimestamps.set(path, 1); });",
+    "resolution": "for(const path of ignoredDirs) { dirTimestamps.set(path, 1); }",
+    "conflict": "for(const path of ignoredDirs) { dirTimestamps[path] = 1; }"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171360,
+    "v1": "for(const path of ignoredFiles) { fileTimestamps[path] = 1; }",
+    "v2": "ignoredFiles.forEach(path => { fileTimestamps.set(path, 1); });",
+    "resolution": "for(const path of ignoredFiles) { fileTimestamps.set(path, 1); }",
+    "conflict": "for(const path of ignoredFiles) { fileTimestamps[path] = 1; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171384,
+    "v1": "const chunks = this.chunks; for(let indexChunk = 0; indexChunk < chunks.length; indexChunk++) { chunks[indexChunk].sortItems(true);",
+    "v2": "for(let indexChunk = 0; indexChunk < this.chunks.length; indexChunk++) { this.chunks[indexChunk].sortItems();",
+    "resolution": "const chunks = this.chunks; for(let indexChunk = 0; indexChunk < chunks.length; indexChunk++) { chunks[indexChunk].sortItems(true);",
+    "conflict": "const chunks = this.chunks; for(let indexChunk = 0; indexChunk < chunks.length; indexChunk++) { chunks[indexChunk].sortItems(true);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171414,
+    "v1": "validateOptions(schema, options || {}, \"SourceMap DevTool Plugin\");",
+    "v2": "if(!options || typeof options !== \"object\") throw new Error(\"SourceMapDevToolPlugin takes an options argument\");",
+    "resolution": "validateOptions(schema, options || {}, \"SourceMap DevTool Plugin\");",
+    "conflict": "validateOptions(schema, options || {}, \"SourceMap DevTool Plugin\");"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171427,
+    "v1": "const eslintScope = require(\"eslint-scope\"); const ReplaceSource = require(\"webpack-sources/lib/ReplaceSource\"); const ConcatSource = require(\"webpack-sources/lib/ConcatSource\");",
+    "v2": "const escope = require(\"escope\"); const ReplaceSource = require(\"webpack-sources\").ReplaceSource; const ConcatSource = require(\"webpack-sources\").ConcatSource;",
+    "resolution": "const eslintScope = require(\"eslint-scope\"); const ReplaceSource = require(\"webpack-sources\").ReplaceSource; const ConcatSource = require(\"webpack-sources\").ConcatSource;",
+    "conflict": "const eslintScope = require(\"eslint-scope\"); const ReplaceSource = require(\"webpack-sources/lib/ReplaceSource\"); const ConcatSource = require(\"webpack-sources/lib/ConcatSource\");"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171493,
+    "v1": "sourceMap.sourcesContent = sourceMap.sourcesContent.map((content, i) => { return `${content} ${ModuleFilenameHelpers.createFooter(modules[i], moduleTemplate.requestShortener)}`; });",
+    "v2": "sourceMap.sourcesContent = sourceMap.sourcesContent.map(function(content, i) { return typeof content === \"string\" ? `${content} ${ModuleFilenameHelpers.createFooter(modules[i], this.requestShortener)}` : null; }, this);",
+    "resolution": "sourceMap.sourcesContent = sourceMap.sourcesContent.map((content, i) => { return typeof content === \"string\" ? `${content} ${ModuleFilenameHelpers.createFooter(modules[i], moduleTemplate.requestShortener)}` : null; });",
+    "conflict": "sourceMap.sourcesContent = sourceMap.sourcesContent.map((content, i) => { return `${content} ${ModuleFilenameHelpers.createFooter(modules[i], moduleTemplate.requestShortener)}`; });"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171500,
+    "v1": "compilation.moduleTemplate.apply(new EvalDevToolModuleTemplatePlugin({ sourceUrlComment: this.sourceUrlComment, moduleFilenameTemplate: this.moduleFilenameTemplate, namespace: this.namespace }));",
+    "v2": "compilation.moduleTemplates.javascript.apply(new EvalDevToolModuleTemplatePlugin(this.sourceUrlComment, this.moduleFilenameTemplate));",
+    "resolution": "compilation.moduleTemplates.javascript.apply(new EvalDevToolModuleTemplatePlugin({ sourceUrlComment: this.sourceUrlComment, moduleFilenameTemplate: this.moduleFilenameTemplate, namespace: this.namespace }));",
+    "conflict": "compilation.moduleTemplate.apply(new EvalDevToolModuleTemplatePlugin({ sourceUrlComment: this.sourceUrlComment, moduleFilenameTemplate: this.moduleFilenameTemplate, namespace: this.namespace }));"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171505,
+    "v1": "function needChunkLoadingCode(chunk) { var otherChunksInEntry = chunk.getEntrypoints().some(function(entrypoint) { return entrypoint.chunks.length > 1; });",
+    "v2": "const needChunkLoadingCode = chunk => { var otherChunksInEntry = chunk.entrypoints.some(entrypoint => entrypoint.chunks.length > 1);",
+    "resolution": "const needChunkLoadingCode = chunk => { var otherChunksInEntry = chunk.getEntrypoints().some(entrypoint => entrypoint.chunks.length > 1); var onDemandChunks = chunk.getNumberOfChunks() > 0;",
+    "conflict": "function needChunkLoadingCode(chunk) { var otherChunksInEntry = chunk.getEntrypoints().some(function(entrypoint) { return entrypoint.chunks.length > 1; });"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171509,
+    "v1": "this.dependenciesWarnings = []; this.dependenciesErrors = []; this.fileDependencies = new Set(); this.contextDependencies = new Set();",
+    "v2": "this.fileDependencies = []; this.contextDependencies = [];",
+    "resolution": "this.fileDependencies = new Set(); this.contextDependencies = new Set();",
+    "conflict": "this.dependenciesWarnings = []; this.dependenciesErrors = []; this.fileDependencies = new Set(); this.contextDependencies = new Set();"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171517,
+    "v1": "getAffectedUnnamedChunks(affectedChunks, targetChunk, asyncOption, deepChildrenOption) { for(const chunk of targetChunk.chunksIterable) {",
+    "v2": "getAffectedUnnamedChunks(affectedChunks, targetChunk, rootChunk, asyncOption, deepChildrenOption) { let chunks = targetChunk.chunks; chunks && chunks.forEach((chunk) => {",
+    "resolution": "getAffectedUnnamedChunks(affectedChunks, targetChunk, rootChunk, asyncOption, deepChildrenOption) { for(const chunk of targetChunk.chunksIterable) {",
+    "conflict": "getAffectedUnnamedChunks(affectedChunks, targetChunk, asyncOption, deepChildrenOption) { for(const chunk of targetChunk.chunksIterable) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171569,
+    "v1": "return Array.from(targetChunk.getChunks()).filter((chunk) => {",
+    "v2": "return targetChunk.chunks.filter((chunk) => { // we only are interested in on-demand chunks if(chunk.isInitial()) return false;",
+    "resolution": "return Array.from(targetChunk.getChunks()).filter((chunk) => { // we only are interested in on-demand chunks if(chunk.isInitial()) return false;",
+    "conflict": "return Array.from(targetChunk.getChunks()).filter((chunk) => {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171574,
+    "v1": "const comment = used !== exportName ? ` ${Template.toNormalComment(exportName)}` : \"\"; const reference = `${importedVar}[${JSON.stringify(used)}${comment}]`;",
+    "v2": "// TODO use Template.toNormalComment when merging with pure-module const comment = used !== exportName ? ` /* ${exportName} */` : \"\"; const reference = `${info.name}[${JSON.stringify(used)}${comment}]`;",
+    "resolution": "const comment = used !== exportName ? ` ${Template.toNormalComment(exportName)}` : \"\"; const reference = `${info.name}[${JSON.stringify(used)}${comment}]`;",
+    "conflict": "const comment = used !== exportName ? ` ${Template.toNormalComment(exportName)}` : \"\"; const reference = `${importedVar}[${JSON.stringify(used)}${comment}]`;"
+  },
+  {
+    "devdecision": "Concatenation",
+    "id": 171587,
+    "v1": "this.callbacks.forEach(function(cb) { cb(); }); this.callbacks.length = 0;",
+    "v2": "}",
+    "resolution": "this.callbacks.forEach(function(cb) { cb(); }); this.callbacks.length = 0; }",
+    "conflict": "this.callbacks.forEach(function(cb) { cb(); }); this.callbacks.length = 0;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171595,
+    "v1": "let left; let leftAsBool; let right;",
+    "v2": "var left; var leftAsBool; var right;",
+    "resolution": "let left; let leftAsBool; let right;",
+    "conflict": "let left; let leftAsBool; let right;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171596,
+    "v1": "let left; let right; let res;",
+    "v2": "var left; var right; var res;",
+    "resolution": "let left; let right; let res;",
+    "conflict": "let left; let right; let res;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171602,
+    "v1": "const name = this.scope.renames[\"$\" + expr.name] || expr.name; if(this.scope.definitions.indexOf(expr.name) === -1) { const result = this.applyPluginsBailResult1(\"evaluate Identifier \" + name, expr);",
+    "v2": "var name = this.scope.renames[\"$\" + expr.name] || expr.name; if(this.scope.definitions.indexOf(expr.name) === -1) { var result = this.applyPluginsBailResult1(\"evaluate Identifier \" + name, expr);",
+    "resolution": "const name = this.scope.renames[\"$\" + expr.name] || expr.name; if(this.scope.definitions.indexOf(expr.name) === -1) { const result = this.applyPluginsBailResult1(\"evaluate Identifier \" + name, expr);",
+    "conflict": "const name = this.scope.renames[\"$\" + expr.name] || expr.name; if(this.scope.definitions.indexOf(expr.name) === -1) { const result = this.applyPluginsBailResult1(\"evaluate Identifier \" + name, expr);"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171606,
+    "v1": "const param = this.evaluateExpression(expr.callee.object); if(!param) return; const property = expr.callee.property.name || expr.callee.property.value;",
+    "v2": "var param = this.evaluateExpression(expr.callee.object); if(!param) return; var property = expr.callee.property.name || expr.callee.property.value;",
+    "resolution": "const param = this.evaluateExpression(expr.callee.object); if(!param) return; const property = expr.callee.property.name || expr.callee.property.value;",
+    "conflict": "const param = this.evaluateExpression(expr.callee.object); if(!param) return; const property = expr.callee.property.name || expr.callee.property.value;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171623,
+    "v1": "let source; if(statement.source) { source = statement.source.value;",
+    "v2": "if(statement.source) { var source = statement.source.value;",
+    "resolution": "let source; if(statement.source) { source = statement.source.value;",
+    "conflict": "let source; if(statement.source) { source = statement.source.value;"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171626,
+    "v1": "const newDefs = this.scope.definitions.slice(pos); for(let index = 0, len = newDefs.length; index < len; index++) { const def = newDefs[index];",
+    "v2": "var newDefs = this.scope.definitions.slice(pos); for(var index = 0, len = newDefs.length; index < len; index++) { var def = newDefs[index];",
+    "resolution": "const newDefs = this.scope.definitions.slice(pos); for(let index = 0, len = newDefs.length; index < len; index++) { const def = newDefs[index];",
+    "conflict": "const newDefs = this.scope.definitions.slice(pos); for(let index = 0, len = newDefs.length; index < len; index++) { const def = newDefs[index];"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171698,
+    "v1": "if(typeof options !== \"object\" || options === null) { console.log(\"Config did not export an object or a function returning an object.\"); process.exit(-1); }",
+    "v2": "return processConfiguredOptions(options);",
+    "resolution": "return processConfiguredOptions(options);",
+    "conflict": "if(typeof options !== \"object\" || options === null) { console.log(\"Config did not export an object or a function returning an object.\"); process.exit(-1); }"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171703,
+    "v1": "this.resolveRequestArray.bind(this, context, noPostAutoLoaders ? [] : this.postLoaders.match(resourcePath), this.resolvers.loader), this.resolveRequestArray.bind(this, context, this.loaders.match(resourcePath), this.resolvers.loader), this.resolveRequestArray.bind(this, context, this.preLoaders.match(resourcePath), this.resolvers.loader)",
+    "v2": "_this.resolveRequestArray.bind(_this, context, noPostAutoLoaders ? [] : _this.postLoaders.match(resource), _this.resolvers.loader), _this.resolveRequestArray.bind(_this, context, _this.loaders.match(resource), _this.resolvers.loader), _this.resolveRequestArray.bind(_this, context, _this.preLoaders.match(resource), _this.resolvers.loader)",
+    "resolution": "_this.resolveRequestArray.bind(_this, context, noPostAutoLoaders ? [] : _this.postLoaders.match(resourcePath), _this.resolvers.loader), _this.resolveRequestArray.bind(_this, context, _this.loaders.match(resourcePath), _this.resolvers.loader), _this.resolveRequestArray.bind(_this, context, _this.preLoaders.match(resourcePath), _this.resolvers.loader)",
+    "conflict": "this.resolveRequestArray.bind(this, context, noPostAutoLoaders ? [] : this.postLoaders.match(resourcePath), this.resolvers.loader), this.resolveRequestArray.bind(this, context, this.loaders.match(resourcePath), this.resolvers.loader), this.resolveRequestArray.bind(this, context, this.preLoaders.match(resourcePath), this.resolvers.loader)"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171723,
+    "v1": "function HotModuleReplacementPlugin(options) { options = options || {}; this.multiStep = options.multiStep; }",
+    "v2": "function HotModuleReplacementPlugin() {}",
+    "resolution": "function HotModuleReplacementPlugin(options) { options = options || {}; this.multiStep = options.multiStep; }",
+    "conflict": "function HotModuleReplacementPlugin(options) { options = options || {}; this.multiStep = options.multiStep; }"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171725,
+    "v1": "\"head.appendChild(script);\", \"\", \"var promise = new Promise(function(resolve, reject) {\", this.indent([ \"installedChunks[chunkId] = [resolve, reject];\"",
+    "v2": "\"head.appendChild(script);\"",
+    "resolution": "\"head.appendChild(script);\", \"\", \"var promise = new Promise(function(resolve, reject) {\", this.indent([ \"installedChunks[chunkId] = [resolve, reject];\"",
+    "conflict": "\"head.appendChild(script);\", \"\", \"var promise = new Promise(function(resolve, reject) {\", this.indent([ \"installedChunks[chunkId] = [resolve, reject];\""
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171727,
+    "v1": "if(chunk.entryModule) {",
+    "v2": "if(chunk.modules.some(function(m) { return m.id === 0; })) { buf.push(\"\");",
+    "resolution": "if(chunk.entryModule) {",
+    "conflict": "if(chunk.entryModule) {"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171731,
+    "v1": "var ast = acorn.parse(source, {ranges: true, locations: true, ecmaVersion: 6, sourceType: \"module\"});",
+    "v2": "var ast = esprima.parse(source, { range: true, loc: true, raw: true });",
+    "resolution": "var ast = acorn.parse(source, {ranges: true, locations: true, ecmaVersion: 6, sourceType: \"module\"});",
+    "conflict": "var ast = acorn.parse(source, {ranges: true, locations: true, ecmaVersion: 6, sourceType: \"module\"});"
+  },
+  {
+    "devdecision": "Version 1",
+    "id": 171732,
+    "v1": "var ast = acorn.parse(\"(\" + source + \")\", {ranges: true, locations: true, ecmaVersion: 6, sourceType: \"module\"});",
+    "v2": "var ast = esprima.parse(\"(\" + source + \")\", { range: true, loc: true, raw: true });",
+    "resolution": "var ast = acorn.parse(\"(\" + source + \")\", {ranges: true, locations: true, ecmaVersion: 6, sourceType: \"module\"});",
+    "conflict": "var ast = acorn.parse(\"(\" + source + \")\", {ranges: true, locations: true, ecmaVersion: 6, sourceType: \"module\"});"
+  },
+  {
+    "devdecision": "Version 2",
+    "id": 171739,
+    "v1": "",
+    "v2": "ChunkTemplate.prototype.updateHashForChunk = function(hash, chunk) { this.updateHash(hash); this.applyPlugins(\"hash-for-chunk\", hash, chunk); };",
+    "resolution": "ChunkTemplate.prototype.updateHashForChunk = function(hash, chunk) { this.updateHash(hash); this.applyPlugins(\"hash-for-chunk\", hash, chunk); };",
+    "conflict": ""
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171741,
+    "v1": "function hotCheck(apply) {",
+    "v2": "function toModuleId(id) { return (+id) + \"\" === id ? +id : id; }  function hotCheck(apply, callback) {",
+    "resolution": "function toModuleId(id) { return (+id) + \"\" === id ? +id : id; }",
+    "conflict": "function hotCheck(apply) {"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171742,
+    "v1": "new webpack.optimize.OccurrenceOrderPlugin(), new webpack.optimize.UglifyJsPlugin()",
+    "v2": "new webpack.optimize.OccurenceOrderPlugin(), new webpack.optimize.UglifyJsPlugin(), new webpack.NamedModulesPlugin()",
+    "resolution": "new webpack.optimize.OccurrenceOrderPlugin(), new webpack.optimize.UglifyJsPlugin(), new webpack.NamedModulesPlugin()",
+    "conflict": "new webpack.optimize.OccurrenceOrderPlugin(), new webpack.optimize.UglifyJsPlugin()"
+  },
+  {
+    "devdecision": "Combination",
+    "id": 171747,
+    "v1": "\"EnvironmentPlugin\"",
+    "v2": "\"OldWatchingPlugin\", \"EnvironmentPlugin\", \"DllPlugin\", \"DllReferencePlugin\"",
+    "resolution": "\"EnvironmentPlugin\", \"DllPlugin\", \"DllReferencePlugin\"",
+    "conflict": "\"EnvironmentPlugin\""
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171757,
+    "v1": "if(!records) return initialPass = true; if(!records.hash) initialPass = true; var lastHash = records.hash || \"x\";",
+    "v2": "if(!records) return;",
+    "resolution": "if(!records) { initialPass = true; return;",
+    "conflict": "if(!records) return initialPass = true; if(!records.hash) initialPass = true; var lastHash = records.hash || \"x\";"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171762,
+    "v1": "if(compilation.needAdditionalPass) { obj.needAdditionalPass = true",
+    "v2": "if(showPublicPath) { obj.publicPath = this.compilation.mainTemplate.getPublicPath({ hash: this.compilation.hash });",
+    "resolution": "if(compilation.needAdditionalPass) { obj.needAdditionalPass = true; } if(showPublicPath) { obj.publicPath = this.compilation.mainTemplate.getPublicPath({ hash: this.compilation.hash });",
+    "conflict": "if(compilation.needAdditionalPass) { obj.needAdditionalPass = true"
+  },
+  {
+    "devdecision": "Manual",
+    "id": 171774,
+    "v1": "Compilation.prototype.createChunkAssets = function createChunkAssets() { var outputOptions = this.outputOptions; var filename = outputOptions.filename || \"bundle.js\"; var chunkFilename = outputOptions.chunkFilename || \"[id].\" + filename;",
+    "v2": "Compilation.prototype.createModuleAssets = function createChunkAssets() {",
+    "resolution": "Compilation.prototype.createModuleAssets = function createModuleAssets() {",
+    "conflict": "Compilation.prototype.createChunkAssets = function createChunkAssets() { var outputOptions = this.outputOptions; var filename = outputOptions.filename || \"bundle.js\"; var chunkFilename = outputOptions.chunkFilename || \"[id].\" + filename;"
+  }
+]}
